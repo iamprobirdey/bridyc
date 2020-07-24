@@ -1,0 +1,68 @@
+
+
+.footclass{
+    text-align: center;
+    background-color: #96511f;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    color: white;
+        
+     a{
+        color: white;
+                
+     }
+        
+    .listsocial{
+       list-style: none; 
+        a{
+            text-decoration: none;
+         }
+     }
+     .flexw{
+        flex-grow: 0; 
+        flex-shrink: 0; 
+        flex-basis: 20em;
+        @include screensize(formotog4){
+            margin-left: 24px;
+           // margin-left: -10px;
+           } 
+        @include screensize(forcards){
+          margin-left: 20px;
+           }
+           @include screensize(foriphone6x){
+            margin-left: 30px;
+           }
+           @include screensize(foriphone6plus){
+            margin-left: 45px;
+           }
+
+        h4{
+            @include screensize(formotog4){
+                font-size: 28px;
+               }  
+        }
+        p{
+            @include screensize(formotog4){
+                font-size: 22px;
+                margin-left: auto;
+                margin-right: auto;
+               } 
+        }
+        a{
+            @include screensize(formotog4){
+                font-size: 22px;
+               } 
+        }
+     }  
+     hr{
+         border-bottom: 3px solid white;
+
+     }
+     .comp{
+        margin-top: -15px;  
+    }
+       
+}
+

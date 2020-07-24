@@ -1,0 +1,225 @@
+nav{       
+    margin-left: auto;
+    margin-right: auto;
+    a{
+
+    .imglogo{
+        width:60px; 
+        height: auto;
+        margin-top: -9px;
+        margin-bottom: -9px;
+        margin-left: -5px;
+        transition: all ease .5s;
+        @include screensize(tablet){
+            width: 70px;
+            height: auto;
+            margin-top: -10px;
+            margin-bottom:-10px;
+            }
+        @include screensize(laptop){
+        width: 80px;
+        height: auto;
+        margin-top: -5px;
+        margin-bottom: -5px;
+        }
+        @include screensize(foripadpro){
+            width: 80px;
+            height: auto;
+            margin-top: -5px;
+            margin-bottom: -5px;
+            }
+        @include screensize(desktop){
+            width: 30%;
+            height: auto;
+            margin-top: -5px;
+            margin-bottom: -5px;
+            }
+    }
+  }
+
+  .colbtn{
+    @include screensize(tablet){
+        font-size: 25px;
+        }
+  }
+
+    ul{
+          a{
+              font-size: larger;
+              color: black;
+              font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+              font-weight: 500;
+              margin-left: 20px;
+              margin-right:20px;  
+
+              &:focus{
+                 border-bottom: 3px solid #5bc0de;
+              }
+           }
+    }
+
+    .navbtn{
+        margin-top: 20px;
+        @include screensize(forbutton){
+            margin-top: 0px;
+            }
+    }
+
+}
+
+.shrink{
+    background-color: white !important;
+    a{
+        .imglogo{
+            
+            @include screensize(tablet){
+                width: 60px !important;
+                margin-top: -16px !important;
+                padding-bottom: -13px !important;
+                padding-top: 5px !important;
+                }
+            @include screensize(laptop){
+                width: 65px !important;
+                margin-top: -12px !important;
+                padding-bottom: -16px !important;
+                padding-top: 5px !important;
+                }
+                @include screensize(foripadpro){
+                    width: 70px !important;
+                    margin-top: -12px !important;
+                    padding-bottom: -16px !important;
+                    padding-top: 5px !important;
+                    }
+                @include screensize(desktop){
+                    width: 25% !important;
+                    margin-top: -10px !important;
+                    padding-bottom: -13px !important;
+                    padding-top: 5px !important;
+                    }
+            
+        }
+    }
+   
+}
+
+.regBen{
+    background-color: #3786bd;
+    text-align: center;
+    margin-left: 14px;
+    margin-right: 14px;
+    @include screensize(laptop){
+    margin-left: 0;
+    margin-right: 0;
+    }
+    .regformlogo{
+        width: 100px;
+        height: 100px;
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    p{
+        color: white;
+        text-align: left;
+    }
+    .haveanaccount{
+        color: black;
+        font-weight: 700;
+        background-color: white;
+        padding: 15px;
+        font-family: 'Open Sans', sans-serif;
+        text-decoration: none;
+        position: absolute;
+        left: 16px;
+        display: none;
+        @include screensize(laptop){
+            display: block;
+            }
+        &:hover{
+            background-color: rgb(246, 246, 246);
+            border-bottom-left-radius: 5px;
+            border-top-right-radius: 5px;
+            
+        }
+
+    }
+    .smallclose{
+        color: white;
+        @include screensize(laptop){
+            display: none;
+            }
+    }
+}
+
+.signup{
+    margin-top: 30px;
+    margin-bottom: 80px;
+    .regheader{
+        text-align: center;
+        margin-top: 30px;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        .fbsignup{
+            background-color:#3786bd;
+            color: white;
+            padding: 7px;
+            text-decoration: none;
+            &:hover{
+                background-color:#367fb3 ;
+            }
+        }
+    }
+    p{
+        font-size: 12px;
+    }
+    .haveaccount{
+        @include screensize(laptop){
+            display: none;
+            }
+    }
+}
+
+
+.bigclose{
+    display: none;
+    color: #3786bd;
+    @include screensize(laptop){
+        display: block;
+        }
+}
+.iplognsign{
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+   }
+
+.btnlognsign{
+    width: 100%;
+    color: white;
+    background-color: #3786bd;
+    padding-left: 45px;
+    padding-right: 45px;
+    &:hover{
+        background-color:#367fb3 ;
+        color: white;
+    }
+}
+
+.login{
+    margin-bottom:50px;
+    @include screensize(laptop){
+        margin-top: 100px;
+        margin-bottom: 130px;
+        }
+    .logheader{
+        text-align: center;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+    }
+    .newuser{
+        text-decoration: none;
+    }
+}
+
+
+

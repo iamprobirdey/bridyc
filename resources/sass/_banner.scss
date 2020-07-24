@@ -1,0 +1,80 @@
+
+.imgban{
+    margin-top: 63px;
+    height: 260px;
+    transition: all ease .5sec;
+    margin-left: auto;
+    margin-right: auto;
+    @include screensize(laptop){
+       height: auto;
+    }
+    
+}
+
+.formcall{
+    text-align: center;
+    color: white;
+    background-color: #96511f;
+    position: relative;
+    top: -120px;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    margin-bottom: -50px;
+    border-bottom-left-radius:30%;
+    border-bottom-right-radius:30%;
+    width:90%;
+    height: auto;
+    @include screensize(forcards){
+        
+        }
+        @include screensize(foriphone6x){
+            
+            }
+        @include screensize(prelaptop){
+                
+                }
+    @include screensize(laptop){
+       
+        }
+
+    .inpg{
+        width: 70%;
+        @include screensize(laptop){
+            width: 50%;
+            }
+    }
+
+    .inpgbtn{
+        width: 70%;
+        color: white;
+        font-weight: 700;
+        background-color: rgba(230, 230, 97, 0.986);
+        @include screensize(laptop){
+            width: 30%;
+            }
+    }
+    textarea{
+        display: none;
+        width: 70%;
+        resize: none;
+        @include screensize(laptop){
+            display: block;
+            width: 50%;
+            }
+    }
+    h1{
+        font-size: large;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        @include screensize(laptop){
+            font-size: 40px;
+            }
+    }
+    p{
+        @include screensize(laptop){
+            font-size: 25px;
+            }  
+    }
+    hr{
+        background-color: white;
+    }
+}

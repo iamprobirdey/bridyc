@@ -1,0 +1,51 @@
+@mixin screensize($device) {
+
+    @if $device==tablet {
+        @media only screen and (min-width:481px) {
+            @content;
+        }
+    }
+    @else if $device==prelaptop {
+        @media only screen and (min-width:765px) {
+            @content;
+        }
+    }
+
+    @else if $device==laptop {
+        @media only screen and (min-width:768px) {
+            @content;
+        }
+    }
+
+    @else if $device==desktop {
+        @media only screen and (min-width:1280px) {
+            @content;
+        }
+    }
+    @else if $device==forbutton {
+        @media only screen and (min-width:1000px) {
+            @content;
+        }
+    }
+    @else if $device==forcards {
+        @media only screen and (min-width:411px) {
+            @content;
+        }
+    }
+    @else if $device==formotog4 {
+        @media only screen and (min-width:360px) {
+            @content;
+        }
+    }
+    @else if $device==foriphone6x {
+        @media only screen and (min-width:375px) {
+            @content;
+        }
+    }
+    @else if $device==foriphone6plus {
+        @media only screen and (min-width:414px) {
+            @content;
+        }
+    }
+    
+}

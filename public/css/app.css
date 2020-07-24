@@ -1,0 +1,326 @@
+nav {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+nav a .imglogo {
+  width: 60px;
+  height: auto;
+  margin-top: -9px;
+  margin-bottom: -9px;
+  margin-left: -5px;
+  transition: all ease 0.5s;
+}
+
+@media only screen and (min-width: 481px) {
+  nav a .imglogo {
+    width: 70px;
+    height: auto;
+    margin-top: -10px;
+    margin-bottom: -10px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  nav a .imglogo {
+    width: 80px;
+    height: auto;
+    margin-top: -5px;
+    margin-bottom: -5px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  nav a .imglogo {
+    width: 30%;
+    height: auto;
+    margin-top: -5px;
+    margin-bottom: -5px;
+  }
+}
+
+@media only screen and (min-width: 481px) {
+  nav .colbtn {
+    font-size: 25px;
+  }
+}
+
+nav ul a {
+  font-size: larger;
+  color: black;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: 500;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+nav ul a:focus {
+  border-bottom: 3px solid #5bc0de;
+}
+
+nav .navbtn {
+  margin-top: 20px;
+}
+
+@media only screen and (min-width: 1000px) {
+  nav .navbtn {
+    margin-top: 0px;
+  }
+}
+
+.shrink {
+  background-color: white !important;
+}
+
+@media only screen and (min-width: 481px) {
+  .shrink a .imglogo {
+    width: 60px !important;
+    margin-top: -16px !important;
+    padding-bottom: -13px !important;
+    padding-top: 5px !important;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .shrink a .imglogo {
+    width: 65px !important;
+    margin-top: -12px !important;
+    padding-bottom: -16px !important;
+    padding-top: 5px !important;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .shrink a .imglogo {
+    width: 25% !important;
+    margin-top: -10px !important;
+    padding-bottom: -13px !important;
+    padding-top: 5px !important;
+  }
+}
+
+.regBen {
+  background-color: #3786bd;
+  text-align: center;
+  margin-left: 14px;
+  margin-right: 14px;
+}
+
+@media only screen and (min-width: 768px) {
+  .regBen {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+.regBen .regformlogo {
+  width: 100px;
+  height: 100px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.regBen p {
+  color: white;
+  text-align: left;
+}
+
+.regBen .haveanaccount {
+  color: black;
+  font-weight: 700;
+  background-color: white;
+  padding: 15px;
+  font-family: "Open Sans", sans-serif;
+  text-decoration: none;
+  position: absolute;
+  left: 16px;
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .regBen .haveanaccount {
+    display: block;
+  }
+}
+
+.regBen .haveanaccount:hover {
+  background-color: #f6f6f6;
+  border-bottom-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.regBen .smallclose {
+  color: white;
+}
+
+@media only screen and (min-width: 768px) {
+  .regBen .smallclose {
+    display: none;
+  }
+}
+
+.signup {
+  margin-top: 30px;
+  margin-bottom: 80px;
+}
+
+.signup .regheader {
+  text-align: center;
+  margin-top: 30px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.signup .regheader .fbsignup {
+  background-color: #3786bd;
+  color: white;
+  padding: 7px;
+  text-decoration: none;
+}
+
+.signup .regheader .fbsignup:hover {
+  background-color: #367fb3;
+}
+
+.signup p {
+  font-size: 12px;
+}
+
+@media only screen and (min-width: 768px) {
+  .signup .haveaccount {
+    display: none;
+  }
+}
+
+.bigclose {
+  display: none;
+  color: #3786bd;
+}
+
+@media only screen and (min-width: 768px) {
+  .bigclose {
+    display: block;
+  }
+}
+
+.iplognsign {
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.btnlognsign {
+  width: 100%;
+  color: white;
+  background-color: #3786bd;
+  padding-left: 45px;
+  padding-right: 45px;
+}
+
+.btnlognsign:hover {
+  background-color: #367fb3;
+  color: white;
+}
+
+.login {
+  margin-bottom: 50px;
+}
+
+@media only screen and (min-width: 768px) {
+  .login {
+    margin-top: 100px;
+    margin-bottom: 130px;
+  }
+}
+
+.login .logheader {
+  text-align: center;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+.login .newuser {
+  text-decoration: none;
+}
+
+.footclass {
+  text-align: center;
+  background-color: #96511f;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  color: white;
+}
+
+.footclass a {
+  color: white;
+}
+
+.footclass .listsocial {
+  list-style: none;
+}
+
+.footclass .listsocial a {
+  text-decoration: none;
+}
+
+.footclass .flexw {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 20em;
+}
+
+@media only screen and (min-width: 360px) {
+  .footclass .flexw {
+    margin-left: 24px;
+  }
+}
+
+@media only screen and (min-width: 411px) {
+  .footclass .flexw {
+    margin-left: 20px;
+  }
+}
+
+@media only screen and (min-width: 375px) {
+  .footclass .flexw {
+    margin-left: 30px;
+  }
+}
+
+@media only screen and (min-width: 414px) {
+  .footclass .flexw {
+    margin-left: 45px;
+  }
+}
+
+@media only screen and (min-width: 360px) {
+  .footclass .flexw h4 {
+    font-size: 28px;
+  }
+}
+
+@media only screen and (min-width: 360px) {
+  .footclass .flexw p {
+    font-size: 22px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media only screen and (min-width: 360px) {
+  .footclass .flexw a {
+    font-size: 22px;
+  }
+}
+
+.footclass hr {
+  border-bottom: 3px solid white;
+}
+
+.footclass .comp {
+  margin-top: -15px;
+}
+

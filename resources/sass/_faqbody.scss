@@ -1,0 +1,45 @@
+
+.faqbody{
+    margin-top: 100px;
+    .faqheader{
+        text-align: center;
+        background-color: #96511f;
+        color: white;
+        padding-top: 25px;
+        padding-bottom:25px;
+        font-size: 30px;
+    }
+    
+    
+    .faqQ{
+        background: #f9fafa;
+        font-family: "Roboto", sans-serif; 
+        &:hover{
+            background: #ecf0f0;
+        }
+    
+    
+        .fa{
+            font-size: 18px;
+            font-weight: 900;
+            transition: .3s transform ease-in-out;
+        }
+        .collapsed {
+            .fa{
+                transform: rotate(180deg);
+            }
+        }
+    
+        
+        a{
+            color: #3659a2;
+            font-size: 18px;
+            font-weight: 700;
+        }
+    }
+    
+    .card-body{
+        color: #324353;
+    }
+    
+}
