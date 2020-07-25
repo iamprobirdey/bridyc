@@ -199,11 +199,22 @@ export default {
                 axios
                 .post('register',this.registerFormData)
                 .then(response => {
+                    console.log(response);
                     if(response.data.auth){
                          location.reload();
                     }
+                    if(response.data.status === 201){
+                        console.log(response.data);
+                    }
                 })
-                .catch(errors => {
+                .catch(error => {
+                    if (error.response) {
+                        console.log(error.response);
+                        console.log(error.response.data);
+                        console.log(error.response.status);
+                        console.log(error.response.headers);
+                        }
+                    return Promise.reject(error.response);
                     Vue.toasted.error("Something went wrong", {
                         position: "top-center",
                         duration: 5000
