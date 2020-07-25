@@ -57,19 +57,19 @@ class RegisterController extends Controller
             $user = $this->create($request->all());
             $credentials = $request->only('email', 'password');
 
-            $redirectRoute = [
-                'student' => '/',
-                'institute' => '/user/dashboard'
-            ];
-            if($request->input('user_type') === 'institute'){
-                Verification::create([
-                    'status' => 0
-                ]);
-                $user->assignRole('institute');
-            }
-            if($request->input('user_type') === 'student'){
-                $user->assignRole('student');
-            }
+            // $redirectRoute = [
+            //     'student' => '/',
+            //     'institute' => '/user/dashboard'
+            // ];
+            // if($request->input('user_type') === 'institute'){
+            //     Verification::create([
+            //         'status' => 0
+            //     ]);
+            //     $user->assignRole('institute');
+            // }
+            // if($request->input('user_type') === 'student'){
+            // }
+            $user->assignRole('student');
 
             $auth = false;
             if (Auth::attempt($credentials)) {
@@ -81,7 +81,7 @@ class RegisterController extends Controller
             return response()->json([
                 'status' => 'success',
                 'auth' => $auth,
-                'redirectRoute' => $redirectRoute[$request->input('user_type')]
+                'redirectRoute' => '/'
             ]);
     }
 
