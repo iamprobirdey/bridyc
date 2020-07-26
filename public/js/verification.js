@@ -389,6 +389,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -424,7 +427,8 @@ __webpack_require__.r(__webpack_exports__);
         founded: "",
         pin: "",
         gender: ""
-      }
+      },
+      wait: false
     };
   },
   props: {
@@ -488,16 +492,27 @@ __webpack_require__.r(__webpack_exports__);
     validateForm: function validateForm() {
       var _this3 = this;
 
+      this.wait = true;
       this.$validator.validate().then(function (result) {
         if (result) {
           axios.post("api/verification", _this3.formData).then(function (response) {
             if (response.status === 200) {
-              _this3.verificationStatus = true;
-              _this3.userData = 1;
-              Vue.toasted.success("Data is successfully submited", {
-                position: "top-center",
-                duration: 5000
-              });
+              if (response.data.message === 'Successful') {
+                _this3.verificationStatus = true;
+                _this3.userData = 1;
+                Vue.toasted.success("Data is successfully submited", {
+                  position: "top-center",
+                  duration: 5000
+                });
+              }
+
+              if (response.data.message === 'failed') {
+                _this3.wait = false;
+                Vue.toasted.error("Something went wrong", {
+                  position: "top-center",
+                  duration: 5000
+                });
+              }
             }
           })["catch"](function (errors) {
             if (errors.response.data.errors.state_id) {
@@ -1797,11 +1812,31 @@ var render = function() {
                     )
                   : _vm._e(),
                 _vm._v(" "),
-                _c(
-                  "button",
-                  { staticClass: "btn btn-primary", attrs: { type: "submit" } },
-                  [_vm._v("Submit")]
-                )
+                _vm.wait
+                  ? _c(
+                      "div",
+                      {
+                        staticClass: "spinner-border text-primary",
+                        attrs: { role: "status" }
+                      },
+                      [
+                        _c("span", { staticClass: "sr-only" }, [
+                          _vm._v("Loading...")
+                        ])
+                      ]
+                    )
+                  : _vm._e(),
+                _vm._v(" "),
+                _vm.wait === false
+                  ? _c(
+                      "button",
+                      {
+                        staticClass: "btn btn-primary",
+                        attrs: { type: "submit" }
+                      },
+                      [_vm._v("Submit")]
+                    )
+                  : _vm._e()
               ]
             )
           ])

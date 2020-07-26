@@ -56,3 +56,10 @@
 
 
 @endsection
+
+@section('js_code')
+
+    <script src="{{url('js/app.js')}}"></script>
+
+@endsection
+

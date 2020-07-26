@@ -12,6 +12,7 @@
     </div>
     <div v-if="verificationStatus === false">
       <div>
+
         <form @submit.prevent="validateForm()">
           <div
             class="form-group"
@@ -284,8 +285,10 @@
               class="text-danger"
             >{{ serverErrors.village_id }}</span>
           </div>
-
-          <button type="submit" class="btn btn-primary">Submit</button>
+            <div v-if="wait" class="spinner-border text-primary" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+          <button v-if="wait === false" type="submit" class="btn btn-primary">Submit</button>
         </form>
       </div>
     </div>
@@ -328,7 +331,8 @@ export default {
         founded: "",
         pin: "",
         gender: ""
-      }
+      },
+      wait: false
     };
   },
   props: {
@@ -384,18 +388,28 @@ export default {
   },
   methods: {
     validateForm() {
+        this.wait = true;
       this.$validator.validate().then(result => {
         if (result) {
           axios
             .post("api/verification", this.formData)
             .then(response => {
               if (response.status === 200) {
-                this.verificationStatus = true;
-                this.userData = 1;
-                Vue.toasted.success("Data is successfully submited", {
-                  position: "top-center",
-                  duration: 5000
-                });
+                  if(response.data.message === 'Successful'){
+                      this.verificationStatus = true;
+                      this.userData = 1;
+                      Vue.toasted.success("Data is successfully submited", {
+                        position: "top-center",
+                        duration: 5000
+                      });
+                  }
+                  if(response.data.message === 'failed'){
+                      this.wait = false;
+                      Vue.toasted.error("Something went wrong", {
+                        position: "top-center",
+                        duration: 5000
+                      });
+                  }
               }
             })
             .catch(errors => {

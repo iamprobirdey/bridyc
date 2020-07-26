@@ -34,7 +34,7 @@ class VerificationController extends Controller
             ChannelStatusProcessor::dispatch($userId);
         }
 
-        $user = User::findOrFail(auth()->id());
+        $user = User::findOrFail($userId);
         $user->status = 1;
         $user->update();
 
@@ -51,7 +51,7 @@ class VerificationController extends Controller
             //ChannelStatusProcessor::dispatch($userId);
         }
 
-        $user = User::findOrFail(auth()->id());
+        $user = User::findOrFail($userId);
         $user->status = 0;
         $user->update();
 
@@ -67,7 +67,7 @@ class VerificationController extends Controller
             //ChannelStatusProcessor::dispatch($userId);
         }
 
-        $user = User::findOrFail(auth()->id());
+        $user = User::findOrFail($userId);
         $user->status = 2;
         $user->update();
 

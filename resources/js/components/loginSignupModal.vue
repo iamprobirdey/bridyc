@@ -10,7 +10,7 @@
 
             <p>If you are an institute and wants to partner with us. Please contact us or call us at +91-9435285795 / +91-9476844478 </p>
             <br>
-            <a href="#" class="haveanaccount">Have An Account</a>
+            <a href="javascript::void(0)" class="haveanaccount">Have An Account</a>
         </div>
 
         <div class="col-md-7">
@@ -103,7 +103,7 @@
                     <button type="submit" class="btn btnlognsign">Sign Up</button>
                 </form>
                 <br>
-                <h6 class="mx-5 haveaccount">Already have an Account?<a href="#"> Log In</a></h6>
+                <h6 class="mx-5 haveaccount">Already have an Account?<a href="javascript::void(0)"> Log In</a></h6>
             </div>
 
             <div class="login" id="mylogin">

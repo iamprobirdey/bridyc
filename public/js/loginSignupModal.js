@@ -1379,9 +1379,14 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("br"),
       _vm._v(" "),
-      _c("a", { staticClass: "haveanaccount", attrs: { href: "#" } }, [
-        _vm._v("Have An Account")
-      ])
+      _c(
+        "a",
+        {
+          staticClass: "haveanaccount",
+          attrs: { href: "javascript::void(0)" }
+        },
+        [_vm._v("Have An Account")]
+      )
     ])
   },
   function() {
@@ -1427,7 +1432,7 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("h6", { staticClass: "mx-5 haveaccount" }, [
       _vm._v("Already have an Account?"),
-      _c("a", { attrs: { href: "#" } }, [_vm._v(" Log In")])
+      _c("a", { attrs: { href: "javascript::void(0)" } }, [_vm._v(" Log In")])
     ])
   },
   function() {
