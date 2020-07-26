@@ -28,21 +28,11 @@ class InstituteController extends Controller
         $this->validator($request->all())->validate();
 
         $user = $this->create($request->all());
+
         $credentials = $request->only('email', 'password');
 
-        $redirectRoute = [
-            'student' => '/',
-            'institute' => '/user/dashboard'
-        ];
         if($request->input('user_type') === 'institute'){
-            Verification::create([
-                'user_id' => $user->id,
-                'status' => 0
-            ]);
             $user->assignRole('institute');
-        }
-        if($request->input('user_type') === 'student'){
-            $user->assignRole('student');
         }
 
         $auth = false;
@@ -52,7 +42,7 @@ class InstituteController extends Controller
         return response()->json([
             'status' => 'success',
             'auth' => $auth,
-            'redirectRoute' => $redirectRoute[$request->input('user_type')]
+            'redirectRoute' => '/user/dashboard'
         ]);
     }
 

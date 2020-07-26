@@ -2,13 +2,9 @@
     <div class="left-sidebar">
       <ul class="nav flex-column sidebar-nav">
             @if (
-                $verification->status === 0 ||
-                $verification->status === 1 ||
-                $verification->status === 3
+                $verificationStatus === 0 ||
+                $verificationStatus === 2
             )
-            @php
-                //redirect('user/dashboard/verification');
-            @endphp
         <li class="nav-item">
           <a class="nav-link active" href="{{url('/user/dashboard/verification')}}">
               <span class="material-icons sidebaricons">

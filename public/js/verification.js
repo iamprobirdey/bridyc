@@ -398,6 +398,7 @@ __webpack_require__.r(__webpack_exports__);
       languagesData: [],
       districtData: [],
       villageData: [],
+      authData: {},
       formData: {
         state_id: "",
         district_id: "",
@@ -432,11 +433,15 @@ __webpack_require__.r(__webpack_exports__);
       "default": null
     },
     user: {
-      type: Array,
+      type: Object,
       "default": null
     },
     languages: {
       type: Array,
+      "default": null
+    },
+    auth: {
+      type: Object,
       "default": null
     }
   },
@@ -472,11 +477,12 @@ __webpack_require__.r(__webpack_exports__);
       return false;
     }
   },
-  mounted: function mounted() {
+  created: function created() {
     this.placesData = this.places;
-    this.userData = this.user[0]['status'];
+    if (this.user != null) this.userData = this.user.status;
     if (this.userData === 1 || this.userData === 3) this.verificationStatus = true;
     this.languagesData = this.languages;
+    this.authData = this.auth;
   },
   methods: {
     validateForm: function validateForm() {
@@ -570,7 +576,7 @@ var render = function() {
       ? _c("div", [_vm._m(1)])
       : _vm._e(),
     _vm._v(" "),
-    _vm.verificationStatus === false && _vm.userData === 0
+    _vm.verificationStatus === false
       ? _c("div", [
           _c("div", [
             _c(

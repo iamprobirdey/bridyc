@@ -4,13 +4,15 @@
     <link rel="stylesheet" type="text/css" href="{{url('css/institutedashboard.css')}}">
 @endsection
 @php
-    
+
 @endphp
 @section('content')
     <div class="container-fluid">
         <div class="row">
             @include('layouts.sidebar')
             <main role="main" class="col-lg-10 ml-lg-auto">
+                <br>
+                <br>
                 <div class="container">
                     <div id="edit_channel">
                         <edit-channel></edit-channel>
@@ -18,7 +20,7 @@
                 </div>
               </main>
         </div>
-    </div> 
+    </div>
 @endsection
 @section('model')
     @include('layouts.model_view')

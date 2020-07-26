@@ -49,7 +49,7 @@ class ModelHelperServices{
         return Language::all();
     }
     public static function getUserVerificationDetails(){
-        return Verification::where('user_id',Auth::Id())->get();
+        return Verification::where('user_id',auth()->id())->first();
     }
 
     public static function getStateDistrictVillage(){
@@ -57,10 +57,10 @@ class ModelHelperServices{
     }
 
     public static function getChannelData(){
-        return Channel::where('user_id',Auth::id())->first();
+        return Channel::where('user_id',auth()->id())->first();
     }
     public static function getChannelExtraData(){
-        return Channel::where('user_id',Auth::id())
+        return Channel::where('user_id',auth()->id())
                         ->select('extra_attributes')
                         ->first();
     }

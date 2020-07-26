@@ -20,20 +20,22 @@ class VerificationController extends Controller
     }
 
     public function getVerificationData(ChannelVerificationValidation $request){
-        $verification = Verification::where('user_id',Auth::id())->first();
-        $verification->state_id = $request->validated()['state_id'];
-        $verification->district_id = $request->validated()['district_id'];
-        $verification->village_id = $request->validated()['village_id'];
-        $verification->language_id = $request->validated()['language_id'];
-        $verification->title = $request->validated()['title'];
-        $verification->udise = $request->validated()['udise'];
-        $verification->location = $request->validated()['location'];
-        $verification->ownership = $request->validated()['ownership'];
-        $verification->founded = $request->validated()['founded'];
-        $verification->pin = $request->validated()['pin'];
-        $verification->gender = $request->validated()['gender'];
-        $verification->status = 1;
-        $verification->update();
+        $verification =
+                    Verification::create([
+                    'user_id' => auth()->id(),
+                    'state_id' => $request->validated()['state_id'],
+                    'district_id' => $request->validated()['district_id'],
+                    'village_id' => $request->validated()['village_id'],
+                    'language_id' => $request->validated()['language_id'],
+                    'title' => $request->validated()['title'],
+                    'udise' => $request->validated()['udise'],
+                    'location' => $request->validated()['location'],
+                    'ownership' => $request->validated()['ownership'],
+                    'founded' => $request->validated()['founded'],
+                    'pin' => $request->validated()['pin'],
+                    'gender' => $request->validated()['gender'],
+                    'status' => 1
+                    ]);
 
         //ChannelCreatingProcessor::dispatchNow($verification);
         $state = State::findOrFail($verification->state_id);

@@ -8,13 +8,13 @@
     <div class="container-fluid">
         <div class="row">
             @include('layouts.sidebar')
-            @php
-            @endphp
+            <br>
+            <br>
             <div id="channelInDashboard">
-            <channel-in-dashboard
-                :user="{{json_encode($user)}}"
-                :channel="{{json_encode($channel)}}">
-            </channel-in-dashboard>
+                <channel-in-dashboard
+                    :user="{{json_encode($user)}}"
+                    :channel="{{json_encode($channel)}}">
+                </channel-in-dashboard>
             </div>
 
             @section('model')

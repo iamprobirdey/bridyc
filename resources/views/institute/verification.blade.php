@@ -8,6 +8,9 @@
         <div class="row">
             @include('layouts.sidebar')
             <main role="main" class="col-lg-10 ml-lg-auto">
+                <br>
+                <br>
+
                 <div class="container">
                     <div class="row">
                         <div id="verification">
@@ -15,13 +18,14 @@
                         :places="{{json_encode($allPlaces)}}"
                         :user="{{json_encode($usersVerification)}}"
                         :languages="{{json_encode($languages)}}"
+                        :auth="{{json_encode($authUser)}}"
                         ></verification>
                         </div>
                     </div>
                 </div>
               </main>
         </div>
-    </div> 
+    </div>
 @endsection
 
 @section('js_code')

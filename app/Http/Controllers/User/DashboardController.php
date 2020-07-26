@@ -26,11 +26,14 @@ class DashboardController extends Controller
     public function verification(ModelHelperServices $modelHelperService){
         $allPlaces = $modelHelperService::getStateDistrictVillage();
         $usersVerification = $modelHelperService::getUserVerificationDetails();
+        $authUser = auth()->user();
         $languages = $modelHelperService::getLanguages();
         return view('institute.verification',
             compact('allPlaces',$allPlaces),
             compact('usersVerification',$usersVerification),
-            )->with('languages',$languages);
+            )
+            ->with('languages',$languages)
+            ->with('authUser',$authUser);
     }
     public function channel(){
         $channel = Channel::where('user_id',Auth::id())

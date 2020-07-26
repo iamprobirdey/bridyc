@@ -155,9 +155,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -245,9 +242,7 @@ var render = function() {
         _vm._l(_vm.usersData, function(verification, index) {
           return _c("tr", { key: verification.id }, [
             _c("td", [
-              verification.status === 0 ||
-              verification.status === 2 ||
-              verification.status === 1
+              verification.status === 1 || verification.status === 2
                 ? _c(
                     "button",
                     {

@@ -48,14 +48,20 @@ class User extends Authenticatable
 
     public function is_verified(){
 
-        $verified = Verification::where('user_id',Auth::id())->first();
+        // $verified = Verification::where('user_id',Auth::id())->first();
+        // if(
+        //     $verified->status === 0 ||
+        //     $verified->status === 1 ||
+        //     $verified->status === 3)
+        //     {
+        //         return true;
+        //     }
+        $user = auth()->user();
         if(
-            $verified->status === 0 ||
-            $verified->status === 1 ||
-            $verified->status === 3)
-            {
+            $user->user_type === 'institute' &&
+            ($user->status === 0 || $user->status === 2)){
                 return true;
-            }
+        }
         return false;
     }
 }

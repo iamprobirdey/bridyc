@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Verification;
 use App\Jobs\ChannelStatusProcessor;
+use App\User;
 
 class VerificationController extends Controller
 {
@@ -32,6 +33,11 @@ class VerificationController extends Controller
             $verification->update();
             ChannelStatusProcessor::dispatch($userId);
         }
+
+        $user = User::findOrFail(auth()->id());
+        $user->status = 1;
+        $user->update();
+
         return response()->json([
             'msg' => true
         ]);
@@ -44,6 +50,11 @@ class VerificationController extends Controller
             $verification->update();
             //ChannelStatusProcessor::dispatch($userId);
         }
+
+        $user = User::findOrFail(auth()->id());
+        $user->status = 0;
+        $user->update();
+
         return response()->json([
             'msg' => true
         ]);
@@ -55,6 +66,11 @@ class VerificationController extends Controller
             $verification->update();
             //ChannelStatusProcessor::dispatch($userId);
         }
+
+        $user = User::findOrFail(auth()->id());
+        $user->status = 2;
+        $user->update();
+
         return response()->json([
             'msg' => true
         ]);

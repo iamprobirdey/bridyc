@@ -16,18 +16,18 @@ class CreateVerificationsTable extends Migration
         Schema::create('verifications', function (Blueprint $table) {
             $table->id();
             $table->integer('user_id')->unsigned();
-            $table->integer('state_id')->nullable();
-            $table->integer('district_id')->nullable();
-            $table->integer('village_id')->nullable();
-            $table->integer('language_id')->nullable();
-            $table->string('udise')->nullable();
-            $table->string('title')->nullable();
-            $table->string('location')->nullable();
-            $table->string('ownership')->nullable();
-            $table->string('founded')->nullable();
-            $table->string('pin')->nullable();
-            $table->string('gender')->nullable();
-            $table->tinyInteger('status')->default(0); //default = 0,submitted = 1,verified = 2, block = 3
+            $table->integer('state_id');
+            $table->integer('district_id');
+            $table->integer('village_id');
+            $table->integer('language_id');
+            $table->string('udise');
+            $table->string('title');
+            $table->string('location');
+            $table->string('ownership');
+            $table->string('founded');
+            $table->string('pin');
+            $table->string('gender');
+            $table->tinyInteger('status')->default(1); //default = 1,verified = 2, block = 3
             $table->timestamps();
         });
     }

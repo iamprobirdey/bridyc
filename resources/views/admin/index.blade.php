@@ -9,12 +9,15 @@
         <div class="row">
             @include('admin.sidebar')
             <main role="main" class="col-lg-10 ml-lg-auto">
+                <br>
+                <br>
+
                 <div class="container">
                     @yield('adminContent')
                 </div>
               </main>
         </div>
-    </div> 
+    </div>
 @endsection
 
 @section('js_code')

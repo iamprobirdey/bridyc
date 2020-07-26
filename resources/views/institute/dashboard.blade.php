@@ -9,6 +9,8 @@
         <div class="row">
             @include('layouts.sidebar')
             <main role="main" class="col-lg-10 ml-lg-auto">
+                <br>
+                <br>
               <div class="container">
                   <div class="row">
                         <div id="quote_and_time">
@@ -18,7 +20,7 @@
               </div>
             </main>
         </div>
-    </div> 
+    </div>
 @endsection
 @section('model')
     @include('layouts.model_view')
@@ -83,8 +85,8 @@
     content: function() {
       return $('#popover-content').html();
     }
-  });   
+  });
   });
   </script>
-    
+
 @endsection

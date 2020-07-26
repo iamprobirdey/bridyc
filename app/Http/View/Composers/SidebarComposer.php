@@ -18,7 +18,7 @@ class SidebarComposer
      */
     public function compose(View $view)
     {
-        $verification = Verification::where('user_id',Auth::Id())->first();
-        $view->with('verification', $verification);
+        $verificationStatus = auth()->user()->status;
+        $view->with('verificationStatus', $verificationStatus);
     }
 }

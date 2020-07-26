@@ -22,10 +22,7 @@
             <button
               class="btn btn-primary"
               @click="blockTheUser(verification.user_id ,verification.id,index)"
-              v-if="verification.status === 0 ||
-                 verification.status === 2 ||
-                 verification.status === 1
-                 "
+              v-if="verification.status === 1 || verification.status === 2"
             >Block</button>
             <button
               class="btn btn-primary"

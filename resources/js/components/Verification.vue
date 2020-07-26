@@ -10,7 +10,7 @@
         <span class="text-danger">You are blocked by Admin</span>
       </h2>
     </div>
-    <div v-if="verificationStatus === false && userData === 0">
+    <div v-if="verificationStatus === false">
       <div>
         <form @submit.prevent="validateForm()">
           <div
@@ -302,6 +302,7 @@ export default {
       languagesData: [],
       districtData: [],
       villageData: [],
+      authData: {},
       formData: {
         state_id: "",
         district_id: "",
@@ -336,12 +337,16 @@ export default {
       default: null
     },
     user: {
-      type: Array,
+      type: Object,
       default: null
     },
     languages: {
       type: Array,
       default: null
+    },
+    auth: {
+        type: Object,
+        default: null
     }
   },
   computed: {
@@ -370,11 +375,12 @@ export default {
       return false;
     }
   },
-  mounted() {
-    this.placesData = this.places;
-    this.userData = this.user[0]['status'];
-    if(this.userData === 1 || this.userData === 3) this.verificationStatus = true;
-    this.languagesData = this.languages;
+  created(){
+      this.placesData = this.places;
+      if(this.user != null)this.userData = this.user.status;
+      if(this.userData === 1 || this.userData === 3) this.verificationStatus = true;
+      this.languagesData = this.languages;
+      this.authData = this.auth;
   },
   methods: {
     validateForm() {

@@ -8,6 +8,17 @@ class Verification extends Model
 {
     protected $fillable = [
         'user_id',
+        'state_id',
+        'district_id',
+        'village_id',
+        'language_id',
+        'udise',
+        'location',
+        'title',
+        'ownership',
+        'founded',
+        'pin',
+        'gender'
     ];
 
     public function user(){
