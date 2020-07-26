@@ -2,6 +2,8 @@
 
 @section('adminContent')
       <div id="admin-verification">
+          <br>
+          <br>
           <admin-verification
             :users="{{json_encode($users)}}">
         </admin-verification>
