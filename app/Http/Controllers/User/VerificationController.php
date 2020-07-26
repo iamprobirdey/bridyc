@@ -3,12 +3,14 @@
 namespace App\Http\Controllers\User;
 
 use App\Channel;
+use App\District;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\User\ChannelVerificationValidation;
 use App\Jobs\ChannelCreatingProcessor;
 use App\State;
 use App\Verification;
 use Auth;
+use Illuminate\Support\Str;
 
 class VerificationController extends Controller
 {
@@ -35,14 +37,16 @@ class VerificationController extends Controller
 
         //ChannelCreatingProcessor::dispatchNow($verification);
         $state = State::findOrFail($verification->state_id);
+        $district = District::findOrFail($verification->district_id);
+        $village = District::findOrFail($verification->village_id);
         $channel = Channel::create([
             'user_id' => Auth::id(),
-            'state_id' => $this->userData->state_id,
-            'district_id' => $this->userData->district_id,
-            'village_id' => $this->userData->village_id,
-            'language_id' => $this->userData->language_id,
-            'title' => $this->userData->title,
-            'slug' => Str::slug($this->userData->title.'-'.$state->name),
+            'state_id' => $verification->state_id,
+            'district_id' => $verification->district_id,
+            'village_id' => $verification->village_id,
+            'language_id' => $verification->language_id,
+            'title' => $verification->title,
+            'slug' => Str::slug($verification->title.'-'.$state->name.'-'.$district->name.'-'.$village->name),
             ]);
             $channel->extra_attributes->set('social.facebook', null);
             $channel->extra_attributes->set('social.youtube', null);
