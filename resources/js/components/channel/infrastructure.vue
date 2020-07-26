@@ -4,7 +4,7 @@
       <h1>Let's talk about Infrastructure</h1>
     </div>
     <div>
-      <table class="table-responsive" v-if="infrastructure.boys_toilet != null">
+      <table class="table-responsive" v-if="infrastructureStatus === false">
         <thead class="thead-dark">
           <tr>
             <th scope="col-sm-4">No of Class</th>
@@ -299,7 +299,7 @@ export default {
         .then(response => {
           if (response.status === 200) {
             this.infrastructure = response.data.user[0];
-            console.log(this.infrastructure);
+            if(this.infrastructure.boys_toilet != null)this.infrastructureStatus = false;
           }
         })
         .catch(errors => {
@@ -313,7 +313,7 @@ export default {
             .post("api/infra/store/" + this.infrastructure.id, this.formData)
             .then(response => {
               this.infrastructureStatus = false;
-              this.infrastructure = response.data.data[0];
+              this.infrastructure = response.data.channel;
             })
             .catch(errors => {
               if (errors.response.data.errors.no_of_class) {

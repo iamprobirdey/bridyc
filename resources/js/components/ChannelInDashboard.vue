@@ -6,7 +6,7 @@
             <div class="blankdiv">
               <div class="d-flex">
                 <div class="d-flex flex-column">
-                  <p class="m-1">A unit of abc society askjfhjkkhh</p>
+                  <p class="m-1">A unit of abc society askjfhjkkhh </p>
                   <a class="m-1 insweb" :target="channelData.website_link === null ? '_self' : '_blank'" :href="channelData.website_link === null ? 'javascript:void(0)' : channelData.website_link">Visit Website <i class="fa fa-external-link" aria-hidden="true"></i></a>
                 </div>
 

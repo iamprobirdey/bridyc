@@ -982,7 +982,7 @@ __webpack_require__.r(__webpack_exports__);
       axios.get("api/getUserData").then(function (response) {
         if (response.status === 200) {
           _this.infrastructure = response.data.user[0];
-          console.log(_this.infrastructure);
+          if (_this.infrastructure.boys_toilet != null) _this.infrastructureStatus = false;
         }
       })["catch"](function (errors) {
         console.log(errros);
@@ -995,7 +995,7 @@ __webpack_require__.r(__webpack_exports__);
         if (result) {
           axios.post("api/infra/store/" + _this2.infrastructure.id, _this2.formData).then(function (response) {
             _this2.infrastructureStatus = false;
-            _this2.infrastructure = response.data.data[0];
+            _this2.infrastructure = response.data.channel;
           })["catch"](function (errors) {
             if (errors.response.data.errors.no_of_class) {
               _this2.serverErrors.no_of_class = errors.response.data.errors.no_of_class[0];
@@ -14973,7 +14973,7 @@ var render = function() {
     _vm._m(0),
     _vm._v(" "),
     _c("div", [
-      _vm.infrastructure.boys_toilet != null
+      _vm.infrastructureStatus === false
         ? _c("table", { staticClass: "table-responsive" }, [
             _vm._m(1),
             _vm._v(" "),

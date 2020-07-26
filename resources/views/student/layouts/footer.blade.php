@@ -76,7 +76,8 @@
     });
   </script>
 
-  <script src="{{url('js/loginSignupModal.js')}}"></script>
+
+    <script src="{{url('js/loginSignupModal.js')}}"></script>
 
 </body>
 </html>

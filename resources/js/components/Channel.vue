@@ -112,7 +112,6 @@ export default {
         }
     },
     mounted(){
-        console.log(this.channel);
         if(this.channel.length > 0) this.channelData = this.channel;
     },
     methods: {

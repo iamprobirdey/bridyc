@@ -804,7 +804,7 @@ var render = function() {
           _c("div", { staticClass: "d-flex" }, [
             _c("div", { staticClass: "d-flex flex-column" }, [
               _c("p", { staticClass: "m-1" }, [
-                _vm._v("A unit of abc society askjfhjkkhh")
+                _vm._v("A unit of abc society askjfhjkkhh ")
               ]),
               _vm._v(" "),
               _c(
