@@ -200,9 +200,9 @@ export default {
                 .post('register',this.registerFormData)
                 .then(response => {
                     console.log(response);
-                    if(response.data.auth){
-                         location.reload();
-                    }
+                    // if(response.data.auth){
+                    //      location.reload();
+                    // }
                     if(response.data.status === 201){
                         console.log(response.data);
                     }
