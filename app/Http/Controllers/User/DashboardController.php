@@ -27,7 +27,6 @@ class DashboardController extends Controller
         $allPlaces = $modelHelperService::getStateDistrictVillage();
         $usersVerification = $modelHelperService::getUserVerificationDetails();
         $languages = $modelHelperService::getLanguages();
-        dd($allPlaces);
         return view('institute.verification',
             compact('allPlaces',$allPlaces),
             compact('usersVerification',$usersVerification),
