@@ -295,9 +295,11 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       axios.post('register', this.registerFormData).then(function (response) {
-        console.log(response); // if(response.data.auth){
-        //      location.reload();
-        // }
+        console.log(response);
+
+        if (response.data.auth) {
+          location.reload();
+        }
 
         if (response.data.status === 201) {
           console.log(response.data);

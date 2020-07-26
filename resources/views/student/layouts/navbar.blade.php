@@ -22,6 +22,13 @@
             <a class="nav-link" href="{{url('/contact')}}">Contact Us</a>
           </li>
         </ul>
+        @if (auth()->check() && auth()->user()->user_type === 'institute')
+        <li class="nav-item">
+          <a class="btn btn-primary" data-trigger="focus" data-toggle="popover" data-placement="bottom" href="/user/dashboard">
+            Dashboard
+          </a>
+        </li>
+        @endif
         @if (Auth::check())
             <a class="btn btn-danger" href="{{ route('logout') }}"
             onclick="event.preventDefault();
