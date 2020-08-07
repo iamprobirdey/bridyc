@@ -1,0 +1,369 @@
+.imgban {
+  margin-top: 65px;
+  height: 260px;
+  -webkit-transition: all ease .5sec;
+  transition: all ease .5sec;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media only screen and (min-width: 768px) {
+  .imgban {
+    height: auto;
+    margin-top: 80px;
+  }
+}
+
+.focusplace {
+  text-align: center;
+  color: black;
+  background-color: #f5f9ff;
+  position: relative;
+  top: -100px;
+  width: 90%;
+  height: auto;
+}
+
+@media only screen and (min-width: 765px) {
+  .focusplace {
+    top: -190px;
+  }
+}
+
+.focusplace p {
+  font-size: 15px;
+  line-height: 1.1em;
+  margin-bottom: .7em;
+}
+
+.focusplace .imgguest {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  position: relative;
+  z-index: 1;
+}
+
+@media only screen and (min-width: 768px) {
+  .focusplace .imgguest {
+    display: none;
+  }
+}
+
+.focusplace .podcastcard {
+  margin-top: -50px;
+  margin-bottom: 20px;
+  text-align: left;
+  -webkit-transition: all ease-in .1s;
+  transition: all ease-in .1s;
+  width: 100%;
+  padding-top: 30px;
+}
+
+@media only screen and (min-width: 765px) {
+  .focusplace .podcastcard {
+    display: block;
+    width: 200px;
+    margin-top: 22px;
+    padding-top: 0px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .focusplace .podcastcard {
+    display: block;
+    width: 240px;
+    margin-top: 22px;
+    padding-top: 0px;
+  }
+}
+
+.focusplace .podcastcard .imgguestcard {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .focusplace .podcastcard .imgguestcard {
+    display: block;
+    width: 100%;
+    height: 250px;
+  }
+}
+
+.institute {
+  text-align: center;
+  margin-top: -20px;
+}
+
+@media only screen and (min-width: 768px) {
+  .institute {
+    padding-left: 55px;
+  }
+}
+
+.institute h6 {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 22px;
+}
+
+@media only screen and (min-width: 481px) {
+  .institute h6 {
+    font-size: 32px;
+    text-align: left;
+    border-bottom: 3px solid #5bc0de;
+    width: 40px;
+  }
+}
+
+.institute hr {
+  margin-top: -8px;
+  margin-bottom: -5px;
+  border-bottom: 3px solid #5bc0de;
+  width: 20px;
+}
+
+@media only screen and (min-width: 481px) {
+  .institute hr {
+    display: none;
+  }
+}
+
+.institute .institutecard {
+  width: 148px;
+  height: auto;
+  background-color: white;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 13px;
+  -webkit-transition: all ease .5s;
+  transition: all ease .5s;
+  border: 1px;
+}
+
+@media only screen and (min-width: 360px) {
+  .institute .institutecard {
+    width: 167px;
+    height: auto;
+  }
+}
+
+@media only screen and (min-width: 375px) {
+  .institute .institutecard {
+    width: 175px;
+    height: auto;
+  }
+}
+
+@media only screen and (min-width: 411px) {
+  .institute .institutecard {
+    width: 190px;
+    height: auto;
+  }
+}
+
+@media only screen and (min-width: 481px) {
+  .institute .institutecard {
+    width: 228px;
+    height: 210px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .institute .institutecard {
+    width: 235px;
+    height: 200px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .institute .institutecard {
+    width: 275px;
+    height: 400px;
+  }
+}
+
+.institute .institutecard .card-body {
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 10px;
+}
+
+.institute .institutecard .card-body .inslogo {
+  width: 48px;
+  height: 48px;
+}
+
+@media only screen and (min-width: 360px) {
+  .institute .institutecard .card-body .inslogo {
+    width: 55px;
+    height: 55px;
+  }
+}
+
+@media only screen and (min-width: 411px) {
+  .institute .institutecard .card-body .inslogo {
+    width: 63px;
+    height: 63px;
+  }
+}
+
+@media only screen and (min-width: 481px) {
+  .institute .institutecard .card-body .inslogo {
+    width: 70px;
+    height: 70px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .institute .institutecard .card-body .inslogo {
+    width: 80px;
+    height: 100px;
+  }
+}
+
+.institute .institutecard .card-body h4 {
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+@media only screen and (min-width: 360px) {
+  .institute .institutecard .card-body h4 {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (min-width: 411px) {
+  .institute .institutecard .card-body h4 {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-width: 481px) {
+  .institute .institutecard .card-body h4 {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .institute .institutecard .card-body h4 {
+    font-size: 24px;
+  }
+}
+
+.institute .institutecard .card-body p {
+  font-size: 13px;
+  margin-bottom: 2px;
+}
+
+@media only screen and (min-width: 360px) {
+  .institute .institutecard .card-body p {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 411px) {
+  .institute .institutecard .card-body p {
+    font-size: 16px;
+  }
+}
+
+.institute .institutecard .destext {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .institute .institutecard .destext {
+    display: block;
+    height: 30px;
+  }
+}
+
+.institute .visitins {
+  font-size: small;
+  margin-bottom: 15px;
+  color: rgba(230, 230, 97, 0.986);
+  text-decoration: underline;
+}
+
+@media only screen and (min-width: 1280px) {
+  .institute .visitins {
+    display: none;
+  }
+}
+
+.institute .btnvisit {
+  display: none;
+  margin-top: 23px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  background-color: #011737;
+  color: white;
+}
+
+@media only screen and (min-width: 1280px) {
+  .institute .btnvisit {
+    display: block;
+    width: 60%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+.institute .btnvisit:hover {
+  color: rgba(230, 230, 97, 0.986) !important;
+}
+
+.aboutdiv {
+  position: relative;
+  top: 0;
+  -webkit-transition: top ease 0.3s;
+  transition: top ease 0.3s;
+  margin-top: 0;
+  margin-bottom: 30px;
+}
+
+@media only screen and (min-width: 411px) {
+  .aboutdiv {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-width: 375px) {
+  .aboutdiv {
+    width: 98%;
+  }
+}
+
+@media only screen and (min-width: 765px) {
+  .aboutdiv {
+    width: 100%;
+    padding-left: 82px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .aboutdiv {
+    width: 100%;
+    padding-left: 2px;
+  }
+}
+
+.aboutdiv .imgdes {
+  width: 100%;
+  height: 100%;
+  margin-bottom: 10px;
+}
+
+.aboutdiv .aboutdesc {
+  background-color: #f5f9ff;
+}
+
+.aboutdiv h4 {
+  text-align: center;
+  padding-top: 10PX;
+}
+
+.aboutdiv:hover {
+  top: -10px;
+}

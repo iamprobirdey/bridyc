@@ -1,0 +1,80 @@
+
+nav{
+    
+    background-color: white;
+    border-bottom: 10px solid #96511f;
+    .imglogodash{
+        width:60px; 
+        height: auto;
+        margin-left: 8%;
+        margin-top: -2px;
+        margin-bottom: -2px;
+        transition: all ease .5s;
+        @include screensize(tablet){
+          width: 85px;
+          height: auto;
+       }
+      
+    }
+    ul{
+        li{
+            .accounticon{
+                font-size: 20px;
+                color: #96511f;
+                padding: 7px;
+                @include screensize(tablet){
+                    font-size: 23px;
+                    padding: 15px;
+                 }
+            }
+        }
+
+    }
+}
+
+.popnav{
+    padding-left: 1em;
+    padding-right: 1em;
+    margin-left: -26px;
+    margin-right: -26px;
+    text-align: left;
+    li{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    padding-left: 25px;
+    padding-right: 25px;
+    list-style-type: none;
+    &:hover{
+        background-color: #96511f;
+    }
+
+        a{
+            color: black;
+            font-size: 18px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            &:hover{
+                text-decoration: none;
+                color: white;
+            }
+        }
+    }
+}
+.linklog{
+    text-align: left;
+    margin-left: -13px;
+    margin-right: -13px;
+    padding-left: 25px;
+    a{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: black;
+        font-size: 18px;
+        &:hover{
+            text-decoration: none;
+            color: white;
+        }
+    }
+    &:hover{
+        background-color: #96511f;
+    }
+
+}

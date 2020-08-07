@@ -1,0 +1,84 @@
+
+.imgban{
+    margin-top: 65px;
+    height: 260px;
+    transition: all ease .5sec;
+    margin-left: auto;
+    margin-right: auto;
+    @include screensize(laptop){
+       height: auto;
+       margin-top: 80px;
+    }
+    
+}
+
+.focusplace{
+    text-align: center;
+    color: black;
+    background-color: #f5f9ff;
+    position: relative;
+    top: -100px;
+    width:90%;
+    height: auto;
+    @include screensize(forcards){
+        
+        }
+        @include screensize(foriphone6x){
+            
+            }
+        @include screensize(prelaptop){
+            top: -190px; 
+                }
+    @include screensize(laptop){
+       
+        }
+
+        p{
+            font-size: 15px;
+            line-height: 1.1em;
+            margin-bottom:.7em;
+        }
+   
+    .imgguest{
+        width: 90px;
+        height:90px;
+        border-radius: 50%;
+        position: relative;
+        z-index: 1;
+        @include screensize(laptop){
+            display: none;
+        }
+    }
+   
+
+    .podcastcard{
+        margin-top: -50px;
+        margin-bottom: 20px;
+        text-align: left;
+        transition: all ease-in .1s;
+        width: 100%;
+        padding-top: 30px;
+        @include screensize(prelaptop){
+            display: block;
+            width:200px;
+            margin-top: 22px;
+            padding-top: 0px;
+        }
+        @include screensize(desktop){
+            display: block;
+            width:240px;
+            margin-top: 22px;
+            padding-top: 0px;
+        }
+       
+        .imgguestcard{
+            display: none;
+            @include screensize(laptop){
+                display: block;
+                width: 100%;
+                height:250px;
+            } 
+        }
+        
+    }
+}

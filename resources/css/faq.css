@@ -1,0 +1,43 @@
+.faqbody {
+  margin-top: 100px;
+}
+
+.faqbody .faqheader {
+  text-align: center;
+  background-color: #96511f;
+  color: white;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  font-size: 30px;
+}
+
+.faqbody .faqQ {
+  background: #f9fafa;
+  font-family: "Roboto", sans-serif;
+}
+
+.faqbody .faqQ:hover {
+  background: #ecf0f0;
+}
+
+.faqbody .faqQ .fa {
+  font-size: 18px;
+  font-weight: 900;
+  -webkit-transition: .3s transform ease-in-out;
+  transition: .3s transform ease-in-out;
+}
+
+.faqbody .faqQ .collapsed .fa {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.faqbody .faqQ a {
+  color: #3659a2;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.faqbody .card-body {
+  color: #324353;
+}

@@ -1,0 +1,80 @@
+@import "mixins";
+
+.errorbody{
+    margin-top: 40%;
+    text-align: center;
+    @include screensize(foriphone6x){
+        margin-top: 235px;
+    }
+    @include screensize(forcards){
+        margin-top: 230px;
+    }
+    @include screensize(tablet){
+        margin-top: 100px;
+    }
+    @include screensize(laptop){
+        margin-top: 390px;
+    }
+    @include screensize(desktop){
+        margin-top: 120px;
+    }
+    
+    p{
+        font-size: 90px;
+        font-family: 'Montserrat';
+        font-weight: 300;
+        margin-left: auto;
+        margin-right: auto;
+        @include screensize(tablet){
+            font-size: 140px;
+        }
+        @include screensize(laptop){
+            font-size: 240px;
+        }
+        
+    }
+    .desc{
+        
+        font-size: 25px;
+        font-weight: 500;
+        font-family: 'Montserrat';
+        background-color: white;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        position: relative;
+        top: -30px;
+        @include screensize(tablet){
+            top: -70px;
+            width: 340px;
+            font-size: 20px;
+        }
+        @include screensize(laptop){
+            top: -150px;
+            width: 490px;
+            font-size: 30px;
+        }
+        
+    }
+    .homepagelink{
+        background-color: #96511f;
+        color: white;
+        padding: 15px;
+        position: relative;
+        top: -20px;
+        @include screensize(laptop){
+            top: -90px;
+        }
+        &:hover{
+                background-color: white;
+                color: #96511f;
+                text-decoration: none;
+                font-size: 20px;
+                border: 2px solid #96511f;
+                padding: 10px;
+                border-bottom-left-radius: 15px;
+                border-bottom-right-radius: 15px;
+                border-top-left-radius: 15px;
+                border-top-right-radius: 15px;
+        }
+    }
+}

@@ -1,0 +1,52 @@
+
+
+.sidebar{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 100;
+    padding: 70px 0 0 10px;
+    background-color: white;
+    width: 100%;
+    .left-sidebar{
+        position: sticky;
+        top:0;
+        height: calc(100vh - 70px);
+        padding-top: 50px;
+
+       ul{
+           li{
+               margin-bottom: 20px;
+               margin-left: -10px;
+               & :active{
+                background-color: #96511f;
+                color: white;
+               }
+               & :focus{
+                background-color: #96511f;
+                color: white;
+               }
+               
+            a{
+                color: #333;
+                font-weight: 500;
+            }
+           }
+           .sidebaricons{
+            font-size: 0.9rem;
+            
+        }
+       }
+       
+    }
+
+}
+
+.modaltext{
+    width: 100% !important;
+}
+.short{
+    width: 100% !important;
+}
+

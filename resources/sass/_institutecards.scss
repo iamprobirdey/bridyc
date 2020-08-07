@@ -1,0 +1,154 @@
+
+.institute{
+    text-align: center;
+    margin-top: -20px;
+    @include screensize(laptop){
+        padding-left: 55px;
+       }
+
+    
+    h6{
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 22px; 
+        @include screensize(tablet){
+            font-size: 32px;
+            text-align: left; 
+            border-bottom: 3px solid #5bc0de;
+            width: 40px;
+           }
+    }
+    hr{
+        margin-top: -8px;
+        margin-bottom: -5px;
+        border-bottom: 3px solid #5bc0de;
+        width: 20px;
+        @include screensize(tablet){
+            display: none;
+            
+           }
+    }
+
+    .institutecard{
+       width: 148px;
+       height: auto;
+       background-color: white;
+       align-items: center;
+       margin-bottom: 13px;
+       transition: all ease .5s;
+       border: 1px;
+       
+       @include screensize(formotog4){
+        width: 167px;
+        height: auto;
+       }
+       @include screensize(foriphone6x){
+        width: 175px;
+       height: auto;
+       }
+       @include screensize(forcards){
+        width: 190px;
+        height: auto;
+       }
+       @include screensize(tablet){
+        width: 228px;
+        height:210px;
+       }
+       
+       @include screensize(laptop){
+        width: 235px;
+        height:200px;
+       }
+       @include screensize(desktop){
+        width: 275px;
+        height:400px;
+       }
+
+       .card-body{
+           padding-left: 0;
+           padding-right: 0;
+           padding-top: 10px;
+        .inslogo{
+            width: 48px;
+            height: 48px;
+            @include screensize(formotog4){
+                width: 55px;
+               height: 55px;
+               }
+               @include screensize(forcards){
+                width: 63px;
+                height: 63px;
+               }
+               @include screensize(tablet){
+                width: 70px;
+                height: 70px;
+               }
+               @include screensize(desktop){
+                width: 80px;
+                height: 100px;
+               }
+        }
+        h4{
+            font-size: 15px;
+            margin-top: 10px;
+            @include screensize(formotog4){
+                font-size: 18px;
+               }
+             @include screensize(forcards){
+            font-size: 20px;
+           }
+           @include screensize(tablet){
+            font-size: 20px;
+           }
+           @include screensize(desktop){
+            font-size: 24px;
+           }
+        }
+        p{
+            font-size: 13px;
+            margin-bottom: 2px;
+            @include screensize(formotog4){
+                font-size: 16px;
+               }
+            @include screensize(forcards){
+                font-size: 16px;
+               }
+        }
+       
+       }
+       .destext{
+           display: none;
+           @include screensize(laptop){
+            display: block;
+            height: 30px;
+           }
+       }
+       
+    }
+
+    .visitins{
+        font-size: small;
+        margin-bottom: 15px;
+        color: rgba(230, 230, 97, 0.986);
+        text-decoration: underline;
+        @include screensize(desktop){
+            display: none;
+           }
+    }
+    .btnvisit{
+        display:none;
+        margin-top: 23px;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+       background-color: #011737;
+        color: white;
+        @include screensize(desktop){
+            display: block;
+            width: 60%;
+            padding-top: 10px;
+            padding-bottom: 10px;
+           }
+           &:hover{
+            color: rgba(230, 230, 97, 0.986) !important;
+        }
+    }
+}

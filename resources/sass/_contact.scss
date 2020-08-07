@@ -1,0 +1,15 @@
+
+
+.contactform{
+    font-family: 'Times New Roman', Times, serif;
+    .contactadd{
+        text-align: center;
+        @include screensize(tablet){
+            padding-top: 70px;
+        }
+    }
+    h2{
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}

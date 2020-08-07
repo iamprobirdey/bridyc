@@ -1,0 +1,279 @@
+
+
+main {
+    padding-top: 70px;
+    .inscover{
+         width: 100%;
+         height: 230px;
+         @include screensize(tablet){
+            height: 280px;
+          }
+         @include screensize(laptop){
+            height: 310px;
+          }
+    }
+    .blankdiv{
+        height: 130px;
+        width: 100%;
+        position: relative;
+        top: -70px;
+        background-color: white;
+        padding-top: 55px;
+        padding-left: 20px;
+        @include screensize(tablet){
+            height: 130px;
+          }
+        @include screensize(laptop){
+            height: 150px;
+            padding-left: 70px;
+            padding-top: 75px;
+          }
+        .insweb{
+            border: 1px solid #96511f;
+            background-color: #96511f;
+            color: white;
+            width: 150px;
+            padding-left: 15px;
+            padding-right: 12px;
+            &:hover{
+                background-color: white;
+                color: #96511f;
+                text-decoration: none;
+                font-size: 17px;
+                border: 2px solid #96511f;
+            }
+        }
+        .phemdiv{
+            display: none;
+            @include screensize(laptop){
+               display: block;
+             }
+        }
+        .btnshare{
+         position: relative;
+         top: 30px;
+         left: 90%;
+         font-size: 20px;
+         @include screensize(laptop){
+          top: -25px;
+          left: 95%;
+          font-size: 25px;
+       }
+        }
+    }
+    .logo-title{
+        position: relative;
+         top: -280px;
+         left: 5px;
+        margin-bottom: -120px;
+        @include screensize(tablet){
+            top: -290px;
+            left: 10px;
+         }
+        @include screensize(laptop){
+            top: -330px;
+            left: -70px;
+         }
+        .logoinstitute{
+            width: 70px;
+            height: 80px;
+            transition: all ease .5s;
+                 @include screensize(tablet){
+                    width: 90px;
+                    height: 90px;
+                 }
+                 
+                 @include screensize(laptop){
+                    width: 130px;
+                    height: 130px;
+                    margin-left: 130px !important;
+                 }
+              }
+              .institle{
+                font-size: 18px;
+                margin-top: 45px;
+                transition: all ease .5s;
+                @include screensize(foriphone6x){
+                    font-size: 20px;   
+                   }
+                @include screensize(forcards){
+                    font-size: 25px;
+                   }
+                    @include screensize(tablet){
+                        font-size: 30px;
+                    }
+                    
+                       @include screensize(laptop){
+                        font-size: 40px;
+                        margin-top: 70px;
+                       }
+               }
+    }
+    
+
+          .achievecard{
+            background-color: white;
+            text-align: center;
+            align-items: center;
+            margin-bottom: 13px;
+            border: 1px;
+            margin-top: -43px;
+            height:auto;
+            margin-left: auto;
+            margin-right: auto;
+            width: 90%;
+            @include screensize(tablet){
+                font-size: x-large;
+              }
+            @include screensize(prelaptop){
+              font-size: small;
+            }
+            @include screensize(laptop){
+                font-size: large;
+              }
+          }
+          .description{
+            background-color: white;
+            padding: 1rem;
+            margin-left: auto;
+            margin-right: auto;
+            width: 90%;
+            @include screensize(tablet){
+                font-size: x-large;
+              }
+            @include screensize(prelaptop){
+                width: 90%;
+                height:auto;
+                margin-left: auto;
+                margin-right: auto;
+              }
+              @include screensize(laptop){
+               font-size: large;
+              }
+          }
+          .info{
+              h4{background-color: #96511f;}
+              margin-top:.2rem;
+              line-height: 2rem;
+              padding-left: .5rem;
+              padding-right: .5rem;
+              font-size: 20px;
+              color: black;
+              padding-top: 10px;
+              line-height: 3rem;
+              margin-top: 40px;
+             .card-title{
+                 text-align: center;
+             }
+              hr{
+                  border-bottom: 3px solid white;
+              }
+              @include screensize(tablet){
+                font-size: x-large;
+               }
+              @include screensize(prelaptop){
+                width: 90%;
+                margin-left: auto;
+                margin-right: auto;
+               }
+               @include screensize(laptop){
+                margin-top: 0px;
+                font-size: large;
+               }
+              
+          }
+          .insaddress{
+              h4{
+                  text-align: center;
+                  padding-top: .5rem;
+                  padding-bottom: .5rem;
+              }
+              .addbody{
+                  margin-top:-8px;
+                  padding: 2rem;
+                  font-size: large;
+                  font-weight: 500;
+                  border-left: 2px solid gainsboro;
+                  border-right: 2px solid gainsboro;;
+                  border-bottom: 2px solid gainsboro;;
+                  @include screensize(tablet){
+                    font-size: x-large;
+               }
+               @include screensize(laptop){
+                font-size: large;
+                }
+                  ul{
+                      line-height: 2rem;
+                  }
+              }
+              @include screensize(foriphone6x){
+                margin-top: 40px;
+           }
+              @include screensize(forcards){
+                margin-top: 60px;
+           }
+              @include screensize(tablet){
+                width: 90%;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 350px;
+           }
+           @include screensize(prelaptop){
+            margin-top: 590px;
+       }
+           @include screensize(laptop){
+            margin-top: 0px;
+       }
+          }
+          .inscarou{
+              width: 100%;
+              height: 180px;
+              margin-bottom: 80px;
+              @include screensize(tablet){
+                margin-bottom: -190px;
+               }
+              @include screensize(laptop){
+                display: none;
+               }
+               li{
+                   position: relative;
+                   width: 8px;
+                   height: 8px;
+                   top: 30px;
+                   border-radius: 100%;
+                   background-color: black;
+                   @include screensize(prelaptop){
+                    top: 250px;
+                   }
+               }
+              img{
+                  width: 100%;
+                  height: 100%;
+              }
+
+          }
+          .insimages{
+             display: none;
+              @include screensize(laptop){
+                display: block;
+                width: 90%;
+                height: 700px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: -50px;
+               }
+            img{
+                width: 100%;
+                height: 50%;
+                }
+                .sub-img{ 
+                    img{
+                    margin-top:5px;
+                    width:100px;
+                    height:110px;
+                    cursor: pointer;
+                   }
+                }
+          }
+  }
+

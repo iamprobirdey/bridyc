@@ -1,0 +1,108 @@
+.errorbody {
+  margin-top: 40%;
+  text-align: center;
+}
+
+@media only screen and (min-width: 375px) {
+  .errorbody {
+    margin-top: 235px;
+  }
+}
+
+@media only screen and (min-width: 411px) {
+  .errorbody {
+    margin-top: 230px;
+  }
+}
+
+@media only screen and (min-width: 481px) {
+  .errorbody {
+    margin-top: 100px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .errorbody {
+    margin-top: 390px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .errorbody {
+    margin-top: 120px;
+  }
+}
+
+.errorbody p {
+  font-size: 90px;
+  font-family: 'Montserrat';
+  font-weight: 300;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media only screen and (min-width: 481px) {
+  .errorbody p {
+    font-size: 140px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .errorbody p {
+    font-size: 240px;
+  }
+}
+
+.errorbody .desc {
+  font-size: 25px;
+  font-weight: 500;
+  font-family: 'Montserrat';
+  background-color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  position: relative;
+  top: -30px;
+}
+
+@media only screen and (min-width: 481px) {
+  .errorbody .desc {
+    top: -70px;
+    width: 340px;
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .errorbody .desc {
+    top: -150px;
+    width: 490px;
+    font-size: 30px;
+  }
+}
+
+.errorbody .homepagelink {
+  background-color: #96511f;
+  color: white;
+  padding: 15px;
+  position: relative;
+  top: -20px;
+}
+
+@media only screen and (min-width: 768px) {
+  .errorbody .homepagelink {
+    top: -90px;
+  }
+}
+
+.errorbody .homepagelink:hover {
+  background-color: white;
+  color: #96511f;
+  text-decoration: none;
+  font-size: 20px;
+  border: 2px solid #96511f;
+  padding: 10px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
