@@ -1,7 +1,7 @@
 nav{       
     margin-left: auto;
     margin-right: auto;
-    background-color: white;
+    //background-color: white;
     a{
 
     .imglogo{
@@ -30,7 +30,7 @@ nav{
             margin-bottom: -5px;
             }
         @include screensize(desktop){
-            width: 75px;
+            width: 90px;
             height: auto;
             margin-top: -5px;
             margin-bottom: -5px;
@@ -47,35 +47,42 @@ nav{
     ul{
           a{
               font-size: large;
-              color: black;
-              font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+              //color: black;
+              color: white;
+             
               margin-left: 20px;
               margin-right:20px;  
+              font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
              &:hover{
-                 color: black;
+                 color: white;
              }
            }
     }
 
     .navbtn{
         margin-top: 20px;
-        background-color: #011737;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         color: white;
         @include screensize(forbutton){
             margin-top: 0px;
             }
             &:hover{
                 color: white;
-                background-color: #022457;
+                background-color: #011737;
             }
     }
 
 }
 
 .shrink{
-    background-color: white !important;
+    background-color: white;
+    transition: all ease-in .5s;
     a{
+        color: black;
+        &:hover{
+            color: black;
+        }
         .imglogo{
             
             @include screensize(tablet){
@@ -104,6 +111,18 @@ nav{
                     }
             
         }
+    }
+    .navbtn{
+        margin-top: 20px;
+        background-color: #011737;
+        color: white;
+        @include screensize(forbutton){
+            margin-top: 0px;
+            }
+            &:hover{
+                color: white;
+                background-color: #011737;
+            }
     }
    
 }

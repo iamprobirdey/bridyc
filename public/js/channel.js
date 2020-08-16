@@ -195,6 +195,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -233,7 +236,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("section", [
     _c("div", { staticClass: "institute container-fluid" }, [
-      _c("h6", [_vm._v("Institutes")]),
+      _vm._m(0),
       _vm._v(" "),
       _c("hr"),
       _vm._v(" "),
@@ -249,7 +252,7 @@ var render = function() {
             [
               _c("div", { staticClass: "card-body" }, [
                 _c("img", {
-                  staticClass: "shadow inslogo",
+                  staticClass: "inslogo",
                   attrs: {
                     src:
                       channel.icon_avatar === null
@@ -292,16 +295,16 @@ var render = function() {
                   staticClass: "visitins",
                   attrs: { href: _vm.domainUrl + "/channel/" + channel.slug }
                 },
-                [_vm._v("Visit College")]
+                [_vm._v("Visit Institute")]
               ),
               _vm._v(" "),
               _c(
                 "a",
                 {
-                  staticClass: "btn btnvisit",
+                  staticClass: "btn btnvisit ml-auto",
                   attrs: { href: _vm.domainUrl + "/channel/" + channel.slug }
                 },
-                [_vm._v("Visit College")]
+                [_vm._v("Visit Institute")]
               )
             ]
           )
@@ -311,7 +314,21 @@ var render = function() {
     ])
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "d-flex mb-1 ml-3" }, [
+      _c("h6", [_vm._v("Institutes")]),
+      _vm._v(" "),
+      _c("img", {
+        staticClass: "gradcap",
+        attrs: { src: "/images/school.svg" }
+      })
+    ])
+  }
+]
 render._withStripped = true
 
 

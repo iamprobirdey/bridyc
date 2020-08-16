@@ -1,7 +1,6 @@
 nav {
   margin-left: auto;
   margin-right: auto;
-  background-color: white;
 }
 
 nav a .imglogo {
@@ -34,7 +33,7 @@ nav a .imglogo {
 
 @media only screen and (min-width: 1280px) {
   nav a .imglogo {
-    width: 75px;
+    width: 90px;
     height: auto;
     margin-top: -5px;
     margin-bottom: -5px;
@@ -49,19 +48,19 @@ nav a .imglogo {
 
 nav ul a {
   font-size: large;
-  color: black;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: white;
   margin-left: 20px;
   margin-right: 20px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 nav ul a:hover {
-  color: black;
+  color: white;
 }
 
 nav .navbtn {
   margin-top: 20px;
-  background-color: #011737;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   color: white;
 }
 
@@ -73,11 +72,21 @@ nav .navbtn {
 
 nav .navbtn:hover {
   color: white;
-  background-color: #022457;
+  background-color: #011737;
 }
 
 .shrink {
-  background-color: white !important;
+  background-color: white;
+  -webkit-transition: all ease-in .5s;
+  transition: all ease-in .5s;
+}
+
+.shrink a {
+  color: black;
+}
+
+.shrink a:hover {
+  color: black;
 }
 
 @media only screen and (min-width: 481px) {
@@ -105,6 +114,23 @@ nav .navbtn:hover {
     padding-bottom: -13px !important;
     padding-top: 5px !important;
   }
+}
+
+.shrink .navbtn {
+  margin-top: 20px;
+  background-color: #011737;
+  color: white;
+}
+
+@media only screen and (min-width: 1000px) {
+  .shrink .navbtn {
+    margin-top: 0px;
+  }
+}
+
+.shrink .navbtn:hover {
+  color: white;
+  background-color: #011737;
 }
 
 .regBen {
@@ -258,7 +284,6 @@ nav .navbtn:hover {
   background-image: -webkit-gradient(linear, left bottom, right top, from(#011737), color-stop(#002847), color-stop(#003954), color-stop(#004a5f), to(#005b67));
   background-image: linear-gradient(to right top, #011737, #002847, #003954, #004a5f, #005b67);
   margin-top: 10px;
-  margin-bottom: 30px;
   padding-top: 50px;
   padding-bottom: 50px;
   color: white;

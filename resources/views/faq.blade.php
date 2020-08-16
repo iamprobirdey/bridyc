@@ -5,8 +5,8 @@
     <link rel="stylesheet" type="text/css" href="{{url('css/faq.css')}}">
 @endsection
 @section('content')
+<h2 class="faqheader container-fluid">FAQ & Answers</h2>
 <div class="container faqbody">
-    <h2 class="faqheader">FAQ & Answers</h2>
 <br>
 <div id="accordion">
   <div class="card">
@@ -53,7 +53,6 @@
   </div>
 </div>
 </div>
-
 
 @endsection
 

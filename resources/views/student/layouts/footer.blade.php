@@ -52,14 +52,17 @@
   <script type="text/javascript">
     $(document).ready(function(){
     $(document).on("scroll", function(){
-        if($(window).scrollTop()>50){
+        if($(window).scrollTop()>60){
             $("nav").addClass("shrink");
+            $(".navbar-brand img").attr('src', '/images/circle-bridyc.png')
             }
             else{
                 $("nav").removeClass("shrink");
+                $(".navbar-brand img").attr('src', '/images/bridyc white logo.png')
             }
         })
     });
+
     $(document).ready(function(){
         $("#lognsign, .newuser").click(function(){
         $("#mysignup").show();
@@ -67,12 +70,34 @@
 
         });
     });
+
     $(document).ready(function(){
         $(".haveanaccount, .haveaccount").click(function(){
             $("#mylogin").show();
             $("#mysignup").hide();
 
         });
+    });
+
+    $(document).ready(function(){
+       
+      //getting the video source from data source in watch now button
+        var $videourl;
+        $('.playbtn').click(function(){
+            $videourl= $(this).data("src");
+        });
+
+     //autoplay the video when the modal opens
+        $('#podcastModal').on('shown.bs.modal', function(event){
+          
+          //don't show related videos
+           $('#video').attr('src', $videourl + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0");
+        }) 
+
+     //stop playing the video when the modal is closed
+       $('#podcastModal').on('hide.bs.modal', function(event){
+          $('#video').attr('src',$videourl);
+       })   
     });
   </script>
 

@@ -1,14 +1,16 @@
 
+ .faqheader{
+    text-align: center; 
+    background-image: linear-gradient(to right top, #011737, #002847, #003954, #004a5f, #005b67);
+    color: white;
+    padding-top: 220px;
+    padding-bottom:25px;
+    font-size: 30px;
+}
+
 .faqbody{
-    margin-top: 100px;
-    .faqheader{
-        text-align: center;
-        background-color: #96511f;
-        color: white;
-        padding-top: 25px;
-        padding-bottom:25px;
-        font-size: 30px;
-    }
+    margin-bottom: 50px;
+   
     
     
     .faqQ{

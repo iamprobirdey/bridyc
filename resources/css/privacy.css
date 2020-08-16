@@ -1,3 +1,13 @@
+.mainheader {
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#011737), color-stop(#002847), color-stop(#003954), color-stop(#004a5f), to(#005b67));
+  background-image: linear-gradient(to right top, #011737, #002847, #003954, #004a5f, #005b67);
+  font-size: 30px;
+  padding-top: 220px;
+  padding-bottom: 25px;
+  text-align: center;
+  color: white;
+}
+
 .ptbody {
   margin-top: 50px;
 }
@@ -6,15 +16,6 @@
   .ptbody {
     margin-top: 100px;
   }
-}
-
-.ptbody .mainheader {
-  background-color: #96511f;
-  font-size: 30px;
-  padding-top: 25px;
-  padding-bottom: 25px;
-  text-align: center;
-  color: white;
 }
 
 .ptbody .mainbody {

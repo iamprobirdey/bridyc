@@ -1,7 +1,7 @@
 
 <header>
     <nav class="navbar navbar-expand-lg shadow-sm fixed-top px-3">
-      <a class="navbar-brand" href="{{url('/')}}"><img class="imglogo img-fluid" src="/images/circle-bridyc.png" alt="Bridyc logo" ></a>
+      <a class="navbar-brand" href="{{url('/')}}"><img class="imglogo img-fluid" src="/images/bridyc white logo.png" alt="Bridyc logo" ></a>
 
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
         <i class="fa fa-bars colbtn" aria-hidden="true"></i>
