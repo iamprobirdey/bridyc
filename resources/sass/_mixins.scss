@@ -47,5 +47,10 @@
             @content;
         }
     }
+    @else if $device==formobilemenu {
+        @media only screen and (max-width: 768px) {
+            @content;
+        }
+    }
     
 }

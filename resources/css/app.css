@@ -3,8 +3,35 @@ nav {
   margin-right: auto;
 }
 
+@media only screen and (max-width: 768px) {
+  nav #collapsibleNavbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding-top: 10px;
+    z-index: 99;
+    width: 230px;
+    height: 100%;
+    background-color: #2e2e2e;
+    overflow: auto;
+  }
+}
+
+nav #collapsibleNavbar .closemenu {
+  color: white;
+  position: relative;
+  right: 15px;
+  font-size: 30px;
+}
+
+@media only screen and (min-width: 765px) {
+  nav #collapsibleNavbar .closemenu {
+    display: none;
+  }
+}
+
 nav a .imglogo {
-  width: 60px;
+  width: 70px;
   height: auto;
   margin-top: -9px;
   margin-bottom: -9px;
@@ -40,6 +67,10 @@ nav a .imglogo {
   }
 }
 
+nav .colbtn {
+  color: white;
+}
+
 @media only screen and (min-width: 481px) {
   nav .colbtn {
     font-size: 25px;
@@ -55,13 +86,23 @@ nav ul a {
 }
 
 nav ul a:hover {
-  color: white;
+  color: black;
+}
+
+@media only screen and (min-width: 765px) {
+  nav ul a {
+    color: white;
+  }
+  nav ul a:hover {
+    color: white;
+  }
 }
 
 nav .navbtn {
   margin-top: 20px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   color: white;
+  background-color: #011737;
 }
 
 @media only screen and (min-width: 1000px) {
@@ -131,6 +172,20 @@ nav .navbtn:hover {
 .shrink .navbtn:hover {
   color: white;
   background-color: #011737;
+}
+
+.shrink .colbtn {
+  color: #011737;
+}
+
+@media only screen and (max-width: 768px) {
+  .shrink #collapsibleNavbar {
+    background-color: white;
+  }
+}
+
+.shrink #collapsibleNavbar .closemenu {
+  color: #011737;
 }
 
 .regBen {

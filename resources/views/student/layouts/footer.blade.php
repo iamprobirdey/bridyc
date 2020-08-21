@@ -63,6 +63,18 @@
         })
     });
 
+    $('[data-toggle="slide-collapse"]').on('click', function() {
+         $navMenuCont = $($(this).data('target'));
+         $navMenuCont.animate({
+         'width': 'toggle'
+         }, 230);
+   });
+     $('.closemenu').on('click', function(){
+      $navMenuCont.animate({
+         'width': 'toggle'
+         },0);
+     })
+
     $(document).ready(function(){
         $("#lognsign, .newuser").click(function(){
         $("#mysignup").show();
