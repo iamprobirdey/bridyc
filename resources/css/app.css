@@ -9,7 +9,8 @@ nav a .imglogo {
   margin-top: -9px;
   margin-bottom: -9px;
   margin-left: -5px;
-  transition: all ease 0.5s;
+  -webkit-transition: all ease .5s;
+  transition: all ease .5s;
 }
 
 @media only screen and (min-width: 481px) {
@@ -23,7 +24,7 @@ nav a .imglogo {
 
 @media only screen and (min-width: 768px) {
   nav a .imglogo {
-    width: 80px;
+    width: 75px;
     height: auto;
     margin-top: -5px;
     margin-bottom: -5px;
@@ -50,7 +51,7 @@ nav ul a {
   color: white;
   margin-left: 20px;
   margin-right: 20px;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 nav ul a:hover {
@@ -59,7 +60,7 @@ nav ul a:hover {
 
 nav .navbtn {
   margin-top: 20px;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   color: white;
 }
 
@@ -76,7 +77,8 @@ nav .navbtn:hover {
 
 .shrink {
   background-color: white;
-  transition: all ease-in 0.5s;
+  -webkit-transition: all ease-in .5s;
+  transition: all ease-in .5s;
 }
 
 .shrink a {
@@ -132,6 +134,7 @@ nav .navbtn:hover {
 }
 
 .regBen {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(#011737), color-stop(#00385e), color-stop(#005d84), color-stop(#0084a8), to(#02aec8));
   background-image: linear-gradient(to top, #011737, #00385e, #005d84, #0084a8, #02aec8);
   text-align: center;
   margin-left: 14px;
@@ -163,7 +166,7 @@ nav .navbtn:hover {
   font-weight: 700;
   background-color: white;
   padding: 15px;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   text-decoration: none;
   position: absolute;
   left: 16px;
@@ -200,7 +203,7 @@ nav .navbtn:hover {
 .signup .regheader {
   text-align: center;
   margin-top: 30px;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .signup .regheader .fbsignup {
@@ -269,7 +272,7 @@ nav .navbtn:hover {
 
 .login .logheader {
   text-align: center;
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .login .newuser {
@@ -278,6 +281,7 @@ nav .navbtn:hover {
 
 .footclass {
   text-align: center;
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#011737), color-stop(#002847), color-stop(#003954), color-stop(#004a5f), to(#005b67));
   background-image: linear-gradient(to right top, #011737, #002847, #003954, #004a5f, #005b67);
   margin-top: 10px;
   padding-top: 50px;
@@ -299,9 +303,13 @@ nav .navbtn:hover {
 }
 
 .footclass .flexw {
-  flex-grow: 0;
-  flex-shrink: 0;
-  flex-basis: 20em;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -ms-flex-preferred-size: 20em;
+      flex-basis: 20em;
 }
 
 @media only screen and (min-width: 360px) {
@@ -357,4 +365,3 @@ nav .navbtn:hover {
 .footclass .comp {
   margin-top: -15px;
 }
-

@@ -6,9 +6,9 @@
 @endsection
 @section('content')
 
-
+<h2 class="mainheader">Terms & Conditions</h2>
     <div class="container ptbody">
-        <h2 class="mainheader">Terms & Conditions</h2>
+
     <br>
         <div class="mainbody">
             <p>Last Updated: 10-07-2020</p>

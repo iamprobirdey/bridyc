@@ -6,8 +6,8 @@
 @endsection
 @section('content')
 
-
-<div class="container-fluid mt-5 ">
+<h2 class="contactheader container-fluid">Contact Us</h2>
+<div class="container-fluid mb-5">
     <div class="row contactform px-auto">
         <div class="col-md-5 mt-5 contactadd">
                 <h4><i class="fa fa-map-marker" aria-hidden="true"></i> Address</h4>
@@ -22,7 +22,7 @@
         </div>
     <br>
         <div class="col-md-7 mt-5 px-5">
-            <h2>Get in touch</h2>
+            <h2>Send us your queries</h2>
             <form action="" class="">
                 <input type="text" class="form-control shadow-none" placeholder="Name *" required>
                 <br>

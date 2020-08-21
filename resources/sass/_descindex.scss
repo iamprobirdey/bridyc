@@ -2,6 +2,9 @@
 
 
 .aboutdiv{
+    position: relative;
+    top: 0;
+    transition: top ease 0.3s;
     margin-top:0;
     margin-bottom: 30px;
     @include screensize(forcards){
@@ -20,15 +23,20 @@
        }
 .imgdes{
     width: 100%;
-    height: auto;
+    height: 100%;
     margin-bottom: 10px;
-    
+
+}
+.aboutdesc{
+    background-color: #f5f9ff;
 }
 h4{
-    background-color: #96511f;
-    color: white;
     text-align: center;
-    padding-top: 1%;
-    padding-bottom: 1%;
+    padding-top: 10PX;
+    color: #011737;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+&:hover{
+    top: -10px;
 }
 }

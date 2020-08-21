@@ -194,6 +194,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -232,7 +236,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("section", [
     _c("div", { staticClass: "institute container-fluid" }, [
-      _c("h1", [_vm._v("Colleges")]),
+      _vm._m(0),
       _vm._v(" "),
       _c("hr"),
       _vm._v(" "),
@@ -240,85 +244,91 @@ var render = function() {
       _vm._v(" "),
       _c(
         "div",
-        { staticClass: "row mx-auto mb-5" },
-        [
-          _vm._l(_vm.channelData, function(channel, index) {
-            return _c(
-              "div",
-              { key: index, staticClass: "card institutecard shadow" },
-              [
-                _c("div", { staticClass: "card-body" }, [
-                  _c("img", {
-                    staticClass: "inslogo",
-                    attrs: {
-                      src:
-                        channel.icon_avatar === null
-                          ? "/images/college logo.jpg"
-                          : _vm.domainUrl +
-                            "/media/channel/" +
-                            channel.user_id +
-                            "/" +
-                            channel.icon_avatar,
-                      alt: "college logo"
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c("h4", { staticClass: "card-title" }, [
-                    _vm._v(_vm._s(channel.title))
-                  ]),
-                  _vm._v(" "),
-                  _c("p", { staticClass: "card-text" }, [
-                    _vm._v(
-                      "\n                    " +
-                        _vm._s(channel.district.name) +
-                        "\n              "
-                    )
-                  ]),
-                  _vm._v(" "),
-                  channel.description != null
-                    ? _c("p", { staticClass: "card-text destext" }, [
-                        _vm._v(
-                          "\n                  " +
-                            _vm._s(channel.description) +
-                            "\n              "
-                        )
-                      ])
-                    : _vm._e(),
-                  _vm._v(" "),
-                  _c(
-                    "a",
-                    {
-                      staticClass: "visitins",
-                      attrs: {
-                        href: _vm.domainUrl + "/channel/" + channel.slug
-                      }
-                    },
-                    [_vm._v("Visit College")]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "a",
-                    {
-                      staticClass: "btn btnvisit",
-                      attrs: {
-                        href: _vm.domainUrl + "/channel/" + channel.slug
-                      }
-                    },
-                    [_vm._v("Visit College")]
+        { staticClass: "row mb-5" },
+        _vm._l(_vm.channelData, function(channel, index) {
+          return _c(
+            "div",
+            { key: index, staticClass: "card institutecard shadow mx-auto" },
+            [
+              _c("div", { staticClass: "card-body" }, [
+                _c("img", {
+                  staticClass: "inslogo",
+                  attrs: {
+                    src:
+                      channel.icon_avatar === null
+                        ? "/images/college logo.jpg"
+                        : _vm.domainUrl +
+                          "/media/channel/" +
+                          channel.user_id +
+                          "/" +
+                          channel.icon_avatar,
+                    alt: "college logo"
+                  }
+                }),
+                _vm._v(" "),
+                _c("h4", { staticClass: "card-title" }, [
+                  _vm._v(_vm._s(channel.title))
+                ]),
+                _vm._v(" "),
+                _c("p", { staticClass: "card-text" }, [
+                  _vm._v(
+                    "\n                    " +
+                      _vm._s(channel.district.name) +
+                      "\n              "
                   )
-                ])
-              ]
-            )
-          }),
-          _vm._v(" "),
-          _c("div", { staticClass: "space1" })
-        ],
-        2
+                ]),
+                _vm._v(" "),
+                channel.description != null
+                  ? _c("p", { staticClass: "card-text destext" }, [
+                      _vm._v(
+                        "\n                  " +
+                          _vm._s(channel.description) +
+                          "\n              "
+                      )
+                    ])
+                  : _vm._e()
+              ]),
+              _vm._v(" "),
+              _c(
+                "a",
+                {
+                  staticClass: "visitins",
+                  attrs: { href: _vm.domainUrl + "/channel/" + channel.slug }
+                },
+                [_vm._v("Visit Institute")]
+              ),
+              _vm._v(" "),
+              _c(
+                "a",
+                {
+                  staticClass: "btn btnvisit ml-auto",
+                  attrs: { href: _vm.domainUrl + "/channel/" + channel.slug }
+                },
+                [_vm._v("Visit Institute")]
+              )
+            ]
+          )
+        }),
+        0
       )
     ])
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "d-flex mb-1 ml-3" }, [
+      _c("h6", [_vm._v("Institutes")]),
+      _vm._v(" "),
+      _c("img", {
+        staticClass: "gradcap",
+        attrs: { src: "/images/school.svg" }
+      })
+    ])
+  }
+]
 render._withStripped = true
 
 

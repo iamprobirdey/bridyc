@@ -1,10 +1,10 @@
-nav{       
+nav{
     margin-left: auto;
     margin-right: auto;
     a{
 
     .imglogo{
-        width:60px; 
+        width:60px;
         height: auto;
         margin-top: -9px;
         margin-bottom: -9px;
@@ -29,7 +29,7 @@ nav{
             margin-bottom: -5px;
             }
         @include screensize(desktop){
-            width: 30%;
+            width: 90px;
             height: auto;
             margin-top: -5px;
             margin-bottom: -5px;
@@ -45,33 +45,45 @@ nav{
 
     ul{
           a{
-              font-size: larger;
-              color: black;
-              font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-              font-weight: 500;
-              margin-left: 20px;
-              margin-right:20px;  
+              font-size: large;
+              //color: black;
+              color: white;
 
-              &:focus{
-                 border-bottom: 3px solid #5bc0de;
-              }
+              margin-left: 20px;
+              margin-right:20px;
+              font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+             &:hover{
+                 color: white;
+             }
            }
     }
 
     .navbtn{
         margin-top: 20px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        color: white;
         @include screensize(forbutton){
             margin-top: 0px;
+            }
+            &:hover{
+                color: white;
+                background-color: #011737;
             }
     }
 
 }
 
 .shrink{
-    background-color: white !important;
+    background-color: white;
+    transition: all ease-in .5s;
     a{
+        color: black;
+        &:hover{
+            color: black;
+        }
         .imglogo{
-            
+
             @include screensize(tablet){
                 width: 60px !important;
                 margin-top: -16px !important;
@@ -91,19 +103,31 @@ nav{
                     padding-top: 5px !important;
                     }
                 @include screensize(desktop){
-                    width: 25% !important;
+                    width: 70px !important;
                     margin-top: -10px !important;
                     padding-bottom: -13px !important;
                     padding-top: 5px !important;
                     }
-            
+
         }
     }
-   
+    .navbtn{
+        margin-top: 20px;
+        background-color: #011737;
+        color: white;
+        @include screensize(forbutton){
+            margin-top: 0px;
+            }
+            &:hover{
+                color: white;
+                background-color: #011737;
+            }
+    }
+
 }
 
 .regBen{
-    background-color: #3786bd;
+    background-image: linear-gradient(to top, #011737, #00385e, #005d84, #0084a8, #02aec8);
     text-align: center;
     margin-left: 14px;
     margin-right: 14px;
@@ -139,7 +163,7 @@ nav{
             background-color: rgb(246, 246, 246);
             border-bottom-left-radius: 5px;
             border-top-right-radius: 5px;
-            
+
         }
 
     }
@@ -159,12 +183,12 @@ nav{
         margin-top: 30px;
         font-family: Georgia, 'Times New Roman', Times, serif;
         .fbsignup{
-            background-color:#3786bd;
+            background-color:#011737;
             color: white;
             padding: 7px;
             text-decoration: none;
             &:hover{
-                background-color:#367fb3 ;
+                background-color:#014270 ;
             }
         }
     }
@@ -181,9 +205,10 @@ nav{
 
 .bigclose{
     display: none;
-    color: #3786bd;
+
     @include screensize(laptop){
         display: block;
+        color: #011737;
         }
 }
 .iplognsign{
@@ -197,11 +222,11 @@ nav{
 .btnlognsign{
     width: 100%;
     color: white;
-    background-color: #3786bd;
+    background-color: #011737;
     padding-left: 45px;
     padding-right: 45px;
     &:hover{
-        background-color:#367fb3 ;
+        background-color:#014270 ;
         color: white;
     }
 }

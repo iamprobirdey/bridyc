@@ -1,5 +1,6 @@
 .faqheader {
   text-align: center;
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#011737), color-stop(#002847), color-stop(#003954), color-stop(#004a5f), to(#005b67));
   background-image: linear-gradient(to right top, #011737, #002847, #003954, #004a5f, #005b67);
   color: white;
   padding-top: 220px;
@@ -23,11 +24,13 @@
 .faqbody .faqQ .fa {
   font-size: 18px;
   font-weight: 900;
-  transition: 0.3s transform ease-in-out;
+  -webkit-transition: .3s transform ease-in-out;
+  transition: .3s transform ease-in-out;
 }
 
 .faqbody .faqQ .collapsed .fa {
-  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .faqbody .faqQ a {
@@ -39,4 +42,3 @@
 .faqbody .card-body {
   color: #324353;
 }
-

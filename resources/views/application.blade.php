@@ -5,7 +5,7 @@
     <link rel="stylesheet" type="text/css" href="{{url('css/application.css')}}">
 @endsection
 @section('content')
-    <div class="applbody container-fluid">
+    <div class="applbody">
         <div class="blocks">
             <div class="block orange"></div>
             <div class="block blue"></div>
