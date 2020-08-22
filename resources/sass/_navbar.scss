@@ -2,10 +2,37 @@ nav{
     margin-left: auto;
     margin-right: auto;
     //background-color: white;
+    
+    #collapsibleNavbar { 
+      @include screensize(formobilemenu){
+        position: fixed;
+        top: 0;
+        right: 0;
+        padding-top: 10px;
+        z-index: 99;
+        width: 230px;
+        height: 100%;
+        background-color: #2e2e2e;
+        overflow: auto;
+    
+      }
+      
+      .closemenu{
+        color: white; 
+        position: relative;
+        right: 15px;
+        font-size: 30px;
+        @include screensize(prelaptop){
+            display: none;
+        }
+       }
+
+      }
+    //new addition above
     a{
 
     .imglogo{
-        width:60px; 
+        width:70px; 
         height: auto;
         margin-top: -9px;
         margin-bottom: -9px;
@@ -39,6 +66,7 @@ nav{
   }
 
   .colbtn{
+      color: white;
     @include screensize(tablet){
         font-size: 25px;
         }
@@ -47,16 +75,21 @@ nav{
     ul{
           a{
               font-size: large;
-              //color: black;
               color: white;
-             
               margin-left: 20px;
               margin-right:20px;  
               font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-
+            
              &:hover{
-                 color: white;
+                 color: black;
              }
+             @include screensize(prelaptop){
+                 color: white;
+                 &:hover{
+                     color: white;
+                 }
+             }
+
            }
     }
 
@@ -64,6 +97,7 @@ nav{
         margin-top: 20px;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         color: white;
+        background-color: #011737;
         @include screensize(forbutton){
             margin-top: 0px;
             }
@@ -80,6 +114,7 @@ nav{
     transition: all ease-in .5s;
     a{
         color: black;
+        
         &:hover{
             color: black;
         }
@@ -124,7 +159,17 @@ nav{
                 background-color: #011737;
             }
     }
-   
+    .colbtn{
+        color: #011737;
+    }
+    #collapsibleNavbar{
+        @include screensize(formobilemenu){
+        background-color:white;
+        }
+        .closemenu{
+            color: #011737;
+        }
+    }
 }
 
 .regBen{

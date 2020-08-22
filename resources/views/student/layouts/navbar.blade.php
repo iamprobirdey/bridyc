@@ -1,25 +1,28 @@
 
 <header>
-    <nav class="navbar navbar-expand-lg shadow-sm fixed-top px-3">
+    <nav class="navbar navbar-expand-md shadow-sm fixed-top px-3">
       <a class="navbar-brand" href="{{url('/')}}"><img class="imglogo img-fluid" src="/images/bridyc white logo.png" alt="Bridyc logo" ></a>
 
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+      <button class="navbar-toggler collapsed" type="button" data-toggle="slide-collapse" data-target="#collapsibleNavbar" aria-expanded="false">
         <i class="fa fa-bars colbtn" aria-hidden="true"></i>
       </button>
 
       <div class="collapse navbar-collapse" id="collapsibleNavbar">
+          <button type="button" class="close closemenu" aria-label="Close">
+               <span aria-hidden="true">&times;</span>
+          </button>
       <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="{{url('/')}}">Home</a>
+            <a class="nav-link" href="{{url('/')}}"> Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{url('/application')}}">Application</a>
+            <a class="nav-link" href="{{url('/application')}}"> Application</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{url('/faq')}}">FAQ</a>
+            <a class="nav-link" href="{{url('/faq')}}"> FAQ</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="{{url('/contact')}}">Contact Us</a>
+            <a class="nav-link" href="{{url('/contact')}}"> Contact Us</a>
           </li>
         </ul>
         @if (auth()->check() && auth()->user()->user_type === 'institute')
