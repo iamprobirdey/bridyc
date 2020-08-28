@@ -24,7 +24,12 @@
           <div class="flexw mb-4">
             <h5>Partner</h5>
             <p>If you want to partner with us,
-              call us at +91-9435285795/+91-9476844478</p>
+              call us at:
+              <ul>
+                <li>+91-9435285795</li>
+                <li>+91-9476844478</li>
+              </ul> 
+            </p>
           </div>
 
         </div>

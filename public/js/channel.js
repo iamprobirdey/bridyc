@@ -238,8 +238,6 @@ var render = function() {
     _c("div", { staticClass: "institute container-fluid" }, [
       _vm._m(0),
       _vm._v(" "),
-      _c("hr"),
-      _vm._v(" "),
       _c("br"),
       _vm._v(" "),
       _c(
@@ -319,7 +317,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "d-flex mb-1 ml-3" }, [
+    return _c("div", { staticClass: "insclass" }, [
       _c("h6", [_vm._v("Institutes")]),
       _vm._v(" "),
       _c("img", {

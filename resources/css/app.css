@@ -3,7 +3,7 @@ nav {
   margin-right: auto;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 750px) {
   nav #collapsibleNavbar {
     position: fixed;
     top: 0;
@@ -31,7 +31,7 @@ nav #collapsibleNavbar .closemenu {
 }
 
 nav a .imglogo {
-  width: 70px;
+  width: 68px;
   height: auto;
   margin-top: -9px;
   margin-bottom: -9px;
@@ -178,7 +178,7 @@ nav .navbtn:hover {
   color: #011737;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 750px) {
   .shrink #collapsibleNavbar {
     background-color: white;
   }
@@ -410,6 +410,16 @@ nav .navbtn:hover {
 }
 
 .footclass .flexw a {
+  font-size: 20px;
+}
+
+.footclass .flexw ul {
+  list-style-type: none;
+  margin-left: -50px;
+  margin-top: -10px;
+}
+
+.footclass .flexw ul li {
   font-size: 20px;
 }
 

@@ -7,7 +7,6 @@
 @section('content')
 
 <banner>
-    <!--img class="imgban img-fluid" src="/images/banner2.png" alt="college students image"-->
 
     <div class="img-fluid imgban">
         <div class="txtbanner">
@@ -32,7 +31,7 @@
                   <h2>Guest: Ankur Waariko</h2> 
                   <h6>CEO at Nearbuy</h6>
                 </div>
-                <div class="dateheader d-flex justify-content-center mt-2">
+                <div class="d-flex justify-content-center mt-2">
                      10 August,2020  |  16 min  |  Season 1
                 </div>
                 <br>

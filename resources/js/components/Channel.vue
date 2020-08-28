@@ -3,11 +3,11 @@
    <section>
      <!-- college section starts here-->
      <div class="institute container-fluid">
-        <div class="d-flex mb-1 ml-3">
+        <div class="insclass">
         <h6>Institutes</h6>
         <img class="gradcap" src="/images/school.svg">
         </div>
-        <hr>
+
    <br>
         <div class="row mb-5">
           <div class="card institutecard shadow mx-auto" v-for="(channel,index) in channelData" :key="index">

@@ -48,7 +48,7 @@
         }
     }
     @else if $device==formobilemenu {
-        @media only screen and (max-width: 768px) {
+        @media only screen and (max-width: 750px) {
             @content;
         }
     }
