@@ -1597,7 +1597,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.slide-fade-enter-active[data-v-4ad50216] {\n  transition: all 0.5s ease;\n}\n.slide-fade-leave-active[data-v-4ad50216] {\n  transition: all 0.5s cubic-bezier(1, 0.5, 0.8, 1);\n}\n.slide-fade-enter[data-v-4ad50216],\n.slide-fade-leave-to[data-v-4ad50216] {\n  transform: translateX(10px);\n  opacity: 0;\n}\n", ""]);
+exports.push([module.i, "\n.slide-fade-enter-active[data-v-4ad50216] {\r\n  transition: all 0.5s ease;\n}\n.slide-fade-leave-active[data-v-4ad50216] {\r\n  transition: all 0.5s cubic-bezier(1, 0.5, 0.8, 1);\n}\n.slide-fade-enter[data-v-4ad50216],\r\n.slide-fade-leave-to[data-v-4ad50216] {\r\n  transform: translateX(10px);\r\n  opacity: 0;\n}\r\n", ""]);
 
 // exports
 
@@ -1616,7 +1616,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.slide-fade-enter-active[data-v-ed4e66d8] {\n    transition: all 0.5s ease;\n}\n.slide-fade-leave-active[data-v-ed4e66d8] {\n    transition: all 0.5s cubic-bezier(1, 0.5, 0.8, 1);\n}\n.slide-fade-enter[data-v-ed4e66d8],\n.slide-fade-leave-to[data-v-ed4e66d8] {\n    transform: translateX(10px);\n    opacity: 0;\n}\n", ""]);
+exports.push([module.i, "\n.slide-fade-enter-active[data-v-ed4e66d8] {\r\n    transition: all 0.5s ease;\n}\n.slide-fade-leave-active[data-v-ed4e66d8] {\r\n    transition: all 0.5s cubic-bezier(1, 0.5, 0.8, 1);\n}\n.slide-fade-enter[data-v-ed4e66d8],\r\n.slide-fade-leave-to[data-v-ed4e66d8] {\r\n    transform: translateX(10px);\r\n    opacity: 0;\n}\r\n", ""]);
 
 // exports
 
@@ -14848,7 +14848,7 @@ var render = function() {
                       }
                     }
                   },
-                  [_vm._v("\n                Cancel\n            ")]
+                  [_vm._v("\r\n                Cancel\r\n            ")]
                 )
               : _vm._e(),
             _vm._v(" "),
@@ -17955,7 +17955,7 @@ if (typeof element != "undefined" && element != null) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/js/editChannel.js */"./resources/js/editChannel.js");
+module.exports = __webpack_require__(/*! C:\laragon\www\bridyc\resources\js\editChannel.js */"./resources/js/editChannel.js");
 
 
 /***/ })
