@@ -10,9 +10,6 @@
             <main role="main" class="col-lg-10 ml-lg-auto">
                 <br>
                 <br>
-
-                <div class="container">
-                    <div class="row">
                         <div id="verification">
                             <verification
                         :places="{{json_encode($allPlaces)}}"
@@ -22,8 +19,7 @@
                         :date="{{json_encode($date)}}"
                         ></verification>
                         </div>
-                    </div>
-                </div>
+                    
               </main>
         </div>
     </div>

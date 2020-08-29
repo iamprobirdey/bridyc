@@ -1,6 +1,6 @@
 <header>
     <nav class="navbar fixed-top p-0 mx-auto">
-      <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#sidebarcollapse">
+      <button class="navbar-toggler collapsed d-lg-none" type="button" data-toggle="slide-collapse" data-target="#sidebarcollapse" aria-expanded="false">
         <i class="fa fa-bars" aria-hidden="true"></i>
       </button>
 

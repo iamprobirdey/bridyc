@@ -1,4 +1,5 @@
-<div id="sidebarcollapse" class="col-lg-2 collapse d-lg-block sidebar shadow-lg">
+
+<div id="sidebarcollapse" class="col-lg-2 collapse d-lg-block shadow-lg">
     <div class="left-sidebar">
       <ul class="nav flex-column sidebar-nav">
             @if (
@@ -15,7 +16,7 @@
           </li>
         @else
         <li class="nav-item">
-        <a class="nav-link active" href="{{url('/user/dashboard')}}">
+        <a class="nav-link" href="{{url('/user/dashboard')}}">
             <span class="material-icons sidebaricons">
               dashboard
               </span>
@@ -23,7 +24,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="{{url('/user/dashboard/channel')}}">
+          <a class="nav-link" href="{{url('/user/dashboard/channel')}}">
             <span class="material-icons sidebaricons">
               dashboard
               </span>
@@ -31,7 +32,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="{{url('/user/dashboard/edit')}}">
+          <a class="nav-link" href="{{url('/user/dashboard/edit')}}">
             <span class="material-icons sidebaricons">
               dashboard
               </span>

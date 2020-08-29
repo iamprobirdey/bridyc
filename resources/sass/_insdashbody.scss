@@ -2,6 +2,8 @@
 
 main {
     padding-top: 70px;
+    margin-bottom: 40px;
+    
     .inscover{
          width: 100%;
          height: 230px;
@@ -274,6 +276,20 @@ main {
                     cursor: pointer;
                    }
                 }
+          }
+          .btnveri{
+            background-color:#011737;
+            width:100%;
+            color:white;
+            padding:10px;
+            font-weight:700;
+          @include screensize(laptop){
+            font-weight:300;
+            padding:7px;
+          }
+          &:hover{
+            color:white;
+          }
           }
   }
 

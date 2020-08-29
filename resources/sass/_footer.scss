@@ -23,7 +23,6 @@
         flex-basis: 20em;
         @include screensize(formotog4){
             margin-left: 24px;
-           // margin-left: -10px;
            }
         @include screensize(forcards){
           margin-left: 20px;
@@ -51,6 +50,14 @@
         a{
             font-size: 20px;
         }
+        ul{
+            list-style-type: none;
+            margin-left: -50px;
+            margin-top: -10px;
+            li{
+                font-size: 20px;
+            }
+        }
      }
      hr{
          border-bottom: 3px solid white;
@@ -61,4 +68,23 @@
     }
 
 }
+
+.float{
+	position:fixed;
+	width:50px;
+	height:50px;
+	bottom:40px;
+	right:40px;
+    background-color:#25d366;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+    font-size:30px;
+    z-index:100;
+  .my-float{
+	margin-top:10px;
+}
+}
+
+
 
