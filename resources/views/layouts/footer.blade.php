@@ -4,5 +4,15 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 @yield('js_code')
 
+
+<script>
+ $('[data-toggle="slide-collapse"]').on('click', function() {
+         $navMenuCont = $($(this).data('target'));
+         $navMenuCont.animate({
+         'width': 'toggle'
+         }, 230);
+   });
+     
+</script>
 </body>
 </html>

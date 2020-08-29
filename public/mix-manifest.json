@@ -7,8 +7,8 @@
     "/css/faq.css": "/css/faq.css?id=370d009792949e3e48c7",
     "/css/contact.css": "/css/contact.css?id=fef5b6c102e4dd8c240e",
     "/css/privacy.css": "/css/privacy.css?id=ba6cbbe3ebbbb249de3a",
-    "/css/institutedashboard.css": "/css/institutedashboard.css?id=6c0b250f1135cb35ffa0",
-    "/css/institutelandingpage.css": "/css/institutelandingpage.css?id=4703bc0a61496f3388a7",
+    "/css/institutedashboard.css": "/css/institutedashboard.css?id=6fe2812319454a66eac1",
+    "/css/institutelandingpage.css": "/css/institutelandingpage.css?id=af3d0f28c9c9f9ba2b98",
     "/js/channel.js": "/js/channel.js?id=59ea5ad0fdfb57b199a9",
     "/js/channelInDashboard.js": "/js/channelInDashboard.js?id=ea8dd15a70f822966068",
     "/js/channelwithslug.js": "/js/channelwithslug.js?id=5e9e76b07f73bd419205",
@@ -17,5 +17,5 @@
     "/js/editChannel.js": "/js/editChannel.js?id=b576c941845f15a28499",
     "/js/instituteRegister.js": "/js/instituteRegister.js?id=9a39d791ba491ae31ba6",
     "/js/loginSignupModal.js": "/js/loginSignupModal.js?id=7acfd01a7ac8da5ab85a",
-    "/js/verification.js": "/js/verification.js?id=e671c47e0ef5735d0f17"
+    "/js/verification.js": "/js/verification.js?id=05a9627793f629df84fb"
 }

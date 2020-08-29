@@ -1,22 +1,27 @@
 nav {
+  max-width: 100%;
   background-color: white;
-  border-bottom: 10px solid #96511f;
+  border-bottom: 7px solid #011737;
 }
 
 nav .imglogodash {
   width: 60px;
   height: auto;
-  margin-left: 8%;
-  margin-top: -2px;
-  margin-bottom: -2px;
+  margin-left: -12%;
   -webkit-transition: all ease .5s;
   transition: all ease .5s;
 }
 
 @media only screen and (min-width: 481px) {
   nav .imglogodash {
-    width: 85px;
+    width: 70px;
     height: auto;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  nav .imglogodash {
+    margin-left: 10px;
   }
 }
 
@@ -86,18 +91,18 @@ nav ul li .accounticon {
   background-color: #96511f;
 }
 
-.sidebar {
+#sidebarcollapse {
   position: fixed;
   left: 0;
-  bottom: 0;
   top: 0;
   z-index: 100;
   padding: 70px 0 0 10px;
   background-color: white;
-  width: 100%;
+  width: 70%;
+  overflow: auto;
 }
 
-.sidebar .left-sidebar {
+#sidebarcollapse .left-sidebar {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
@@ -105,27 +110,27 @@ nav ul li .accounticon {
   padding-top: 50px;
 }
 
-.sidebar .left-sidebar ul li {
+#sidebarcollapse .left-sidebar ul li {
   margin-bottom: 20px;
   margin-left: -10px;
 }
 
-.sidebar .left-sidebar ul li :active {
-  background-color: #96511f;
+#sidebarcollapse .left-sidebar ul li a:active {
+  background-color: #011737;
   color: white;
 }
 
-.sidebar .left-sidebar ul li :focus {
-  background-color: #96511f;
+#sidebarcollapse .left-sidebar ul li a:hover {
+  background-color: #011737;
   color: white;
 }
 
-.sidebar .left-sidebar ul li a {
-  color: #333;
+#sidebarcollapse .left-sidebar ul li a {
+  color: black;
   font-weight: 500;
 }
 
-.sidebar .left-sidebar ul .sidebaricons {
+#sidebarcollapse .left-sidebar ul .sidebaricons {
   font-size: 0.9rem;
 }
 
@@ -139,6 +144,7 @@ nav ul li .accounticon {
 
 main {
   padding-top: 70px;
+  margin-bottom: 40px;
 }
 
 main .inscover {
@@ -534,4 +540,23 @@ main .insimages .sub-img img {
   width: 100px;
   height: 110px;
   cursor: pointer;
+}
+
+main .btnveri {
+  background-color: #011737;
+  width: 100%;
+  color: white;
+  padding: 10px;
+  font-weight: 700;
+}
+
+@media only screen and (min-width: 768px) {
+  main .btnveri {
+    font-weight: 300;
+    padding: 7px;
+  }
+}
+
+main .btnveri:hover {
+  color: white;
 }

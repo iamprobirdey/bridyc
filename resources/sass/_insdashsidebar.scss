@@ -1,14 +1,14 @@
 
-
-.sidebar{
+#sidebarcollapse{
     position: fixed;
     left: 0;
-    bottom: 0;
     top: 0;
     z-index: 100;
     padding: 70px 0 0 10px;
     background-color: white;
-    width: 100%;
+    width: 70%;
+    overflow: auto;
+    
     .left-sidebar{
         position: sticky;
         top:0;
@@ -19,17 +19,20 @@
            li{
                margin-bottom: 20px;
                margin-left: -10px;
-               & :active{
-                background-color: #96511f;
-                color: white;
-               }
-               & :focus{
-                background-color: #96511f;
-                color: white;
+               a{
+                &:active{
+                    background-color: #011737;
+                    color: white;
+                   }  
+                   &:hover{
+                    background-color: #011737;
+                    color: white;  
+                   }
                }
                
+               
             a{
-                color: #333;
+                color: black;
                 font-weight: 500;
             }
            }

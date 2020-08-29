@@ -616,7 +616,7 @@ var render = function() {
                   },
                   [
                     _c("label", { attrs: { for: "exampleInputEmail1" } }, [
-                      _vm._v("Title")
+                      _vm._v("Institute Name")
                     ]),
                     _vm._v(" "),
                     _c("input", {
@@ -643,7 +643,7 @@ var render = function() {
                         "data-vv-delay": "20",
                         name: "title",
                         type: "text",
-                        placeholder: "title"
+                        placeholder: "Insert your institute name"
                       },
                       domProps: { value: _vm.formData.title },
                       on: {
@@ -716,7 +716,7 @@ var render = function() {
                   },
                   [
                     _c("label", { attrs: { for: "exampleInputEmail1" } }, [
-                      _vm._v("udise")
+                      _vm._v("Udise Code")
                     ]),
                     _vm._v(" "),
                     _c("input", {
@@ -743,7 +743,7 @@ var render = function() {
                         "data-vv-delay": "20",
                         name: "udise",
                         type: "text",
-                        placeholder: "udise"
+                        placeholder: "Enter your institute udise code"
                       },
                       domProps: { value: _vm.formData.udise },
                       on: {
@@ -844,7 +844,7 @@ var render = function() {
                         "data-vv-delay": "20",
                         name: "location",
                         type: "text",
-                        placeholder: "location"
+                        placeholder: "Insert your institute location"
                       },
                       domProps: { value: _vm.formData.location },
                       on: {
@@ -1035,7 +1035,7 @@ var render = function() {
                   },
                   [
                     _c("label", { attrs: { for: "exampleInputEmail1" } }, [
-                      _vm._v("founded")
+                      _vm._v("Founded")
                     ]),
                     _vm._v(" "),
                     _c("input", {
@@ -1135,7 +1135,7 @@ var render = function() {
                   },
                   [
                     _c("label", { attrs: { for: "exampleInputEmail1" } }, [
-                      _vm._v("pin")
+                      _vm._v("Pin Code")
                     ]),
                     _vm._v(" "),
                     _c("input", {
@@ -1162,7 +1162,7 @@ var render = function() {
                         "data-vv-delay": "20",
                         name: "pin",
                         type: "text",
-                        placeholder: "pin"
+                        placeholder: "Insert your area pin code"
                       },
                       domProps: { value: _vm.formData.pin },
                       on: {
@@ -1354,7 +1354,7 @@ var render = function() {
                     }
                   },
                   [
-                    _c("label", [_vm._v("Select Institute Medium")]),
+                    _c("label", [_vm._v("Medium")]),
                     _vm._v(" "),
                     _c(
                       "select",
@@ -1471,7 +1471,7 @@ var render = function() {
                     }
                   },
                   [
-                    _c("label", [_vm._v("Select State")]),
+                    _c("label", [_vm._v("State")]),
                     _vm._v(" "),
                     _c(
                       "select",
@@ -1586,7 +1586,7 @@ var render = function() {
                         }
                       },
                       [
-                        _c("label", [_vm._v("Select Dis")]),
+                        _c("label", [_vm._v("District")]),
                         _vm._v(" "),
                         _c(
                           "select",
@@ -1705,7 +1705,7 @@ var render = function() {
                         }
                       },
                       [
-                        _c("label", [_vm._v("Select Village")]),
+                        _c("label", [_vm._v("Village")]),
                         _vm._v(" "),
                         _c(
                           "select",
@@ -1831,7 +1831,7 @@ var render = function() {
                   ? _c(
                       "button",
                       {
-                        staticClass: "btn btn-primary",
+                        staticClass: "btn btnveri mt-3",
                         attrs: { type: "submit" }
                       },
                       [_vm._v("Submit")]

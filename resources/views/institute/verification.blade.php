@@ -10,9 +10,6 @@
             <main role="main" class="col-lg-10 ml-lg-auto">
                 <br>
                 <br>
-
-                <div class="container">
-                    <div class="row">
                         <div id="verification">
                             <verification
                         :places="{{json_encode($allPlaces)}}"
@@ -21,8 +18,7 @@
                         :auth="{{json_encode($authUser)}}"
                         ></verification>
                         </div>
-                    </div>
-                </div>
+                    
               </main>
         </div>
     </div>

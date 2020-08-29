@@ -18,7 +18,7 @@
             class="form-group"
             :class="{'has-error': errors.has('title') || serverErrors.title != '' }"
           >
-            <label for="exampleInputEmail1">Title</label>
+            <label for="exampleInputEmail1">Institute Name</label>
             <input
               id="title"
               v-on:focus="serverErrors.title = ''"
@@ -28,7 +28,7 @@
               name="title"
               type="text"
               :class="{'form-control': true, 'is-invalid': errors.has('title') }"
-              placeholder="title"
+              placeholder="Insert your institute name"
             />
             <i v-show="errors.has('title')" class="is-invalid"></i>
 
@@ -40,7 +40,7 @@
             class="form-group"
             :class="{'has-error': errors.has('udise') || serverErrors.udise != '' }"
           >
-            <label for="exampleInputEmail1">udise</label>
+            <label for="exampleInputEmail1">Udise Code</label>
             <input
               id="udise"
               v-on:focus="serverErrors.udise = ''"
@@ -50,7 +50,7 @@
               name="udise"
               type="text"
               :class="{'form-control': true, 'is-invalid': errors.has('udise') }"
-              placeholder="udise"
+              placeholder="Enter your institute udise code"
             />
             <i v-show="errors.has('udise')" class="is-invalid"></i>
 
@@ -72,7 +72,7 @@
               name="location"
               type="text"
               :class="{'form-control': true, 'is-invalid': errors.has('location') }"
-              placeholder="location"
+              placeholder="Insert your institute location"
             />
             <i v-show="errors.has('location')" class="is-invalid"></i>
 
@@ -114,7 +114,7 @@
             class="form-group"
             :class="{'has-error': errors.has('founded') || serverErrors.founded != '' }"
           >
-            <label for="exampleInputEmail1">founded</label>
+            <label for="exampleInputEmail1">Founded</label>
             <input
               id="founded"
               v-on:focus="serverErrors.founded = ''"
@@ -136,7 +136,7 @@
             class="form-group"
             :class="{'has-error': errors.has('pin') || serverErrors.pin != '' }"
           >
-            <label for="exampleInputEmail1">pin</label>
+            <label for="exampleInputEmail1">Pin Code</label>
             <input
               id="text"
               v-on:focus="serverErrors.pin = ''"
@@ -146,7 +146,7 @@
               name="pin"
               type="text"
               :class="{'form-control': true, 'is-invalid': errors.has('pin') }"
-              placeholder="pin"
+              placeholder="Insert your area pin code"
             />
             <i v-show="errors.has('pin')" class="is-invalid"></i>
 
@@ -180,7 +180,7 @@
             class="form-group"
             :class="{'has-error': errors.has('language') || serverErrors.language_id != '' }"
           >
-            <label>Select Institute Medium</label>
+            <label>Medium</label>
 
             <select
               v-model="formData.language_id"
@@ -208,7 +208,7 @@
             class="form-group"
             :class="{'has-error': errors.has('state') || serverErrors.state_id != '' }"
           >
-            <label>Select State</label>
+            <label>State</label>
 
             <select
               v-model="formData.state_id"
@@ -233,7 +233,7 @@
             :class="{'has-error': errors.has('district') || serverErrors.district_id != '' }"
             v-if="districtStatusComputed"
           >
-            <label>Select Dis</label>
+            <label>District</label>
             <select
               v-model="formData.district_id"
               class="form-control"
@@ -262,7 +262,7 @@
             :class="{'has-error': errors.has('village') || serverErrors.village_id != '' }"
             v-if="villageStatusComputed"
           >
-            <label>Select Village</label>
+            <label>Village</label>
             <select
               v-model="formData.village_id"
               class="form-control"
@@ -288,7 +288,7 @@
             <div v-if="wait" class="spinner-border text-primary" role="status">
                 <span class="sr-only">Loading...</span>
             </div>
-          <button v-if="wait === false" type="submit" class="btn btn-primary">Submit</button>
+          <button v-if="wait === false" type="submit" class="btn btnveri mt-3">Submit</button>
         </form>
       </div>
     </div>

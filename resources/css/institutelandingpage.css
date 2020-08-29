@@ -1,5 +1,6 @@
 main {
   padding-top: 70px;
+  margin-bottom: 40px;
 }
 
 main .inscover {
@@ -395,6 +396,25 @@ main .insimages .sub-img img {
   width: 100px;
   height: 110px;
   cursor: pointer;
+}
+
+main .btnveri {
+  background-color: #011737;
+  width: 100%;
+  color: white;
+  padding: 10px;
+  font-weight: 700;
+}
+
+@media only screen and (min-width: 768px) {
+  main .btnveri {
+    font-weight: 300;
+    padding: 7px;
+  }
+}
+
+main .btnveri:hover {
+  color: white;
 }
 
 main .insusercover {
