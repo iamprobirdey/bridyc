@@ -23,15 +23,9 @@
     <br>
         <div class="col-md-7 mt-5 px-5">
             <h2>Send us your queries</h2>
-            <form action="" class="">
-                <input type="text" class="form-control shadow-none" placeholder="Name *" required>
-                <br>
-                <input class="form-control shadow-none" placeholder="Email *" required>
-                <br>
-                <textarea class="form-control" rows="5" id="msg" placeholder="Message *" required></textarea>
-                <br>
-                <button type="submit" class="btn btnlognsign">Send</button>
-          </form>
+            <div id="contact-us">
+                <contact-us></contact-us>
+            </div>
         </div>
     </div>
     </div>
@@ -41,6 +35,7 @@
 @section('js_code')
 
     <script src="{{url('js/app.js')}}"></script>
+    <script src="{{url('js/contactus.js')}}"></script>
 
 @endsection
 

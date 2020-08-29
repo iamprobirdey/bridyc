@@ -19,6 +19,7 @@ class CreateContactsTable extends Migration
             $table->string('name');
             $table->string('phone');
             $table->text('message');
+            $table->string('enquired')->default('not-checked');
             $table->timestamps();
         });
     }

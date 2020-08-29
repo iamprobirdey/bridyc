@@ -17,6 +17,7 @@ class ChannelController extends Controller
                     'description',
                     'slug'
                 )
+                ->where('status',1)
                 ->with('district')
                 ->get();
         return view('index',compact('channel'));
@@ -24,7 +25,7 @@ class ChannelController extends Controller
 
     public function getChannelBySlug($slug){
         $channel = Channel::where('slug',$slug)
-                    ->with(['state','district','village','language','stream'])
+                    ->with(['state','district','village','language'])
                     ->first();
         if($channel === null) abort(404);
         $userId = Auth::id();

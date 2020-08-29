@@ -20,9 +20,6 @@
           <standard></standard>
       </div>
       <div class="col-sm-6">
-          <stream></stream>
-      </div>
-      <div class="col-sm-6">
           <board></board>
       </div>
       <div class="col-sm-6">
@@ -39,7 +36,6 @@ import cover from "./channel/cover.vue";
 import icon from "./channel/icon.vue";
 import infrastructure from "./channel/infrastructure.vue";
 import standard from "./channel/standard.vue";
-import stream from "./channel/stream.vue";
 import board from "./channel/board.vue";
 import social from "./channel/social.vue";
 export default {
@@ -60,7 +56,6 @@ export default {
     icon,
     infrastructure,
     standard,
-    stream,
     board,
     social
   }

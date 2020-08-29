@@ -259,12 +259,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -1012,53 +1006,31 @@ var render = function() {
                 _vm._v(" "),
                 _c("hr"),
                 _vm._v(" "),
-                _c(
-                  "ul",
-                  { staticClass: "nav flex-column" },
-                  [
-                    _c("li", [_vm._v("Regd No: xxxxxxxxxxxxxxxxxxxx")]),
-                    _vm._v(" "),
-                    _c("li", [
-                      _vm._v(
-                        "Location: " +
-                          _vm._s(_vm.channelData.village.name) +
-                          "," +
-                          _vm._s(_vm.channelData.district.name)
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _vm.channelData.stream.length > 0
-                      ? _c("li", [
-                          _vm._v(
-                            "\n                        Streams:\n                        "
-                          )
-                        ])
-                      : _vm._e(),
-                    _vm._l(_vm.channelData.stream, function(stream, index) {
-                      return _c("li", { key: index }, [
-                        _vm._v(
-                          "\n                            " +
-                            _vm._s(stream.stream) +
-                            "\n                        "
-                        )
-                      ])
-                    }),
-                    _vm._v(" "),
-                    _c("li", [
-                      _vm._v(
-                        "Ownership: " +
-                          _vm._s(_vm.userData.verification.ownership)
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("li", [
-                      _vm._v(
-                        "Founded: " + _vm._s(_vm.userData.verification.founded)
-                      )
-                    ])
-                  ],
-                  2
-                )
+                _c("ul", { staticClass: "nav flex-column" }, [
+                  _c("li", [_vm._v("Regd No: xxxxxxxxxxxxxxxxxxxx")]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _vm._v(
+                      "Location: " +
+                        _vm._s(_vm.channelData.village.name) +
+                        "," +
+                        _vm._s(_vm.channelData.district.name)
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _vm._v(
+                      "Ownership: " +
+                        _vm._s(_vm.userData.verification.ownership)
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("li", [
+                    _vm._v(
+                      "Founded: " + _vm._s(_vm.userData.verification.founded)
+                    )
+                  ])
+                ])
               ])
             ])
           ])

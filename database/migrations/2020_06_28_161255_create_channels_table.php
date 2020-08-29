@@ -20,11 +20,11 @@ class CreateChannelsTable extends Migration
             $table->integer('district_id')->unsigned();
             $table->integer('village_id')->unsigned();
             $table->integer('language_id')->unsigned();
-            $table->string('slug')->unique();
+            $table->string('slug')->unique()->nullable();
             $table->string('title');
             $table->text('description')->nullable();
-            $table->string('meta_keyword')->nullable();
-            $table->string('meta_description')->nullable();
+            $table->string('meta_keywords')->nullable();
+            $table->string('meta_descriptions')->nullable();
             $table->string('icon_avatar')->nullable();
             $table->string('cover_avatar')->nullable();
             $table->string('website_link')->nullable();
@@ -37,6 +37,8 @@ class CreateChannelsTable extends Migration
             $table->string('library')->nullable();
             $table->string('no_of_books')->nullable();
             $table->string('playground')->nullable();
+            $table->string('hostel')->nullable();
+            $table->string('bus_services')->nullable();
             $table->tinyInteger('status')->default(0); // 1 => verified , 2 => block
             $table->schemalessAttributes('extra_attributes');
             $table->timestamps();

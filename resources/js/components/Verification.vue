@@ -123,6 +123,7 @@
               data-vv-delay="20"
               name="founded"
               type="date"
+              :max="todaysDate"
               :class="{'form-control': true, 'is-invalid': errors.has('founded') }"
               placeholder="founded"
             />
@@ -141,7 +142,7 @@
               id="text"
               v-on:focus="serverErrors.pin = ''"
               v-model="formData.pin"
-              v-validate="'required|numeric'"
+              v-validate="'required|numeric|min:6|max:6'"
               data-vv-delay="20"
               name="pin"
               type="text"
@@ -332,7 +333,8 @@ export default {
         pin: "",
         gender: ""
       },
-      wait: false
+      wait: false,
+      todaysDate : ''
     };
   },
   props: {
@@ -351,6 +353,10 @@ export default {
     auth: {
         type: Object,
         default: null
+    },
+    date: {
+        type: String,
+        default : null
     }
   },
   computed: {
@@ -385,8 +391,12 @@ export default {
       if(this.userData === 1 || this.userData === 3) this.verificationStatus = true;
       this.languagesData = this.languages;
       this.authData = this.auth;
+      this.getDate();
   },
   methods: {
+    getDate(){
+        this.todaysDate  = this.date;
+    },
     validateForm() {
         this.wait = true;
       this.$validator.validate().then(result => {

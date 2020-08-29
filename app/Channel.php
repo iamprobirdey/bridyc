@@ -15,7 +15,6 @@ class Channel extends Model
                         'village_id',
                         'language_id',
                         'title',
-                        'slug',
     ];
     public $casts = [
       'extra_attributes' => 'array',
@@ -51,9 +50,4 @@ class Channel extends Model
     public function language(){
         return $this->belongsTo(Language::class,'language_id','id');
     }
-
-    public function stream(){
-        return $this->hasMany(Stream::class,'id','channel_id');
-    }
-
 }

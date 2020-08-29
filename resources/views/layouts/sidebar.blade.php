@@ -38,6 +38,17 @@
               Edit Channel
           </a>
         </li>
+        @php
+            //dd(auth()->user()->username);
+        @endphp
+        <li class="nav-item">
+        <a class="nav-link active" href="{{route('user.profile',auth()->user()->username)}}">
+              <span class="material-icons sidebaricons">
+                dashboard
+                </span>
+                Profile
+            </a>
+          </li>
         @endif
       </ul>
     </div>

@@ -33,7 +33,8 @@ class DashboardController extends Controller
             compact('usersVerification',$usersVerification),
             )
             ->with('languages',$languages)
-            ->with('authUser',$authUser);
+            ->with('authUser',$authUser)
+            ->with('date',Carbon::now('Asia/Kolkata')->toDateString());
     }
     public function channel(){
         $channel = Channel::where('user_id',Auth::id())
@@ -42,7 +43,6 @@ class DashboardController extends Controller
                         'district',
                         'village',
                         'language',
-                        'stream'
                     ])
                     ->first();
         $user = User::where('id',Auth::id())->with('verification')->first();
@@ -50,5 +50,12 @@ class DashboardController extends Controller
     }
     public function editChannel(){
         return view('institute.edit_channel');
+    }
+
+    public function profile(User $user){
+        return view('institute.profile')
+            ->with([
+                'user' => $user->with('education')->first()
+            ]);
     }
 }

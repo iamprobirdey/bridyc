@@ -51,8 +51,7 @@ class VerificationController extends Controller
                 'district_id' => $verification->district_id,
                 'village_id' => $verification->village_id,
                 'language_id' => $verification->language_id,
-                'title' => $verification->title,
-                'slug' => Str::slug($verification->title.'-'.$state->name.'-'.$district->name.'-'.$village->name),
+                'title' => $verification->title
                 ]);
                 $channel->extra_attributes->set('social.facebook', null);
                 $channel->extra_attributes->set('social.youtube', null);

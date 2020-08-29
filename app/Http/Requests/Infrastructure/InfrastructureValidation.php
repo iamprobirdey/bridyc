@@ -32,7 +32,9 @@ class InfrastructureValidation extends FormRequest
             'wall' => 'required|string',
             'library' => 'required|string',
             'no_of_books' => 'required|string',
-            'playground' => 'required|string'
+            'playground' => 'required|string',
+            'hostel' => 'required|string',
+            'bus_services' => 'required|string'
         ];
     }
 }

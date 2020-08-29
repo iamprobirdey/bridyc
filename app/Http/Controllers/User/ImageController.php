@@ -118,25 +118,25 @@ class ImageController extends Controller
         }
         if(!is_dir($path)){
             if(File::makeDirectory(public_path($path), 0777, true)){
-                $image->resize(600, 600);
+                $image->resize(1000, 320);
                 $image->save(public_path($path).$imageName);
                 //FacadesImageOptimizer::optimize($path.$imageName);
                 ///app(Spatie\ImageOptimizer\OptimizerChain::class)->optimize($path.$imageName);
-                $imageM->resize(300,300);
+                $imageM->resize(740,320);
                 $imageM->save(public_path($path).'m-'.$imageName);
                 //FacadesImageOptimizer::optimize($path.'m-',$imageName);
-                $imageS->resize(200,200);
+                $imageS->resize(390,250);
                 $imageS->save(public_path($path).'s-'.$imageName);
                 //FacadesImageOptimizer::optimize($path.'s-',$imageName);
             }
         }else{
-            $image->resize(600, 600);
+            $image->resize(1000, 320);
             $image->save(public_path($path).$imageName);
             //FacadesImageOptimizer::optimize($path.$imageName);
-            $imageM->resize(300,300);
+            $imageM->resize(740,320);
             $imageM->save(public_path($path).'m-'.$imageName);
             //FacadesImageOptimizer::optimize($path.'m-',$imageName);
-            $imageS->resize(200,200);
+            $imageS->resize(390,250);
             $imageS->save(public_path($path).'s-'.$imageName);
             //FacadesImageOptimizer::optimize($path.'s-',$imageName);
         }

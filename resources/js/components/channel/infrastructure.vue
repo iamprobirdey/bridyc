@@ -15,7 +15,9 @@
             <th scope="col">Wall</th>
             <th scope="col">Library</th>
             <th scope="col">No. of books</th>
-            <th scope="col">playground</th>
+            <th scope="col">Playground</th>
+            <th scope="col">Hostel</th>
+            <th scope="col">Bus Services</th>
           </tr>
         </thead>
         <tbody>
@@ -29,6 +31,8 @@
             <th>{{infrastructure.library}}</th>
             <th>{{infrastructure.no_of_books}}</th>
             <th>{{infrastructure.playground}}</th>
+            <th>{{infrastructure.hostel}}</th>
+            <th>{{infrastructure.bus_services}}</th>
           </tr>
         </tbody>
       </table>
@@ -227,6 +231,7 @@
             class="text-danger"
           >{{ serverErrors.no_of_books }}</span>
         </div>
+
         <div
           class="form-group"
           :class="{'has-error': errors.has('playground') || serverErrors.playground != '' }"
@@ -252,7 +257,59 @@
             v-show="serverErrors.playground != ''"
             class="text-danger"
           >{{ serverErrors.playground }}</span>
+
         </div>
+                <div
+          class="form-group"
+          :class="{'has-error': errors.has('hostel') || serverErrors.hostel != '' }"
+        >
+          <label for="exampleInputEmail1">Total no. of Hostel</label>
+          <input
+            v-model="formData.hostel"
+            v-validate="'required|numeric'"
+            data-vv-delay="20"
+            name="hostel"
+            type="text"
+            :class="{'form-control': true, 'is-invalid': errors.has('hostel') }"
+            placeholder="No of Hostel"
+          />
+          <i v-show="errors.has('hostel')" class="is-invalid"></i>
+
+          <span v-show="errors.has('hostel')" class="text-danger">{{ errors.first('hostel') }}</span>
+          <span
+            v-show="serverErrors.hostel != ''"
+            class="text-danger"
+          >{{ serverErrors.hostel }}</span>
+        </div>
+
+        <div
+          class="form-group"
+          :class="{'has-error': errors.has('bus_services') || serverErrors.bus_services != '' }"
+        >
+          <label>Bus Services</label>
+          <select
+            v-model="formData.bus_services"
+            class="form-control"
+            name="bus_services"
+            v-validate="'required'"
+          >
+            <option value>Select your choice</option>
+            <option value="yes">Yes</option>
+            <option value="no">No</option>
+          </select>
+          <i v-show="errors.has('bus_services')" class="is-invalid"></i>
+
+          <span
+            class="text-danger"
+            v-show="errors.has('bus_services')"
+          >{{ errors.first('bus_services') }}</span>
+          <span
+            v-show="serverErrors.bus_services != ''"
+            class="text-danger"
+          >{{ serverErrors.bus_services }}</span>
+
+        </div>
+
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>
     </div>
@@ -274,7 +331,9 @@ export default {
         wall: "",
         library: "",
         no_of_books: "",
-        playground: ""
+        playground: "",
+        hostel: '',
+        bus_services: ''
       },
       serverErrors: {
         no_of_class: "",
@@ -285,7 +344,9 @@ export default {
         wall: "",
         library: "",
         no_of_books: "",
-        playground: ""
+        playground: "",
+        hostel: '',
+        bus_services: ''
       }
     };
   },

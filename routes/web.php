@@ -38,6 +38,13 @@ Route::group([
 ], function () {
     Route::get('/','Admin\AdminController@index')->name('admin');
     Route::group([
+        'name' => 'contact.',
+        'prefix' => 'contact'
+    ], function () {
+        Route::get('/','Admin\ContactUsController@index');
+        Route::post('/enquiry/{id}','Admin\ContactUsController@enquiry')->name('enquiry');
+    });
+    Route::group([
         'name' => 'country.',
         'prefix' => 'country'
     ], function () {
@@ -84,18 +91,6 @@ Route::group([
     });
 
     Route::group([
-        'name' => 'stream.',
-        'prefix' => 'stream'
-    ], function () {
-        Route::get('/','Admin\StreamController@index');
-        Route::get('create','Admin\StreamController@create');
-        Route::post('create','Admin\StreamController@store')->name('admin.stream.create');
-        Route::get('delete/{id}','Admin\StreamController@delete');
-        Route::get('updating/{id}','Admin\StreamController@updating');
-        Route::post('update/{id}','Admin\StreamController@update')->name('admin.stream.update');
-    });
-
-    Route::group([
         'name' => 'board.',
         'prefix' => 'board'
     ], function () {
@@ -119,6 +114,28 @@ Route::group([
         Route::post('update/{id}','Admin\StandardController@update')->name('admin.standard.update');
     });
     Route::group([
+        'name' => 'subject.',
+        'prefix' => 'subject'
+    ], function () {
+        Route::get('/','Admin\SubjectController@index');
+        Route::get('create','Admin\SubjectController@create');
+        Route::post('create','Admin\SubjectController@store')->name('admin.subject.create');
+        Route::get('updating/{id}','Admin\SubjectController@updating');
+        Route::post('update/{id}','Admin\SubjectController@update')->name('admin.subject.update');
+    });
+
+    Route::group([
+        'name' => 'hobby.',
+        'prefix' => 'hobby'
+    ], function () {
+        Route::get('/','Admin\HobbiesController@index');
+        Route::get('create','Admin\HobbiesController@create');
+        Route::post('create','Admin\HobbiesController@store')->name('admin.hobby.create');
+        Route::get('updating/{id}','Admin\HobbiesController@updating');
+        Route::post('update/{id}','Admin\HobbiesController@update')->name('admin.hobby.update');
+    });
+
+    Route::group([
         'name' => 'language.',
         'prefix' => 'language'
     ], function () {
@@ -138,6 +155,7 @@ Route::group([
         Route::get('api/updatingforon/{userId}/{id}','Admin\VerificationController@updatingforon');
         Route::get('api/updatingforoff/{userId}/{id}','Admin\VerificationController@updatingforoff');
         Route::get('api/updatingforblock/{userId}/{id}','Admin\VerificationController@updatingforblock');
+        Route::post('api/channel-slug/{channel:user_id}','Admin\VerificationController@slugGenerator');
     });
 
 });
@@ -151,6 +169,7 @@ Route::group([
     Route::get('verification','User\DashboardController@verification')->name('verification');
     Route::get('channel','User\DashboardController@channel');
     Route::get('edit','User\DashboardController@editChannel');
+    Route::get('profile/{user:username}/edit','User\DashboardController@profile')->name('user.profile');
     Route::group([
         'name' => 'api.',
         'prefix' => 'api'
@@ -180,14 +199,21 @@ Route::group([
         Route::get('standard','User\StandardController@getStandardData');
         Route::post('standard','User\StandardController@store');
         //Stream
-        Route::get('stream','User\StreamController@getStreamData');
-        Route::post('stream','User\StreamController@store');
+        // Route::get('stream','User\StreamController@getStreamData');
+        // Route::post('stream','User\StreamController@store');
         //Board
         Route::get('board','User\BoardController@getBoardData');
         Route::post('board','User\BoardController@store');
         //Social
         Route::get('social','User\SocialController@getSocialData');
         Route::post('social','User\SocialController@store');
+        //Profile
+        Route::post('gender/vission','User\ProfileController@storeGender');
+        //Add Education
+        Route::post('add/education','User\ProfileController@storeEducation');
+        Route::post('add/education/edit/{id}','User\ProfileController@storeEditEducation');
+        //Add meta-keywords and meta-description
+        Route::post('keywords/description/{id}','User\MetaController@store');
 
     });
 });
@@ -197,6 +223,7 @@ Route::get('/','ChannelController@index');
 Route::get('/application','HomeController@application');
 Route::get('/faq','HomeController@faq');
 Route::get('/contact','HomeController@contact');
+Route::post('contact','ContactController@store');
 Route::get('/privacy','HomeController@privacy');
 Route::get('/terms','HomeController@terms');
 

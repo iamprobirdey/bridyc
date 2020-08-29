@@ -33,7 +33,7 @@
     <div class="comp">
       <div class="d-flex justify-content-center">
         <a href="#" class="mr-4" >About Us</a>
-        <a href="#" class="mr-4">Contact Us</a>
+      <a href="{{url('contact')}}" class="mr-4">Contact Us</a>
         <p>A product by <a href="https://bucketbyte.com/" target="_blank">Bucket Byte</a></p>
       </div>
       <div class="d-flex justify-content-center">

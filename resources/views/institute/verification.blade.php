@@ -19,6 +19,7 @@
                         :user="{{json_encode($usersVerification)}}"
                         :languages="{{json_encode($languages)}}"
                         :auth="{{json_encode($authUser)}}"
+                        :date="{{json_encode($date)}}"
                         ></verification>
                         </div>
                     </div>

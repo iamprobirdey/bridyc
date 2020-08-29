@@ -392,6 +392,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -428,7 +429,8 @@ __webpack_require__.r(__webpack_exports__);
         pin: "",
         gender: ""
       },
-      wait: false
+      wait: false,
+      todaysDate: ''
     };
   },
   props: {
@@ -446,6 +448,10 @@ __webpack_require__.r(__webpack_exports__);
     },
     auth: {
       type: Object,
+      "default": null
+    },
+    date: {
+      type: String,
       "default": null
     }
   },
@@ -487,8 +493,12 @@ __webpack_require__.r(__webpack_exports__);
     if (this.userData === 1 || this.userData === 3) this.verificationStatus = true;
     this.languagesData = this.languages;
     this.authData = this.auth;
+    this.getDate();
   },
   methods: {
+    getDate: function getDate() {
+      this.todaysDate = this.date;
+    },
     validateForm: function validateForm() {
       var _this3 = this;
 
@@ -1062,6 +1072,7 @@ var render = function() {
                         "data-vv-delay": "20",
                         name: "founded",
                         type: "date",
+                        max: _vm.todaysDate,
                         placeholder: "founded"
                       },
                       domProps: { value: _vm.formData.founded },
@@ -1149,8 +1160,8 @@ var render = function() {
                         {
                           name: "validate",
                           rawName: "v-validate",
-                          value: "required|numeric",
-                          expression: "'required|numeric'"
+                          value: "required|numeric|min:6|max:6",
+                          expression: "'required|numeric|min:6|max:6'"
                         }
                       ],
                       class: {

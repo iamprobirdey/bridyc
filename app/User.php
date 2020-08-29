@@ -39,6 +39,14 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    public function addEducation($data){
+        return $this->education()->create($data);
+    }
+
+    public function education(){
+        return $this->hasMany(UserEducation::class,'user_id','id');
+    }
+
     public function verification(){
         return $this->hasOne(Verification::class,'user_id','id');
     }

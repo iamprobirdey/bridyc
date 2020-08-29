@@ -44,6 +44,8 @@ class InfrastructureController extends Controller
         $channel->library = $request->validated()['library'];
         $channel->no_of_books = $request->validated()['no_of_books'];
         $channel->playground = $request->validated()['playground'];
+        $channel->hostel = $request->validated()['hostel'];
+        $channel->bus_services = $request->validated()['bus_services'];
         $channel->update();
 
         return response()->json([

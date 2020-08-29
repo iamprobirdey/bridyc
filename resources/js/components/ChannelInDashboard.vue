@@ -150,12 +150,6 @@
                    <ul class="nav flex-column">
                         <li>Regd No: xxxxxxxxxxxxxxxxxxxx</li>
                         <li>Location: {{channelData.village.name}},{{channelData.district.name}}</li>
-                        <li v-if="channelData.stream.length > 0">
-                            Streams:
-                            <li v-for="(stream,index) in channelData.stream" :key="index">
-                                {{stream.stream}}
-                            </li>
-                        </li>
                         <li>Ownership: {{userData.verification.ownership}}</li>
                         <li>Founded: {{userData.verification.founded}}</li>
                     </ul>

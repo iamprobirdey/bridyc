@@ -4,7 +4,7 @@ Vue.component(
 );
 var element = document.getElementById("admin-verification");
 if (typeof element != "undefined" && element != null) {
-    const cart = new Vue({
+    const vue = new Vue({
         el: "#admin-verification"
     });
 }

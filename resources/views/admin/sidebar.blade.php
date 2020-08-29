@@ -1,6 +1,6 @@
 <div id="sidebarcollapse" class="col-lg-2 collapse d-lg-block sidebar shadow-lg">
-    <div class="left-sidebar">
-       
+    <div class="left-sidebar" style="overflow: auto;">
+
       <ul class="nav flex-column sidebar-nav">
         <li class="nav-item">
           <a class="nav-link active" href="{{url('/admin/country')}}">
@@ -41,39 +41,56 @@
                   </span>
                   Board
               </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="{{url('/admin/standard')}}">
-                <span class="material-icons sidebaricons">
-                  dashboard
-                  </span>
-                    Standard
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="{{url('/admin/stream')}}">
-                <span class="material-icons sidebaricons">
-                  dashboard
-                  </span>
-                  Stream
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="{{url('/admin/language')}}">
-                <span class="material-icons sidebaricons">
-                  dashboard
-                  </span>
-                  Medium
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="{{url('/admin/verification')}}">
-                <span class="material-icons sidebaricons">
-                  dashboard
-                  </span>
-                  User Verification
-              </a>
-            </li>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="{{url('/admin/standard')}}">
+            <span class="material-icons sidebaricons">
+                dashboard
+                </span>
+                Standard
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="{{url('/admin/language')}}">
+            <span class="material-icons sidebaricons">
+                dashboard
+                </span>
+                Medium
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="{{url('/admin/subject')}}">
+            <span class="material-icons sidebaricons">
+                dashboard
+                </span>
+                Subjects
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="{{url('/admin/hobby')}}">
+            <span class="material-icons sidebaricons">
+                dashboard
+                </span>
+                Hobbies
+                (Field of interest)
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="{{url('/admin/contact')}}">
+            <span class="material-icons sidebaricons">
+                dashboard
+                </span>
+                Enquiry
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="{{url('/admin/verification')}}">
+            <span class="material-icons sidebaricons">
+                dashboard
+                </span>
+                User Verification
+            </a>
+        </li>
       </ul>
     </div>
 </div>

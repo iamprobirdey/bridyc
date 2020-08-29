@@ -155,10 +155,120 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      usersData: []
+      usersData: [],
+      slugData: {
+        slug: ''
+      },
+      slugError: {
+        slug: ''
+      },
+      slugUserId: '',
+      slugIndex: '',
+      metaData: {
+        meta_keywords: '',
+        meta_descriptions: ''
+      },
+      metaDataError: {
+        meta_keywords: '',
+        meta_descriptions: ''
+      },
+      metaKeywordsDescriptionsId: ''
     };
   },
   props: {
@@ -212,6 +322,98 @@ __webpack_require__.r(__webpack_exports__);
           duration: 5000
         });
       });
+    },
+    slugGenetor: function slugGenetor(title, name, userId, index) {
+      var slug = title + '-' + name;
+      this.slugUserId = userId;
+      this.slugData.slug = this.slugify(slug);
+      this.slugIndex = index;
+      $('#slugGenerator').modal('show');
+    },
+    slugify: function slugify(string) {
+      var a = 'àáâäæãåāăąçćčđďèéêëēėęěğǵḧîïíīįìłḿñńǹňôöòóœøōõőṕŕřßśšşșťțûüùúūǘůűųẃẍÿýžźż·/_,:;';
+      var b = 'aaaaaaaaaacccddeeeeeeeegghiiiiiilmnnnnoooooooooprrsssssttuuuuuuuuuwxyyzzz------';
+      var p = new RegExp(a.split('').join('|'), 'g');
+      return string.toString().toLowerCase().replace(/\s+/g, '-') // Replace spaces with -
+      .replace(p, function (c) {
+        return b.charAt(a.indexOf(c));
+      }) // Replace special characters
+      .replace(/&/g, '-and-') // Replace & with 'and'
+      .replace(/[^\w\-]+/g, '') // Remove all non-word characters
+      .replace(/\-\-+/g, '-') // Replace multiple - with single -
+      .replace(/^-+/, '') // Trim - from start of text
+      .replace(/-+$/, ''); // Trim - from end of text
+    },
+    slugGenerated: function slugGenerated() {
+      var _this4 = this;
+
+      this.$validator.validate().then(function (result) {
+        if (result) {
+          axios.post('verification/api/channel-slug/' + _this4.slugUserId, _this4.slugData).then(function (response) {
+            if (response.data.msg === true) {
+              Vue.toasted.success("Slug is created", {
+                position: "top-center",
+                duration: 5000
+              });
+              $('#slugGenerator').modal('hide');
+            }
+          })["catch"](function (errors) {
+            Vue.toasted.error("Something went wrong", {
+              position: "top-center",
+              duration: 5000
+            });
+
+            if (errors.response.data.errors.slug) {
+              _this4.slugError.slug = errors.response.data.errors.slug[0];
+            }
+          });
+        }
+      });
+    },
+    getMetaModel: function getMetaModel(verification) {
+      this.metaKeywordsDescriptionsId = '';
+      this.metaKeywordsDescriptionsId = verification.id;
+
+      if (verification.meta_keywords != undefined) {
+        this.metaData.meta_keywords = this.verification.meta_keywords;
+      }
+
+      if (verification.meta_descriptions != undefined) {
+        this.metaData.meta_descriptions = this.verification.meta_descriptions;
+      }
+
+      $('#metaGenerator').modal('show');
+    },
+    metaGenerationForm: function metaGenerationForm() {
+      var _this5 = this;
+
+      this.$validator.validate().then(function (result) {
+        if (result) {
+          console.log('called');
+          axios.post('verification/api/keywords/description/' + _this5.metaKeywordsDescriptionsId, _this5.metaData).then(function (response) {
+            if (response.data.msg === true) {
+              Vue.toasted.success("Meta data is created", {
+                position: "top-center",
+                duration: 5000
+              });
+              $('#slugGenerator').modal('hide');
+            }
+          })["catch"](function (errors) {
+            Vue.toasted.error("Something went wrong", {
+              position: "top-center",
+              duration: 5000
+            });
+
+            if (errors.response.data.errors.meta_keywords) {
+              _this5.metaDataError.meta_keywords = errors.response.data.errors.meta_keywords[0];
+            }
+
+            if (errors.response.data.errors.meta_descriptions) {
+              _this5.metaDataError.meta_descriptions = errors.response.data.errors.meta_descriptions[0];
+            }
+          });
+        }
+      });
     }
   }
 });
@@ -234,7 +436,7 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c("table", { staticClass: "table" }, [
+    _c("table", { staticClass: "table responsive" }, [
       _vm._m(0),
       _vm._v(" "),
       _c(
@@ -327,6 +529,45 @@ var render = function() {
                 : _vm._e()
             ]),
             _vm._v(" "),
+            _c("td", [
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-info",
+                  attrs: {
+                    disabled:
+                      verification.slug_creation === "created" ? true : false
+                  },
+                  on: {
+                    click: function($event) {
+                      return _vm.slugGenetor(
+                        verification.title,
+                        verification.state.name,
+                        verification.user.id,
+                        index
+                      )
+                    }
+                  }
+                },
+                [_vm._v("\n                  URl Gen.\n            ")]
+              )
+            ]),
+            _vm._v(" "),
+            _c("td", [
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-warning",
+                  on: {
+                    click: function($event) {
+                      return _vm.getMetaModel(verification)
+                    }
+                  }
+                },
+                [_vm._v("\n              Meta\n            ")]
+              )
+            ]),
+            _vm._v(" "),
             _c("td", [_vm._v(_vm._s(verification.user.name))]),
             _vm._v(" "),
             _c("td", [_vm._v(_vm._s(verification.user.email))]),
@@ -348,7 +589,369 @@ var render = function() {
         }),
         0
       )
-    ])
+    ]),
+    _vm._v(" "),
+    _c(
+      "div",
+      {
+        staticClass: "modal fade",
+        attrs: {
+          id: "slugGenerator",
+          tabindex: "-1",
+          role: "dialog",
+          "aria-labelledby": "exampleModalLabel",
+          "aria-hidden": "true"
+        }
+      },
+      [
+        _c(
+          "div",
+          { staticClass: "modal-dialog", attrs: { role: "document" } },
+          [
+            _c("div", { staticClass: "modal-content" }, [
+              _c("div", { staticClass: "modal-body" }, [
+                _c(
+                  "form",
+                  {
+                    on: {
+                      submit: function($event) {
+                        $event.preventDefault()
+                        return _vm.slugGenerated()
+                      }
+                    }
+                  },
+                  [
+                    _c(
+                      "div",
+                      {
+                        staticClass: "form-group",
+                        class: {
+                          "has-error":
+                            _vm.errors.has("slugError.slug") ||
+                            _vm.slugError.slug != ""
+                        }
+                      },
+                      [
+                        _c("label", [_vm._v("Url for Channel")]),
+                        _vm._v(" "),
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.slugData.slug,
+                              expression: "slugData.slug"
+                            },
+                            {
+                              name: "validate",
+                              rawName: "v-validate",
+                              value: "required",
+                              expression: "'required'"
+                            }
+                          ],
+                          class: {
+                            "form-control": true,
+                            "is-invalid": _vm.errors.has("slug")
+                          },
+                          attrs: {
+                            id: "slug",
+                            "data-vv-delay": "20",
+                            name: "slug",
+                            type: "text",
+                            placeholder: "Url Generator"
+                          },
+                          domProps: { value: _vm.slugData.slug },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.$set(
+                                _vm.slugData,
+                                "slug",
+                                $event.target.value
+                              )
+                            }
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "span",
+                          {
+                            directives: [
+                              {
+                                name: "show",
+                                rawName: "v-show",
+                                value: _vm.errors.has("slug"),
+                                expression: "errors.has('slug')"
+                              }
+                            ],
+                            staticClass: "text-danger"
+                          },
+                          [_vm._v(_vm._s(_vm.errors.first("slug")))]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "span",
+                          {
+                            directives: [
+                              {
+                                name: "show",
+                                rawName: "v-show",
+                                value: _vm.slugError.slug != "",
+                                expression: "slugError.slug != ''"
+                              }
+                            ],
+                            staticClass: "help is-danger"
+                          },
+                          [_vm._v(_vm._s(_vm.slugError.slug))]
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "button",
+                      {
+                        staticClass: "btn btn-primary",
+                        attrs: { type: "submit" }
+                      },
+                      [_vm._v("Submit")]
+                    )
+                  ]
+                )
+              ])
+            ])
+          ]
+        )
+      ]
+    ),
+    _vm._v(" "),
+    _c(
+      "div",
+      {
+        staticClass: "modal fade",
+        attrs: {
+          id: "metaGenerator",
+          tabindex: "-1",
+          role: "dialog",
+          "aria-labelledby": "exampleModalLabel",
+          "aria-hidden": "true"
+        }
+      },
+      [
+        _c(
+          "div",
+          { staticClass: "modal-dialog", attrs: { role: "document" } },
+          [
+            _c("div", { staticClass: "modal-content" }, [
+              _c("div", { staticClass: "modal-body" }, [
+                _c(
+                  "form",
+                  {
+                    on: {
+                      submit: function($event) {
+                        $event.preventDefault()
+                        return _vm.metaGenerationForm()
+                      }
+                    }
+                  },
+                  [
+                    _c(
+                      "div",
+                      {
+                        staticClass: "form-group",
+                        class: {
+                          "has-error":
+                            _vm.errors.has("metaDataError.meta_keywords") ||
+                            _vm.metaDataError.meta_keywords != ""
+                        }
+                      },
+                      [
+                        _c("label", [_vm._v("Meta Keywords")]),
+                        _vm._v(" "),
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.metaData.meta_keywords,
+                              expression: "metaData.meta_keywords"
+                            },
+                            {
+                              name: "validate",
+                              rawName: "v-validate",
+                              value: "required",
+                              expression: "'required'"
+                            }
+                          ],
+                          class: {
+                            "form-control": true,
+                            "is-invalid": _vm.errors.has("meta_keywords")
+                          },
+                          attrs: {
+                            "data-vv-delay": "20",
+                            name: "meta_keywords",
+                            type: "text",
+                            placeholder: "Meta Keywords"
+                          },
+                          domProps: { value: _vm.metaData.meta_keywords },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.$set(
+                                _vm.metaData,
+                                "meta_keywords",
+                                $event.target.value
+                              )
+                            }
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "span",
+                          {
+                            directives: [
+                              {
+                                name: "show",
+                                rawName: "v-show",
+                                value: _vm.errors.has("meta_keywords"),
+                                expression: "errors.has('meta_keywords')"
+                              }
+                            ],
+                            staticClass: "text-danger"
+                          },
+                          [_vm._v(_vm._s(_vm.errors.first("meta_keywords")))]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "span",
+                          {
+                            directives: [
+                              {
+                                name: "show",
+                                rawName: "v-show",
+                                value: _vm.metaDataError.meta_keywords != "",
+                                expression: "metaDataError.meta_keywords != ''"
+                              }
+                            ],
+                            staticClass: "help is-danger"
+                          },
+                          [_vm._v(_vm._s(_vm.metaDataError.meta_keywords))]
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      {
+                        staticClass: "form-group",
+                        class: {
+                          "has-error":
+                            _vm.errors.has("metaDataError.meta_descriptions") ||
+                            _vm.metaDataError.meta_descriptions != ""
+                        }
+                      },
+                      [
+                        _c("label", [_vm._v("Meta Description")]),
+                        _vm._v(" "),
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.metaData.meta_descriptions,
+                              expression: "metaData.meta_descriptions"
+                            },
+                            {
+                              name: "validate",
+                              rawName: "v-validate",
+                              value: "required",
+                              expression: "'required'"
+                            }
+                          ],
+                          class: {
+                            "form-control": true,
+                            "is-invalid": _vm.errors.has("meta_descriptions")
+                          },
+                          attrs: {
+                            "data-vv-delay": "20",
+                            name: "meta_descriptions",
+                            type: "text",
+                            placeholder: "Meta Description"
+                          },
+                          domProps: { value: _vm.metaData.meta_descriptions },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.$set(
+                                _vm.metaData,
+                                "meta_descriptions",
+                                $event.target.value
+                              )
+                            }
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "span",
+                          {
+                            directives: [
+                              {
+                                name: "show",
+                                rawName: "v-show",
+                                value: _vm.errors.has("meta_descriptions"),
+                                expression: "errors.has('meta_descriptions')"
+                              }
+                            ],
+                            staticClass: "text-danger"
+                          },
+                          [
+                            _vm._v(
+                              _vm._s(_vm.errors.first("meta_descriptions"))
+                            )
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "span",
+                          {
+                            directives: [
+                              {
+                                name: "show",
+                                rawName: "v-show",
+                                value:
+                                  _vm.metaDataError.meta_descriptions != "",
+                                expression:
+                                  "metaDataError.meta_descriptions != ''"
+                              }
+                            ],
+                            staticClass: "help is-danger"
+                          },
+                          [_vm._v(_vm._s(_vm.metaDataError.meta_descriptions))]
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "button",
+                      {
+                        staticClass: "btn btn-primary",
+                        attrs: { type: "submit" }
+                      },
+                      [_vm._v("Submit")]
+                    )
+                  ]
+                )
+              ])
+            ])
+          ]
+        )
+      ]
+    )
   ])
 }
 var staticRenderFns = [
@@ -361,6 +964,10 @@ var staticRenderFns = [
         _c("th", { attrs: { scope: "col" } }, [_vm._v("Block")]),
         _vm._v(" "),
         _c("th", { attrs: { scope: "col" } }, [_vm._v("Status")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Slug Generator ")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Keywords Generator")]),
         _vm._v(" "),
         _c("th", { attrs: { scope: "col" } }, [_vm._v("Name")]),
         _vm._v(" "),
@@ -512,7 +1119,7 @@ Vue.component("admin-verification", __webpack_require__(/*! ./components/admin/V
 var element = document.getElementById("admin-verification");
 
 if (typeof element != "undefined" && element != null) {
-  var cart = new Vue({
+  var vue = new Vue({
     el: "#admin-verification"
   });
 }
