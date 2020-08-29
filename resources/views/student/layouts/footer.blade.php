@@ -47,6 +47,10 @@
       </div>
     </div>
     </div>
+
+    <a href="https://api.whatsapp.com/send?phone=919365441646&text=" class="float" target="_blank">
+        <i class="fa fa-whatsapp my-float"></i>
+    </a>
   </footer>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
