@@ -417,6 +417,23 @@ main .btnveri:hover {
   color: white;
 }
 
+main .datetime {
+  background-color: #011737;
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  main .datetime {
+    width: 300px;
+  }
+}
+
+main .quote {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-style: italic;
+  text-align: center;
+}
+
 main .insusercover {
   padding-left: 0em;
   padding-right: 0em;

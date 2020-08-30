@@ -11,13 +11,9 @@
             <main role="main" class="col-lg-10 ml-lg-auto">
                 <br>
                 <br>
-              <div class="container">
-                  <div class="row">
                         <div id="quote_and_time">
                             <quote-and-time :date="{{json_encode($date)}}"></quote-and-time>
                         </div>
-                  </div>
-              </div>
             </main>
         </div>
     </div>
