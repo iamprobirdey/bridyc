@@ -1860,7 +1860,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("h2", [
+    return _c("h4", [
       _c("span", { staticClass: "text-danger" }, [
         _vm._v("Your data is under verification")
       ])
@@ -1870,7 +1870,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("h2", [
+    return _c("h4", [
       _c("span", { staticClass: "text-danger" }, [
         _vm._v("You are blocked by Admin")
       ])
