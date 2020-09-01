@@ -1,13 +1,13 @@
 <template>
     <div>
-        <h2>School Standard</h2>
+        <h4>School Standard</h4>
         <div v-if="userData != null && standardDataStatus === true">
-            <h3>Here, is your list of standard available in your school</h3>
+            <h5>Here, is your list of standard available in your school</h5>
             <button class="btn btn-success" v-for="(standard,index) in userData" :key="index">
                 {{standard.standard.standard_name}}
             </button>
-            <button class="btn btn-primary" @click="editTheStandard()">
-                Edit
+            <button class="btn" @click="editTheStandard()">
+                <i class="fa fa-pencil" aria-hidden="true"></i>
             </button>
         </div>
         <div v-if="standardDataStatus === false">
@@ -23,19 +23,14 @@
             </multiselect>
             <button
                 type="submit"
-                class="btn btn-primary"
+                class="btn btnsubmit"
                 @click="submitStandardData()">
                 Submit
             </button>
         </div>
         <br>
         <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
+       
     </div>
 </template>
 

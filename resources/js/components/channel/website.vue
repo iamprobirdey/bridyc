@@ -2,19 +2,19 @@
     <div>
         <!-- Form start from here -->
 
-        <div class="row">
+        
             <transition name="slide-fade">
                 <div v-if="websiteOnPresent">
-                    <h2>Your website link</h2>
-                    <h4>
-                        {{ websiteLinkFromServer }}
-                        <button
-                            class="btn btn-primary"
+                    <h4>Your website link</h4>
+                    <p style="color:blue">
+                        {{ websiteLinkFromServer }}   
+                    </p>
+                    <button
+                            class="btn btnwebdes rounded-0"
                             @click="editMyWebsiteLink()"
                         >
-                            Edit your website
+                           <i class="fa fa-pencil" aria-hidden="true"></i> Change website url
                         </button>
-                    </h4>
                 </div>
             </transition>
             <form
@@ -29,7 +29,7 @@
                             websiteLinkError != ''
                     }"
                 >
-                    <label for="exampleInputEmail1">Website Link</label>
+                    <label for="exampleInputEmail1">Website</label>
 
                     <input
                         id="website"
@@ -42,7 +42,7 @@
                             'form-control': true,
                             'is-invalid': errors.has('website')
                         }"
-                        placeholder="Enter if you have any website"
+                        placeholder="Insert your website link(optional)"
                     />
                     <span v-show="errors.has('website')" class="text-danger">
                         {{ errors.first("website") }}
@@ -53,15 +53,15 @@
                 </div>
                 <button
                     type="button"
-                    class="btn btn-success"
+                    class="btn btn-success mt-n2 p-1"
                     v-if="websiteLinkFromServer != ''"
                     @click="goBack()"
                 >
-                    Go Back
+                    <i class="fa fa-long-arrow-left" aria-hidden="true"></i> Back
                 </button>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btnsubmit mt-n3">Submit</button>
             </form>
-        </div>
+        
     </div>
 </template>
 

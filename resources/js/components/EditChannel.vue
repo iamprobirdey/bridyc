@@ -1,31 +1,37 @@
 <template>
   <div>
-    <div class="row">
-      <div class="col-sm-6">
-        <website></website>
-      </div>
-      <div class="col-sm-6">
-        <description></description>
-      </div>
-      <div class="col-sm-6">
-        <cover></cover>
-      </div>
-      <div class="col-sm-6">
+    <div class="row mb-5 mx-auto">
+      <div class="col-sm-4">
         <icon></icon>
       </div>
-      <div class="col-sm-12">
+      <div class="col-sm-8">
+        <cover></cover>
+      </div>
+      </div>
+
+      <div class="row">
+      <div class="col-sm-4 mb-5">
+        <website></website>
+      </div>
+      <div class="col-sm-8">
+        <description></description>
+      </div>
+      </div>
+      <div class="container mt-5">
         <infrastructure></infrastructure>
       </div>
+      <div class="row mt-5">
       <div class="col-sm-6">
           <standard></standard>
       </div>
       <div class="col-sm-6">
           <board></board>
       </div>
-      <div class="col-sm-6">
+      </div>
+      <div class="mt-5">
           <social></social>
       </div>
-    </div>
+    
   </div>
 </template>
 
@@ -62,4 +68,5 @@ export default {
 };
 </script>
 
-<style></style>
+<style>
+</style>

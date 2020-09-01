@@ -292,6 +292,7 @@ main {
           }
           }
 
+          //css for institute dashboard starts
           .datetime{
             background-color: #011737;
             text-align: center;
@@ -304,5 +305,55 @@ main {
             font-style: italic;
             text-align: center;
           }
+          //css for institute dashboard ends here
+
+          //css for institute edit channel starts here
+          .infraheader{
+            text-align: center;
+            background-color:#011737;
+            color:white;
+          }
+          .infrabtn{
+            margin-left:-15px;
+            background-color: #011737;
+            color: white;
+            &:hover{
+              color: white;
+            }
+            @include screensize(laptop){
+              margin-left:0px;
+            }
+            @include screensize(forinsinfra){
+              margin-left:60px;
+            }
+          }
+          //css for institute edit channel ends here
+
+          //css for board and standard and social starts here
+          .btnsubmit{
+            background-color: #011737;
+            color: white;
+            position: relative;
+            top: 5px;
+            left: 0;
+            border-radius: 15px;
+            padding-left: 10px;
+            padding-right:10px;
+            
+            &:hover{
+              background-color: #003585;
+              color: white;
+            }
+          }
+          //css for board and standard and social ends here
+          //css for website and description starts here
+          .btnwebdes{
+            color: white;
+            background-color: #003585;
+            &:hover{
+              color: white;
+            }
+          }
+          //css for website and description ends here
   }
 

@@ -1,10 +1,11 @@
 <template>
   <div>
     <transition name="slide-fade">
-      <div v-if="descriptionStatus">
-        <button type="button" class="btn btn-primary" @click="editDescription()">Edit Description</button>
-        <h1>Your Description</h1>
-        <p>{{descriptionFromServer}}</p>
+      <div v-if="descriptionStatus" class="desctext shadow">
+        <h4 class="pl-2">Institute Description:</h4>
+        <p class="pl-2">{{descriptionFromServer}}</p>
+        <button type="button" class="btn btnwebdes rounded-0" @click="editDescription()">
+          <i class="fa fa-pencil" aria-hidden="true"></i> Edit Description</button>
       </div>
     </transition>
     <form @submit.prevent="getFormData()" v-if="descriptionStatus === false">
@@ -15,9 +16,10 @@
                             errors.has('descriptionError') || descriptionError != ''
                     }"
       >
-        <label for="exampleInputEmail1">Describe Your College</label>
+        <label for="exampleInputEmail1">Describe Your Institute</label>
 
-        <input
+        <textarea 
+          rows="5"
           id="description"
           v-model="formData.description"
           v-validate="'required'"
@@ -28,8 +30,8 @@
                             'form-control': true,
                             'is-invalid': errors.has('description')
                         }"
-          placeholder="Describe your school/college"
-        />
+          placeholder="Briefly describe your institute"
+        ></textarea>
         <span v-show="errors.has('description')" class="text-danger">
           {{
           errors.first("description")
@@ -46,8 +48,8 @@
         class="btn btn-success"
         v-if="descriptionFromServer != ''"
         @click="goBack()"
-      >Go Back</button>
-      <button type="submit" class="btn btn-primary">Submit</button>
+      > <i class="fa fa-long-arrow-left mt-n2 p-1" aria-hidden="true"></i>Back</button>
+      <button type="submit" class="btn btnsubmit mt-n3">Submit</button>
     </form>
   </div>
 </template>
@@ -129,5 +131,10 @@ export default {
 .slide-fade-leave-to {
   transform: translateX(10px);
   opacity: 0;
+}
+
+.desctext{
+  background-color: white;
+  color: black;
 }
 </style>

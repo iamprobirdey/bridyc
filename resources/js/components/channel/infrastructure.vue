@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div id="infrastrucuter">
-      <h1>Let's talk about Infrastructure</h1>
+    <div id="infrastrucuter" class="infraheader mb-3 p-1">
+      <h3>Let's talk about Infrastructure</h3>
     </div>
     <div>
       <table class="table-responsive" v-if="infrastructureStatus === false">
@@ -40,11 +40,12 @@
     <div v-if="infrastructure.boys_toilet === null && infrastructureStatus === true">
       <form @submit.prevent="validateForm()">
         <div
-          class="form-group"
+          class="form-group row mx-lg-5"
           :class="{'has-error': errors.has('class') || serverErrors.no_of_class != '' }"
         >
-          <label for="exampleInputEmail1">Total no. class</label>
+          <label for="exampleInputEmail1" class="col-sm-2 col-form-label">Total Class Room</label>
           <input
+            class="col-sm-10"
             id="class"
             v-model="formData.no_of_class"
             v-validate="'required|numeric'"
@@ -52,7 +53,7 @@
             name="class"
             type="text"
             :class="{'form-control': true, 'is-invalid': errors.has('class') }"
-            placeholder="No of Class"
+            placeholder="Total number of Class room"
           />
           <i v-show="errors.has('class')" class="is-invalid"></i>
 
@@ -60,17 +61,17 @@
           <span v-show="serverErrors.class != ''" class="text-danger">{{ serverErrors.class }}</span>
         </div>
         <div
-          class="form-group"
+          class="form-group row mx-lg-5"
           :class="{'has-error': errors.has('boys_toilet') || serverErrors.boys_toilet != '' }"
         >
-          <label>No. Boys Toilet</label>
+          <label class="col-sm-2 col-form-label">Boys Toilet</label>
           <select
             v-model="formData.boys_toilet"
-            class="form-control"
+            class="col-sm-10 form-control"
             name="boys_toilet"
             v-validate="'required'"
           >
-            <option value>Select No. of Boys Toilet</option>
+            <option value>Select the number of boys toilet</option>
             <option value="one">One</option>
             <option value="two">Two</option>
             <option value="three">Three</option>
@@ -90,17 +91,17 @@
           >{{ serverErrors.boys_toilet }}</span>
         </div>
         <div
-          class="form-group"
+          class="form-group row mx-lg-5"
           :class="{'has-error': errors.has('girls_toilet') || serverErrors.girls_toilet != '' }"
         >
-          <label>no. of Girls Toilet</label>
+          <label  class="col-sm-2 col-form-label">Girls Toilet</label>
           <select
             v-model="formData.girls_toilet"
-            class="form-control"
+            class="col-sm-10 form-control"
             name="girls_toilet"
             v-validate="'required'"
           >
-            <option value>Select No. of Boys Toilet</option>
+            <option value>Select the number of girls toilet</option>
             <option value="one">One</option>
             <option value="two">Two</option>
             <option value="three">Three</option>
@@ -120,13 +121,13 @@
           >{{ serverErrors.girls_toilet }}</span>
         </div>
         <div
-          class="form-group"
+          class="form-group row mx-lg-5"
           :class="{'has-error': errors.has('computer_learning') || serverErrors.computer_learning != '' }"
         >
-          <label>Computer Learning</label>
+          <label class="col-sm-3 col-form-label">Computer Learning</label>
           <select
             v-model="formData.computer_learning"
-            class="form-control"
+            class="col-sm-9 form-control"
             name="computer_learning"
             v-validate="'required'"
           >
@@ -146,13 +147,13 @@
           >{{ serverErrors.computer_learning }}</span>
         </div>
         <div
-          class="form-group"
+          class="form-group row mx-lg-5"
           :class="{'has-error': errors.has('electricity') || serverErrors.electricity != '' }"
         >
-          <label>Electricity</label>
+          <label class="col-sm-2 col-form-label">Electricity</label>
           <select
             v-model="formData.electricity"
-            class="form-control"
+            class="col-sm-10 form-control"
             name="electricity"
             v-validate="'required'"
           >
@@ -172,11 +173,11 @@
           >{{ serverErrors.electricity }}</span>
         </div>
         <div
-          class="form-group"
+          class="form-group row mx-lg-5"
           :class="{'has-error': errors.has('wall') || serverErrors.wall != '' }"
         >
-          <label>Boundary</label>
-          <select v-model="formData.wall" class="form-control" name="wall" v-validate="'required'">
+          <label class="col-sm-3 col-form-label">Campus Boundary</label>
+          <select v-model="formData.wall" class="col-sm-9 form-control" name="wall" v-validate="'required'">
             <option value>Select your choice</option>
             <option value="no_wall">No wall</option>
             <option value="fetch">Fentch</option>
@@ -188,13 +189,13 @@
           <span v-show="serverErrors.wall != ''" class="text-danger">{{ serverErrors.wall }}</span>
         </div>
         <div
-          class="form-group"
+          class="form-group row mx-lg-5"
           :class="{'has-error': errors.has('library') || serverErrors.library != '' }"
         >
-          <label>Libraries</label>
+          <label class="col-sm-3 col-form-label">Library Availability</label>
           <select
             v-model="formData.library"
-            class="form-control"
+            class="col-sm-9 form-control"
             name="library"
             v-validate="'required'"
           >
@@ -209,11 +210,12 @@
         </div>
 
         <div
-          class="form-group"
+          class="form-group row mx-lg-5"
           :class="{'has-error': errors.has('books') || serverErrors.no_of_books != '' }"
         >
-          <label for="exampleInputEmail1">Total no. Books</label>
+          <label for="exampleInputEmail1" class="col-sm-2 col-form-label">Total Books</label>
           <input
+          class="col-sm-10"
             id="books"
             v-model="formData.no_of_books"
             v-validate="'required|numeric'"
@@ -221,7 +223,7 @@
             name="books"
             type="text"
             :class="{'form-control': true, 'is-invalid': errors.has('books') }"
-            placeholder="No of Class"
+            placeholder="Total number of books in library"
           />
           <i v-show="errors.has('class')" class="is-invalid"></i>
 
@@ -233,13 +235,13 @@
         </div>
 
         <div
-          class="form-group"
+          class="form-group row mx-lg-5"
           :class="{'has-error': errors.has('playground') || serverErrors.playground != '' }"
         >
-          <label>Playground</label>
+          <label class="col-sm-2 col-form-label">Playground</label>
           <select
             v-model="formData.playground"
-            class="form-control"
+            class="col-sm-10 form-control"
             name="playground"
             v-validate="'required'"
           >
@@ -260,18 +262,19 @@
 
         </div>
                 <div
-          class="form-group"
+          class="form-group row mx-lg-5"
           :class="{'has-error': errors.has('hostel') || serverErrors.hostel != '' }"
         >
-          <label for="exampleInputEmail1">Total no. of Hostel</label>
+          <label for="exampleInputEmail1" class="col-sm-2 col-form-label">No.of Hostel</label>
           <input
+          class="col-sm-10"
             v-model="formData.hostel"
             v-validate="'required|numeric'"
             data-vv-delay="20"
             name="hostel"
             type="text"
             :class="{'form-control': true, 'is-invalid': errors.has('hostel') }"
-            placeholder="No of Hostel"
+            placeholder="Tota number of hostel available"
           />
           <i v-show="errors.has('hostel')" class="is-invalid"></i>
 
@@ -283,13 +286,13 @@
         </div>
 
         <div
-          class="form-group"
+          class="form-group row mx-lg-5"
           :class="{'has-error': errors.has('bus_services') || serverErrors.bus_services != '' }"
         >
-          <label>Bus Services</label>
+          <label class="col-sm-2 col-form-label">Bus Services</label>
           <select
             v-model="formData.bus_services"
-            class="form-control"
+            class="col-sm-10 form-control"
             name="bus_services"
             v-validate="'required'"
           >
@@ -310,7 +313,7 @@
 
         </div>
 
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn infrabtn">Submit</button>
       </form>
     </div>
   </div>
