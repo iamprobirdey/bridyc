@@ -1,6 +1,6 @@
 <template>
   <div>
-        <h4>We can your social media platform</h4>
+        <h4>We can't see your social media handles</h4>
           <ul v-if="getTheModel === false">
               <li v-if="socialData.facebook != null">
                     <a :href="socialData.facebook" target="_blank"><span>Facebook</span></a>
@@ -21,8 +21,9 @@
           </button>
           <div v-if="getTheModel">
               <form @submit.prevent="validateForm()">
+                    <div class="row">
                     <div
-                        class="form-group"
+                        class="form-group col-sm-6"
                         :class="{'has-error': errors.has('facebook') || serverErrors.facebook != '' }"
                     >
                         <label for="exampleInputEmail1">Facebook</label>
@@ -34,7 +35,7 @@
                         name="facebook"
                         type="text"
                         :class="{'form-control': true, 'is-invalid': errors.has('facebook') }"
-                        placeholder="facebook optional"
+                        placeholder="facebook (optional)"
                         />
                         <i v-show="errors.has('facebook')" class="is-invalid"></i>
 
@@ -43,7 +44,7 @@
                     </div>
 
                       <div
-                        class="form-group"
+                        class="form-group col-sm-6"
                         :class="{'has-error': errors.has('instagram') || serverErrors.instagram != '' }"
                     >
                         <label for="exampleInputEmail1">Instagram</label>
@@ -55,15 +56,18 @@
                         name="instagram"
                         type="text"
                         :class="{'form-control': true, 'is-invalid': errors.has('instagram') }"
-                        placeholder="instagram optional"
+                        placeholder="instagram (optional)"
                         />
                         <i v-show="errors.has('instagram')" class="is-invalid"></i>
 
                         <span v-show="errors.has('instagram')" class="text-danger">{{ errors.first('instagram') }}</span>
                         <span v-show="serverErrors.instagram != ''" class="text-danger">{{ serverErrors.instagram }}</span>
                     </div>
+                    </div>
+
+                    <div class="row">
                       <div
-                        class="form-group"
+                        class="form-group col-md-6"
                         :class="{'has-error': errors.has('linkedIn') || serverErrors.linkedIn != '' }"
                     >
                         <label for="exampleInputEmail1">LinkedIn</label>
@@ -75,7 +79,7 @@
                         name="linkedIn"
                         type="text"
                         :class="{'form-control': true, 'is-invalid': errors.has('linkedIn') }"
-                        placeholder="linkedIn optional"
+                        placeholder="linkedIn (optional)"
                         />
                         <i v-show="errors.has('linkedIn')" class="is-invalid"></i>
 
@@ -84,10 +88,10 @@
                     </div>
 
                       <div
-                        class="form-group"
+                        class="form-group col-md-6"
                         :class="{'has-error': errors.has('youtube') || serverErrors.youtube != '' }"
                     >
-                        <label for="exampleInputEmail1">youtube</label>
+                        <label for="exampleInputEmail1">Youtube</label>
                         <input
                         id="youtube"
                         v-on:focus="serverErrors.youtube = ''"
@@ -96,14 +100,15 @@
                         name="youtube"
                         type="text"
                         :class="{'form-control': true, 'is-invalid': errors.has('youtube') }"
-                        placeholder="youtube optional"
+                        placeholder="youtube (optional)"
                         />
                         <i v-show="errors.has('youtube')" class="is-invalid"></i>
 
                         <span v-show="errors.has('youtube')" class="text-danger">{{ errors.first('youtube') }}</span>
                         <span v-show="serverErrors.youtube != ''" class="text-danger">{{ serverErrors.youtube }}</span>
                     </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                    <button type="submit" class="btn btnsubmit">Submit</button>
               </form>
           </div>
 
@@ -191,5 +196,4 @@ export default {
 </script>
 
 <style>
-
 </style>

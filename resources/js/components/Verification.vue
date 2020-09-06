@@ -1,14 +1,14 @@
 <template>
   <div>
     <div v-if="verificationStatus === true && userData === 1">
-      <h2>
+      <h4>
         <span class="text-danger">Your data is under verification</span>
-      </h2>
+      </h4>
     </div>
     <div v-if="userData === 3 && verificationStatus === true">
-      <h2>
+      <h4>
         <span class="text-danger">You are blocked by Admin</span>
-      </h2>
+      </h4>
     </div>
     <div v-if="verificationStatus === false">
       <div>

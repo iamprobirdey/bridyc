@@ -643,35 +643,26 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c("div", { staticClass: "col-sm-6" }, [
-      _c(
-        "div",
-        { staticClass: "quote", style: { backgroundColor: _vm.colorMatch } },
-        [
-          _c("h3", { style: { color: _vm.colorWhite } }, [
-            _vm._v(_vm._s(_vm.quoteName))
-          ]),
-          _vm._v(" "),
-          _c("span", { style: { color: _vm.colorWhite } }, [
-            _vm._v(_vm._s(_vm.quoteAuthor))
-          ])
-        ]
-      )
+    _c("div", { staticClass: "datetime mb-2" }, [
+      _c("h1", { style: { color: _vm.colorWhite } }, [
+        _vm._v(_vm._s(_vm.timeData.time))
+      ]),
+      _vm._v(" "),
+      _c("h5", { style: { color: _vm.colorWhite } }, [
+        _vm._v(_vm._s(_vm.timeData.date))
+      ])
     ]),
     _vm._v(" "),
     _c(
       "div",
-      {
-        staticClass: "col-sm-3",
-        staticStyle: { "background-color": "#1F2041" }
-      },
+      { staticClass: "quote", style: { backgroundColor: _vm.colorMatch } },
       [
-        _c("h1", { style: { color: _vm.colorWhite } }, [
-          _vm._v(_vm._s(_vm.timeData.time))
+        _c("h3", { style: { color: _vm.colorWhite } }, [
+          _vm._v(_vm._s(_vm.quoteName))
         ]),
         _vm._v(" "),
-        _c("h5", { style: { color: _vm.colorWhite } }, [
-          _vm._v(_vm._s(_vm.timeData.date))
+        _c("span", { style: { color: _vm.colorWhite } }, [
+          _vm._v("~" + _vm._s(_vm.quoteAuthor))
         ])
       ]
     )
