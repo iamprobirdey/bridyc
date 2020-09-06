@@ -1,0 +1,143 @@
+<template>
+    <div>
+        <div v-if="subjectsEntryChecker">
+            You school sujects are
+            <button class="btn btn-primary m-1" v-for="(subject,index) in studentssubjectData" :key="index">
+                {{subject.subject.name}}
+            </button>
+
+            <button class="btn btn-warning" @click="editTheSubject()">Edit</button>
+        </div>
+        <div v-if="!subjectsEntryChecker">
+            <multiselect
+                    v-model="value"
+                    :options="subjectsData"
+                    track-by="name"
+                    :custom-label="standardNameOnly"
+                    :multiple="true"
+                    tag-placeholder="Select classes of your subjects"
+                    :option-height="104"
+                    >
+                </multiselect>
+                     <span
+              v-show="serverError != ''"
+              class="text-danger"
+            >{{ serverError }}</span>
+            <br>
+                <button
+                    type="submit"
+                    class="btn btn-primary"
+                    @click="submitSubjectsData()">
+                    Submit
+                </button>
+        </div>
+    </div>
+</template>
+<script>
+import Multiselect from 'vue-multiselect'
+export default {
+    data(){
+        return{
+            value: [],
+            subjectsData: [],
+            studentssubjectData : [],
+            subjectsEntryChecker : true,
+            selectedSubjectValueStored: [],
+            serverError: '',
+
+        };
+    },
+    props:{
+        subjects: {
+            type : Array,
+            default : null
+        },
+        studentssubject:{
+            type : Array,
+            default : null
+        }
+    },
+    created(){
+        this.subjectsData = this.subjects;
+        this.studentssubjectData = this.studentssubject;
+    },
+    mounted(){
+        if(this.studentssubjectData.length > 0){
+            this.subjectsEntryChecker = true;
+            this.theSubjectContainer();
+        }
+    },
+    methods:{
+         standardNameOnly(subject){
+            return `${subject.name}`
+        },
+        submitSubjectsData(){
+            if(this.value.length){
+                let subjectFormData = [];
+                this.value.map(item=>{
+                    subjectFormData.push(item.id);
+                });
+                if(this.isEqual(subjectFormData)){
+                    axios
+                        .post('/api/profile/edit/subject',this.value)
+                        .then(response => {
+                            this.studentssubjectData = [];
+                            this.studentssubjectData = response.data.data;
+                            this.subjectsEntryChecker = true;
+                            this.theSubjectContainer();
+                        })
+                        .catch(errors => {
+                            Vue.toasted.error("Something went wrong", {
+                                position: "top-center",
+                                duration: 5000
+                            });
+                        });
+                }else{
+                    this.serverError = 'Already added this subjects';
+                }
+
+            }
+        },
+        isEqual(items){
+            let counter = 0;
+            items.map(item => {
+                this.selectedSubjectValueStored.map(data => {
+                    if(item === data){
+                        counter++;
+                    }
+                });
+            });
+            if(
+                this.selectedSubjectValueStored.length === 0 ||
+                this.selectedSubjectValueStored.length != counter
+               )
+                return true;
+            return false;
+
+        },
+        theSubjectContainer(){
+            this.value = [];
+            if(this.studentssubjectData != null){
+                this.subjectsData.map(item => {
+                    this.studentssubjectData.map(data =>{
+                        if(data.subject.name === item.name){
+                            this.value.push(item);
+                            this.selectedSubjectValueStored.push(data.subject.id);
+                        }
+                    });
+                });
+            }
+        },
+        editTheSubject(){
+            this.subjectsEntryChecker = false;
+        }
+    },
+    components:{
+        Multiselect
+    }
+
+}
+</script>
+
+<style src="vue-multiselect/dist/vue-multiselect.min.css"></style>
+

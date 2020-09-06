@@ -18,7 +18,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email','password','username','user_type','phone'
+        'name', 'email','password','username','user_type','phone',
     ];
 
     /**
@@ -54,6 +54,10 @@ class User extends Authenticatable
         return $this->hasOne(Channel::class,'user_id','id');
     }
 
+    public function userInformation(){
+        return $this->hasOne(UserInformation::class,'user_id','id');
+    }
+
     public function is_verified(){
 
         // $verified = Verification::where('user_id',Auth::id())->first();
@@ -71,5 +75,24 @@ class User extends Authenticatable
                 return true;
         }
         return false;
+    }
+    public function isUser(){
+        return $this->user_type;
+    }
+
+    public function studentSubject(){
+        return $this->belongsToMany(StudentSubject::class,'user_id','id');
+    }
+
+    public function studentHobby(){
+        return $this->belongsToMany(Hobby::class,'student_hobbies','user_id','hobby_id');
+    }
+
+    public function saveStudentHobbyData($data){
+        return $this->studentHobby()->saveMany($data);
+    }
+
+    public function acheivement(){
+        return $this->hasMany(Acheivement::class,'user_id','id');
     }
 }

@@ -19,14 +19,14 @@ class District extends Model
     protected static function boot()
     {
         parent::boot();
-        static::saving(function ($model) { 
+        static::saving(function ($model) {
             $model->name = Str::ucfirst($model->name);
             $model->slug = Str::slug($model->name);
             if(!$model->state->id) {
                 abort(404);
             }
         });
-        static::updating(function ($model) { 
+        static::updating(function ($model) {
             $model->name = Str::ucfirst($model->name);
             $model->slug = Str::slug($model->name);
             if(!$model->state->id) {
@@ -34,4 +34,9 @@ class District extends Model
             }
         });
     }
+
+    public function userInformation(){
+        return $this->hasOne(UserInformation::class,'district_id','id');
+    }
+
 }

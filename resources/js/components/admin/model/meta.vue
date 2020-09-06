@@ -1,5 +1,57 @@
 <template>
     <div>
+        <button class="btn btn-warning" @click="getMetaModel()">
+                Meta
+        </button>
+
+    <div class="modal fade" id="metaGenerator" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-body">
+                <form @submit.prevent="metaGenerationForm()">
+                    <div
+                        class="form-group"
+                        :class="{'has-error':errors.has('metaDataError.meta_keywords') || metaDataError.meta_keywords != ''}"
+                    >
+                        <label>Meta Keywords</label>
+                            <input
+                            v-model="metaData.meta_keywords"
+                            v-validate="'required'"
+                            data-vv-delay="20"
+                            name="meta_keywords"
+                            type="text"
+                            :class="{'form-control': true,'is-invalid': errors.has('meta_keywords')}"
+                            placeholder="Meta Keywords"
+                            />
+                        <span v-show="errors.has('meta_keywords')" class="text-danger">{{errors.first("meta_keywords")}}</span>
+                        <span v-show="metaDataError.meta_keywords != ''" class="help is-danger">{{metaDataError.meta_keywords}}</span>
+                    </div>
+
+                     <div
+                        class="form-group"
+                        :class="{'has-error':errors.has('metaDataError.meta_descriptions') || metaDataError.meta_descriptions != ''}"
+                    >
+                        <label>Meta Description</label>
+                            <input
+                            v-model="metaData.meta_descriptions"
+                            v-validate="'required'"
+                            data-vv-delay="20"
+                            name="meta_descriptions"
+                            type="text"
+                            :class="{'form-control': true,'is-invalid': errors.has('meta_descriptions')}"
+                            placeholder="Meta Description"
+                            />
+                        <span v-show="errors.has('meta_descriptions')" class="text-danger">{{errors.first("meta_descriptions")}}</span>
+                        <span v-show="metaDataError.meta_descriptions != ''" class="help is-danger">{{metaDataError.meta_descriptions}}</span>
+                    </div>
+
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
 
     </div>
 </template>
@@ -15,43 +67,45 @@ export default {
           meta_keywords : '',
           meta_descriptions : ''
       },
-      metaKeywordsDescriptionsId : ''
+      metaKeywordsDescriptionsId : '',
+      verificationData : []
     };
   },
   props: {
-    users: {
-      type: Array,
-      default: null
-    }
+      verification: {
+          type : Object,
+          default : null
+      }
+  },
+  created(){
+      this.verificationData = this.verification;
   },
   mounted() {
-      if(this.users != null) this.usersData = this.users;
   },
   methods: {
-    getMetaModel(verification){
+    getMetaModel(){
         this.metaKeywordsDescriptionsId = '';
-        this.metaKeywordsDescriptionsId = verification.id;
-        if(verification.meta_keywords != undefined) {
-            this .metaData.meta_keywords = this.verification.meta_keywords;
+        this.metaKeywordsDescriptionsId = this.verificationData.id;
+        if(this.verificationData.meta_keywords != undefined) {
+            this.metaData.meta_keywords = this.verificationData.meta_keywords;
         }
-        if(verification.meta_descriptions != undefined) {
-            this .metaData.meta_descriptions = this.verification.meta_descriptions;
+        if(this.verificationData.meta_descriptions != undefined) {
+            this.metaData.meta_descriptions = this.verificationData.meta_descriptions;
         }
         $('#metaGenerator').modal('show');
     },
     metaGenerationForm(){
         this.$validator.validate().then(result => {
             if (result) {
-                console.log('called');
             axios
                 .post('verification/api/keywords/description/'+this.metaKeywordsDescriptionsId,this.metaData)
                 .then(response => {
-                if (response.data.msg === true) {
+                if (response.data.message === true) {
                     Vue.toasted.success("Meta data is created", {
                     position: "top-center",
                     duration: 5000
                     });
-                    $('#slugGenerator').modal('hide');
+                    $('#metaGenerator').modal('hide');
                 }
                 })
                 .catch(errors => {

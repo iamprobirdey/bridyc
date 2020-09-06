@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateStudentInformationTable extends Migration
+class CreateAcheivementsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,13 @@ class CreateStudentInformationTable extends Migration
      */
     public function up()
     {
-        Schema::create('student_information', function (Blueprint $table) {
+        Schema::create('acheivements', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
-            $table->foreignId('standard_id');
-            $table->foreignId('channel_id');
+            $table->foreignId('channel_id')->constrained()->onDelete('cascade');
+            $table->string('image_path');
+            $table->string('title');
+            $table->string('description');
             $table->timestamps();
         });
     }
@@ -29,6 +31,6 @@ class CreateStudentInformationTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('student_information');
+        Schema::dropIfExists('acheivements');
     }
 }

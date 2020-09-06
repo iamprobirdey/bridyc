@@ -114,7 +114,7 @@
   }
 }
 
-.focusplace .videosection {
+.formcall .videosection {
   padding-top: 20px;
   text-align: center;
 }
@@ -136,12 +136,12 @@
 }
 
 @media only screen and (min-width: 481px) {
-  .focusplace .videosection .guest {
+  .formcall .videosection .guest {
     width: 70%;
   }
 }
 
-.focusplace .videosection .guest h2 {
+.formcall .videosection .guest h2 {
   color: white;
   margin-bottom: 3px;
 }
@@ -151,7 +151,7 @@
   font-size: 25px;
 }
 
-.focusplace .videosection .playbtn {
+.formcall .videosection .playbtn {
   background-color: #011737;
   color: white;
 }

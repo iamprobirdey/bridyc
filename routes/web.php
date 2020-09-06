@@ -21,6 +21,11 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@test');
 
+Route::get('hobby',function(){
+
+});
+
+
 Route::get('test','HomeController@test');
 
 Route::get('admin/login','Admin\AdminAuthController@showAdminLoginForm')->name('admin.login');
@@ -156,6 +161,8 @@ Route::group([
         Route::get('api/updatingforoff/{userId}/{id}','Admin\VerificationController@updatingforoff');
         Route::get('api/updatingforblock/{userId}/{id}','Admin\VerificationController@updatingforblock');
         Route::post('api/channel-slug/{channel:user_id}','Admin\VerificationController@slugGenerator');
+        //Add meta-keywords and meta-description
+        Route::post('api/keywords/description/{id}','User\MetaController@store');
     });
 
 });
@@ -170,6 +177,8 @@ Route::group([
     Route::get('channel','User\DashboardController@channel');
     Route::get('edit','User\DashboardController@editChannel');
     Route::get('profile/{user:username}/edit','User\DashboardController@profile')->name('user.profile');
+    Route::get('achievement/{channel:title}','User\DashboardController@acheivement')->name('channel.achievement');
+    Route::get('teacher/{channel:title}','User\DashboardController@teacher')->name('channel.teacher');
     Route::group([
         'name' => 'api.',
         'prefix' => 'api'
@@ -212,8 +221,15 @@ Route::group([
         //Add Education
         Route::post('add/education','User\ProfileController@storeEducation');
         Route::post('add/education/edit/{id}','User\ProfileController@storeEditEducation');
-        //Add meta-keywords and meta-description
-        Route::post('keywords/description/{id}','User\MetaController@store');
+
+        //Achievement Upload
+        Route::post('achievement/add/{channel:id}','User\AchievementController@store');
+        Route::post('achievement/edit/{achievementId}/{channel:id}','User\AchievementController@editStore');
+
+        //Teacher creation
+        Route::post('add/teacher/{channel:id}','User\TeachersController@store');
+        Route::post('delete/teacher/{id}','User\TeachersController@delete');
+
 
     });
 });
@@ -233,13 +249,19 @@ Route::post('institute/register','Auth\InstituteController@postRegister');
 
 Route::get('channel/{slug}','ChannelController@getChannelBySlug');
 
+Route::get('edit/profile/{user:username}','Student\ProfileController@index');
 
-// Route::group([
-//     'name' => 'api.',
-//     'prefix' => 'api'
-// ], function () {
 
-// });
+Route::group([
+    'name' => 'api.',
+    'prefix' => 'api'
+], function () {
+    Route::post('profile/edit/username','Student\ProfileController@storeUsername');
+    Route::post('profile/edit/address','Student\ProfileController@storeAddress');
+    Route::post('profile/edit/subject','Student\ProfileController@storeSubjectData');
+    Route::post('profile/edit/hobbies/{user:username}','Student\ProfileController@storeHobbyData');
+
+});
 
 
 

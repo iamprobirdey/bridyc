@@ -20,4 +20,8 @@ class Hobby extends Model
             $model->code = strtolower($model->name);
         });
     }
+
+    public function studenthobby(){
+        return $this->belongsToMany(Hobby::class,'student_hobbies','hobby_id','user_id');
+    }
 }

@@ -24,4 +24,8 @@ class State extends Model
     public function district(){
         return $this->hasMany(District::class,'state_id','id');
     }
+
+    public function userInformation(){
+        return $this->hasOne(UserInformation::class,'state_id','id');
+    }
 }

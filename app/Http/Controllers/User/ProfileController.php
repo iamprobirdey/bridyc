@@ -11,6 +11,11 @@ use App\UserEducation;
 
 class ProfileController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function storeGender(StoreUserGenderValidation $request){
         $user  = User::findOrFail(auth()->id());
         $user->gender  = $request->validated()['gender'];
@@ -35,5 +40,7 @@ class ProfileController extends Controller
                     'message' => true,
                     'user' => $user
                 ]);
-            }
+    }
+
+
 }

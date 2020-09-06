@@ -14,9 +14,14 @@ class MetaController extends Controller
         $this->middleware('auth');
     }
 
-    public function store(StoreMetaKeywordsDescriptionsValidation $request , $metaId){
+    public function store($metaId , StoreMetaKeywordsDescriptionsValidation $request){
         $channel = Channel::findOrFail($metaId);
-        //$channel->meta_keywords =
-        dd($request->validated());
+        $channel->meta_keywords = $request->validated()['meta_keywords'];
+        $channel->meta_descriptions = $request->validated()['meta_descriptions'];
+        $channel->save();
+
+        return response()->json([
+            'message' => true
+        ]);
     }
 }
