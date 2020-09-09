@@ -39,26 +39,24 @@ main .blankdiv {
 @media only screen and (min-width: 768px) {
   main .blankdiv {
     height: 150px;
-    padding-left: 70px;
+    padding-left: 60px;
     padding-top: 75px;
   }
 }
 
 main .blankdiv .insweb {
-  border: 1px solid #96511f;
-  background-color: #96511f;
+  background-color: #003585;
   color: white;
-  width: 150px;
+  width: 138px;
   padding-left: 15px;
   padding-right: 12px;
 }
 
 main .blankdiv .insweb:hover {
   background-color: white;
-  color: #96511f;
+  color: #011737;
   text-decoration: none;
-  font-size: 17px;
-  border: 2px solid #96511f;
+  border: 1px solid #011737;
 }
 
 main .blankdiv .phemdiv {
@@ -110,6 +108,7 @@ main .logo-title {
 main .logo-title .logoinstitute {
   width: 70px;
   height: 80px;
+  border: 1px solid gainsboro;
   transition: all ease 0.5s;
 }
 
@@ -124,7 +123,7 @@ main .logo-title .logoinstitute {
   main .logo-title .logoinstitute {
     width: 130px;
     height: 130px;
-    margin-left: 130px !important;
+    margin-left: 120px !important;
   }
 }
 
@@ -159,54 +158,141 @@ main .logo-title .institle {
   }
 }
 
-main .achievecard {
-  background-color: white;
-  text-align: center;
-  align-items: center;
-  margin-bottom: 13px;
-  border: 1px;
-  margin-top: -43px;
-  height: auto;
-  margin-left: auto;
-  margin-right: auto;
-  width: 90%;
+main .inssocial {
+  position: relative;
+  top: -240px;
+  left: 85%;
+}
+
+main .inspills {
+  margin-top: -100px;
+}
+
+main .inspills .nav-pills .nav-link {
+  color: #011737;
+}
+
+main .inspills .nav-pills .active {
+  background-color: #003585;
+  color: white;
+}
+
+main .inspills .inscarou {
+  width: 100%;
+  height: 180px;
+  margin-bottom: 80px;
 }
 
 @media only screen and (min-width: 481px) {
-  main .achievecard {
+  main .inspills .inscarou {
+    margin-bottom: -190px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  main .inspills .inscarou {
+    margin-bottom: 390px;
+  }
+}
+
+main .inspills .inscarou li {
+  position: relative;
+  width: 8px;
+  height: 8px;
+  top: 30px;
+  border-radius: 100%;
+  background-color: black;
+}
+
+@media only screen and (min-width: 765px) {
+  main .inspills .inscarou li {
+    top: 250px;
+  }
+}
+
+main .inspills .inscarou img {
+  width: 100%;
+  height: 100%;
+}
+
+main .inspills .notice {
+  background-color: white;
+  align-items: center;
+  margin-bottom: 13px;
+  border: 1px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+main .inspills .notice h5 {
+  font-weight: 400;
+  color: #011737;
+}
+
+@media only screen and (min-width: 481px) {
+  main .inspills .notice {
     font-size: x-large;
   }
 }
 
 @media only screen and (min-width: 765px) {
-  main .achievecard {
+  main .inspills .notice {
     font-size: small;
   }
 }
 
 @media only screen and (min-width: 768px) {
-  main .achievecard {
+  main .inspills .notice {
     font-size: large;
   }
 }
 
-main .description {
+main .inspills .facultyachieve h3 {
+  background-color: #011737;
+  color: white;
+  padding: 7px;
+  text-align: center;
+}
+
+main .inspills .facultyachieve .facultyachievecard {
+  width: 200px;
+  height: 250px;
+}
+
+main .inspills .facultyachieve .facultyachievecard img {
+  width: 100%;
+  height: 170px;
+}
+
+main .inspills .description {
   background-color: white;
   padding: 1rem;
   margin-left: auto;
   margin-right: auto;
-  width: 90%;
+  width: 100%;
+}
+
+main .inspills .description h4 {
+  text-align: center;
+  color: #011737;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+main .inspills .description p {
+  border-left: 10px solid #ffbcb091;
+  padding-left: 10px;
 }
 
 @media only screen and (min-width: 481px) {
-  main .description {
+  main .inspills .description {
     font-size: x-large;
   }
 }
 
 @media only screen and (min-width: 765px) {
-  main .description {
-    width: 90%;
+  main .inspills .description {
     height: auto;
     margin-left: auto;
     margin-right: auto;
@@ -214,54 +300,64 @@ main .description {
 }
 
 @media only screen and (min-width: 768px) {
-  main .description {
+  main .inspills .description {
     font-size: large;
   }
 }
 
-main .info {
-  margin-top: 0.2rem;
-  line-height: 2rem;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  font-size: 20px;
-  color: black;
-  padding-top: 10px;
-  line-height: 3rem;
-  margin-top: 40px;
+main .inspills .princidiv {
+  margin-top: 50px;
 }
 
-main .info h4 {
-  background-color: #96511f;
+main .inspills .princidiv img {
+  width: 50px;
+  height: 50px;
 }
 
-main .info .card-title {
+main .inspills .princidiv .principalcard {
+  text-align: center;
+  color: #011737;
+  border: none;
+}
+
+main .inspills .princidiv .principalcard p {
+  color: #011737;
+}
+
+main .inspills .princidiv .principalcard img {
+  width: 100%;
+  height: 250px;
+}
+
+main .inspills .princidiv .principalcard .card-body {
+  background-color: #f9fcff;
+}
+
+main .inspills .additionalinfo h3 {
+  text-transform: uppercase;
+  color: #011737;
+}
+
+main .inspills .additionalinfo .insadditionalinfo ul {
+  list-style: none;
+  line-height: 38px;
+  font-size: 18px;
   text-align: center;
 }
 
-main .info hr {
-  border-bottom: 3px solid white;
+main .inspills .facilitydiv {
+  background-color: white;
 }
 
-@media only screen and (min-width: 481px) {
-  main .info {
-    font-size: x-large;
-  }
+main .inspills .facilitydiv div {
+  font-size: 16px;
+  color: #011737;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-@media only screen and (min-width: 765px) {
-  main .info {
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  main .info {
-    margin-top: 0px;
-    font-size: large;
-  }
+main .inspills .facilitydiv div img {
+  width: 30px;
+  height: 30px;
 }
 
 main .insaddress h4 {
@@ -327,71 +423,6 @@ main .insaddress .addbody ul {
   main .insaddress {
     margin-top: 0px;
   }
-}
-
-main .inscarou {
-  width: 100%;
-  height: 180px;
-  margin-bottom: 80px;
-}
-
-@media only screen and (min-width: 481px) {
-  main .inscarou {
-    margin-bottom: -190px;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  main .inscarou {
-    display: none;
-  }
-}
-
-main .inscarou li {
-  position: relative;
-  width: 8px;
-  height: 8px;
-  top: 30px;
-  border-radius: 100%;
-  background-color: black;
-}
-
-@media only screen and (min-width: 765px) {
-  main .inscarou li {
-    top: 250px;
-  }
-}
-
-main .inscarou img {
-  width: 100%;
-  height: 100%;
-}
-
-main .insimages {
-  display: none;
-}
-
-@media only screen and (min-width: 768px) {
-  main .insimages {
-    display: block;
-    width: 90%;
-    height: 700px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: -50px;
-  }
-}
-
-main .insimages img {
-  width: 100%;
-  height: 50%;
-}
-
-main .insimages .sub-img img {
-  margin-top: 5px;
-  width: 100px;
-  height: 110px;
-  cursor: pointer;
 }
 
 main .btnveri {

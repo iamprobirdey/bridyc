@@ -1,21 +1,22 @@
 <template>
     <div>
-        <h2>We highly appreciate to give profile details of Schools principle</h2>
+        <h2>Principal's Profile</h2>
         <div v-if="genderVissionChecker">
             <button class="btn-primary" @click="editGenderAndVission()">Edit</button>
             <p>{{channelProfileData.gender}}</p>
             <p>{{channelProfileData.vission}}</p>
         </div>
     <form @submit.prevent="getFormData()" v-if="!genderVissionChecker">
+      
       <div
-        class="form-group"
+        class="form-group row"
         :class="{'has-error':errors.has('profileError') || profileError != ''}"
       >
-        <label for="exampleInputEmail1">Your gender</label>
+        <label for="exampleInputEmail1" class="col-sm-2 col-form-label">Gender</label>
 
             <select
                 v-model="profileData.gender"
-                class="form-control"
+                class="form-control col-sm-10"
                 name="gender"
                 v-validate="'required'"
           >
@@ -35,13 +36,14 @@
         </span>
       </div>
          <div
-          class="form-group"
+          class="form-group row"
           :class="{'has-error': errors.has('vission') || profileError.vission != '' }"
         >
-          <label >Your vission for your college</label>
+          <label >Vission</label>
           <input
             v-model="profileData.vission"
             v-validate="'required'"
+            class="col-sm-10"
             data-vv-delay="20"
             name="vission"
             type="text"
@@ -62,7 +64,7 @@
     </form>
 
     <h2>
-        Would would like to know your qualification
+        More Details
     </h2>
     <ul>
         <li v-for="(education,index) in channelProfileData.education" :key="education.id">

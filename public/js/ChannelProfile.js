@@ -384,6 +384,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -580,11 +582,7 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c("h2", [
-      _vm._v(
-        "We highly appreciate to give profile details of Schools principle"
-      )
-    ]),
+    _c("h2", [_vm._v("Principal's Profile")]),
     _vm._v(" "),
     _vm.genderVissionChecker
       ? _c("div", [
@@ -622,16 +620,21 @@ var render = function() {
             _c(
               "div",
               {
-                staticClass: "form-group",
+                staticClass: "form-group row",
                 class: {
                   "has-error":
                     _vm.errors.has("profileError") || _vm.profileError != ""
                 }
               },
               [
-                _c("label", { attrs: { for: "exampleInputEmail1" } }, [
-                  _vm._v("Your gender")
-                ]),
+                _c(
+                  "label",
+                  {
+                    staticClass: "col-sm-2 col-form-label",
+                    attrs: { for: "exampleInputEmail1" }
+                  },
+                  [_vm._v("Gender")]
+                ),
                 _vm._v(" "),
                 _c(
                   "select",
@@ -650,7 +653,7 @@ var render = function() {
                         expression: "'required'"
                       }
                     ],
-                    staticClass: "form-control",
+                    staticClass: "form-control col-sm-10",
                     attrs: { name: "gender" },
                     on: {
                       change: function($event) {
@@ -732,14 +735,14 @@ var render = function() {
             _c(
               "div",
               {
-                staticClass: "form-group",
+                staticClass: "form-group row",
                 class: {
                   "has-error":
                     _vm.errors.has("vission") || _vm.profileError.vission != ""
                 }
               },
               [
-                _c("label", [_vm._v("Your vission for your college")]),
+                _c("label", [_vm._v("Vission")]),
                 _vm._v(" "),
                 _c("input", {
                   directives: [
@@ -756,6 +759,7 @@ var render = function() {
                       expression: "'required'"
                     }
                   ],
+                  staticClass: "col-sm-10",
                   class: {
                     "form-control": true,
                     "is-invalid": _vm.errors.has("vission")
@@ -846,7 +850,7 @@ var render = function() {
         )
       : _vm._e(),
     _vm._v(" "),
-    _c("h2", [_vm._v("\n    Would would like to know your qualification\n")]),
+    _c("h2", [_vm._v("\n    More Details\n")]),
     _vm._v(" "),
     _c(
       "ul",
