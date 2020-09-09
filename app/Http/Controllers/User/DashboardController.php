@@ -58,4 +58,17 @@ class DashboardController extends Controller
                 'user' => $user->with('education')->first()
             ]);
     }
+
+    public function acheivement(Channel $channel){
+        $achievement = $channel->select('id')->with('achievement')->get();
+        return view('institute.acheivement',[
+            'achievement' => $achievement,
+        ]);
+    }
+
+    public function teacher(Channel $channel){
+        return view('institute.teacher',[
+            'teacher' => $channel->select('id')->with('teacher.user')->get()
+        ]);
+    }
 }

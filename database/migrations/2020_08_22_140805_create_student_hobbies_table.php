@@ -16,7 +16,7 @@ class CreateStudentHobbiesTable extends Migration
         Schema::create('student_hobbies', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
-            $table->foreignId('hobby_id');
+            $table->foreignId('hobby_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });
     }

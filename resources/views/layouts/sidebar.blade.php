@@ -40,7 +40,7 @@
           </a>
         </li>
         @php
-            //dd(auth()->user()->username);
+           //dd(auth()->user()->channel->title);
         @endphp
         <li class="nav-item">
         <a class="nav-link active" href="{{route('user.profile',auth()->user()->username)}}">
@@ -50,6 +50,22 @@
                 Profile
             </a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="{{route('channel.achievement',auth()->user()->channel->title)}}">
+                  <span class="material-icons sidebaricons">
+                    dashboard
+                    </span>
+                    Achievement
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" href="{{route('channel.teacher',auth()->user()->channel->title)}}">
+                      <span class="material-icons sidebaricons">
+                        dashboard
+                        </span>
+                        Teacher
+                    </a>
+            </li>
         @endif
       </ul>
     </div>

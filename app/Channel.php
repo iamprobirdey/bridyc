@@ -50,4 +50,16 @@ class Channel extends Model
     public function language(){
         return $this->belongsTo(Language::class,'language_id','id');
     }
+
+    public function userInformation(){
+        return $this->hasOne(UserInformation::class,'channel_id','id');
+    }
+
+    public function achievement(){
+        return $this->hasMany(Acheivement::class,'channel_id','id');
+    }
+
+    public function teacher(){
+        return $this->hasMany(ChannelTeacher::class,'channel_id','id');
+    }
 }

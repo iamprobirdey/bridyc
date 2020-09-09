@@ -1,6 +1,7 @@
 <template>
     <div>
-        <h2>Principal's Profile</h2>
+
+        <h2>We highly appreciate to give profile details of Schools principle</h2>
         <div v-if="genderVissionChecker">
             <button class="btn-primary" @click="editGenderAndVission()">Edit</button>
             <p>{{channelProfileData.gender}}</p>

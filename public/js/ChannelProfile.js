@@ -386,6 +386,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -582,7 +583,11 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c("h2", [_vm._v("Principal's Profile")]),
+    _c("h2", [
+      _vm._v(
+        "We highly appreciate to give profile details of Schools principle"
+      )
+    ]),
     _vm._v(" "),
     _vm.genderVissionChecker
       ? _c("div", [
