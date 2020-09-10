@@ -261,7 +261,6 @@ main {
 
               .additionalinfo{
                 h3{
-                  text-transform: uppercase;
                   color: #011737;
                 }
                 .insadditionalinfo{
@@ -419,6 +418,46 @@ main {
           }
           //css for website and description ends here
           
+          //css for profile starts here
+          .btnadd{
+            background-color: #003585;
+            color: white;
+            &:hover{
+              color: white;
+            }
+          }
+
+          .gendercard{
+            width: 80px;
+            height: 40px;
+            border: 0;
+            border-radius: 20px;
+            float: right;
+            margin-top: -5px;
+            background-color: #d30383;
+            color: white;
+            .card-body{
+              margin-top:-15px;
+            }
+          }
+          .visioncard{
+            width: 90%;
+            border: 0;
+            height: auto;
+          }
+
+          .profiledetails{
+            border: 0;
+            border-radius: 15px;
+            height: auto;
+            .card-body{
+              font-size: 18px;
+            }
+            @include screensize(tablet){
+              height: 50px;
+            }
+          }
+          //css for profile ends here
            
   }
 

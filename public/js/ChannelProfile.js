@@ -387,6 +387,73 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -583,30 +650,58 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c("h2", [
-      _vm._v(
-        "We highly appreciate to give profile details of Schools principle"
-      )
+    _c("h2", { staticClass: "mx-sm-4 px-sm-2" }, [
+      _vm._v("Principal's Profile")
     ]),
     _vm._v(" "),
+    _c("br"),
+    _vm._v(" "),
     _vm.genderVissionChecker
-      ? _c("div", [
+      ? _c("div", { staticClass: "mx-sm-4 px-sm-2" }, [
+          _c("div", { staticClass: "row mx-sm-0" }, [
+            _c("div", { staticClass: "col-sm-3 d-flex" }, [
+              _vm._v("\n                 Gender:\n                  "),
+              _c("div", { staticClass: "card gendercard ml-1" }, [
+                _c("div", { staticClass: "card-body" }, [
+                  _vm._v(_vm._s(_vm.channelProfileData.gender))
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("br"),
+            _vm._v(" "),
+            _c("br"),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-sm-9 d-flex" }, [
+              _vm._v("\n                Vision:\n                 "),
+              _c("div", { staticClass: "card visioncard shadow ml-2" }, [
+                _c("div", { staticClass: "card-body" }, [
+                  _vm._v(_vm._s(_vm.channelProfileData.vission))
+                ])
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("br"),
+          _vm._v(" "),
           _c(
             "button",
             {
-              staticClass: "btn-primary",
+              staticClass: "btn btnadd",
               on: {
                 click: function($event) {
                   return _vm.editGenderAndVission()
                 }
               }
             },
-            [_vm._v("Edit")]
-          ),
-          _vm._v(" "),
-          _c("p", [_vm._v(_vm._s(_vm.channelProfileData.gender))]),
-          _vm._v(" "),
-          _c("p", [_vm._v(_vm._s(_vm.channelProfileData.vission))])
+            [
+              _c("i", {
+                staticClass: "fa fa-pencil",
+                attrs: { "aria-hidden": "true" }
+              }),
+              _vm._v(" Edit")
+            ]
+          )
         ])
       : _vm._e(),
     _vm._v(" "),
@@ -622,34 +717,141 @@ var render = function() {
             }
           },
           [
-            _c(
-              "div",
-              {
-                staticClass: "form-group row",
-                class: {
-                  "has-error":
-                    _vm.errors.has("profileError") || _vm.profileError != ""
-                }
-              },
-              [
-                _c(
-                  "label",
-                  {
-                    staticClass: "col-sm-2 col-form-label",
-                    attrs: { for: "exampleInputEmail1" }
-                  },
-                  [_vm._v("Gender")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "select",
-                  {
+            _c("div", { staticClass: "row" }, [
+              _c(
+                "div",
+                {
+                  staticClass: "form-group col-sm-5 px-sm-5",
+                  class: {
+                    "has-error":
+                      _vm.errors.has("profileError") || _vm.profileError != ""
+                  }
+                },
+                [
+                  _c("label", { attrs: { for: "exampleInputEmail1" } }, [
+                    _vm._v("Gender")
+                  ]),
+                  _vm._v(" "),
+                  _c(
+                    "select",
+                    {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.profileData.gender,
+                          expression: "profileData.gender"
+                        },
+                        {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required",
+                          expression: "'required'"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: { name: "gender" },
+                      on: {
+                        change: function($event) {
+                          var $$selectedVal = Array.prototype.filter
+                            .call($event.target.options, function(o) {
+                              return o.selected
+                            })
+                            .map(function(o) {
+                              var val = "_value" in o ? o._value : o.value
+                              return val
+                            })
+                          _vm.$set(
+                            _vm.profileData,
+                            "gender",
+                            $event.target.multiple
+                              ? $$selectedVal
+                              : $$selectedVal[0]
+                          )
+                        }
+                      }
+                    },
+                    [
+                      _c("option", { attrs: { value: "" } }, [
+                        _vm._v("Select your gender")
+                      ]),
+                      _vm._v(" "),
+                      _c("option", { attrs: { value: "male" } }, [
+                        _vm._v("Male")
+                      ]),
+                      _vm._v(" "),
+                      _c("option", { attrs: { value: "female" } }, [
+                        _vm._v("Female")
+                      ])
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "span",
+                    {
+                      directives: [
+                        {
+                          name: "show",
+                          rawName: "v-show",
+                          value: _vm.errors.has("gender"),
+                          expression: "errors.has('gender')"
+                        }
+                      ],
+                      staticClass: "text-danger"
+                    },
+                    [
+                      _vm._v(
+                        "\n       " +
+                          _vm._s(_vm.errors.first("gender")) +
+                          "\n     "
+                      )
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "span",
+                    {
+                      directives: [
+                        {
+                          name: "show",
+                          rawName: "v-show",
+                          value: _vm.profileError != "",
+                          expression: "profileError != ''"
+                        }
+                      ],
+                      staticClass: "help is-danger"
+                    },
+                    [
+                      _vm._v(
+                        "\n       " +
+                          _vm._s(_vm.profileError.gender) +
+                          "\n     "
+                      )
+                    ]
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass: "form-group col-sm-7",
+                  class: {
+                    "has-error":
+                      _vm.errors.has("vission") ||
+                      _vm.profileError.vission != ""
+                  }
+                },
+                [
+                  _c("label", [_vm._v("Vission")]),
+                  _vm._v(" "),
+                  _c("textarea", {
                     directives: [
                       {
                         name: "model",
                         rawName: "v-model",
-                        value: _vm.profileData.gender,
-                        expression: "profileData.gender"
+                        value: _vm.profileData.vission,
+                        expression: "profileData.vission"
                       },
                       {
                         name: "validate",
@@ -658,149 +860,33 @@ var render = function() {
                         expression: "'required'"
                       }
                     ],
-                    staticClass: "form-control col-sm-10",
-                    attrs: { name: "gender" },
+                    class: {
+                      "form-control": true,
+                      "is-invalid": _vm.errors.has("vission")
+                    },
+                    attrs: {
+                      rows: "2",
+                      "data-vv-delay": "20",
+                      name: "vission",
+                      type: "text",
+                      placeholder: "What's your vission for the institute?"
+                    },
+                    domProps: { value: _vm.profileData.vission },
                     on: {
-                      change: function($event) {
-                        var $$selectedVal = Array.prototype.filter
-                          .call($event.target.options, function(o) {
-                            return o.selected
-                          })
-                          .map(function(o) {
-                            var val = "_value" in o ? o._value : o.value
-                            return val
-                          })
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
                         _vm.$set(
                           _vm.profileData,
-                          "gender",
-                          $event.target.multiple
-                            ? $$selectedVal
-                            : $$selectedVal[0]
+                          "vission",
+                          $event.target.value
                         )
                       }
                     }
-                  },
-                  [
-                    _c("option", { attrs: { value: "" } }, [
-                      _vm._v("Select your gender")
-                    ]),
-                    _vm._v(" "),
-                    _c("option", { attrs: { value: "male" } }, [
-                      _vm._v("Male")
-                    ]),
-                    _vm._v(" "),
-                    _c("option", { attrs: { value: "female" } }, [
-                      _vm._v("Female")
-                    ])
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "span",
-                  {
-                    directives: [
-                      {
-                        name: "show",
-                        rawName: "v-show",
-                        value: _vm.errors.has("gender"),
-                        expression: "errors.has('gender')"
-                      }
-                    ],
-                    staticClass: "text-danger"
-                  },
-                  [
-                    _vm._v(
-                      "\n      " + _vm._s(_vm.errors.first("gender")) + "\n    "
-                    )
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "span",
-                  {
-                    directives: [
-                      {
-                        name: "show",
-                        rawName: "v-show",
-                        value: _vm.profileError != "",
-                        expression: "profileError != ''"
-                      }
-                    ],
-                    staticClass: "help is-danger"
-                  },
-                  [
-                    _vm._v(
-                      "\n      " + _vm._s(_vm.profileError.gender) + "\n    "
-                    )
-                  ]
-                )
-              ]
-            ),
-            _vm._v(" "),
-            _c(
-              "div",
-              {
-                staticClass: "form-group row",
-                class: {
-                  "has-error":
-                    _vm.errors.has("vission") || _vm.profileError.vission != ""
-                }
-              },
-              [
-                _c("label", [_vm._v("Vission")]),
-                _vm._v(" "),
-                _c("input", {
-                  directives: [
-                    {
-                      name: "model",
-                      rawName: "v-model",
-                      value: _vm.profileData.vission,
-                      expression: "profileData.vission"
-                    },
-                    {
-                      name: "validate",
-                      rawName: "v-validate",
-                      value: "required",
-                      expression: "'required'"
-                    }
-                  ],
-                  staticClass: "col-sm-10",
-                  class: {
-                    "form-control": true,
-                    "is-invalid": _vm.errors.has("vission")
-                  },
-                  attrs: {
-                    "data-vv-delay": "20",
-                    name: "vission",
-                    type: "text",
-                    placeholder: "Vission"
-                  },
-                  domProps: { value: _vm.profileData.vission },
-                  on: {
-                    input: function($event) {
-                      if ($event.target.composing) {
-                        return
-                      }
-                      _vm.$set(_vm.profileData, "vission", $event.target.value)
-                    }
-                  }
-                }),
-                _vm._v(" "),
-                _c("i", {
-                  directives: [
-                    {
-                      name: "show",
-                      rawName: "v-show",
-                      value: _vm.errors.has("vission"),
-                      expression: "errors.has('vission')"
-                    }
-                  ],
-                  staticClass: "is-invalid"
-                }),
-                _vm._v(" "),
-                _c(
-                  "span",
-                  {
+                  }),
+                  _vm._v(" "),
+                  _c("i", {
                     directives: [
                       {
                         name: "show",
@@ -809,108 +895,276 @@ var render = function() {
                         expression: "errors.has('vission')"
                       }
                     ],
-                    staticClass: "text-danger"
-                  },
-                  [_vm._v(_vm._s(_vm.errors.first("vission")))]
-                ),
-                _vm._v(" "),
-                _c(
-                  "span",
-                  {
-                    directives: [
-                      {
-                        name: "show",
-                        rawName: "v-show",
-                        value: _vm.profileError.vission != "",
-                        expression: "profileError.vission != ''"
-                      }
-                    ],
-                    staticClass: "text-danger"
-                  },
-                  [_vm._v(_vm._s(_vm.profileError.vission))]
-                )
-              ]
-            ),
+                    staticClass: "is-invalid"
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "span",
+                    {
+                      directives: [
+                        {
+                          name: "show",
+                          rawName: "v-show",
+                          value: _vm.errors.has("vission"),
+                          expression: "errors.has('vission')"
+                        }
+                      ],
+                      staticClass: "text-danger"
+                    },
+                    [_vm._v(_vm._s(_vm.errors.first("vission")))]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "span",
+                    {
+                      directives: [
+                        {
+                          name: "show",
+                          rawName: "v-show",
+                          value: _vm.profileError.vission != "",
+                          expression: "profileError.vission != ''"
+                        }
+                      ],
+                      staticClass: "text-danger"
+                    },
+                    [_vm._v(_vm._s(_vm.profileError.vission))]
+                  )
+                ]
+              )
+            ]),
             _vm._v(" "),
-            _c(
-              "button",
-              {
-                staticClass: "btn btn-success",
-                attrs: { type: "button" },
-                on: {
-                  click: function($event) {
-                    return _vm.goBack()
+            _c("div", { staticClass: "mx-sm-4 px-sm-2" }, [
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-success",
+                  attrs: { type: "button" },
+                  on: {
+                    click: function($event) {
+                      return _vm.goBack()
+                    }
                   }
-                }
-              },
-              [_vm._v("Go Back")]
-            ),
-            _vm._v(" "),
-            _c(
-              "button",
-              { staticClass: "btn btn-primary", attrs: { type: "submit" } },
-              [_vm._v("Submit")]
-            )
+                },
+                [_vm._v("Go Back")]
+              ),
+              _vm._v(" "),
+              _c(
+                "button",
+                {
+                  staticClass: "btn btnsubmit px-3 mt-n2",
+                  attrs: { type: "submit" }
+                },
+                [_vm._v("Submit")]
+              )
+            ])
           ]
         )
       : _vm._e(),
     _vm._v(" "),
-    _c("h2", [_vm._v("\n    More Details\n")]),
+    _c("br"),
     _vm._v(" "),
     _c(
-      "ul",
-      _vm._l(_vm.channelProfileData.education, function(education, index) {
-        return _c("li", { key: education.id }, [
-          _c("span", [
-            _vm._v(
-              "\n            School name: " +
-                _vm._s(education.school_name) +
-                "\n            Degree : " +
-                _vm._s(education.degree) +
-                "\n            Field of study : " +
-                _vm._s(education.field_of_study) +
-                "\n            Start Date : " +
-                _vm._s(education.start_date) +
-                "\n            End Date : " +
-                _vm._s(education.end_date) +
-                "\n            Grade : " +
-                _vm._s(education.grade) +
-                "\n            Activity and Sociaty : " +
-                _vm._s(education.activities_and_sociaties) +
-                "\n            Description : " +
-                _vm._s(education.description) +
-                "\n        "
-            )
-          ]),
-          _vm._v(" "),
-          _c(
-            "button",
-            {
-              staticClass: "btn-secondary",
-              on: {
-                click: function($event) {
-                  return _vm.editTheEducation(education, index)
+      "div",
+      { staticClass: "mx-sm-4 px-sm-2" },
+      [
+        _c("h4", [_vm._v("\n     Add more details(Recomended)\n ")]),
+        _vm._v(" "),
+        _vm._l(_vm.channelProfileData.education, function(education, index) {
+          return _c("div", { key: education.id, staticClass: "mt-5" }, [
+            _c("div", { staticClass: "row mx-auto" }, [
+              _c("ul", { staticClass: "nav flex-column col-sm-6" }, [
+                _c("li", [
+                  _c(
+                    "div",
+                    { staticClass: "card mx-sm-3 shadow profiledetails" },
+                    [
+                      _c("div", { staticClass: "card-body mt-n2" }, [
+                        _c("i", {
+                          staticClass: "fa fa-university",
+                          staticStyle: { color: "#003585" },
+                          attrs: { "aria-hidden": "true" }
+                        }),
+                        _vm._v(" School : "),
+                        _c("strong", [_vm._v(_vm._s(education.school_name))])
+                      ])
+                    ]
+                  )
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c("br"),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "card mx-sm-3 shadow profiledetails" },
+                    [
+                      _c("div", { staticClass: "card-body mt-n2" }, [
+                        _c("i", {
+                          staticClass: "fa fa-graduation-cap",
+                          staticStyle: { color: "#003585" },
+                          attrs: { "aria-hidden": "true" }
+                        }),
+                        _vm._v(" Degree : " + _vm._s(education.degree))
+                      ])
+                    ]
+                  )
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c("br"),
+                  _vm._v(" "),
+                  _c(
+                    "div",
+                    { staticClass: "card mx-sm-3 shadow profiledetails" },
+                    [
+                      _c("div", { staticClass: "card-body mt-n2" }, [
+                        _c("i", {
+                          staticClass: "fa fa-book",
+                          staticStyle: { color: "#003585" },
+                          attrs: { "aria-hidden": "true" }
+                        }),
+                        _vm._v(
+                          " Field of study : " +
+                            _vm._s(education.field_of_study)
+                        )
+                      ])
+                    ]
+                  )
+                ]),
+                _vm._v(" "),
+                _c("br"),
+                _vm._v(" "),
+                _c("li", [
+                  _c(
+                    "div",
+                    { staticClass: "card mx-sm-3 shadow profiledetails" },
+                    [
+                      _c("div", { staticClass: "card-body mt-n2" }, [
+                        _c("i", {
+                          staticClass: "fa fa-calendar-o",
+                          staticStyle: { color: "#003585" },
+                          attrs: { "aria-hidden": "true" }
+                        }),
+                        _vm._v(" Start Date : " + _vm._s(education.start_date))
+                      ])
+                    ]
+                  )
+                ]),
+                _vm._v(" "),
+                _c("br"),
+                _vm._v(" "),
+                _c("li", [
+                  _c(
+                    "div",
+                    { staticClass: "card mx-sm-3 shadow profiledetails" },
+                    [
+                      _c("div", { staticClass: "card-body mt-n2" }, [
+                        _c("i", {
+                          staticClass: "fa fa-calendar",
+                          staticStyle: { color: "#003585" },
+                          attrs: { "aria-hidden": "true" }
+                        }),
+                        _vm._v(" End Date : " + _vm._s(education.end_date))
+                      ])
+                    ]
+                  )
+                ]),
+                _vm._v(" "),
+                _c("br"),
+                _vm._v(" "),
+                _c("li", [
+                  _c(
+                    "div",
+                    { staticClass: "card mx-sm-3 shadow profiledetails" },
+                    [
+                      _c("div", { staticClass: "card-body mt-n2" }, [
+                        _c("i", {
+                          staticClass: "fa fa-percent",
+                          staticStyle: { color: "#003585" },
+                          attrs: { "aria-hidden": "true" }
+                        }),
+                        _vm._v(" Grade : " + _vm._s(education.grade))
+                      ])
+                    ]
+                  )
+                ])
+              ]),
+              _vm._v(" "),
+              _c(
+                "ul",
+                { staticClass: "nav flex-column col-sm-6 mt-5 mt-sm-0" },
+                [
+                  _c("li", [
+                    _c(
+                      "div",
+                      {
+                        staticClass: "card mx-sm-3 shadow profiledetails",
+                        staticStyle: { height: "auto" }
+                      },
+                      [
+                        _c("div", { staticClass: "card-body mt-n2" }, [
+                          _vm._v(
+                            "Activity and Sociaty : " +
+                              _vm._s(education.activities_and_sociaties)
+                          )
+                        ])
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("br"),
+                  _vm._v(" "),
+                  _c("li", [
+                    _c(
+                      "div",
+                      { staticClass: "card mx-sm-3 shadow profiledetails" },
+                      [
+                        _c("div", { staticClass: "card-body mt-n2" }, [
+                          _vm._v(
+                            "Description : " + _vm._s(education.description)
+                          )
+                        ])
+                      ]
+                    )
+                  ])
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c(
+              "button",
+              {
+                staticClass: "btn btnadd p-1",
+                on: {
+                  click: function($event) {
+                    return _vm.editTheEducation(education, index)
+                  }
                 }
+              },
+              [
+                _c("i", {
+                  staticClass: "fa fa-pencil",
+                  attrs: { "aria-hidden": "true" }
+                })
+              ]
+            )
+          ])
+        }),
+        _vm._v(" "),
+        _c(
+          "button",
+          {
+            staticClass: "btn btnadd p-1",
+            on: {
+              click: function($event) {
+                return _vm.addEducation()
               }
-            },
-            [_vm._v("edit")]
-          )
-        ])
-      }),
-      0
-    ),
-    _vm._v(" "),
-    _c(
-      "button",
-      {
-        staticClass: "btn-primary",
-        on: {
-          click: function($event) {
-            return _vm.addEducation()
-          }
-        }
-      },
-      [_vm._v("+")]
+            }
+          },
+          [_vm._v("+")]
+        )
+      ],
+      2
     ),
     _vm._v(" "),
     _c(
@@ -921,7 +1175,7 @@ var render = function() {
           id: "addEducation",
           tabindex: "-1",
           role: "dialog",
-          "aria-labelledby": "exampleModalLabel",
+          "aria-labelledby": "principalprofilemodal",
           "aria-hidden": "true"
         }
       },
@@ -945,6 +1199,10 @@ var render = function() {
                     }
                   },
                   [
+                    _c("h6", { staticClass: "mb-3 mt-n2" }, [
+                      _vm._v("Highest Education:")
+                    ]),
+                    _vm._v(" "),
                     _c(
                       "div",
                       {
@@ -957,7 +1215,7 @@ var render = function() {
                       },
                       [
                         _c("label", { attrs: { for: "exampleInputEmail1" } }, [
-                          _vm._v("School name")
+                          _vm._v("University")
                         ]),
                         _vm._v(" "),
                         _c("input", {
@@ -983,7 +1241,7 @@ var render = function() {
                             "data-vv-delay": "20",
                             name: "school_name",
                             type: "text",
-                            placeholder: "Your school name"
+                            placeholder: "Your university name"
                           },
                           domProps: {
                             value: _vm.qualificationData.school_name
@@ -1087,7 +1345,7 @@ var render = function() {
                             "data-vv-delay": "20",
                             name: "field_of_study",
                             type: "text",
-                            placeholder: "Field of study"
+                            placeholder: "Field of study(specialization)"
                           },
                           domProps: {
                             value: _vm.qualificationData.field_of_study
@@ -1196,7 +1454,7 @@ var render = function() {
                             "data-vv-delay": "20",
                             name: "degree",
                             type: "text",
-                            placeholder: "Degree"
+                            placeholder: "Name of your degree"
                           },
                           domProps: { value: _vm.qualificationData.degree },
                           on: {
@@ -1563,6 +1821,10 @@ var render = function() {
                       ]
                     ),
                     _vm._v(" "),
+                    _c("h6", { staticClass: "mb-3 mt-5" }, [
+                      _vm._v("Other Activities:")
+                    ]),
+                    _vm._v(" "),
                     _c(
                       "div",
                       {
@@ -1797,7 +2059,7 @@ var render = function() {
                     _c(
                       "button",
                       {
-                        staticClass: "btn btn-primary",
+                        staticClass: "btn btnadd ml-0",
                         attrs: { type: "submit" }
                       },
                       [_vm._v("Submit")]
@@ -1820,8 +2082,8 @@ var staticRenderFns = [
     return _c("div", { staticClass: "modal-header" }, [
       _c(
         "h5",
-        { staticClass: "modal-title", attrs: { id: "exampleModalLabel" } },
-        [_vm._v("Add Education")]
+        { staticClass: "modal-title", attrs: { id: "principalprofilemodal" } },
+        [_vm._v("Please fill in these details")]
       ),
       _vm._v(" "),
       _c(

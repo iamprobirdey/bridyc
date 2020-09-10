@@ -197,7 +197,7 @@
 
 
           <div class="container-fluid additionalinfo">
-               <h3>Additional Information</h3>
+               <h3 class="text-uppercase">Additional Information</h3>
                <hr>
              <div class="insadditionalinfo row">
                   <ul class="col">
@@ -219,19 +219,7 @@
              </div>
           </div>
 
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-            <div class="row mx-auto">
+            <!--div class="row mx-auto">
             <div class="col-lg-5 insaddress">
               <h4 class="shadow">Contact Us</h4>
               <div class="addbody">
@@ -266,7 +254,7 @@
               </div>
             </div>
             
-          </div>
+          </div-->
     </div>
     <div id="faculty" class="container-fluid tab-pane fade"><br>
        <div class="container-fluid facultyachieve">

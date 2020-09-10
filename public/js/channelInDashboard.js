@@ -400,18 +400,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -1178,7 +1166,9 @@ var render = function() {
                 _vm._m(2),
                 _vm._v(" "),
                 _c("div", { staticClass: "container-fluid additionalinfo" }, [
-                  _c("h3", [_vm._v("Additional Information")]),
+                  _c("h3", { staticClass: "text-uppercase" }, [
+                    _vm._v("Additional Information")
+                  ]),
                   _vm._v(" "),
                   _c("hr"),
                   _vm._v(" "),
@@ -1222,139 +1212,6 @@ var render = function() {
                           "Ownership: " +
                             _vm._s(_vm.userData.verification.ownership)
                         )
-                      ])
-                    ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("br"),
-                _vm._v(" "),
-                _c("br"),
-                _vm._v(" "),
-                _c("br"),
-                _vm._v(" "),
-                _c("br"),
-                _vm._v(" "),
-                _c("br"),
-                _vm._v(" "),
-                _c("br"),
-                _vm._v(" "),
-                _c("br"),
-                _vm._v(" "),
-                _c("br"),
-                _vm._v(" "),
-                _c("br"),
-                _vm._v(" "),
-                _c("br"),
-                _vm._v(" "),
-                _c("br"),
-                _vm._v(" "),
-                _c("div", { staticClass: "row mx-auto" }, [
-                  _c("div", { staticClass: "col-lg-5 insaddress" }, [
-                    _c("h4", { staticClass: "shadow" }, [_vm._v("Contact Us")]),
-                    _vm._v(" "),
-                    _c("div", { staticClass: "addbody" }, [
-                      _c("ul", { staticClass: "nav flex-column" }, [
-                        _c("li", [
-                          _vm._v(
-                            "\n                        " +
-                              _vm._s(_vm.channelData.title) +
-                              ",\n                        " +
-                              _vm._s(_vm.channelData.district.name) +
-                              ",\n                        " +
-                              _vm._s(_vm.channelData.state.name) +
-                              "\n                        " +
-                              _vm._s(_vm.userData.verification.pin) +
-                              "\n                        ,India\n                    "
-                          )
-                        ]),
-                        _vm._v(" "),
-                        _c("li", [
-                          _vm._v("Email: " + _vm._s(_vm.userData.email))
-                        ]),
-                        _vm._v(" "),
-                        _c("li", [_vm._v("Phone No: " + _vm._s(_vm.phoneNo))]),
-                        _vm._v(" "),
-                        _vm.socialCount === 0
-                          ? _c("li", [
-                              _vm.channelData.extra_attributes.social
-                                .facebook != null
-                                ? _c(
-                                    "a",
-                                    {
-                                      attrs: {
-                                        href:
-                                          _vm.channelData.extra_attributes
-                                            .social.facebook != null
-                                            ? _vm.channelData.extra_attributes
-                                                .social.facebook
-                                            : "javascript:void(0)"
-                                      }
-                                    },
-                                    [
-                                      _c("i", {
-                                        class: "fa fa-facebook-official",
-                                        attrs: { "aria-hidden": "true" }
-                                      })
-                                    ]
-                                  )
-                                : _vm._e(),
-                              _vm._v(" "),
-                              _vm.channelData.extra_attributes.social
-                                .linkedin != null
-                                ? _c(
-                                    "a",
-                                    {
-                                      attrs: {
-                                        href:
-                                          _vm.channelData.extra_attributes
-                                            .social.linkedin != null
-                                            ? _vm.channelData.extra_attributes
-                                                .social.linkedin
-                                            : "javascript:void(0)"
-                                      }
-                                    },
-                                    [
-                                      _c("i", {
-                                        staticClass: "fa fa-linkedin-square",
-                                        attrs: { "aria-hidden": "true" }
-                                      })
-                                    ]
-                                  )
-                                : _vm._e(),
-                              _vm._v(" "),
-                              _vm.channelData.extra_attributes.social.youtube !=
-                              null
-                                ? _c(
-                                    "a",
-                                    {
-                                      attrs: {
-                                        href:
-                                          _vm.channelData.extra_attributes
-                                            .social.youtube != null
-                                            ? _vm.channelData.extra_attributes
-                                                .social.youtube
-                                            : "javascript:void(0)"
-                                      }
-                                    },
-                                    [
-                                      _c("i", {
-                                        staticClass: "fa fa-youtube-square",
-                                        attrs: { "aria-hidden": "true" }
-                                      })
-                                    ]
-                                  )
-                                : _vm._e()
-                            ])
-                          : _vm._e(),
-                        _vm._v(" "),
-                        _vm.socialCount === 1
-                          ? _c("li", [
-                              _vm._v(
-                                "\n                    Socials: NA\n                "
-                              )
-                            ])
-                          : _vm._e()
                       ])
                     ])
                   ])
