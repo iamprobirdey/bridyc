@@ -21,13 +21,23 @@ main .inscover {
 }
 
 main .blankdiv {
-  height: 130px;
+  height: auto;
   width: 100%;
   position: relative;
   top: -70px;
   background-color: white;
   padding-top: 55px;
-  padding-left: 20px;
+  padding-left: 10px;
+}
+
+main .blankdiv p {
+  font-size: 12px;
+}
+
+@media only screen and (min-width: 481px) {
+  main .blankdiv p {
+    font-size: 16px;
+  }
 }
 
 @media only screen and (min-width: 481px) {
@@ -59,10 +69,6 @@ main .blankdiv .insweb:hover {
   border: 1px solid #011737;
 }
 
-main .blankdiv .phemdiv {
-  display: none;
-}
-
 @media only screen and (min-width: 768px) {
   main .blankdiv .phemdiv {
     display: block;
@@ -87,7 +93,6 @@ main .blankdiv .btnshare {
 main .logo-title {
   position: relative;
   top: -280px;
-  left: 5px;
   margin-bottom: -120px;
 }
 
@@ -162,12 +167,35 @@ main .logo-title .institle {
 
 main .inssocial {
   position: relative;
-  top: -240px;
-  left: 85%;
+  top: -175px;
+  left: 71%;
+  z-index: 1000;
+}
+
+main .inssocial img {
+  width: 20px;
+  height: 20px;
+}
+
+@media only screen and (min-width: 481px) {
+  main .inssocial {
+    top: -240px;
+    left: 85%;
+  }
+  main .inssocial img {
+    width: 25px;
+    height: 25px;
+  }
 }
 
 main .inspills {
-  margin-top: -100px;
+  margin-top: -170px;
+}
+
+@media only screen and (min-width: 481px) {
+  main .inspills {
+    margin-top: -200px;
+  }
 }
 
 main .inspills .nav-pills .nav-link {

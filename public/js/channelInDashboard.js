@@ -399,7 +399,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -939,7 +938,9 @@ var render = function() {
           _c("div", { staticClass: "d-flex" }, [
             _c("div", { staticClass: "d-flex flex-column" }, [
               _c("p", { staticClass: "m-1" }, [
-                _vm._v("A unit of abc society askjfhjkkhh ")
+                _vm._v(
+                  "A unit of abc society askjfhjkkhh bdb fbdfbdfb fdfb dfbfdb cbdfb"
+                )
               ]),
               _vm._v(" "),
               _c(
@@ -970,7 +971,7 @@ var render = function() {
             _c("div", { staticClass: "ml-auto phemdiv" }, [
               _c("p", { staticClass: "m-1 mr-2" }, [
                 _c("i", {
-                  staticClass: "fa fa-phone mr-1",
+                  staticClass: "fa fa-phone mr-1 d-none d-sm-inline",
                   attrs: { "aria-hidden": "true" }
                 }),
                 _vm._v(" Call us at " + _vm._s(_vm.phoneNo))
@@ -978,7 +979,7 @@ var render = function() {
               _vm._v(" "),
               _c("p", { staticClass: "m-1 mr-2" }, [
                 _c("i", {
-                  staticClass: "fa fa-envelope mr-1",
+                  staticClass: "fa fa-envelope mr-1 d-none d-sm-inline",
                   attrs: { "aria-hidden": "true" }
                 }),
                 _vm._v(" " + _vm._s(_vm.userData.email))
@@ -1004,7 +1005,7 @@ var render = function() {
               }
             }),
             _vm._v(" "),
-            _c("h1", { staticClass: "ml-4 institle" }, [
+            _c("h1", { staticClass: "ml-1 ml-sm-4 institle" }, [
               _vm._v(_vm._s(_vm.channelData.title))
             ])
           ])
@@ -1028,11 +1029,6 @@ var render = function() {
                       },
                       [
                         _c("img", {
-                          staticStyle: {
-                            width: "25px",
-                            height: "25px",
-                            "z-index": "1000"
-                          },
                           attrs: { src: "/images/facebook.svg", alt: "fb icon" }
                         })
                       ]
@@ -1054,11 +1050,6 @@ var render = function() {
                       },
                       [
                         _c("img", {
-                          staticStyle: {
-                            width: "25px",
-                            height: "25px",
-                            "z-index": "1000"
-                          },
                           attrs: { src: "/images/linkedin.svg", alt: "li icon" }
                         })
                       ]
@@ -1081,11 +1072,6 @@ var render = function() {
                       },
                       [
                         _c("img", {
-                          staticStyle: {
-                            width: "25px",
-                            height: "25px",
-                            "z-index": "1000"
-                          },
                           attrs: {
                             src: "/images/instagram.svg",
                             alt: "ig icon"
@@ -1110,11 +1096,6 @@ var render = function() {
                       },
                       [
                         _c("img", {
-                          staticStyle: {
-                            width: "25px",
-                            height: "25px",
-                            "z-index": "1000"
-                          },
                           attrs: { src: "/images/youtube.svg", alt: "yt icon" }
                         })
                       ]
@@ -1124,13 +1105,13 @@ var render = function() {
             : _vm._e(),
           _vm._v(" "),
           _vm.socialCount === 1
-            ? _c("div", [
+            ? _c("div", { staticClass: "d-none" }, [
                 _vm._v("\n                    Socials: NA\n                ")
               ])
             : _vm._e()
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "container-fluid inspills" }, [
+        _c("div", { staticClass: "inspills" }, [
           _vm._m(0),
           _vm._v(" "),
           _c("div", { staticClass: "tab-content" }, [
@@ -1395,31 +1376,35 @@ var staticRenderFns = [
           )
         ]),
         _vm._v(" "),
-        _c("div", { staticClass: "container-fluid facultyachieve" }, [
-          _c("h3", { staticClass: "mx-auto" }, [_vm._v("Achievements")]),
-          _vm._v(" "),
-          _c("div", { staticClass: "row mb-5 mt-4" }, [
-            _c(
-              "div",
-              { staticClass: "card shadow mx-auto facultyachievecard" },
-              [
-                _c("img", { attrs: { src: "/images/guest.jpg" } }),
-                _vm._v(" "),
-                _c("div", { staticClass: "card-body mt-n1" }, [
-                  _c("h6", { staticClass: "card-title my-n1" }, [
-                    _vm._v("Name of the individual")
-                  ]),
+        _c(
+          "div",
+          { staticClass: "container-fluid facultyachieve mt-n5 mt-sm-0" },
+          [
+            _c("h3", { staticClass: "mx-auto" }, [_vm._v("Achievements")]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row mb-5 mt-4" }, [
+              _c(
+                "div",
+                { staticClass: "card shadow mx-auto facultyachievecard" },
+                [
+                  _c("img", { attrs: { src: "/images/guest.jpg" } }),
                   _vm._v(" "),
-                  _c("p", { staticClass: "card-text" }, [
-                    _vm._v(
-                      "\n                Type of achievement\n              "
-                    )
+                  _c("div", { staticClass: "card-body mt-n1" }, [
+                    _c("h6", { staticClass: "card-title my-n1" }, [
+                      _vm._v("Name of the individual")
+                    ]),
+                    _vm._v(" "),
+                    _c("p", { staticClass: "card-text" }, [
+                      _vm._v(
+                        "\n                Type of achievement\n              "
+                      )
+                    ])
                   ])
-                ])
-              ]
-            )
-          ])
-        ])
+                ]
+              )
+            ])
+          ]
+        )
       ]
     )
   },
@@ -1427,7 +1412,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "princidiv mb-5 mx-n3" }, [
+    return _c("div", { staticClass: "princidiv mb-5" }, [
       _c("div", { staticClass: "d-flex" }, [
         _c("img", { attrs: { src: "/images/checkmark.svg" } }),
         _vm._v(" "),
@@ -1524,8 +1509,8 @@ var staticRenderFns = [
         _c("br"),
         _vm._v(" "),
         _c("div", { staticClass: "row facilitydiv shadow py-3" }, [
-          _c("div", { staticClass: "col-sm-4" }, [
-            _c("div", { staticClass: "d-flex my-4" }, [
+          _c("div", { staticClass: "col-sm-4 mb-n4" }, [
+            _c("div", { staticClass: "d-flex justify-content-center my-4" }, [
               _c("img", {
                 staticClass: "mr-2",
                 attrs: {
@@ -1537,7 +1522,7 @@ var staticRenderFns = [
               _c("strong", { staticClass: "ml-1" }, [_vm._v("Yes")])
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "d-flex my-4" }, [
+            _c("div", { staticClass: "d-flex justify-content-center my-4" }, [
               _c("img", {
                 staticClass: "mr-2",
                 attrs: { src: "/images/computer.svg", alt: "computer Image" }
@@ -1546,7 +1531,7 @@ var staticRenderFns = [
               _c("strong", { staticClass: "ml-1" }, [_vm._v("Yes")])
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "d-flex my-4" }, [
+            _c("div", { staticClass: "d-flex justify-content-center my-4" }, [
               _c("img", {
                 staticClass: "mr-2",
                 attrs: { src: "/images/fence.svg", alt: "fence Image" }
@@ -1556,8 +1541,8 @@ var staticRenderFns = [
             ])
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "col-sm-4" }, [
-            _c("div", { staticClass: "d-flex my-4" }, [
+          _c("div", { staticClass: "col-sm-4 mb-n4" }, [
+            _c("div", { staticClass: "d-flex justify-content-center my-4" }, [
               _c("img", {
                 staticClass: "mr-2",
                 attrs: {
@@ -1569,7 +1554,7 @@ var staticRenderFns = [
               _c("strong", { staticClass: "ml-1" }, [_vm._v("Yes")])
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "d-flex my-4" }, [
+            _c("div", { staticClass: "d-flex justify-content-center my-4" }, [
               _c("img", {
                 staticClass: "mr-2",
                 attrs: { src: "/images/library.svg", alt: "Library Image" }
@@ -1578,7 +1563,7 @@ var staticRenderFns = [
               _c("strong", { staticClass: "ml-1" }, [_vm._v("Yes")])
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "d-flex my-4" }, [
+            _c("div", { staticClass: "d-flex justify-content-center my-4" }, [
               _c("img", {
                 staticClass: "mr-2",
                 attrs: { src: "/images/book.svg", alt: "Books Image" }
@@ -1589,7 +1574,7 @@ var staticRenderFns = [
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "col-sm-4" }, [
-            _c("div", { staticClass: "d-flex my-4" }, [
+            _c("div", { staticClass: "d-flex justify-content-center my-4" }, [
               _c("img", {
                 staticClass: "mr-2",
                 attrs: { src: "/images/hostel.svg", alt: "Hostel Image" }
@@ -1598,7 +1583,7 @@ var staticRenderFns = [
               _c("strong", { staticClass: "ml-1" }, [_vm._v("Yes")])
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "d-flex my-4" }, [
+            _c("div", { staticClass: "d-flex justify-content-center my-4" }, [
               _c("img", {
                 staticClass: "mr-2",
                 attrs: { src: "/images/bus.svg", alt: "Bus Image" }

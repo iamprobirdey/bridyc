@@ -6,14 +6,14 @@
             <div class="blankdiv">
               <div class="d-flex">
                 <div class="d-flex flex-column">
-                  <p class="m-1">A unit of abc society askjfhjkkhh </p>
+                  <p class="m-1">A unit of abc society askjfhjkkhh bdb fbdfbdfb fdfb dfbfdb cbdfb</p>
                   <a class="m-1 insweb" :target="channelData.website_link === null ? '_self' : '_blank'" :href="channelData.website_link === null ? 'javascript:void(0)' : channelData.website_link">Visit Website <i class="fa fa-external-link-square" aria-hidden="true"></i></a>
                 </div>
 
 
               <div class="ml-auto phemdiv">
-                <p class="m-1 mr-2"><i class="fa fa-phone mr-1" aria-hidden="true"></i> Call us at {{phoneNo}}</p>
-                <p class="m-1 mr-2"><i class="fa fa-envelope mr-1" aria-hidden="true"></i> {{userData.email}}</p>
+                <p class="m-1 mr-2"><i class="fa fa-phone mr-1 d-none d-sm-inline" aria-hidden="true"></i> Call us at {{phoneNo}}</p>
+                <p class="m-1 mr-2"><i class="fa fa-envelope mr-1 d-none d-sm-inline" aria-hidden="true"></i> {{userData.email}}</p>
               </div>
              </div>
             </div>
@@ -22,7 +22,7 @@
           <div class="container">
             <div class="d-flex mt-5 logo-title">
                      <img :src="channelData.icon_avatar != null ? domainUrl+'/media/channel/'+channel.user_id+'/'+channelData.icon_avatar : '/images/college logo.jpg'" alt="Institute logo" class="img-fluid logoinstitute">
-                     <h1 class="ml-4 institle">{{channelData.title}}</h1>
+                     <h1 class="ml-1 ml-sm-4 institle">{{channelData.title}}</h1>
             </div>
           </div>
 
@@ -30,29 +30,29 @@
                 <div class="d-flex" v-if="socialCount === 0">
                     <a class="mr-1" v-if="channelData.extra_attributes.social.facebook != null"
                         :href="channelData.extra_attributes.social.facebook != null ? channelData.extra_attributes.social.facebook : 'javascript:void(0)'">
-                            <img src="/images/facebook.svg" style="width:25px;height:25px;z-index:1000" alt="fb icon">
+                            <img src="/images/facebook.svg" alt="fb icon">
                     </a>
                     <a class="mr-1" v-if="channelData.extra_attributes.social.linkedin != null"
                         :href="channelData.extra_attributes.social.linkedin != null ? channelData.extra_attributes.social.linkedin : 'javascript:void(0)'">
-                         <img src="/images/linkedin.svg" style="width:25px;height:25px;z-index:1000" alt="li icon">
+                         <img src="/images/linkedin.svg"  alt="li icon">
                     </a>
                     <a class="mr-1" v-if="channelData.extra_attributes.social.instagram != null"
                         :href="channelData.extra_attributes.social.instagram != null ? channelData.extra_attributes.social.instagram : 'javascript:void(0)'">
-                         <img src="/images/instagram.svg" style="width:25px;height:25px;z-index:1000" alt="ig icon">
+                         <img src="/images/instagram.svg"  alt="ig icon">
                     </a>
                     <a class="mr-1" v-if="channelData.extra_attributes.social.youtube != null"
                         :href="channelData.extra_attributes.social.youtube != null ? channelData.extra_attributes.social.youtube : 'javascript:void(0)'">
-                         <img src="/images/youtube.svg" style="width:25px;height:25px;z-index:1000" alt="yt icon">
+                         <img src="/images/youtube.svg"  alt="yt icon">
                     </a>
-                </div> 
-                <div v-if="socialCount === 1">
-                    Socials: NA
                 </div>   
+                <div v-if="socialCount === 1" class="d-none">
+                    Socials: NA
+                </div>
               </div>
 
 
 <!-- new addition for nav starts-->
-<div class="container-fluid inspills">
+<div class="inspills">
   <!-- Nav pills -->
   <ul class="nav nav-pills" role="tablist">
     <li class="nav-item">
@@ -129,7 +129,7 @@
       </div>
 
 
-      <div class="container-fluid facultyachieve">
+      <div class="container-fluid facultyachieve mt-n5 mt-sm-0">
          <h3 class="mx-auto">Achievements</h3>
         <div class="row mb-5 mt-4">
           <div class="card shadow mx-auto facultyachievecard">
@@ -157,7 +157,7 @@
                 </p>
             </div>
 
-           <div class="princidiv mb-5 mx-n3">
+           <div class="princidiv mb-5">
                             <div class="d-flex">
                             <img src="/images/checkmark.svg">
                             <h3 class="mt-2">Message From The Principal</h3>
@@ -277,20 +277,19 @@
           <hr>
           <br>
            <div class="row facilitydiv shadow py-3">
-             <div class="col-sm-4">
-                  <div class="d-flex my-4"><img class="mr-2" src="/images/electricity.svg" alt="Electricity Image"> Electricity:<strong class="ml-1">Yes</strong></div>
-                  <div class="d-flex my-4"><img class="mr-2" src="/images/computer.svg" alt="computer Image"> Computer:<strong class="ml-1">Yes</strong></div>
-                  <div class="d-flex my-4"><img class="mr-2" src="/images/fence.svg" alt="fence Image"> Boundary:<strong class="ml-1">Yes</strong></div>
-                  
+             <div class="col-sm-4 mb-n4">
+                  <div class="d-flex justify-content-center my-4"><img class="mr-2" src="/images/electricity.svg" alt="Electricity Image"> Electricity:<strong class="ml-1">Yes</strong></div>
+                  <div class="d-flex justify-content-center my-4"><img class="mr-2" src="/images/computer.svg" alt="computer Image"> Computer:<strong class="ml-1">Yes</strong></div>
+                  <div class="d-flex justify-content-center my-4"><img class="mr-2" src="/images/fence.svg" alt="fence Image"> Boundary:<strong class="ml-1">Yes</strong></div>
+             </div>
+             <div class="col-sm-4 mb-n4">
+                  <div class="d-flex justify-content-center my-4"><img class="mr-2" src="/images/playground.svg" alt="playground Image"> Playground:<strong class="ml-1">Yes</strong></div>
+                  <div class="d-flex justify-content-center my-4"><img class="mr-2" src="/images/library.svg" alt="Library Image"> Library:<strong class="ml-1">Yes</strong></div>
+                  <div class="d-flex justify-content-center my-4"><img class="mr-2" src="/images/book.svg" alt="Books Image"> No of Books:<strong class="ml-1">300</strong></div>
              </div>
              <div class="col-sm-4">
-                  <div class="d-flex my-4"><img class="mr-2" src="/images/playground.svg" alt="playground Image"> Playground:<strong class="ml-1">Yes</strong></div>
-                  <div class="d-flex my-4"><img class="mr-2" src="/images/library.svg" alt="Library Image"> Library:<strong class="ml-1">Yes</strong></div>
-                  <div class="d-flex my-4"><img class="mr-2" src="/images/book.svg" alt="Books Image"> No of Books:<strong class="ml-1">300</strong></div>
-             </div>
-             <div class="col-sm-4">
-                  <div class="d-flex my-4"><img class="mr-2" src="/images/hostel.svg" alt="Hostel Image"> Hostel:<strong class="ml-1">Yes</strong></div>
-                  <div class="d-flex my-4"><img class="mr-2" src="/images/bus.svg" alt="Bus Image"> Bus Services:<strong class="ml-1">Yes</strong></div>
+                  <div class="d-flex justify-content-center my-4"><img class="mr-2" src="/images/hostel.svg" alt="Hostel Image"> Hostel:<strong class="ml-1">Yes</strong></div>
+                  <div class="d-flex justify-content-center my-4"><img class="mr-2" src="/images/bus.svg" alt="Bus Image"> Bus Services:<strong class="ml-1">Yes</strong></div>
              </div>
            </div>
     </div>

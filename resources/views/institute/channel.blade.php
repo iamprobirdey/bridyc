@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-    <div class="container-fluid">
+    <div>
         
             @include('layouts.sidebar')
             <br>

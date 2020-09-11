@@ -126,78 +126,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -270,18 +198,18 @@ var render = function() {
                 _vm._v(" "),
                 _c("p", { staticClass: "card-text" }, [
                   _vm._v(
-                    "\n                    " +
+                    "\n                 " +
                       _vm._s(channel.district.name) +
-                      "\n              "
+                      "\n           "
                   )
                 ]),
                 _vm._v(" "),
                 channel.description != null
                   ? _c("p", { staticClass: "card-text destext" }, [
                       _vm._v(
-                        "\n                  " +
+                        "\n               " +
                           _vm._s(channel.description) +
-                          "\n              "
+                          "\n           "
                       )
                     ])
                   : _vm._e()
