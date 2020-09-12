@@ -386,12 +386,6 @@ main .inspills .inscarou li {
   background-color: black;
 }
 
-@media only screen and (min-width: 765px) {
-  main .inspills .inscarou li {
-    top: 250px;
-  }
-}
-
 main .inspills .inscarou img {
   width: 100%;
   height: 100%;
@@ -416,12 +410,6 @@ main .inspills .notice h5 {
 @media only screen and (min-width: 481px) {
   main .inspills .notice {
     font-size: x-large;
-  }
-}
-
-@media only screen and (min-width: 765px) {
-  main .inspills .notice {
-    font-size: small;
   }
 }
 
@@ -470,14 +458,6 @@ main .inspills .description p {
 @media only screen and (min-width: 481px) {
   main .inspills .description {
     font-size: x-large;
-  }
-}
-
-@media only screen and (min-width: 765px) {
-  main .inspills .description {
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
   }
 }
 
@@ -591,12 +571,6 @@ main .insaddress .addbody ul {
     margin-left: auto;
     margin-right: auto;
     margin-top: 350px;
-  }
-}
-
-@media only screen and (min-width: 765px) {
-  main .insaddress {
-    margin-top: 590px;
   }
 }
 

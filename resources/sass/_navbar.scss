@@ -3,33 +3,34 @@ nav{
     margin-right: auto;
 
     #collapsibleNavbar {
+
       @include screensize(formobilemenu){
         position: fixed;
         top: 0;
         right: 0;
-        padding-top: 10px;
+        padding-top: 60px;
         z-index: 99;
-        width: 230px;
+        width: 80%;
         height: 100%;
-        background-color: #2e2e2e;
+        background-color:rgba(1, 22, 54, 0.9);
         overflow: auto;
-
       }
-
       .closemenu{
         color: white;
         position: relative;
+        top:-50px;
         right: 15px;
-        font-size: 30px;
-        @include screensize(prelaptop){
-            display: none;
-        }
+        font-size: 40px; 
+        font-weight: 100;
+        text-shadow:white;
+        
        }
+      
+    }
 
-      }
-    //new addition above
+
+ 
     a{
-
     .imglogo{
         width:68px;
         height: auto;
@@ -38,29 +39,12 @@ nav{
         margin-left: -5px;
         transition: all ease .5s;
         @include screensize(tablet){
-            width: 70px;
+            width: 80px;
             height: auto;
             margin-top: -10px;
             margin-bottom:-10px;
-            }
-        @include screensize(laptop){
-        width: 80px;
-        height: auto;
-        margin-top: -5px;
-        margin-bottom: -5px;
         }
-        @include screensize(foripadpro){
-            width: 80px;
-            height: auto;
-            margin-top: -5px;
-            margin-bottom: -5px;
-            }
-        @include screensize(desktop){
-            width: 90px;
-            height: auto;
-            margin-top: -5px;
-            margin-bottom: -5px;
-            }
+        
     }
   }
 
@@ -71,6 +55,16 @@ nav{
         }
   }
 
+  .btndashboard{
+    border-radius: 0;
+    background-color: #990066;
+    color: white;
+    &:hover{
+        color: white; 
+        background-color: #7e0255;
+    }
+}
+
     ul{
           a{
               font-size: large;
@@ -78,17 +72,9 @@ nav{
               margin-left: 20px;
               margin-right:20px;
               font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-
-             &:hover{
-                 color: black;
-             }
-             @include screensize(prelaptop){
+              &:hover{
                  color: white;
-                 &:hover{
-                     color: white;
-                 }
              }
-
            }
     }
 
@@ -108,44 +94,29 @@ nav{
 
 }
 
+//scss for when navbar shrinks on scroll starts here 
 .shrink{
     background-color: white;
     transition: all ease-in .5s;
-    a{
+        a{
         color: black;
-
         &:hover{
             color: black;
         }
-        .imglogo{
+        @include screensize(formobilemenu){
+            color:white;
+        }
 
+        .imglogo{
             @include screensize(tablet){
-                width: 60px !important;
-                margin-top: -16px !important;
-                padding-bottom: -13px !important;
-                padding-top: 5px !important;
+                width: 60px;
                 }
             @include screensize(laptop){
-                width: 65px !important;
-                margin-top: -12px !important;
-                padding-bottom: -16px !important;
-                padding-top: 5px !important;
+                width: 70px;
                 }
-                @include screensize(foripadpro){
-                    width: 70px !important;
-                    margin-top: -12px !important;
-                    padding-bottom: -16px !important;
-                    padding-top: 5px !important;
-                    }
-                @include screensize(desktop){
-                    width: 70px !important;
-                    margin-top: -10px !important;
-                    padding-bottom: -13px !important;
-                    padding-top: 5px !important;
-                    }
-
         }
     }
+
     .navbtn{
         margin-top: 20px;
         background-color: #011737;
@@ -161,16 +132,30 @@ nav{
     .colbtn{
         color: #011737;
     }
-    #collapsibleNavbar{
-        @include screensize(formobilemenu){
-        background-color:white;
-        }
-        .closemenu{
-            color: #011737;
+    .btndashboard{
+        color: white;
+        &:hover{
+            color: white;
         }
     }
-}
+    .btn-danger{
+      color: white;
+      &:hover{
+          color:white;
+      }
+    }
 
+    #collapsibleNavbar{
+        @include screensize(formobilemenu){
+        background-color:rgba(1, 29, 71, 0.9);
+        color:white;
+        }
+        
+    }
+}
+//scss for when navbar shrinks on scroll ends here 
+
+//registration and login scss starts here
 .regBen{
     background-image: linear-gradient(to top, #011737, #00385e, #005d84, #0084a8, #02aec8);
     text-align: center;
@@ -290,6 +275,6 @@ nav{
         text-decoration: none;
     }
 }
-
+//scss for login and registration ends here
 
 

@@ -8,9 +8,7 @@
             )
         <li class="nav-item active">
           <a class="nav-link " href="{{url('/user/dashboard/verification')}}">
-              <span class="material-icons sidebaricons">
-                dashboard
-                </span>
+          <i class="fa fa-check-square sidebaricons" aria-hidden="true"></i>
                 Verification
             </a>
           </li>

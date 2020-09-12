@@ -34,21 +34,9 @@
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-@media only screen and (min-width: 765px) {
-  .imgban .txtbanner h1 {
-    font-size: 34px;
-  }
-}
-
 .imgban .txtbanner p {
   font-size: 20px;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-}
-
-@media only screen and (min-width: 765px) {
-  .imgban .txtbanner p {
-    font-size: 30px;
-  }
 }
 
 .imgban .txtbanner .sitevalue {
@@ -72,14 +60,6 @@
   background-color: #001f4d;
 }
 
-@media only screen and (min-width: 765px) {
-  .imgban .txtbanner {
-    text-align: left;
-    width: 50%;
-    left: 30%;
-  }
-}
-
 .focusplace {
   text-align: center;
   color: black;
@@ -87,12 +67,6 @@
   margin-bottom: 50px;
   width: 100%;
   height: auto;
-}
-
-@media only screen and (min-width: 765px) {
-  .focusplace {
-    margin-top: 120px;
-  }
 }
 
 .focusplace p {
@@ -105,15 +79,6 @@
   width: 100%;
   height: auto;
   margin: 0;
-}
-
-@media only screen and (min-width: 765px) {
-  .focusplace .imgguest {
-    height: 400px;
-  }
-  .focusplace .imgguest:hover {
-    left: 20px;
-  }
 }
 
 .focusplace .videosection {
@@ -433,13 +398,6 @@
 @media only screen and (min-width: 375px) {
   .aboutdiv {
     width: 98%;
-  }
-}
-
-@media only screen and (min-width: 765px) {
-  .aboutdiv {
-    width: 100%;
-    padding-left: 82px;
   }
 }
 
