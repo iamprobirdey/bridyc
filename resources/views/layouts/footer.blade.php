@@ -12,7 +12,12 @@
          'width': 'toggle'
          }, 230);
    });
-     
+</script>
+<script>
+      $(".left-sidebar .nav li").on("click", function() {
+    $("left-sidebar .nav li").removeClass("active");
+    $(this).addClass("active");
+  }); 
 </script>
 </body>
 </html>
