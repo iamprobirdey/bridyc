@@ -419,9 +419,9 @@ main {
             position: relative;
             top: 5px;
             left: 0;
-            border-radius: 15px;
-            padding-left: 10px;
-            padding-right:10px;
+            border-radius: 20px;
+            padding-left: 15px;
+            padding-right:15px;
             
             &:hover{
               background-color: #003585;
@@ -429,6 +429,7 @@ main {
             }
           }
           //css for board and standard and social ends here
+          
           //css for website and description starts here
           .btnwebdes{
             color: white;
@@ -445,6 +446,9 @@ main {
             color: white;
             &:hover{
               color: white;
+            }
+            &:focus{
+              box-shadow: none;;
             }
           }
 
@@ -479,6 +483,32 @@ main {
             }
           }
           //css for profile ends here
+          
+          //css for achievement and teacher in sidebar starts here
+          .sidebar-facard{
+            width: 200px;
+            height: 250px;
+            .card-text{
+              margin-top: 5px;
+              line-height: .9rem;
+            }
+         img{
+            width: 100%;
+            height: 170px;
+          }
+       }
+
+       .editachieve{
+         position:relative;
+         top:-80px;
+         left: 80px;
+         color:rgb(111, 182, 4);
+         &:focus{
+          box-shadow: none;
+         }
+        
+       }
+          //css for achievement and teacher ends here  
            
   }
 

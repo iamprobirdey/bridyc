@@ -526,9 +526,9 @@ main .btnsubmit {
   position: relative;
   top: 5px;
   left: 0;
-  border-radius: 15px;
-  padding-left: 10px;
-  padding-right: 10px;
+  border-radius: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 main .btnsubmit:hover {
@@ -552,6 +552,11 @@ main .btnadd {
 
 main .btnadd:hover {
   color: white;
+}
+
+main .btnadd:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 main .gendercard {
@@ -589,6 +594,33 @@ main .profiledetails .card-body {
   main .profiledetails {
     height: 50px;
   }
+}
+
+main .sidebar-facard {
+  width: 200px;
+  height: 250px;
+}
+
+main .sidebar-facard .card-text {
+  margin-top: 5px;
+  line-height: .9rem;
+}
+
+main .sidebar-facard img {
+  width: 100%;
+  height: 170px;
+}
+
+main .editachieve {
+  position: relative;
+  top: -80px;
+  left: 80px;
+  color: #6fb604;
+}
+
+main .editachieve:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 
 main .insusercover {

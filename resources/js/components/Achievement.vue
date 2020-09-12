@@ -1,17 +1,26 @@
 <template>
   <div>
-      Your achievement
+      <h4 class="text-center">INSTITUTE'S ACHIEVEMENTS</h4>
+      <br>
+      <h6 class="d-inline">Add your institute's achievements here</h6>
+      <button class="btn btnadd p-1 ml-1 rounded-0" @click="addAchievement()"><i class="fa fa-plus" aria-hidden="true"></i></button>
       <div v-for="(achievement,index) in achievementData" :key="index">
-          <img :src="baseUrl+ achievement.user_id +'/achievement/'+achievement.image_path" class="rounded-circle" alt="" height="50" width="50">
-          <h3>{{achievement.title}}</h3>
-          <p>{{achievement.description}}</p>
-
-          <button class="btn btn-success"  @click="editTheForm(achievement,index)">Edit</button>
-
+          
+          <div class="card shadow mx-auto sidebar-facard">
+            <img :src="baseUrl+ achievement.user_id +'/achievement/'+achievement.image_path">
+            <div class="card-body mt-n1">
+              <h6 class="card-title my-n1">{{achievement.title}}</h6>
+              <p class="card-text">
+                {{achievement.description}}
+              </p>
+            </div>
+          </div>
+          <div class="text-center">
+          <button class="btn mb-5 editachieve" data-toggle="tooltip" data-placement="right" title="Edit" @click="editTheForm(achievement,index)"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+          </div>
       </div>
-
-      <button class="btn btn-primary" @click="addAchievement()">Add</button>
-            <div v-if="openAchievementForm">
+            <br>
+            <div class="mt-5" v-if="openAchievementForm">
                 <form @submit.prevent="achievementSubmit()">
                         <picture-input
                             ref="pictureInput"
@@ -28,43 +37,49 @@
                             @change="onChange"
                     ></picture-input>
                         <span v-show="serverErrors.image_path != ''" class="text-danger">{{serverErrors.image_path}}</span>
+                    
+                    <br>
                     <div
-                        class="form-group"
+                        class="form-group row mx-lg-5"
                         :class="{'has-error':errors.has('serverErrors.title') || serverErrors.title != ''}"
                     >
-                        <label>Achievement Title</label>
+                        <label class="col-sm-3 col-form-label text-right">Achievement Title :</label>
                             <input
+                            class="col-sm-9"
                             v-model="formData.title"
                             v-validate="'required'"
                             data-vv-delay="20"
                             name="title"
                             type="text"
                             :class="{'form-control': true,'is-invalid': errors.has('title')}"
-                            placeholder="title like: Student name, Institute Great achievement"
+                            placeholder="Example: Student name, Institute's team achievement"
                             />
-                        <span v-show="errors.has('title')" class="text-danger">{{errors.first("title")}}</span>
-                        <span v-show="serverErrors.title != ''" class="help is-danger">{{serverErrors.title}}</span>
+                        <span v-show="errors.has('title')" class="text-danger mx-auto">{{errors.first("title")}}</span>
+                        <span v-show="serverErrors.title != ''" class="help is-danger mx-auto">{{serverErrors.title}}</span>
                     </div>
 
                      <div
-                        class="form-group"
+                        class="form-group row mx-lg-5"
                         :class="{'has-error':errors.has('serverErrors.descriptions') || serverErrors.descriptions != ''}"
                     >
-                        <label> Achievement Description</label>
+                        <label class="col-sm-3 col-form-label text-right"> Achievement Description :</label>
                             <input
+                            class="col-sm-9"
                             v-model="formData.description"
                             v-validate="'required'"
                             data-vv-delay="20"
                             name="descriptions"
                             type="text"
                             :class="{'form-control': true,'is-invalid': errors.has('descriptions')}"
-                            placeholder="Write your short Description"
+                            placeholder="Describe achievement in seven words"
                             />
-                        <span v-show="errors.has('descriptions')" class="text-danger">{{errors.first("descriptions")}}</span>
-                        <span v-show="serverErrors.descriptions != ''" class="help is-danger">{{serverErrors.descriptions}}</span>
+                        <span v-show="errors.has('descriptions')" class="text-danger mx-auto">{{errors.first("descriptions")}}</span>
+                        <span v-show="serverErrors.descriptions != ''" class="help is-danger mx-auto">{{serverErrors.descriptions}}</span>
                     </div>
-                        <button type="btn" class="btn btn-secondary" @click="canCleSubmittion()">Cancel</button>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                    <div class="text-center">
+                        <button type="btn" class="btn btn-success rounded-0" @click="canCleSubmittion()">Cancel</button>
+                        <button type="submit" class="btn btnsubmit mt-n2">Submit</button>
+                    </div>
                     </form>
                 </div>
 
@@ -178,6 +193,10 @@ export default {
     PictureInput
   }
 };
+
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();
+});
 </script>
 
 <style scoped></style>

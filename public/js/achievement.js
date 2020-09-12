@@ -169,6 +169,21 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -274,6 +289,9 @@ __webpack_require__.r(__webpack_exports__);
   components: {
     PictureInput: vue_picture_input__WEBPACK_IMPORTED_MODULE_0__["default"]
   }
+});
+$(document).ready(function () {
+  $('[data-toggle="tooltip"]').tooltip();
 });
 
 /***/ }),
@@ -1754,57 +1772,93 @@ var render = function() {
   return _c(
     "div",
     [
-      _vm._v("\n    Your achievement\n    "),
-      _vm._l(_vm.achievementData, function(achievement, index) {
-        return _c("div", { key: index }, [
-          _c("img", {
-            staticClass: "rounded-circle",
-            attrs: {
-              src:
-                _vm.baseUrl +
-                achievement.user_id +
-                "/achievement/" +
-                achievement.image_path,
-              alt: "",
-              height: "50",
-              width: "50"
-            }
-          }),
-          _vm._v(" "),
-          _c("h3", [_vm._v(_vm._s(achievement.title))]),
-          _vm._v(" "),
-          _c("p", [_vm._v(_vm._s(achievement.description))]),
-          _vm._v(" "),
-          _c(
-            "button",
-            {
-              staticClass: "btn btn-success",
-              on: {
-                click: function($event) {
-                  return _vm.editTheForm(achievement, index)
-                }
-              }
-            },
-            [_vm._v("Edit")]
-          )
-        ])
-      }),
+      _c("h4", { staticClass: "text-center" }, [
+        _vm._v("INSTITUTE'S ACHIEVEMENTS")
+      ]),
+      _vm._v(" "),
+      _c("br"),
+      _vm._v(" "),
+      _c("h6", { staticClass: "d-inline" }, [
+        _vm._v("Add your institute's achievements here")
+      ]),
       _vm._v(" "),
       _c(
         "button",
         {
-          staticClass: "btn btn-primary",
+          staticClass: "btn btnadd p-1 ml-1 rounded-0",
           on: {
             click: function($event) {
               return _vm.addAchievement()
             }
           }
         },
-        [_vm._v("Add")]
+        [
+          _c("i", {
+            staticClass: "fa fa-plus",
+            attrs: { "aria-hidden": "true" }
+          })
+        ]
       ),
       _vm._v(" "),
+      _vm._l(_vm.achievementData, function(achievement, index) {
+        return _c("div", { key: index }, [
+          _c("div", { staticClass: "card shadow mx-auto sidebar-facard" }, [
+            _c("img", {
+              attrs: {
+                src:
+                  _vm.baseUrl +
+                  achievement.user_id +
+                  "/achievement/" +
+                  achievement.image_path
+              }
+            }),
+            _vm._v(" "),
+            _c("div", { staticClass: "card-body mt-n1" }, [
+              _c("h6", { staticClass: "card-title my-n1" }, [
+                _vm._v(_vm._s(achievement.title))
+              ]),
+              _vm._v(" "),
+              _c("p", { staticClass: "card-text" }, [
+                _vm._v(
+                  "\n              " +
+                    _vm._s(achievement.description) +
+                    "\n            "
+                )
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "text-center" }, [
+            _c(
+              "button",
+              {
+                staticClass: "btn mb-5 editachieve",
+                attrs: {
+                  "data-toggle": "tooltip",
+                  "data-placement": "right",
+                  title: "Edit"
+                },
+                on: {
+                  click: function($event) {
+                    return _vm.editTheForm(achievement, index)
+                  }
+                }
+              },
+              [
+                _c("i", {
+                  staticClass: "fa fa-pencil",
+                  attrs: { "aria-hidden": "true" }
+                })
+              ]
+            )
+          ])
+        ])
+      }),
+      _vm._v(" "),
+      _c("br"),
+      _vm._v(" "),
       _vm.openAchievementForm
-        ? _c("div", [
+        ? _c("div", { staticClass: "mt-5" }, [
             _c(
               "form",
               {
@@ -1849,10 +1903,12 @@ var render = function() {
                   [_vm._v(_vm._s(_vm.serverErrors.image_path))]
                 ),
                 _vm._v(" "),
+                _c("br"),
+                _vm._v(" "),
                 _c(
                   "div",
                   {
-                    staticClass: "form-group",
+                    staticClass: "form-group row mx-lg-5",
                     class: {
                       "has-error":
                         _vm.errors.has("serverErrors.title") ||
@@ -1860,7 +1916,11 @@ var render = function() {
                     }
                   },
                   [
-                    _c("label", [_vm._v("Achievement Title")]),
+                    _c(
+                      "label",
+                      { staticClass: "col-sm-3 col-form-label text-right" },
+                      [_vm._v("Achievement Title :")]
+                    ),
                     _vm._v(" "),
                     _c("input", {
                       directives: [
@@ -1877,6 +1937,7 @@ var render = function() {
                           expression: "'required'"
                         }
                       ],
+                      staticClass: "col-sm-9",
                       class: {
                         "form-control": true,
                         "is-invalid": _vm.errors.has("title")
@@ -1886,7 +1947,7 @@ var render = function() {
                         name: "title",
                         type: "text",
                         placeholder:
-                          "title like: Student name, Institute Great achievement"
+                          "Example: Student name, Institute's team achievement"
                       },
                       domProps: { value: _vm.formData.title },
                       on: {
@@ -1910,7 +1971,7 @@ var render = function() {
                             expression: "errors.has('title')"
                           }
                         ],
-                        staticClass: "text-danger"
+                        staticClass: "text-danger mx-auto"
                       },
                       [_vm._v(_vm._s(_vm.errors.first("title")))]
                     ),
@@ -1926,7 +1987,7 @@ var render = function() {
                             expression: "serverErrors.title != ''"
                           }
                         ],
-                        staticClass: "help is-danger"
+                        staticClass: "help is-danger mx-auto"
                       },
                       [_vm._v(_vm._s(_vm.serverErrors.title))]
                     )
@@ -1936,7 +1997,7 @@ var render = function() {
                 _c(
                   "div",
                   {
-                    staticClass: "form-group",
+                    staticClass: "form-group row mx-lg-5",
                     class: {
                       "has-error":
                         _vm.errors.has("serverErrors.descriptions") ||
@@ -1944,7 +2005,11 @@ var render = function() {
                     }
                   },
                   [
-                    _c("label", [_vm._v(" Achievement Description")]),
+                    _c(
+                      "label",
+                      { staticClass: "col-sm-3 col-form-label text-right" },
+                      [_vm._v(" Achievement Description :")]
+                    ),
                     _vm._v(" "),
                     _c("input", {
                       directives: [
@@ -1961,6 +2026,7 @@ var render = function() {
                           expression: "'required'"
                         }
                       ],
+                      staticClass: "col-sm-9",
                       class: {
                         "form-control": true,
                         "is-invalid": _vm.errors.has("descriptions")
@@ -1969,7 +2035,7 @@ var render = function() {
                         "data-vv-delay": "20",
                         name: "descriptions",
                         type: "text",
-                        placeholder: "Write your short Description"
+                        placeholder: "Describe achievement in seven words"
                       },
                       domProps: { value: _vm.formData.description },
                       on: {
@@ -1997,7 +2063,7 @@ var render = function() {
                             expression: "errors.has('descriptions')"
                           }
                         ],
-                        staticClass: "text-danger"
+                        staticClass: "text-danger mx-auto"
                       },
                       [_vm._v(_vm._s(_vm.errors.first("descriptions")))]
                     ),
@@ -2013,32 +2079,37 @@ var render = function() {
                             expression: "serverErrors.descriptions != ''"
                           }
                         ],
-                        staticClass: "help is-danger"
+                        staticClass: "help is-danger mx-auto"
                       },
                       [_vm._v(_vm._s(_vm.serverErrors.descriptions))]
                     )
                   ]
                 ),
                 _vm._v(" "),
-                _c(
-                  "button",
-                  {
-                    staticClass: "btn btn-secondary",
-                    attrs: { type: "btn" },
-                    on: {
-                      click: function($event) {
-                        return _vm.canCleSubmittion()
+                _c("div", { staticClass: "text-center" }, [
+                  _c(
+                    "button",
+                    {
+                      staticClass: "btn btn-success rounded-0",
+                      attrs: { type: "btn" },
+                      on: {
+                        click: function($event) {
+                          return _vm.canCleSubmittion()
+                        }
                       }
-                    }
-                  },
-                  [_vm._v("Cancel")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "button",
-                  { staticClass: "btn btn-primary", attrs: { type: "submit" } },
-                  [_vm._v("Submit")]
-                )
+                    },
+                    [_vm._v("Cancel")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "button",
+                    {
+                      staticClass: "btn btnsubmit mt-n2",
+                      attrs: { type: "submit" }
+                    },
+                    [_vm._v("Submit")]
+                  )
+                ])
               ],
               1
             )
