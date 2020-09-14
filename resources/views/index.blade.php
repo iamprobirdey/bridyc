@@ -9,7 +9,7 @@
 <banner>
 
     <div class="img-fluid imgban">
-        <div class="txtbanner">
+        <div class="txtbanner"> 
           <h1>Exposure to the realities of the world is very important</h1>
           <p class="sitevalue">Learn | Share | Engage | Find Institute</p>
           <p>And we charge you <strong>Nothing</strong></p>

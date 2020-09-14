@@ -17,14 +17,14 @@
         h1{
             font-size: 20px;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            @include screensize(prelaptop){
+            @include screensize(laptop){
                 font-size: 34px;
             }
         }
         p{
             font-size: 20px;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            @include screensize(prelaptop){
+            @include screensize(laptop){
                 font-size: 30px;
             }
         }
@@ -52,7 +52,7 @@
         left: 49%;
         transform: translate(-50%, -50%);
         color: white;
-        @include screensize(prelaptop){
+        @include screensize(laptop){
             text-align: left;
             width: 50%;
             left: 30%;
