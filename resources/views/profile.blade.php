@@ -2,8 +2,12 @@
 
 @section('css_code')
     <link rel="stylesheet" type="text/css" href="{{url('css/app.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url('css/profile.css')}}">
 @endsection
 @section('content')
+
+<h2 class="profileheader container-fluid">Your Profile</h2>
+
 @php
     //dd($userInformation)
 @endphp
