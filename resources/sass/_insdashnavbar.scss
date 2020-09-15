@@ -2,8 +2,11 @@
 nav{
     max-width: 100%;
     background-color: white;
-    border-bottom: 7px solid #011737;
-    
+    .navbar-toggler{
+        &:focus{
+            outline: 0;
+        }
+    }
     .imglogodash{
         width:60px; 
         height: auto;
@@ -33,6 +36,13 @@ nav{
 
     }
 }
+.border-gradient {
+    border-bottom: 4px solid; 
+    border-image-slice: 1;
+  }
+  .border-gradient-color {
+    border-image-source: linear-gradient(to right, #990066,  #f1aa00);
+  }
 
 .popnav{
     padding-left: 1em;

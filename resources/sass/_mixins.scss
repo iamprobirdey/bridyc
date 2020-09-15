@@ -5,11 +5,6 @@
             @content;
         }
     }
-    @else if $device==prelaptop {
-        @media only screen and (min-width:765px) {
-            @content;
-        }
-    }
 
     @else if $device==laptop {
         @media only screen and (min-width:768px) {
@@ -48,7 +43,7 @@
         }
     }
     @else if $device==formobilemenu {
-        @media only screen and (max-width: 750px) {
+        @media only screen and (max-width: 992px) {
             @content;
         }
     }

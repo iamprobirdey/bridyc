@@ -3,16 +3,16 @@ nav {
   margin-right: auto;
 }
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 992px) {
   nav #collapsibleNavbar {
     position: fixed;
     top: 0;
     right: 0;
-    padding-top: 10px;
+    padding-top: 60px;
     z-index: 99;
-    width: 230px;
+    width: 80%;
     height: 100%;
-    background-color: #2e2e2e;
+    background-color: rgba(1, 22, 54, 0.9);
     overflow: auto;
   }
 }
@@ -20,14 +20,11 @@ nav {
 nav #collapsibleNavbar .closemenu {
   color: white;
   position: relative;
+  top: -50px;
   right: 15px;
-  font-size: 30px;
-}
-
-@media only screen and (min-width: 765px) {
-  nav #collapsibleNavbar .closemenu {
-    display: none;
-  }
+  font-size: 40px;
+  font-weight: 100;
+  text-shadow: white;
 }
 
 nav a .imglogo {
@@ -41,28 +38,10 @@ nav a .imglogo {
 
 @media only screen and (min-width: 481px) {
   nav a .imglogo {
-    width: 70px;
+    width: 80px;
     height: auto;
     margin-top: -10px;
     margin-bottom: -10px;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  nav a .imglogo {
-    width: 80px;
-    height: auto;
-    margin-top: -5px;
-    margin-bottom: -5px;
-  }
-}
-
-@media only screen and (min-width: 1280px) {
-  nav a .imglogo {
-    width: 90px;
-    height: auto;
-    margin-top: -5px;
-    margin-bottom: -5px;
   }
 }
 
@@ -76,6 +55,17 @@ nav .colbtn {
   }
 }
 
+nav .btndashboard {
+  border-radius: 0;
+  background-color: #990066;
+  color: white;
+}
+
+nav .btndashboard:hover {
+  color: white;
+  background-color: #7e0255;
+}
+
 nav ul a {
   font-size: large;
   color: white;
@@ -85,17 +75,7 @@ nav ul a {
 }
 
 nav ul a:hover {
-  color: black;
-}
-
-@media only screen and (min-width: 765px) {
-  nav ul a {
-    color: white;
-  }
-
-  nav ul a:hover {
-    color: white;
-  }
+  color: white;
 }
 
 nav .navbtn {
@@ -129,30 +109,21 @@ nav .navbtn:hover {
   color: black;
 }
 
+@media only screen and (max-width: 992px) {
+  .shrink a {
+    color: white;
+  }
+}
+
 @media only screen and (min-width: 481px) {
   .shrink a .imglogo {
-    width: 60px !important;
-    margin-top: -16px !important;
-    padding-bottom: -13px !important;
-    padding-top: 5px !important;
+    width: 60px;
   }
 }
 
 @media only screen and (min-width: 768px) {
   .shrink a .imglogo {
-    width: 65px !important;
-    margin-top: -12px !important;
-    padding-bottom: -16px !important;
-    padding-top: 5px !important;
-  }
-}
-
-@media only screen and (min-width: 1280px) {
-  .shrink a .imglogo {
-    width: 70px !important;
-    margin-top: -10px !important;
-    padding-bottom: -13px !important;
-    padding-top: 5px !important;
+    width: 70px;
   }
 }
 
@@ -177,14 +148,27 @@ nav .navbtn:hover {
   color: #011737;
 }
 
-@media only screen and (max-width: 750px) {
-  .shrink #collapsibleNavbar {
-    background-color: white;
-  }
+.shrink .btndashboard {
+  color: white;
 }
 
-.shrink #collapsibleNavbar .closemenu {
-  color: #011737;
+.shrink .btndashboard:hover {
+  color: white;
+}
+
+.shrink .btn-danger {
+  color: white;
+}
+
+.shrink .btn-danger:hover {
+  color: white;
+}
+
+@media only screen and (max-width: 992px) {
+  .shrink #collapsibleNavbar {
+    background-color: rgba(1, 29, 71, 0.9);
+    color: white;
+  }
 }
 
 .regBen {

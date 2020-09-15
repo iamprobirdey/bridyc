@@ -5,8 +5,8 @@
 @endsection
 
 @section('content')
-    <div class="container-fluid">
-        <div class="row">
+    <div>
+        
             @include('layouts.sidebar')
             <br>
             <br>
@@ -20,7 +20,7 @@
             @section('model')
             @include('layouts.model_view')
             @endsection
-        </div>
+        
     </div>
 @endsection
 @section('model')

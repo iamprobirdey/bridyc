@@ -3,7 +3,7 @@
 main {
     padding-top: 70px;
     margin-bottom: 40px;
-    
+   
     .inscover{
          width: 100%;
          height: 230px;
@@ -15,38 +15,42 @@ main {
           }
     }
     .blankdiv{
-        height: 130px;
+        height: auto;
         width: 100%;
         position: relative;
         top: -70px;
         background-color: white;
         padding-top: 55px;
-        padding-left: 20px;
+        padding-left: 10px;
+        p{
+          font-size: 12px;
+          @include screensize(tablet){
+            font-size: 16px;
+          }
+        }
         @include screensize(tablet){
             height: 130px;
           }
         @include screensize(laptop){
             height: 150px;
-            padding-left: 70px;
+            padding-left: 60px;
             padding-top: 75px;
           }
         .insweb{
-            border: 1px solid #96511f;
-            background-color: #96511f;
+            background-color: #003585;
             color: white;
-            width: 150px;
+            width: 138px;
             padding-left: 15px;
             padding-right: 12px;
             &:hover{
                 background-color: white;
-                color: #96511f;
+                color: #011737;
                 text-decoration: none;
-                font-size: 17px;
-                border: 2px solid #96511f;
+                border: 1px solid #011737;
             }
         }
         .phemdiv{
-            display: none;
+            
             @include screensize(laptop){
                display: block;
              }
@@ -65,8 +69,7 @@ main {
     }
     .logo-title{
         position: relative;
-         top: -280px;
-         left: 5px;
+        top: -280px;
         margin-bottom: -120px;
         @include screensize(tablet){
             top: -290px;
@@ -79,6 +82,7 @@ main {
         .logoinstitute{
             width: 70px;
             height: 80px;
+            border: 1px solid gainsboro;
             transition: all ease .5s;
                  @include screensize(tablet){
                     width: 90px;
@@ -88,7 +92,7 @@ main {
                  @include screensize(laptop){
                     width: 130px;
                     height: 130px;
-                    margin-left: 130px !important;
+                    margin-left: 120px !important;
                  }
               }
               .institle{
@@ -111,79 +115,206 @@ main {
                        }
                }
     }
+
+    .inssocial{
+      position: relative;
+      top:-175px;
+      left:71%;
+      z-index:1000;
+      img{
+        width:20px;
+        height:20px;
+      }
+      @include screensize(tablet){
+        top:-240px;
+        left:85%;
+        img{
+          width:25px;
+          height:25px;
+        }
+      }
+    }
     
 
-          .achievecard{
-            background-color: white;
-            text-align: center;
-            align-items: center;
-            margin-bottom: 13px;
-            border: 1px;
-            margin-top: -43px;
-            height:auto;
-            margin-left: auto;
-            margin-right: auto;
-            width: 90%;
-            @include screensize(tablet){
-                font-size: x-large;
-              }
-            @include screensize(prelaptop){
-              font-size: small;
+    .inspills{
+              margin-top:-170px;
+           @include screensize(tablet){
+              margin-top:-200px;
             }
-            @include screensize(laptop){
-                font-size: large;
+              .nav-pills{
+                .nav-link{
+                  color: #011737; 
+                }
+                .active{
+                  background-color:#003585;
+                  color:white;
+                }
+                
               }
-          }
-          .description{
-            background-color: white;
-            padding: 1rem;
-            margin-left: auto;
-            margin-right: auto;
-            width: 90%;
-            @include screensize(tablet){
-                font-size: x-large;
+
+    .inscarou{
+                    width: 100%;
+                    height: 180px;
+                    margin-bottom: 80px;
+               @include screensize(tablet){
+                    margin-bottom: -190px;
+                }
+               @include screensize(laptop){
+                    margin-bottom: 390px;
+                }
+                   li{
+                    position: relative;
+                    width: 8px;
+                    height: 8px;
+                    top: 30px;
+                    border-radius: 100%;
+                    background-color: black;
+                     @include screensize(prelaptop){
+                        top: 250px;
+                     }
+                }
+                   img{
+                    width: 100%;
+                    height: 100%;
               }
-            @include screensize(prelaptop){
-                width: 90%;
-                height:auto;
-                margin-left: auto;
-                margin-right: auto;
+
+            }
+
+            .notice{
+              background-color: white;
+              align-items: center;
+              margin-bottom: 13px;
+              border: 1px;
+              height:auto;
+              margin-left: auto;
+              margin-right: auto;
+              width: 100%;
+              h5{
+                font-weight: 400;
+                color: #011737;
+              }
+              
+              @include screensize(tablet){
+                  font-size: x-large;
+                }
+              @include screensize(prelaptop){
+                font-size: small;
               }
               @include screensize(laptop){
-               font-size: large;
+                  font-size: large;
+                }
+            }
+
+
+            .facultyachieve{
+         
+              h3{
+                background-color: #011737;
+                color: white;
+                padding: 7px;
+                text-align: center;
               }
-          }
-          .info{
-              h4{background-color: #96511f;}
-              margin-top:.2rem;
-              line-height: 2rem;
-              padding-left: .5rem;
-              padding-right: .5rem;
-              font-size: 20px;
-              color: black;
-              padding-top: 10px;
-              line-height: 3rem;
-              margin-top: 40px;
-             .card-title{
-                 text-align: center;
-             }
-              hr{
-                  border-bottom: 3px solid white;
+                 .facultyachievecard{
+                     width: 200px;
+                     height: 250px;
+                  img{
+                     width: 100%;
+                     height: 170px;
+                   }
+                }
               }
-              @include screensize(tablet){
-                font-size: x-large;
-               }
-              @include screensize(prelaptop){
-                width: 90%;
+
+              .description{
+                h4{
+                  text-align: center;
+                  color: #011737;
+                  font-family: Verdana, Geneva, Tahoma, sans-serif;
+                }
+                background-color: white;
+                padding: 1rem;
                 margin-left: auto;
                 margin-right: auto;
-               }
-               @include screensize(laptop){
-                margin-top: 0px;
-                font-size: large;
-               }
-              
-          }
+                width: 100%;
+                p{
+                  //border-left: 10px solid #96e0b7;
+                  
+                  //border-left: 10px solid #ffcdb0;
+                  border-left: 10px solid #ffbcb091;
+                  padding-left: 10px;
+                  
+                }
+                @include screensize(tablet){
+                    font-size: x-large;
+                  }
+                @include screensize(prelaptop){
+                    height:auto;
+                    margin-left: auto;
+                    margin-right: auto;
+                  }
+                  @include screensize(laptop){
+                   font-size: large;
+                  }
+              }
+
+              .princidiv{
+                margin-top: 50px;
+               
+                img{
+                  width: 50px;
+                  height:50px;
+                }
+                .principalcard{
+                  text-align: center;
+                  color: #011737;
+                  border: none;
+                  p{
+                    color:#011737;
+                  }
+                  img{
+                    width: 100%;
+                    height: 250px;
+                    
+                  }
+                  .card-body{
+                    background-color: rgb(249, 252, 255);
+                  }
+                }
+              }
+
+              .additionalinfo{
+                h3{
+                  color: #011737;
+                }
+                .insadditionalinfo{
+                 
+                 ul{
+                    list-style: none;
+                    line-height: 38px;
+                    font-size: 18px;
+                    text-align: center;
+                    
+                  }
+                }
+              }
+
+              .facilitydiv{
+                background-color: white;
+                div{
+                  font-size: 16px;
+                  color: #011737;
+                  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                 img{
+                   width: 30px;
+                   height: 30px;           
+                 }
+                }
+                  
+                
+              }
+
+  }
+          
+          
           .insaddress{
               h4{
                   text-align: center;
@@ -227,56 +358,8 @@ main {
             margin-top: 0px;
        }
           }
-          .inscarou{
-              width: 100%;
-              height: 180px;
-              margin-bottom: 80px;
-              @include screensize(tablet){
-                margin-bottom: -190px;
-               }
-              @include screensize(laptop){
-                display: none;
-               }
-               li{
-                   position: relative;
-                   width: 8px;
-                   height: 8px;
-                   top: 30px;
-                   border-radius: 100%;
-                   background-color: black;
-                   @include screensize(prelaptop){
-                    top: 250px;
-                   }
-               }
-              img{
-                  width: 100%;
-                  height: 100%;
-              }
-
-          }
-          .insimages{
-             display: none;
-              @include screensize(laptop){
-                display: block;
-                width: 90%;
-                height: 700px;
-                margin-left: auto;
-                margin-right: auto;
-                margin-bottom: -50px;
-               }
-            img{
-                width: 100%;
-                height: 50%;
-                }
-                .sub-img{ 
-                    img{
-                    margin-top:5px;
-                    width:100px;
-                    height:110px;
-                    cursor: pointer;
-                   }
-                }
-          }
+         
+          // css for institute verification page starts here
           .btnveri{
             background-color:#011737;
             width:100%;
@@ -291,6 +374,7 @@ main {
             color:white;
           }
           }
+        //css for institute verification page ends here
 
           //css for institute dashboard starts
           .datetime{
@@ -336,9 +420,9 @@ main {
             position: relative;
             top: 5px;
             left: 0;
-            border-radius: 15px;
-            padding-left: 10px;
-            padding-right:10px;
+            border-radius: 20px;
+            padding-left: 15px;
+            padding-right:15px;
             
             &:hover{
               background-color: #003585;
@@ -346,6 +430,7 @@ main {
             }
           }
           //css for board and standard and social ends here
+          
           //css for website and description starts here
           .btnwebdes{
             color: white;
@@ -355,5 +440,76 @@ main {
             }
           }
           //css for website and description ends here
+          
+          //css for profile starts here
+          .btnadd{
+            background-color: #003585;
+            color: white;
+            &:hover{
+              color: white;
+            }
+            &:focus{
+              box-shadow: none;
+            }
+          }
+
+          .gendercard{
+            width: 80px;
+            height: 40px;
+            border: 0;
+            border-radius: 20px;
+            float: right;
+            margin-top: -5px;
+            background-color: #d30383;
+            color: white;
+            .card-body{
+              margin-top:-15px;
+            }
+          }
+          .visioncard{
+            width: 90%;
+            border: 0;
+            height: auto;
+          }
+
+          .profiledetails{
+            border: 0;
+            border-radius: 15px;
+            height: auto;
+            .card-body{
+              font-size: 18px;
+            }
+            @include screensize(tablet){
+              height: 50px;
+            }
+          }
+          //css for profile ends here
+          
+          //css for achievement and teacher in sidebar starts here
+          .sidebar-facard{
+            width: 200px;
+            height: 250px;
+            .card-text{
+              margin-top: 5px;
+              line-height: .9rem;
+            }
+         img{
+            width: 100%;
+            height: 170px;
+          }
+       }
+
+       .editachieve{
+         position:relative;
+         top:-80px;
+         left: 80px;
+         color:rgb(111, 182, 4);
+         &:focus{
+          box-shadow: none;
+         }
+        
+       }
+          //css for achievement and teacher ends here  
+           
   }
 

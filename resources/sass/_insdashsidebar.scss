@@ -20,26 +20,20 @@
                margin-bottom: 20px;
                margin-left: -10px;
                a{
-                &:active{
-                    background-color: #011737;
-                    color: white;
-                   }  
-                   &:hover{
-                    background-color: #011737;
-                    color: white;  
-                   }
-               }
-               
-               
-            a{
-                color: black;
+                color: #011737;
                 font-weight: 500;
-            }
+               }
            }
+           .active{
+                background-color: #990066;
+                a{
+                color: white;
+                }
+             } 
+             
            .sidebaricons{
             font-size: 0.9rem;
-            
-        }
+            }
        }
        
     }

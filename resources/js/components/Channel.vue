@@ -23,81 +23,9 @@
             </div>
               <a :href="domainUrl+'/channel/'+channel.slug" class="visitins">Visit Institute</a>
               <a :href="domainUrl+'/channel/'+channel.slug" class="btn btnvisit ml-auto">Visit Institute</a>
-              <!-- <button type="submit" class="btn btnvisit">Visit College</button> -->
-
           </div>
-
-
-
-          <!-- <div class="card institutecard shadow">
-             <div class="card-body">
-            <img src="/images/college logo.jpg" alt="college logo" class="inslogo">
-             <h4 class="card-title">Avnsdjnk nsadcn jr. college</h4>
-             <p class="card-text">
-               Dist: Karbi Anglong
-             </p>
-             <p class="card-text destext">
-               Bridyc helps students get admission in the college of their
-           choice, we provide information to students and parents regarding the best
-           courses
-              </p>
-             <a href="#" class="visitins">Visit College</a>
-             <button type="submit" class="btn btnvisit">Visit College</button>
-           </div>
-         </div> -->
-
-         <!-- <div class="space2"></div> -->
-<!--
-         <div class="card institutecard shadow">
-            <div class="card-body">
-            <img src="/images/college logo.jpg" alt="college logo" class="inslogo">
-             <h4 class="card-title">Avnsdjnk nsadcn jr. college</h4>
-             <p class="card-text">
-               Dist: Karbi Anglong
-             </p>
-             <p class="card-text destext">
-               Bridyc helps students get admission in the college of their
-           choice, we provide information to students and parents regarding the best
-           courses
-              </p>
-             <a href="#" class="visitins">Visit College</a>
-             <button type="submit" class="btn btnvisit">Visit College</button>
-           </div>
-         </div> -->
-
-         <!-- <div class="space1"></div> -->
-<!--
-         <div class="card institutecard shadow">
-           <div class="card-body">
-           <img src="/images/college logo.jpg" alt="college logo" class="inslogo">
-            <h4 class="card-title">Avnsdjnk nsadcn jr. college</h4>
-            <p class="card-text">
-              Dist: Karbi Anglong
-            </p>
-            <p class="card-text destext">
-             Bridyc helps students get admission in the college of their
-         choice, we provide information to students and parents regarding the best
-         courses
-            </p>
-            <a href="#" class="visitins">Visit College</a>
-            <button type="submit" class="btn btnvisit">Visit College</button>
-          </div>
-        </div> -->
-
-        <!-- <div class="space2"></div> -->
-<!--
-        <div class="card institutecard shadow hidedesc">
-         <div class="card-body">
-         <img src="/images/college logo.jpg" alt="college logo" class="inslogo">
-          <h4 class="card-title">Avnsdjnk nsadcn jr. college</h4>
-          <p class="card-text">
-            Dist: Karbi Anglong
-          </p>
-          <a href="#" class="visitins">Visit College</a>
         </div>
-      </div> -->
-   </div>
-   </div>
+      </div>
    </section>
 </template>
 
