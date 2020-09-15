@@ -3,87 +3,8 @@
 
         <h2 class="mx-sm-4 px-sm-2">Principal's Profile</h2>
         <br>
-        <!-- <div v-if="genderVissionChecker" class="mx-sm-4 px-sm-2">
-            <div class="row mx-sm-0">
-                <div class="col-sm-3 d-flex">
-                    Gender:
-                     <div class="card gendercard ml-1">
-                          <div class="card-body">{{channelProfileData.gender}}</div>
-                     </div>
-                </div>
-            <br>
-            <br>
-               <div class="col-sm-9 d-flex">
-                   Vision:
-                    <div class="card visioncard shadow ml-2">
-                         <div class="card-body">{{channelProfileData.vission}}</div>
-                    </div>
-               </div>
-            </div>
-            <br>
-             <button class="btn btnadd" @click="editGenderAndVission()"><i class="fa fa-pencil" aria-hidden="true"></i> Edit</button>
-        </div> -->
         <profile-gender :user="channelProfileData"></profile-gender>
-    <form @submit.prevent="getFormData()" v-if="!genderVissionChecker">
-      <div class="row">
-      <div
-        class="form-group col-sm-5 px-sm-5"
-        :class="{'has-error':errors.has('profileError') || profileError != ''}"
-      >
-        <label for="exampleInputEmail1">Gender</label>
 
-            <select
-                v-model="profileData.gender"
-                class="form-control"
-                name="gender"
-                v-validate="'required'"
-          >
-            <option value>Select your gender</option>
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-          </select>
-        <span v-show="errors.has('gender')" class="text-danger">
-          {{
-          errors.first("gender")
-          }}
-        </span>
-        <span v-show="profileError != ''" class="help is-danger">
-          {{
-          profileError.gender
-          }}
-        </span>
-      </div>
-         <div
-          class="form-group col-sm-7"
-          :class="{'has-error': errors.has('vission') || profileError.vission != '' }"
-        >
-          <label>Vission</label>
-          <textarea
-            rows="2"
-            v-model="profileData.vission"
-            v-validate="'required'"
-            class=""
-            data-vv-delay="20"
-            name="vission"
-            type="text"
-            :class="{'form-control': true, 'is-invalid': errors.has('vission') }"
-            placeholder="What's your vission for the institute?"
-          />
-          <i v-show="errors.has('vission')" class="is-invalid"></i>
-
-          <span v-show="errors.has('vission')" class="text-danger">{{ errors.first('vission') }}</span>
-          <span v-show="profileError.vission != ''" class="text-danger">{{ profileError.vission }}</span>
-        </div>
-       </div>
-       <div class="mx-sm-4 px-sm-2">
-      <button
-        type="button"
-        class="btn btn-success"
-        @click="goBack()"
-      >Go Back</button>
-      <button type="submit" class="btn btnsubmit px-3 mt-n2">Submit</button>
-      </div>
-    </form>
     <br>
    <div class="mx-sm-4 px-sm-2">
     <h4>
