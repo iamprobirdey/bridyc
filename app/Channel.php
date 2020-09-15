@@ -62,4 +62,8 @@ class Channel extends Model
     public function teacher(){
         return $this->hasMany(ChannelTeacher::class,'channel_id','id');
     }
+
+    public function channelstandard(){
+        return $this->belongsToMany(ChannelStandard::class);
+    }
 }

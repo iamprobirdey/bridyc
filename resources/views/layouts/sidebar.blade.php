@@ -13,43 +13,21 @@
             </a>
           </li>
         @else
-<<<<<<< HEAD
-        <li class="nav-item">
-        <a class="nav-link" href="{{route('channel.index',auth()->user()->channel->title)}}">
-            <span class="material-icons sidebaricons">
-              dashboard
-              </span>
-=======
         <li class="nav-item active">
-        <a class="nav-link" href="{{url('/user/dashboard')}}">
+        <a class="nav-link" href="{{url('/user/dashboard/'.auth()->user()->channel->title)}}">
         <i class="fa fa-th-large sidebaricons" aria-hidden="true"></i>
->>>>>>> 19d61af7f9cecff55717c68ad3feee200ceb4d6c
             Dashboard
           </a>
         </li>
         <li class="nav-item">
-<<<<<<< HEAD
-          <a class="nav-link" href="{{route('channel.show',auth()->user()->channel->title)}}">
-            <span class="material-icons sidebaricons">
-              dashboard
-              </span>
-=======
-          <a class="nav-link" href="{{url('/user/dashboard/channel')}}">
+          <a class="nav-link" href="{{url('/user/dashboard/channel/'.auth()->user()->channel->title)}}">
           <i class="fa fa-desktop sidebaricons" aria-hidden="true"></i>
->>>>>>> 19d61af7f9cecff55717c68ad3feee200ceb4d6c
             Channel
           </a>
         </li>
         <li class="nav-item">
-<<<<<<< HEAD
-          <a class="nav-link" href="{{route('channel.edit',auth()->user()->channel->title)}}">
-            <span class="material-icons sidebaricons">
-              dashboard
-              </span>
-=======
-          <a class="nav-link" href="{{url('/user/dashboard/edit')}}">
+          <a class="nav-link" href="{{url('/user/dashboard/edit/'.auth()->user()->channel->title)}}">
           <i class="fa fa-pencil-square sidebaricons" aria-hidden="true"></i>
->>>>>>> 19d61af7f9cecff55717c68ad3feee200ceb4d6c
               Edit Channel
           </a>
         </li>

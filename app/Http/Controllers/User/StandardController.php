@@ -50,11 +50,11 @@ class StandardController extends Controller
             }
         }
         if(ChannelStandard::where('user_id',current_user_id())->exists()){
-            ChannelStandard::where('user_id',current_user_id())->delete();
+                $channel->channelstandard->delete();
         }
 
         if(!empty($insertData)){
-            ChannelStandard::create($insertData);
+            $channel->channelstandard->save($insertData);
         }
         return response()->json([
             'data' => ChannelStandard::where('user_id',current_user_id())

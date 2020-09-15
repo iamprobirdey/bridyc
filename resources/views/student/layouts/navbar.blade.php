@@ -31,15 +31,9 @@
             @endif
 
 
-<<<<<<< HEAD
-            @if (auth()->check() && auth()->user()->isInstitute())
-                <a class="btn btn-primary" data-trigger="focus" data-toggle="popover" data-placement="bottom" href="{{route('channel.index',auth()->user()->channel->title)}}">
-                    Dashboard
-=======
             @if (auth()->check() && auth()->user()->isUser() === 'institute')
                 <a class="btn btndashboard mr-2" data-trigger="focus" data-toggle="popover" data-placement="bottom" href="/user/dashboard">
                 <i class="fa fa-th-large" aria-hidden="true"></i> My Dashboard
->>>>>>> 19d61af7f9cecff55717c68ad3feee200ceb4d6c
                 </a>
             @endif
             @if (Auth::check())

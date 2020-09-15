@@ -1,70 +1,9 @@
 <template>
     <div>
 
-<<<<<<< HEAD
-        <profile-gender :user="channelProfileData"></profile-gender>
-
-    <h2>
-        Would would like to know your qualification
-    </h2>
-    <ul>
-        <li v-for="(education,index) in channelProfileData.education" :key="education.id">
-
-            <span>
-                School name: {{education.school_name}}
-                Degree : {{education.degree}}
-                Field of study : {{education.field_of_study}}
-                Start Date : {{education.start_date}}
-                End Date : {{education.end_date}}
-                Grade : {{education.grade}}
-                Activity and Sociaty : {{education.activities_and_sociaties}}
-                Description : {{education.description}}
-            </span>
-            <button class="btn-secondary" @click="editTheEducation(education,index)">edit</button>
-        </li>
-    </ul>
-
-    <button class="btn-primary" @click="addEducation()">+</button>
-            <div v-if="!imageChecker">
-                <img  width="100" height="100" :src="domainUrl+'/media/channel/'+channelProfileData.id+'/profile/'+channelProfileData.avatar"/>
-                <button class="btn btn-success" @click="editTheImage()">Edit</button>
-            </div>
-            <div v-if="imageChecker">
-                <picture-input
-                    ref="pictureInput"
-                    width="152"
-                    height="150"
-                    margin="16"
-                    accept="image/jpeg, image/png"
-                    size="10"
-                    button-class="btn"
-                    :custom-strings="{
-                            upload: '<h1>Bummer!</h1>',
-                            drag: 'Upload your logo'
-                        }"
-                    @change="onChange"
-                ></picture-input>
-                <span v-show="imageError != ''" class="text-danger">{{imageError}}</span>
-                <div class="btnsuca">
-                    <button
-                        v-if="imageData != ''"
-                        type="button"
-                        class="btn btnsubmiticon rounded-0 btn-primary"
-                        @click="onImageSubmit()"
-                    >Submit</button>
-                    <button
-                        v-if="channelProfileData.avatar != null"
-                        @click="onCancleImageEdit()"
-                        class="btn btn-success">
-                        <i class="fa fa-times" aria-hidden="true"></i>Cancel
-                    </button>
-                </div>
-            </div>
-
-=======
         <h2 class="mx-sm-4 px-sm-2">Principal's Profile</h2>
         <br>
-        <div v-if="genderVissionChecker" class="mx-sm-4 px-sm-2">
+        <!-- <div v-if="genderVissionChecker" class="mx-sm-4 px-sm-2">
             <div class="row mx-sm-0">
                 <div class="col-sm-3 d-flex">
                     Gender:
@@ -83,7 +22,8 @@
             </div>
             <br>
              <button class="btn btnadd" @click="editGenderAndVission()"><i class="fa fa-pencil" aria-hidden="true"></i> Edit</button>
-        </div>
+        </div> -->
+        <profile-gender :user="channelProfileData"></profile-gender>
     <form @submit.prevent="getFormData()" v-if="!genderVissionChecker">
       <div class="row">
       <div
@@ -134,7 +74,7 @@
           <span v-show="errors.has('vission')" class="text-danger">{{ errors.first('vission') }}</span>
           <span v-show="profileError.vission != ''" class="text-danger">{{ profileError.vission }}</span>
         </div>
-       </div> 
+       </div>
        <div class="mx-sm-4 px-sm-2">
       <button
         type="button"
@@ -149,49 +89,49 @@
     <h4>
         Add more details(Recomended)
     </h4>
-    
+
         <div class="mt-5" v-for="(education,index) in channelProfileData.education" :key="education.id">
             <div class="row mx-auto">
             <ul class="nav flex-column col-sm-6">
                <li>
                    <div class="card mx-sm-3 shadow profiledetails">
                        <div class="card-body mt-n2"><i class="fa fa-university" style="color:#003585;"  aria-hidden="true"></i> School : <strong>{{education.school_name}}</strong></div>
-                    </div> 
+                    </div>
                    </li>
-               <li> 
+               <li>
                    <br>
                    <div class="card mx-sm-3 shadow profiledetails">
                        <div class="card-body mt-n2"><i class="fa fa-graduation-cap" style="color:#003585;"  aria-hidden="true"></i> Degree : {{education.degree}}</div>
                     </div>
                    </li>
-               <li> 
+               <li>
                    <br>
                    <div class="card mx-sm-3 shadow profiledetails">
                        <div class="card-body mt-n2"><i class="fa fa-book" style="color:#003585;" aria-hidden="true"></i> Field of study : {{education.field_of_study}}</div>
                     </div>
                    </li>
                    <br>
-               <li> 
+               <li>
                    <div class="card mx-sm-3 shadow profiledetails">
                        <div class="card-body mt-n2"><i class="fa fa-calendar-o" style="color:#003585;" aria-hidden="true"></i> Start Date : {{education.start_date}}</div>
                     </div>
                    </li>
                    <br>
-               <li> 
+               <li>
                    <div class="card mx-sm-3 shadow profiledetails">
                        <div class="card-body mt-n2"><i class="fa fa-calendar" style="color:#003585;" aria-hidden="true"></i> End Date : {{education.end_date}}</div>
                     </div>
                    </li>
                    <br>
-               <li> 
+               <li>
                    <div class="card mx-sm-3 shadow profiledetails">
                        <div class="card-body mt-n2"><i class="fa fa-percent" style="color:#003585;"  aria-hidden="true"></i> Grade : {{education.grade}}</div>
                     </div>
                    </li>
             </ul>
-            
+
             <ul class="nav flex-column col-sm-6 mt-5 mt-sm-0">
-               <li> 
+               <li>
                    <div class="card mx-sm-3 shadow profiledetails" style="height:auto;">
                        <div class="card-body mt-n2">Activity and Sociaty : {{education.activities_and_sociaties}}</div>
                     </div>
@@ -206,11 +146,10 @@
             </div>
             <button class="btn btnadd p-1" @click="editTheEducation(education,index)"><i class="fa fa-pencil" aria-hidden="true"></i></button>
         </div>
-    
+
 
     <button class="btn btnadd p-1" @click="addEducation()">+</button>
    </div>
->>>>>>> 19d61af7f9cecff55717c68ad3feee200ceb4d6c
 
     <!-- Modal -->
 
@@ -227,7 +166,7 @@
 
                 <form @submit.prevent="getQualificationData()">
                     <h6 class="mb-3 mt-n2">Highest Education:</h6>
-                
+
                     <div
                     class="form-group"
                     :class="{'has-error': errors.has('school_name') || qualificationError.school_name != '' }"

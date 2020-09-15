@@ -457,67 +457,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -2323,233 +2262,13 @@ var render = function() {
   return _c(
     "div",
     [
-      _vm._v("\n\n<<<<<<< HEAD\n        "),
-      _c("profile-gender", { attrs: { user: _vm.channelProfileData } }),
-      _vm._v(" "),
-      _c("h2", [
-        _vm._v("\n        Would would like to know your qualification\n    ")
-      ]),
-      _vm._v(" "),
-      _c(
-        "ul",
-        _vm._l(_vm.channelProfileData.education, function(education, index) {
-          return _c("li", { key: education.id }, [
-            _c("span", [
-              _vm._v(
-                "\n                School name: " +
-                  _vm._s(education.school_name) +
-                  "\n                Degree : " +
-                  _vm._s(education.degree) +
-                  "\n                Field of study : " +
-                  _vm._s(education.field_of_study) +
-                  "\n                Start Date : " +
-                  _vm._s(education.start_date) +
-                  "\n                End Date : " +
-                  _vm._s(education.end_date) +
-                  "\n                Grade : " +
-                  _vm._s(education.grade) +
-                  "\n                Activity and Sociaty : " +
-                  _vm._s(education.activities_and_sociaties) +
-                  "\n                Description : " +
-                  _vm._s(education.description) +
-                  "\n            "
-              )
-            ]),
-            _vm._v(" "),
-            _c(
-              "button",
-              {
-                staticClass: "btn-secondary",
-                on: {
-                  click: function($event) {
-                    return _vm.editTheEducation(education, index)
-                  }
-                }
-              },
-              [_vm._v("edit")]
-            )
-          ])
-        }),
-        0
-      ),
-      _vm._v(" "),
-      _c(
-        "button",
-        {
-          staticClass: "btn-primary",
-          on: {
-            click: function($event) {
-              return _vm.addEducation()
-            }
-          }
-        },
-        [_vm._v("+")]
-      ),
-      _vm._v(" "),
-      !_vm.imageChecker
-        ? _c("div", [
-            _c("img", {
-              attrs: {
-                width: "100",
-                height: "100",
-                src:
-                  _vm.domainUrl +
-                  "/media/channel/" +
-                  _vm.channelProfileData.id +
-                  "/profile/" +
-                  _vm.channelProfileData.avatar
-              }
-            }),
-            _vm._v(" "),
-            _c(
-              "button",
-              {
-                staticClass: "btn btn-success",
-                on: {
-                  click: function($event) {
-                    return _vm.editTheImage()
-                  }
-                }
-              },
-              [_vm._v("Edit")]
-            )
-          ])
-        : _vm._e(),
-      _vm._v(" "),
-      _vm.imageChecker
-        ? _c(
-            "div",
-            [
-              _c("picture-input", {
-                ref: "pictureInput",
-                attrs: {
-                  width: "152",
-                  height: "150",
-                  margin: "16",
-                  accept: "image/jpeg, image/png",
-                  size: "10",
-                  "button-class": "btn",
-                  "custom-strings": {
-                    upload: "<h1>Bummer!</h1>",
-                    drag: "Upload your logo"
-                  }
-                },
-                on: { change: _vm.onChange }
-              }),
-              _vm._v(" "),
-              _c(
-                "span",
-                {
-                  directives: [
-                    {
-                      name: "show",
-                      rawName: "v-show",
-                      value: _vm.imageError != "",
-                      expression: "imageError != ''"
-                    }
-                  ],
-                  staticClass: "text-danger"
-                },
-                [_vm._v(_vm._s(_vm.imageError))]
-              ),
-              _vm._v(" "),
-              _c("div", { staticClass: "btnsuca" }, [
-                _vm.imageData != ""
-                  ? _c(
-                      "button",
-                      {
-                        staticClass: "btn btnsubmiticon rounded-0 btn-primary",
-                        attrs: { type: "button" },
-                        on: {
-                          click: function($event) {
-                            return _vm.onImageSubmit()
-                          }
-                        }
-                      },
-                      [_vm._v("Submit")]
-                    )
-                  : _vm._e(),
-                _vm._v(" "),
-                _vm.channelProfileData.avatar != null
-                  ? _c(
-                      "button",
-                      {
-                        staticClass: "btn btn-success",
-                        on: {
-                          click: function($event) {
-                            return _vm.onCancleImageEdit()
-                          }
-                        }
-                      },
-                      [
-                        _c("i", {
-                          staticClass: "fa fa-times",
-                          attrs: { "aria-hidden": "true" }
-                        }),
-                        _vm._v("Cancel\n                    ")
-                      ]
-                    )
-                  : _vm._e()
-              ])
-            ],
-            1
-          )
-        : _vm._e(),
-      _vm._v("\n\n=======\n        "),
       _c("h2", { staticClass: "mx-sm-4 px-sm-2" }, [
         _vm._v("Principal's Profile")
       ]),
       _vm._v(" "),
       _c("br"),
       _vm._v(" "),
-      _vm.genderVissionChecker
-        ? _c("div", { staticClass: "mx-sm-4 px-sm-2" }, [
-            _c("div", { staticClass: "row mx-sm-0" }, [
-              _c("div", { staticClass: "col-sm-3 d-flex" }, [
-                _vm._v("\n                    Gender:\n                     "),
-                _c("div", { staticClass: "card gendercard ml-1" }, [
-                  _c("div", { staticClass: "card-body" }, [
-                    _vm._v(_vm._s(_vm.channelProfileData.gender))
-                  ])
-                ])
-              ]),
-              _vm._v(" "),
-              _c("br"),
-              _vm._v(" "),
-              _c("br"),
-              _vm._v(" "),
-              _c("div", { staticClass: "col-sm-9 d-flex" }, [
-                _vm._v("\n                   Vision:\n                    "),
-                _c("div", { staticClass: "card visioncard shadow ml-2" }, [
-                  _c("div", { staticClass: "card-body" }, [
-                    _vm._v(_vm._s(_vm.channelProfileData.vission))
-                  ])
-                ])
-              ])
-            ]),
-            _vm._v(" "),
-            _c("br"),
-            _vm._v(" "),
-            _c(
-              "button",
-              {
-                staticClass: "btn btnadd",
-                on: {
-                  click: function($event) {
-                    return _vm.editGenderAndVission()
-                  }
-                }
-              },
-              [
-                _c("i", {
-                  staticClass: "fa fa-pencil",
-                  attrs: { "aria-hidden": "true" }
-                }),
-                _vm._v(" Edit")
-              ]
-            )
-          ])
-        : _vm._e(),
+      _c("profile-gender", { attrs: { user: _vm.channelProfileData } }),
       _vm._v(" "),
       !_vm.genderVissionChecker
         ? _c(
@@ -2647,9 +2366,9 @@ var render = function() {
                       },
                       [
                         _vm._v(
-                          "\n          " +
+                          "\n       " +
                             _vm._s(_vm.errors.first("gender")) +
-                            "\n        "
+                            "\n     "
                         )
                       ]
                     ),
@@ -2669,9 +2388,9 @@ var render = function() {
                       },
                       [
                         _vm._v(
-                          "\n          " +
+                          "\n       " +
                             _vm._s(_vm.profileError.gender) +
-                            "\n        "
+                            "\n     "
                         )
                       ]
                     )
@@ -2813,7 +2532,7 @@ var render = function() {
         "div",
         { staticClass: "mx-sm-4 px-sm-2" },
         [
-          _c("h4", [_vm._v("\n        Add more details(Recomended)\n    ")]),
+          _c("h4", [_vm._v("\n     Add more details(Recomended)\n ")]),
           _vm._v(" "),
           _vm._l(_vm.channelProfileData.education, function(education, index) {
             return _c("div", { key: education.id, staticClass: "mt-5" }, [
@@ -3014,7 +2733,6 @@ var render = function() {
         ],
         2
       ),
-      _vm._v("\n>>>>>>> 19d61af7f9cecff55717c68ad3feee200ceb4d6c\n\n    "),
       _vm._v(" "),
       _c(
         "div",

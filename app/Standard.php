@@ -22,6 +22,6 @@ class Standard extends Model
     }
 
     public function channelstandard(){
-        return $this->belongsToMany(ChannelStandard::class,'standard_id','id');
+        return $this->belongsToMany(ChannelStandard::class);
     }
 }
