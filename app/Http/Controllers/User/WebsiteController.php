@@ -18,44 +18,44 @@ class WebsiteController extends Controller
     }
 
     public function getWebsiteData(){
-        $userId = Auth::id();
-        $channel =  Channel::select('id','website_link')->where('user_id',$userId)->get();
+        $this->authorize('viewforchannel',auth()->user());
+        $this->authorize('checkChannelForUser',auth()->user()->channel);
         return response()->json([
-            'data' => $channel
+            'data' => Channel::select('id','website_link')->where('user_id',auth()->id())->get()
         ]);
     }
 
     public function editWebsiteData(EditWebsiteValidation $request){
-        $userId = Auth::id();
+        $this->authorize('viewforchannel',auth()->user());
+        $this->authorize('checkChannelForUser',auth()->user()->channel);
         DB::table('channels')
-            ->where('user_id',$userId)
+            ->where('user_id',auth()->id())
             ->update([
                 'website_link' => $request->validated()['website']
             ]);
-        $channel = DB::table('channels')
-        ->where('user_id',$userId)
-        ->select('website_link')
-        ->get();
         return response()->json([
             'message' => true,
-            'data' => $channel
+            'data' => DB::table('channels')
+                    ->where('user_id',auth()->id())
+                    ->select('website_link')
+                    ->get()
         ]);
     }
 
     public function storeWebsiteData(StoreWebsiteValidation $request){
-        $userId = Auth::id();
+        $this->authorize('viewforchannel',auth()->user());
+        $this->authorize('checkChannelForUser',auth()->user()->channel);
         DB::table('channels')
-            ->where('user_id',$userId)
+            ->where('user_id',auth()->id())
             ->update([
                 'website_link' => $request->validated()['website']
             ]);
-        $channel = DB::table('channels')
-        ->where('user_id',$userId)
-        ->select('website_link')
-        ->get();
         return response()->json([
             'message' => true,
-            'data' => $channel
+            'data' => DB::table('channels')
+                        ->where('user_id',auth()->id())
+                        ->select('website_link')
+                        ->get()
         ]);
     }
 }

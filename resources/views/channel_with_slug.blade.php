@@ -1,5 +1,7 @@
 @extends('student.layouts.master')
 
+
+
 @section('css_code')
     <link rel="stylesheet" type="text/css" href="{{url('css/app.css')}}">
     <link rel="stylesheet" type="text/css" href="{{url('css/institutelandingpage.css')}}">

@@ -1,66 +1,7 @@
 <template>
     <div>
 
-        <h2>We highly appreciate to give profile details of Schools principle</h2>
-        <div v-if="genderVissionChecker">
-            <button class="btn-primary" @click="editGenderAndVission()">Edit</button>
-            <p>{{channelProfileData.gender}}</p>
-            <p>{{channelProfileData.vission}}</p>
-        </div>
-    <form @submit.prevent="getFormData()" v-if="!genderVissionChecker">
-      <div
-        class="form-group"
-        :class="{'has-error':errors.has('profileError') || profileError != ''}"
-      >
-        <label for="exampleInputEmail1">Your gender</label>
-
-            <select
-                v-model="profileData.gender"
-                class="form-control"
-                name="gender"
-                v-validate="'required'"
-          >
-            <option value>Select your gender</option>
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-          </select>
-        <span v-show="errors.has('gender')" class="text-danger">
-          {{
-          errors.first("gender")
-          }}
-        </span>
-        <span v-show="profileError != ''" class="help is-danger">
-          {{
-          profileError.gender
-          }}
-        </span>
-      </div>
-         <div
-          class="form-group"
-          :class="{'has-error': errors.has('vission') || profileError.vission != '' }"
-        >
-          <label >Your vission for your college</label>
-          <input
-            v-model="profileData.vission"
-            v-validate="'required'"
-            data-vv-delay="20"
-            name="vission"
-            type="text"
-            :class="{'form-control': true, 'is-invalid': errors.has('vission') }"
-            placeholder="Vission"
-          />
-          <i v-show="errors.has('vission')" class="is-invalid"></i>
-
-          <span v-show="errors.has('vission')" class="text-danger">{{ errors.first('vission') }}</span>
-          <span v-show="profileError.vission != ''" class="text-danger">{{ profileError.vission }}</span>
-        </div>
-      <button
-        type="button"
-        class="btn btn-success"
-        @click="goBack()"
-      >Go Back</button>
-      <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
+        <profile-gender :user="channelProfileData"></profile-gender>
 
     <h2>
         Would would like to know your qualification
@@ -83,6 +24,41 @@
     </ul>
 
     <button class="btn-primary" @click="addEducation()">+</button>
+            <div v-if="!imageChecker">
+                <img  width="100" height="100" :src="domainUrl+'/media/channel/'+channelProfileData.id+'/profile/'+channelProfileData.avatar"/>
+                <button class="btn btn-success" @click="editTheImage()">Edit</button>
+            </div>
+            <div v-if="imageChecker">
+                <picture-input
+                    ref="pictureInput"
+                    width="152"
+                    height="150"
+                    margin="16"
+                    accept="image/jpeg, image/png"
+                    size="10"
+                    button-class="btn"
+                    :custom-strings="{
+                            upload: '<h1>Bummer!</h1>',
+                            drag: 'Upload your logo'
+                        }"
+                    @change="onChange"
+                ></picture-input>
+                <span v-show="imageError != ''" class="text-danger">{{imageError}}</span>
+                <div class="btnsuca">
+                    <button
+                        v-if="imageData != ''"
+                        type="button"
+                        class="btn btnsubmiticon rounded-0 btn-primary"
+                        @click="onImageSubmit()"
+                    >Submit</button>
+                    <button
+                        v-if="channelProfileData.avatar != null"
+                        @click="onCancleImageEdit()"
+                        class="btn btn-success">
+                        <i class="fa fa-times" aria-hidden="true"></i>Cancel
+                    </button>
+                </div>
+            </div>
 
 
     <!-- Modal -->
@@ -289,6 +265,12 @@
 </template>
 
 <script>
+
+import PictureInput from "vue-picture-input";
+import profileGender from './channel/profileGender.vue';
+
+
+
 export default {
     data(){
         return{
@@ -325,7 +307,11 @@ export default {
             domainUrl: location.origin,
             educationPath: '',
             qualificationEditDataId: '',
-            qualificationEditIndex: ''
+            qualificationEditIndex: '',
+            //Image profile stuff
+            imageData : '',
+            imageError : '',
+            imageChecker : false,
         };
     },
     props: {
@@ -334,47 +320,21 @@ export default {
             default: null
         }
     },
+    components: {
+        PictureInput,
+        'profile-gender' : profileGender
+    },
     created(){
         this.channelProfileData = this.user;
         if(this.channelProfileData.gender == null) this.genderVissionChecker = false;
+        if(this.channelProfileData.avatar == null) this.imageChecker = true;
+        console.log(this.channelProfileData);
     },
     mounted(){
 
     },
     methods: {
-        getFormData(){
-            this.$validator.validate().then(result => {
-                if (result) {
-                    axios
-                        .post(this.domainUrl+'/user/dashboard/api/gender/vission', this.profileData)
-                        .then(response => {
-                            if (response.data.message === true) {
-                                Vue.toasted.success("Profile is updated", {
-                                    position: "top-center",
-                                    duration: 5000
-                                });
-                                this.channelProfileData.gender = this.profileData.gender;
-                                this.channelProfileData.vission = this.profileData.vission;
-                                this.genderVissionChecker = true;
-                            }
-                        })
-                        .catch(errors => {
-                             Vue.toasted.error("Something went wrong", {
-                                    position: "top-center",
-                                    duration: 5000
-                            });
-                              if (errors.response.data.errors.gender) {
-                                    this.profileError.gender =
-                                    errors.response.data.errors.gender[0];
-                                }
-                                  if (errors.response.data.errors.vission) {
-                                    this.profileError.vission =
-                                    errors.response.data.errors.vission[0];
-                                }
-                        });
-                }
-            });
-        },
+
         getQualificationData(){
              this.$validator.validate().then(result => {
                 if (result) {
@@ -386,12 +346,10 @@ export default {
                                 if(this.qualificationEditDataId == ''){
                                     this.channelProfileData.education.push(this.qualificationData);
                                 }else{
-                                    //this.channelProfileData.education.splice(this.qualificationEditIndex,1,response.data.user);
-                                    this.channelProfileData.education.$set(this.qualificationEditIndex,response.data.user);
-
+                                    this.channelProfileData.education.splice(this.qualificationEditIndex,1,response.data.user);
                                 }
+                                $('#addEducation').modal('hide');
                             }
-                            $('#addEducation').modal('hide');
                         })
                         .catch(errors => {
                             if (errors.response.data.errors.school_name) {
@@ -433,14 +391,10 @@ export default {
         goBack(){
             this.genderVissionChecker = true;
         },
-        editGenderAndVission(){
-            this.profileData.gender = this.channelProfileData.gender;
-            this.profileData.vission = this.channelProfileData.vission;
-            this.genderVissionChecker = false;
-        },
+
         addEducation(){
             this.educationPath = '';
-            this.educationPath = this.domainUrl+'/user/dashboard/api/add/education';
+            this.educationPath = this.domainUrl+'/api/add/education';
             this.qualificationEditDataId = '';
             this.emptyEducationForm();
             $('#addEducation').modal('show');
@@ -456,7 +410,8 @@ export default {
             this.qualificationData.description = education.description;
             this.qualificationEditDataId = education.id;
             this.educationPath = '';
-            this.educationPath = this.domainUrl+'/user/dashboard/api/add/education/edit/'+education.id;
+            this.educationPath = this.domainUrl+'/api/add/education/edit/'+education.id;
+            console.log(this.educationPath);
             this.qualificationEditIndex = index;
             $('#addEducation').modal('show');
 
@@ -470,7 +425,41 @@ export default {
             this.qualificationData.grade = '';
             this.qualificationData.activities_and_sociaties = '';
             this.qualificationData.description = '';
+        },
+         onChange(image) {
+            if (this.$refs.pictureInput.image)
+                this.imageData = this.$refs.pictureInput.image;
+        },
+        onImageSubmit(){
+            if(this.imageData != ''){
+                const formData = new FormData();
+                formData.append("image", this.imageData);
+                axios
+                .post(this.domainUrl+'/api/profile/avatar', formData)
+                .then(response => {
+                    onUploadProgress: progressEvent => {
+                    console.log(progressEvent.loaded / progressEvent.total);
+                    };
+                    this.channelProfileData.avatar = response.data.image;
+                    this.imageChecker = false;
+                })
+                .catch(errors => {
+                    if (errors.response.data.errors.image) {
+                        this.imageError = errors.response.data.errors.image[0];
+                    }
+                });
+            }
+            else{
+                this.imageError = 'Image is empty';
+            }
+        },
+        onCancleImageEdit(){
+            this.imageChecker = false;
+        },
+        editTheImage(){
+            this.imageChecker = true;
         }
-    }
+    },
+
 }
 </script>

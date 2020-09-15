@@ -119,7 +119,7 @@ export default {
                 'password' : ''
             },
             additionUrl: '',
-            url: location.origin + '/user/dashboard/api/',
+            url: location.origin + '/api/',
         };
     },
     props:{
@@ -181,7 +181,7 @@ export default {
         });
         },
         deleteFromChannel(id,index){
-            this.additionUrl = 'delete/teacher/';
+            this.additionUrl = '/delete/teacher/';
             axios
                 .post(this.url+this.additionUrl+id)
                 .then(response => {

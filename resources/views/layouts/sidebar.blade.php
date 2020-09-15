@@ -16,7 +16,7 @@
           </li>
         @else
         <li class="nav-item">
-        <a class="nav-link" href="{{url('/user/dashboard')}}">
+        <a class="nav-link" href="{{route('channel.index',auth()->user()->channel->title)}}">
             <span class="material-icons sidebaricons">
               dashboard
               </span>
@@ -24,7 +24,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{url('/user/dashboard/channel')}}">
+          <a class="nav-link" href="{{route('channel.show',auth()->user()->channel->title)}}">
             <span class="material-icons sidebaricons">
               dashboard
               </span>
@@ -32,7 +32,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{url('/user/dashboard/edit')}}">
+          <a class="nav-link" href="{{route('channel.edit',auth()->user()->channel->title)}}">
             <span class="material-icons sidebaricons">
               dashboard
               </span>

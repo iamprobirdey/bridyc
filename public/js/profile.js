@@ -136,6 +136,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 
 
@@ -413,7 +415,8 @@ __webpack_require__.r(__webpack_exports__);
         'village_id': '',
         'standard_id': ''
       },
-      addressDataChecker: true
+      addressDataChecker: true,
+      userId: ''
     };
   },
   props: {
@@ -440,9 +443,14 @@ __webpack_require__.r(__webpack_exports__);
     userinformation: {
       type: Object,
       "default": null
+    },
+    id: {
+      type: Number,
+      "default": null
     }
   },
   created: function created() {
+    this.userId = this.id;
     this.channelsData = this.channels;
     this.statesData = this.states;
     this.districtsData = this.districts;
@@ -457,14 +465,15 @@ __webpack_require__.r(__webpack_exports__);
 
       this.$validator.validate().then(function (result) {
         if (result) {
-          axios.post('/api/profile/edit/address', _this.userFormData).then(function (response) {
+          axios.post('/api/profile/edit/address/' + _this.userId, _this.userFormData).then(function (response) {
             if (response.data.message === true) {
-              Vue.toasted.success("User name is succefully created", {
+              Vue.toasted.success("Address is succefully created", {
                 position: "top-center",
                 duration: 5000
               });
               _this.userInformationData = {};
               _this.userInformationData = response.data.userData;
+              console.log(_this.userInformationData);
               _this.addressDataChecker = true;
             }
           })["catch"](function (errors) {
@@ -558,6 +567,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -598,6 +615,9 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   methods: {
+    cancelTheForm: function cancelTheForm() {
+      this.hobbiesEntryChecker = true;
+    },
     standardNameOnly: function standardNameOnly(hobby) {
       return "".concat(hobby.name);
     },
@@ -726,6 +746,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -735,7 +761,8 @@ __webpack_require__.r(__webpack_exports__);
       studentssubjectData: [],
       subjectsEntryChecker: true,
       selectedSubjectValueStored: [],
-      serverError: ''
+      serverError: '',
+      userId: ''
     };
   },
   props: {
@@ -746,11 +773,16 @@ __webpack_require__.r(__webpack_exports__);
     studentssubject: {
       type: Array,
       "default": null
+    },
+    id: {
+      type: Number,
+      "default": null
     }
   },
   created: function created() {
     this.subjectsData = this.subjects;
     this.studentssubjectData = this.studentssubject;
+    this.userId = this.id;
   },
   mounted: function mounted() {
     if (this.studentssubjectData.length > 0) {
@@ -759,6 +791,9 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   methods: {
+    cancelTheForm: function cancelTheForm() {
+      this.subjectsEntryChecker = true;
+    },
     standardNameOnly: function standardNameOnly(subject) {
       return "".concat(subject.name);
     },
@@ -772,7 +807,7 @@ __webpack_require__.r(__webpack_exports__);
         });
 
         if (this.isEqual(subjectFormData)) {
-          axios.post('/api/profile/edit/subject', this.value).then(function (response) {
+          axios.post('/api/profile/edit/subject/' + this.userId, this.value).then(function (response) {
             _this.studentssubjectData = [];
             _this.studentssubjectData = response.data.data;
             _this.subjectsEntryChecker = true;
@@ -800,7 +835,7 @@ __webpack_require__.r(__webpack_exports__);
           }
         });
       });
-      if (this.selectedSubjectValueStored.length === 0 || this.selectedSubjectValueStored.length != counter) return true;
+      if (items.length > this.selectedSubjectValueStored || this.selectedSubjectValueStored.length === 0 || this.selectedSubjectValueStored.length != counter) return true;
       return false;
     },
     theSubjectContainer: function theSubjectContainer() {
@@ -887,17 +922,23 @@ __webpack_require__.r(__webpack_exports__);
       },
       userNameError: {
         username: ''
-      }
+      },
+      userId: ''
     };
   },
   props: {
     username: {
       type: String,
       "default": null
+    },
+    id: {
+      type: Number,
+      "default": null
     }
   },
   created: function created() {
     this.usernameData = this.username;
+    this.userId = this.id;
   },
   mounted: function mounted() {},
   methods: {
@@ -909,7 +950,7 @@ __webpack_require__.r(__webpack_exports__);
 
       this.$validator.validate().then(function (result) {
         if (result) {
-          axios.post('/api/edit/username', _this.userName).then(function (response) {
+          axios.post('/api/profile/edit/username/' + _this.userId, _this.userName).then(function (response) {
             if (response.data.message === true) {
               Vue.toasted.success("User name is succefully created", {
                 position: "top-center",
@@ -919,6 +960,8 @@ __webpack_require__.r(__webpack_exports__);
               _this.userNameEditing = false;
 
               _this.urlChanger(_this.usernameData);
+
+              window.location.reload();
             }
           })["catch"](function (errors) {
             Vue.toasted.error("Something went wrong", {
@@ -1660,7 +1703,11 @@ var render = function() {
     _c(
       "div",
       { staticClass: "col-sm-6" },
-      [_c("username", { attrs: { username: _vm.userData.username } })],
+      [
+        _c("username", {
+          attrs: { username: _vm.userData.username, id: _vm.userData.id }
+        })
+      ],
       1
     ),
     _vm._v(" "),
@@ -1675,7 +1722,8 @@ var render = function() {
             districts: _vm.districtsData,
             villages: _vm.villagesData,
             standards: _vm.standardsData,
-            userinformation: _vm.userInformationData
+            userinformation: _vm.userInformationData,
+            id: _vm.userData.id
           }
         })
       ],
@@ -1689,7 +1737,8 @@ var render = function() {
         _c("subject", {
           attrs: {
             subjects: _vm.subjectsData,
-            studentssubject: _vm.studentsubjectsData
+            studentssubject: _vm.studentsubjectsData,
+            id: _vm.userData.id
           }
         })
       ],
@@ -2495,6 +2544,19 @@ var render = function() {
             _c(
               "button",
               {
+                staticClass: "btn btn-danger",
+                on: {
+                  click: function($event) {
+                    return _vm.cancelTheForm()
+                  }
+                }
+              },
+              [_vm._v("\n\n            Cancel\n            ")]
+            ),
+            _vm._v(" "),
+            _c(
+              "button",
+              {
                 staticClass: "btn btn-primary",
                 attrs: { type: "submit" },
                 on: {
@@ -2609,6 +2671,19 @@ var render = function() {
             ),
             _vm._v(" "),
             _c("br"),
+            _vm._v(" "),
+            _c(
+              "button",
+              {
+                staticClass: "btn btn-danger",
+                on: {
+                  click: function($event) {
+                    return _vm.cancelTheForm()
+                  }
+                }
+              },
+              [_vm._v("\n            Cancel\n        ")]
+            ),
             _vm._v(" "),
             _c(
               "button",

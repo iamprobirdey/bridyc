@@ -26,6 +26,8 @@ class CreateUsersTable extends Migration
             $table->string('vission')->nullable();
             $table->string('password')->nullable();
             $table->integer('status')->default(0); //verified => 1, block => 2
+            $table->timestamp('blocked_at')->nullable();
+            $table->timestamp('verified_at')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

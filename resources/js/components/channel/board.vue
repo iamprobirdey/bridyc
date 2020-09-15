@@ -30,7 +30,7 @@
         </div>
         <br>
         <br>
-        
+
   </div>
 </template>
 
@@ -51,7 +51,7 @@ export default {
     methods:{
         getBoardData(){
                 axios
-            .get("api/board")
+            .get("/api/board")
             .then(response => {
             this.userData = response.data.channel;
             this.boardData = response.data.board;
@@ -87,7 +87,7 @@ export default {
         submitStandardData(){
               if(this.userData.length != this.value.length)
             axios
-                .post('api/board',this.value)
+                .post('/api/board',this.value)
                 .then(response => {
                     this.userData = [];
                     this.userData = response.data.data;

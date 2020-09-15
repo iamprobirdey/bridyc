@@ -42,7 +42,7 @@ class InstituteController extends Controller
         return response()->json([
             'status' => 'success',
             'auth' => $auth,
-            'redirectRoute' => '/user/dashboard'
+            'redirectRoute' => '/user/dashboard/verification'
         ]);
     }
 

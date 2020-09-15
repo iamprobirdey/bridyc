@@ -237,7 +237,7 @@ __webpack_require__.r(__webpack_exports__);
     getBoardData: function getBoardData() {
       var _this = this;
 
-      axios.get("api/board").then(function (response) {
+      axios.get("/api/board").then(function (response) {
         _this.userData = response.data.channel;
         _this.boardData = response.data.board;
         if (_this.userData.length > 0) _this.boardDataStatus = true;
@@ -275,7 +275,7 @@ __webpack_require__.r(__webpack_exports__);
     submitStandardData: function submitStandardData() {
       var _this3 = this;
 
-      if (this.userData.length != this.value.length) axios.post('api/board', this.value).then(function (response) {
+      if (this.userData.length != this.value.length) axios.post('/api/board', this.value).then(function (response) {
         _this3.userData = [];
         _this3.userData = response.data.data;
         _this3.streamDataStatus = true;
@@ -365,7 +365,7 @@ __webpack_require__.r(__webpack_exports__);
       imageData: "",
       selectedImagefile: null,
       imageError: "",
-      url: 'api/cover/upload',
+      url: '/api/cover/upload',
       domainUrl: location.origin
     };
   },
@@ -379,7 +379,7 @@ __webpack_require__.r(__webpack_exports__);
     getCoverData: function getCoverData() {
       var _this = this;
 
-      axios.get('api/cover').then(function (response) {
+      axios.get('/api/cover').then(function (response) {
         _this.userImage = response.data.image;
         _this.userId = response.data.userId;
         if (_this.userImage != null) _this.userImageStatus = true;
@@ -497,7 +497,7 @@ __webpack_require__.r(__webpack_exports__);
       formData: {
         description: ""
       },
-      url: "api/description",
+      url: "/api/description",
       descriptionError: ""
     };
   },
@@ -522,7 +522,7 @@ __webpack_require__.r(__webpack_exports__);
 
       this.$validator.validate().then(function (result) {
         if (result) {
-          if (_this2.websiteLinkFromServer != "") _this2.url = "api/description/edit";
+          if (_this2.websiteLinkFromServer != "") _this2.url = "/api/description/edit";
           console.log(_this2.url);
           axios.post(_this2.url, _this2.formData).then(function (response) {
             if (response.data.message === true) {
@@ -611,6 +611,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -623,7 +624,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       userImage: '',
       userImageStatus: false,
       userId: null
-    }, _defineProperty(_ref, "url", 'api/icon/upload'), _defineProperty(_ref, "domainUrl", location.origin), _ref;
+    }, _defineProperty(_ref, "url", '/api/icon/upload'), _defineProperty(_ref, "domainUrl", location.origin), _ref;
   },
   mounted: function mounted() {
     this.getImageData();
@@ -632,7 +633,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     getImageData: function getImageData() {
       var _this = this;
 
-      axios.get('api/icon').then(function (response) {
+      axios.get('/api/icon').then(function (response) {
         _this.userImage = response.data.image;
         _this.userId = response.data.userId;
         if (_this.userImage != null) _this.userImageStatus = true;
@@ -1051,7 +1052,7 @@ __webpack_require__.r(__webpack_exports__);
     getUserData: function getUserData() {
       var _this = this;
 
-      axios.get("api/getUserData").then(function (response) {
+      axios.get("/api/getUserData").then(function (response) {
         if (response.status === 200) {
           _this.infrastructure = response.data.user[0];
           if (_this.infrastructure.boys_toilet != null) _this.infrastructureStatus = false;
@@ -1065,7 +1066,7 @@ __webpack_require__.r(__webpack_exports__);
 
       this.$validator.validate().then(function (result) {
         if (result) {
-          axios.post("api/infra/store/" + _this2.infrastructure.id, _this2.formData).then(function (response) {
+          axios.post("/api/infra/store/" + _this2.infrastructure.id, _this2.formData).then(function (response) {
             _this2.infrastructureStatus = false;
             _this2.infrastructure = response.data.channel;
           })["catch"](function (errors) {
@@ -1267,7 +1268,7 @@ __webpack_require__.r(__webpack_exports__);
     getSocailData: function getSocailData() {
       var _this = this;
 
-      axios.get('api/social').then(function (response) {
+      axios.get('/api/social').then(function (response) {
         _this.socialData = response.data.channel.extra_attributes.social;
         console.log(_this.socialData);
       })["catch"](function (errors) {
@@ -1282,7 +1283,7 @@ __webpack_require__.r(__webpack_exports__);
 
       this.$validator.validate().then(function (result) {
         if (result) {
-          axios.post('api/social', _this2.formData).then(function (response) {
+          axios.post('/api/social', _this2.formData).then(function (response) {
             _this2.socialData = response.data.data.extra_attributes.social;
             _this2.getTheModel = false;
           })["catch"](function (errors) {
@@ -1386,7 +1387,7 @@ __webpack_require__.r(__webpack_exports__);
     getStandardData: function getStandardData() {
       var _this = this;
 
-      axios.get("api/standard").then(function (response) {
+      axios.get("/api/standard").then(function (response) {
         _this.userData = response.data.channel;
         _this.userDataLength = _this.userData.length;
         _this.standardData = response.data.standard;
@@ -1422,7 +1423,7 @@ __webpack_require__.r(__webpack_exports__);
     submitStandardData: function submitStandardData() {
       var _this3 = this;
 
-      if (this.userDataLength != this.value.length) axios.post('api/standard', this.value).then(function (response) {
+      if (this.userDataLength != this.value.length) axios.post('/api/standard', this.value).then(function (response) {
         _this3.userData = [];
         _this3.userData = response.data.data;
         _this3.standardDataStatus = true;
@@ -1529,7 +1530,7 @@ __webpack_require__.r(__webpack_exports__);
       },
       websiteLinkError: "",
       websiteOnPresent: false,
-      url: "api/website/"
+      url: "/api/website/"
     };
   },
   mounted: function mounted() {
@@ -1541,7 +1542,7 @@ __webpack_require__.r(__webpack_exports__);
 
       this.$validator.validate().then(function (result) {
         if (result) {
-          if (_this.websiteLinkFromServer != "") _this.url = "api/website/edit";
+          if (_this.websiteLinkFromServer != "") _this.url = "/api/website/edit";
           axios.post(_this.url, _this.formData).then(function (response) {
             if (response.data.message === true) {
               Vue.toasted.success("Website is updated", {
@@ -1560,7 +1561,7 @@ __webpack_require__.r(__webpack_exports__);
     getWebsiteData: function getWebsiteData() {
       var _this2 = this;
 
-      axios.get("api/website").then(function (response) {
+      axios.get("/api/website").then(function (response) {
         if (response.status === 200) {
           if (response.data.data[0]["website_link"] != null) {
             _this2.websiteLinkFromServer = response.data.data[0]["website_link"];
@@ -15025,7 +15026,8 @@ var render = function() {
                 "custom-strings": {
                   upload: "<h1>Bummer!</h1>",
                   drag: "Upload your logo"
-                }
+                },
+                name: "image"
               },
               on: { change: _vm.onChange }
             }),
@@ -17131,7 +17133,7 @@ var render = function() {
                 _vm._v(
                   "\n                    " +
                     _vm._s(_vm.websiteLinkFromServer) +
-                    "   \n                "
+                    "\n                "
                 )
               ]),
               _vm._v(" "),

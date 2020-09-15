@@ -8,10 +8,12 @@ class UserInformation extends Model
 {
     protected $fillable =
             [
+                'user_id',
                 'channel_id',
                 'state_id',
                 'district_id',
-                'village_id'
+                'village_id',
+                'standard_id'
             ];
 
     public function user(){

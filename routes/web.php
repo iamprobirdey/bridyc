@@ -22,7 +22,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@test');
 
 Route::get('hobby',function(){
-
+    return 'hobby';
 });
 
 
@@ -31,6 +31,14 @@ Route::get('test','HomeController@test');
 Route::get('admin/login','Admin\AdminAuthController@showAdminLoginForm')->name('admin.login');
 Route::post('admin/login','Admin\AdminAuthController@login');
 Route::post('admin/logout','Admin\AdminAuthController@adminLogout')->name('admin.logout');
+
+Route::get('google-login','Auth\GoogleLoginController@getGoogleLogIn');
+Route::get('google/response','Auth\GoogleLoginController@getBackGoogleValiationStore');
+
+Route::get('facebook-login','Auth\FacebookLoginController@getFacebookLogIn');
+Route::get('facebook/response','Auth\FacebookLoginController@getBackFacebookValiationStore');
+//http://localhost:3000/facebook/response
+
 
 //Route::post('register','Auth\RegisterController@postRegister');
 //Route::post('login', 'Auth\LoginController@login');
@@ -172,66 +180,14 @@ Route::group([
     'prefix' => 'user/dashboard',
     'middleware' => ['auth','can:institute dashboard','check_verification']
 ], function () {
-    Route::get('/','User\DashboardController@index')->name('institute');
     Route::get('verification','User\DashboardController@verification')->name('verification');
-    Route::get('channel','User\DashboardController@channel');
-    Route::get('edit','User\DashboardController@editChannel');
+    Route::get('/{channel:title}','User\DashboardController@index')->name('channel.index');
+    Route::get('channel/{channel:title}','User\DashboardController@channel')->name('channel.show');
+    Route::get('edit/{channel:title}','User\DashboardController@editChannel')->name('channel.edit');
     Route::get('profile/{user:username}/edit','User\DashboardController@profile')->name('user.profile');
     Route::get('achievement/{channel:title}','User\DashboardController@acheivement')->name('channel.achievement');
     Route::get('teacher/{channel:title}','User\DashboardController@teacher')->name('channel.teacher');
-    Route::group([
-        'name' => 'api.',
-        'prefix' => 'api'
-        //    'middleware' => 'auth'
-    ], function () {
-        //Infrastructure
-        Route::get('getUserData','User\InfrastructureController@getUserData');
-        Route::post('infra/store/{id}','User\InfrastructureController@storeUserInformation');
-        //Website
-        Route::get('/website','User\WebsiteController@getWebsiteData');
-        Route::post('website','User\WebsiteController@storeWebsiteData');
-        Route::post('website/edit','User\WebsiteController@editWebsiteData');
-        //Description
-        Route::get('/description','User\DescriptionController@getDescriptionData');
-        Route::post('description','User\DescriptionController@storeDescriptionData');
-        Route::post('description/edit','User\DescriptionController@editDescriptionData');
-        //Cover
-        Route::get('cover','User\ImageController@getCoverData');
-        Route::post('cover/upload','User\ImageController@storeImageCover');
-        //Icon
-        Route::get('icon','User\ImageController@getIconData');
-        Route::post('icon/upload','User\ImageController@storeImageIcon');
-                //->middleware('optimizeImages');
-        //Verification
-        Route::post('verification','User\VerificationController@getVerificationData');
-        //Standard
-        Route::get('standard','User\StandardController@getStandardData');
-        Route::post('standard','User\StandardController@store');
-        //Stream
-        // Route::get('stream','User\StreamController@getStreamData');
-        // Route::post('stream','User\StreamController@store');
-        //Board
-        Route::get('board','User\BoardController@getBoardData');
-        Route::post('board','User\BoardController@store');
-        //Social
-        Route::get('social','User\SocialController@getSocialData');
-        Route::post('social','User\SocialController@store');
-        //Profile
-        Route::post('gender/vission','User\ProfileController@storeGender');
-        //Add Education
-        Route::post('add/education','User\ProfileController@storeEducation');
-        Route::post('add/education/edit/{id}','User\ProfileController@storeEditEducation');
 
-        //Achievement Upload
-        Route::post('achievement/add/{channel:id}','User\AchievementController@store');
-        Route::post('achievement/edit/{achievementId}/{channel:id}','User\AchievementController@editStore');
-
-        //Teacher creation
-        Route::post('add/teacher/{channel:id}','User\TeachersController@store');
-        Route::post('delete/teacher/{id}','User\TeachersController@delete');
-
-
-    });
 });
 
 
@@ -256,11 +212,59 @@ Route::group([
     'name' => 'api.',
     'prefix' => 'api'
 ], function () {
-    Route::post('profile/edit/username','Student\ProfileController@storeUsername');
-    Route::post('profile/edit/address','Student\ProfileController@storeAddress');
-    Route::post('profile/edit/subject','Student\ProfileController@storeSubjectData');
+    //Student ******
+    Route::post('profile/edit/username/{user:id}','Student\ProfileController@storeUsername');
+    Route::post('profile/edit/address/{user:id}','Student\ProfileController@storeAddress');
+    Route::post('profile/edit/subject/{user:id}','Student\ProfileController@storeSubjectData');
     Route::post('profile/edit/hobbies/{user:username}','Student\ProfileController@storeHobbyData');
 
+
+    //Institute ******
+
+    //Infrastructure
+    Route::get('getUserData','User\InfrastructureController@getUserData');
+    Route::post('infra/store/{id}','User\InfrastructureController@storeUserInformation');
+    //Website
+    Route::get('/website','User\WebsiteController@getWebsiteData');
+    Route::post('website','User\WebsiteController@storeWebsiteData');
+    Route::post('website/edit','User\WebsiteController@editWebsiteData');
+    //Description
+    Route::get('/description','User\DescriptionController@getDescriptionData');
+    Route::post('description','User\DescriptionController@storeDescriptionData');
+    Route::post('description/edit','User\DescriptionController@editDescriptionData');
+    //Cover
+    Route::get('cover','User\ImageController@getCoverData');
+    Route::post('cover/upload','User\ImageController@storeImageCover');
+    //Icon
+    Route::get('icon','User\ImageController@getIconData');
+    Route::post('icon/upload','User\ImageController@storeImageIcon');
+            //->middleware('optimizeImages');
+    //Verification
+    Route::post('verification','User\VerificationController@getVerificationData');
+    //Standard
+    Route::get('standard','User\StandardController@getStandardData');
+    Route::post('standard','User\StandardController@store');
+    //Stream
+    // Route::get('stream','User\StreamController@getStreamData');
+    // Route::post('stream','User\StreamController@store');
+    //Board
+    Route::get('board','User\BoardController@getBoardData');
+    Route::post('board','User\BoardController@store');
+    //Social
+    Route::get('social','User\SocialController@getSocialData');
+    Route::post('social','User\SocialController@store');
+    //Profile
+    Route::post('gender/vission','User\ProfileController@storeGender');
+    Route::post('profile/avatar','User\ProfileController@storeAvatar');
+    //Add Education
+    Route::post('add/education','User\ProfileController@storeEducation');
+    Route::post('add/education/edit/{id}','User\ProfileController@storeEditEducation');
+    //Achievement Upload
+    Route::post('achievement/add/{channel:id}','User\AchievementController@store');
+    Route::post('achievement/edit/{achievementId}/{channel:id}','User\AchievementController@editStore');
+    //Teacher creation
+    Route::post('add/teacher/{channel:id}','User\TeachersController@store');
+    Route::post('delete/teacher/{id}','User\TeachersController@delete');
 });
 
 

@@ -402,7 +402,7 @@ export default {
       this.$validator.validate().then(result => {
         if (result) {
           axios
-            .post("api/verification", this.formData)
+            .post("/api/verification", this.formData)
             .then(response => {
               if (response.status === 200) {
                   if(response.data.message === 'Successful'){

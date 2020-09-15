@@ -20,7 +20,7 @@
                 accept="image/jpeg, image/png"
                 size="10"
                 button-class="btn"
-                
+
                 :custom-strings="{
                         upload: '<h1>Bummer!</h1>',
                         drag: 'Upload a cover picture'
@@ -57,7 +57,7 @@ export default {
         imageData : "",
         selectedImagefile : null,
         imageError : "",
-        url : 'api/cover/upload',
+        url : '/api/cover/upload',
         domainUrl: location.origin
     };
   },
@@ -70,7 +70,7 @@ export default {
   methods: {
     getCoverData() {
       axios
-        .get('api/cover')
+        .get('/api/cover')
         .then(response => {
             this.userImage = response.data.image;
             this.userId = response.data.userId;

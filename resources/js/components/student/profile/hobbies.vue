@@ -25,9 +25,17 @@
             >{{ serverError }}</span>
             <br>
                 <button
+                    class="btn btn-danger"
+                    @click="cancelTheForm()"
+                >
+
+                Cancel
+                </button>
+                <button
                     type="submit"
                     class="btn btn-primary"
-                    @click="submitSubjectsData()">
+                    @click="submitSubjectsData()"
+                    >
                     Submit
                 </button>
         </div>
@@ -75,6 +83,9 @@ export default {
         }
     },
     methods:{
+        cancelTheForm(){
+            this.hobbiesEntryChecker = true;
+        },
          standardNameOnly(hobby){
             return `${hobby.name}`
         },

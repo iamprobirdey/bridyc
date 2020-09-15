@@ -2,7 +2,7 @@
   <div>
       Your achievement
       <div v-for="(achievement,index) in achievementData" :key="index">
-          <img :src="baseUrl+ achievement.user_id +'/achievement/'+achievement.image_path" class="rounded-circle" alt="" height="50" width="50">
+          <img :src="baseUrl+achievement.image_path" class="rounded-circle" alt="" height="50" width="50">
           <h3>{{achievement.title}}</h3>
           <p>{{achievement.description}}</p>
 
@@ -90,8 +90,8 @@ export default {
       },
       channelId : '',
       additionUrl: '',
-      url: location.origin + '/user/dashboard/api/achievement/',
-      baseUrl: location.origin+'/media/channel/',
+      url: location.origin + '/api/achievement/',
+      baseUrl: location.origin+'/',
       editingUrlChecker: false,
       achievementId : '',
       achievementIndex : '',

@@ -18,7 +18,7 @@
       >
         <label for="exampleInputEmail1">Describe Your Institute</label>
 
-        <textarea 
+        <textarea
           rows="5"
           id="description"
           v-model="formData.description"
@@ -63,7 +63,7 @@ export default {
       formData: {
         description: ""
       },
-      url: "api/description",
+      url: "/api/description",
       descriptionError: ""
     };
   },
@@ -88,7 +88,7 @@ export default {
       this.$validator.validate().then(result => {
         if (result) {
           if (this.websiteLinkFromServer != "")
-            this.url = "api/description/edit";
+            this.url = "/api/description/edit";
           console.log(this.url);
           axios
             .post(this.url, this.formData)

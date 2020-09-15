@@ -187,8 +187,8 @@ __webpack_require__.r(__webpack_exports__);
       },
       channelId: '',
       additionUrl: '',
-      url: location.origin + '/user/dashboard/api/achievement/',
-      baseUrl: location.origin + '/media/channel/',
+      url: location.origin + '/api/achievement/',
+      baseUrl: location.origin + '/',
       editingUrlChecker: false,
       achievementId: '',
       achievementIndex: '',
@@ -1757,11 +1757,7 @@ var render = function() {
           _c("img", {
             staticClass: "rounded-circle",
             attrs: {
-              src:
-                _vm.baseUrl +
-                achievement.user_id +
-                "/achievement/" +
-                achievement.image_path,
+              src: _vm.baseUrl + achievement.image_path,
               alt: "",
               height: "50",
               width: "50"

@@ -30,7 +30,7 @@
         </div>
         <br>
         <br>
-       
+
     </div>
 </template>
 
@@ -56,7 +56,7 @@ export default {
   methods: {
     getStandardData() {
       axios
-        .get("api/standard")
+        .get("/api/standard")
         .then(response => {
           this.userData = response.data.channel;
           this.userDataLength = this.userData.length;
@@ -91,7 +91,7 @@ export default {
     submitStandardData(){
         if(this.userDataLength != this.value.length)
         axios
-            .post('api/standard',this.value)
+            .post('/api/standard',this.value)
             .then(response => {
                 this.userData = [];
                 this.userData = response.data.data;

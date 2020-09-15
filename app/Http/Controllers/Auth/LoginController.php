@@ -72,7 +72,7 @@ class LoginController extends Controller
 
                 $redirectRoute = [
                     'student' => '/',
-                    'institute' => '/user/dashboard'
+                    'institute' => '/'
                 ];
 
 

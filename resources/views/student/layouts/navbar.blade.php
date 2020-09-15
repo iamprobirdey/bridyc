@@ -26,13 +26,13 @@
                 </li>
             </ul>
 
-            @if (auth()->check() && auth()->user()->isUser() === 'student')
+            @if (auth()->check() && auth()->user()->isStudent())
                 <a class="btn btn-primary" href="{{url('/edit/profile/'.auth()->user()->username)}}">Profile</a>
             @endif
 
 
-            @if (auth()->check() && auth()->user()->isUser() === 'institute')
-                <a class="btn btn-primary" data-trigger="focus" data-toggle="popover" data-placement="bottom" href="/user/dashboard">
+            @if (auth()->check() && auth()->user()->isInstitute())
+                <a class="btn btn-primary" data-trigger="focus" data-toggle="popover" data-placement="bottom" href="{{route('channel.index',auth()->user()->channel->title)}}">
                     Dashboard
                 </a>
             @endif

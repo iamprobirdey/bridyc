@@ -359,7 +359,7 @@ export default {
   methods: {
     getUserData() {
       axios
-        .get("api/getUserData")
+        .get("/api/getUserData")
         .then(response => {
           if (response.status === 200) {
             this.infrastructure = response.data.user[0];
@@ -374,7 +374,7 @@ export default {
       this.$validator.validate().then(result => {
         if (result) {
           axios
-            .post("api/infra/store/" + this.infrastructure.id, this.formData)
+            .post("/api/infra/store/" + this.infrastructure.id, this.formData)
             .then(response => {
               this.infrastructureStatus = false;
               this.infrastructure = response.data.channel;
