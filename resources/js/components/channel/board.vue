@@ -4,7 +4,7 @@
         <div v-if="userData != null && boardDataStatus === true">
             <h5>Here, is your list of board available in your school</h5>
             <button class="btn btn-success" v-for="(board,index) in userData" :key="index">
-                {{board.board.name}}
+                {{board.name}}
             </button>
             <button class="btn" @click="editTheboard()">
                 <i class="fa fa-pencil" aria-hidden="true"></i>
@@ -53,11 +53,11 @@ export default {
                 axios
             .get("/api/board")
             .then(response => {
-            this.userData = response.data.channel;
-            this.boardData = response.data.board;
-            if(this.userData.length > 0) this.boardDataStatus = true;
-                this.theBoardDecider();
-            })
+                    this.userData = response.data.channel[0].board;
+                    this.boardData = response.data.board;
+                    if(this.userData.length > 0) this.boardDataStatus = true;
+                        this.theBoardDecider();
+                })
             .catch(errors => {
                 console.log('i am error'+errors);
                 Vue.toasted.error("Something went wrong", {
@@ -71,7 +71,7 @@ export default {
             if(this.userData != null){
                 this.boardData.map(board => {
                     this.userData.map(data =>{
-                        if(data.board.name === board.name){
+                        if(data.name === board.name){
                             this.value.push(board);
                             }
                         });
@@ -90,7 +90,7 @@ export default {
                 .post('/api/board',this.value)
                 .then(response => {
                     this.userData = [];
-                    this.userData = response.data.data;
+                    this.userData = response.data.data[0].board;
                     this.streamDataStatus = true;
                     this.theBoardDecider();
                 })

@@ -16,4 +16,8 @@ class UserEducation extends Model
         'activities_and_sociaties',
         'description'
     ];
+
+    public function user(){
+        return $this->belongsTo(User::class,'user_id','id');
+    }
 }

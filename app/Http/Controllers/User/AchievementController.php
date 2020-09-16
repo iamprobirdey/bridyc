@@ -18,6 +18,8 @@ class AchievementController extends Controller
     }
 
     public function store(Channel $channel,Request $request){
+        $this->authorize('view',current_user());
+        $this->authorize('viewforchannel',current_user());
         $request->validate([
             'image_path' => 'required',
             'title' => 'required|string',

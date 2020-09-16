@@ -20,7 +20,9 @@ class ProfileController extends Controller
     }
 
     public function storeGender(StoreUserGenderValidation $request){
-        $user  = User::findOrFail(auth()->id());
+        $this->authorize('view',current_user());
+        $this->authorize('viewforchannel',current_user());
+        $user  = User::findOrFail(current_user_id());
         $user->gender  = $request->validated()['gender'];
         $user->vission = $request->validated()['vission'];
         $user->update();
@@ -31,21 +33,26 @@ class ProfileController extends Controller
     }
 
     public function storeEducation(StoreUserEducationValidation $request){
+        $this->authorize('view',current_user());
+        $this->authorize('viewforchannel',current_user());
         auth()->user()->addEducation($request->validated());
         return response()->json([
             'message' => true
         ]);
     }
-    public function storeEditEducation($id , StoreUserEducationValidation $request){
-        $user  = UserEducation::findOrFail($id);
-        $user->update($request->validated());
+    public function storeEditEducation(UserEducation $userEducation , StoreUserEducationValidation $request){
+        $this->authorize('updatingEducationByUser',$userEducation);
+        $this->authorize('viewforchannel',current_user());
+        $userEducation->update($request->validated());
         return response()->json([
                     'message' => true,
-                    'user' => $user
+                    'user' => $userEducation
                 ]);
     }
 
     public function storeAvatar(Request $request){
+        $this->authorize('view',current_user());
+        $this->authorize('viewforchannel',current_user());
         $request->validate([
             'image' => 'required'
         ]);
@@ -57,7 +64,7 @@ class ProfileController extends Controller
         $realImage = Image::make($request->input('image'));
         $realImage->fit(600,600,null,'center');
         $image = $imageS = $imageM = Image::canvas(600,600, '#ffffff')->insert($realImage);
-        $path = "media/channel/" . auth()->id()."/profile/";
+        $path = "media/channel/" . current_user_id()."/profile/";
         if(is_dir($path)){
             $avatar = auth()->user()->avatar;
             if($avatar != null){
@@ -90,7 +97,7 @@ class ProfileController extends Controller
             $imageS->save(public_path($path).'s-'.$imageName);
             //FacadesImageOptimizer::optimize($path.'s-',$imageName);
         }
-        $user = User::find(auth()->id());
+        $user = User::find(current_user_id());
         $user->avatar = $imageName;
         $user->update();
         return response()->json([

@@ -21,7 +21,7 @@ class Standard extends Model
         });
     }
 
-    public function channelstandard(){
-        return $this->belongsToMany(ChannelStandard::class);
+    public function channel(){
+        return $this->belongsToMany(Channel::class,'channel_standards','channel_id','standard_id');
     }
 }

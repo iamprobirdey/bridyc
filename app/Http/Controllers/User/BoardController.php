@@ -17,21 +17,23 @@ class BoardController extends Controller
     }
 
     public function getBoardData(ModelHelperServices $modelHelperServices){
+        $this->authorize('viewforchannel',current_user());
+        $this->authorize('view',current_user());
         $board = $modelHelperServices::getBoards();
-        $channelBoard = ChannelBoard::where('user_id',Auth::id())
-                ->with('board')
-                ->get();
+        $channelBoard = Channel::where('user_id',current_user_id())
+                        ->with('board')
+                        ->get();
         return response()->json([
             'board' => $board,
             'channel' => $channelBoard
         ]);
     }
     public function store(Request $request,ModelHelperServices $modelHelperServices){
+        $this->authorize('viewforchannel',current_user());
+        $this->authorize('view',current_user());
         $clientBoardData = $request->all();
         $board = $modelHelperServices::getBoards();
-        ChannelBoard::where('user_id',Auth::Id())
-                            ->delete();
-        $channel = Channel::where('user_id',Auth::id())->first();
+        $channel = Channel::select('id')->where('user_id',current_user_id())->first();
         $insertData = array();
         foreach($clientBoardData as $item){
             foreach($board as $boardData){
@@ -40,19 +42,22 @@ class BoardController extends Controller
                     array(
                         'board_id' => $item['id'],
                         'channel_id' => $channel->id,
-                        'user_id' => Auth::id()
                         )
                     );
                 }
             }
         }
 
-        ChannelBoard::insert($insertData);
-        $insertData = ChannelBoard::where('user_id',Auth::id())
-                        ->with('board')
-                        ->get();
+        if(ChannelBoard::where('channel_id',current_user()->channel->id)->exists()){
+            $channel->board()->detach();
+        }
+
+        if(!empty($insertData)){
+            $channel->board()->attach($insertData);
+        }
+
         return response()->json([
-            'data' => $insertData
+            'data' => $channel->with('board')->get()
         ]);
     }
 }

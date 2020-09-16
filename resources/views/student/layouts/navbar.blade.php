@@ -32,7 +32,7 @@
 
 
             @if (auth()->check() && auth()->user()->isUser() === 'institute')
-                <a class="btn btndashboard mr-2" data-trigger="focus" data-toggle="popover" data-placement="bottom" href="/user/dashboard">
+        <a class="btn btndashboard mr-2" data-trigger="focus" data-toggle="popover" data-placement="bottom" href="{{route('channel.index',current_user()->channel->title)}}">
                 <i class="fa fa-th-large" aria-hidden="true"></i> My Dashboard
                 </a>
             @endif

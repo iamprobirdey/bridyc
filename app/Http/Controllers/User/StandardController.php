@@ -9,6 +9,7 @@ use App\Standard;
 use App\ChannelStandard;
 use App\Http\Requests\Standard\StoreAndUpdateUserStandardValidation;
 use DB;
+use Illuminate\Auth\Events\CurrentDeviceLogout;
 
 class StandardController extends Controller
 {
@@ -21,7 +22,7 @@ class StandardController extends Controller
         $this->authorize('viewforchannel',current_user());
         $this->authorize('view',current_user());
         $standard = Standard::all();
-        $channelStandard = ChannelStandard::where('user_id',current_user_id())
+        $channelStandard = Channel::select('id')->where('user_id',current_user_id())
                             ->with('standard')
                             ->get();
         return response()->json([
@@ -30,11 +31,11 @@ class StandardController extends Controller
         ]);
     }
     public function store(Request $requets){
+        $this->authorize('viewforchannel',current_user());
+        $this->authorize('view',current_user());
         $data = $requets->all();
         $standard = Standard::all();
-        ChannelStandard::where('user_id',current_user_id())
-                            ->delete();
-        $channel = Channel::where('user_id',current_user_id())->first();
+        $channel = Channel::select('id')->where('user_id',current_user_id())->first();
         $insertData = array();
         foreach($data as $item){
             foreach($standard as $stand){
@@ -43,23 +44,22 @@ class StandardController extends Controller
                     array(
                         'standard_id' => $item['id'],
                         'channel_id' => $channel->id,
-                        'user_id' => current_user_id()
                         )
                     );
                 }
             }
         }
-        if(ChannelStandard::where('user_id',current_user_id())->exists()){
-                $channel->channelstandard->delete();
+        if(ChannelStandard::where('channel_id',current_user()->channel->id)->exists()){
+            //ChannelStandard::where('channel_id',current_user()->channel->id)->delete();
+            $channel->standard()->detach();
         }
 
         if(!empty($insertData)){
-            $channel->channelstandard->save($insertData);
+            $channel->standard()->attach($insertData);
         }
+
         return response()->json([
-            'data' => ChannelStandard::where('user_id',current_user_id())
-                        ->with('standard')
-                        ->get()
+            'data' => $channel->with('standard')->get()
         ]);
     }
 }

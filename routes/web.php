@@ -1,5 +1,7 @@
 <?php
 
+use App\Channel;
+use App\UserEducation;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Route;
@@ -22,7 +24,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@test');
 
 Route::get('hobby',function(){
-    return 'hobby';
+   dd(UserEducation::with('user')->get());
 });
 
 
@@ -258,7 +260,7 @@ Route::group([
     Route::post('profile/avatar','User\ProfileController@storeAvatar');
     //Add Education
     Route::post('add/education','User\ProfileController@storeEducation');
-    Route::post('add/education/edit/{id}','User\ProfileController@storeEditEducation');
+    Route::post('add/education/edit/{user_education:id}','User\ProfileController@storeEditEducation');
     //Achievement Upload
     Route::post('achievement/add/{channel:id}','User\AchievementController@store');
     Route::post('achievement/edit/{achievementId}/{channel:id}','User\AchievementController@editStore');
