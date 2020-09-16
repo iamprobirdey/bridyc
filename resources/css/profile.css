@@ -1,0 +1,47 @@
+.profileheader {
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#011737), color-stop(#002847), color-stop(#003954), color-stop(#004a5f), to(#005b67));
+  background-image: linear-gradient(to right top, #011737, #002847, #003954, #004a5f, #005b67);
+  font-size: 30px;
+  padding-top: 56px;
+  padding-bottom: 25px;
+  color: white;
+}
+
+.profileheader .profile-picture {
+  position: relative;
+  top: 100px;
+  border: 2px solid gainsboro;
+}
+
+.profileheader img {
+  width: 200px;
+  height: 200px;
+}
+
+.profile-edit {
+  position: relative;
+  left: 30%;
+  top: 10px;
+  z-index: inherit;
+  background-color: gainsboro;
+}
+
+.username-edit {
+  color: #6fb604;
+}
+
+.btnsubmit {
+  background-color: #003585;
+  color: white;
+  position: relative;
+  top: 5px;
+  left: 0;
+  border-radius: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.btnsubmit:hover {
+  background-color: #011737;
+  color: white;
+}

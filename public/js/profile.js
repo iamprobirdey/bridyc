@@ -138,6 +138,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 
 
@@ -237,6 +243,8 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
 //
 //
 //
@@ -574,7 +582,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -711,6 +718,10 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue_multiselect__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-multiselect */ "./node_modules/vue-multiselect/dist/vue-multiselect.min.js");
 /* harmony import */ var vue_multiselect__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue_multiselect__WEBPACK_IMPORTED_MODULE_0__);
+//
+//
+//
+//
 //
 //
 //
@@ -912,6 +923,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -1002,7 +1015,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.profile[data-v-3bd692e4]{\n    margin-top: 100px;\n}\n", ""]);
+exports.push([module.i, "\n.profile[data-v-3bd692e4]{\n    margin-top: 70px;\n    width: 700px;\n}\n", ""]);
 
 // exports
 
@@ -1699,10 +1712,9 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "profile row" }, [
+  return _c("div", { staticClass: "profile mx-auto" }, [
     _c(
       "div",
-      { staticClass: "col-sm-6" },
       [
         _c("username", {
           attrs: { username: _vm.userData.username, id: _vm.userData.id }
@@ -1711,54 +1723,66 @@ var render = function() {
       1
     ),
     _vm._v(" "),
-    _c(
-      "div",
-      { staticClass: "col-sm-6" },
-      [
-        _c("address-for-student", {
-          attrs: {
-            channels: _vm.channelsData,
-            states: _vm.statesData,
-            districts: _vm.districtsData,
-            villages: _vm.villagesData,
-            standards: _vm.standardsData,
-            userinformation: _vm.userInformationData,
-            id: _vm.userData.id
-          }
-        })
-      ],
-      1
-    ),
+    _c("br"),
     _vm._v(" "),
-    _c(
-      "div",
-      { staticClass: "col-sm-6" },
-      [
-        _c("subject", {
-          attrs: {
-            subjects: _vm.subjectsData,
-            studentssubject: _vm.studentsubjectsData,
-            id: _vm.userData.id
-          }
-        })
-      ],
-      1
-    ),
+    _c("br"),
     _vm._v(" "),
-    _c(
-      "div",
-      { staticClass: "col-sm-6" },
-      [
-        _c("hobby", {
-          attrs: {
-            hobbies: _vm.hobbiesData,
-            studentshobbies: _vm.studentHobbies,
-            username: _vm.userData.username
-          }
-        })
-      ],
-      1
-    )
+    _c("br"),
+    _vm._v(" "),
+    _c("div", { staticClass: "shadow py-4" }, [
+      _c(
+        "div",
+        { staticClass: "container" },
+        [
+          _c("address-for-student", {
+            attrs: {
+              channels: _vm.channelsData,
+              states: _vm.statesData,
+              districts: _vm.districtsData,
+              villages: _vm.villagesData,
+              standards: _vm.standardsData,
+              userinformation: _vm.userInformationData,
+              id: _vm.userData.id
+            }
+          })
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c("div", { staticClass: "row mt-5 mx-auto" }, [
+        _c(
+          "div",
+          { staticClass: "col-sm-6" },
+          [
+            _c("subject", {
+              attrs: {
+                subjects: _vm.subjectsData,
+                studentssubject: _vm.studentsubjectsData,
+                id: _vm.userData.id
+              }
+            })
+          ],
+          1
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "col-sm-6 text-right" },
+          [
+            _c("hobby", {
+              attrs: {
+                hobbies: _vm.hobbiesData,
+                studentshobbies: _vm.studentHobbies,
+                username: _vm.userData.username
+              }
+            })
+          ],
+          1
+        )
+      ])
+    ]),
+    _vm._v(" "),
+    _c("br")
   ])
 }
 var staticRenderFns = []
@@ -1844,7 +1868,7 @@ var render = function() {
               _c(
                 "div",
                 {
-                  staticClass: "form-group",
+                  staticClass: "form-group row mx-lg-5",
                   class: {
                     "has-error":
                       _vm.errors.has("channel") ||
@@ -1852,7 +1876,9 @@ var render = function() {
                   }
                 },
                 [
-                  _c("label", [_vm._v("Channel")]),
+                  _c("label", { attrs: { col: "col-sm-3 col-form-label" } }, [
+                    _vm._v("CHANNEL:")
+                  ]),
                   _vm._v(" "),
                   _c(
                     "select",
@@ -1871,7 +1897,7 @@ var render = function() {
                           expression: "'required'"
                         }
                       ],
-                      staticClass: "form-control",
+                      staticClass: "form-control col-sm-9 ml-auto",
                       attrs: { name: "channel" },
                       on: {
                         change: function($event) {
@@ -1895,7 +1921,7 @@ var render = function() {
                     },
                     [
                       _c("option", { attrs: { value: "" } }, [
-                        _vm._v("Select Schools")
+                        _vm._v("Select School")
                       ]),
                       _vm._v(" "),
                       _vm._l(_vm.channelsData, function(channel) {
@@ -1932,7 +1958,7 @@ var render = function() {
                           expression: "errors.has('channel')"
                         }
                       ],
-                      staticClass: "text-danger"
+                      staticClass: "text-danger text-center"
                     },
                     [_vm._v(_vm._s(_vm.errors.first("channel")))]
                   ),
@@ -1948,7 +1974,7 @@ var render = function() {
                           expression: "serverErrors.channel_id != ''"
                         }
                       ],
-                      staticClass: "text-danger"
+                      staticClass: "text-danger text-center"
                     },
                     [_vm._v(_vm._s(_vm.serverErrors.channel_id))]
                   )
@@ -1958,14 +1984,16 @@ var render = function() {
               _c(
                 "div",
                 {
-                  staticClass: "form-group",
+                  staticClass: "form-group row mx-lg-5",
                   class: {
                     "has-error":
                       _vm.errors.has("state") || _vm.serverErrors.state_id != ""
                   }
                 },
                 [
-                  _c("label", [_vm._v("State")]),
+                  _c("label", { attrs: { col: "col-sm-3 col-form-label" } }, [
+                    _vm._v("STATE: ")
+                  ]),
                   _vm._v(" "),
                   _c(
                     "select",
@@ -1984,7 +2012,7 @@ var render = function() {
                           expression: "'required'"
                         }
                       ],
-                      staticClass: "form-control",
+                      staticClass: "form-control col-sm-9 ml-auto",
                       attrs: { name: "state" },
                       on: {
                         change: function($event) {
@@ -2045,7 +2073,7 @@ var render = function() {
                           expression: "errors.has('state')"
                         }
                       ],
-                      staticClass: "text-danger"
+                      staticClass: "text-danger text-center"
                     },
                     [_vm._v(_vm._s(_vm.errors.first("state")))]
                   ),
@@ -2061,7 +2089,7 @@ var render = function() {
                           expression: "serverErrors.state_id != ''"
                         }
                       ],
-                      staticClass: "text-danger"
+                      staticClass: "text-danger text-center"
                     },
                     [_vm._v(_vm._s(_vm.serverErrors.state_id))]
                   )
@@ -2071,7 +2099,7 @@ var render = function() {
               _c(
                 "div",
                 {
-                  staticClass: "form-group",
+                  staticClass: "form-group row mx-5",
                   class: {
                     "has-error":
                       _vm.errors.has("district") ||
@@ -2079,7 +2107,9 @@ var render = function() {
                   }
                 },
                 [
-                  _c("label", [_vm._v("District")]),
+                  _c("label", { attrs: { col: "col-sm-3 col-form-label" } }, [
+                    _vm._v("DISTRICT:")
+                  ]),
                   _vm._v(" "),
                   _c(
                     "select",
@@ -2098,7 +2128,7 @@ var render = function() {
                           expression: "'required'"
                         }
                       ],
-                      staticClass: "form-control",
+                      staticClass: "form-control col-sm-9 ml-auto",
                       attrs: { name: "district" },
                       on: {
                         change: function($event) {
@@ -2162,7 +2192,7 @@ var render = function() {
                           expression: "errors.has('district')"
                         }
                       ],
-                      staticClass: "text-danger"
+                      staticClass: "text-danger text-center"
                     },
                     [_vm._v(_vm._s(_vm.errors.first("district")))]
                   ),
@@ -2178,7 +2208,7 @@ var render = function() {
                           expression: "serverErrors.district_id != ''"
                         }
                       ],
-                      staticClass: "text-danger"
+                      staticClass: "text-danger text-center"
                     },
                     [_vm._v(_vm._s(_vm.serverErrors.district_id))]
                   )
@@ -2188,7 +2218,7 @@ var render = function() {
               _c(
                 "div",
                 {
-                  staticClass: "form-group",
+                  staticClass: "form-group row mx-5",
                   class: {
                     "has-error":
                       _vm.errors.has("village") ||
@@ -2196,7 +2226,9 @@ var render = function() {
                   }
                 },
                 [
-                  _c("label", [_vm._v("village")]),
+                  _c("label", { attrs: { col: "col-sm-3 col-form-label" } }, [
+                    _vm._v("VILLAGE:")
+                  ]),
                   _vm._v(" "),
                   _c(
                     "select",
@@ -2215,7 +2247,7 @@ var render = function() {
                           expression: "'required'"
                         }
                       ],
-                      staticClass: "form-control",
+                      staticClass: "form-control col-sm-9 ml-auto",
                       attrs: { name: "village" },
                       on: {
                         change: function($event) {
@@ -2276,7 +2308,7 @@ var render = function() {
                           expression: "errors.has('village')"
                         }
                       ],
-                      staticClass: "text-danger"
+                      staticClass: "text-danger text-center"
                     },
                     [_vm._v(_vm._s(_vm.errors.first("village")))]
                   ),
@@ -2292,7 +2324,7 @@ var render = function() {
                           expression: "serverErrors.village_id != ''"
                         }
                       ],
-                      staticClass: "text-danger"
+                      staticClass: "text-danger text-center"
                     },
                     [_vm._v(_vm._s(_vm.serverErrors.village_id))]
                   )
@@ -2302,7 +2334,7 @@ var render = function() {
               _c(
                 "div",
                 {
-                  staticClass: "form-group",
+                  staticClass: "form-group row mx-5",
                   class: {
                     "has-error":
                       _vm.errors.has("standard") ||
@@ -2310,7 +2342,9 @@ var render = function() {
                   }
                 },
                 [
-                  _c("label", [_vm._v("standard")]),
+                  _c("label", { attrs: { col: "col-sm-3 col-form-label" } }, [
+                    _vm._v("STANDARD:")
+                  ]),
                   _vm._v(" "),
                   _c(
                     "select",
@@ -2329,7 +2363,7 @@ var render = function() {
                           expression: "'required'"
                         }
                       ],
-                      staticClass: "form-control",
+                      staticClass: "form-control col-sm-9 ml-auto",
                       attrs: { name: "standard" },
                       on: {
                         change: function($event) {
@@ -2393,7 +2427,7 @@ var render = function() {
                           expression: "errors.has('standard')"
                         }
                       ],
-                      staticClass: "text-danger"
+                      staticClass: "text-danger text-center"
                     },
                     [_vm._v(_vm._s(_vm.errors.first("standard")))]
                   ),
@@ -2409,39 +2443,41 @@ var render = function() {
                           expression: "serverErrors.standard_id != ''"
                         }
                       ],
-                      staticClass: "text-danger"
+                      staticClass: "text-danger text-center"
                     },
                     [_vm._v(_vm._s(_vm.serverErrors.standard_id))]
                   )
                 ]
               ),
               _vm._v(" "),
-              _c(
-                "button",
-                {
-                  directives: [
-                    {
-                      name: "show",
-                      rawName: "v-show",
-                      value: _vm.userInformationData != null,
-                      expression: "userInformationData != null"
+              _c("div", { staticClass: "ml-5" }, [
+                _c(
+                  "button",
+                  {
+                    directives: [
+                      {
+                        name: "show",
+                        rawName: "v-show",
+                        value: _vm.userInformationData != null,
+                        expression: "userInformationData != null"
+                      }
+                    ],
+                    staticClass: "btn btn-warning",
+                    on: {
+                      click: function($event) {
+                        return _vm.cancelForm()
+                      }
                     }
-                  ],
-                  staticClass: "btn btn-danger",
-                  on: {
-                    click: function($event) {
-                      return _vm.cancelForm()
-                    }
-                  }
-                },
-                [_vm._v("Cancel")]
-              ),
-              _vm._v(" "),
-              _c(
-                "button",
-                { staticClass: "btn btn-primary", attrs: { type: "submit" } },
-                [_vm._v("Submit")]
-              )
+                  },
+                  [_vm._v("Cancel")]
+                ),
+                _vm._v(" "),
+                _c(
+                  "button",
+                  { staticClass: "btn btnsubmit", attrs: { type: "submit" } },
+                  [_vm._v("Submit")]
+                )
+              ])
             ]
           )
         ])
@@ -2475,7 +2511,7 @@ var render = function() {
       ? _c(
           "div",
           [
-            _vm._v("\n        Your filled of interest\n        "),
+            _vm._v("\n        Your filled of interest: \n        "),
             _vm._l(_vm.studentshobbiesData, function(hobbie, index) {
               return _c(
                 "button",
@@ -2487,14 +2523,19 @@ var render = function() {
             _c(
               "button",
               {
-                staticClass: "btn btn-warning",
+                staticClass: "btn mt-n2 username-edit",
                 on: {
                   click: function($event) {
                     return _vm.editThehobbie()
                   }
                 }
               },
-              [_vm._v("Edit")]
+              [
+                _c("i", {
+                  staticClass: "fa fa-pencil",
+                  attrs: { "aria-hidden": "true" }
+                })
+              ]
             )
           ],
           2
@@ -2534,12 +2575,10 @@ var render = function() {
                     expression: "serverError != ''"
                   }
                 ],
-                staticClass: "text-danger"
+                staticClass: "text-danger text-center"
               },
               [_vm._v(_vm._s(_vm.serverError))]
             ),
-            _vm._v(" "),
-            _c("br"),
             _vm._v(" "),
             _c(
               "button",
@@ -2557,7 +2596,7 @@ var render = function() {
             _c(
               "button",
               {
-                staticClass: "btn btn-primary",
+                staticClass: "btn btnsubmit",
                 attrs: { type: "submit" },
                 on: {
                   click: function($event) {
@@ -2597,39 +2636,41 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", [
     _vm.subjectsEntryChecker
-      ? _c(
-          "div",
-          [
-            _vm._v("\n        You school sujects are\n        "),
-            _vm._l(_vm.studentssubjectData, function(subject, index) {
-              return _c(
-                "button",
-                { key: index, staticClass: "btn btn-primary m-1" },
-                [
-                  _vm._v(
-                    "\n            " +
-                      _vm._s(subject.subject.name) +
-                      "\n        "
-                  )
-                ]
-              )
-            }),
-            _vm._v(" "),
-            _c(
-              "button",
-              {
-                staticClass: "btn btn-warning",
-                on: {
-                  click: function($event) {
-                    return _vm.editTheSubject()
-                  }
+      ? _c("div", [
+          _vm._v("\n        You school sujects are:\n         "),
+          _c(
+            "button",
+            {
+              staticClass: "btn mt-n2 username-edit",
+              on: {
+                click: function($event) {
+                  return _vm.editTheSubject()
                 }
-              },
-              [_vm._v("Edit")]
-            )
-          ],
-          2
-        )
+              }
+            },
+            [
+              _c("i", {
+                staticClass: "fa fa-pencil",
+                attrs: { "aria-hidden": "true" }
+              })
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "card" },
+            _vm._l(_vm.studentssubjectData, function(subject, index) {
+              return _c("div", { key: index, staticClass: "card-body mb-3" }, [
+                _vm._v(
+                  "\n                 " +
+                    _vm._s(subject.subject.name) +
+                    "\n             "
+                )
+              ])
+            }),
+            0
+          )
+        ])
       : _vm._e(),
     _vm._v(" "),
     !_vm.subjectsEntryChecker
@@ -2665,7 +2706,7 @@ var render = function() {
                     expression: "serverError != ''"
                   }
                 ],
-                staticClass: "text-danger"
+                staticClass: "text-danger text-center"
               },
               [_vm._v(_vm._s(_vm.serverError))]
             ),
@@ -2688,7 +2729,7 @@ var render = function() {
             _c(
               "button",
               {
-                staticClass: "btn btn-primary",
+                staticClass: "btn btnsubmit ",
                 attrs: { type: "submit" },
                 on: {
                   click: function($event) {
@@ -2728,28 +2769,30 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", [
     !_vm.userNameEditing
-      ? _c("div", [
-          _c("p", [
-            _vm._v("\n            " + _vm._s(_vm.usernameData) + "\n        ")
-          ]),
-          _vm._v(" "),
+      ? _c("div", { staticClass: "text-center pl-4" }, [
+          _vm._v("\n            " + _vm._s(_vm.usernameData) + "\n\n        "),
           _c(
-            "a",
+            "button",
             {
-              staticClass: "btn btn-primary text-white",
+              staticClass: "btn mt-n2 username-edit",
               on: {
                 click: function($event) {
                   return _vm.editTheUserName()
                 }
               }
             },
-            [_vm._v("Edit")]
+            [
+              _c("i", {
+                staticClass: "fa fa-pencil",
+                attrs: { "aria-hidden": "true" }
+              })
+            ]
           )
         ])
       : _vm._e(),
     _vm._v(" "),
     _vm.userNameEditing
-      ? _c("div", [
+      ? _c("div", { staticClass: "container mx-auto" }, [
           _c(
             "form",
             {
@@ -2764,7 +2807,7 @@ var render = function() {
               _c(
                 "div",
                 {
-                  staticClass: "form-group",
+                  staticClass: "form-group row mx-5",
                   class: {
                     "has-error":
                       _vm.errors.has("userNameError.username") ||
@@ -2772,7 +2815,9 @@ var render = function() {
                   }
                 },
                 [
-                  _c("label", [_vm._v("Username")]),
+                  _c("label", { attrs: { col: "col-sm-3 col-form-label" } }, [
+                    _vm._v("Username: ")
+                  ]),
                   _vm._v(" "),
                   _c("input", {
                     directives: [
@@ -2789,6 +2834,7 @@ var render = function() {
                         expression: "'required'"
                       }
                     ],
+                    staticClass: "col-sm-9 ml-4",
                     class: {
                       "form-control": true,
                       "is-invalid": _vm.errors.has("username")
@@ -2822,7 +2868,7 @@ var render = function() {
                           expression: "errors.has('username')"
                         }
                       ],
-                      staticClass: "text-danger"
+                      staticClass: "text-danger text-center"
                     },
                     [_vm._v(_vm._s(_vm.errors.first("username")))]
                   ),
@@ -2838,32 +2884,37 @@ var render = function() {
                           expression: "userNameError.username != ''"
                         }
                       ],
-                      staticClass: "help is-danger"
+                      staticClass: "help is-danger text-center"
                     },
                     [_vm._v(_vm._s(_vm.userNameError.username))]
                   )
                 ]
               ),
               _vm._v(" "),
-              _c(
-                "button",
-                { staticClass: "btn btn-primary", attrs: { type: "submit" } },
-                [_vm._v("Submit")]
-              ),
-              _vm._v(" "),
-              _c(
-                "button",
-                {
-                  staticClass: "btn btn-warning",
-                  attrs: { type: "btn" },
-                  on: {
-                    click: function($event) {
-                      return _vm.cancelEditing()
+              _c("div", { staticClass: "ml-5" }, [
+                _c(
+                  "button",
+                  {
+                    staticClass: "btn btn-warning",
+                    attrs: { type: "btn" },
+                    on: {
+                      click: function($event) {
+                        return _vm.cancelEditing()
+                      }
                     }
-                  }
-                },
-                [_vm._v("Cancel")]
-              )
+                  },
+                  [_vm._v("Cancel")]
+                ),
+                _vm._v(" "),
+                _c(
+                  "button",
+                  {
+                    staticClass: "btn btnsubmit mt-n2",
+                    attrs: { type: "submit" }
+                  },
+                  [_vm._v("Submit")]
+                )
+              ])
             ]
           )
         ])

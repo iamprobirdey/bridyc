@@ -1,10 +1,13 @@
 <template>
-    <div class="profile row">
-        <div class="col-sm-6">
+    <div class="profile mx-auto">
+        <div>
             <username :username="userData.username" :id="userData.id"></username>
         </div>
-
-        <div class="col-sm-6">
+        <br>
+        <br>
+        <br>
+    <div class="shadow py-4">
+        <div class="container">
             <address-for-student
                 :channels="channelsData"
                 :states="statesData"
@@ -16,6 +19,7 @@
                 >
             </address-for-student>
         </div>
+        <div class="row mt-5 mx-auto">
         <div class="col-sm-6">
             <subject
                 :subjects="subjectsData"
@@ -25,7 +29,7 @@
              </subject>
         </div>
 
-        <div class="col-sm-6">
+        <div class="col-sm-6 text-right">
             <hobby
                 :hobbies="hobbiesData"
                 :studentshobbies="studentHobbies"
@@ -33,8 +37,10 @@
             >
             </hobby>
         </div>
+      </div>
     </div>
-
+    <br>
+</div>
 </template>
 
 <script>
@@ -132,6 +138,7 @@ export default {
 
 <style scoped>
     .profile{
-        margin-top: 100px;
+        margin-top: 70px;
+        width: 700px;
     }
 </style>
