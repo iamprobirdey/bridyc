@@ -48,17 +48,23 @@ export default {
             },
             userNameError: {
                 username: ''
-            }
+            },
+            userId: ''
         };
     },
     props:{
         username: {
             type : String,
             default : null
+        },
+        id: {
+            type : Number,
+            default : null
         }
     },
     created(){
         this.usernameData = this.username;
+        this.userId = this.id;
     },
     mounted(){
     },
@@ -71,7 +77,7 @@ export default {
             if (result) {
 
             axios
-                .post('/api/edit/username',this.userName)
+                .post('/api/profile/edit/username/'+this.userId,this.userName)
                 .then(response => {
                 if (response.data.message === true) {
                     Vue.toasted.success("User name is succefully created", {
@@ -81,6 +87,7 @@ export default {
                     this.usernameData = this.userName.username;
                     this.userNameEditing = false;
                     this.urlChanger(this.usernameData);
+                    window.location.reload();
 
                 }
                 })

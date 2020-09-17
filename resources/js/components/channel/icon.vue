@@ -26,6 +26,7 @@
                         drag: 'Upload your logo'
                     }"
                 @change="onChange"
+                name="image"
             ></picture-input>
         <div class="btnsuca">
             <button
@@ -57,7 +58,7 @@ export default {
       userImage : '',
       userImageStatus : false,
       userId: null,
-      url : 'api/icon/upload',
+      url : '/api/icon/upload',
       domainUrl: location.origin
     };
   },
@@ -67,7 +68,7 @@ export default {
   methods: {
     getImageData() {
         axios
-            .get('api/icon')
+            .get('/api/icon')
             .then(response => {
                 this.userImage = response.data.image;
                 this.userId = response.data.userId;

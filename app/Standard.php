@@ -11,13 +11,17 @@ class Standard extends Model
     protected static function boot()
     {
         parent::boot();
-        static::saving(function ($model) { 
+        static::saving(function ($model) {
             $model->standard_name = Str::ucfirst($model->standard_name);
             $model->code = strtolower($model->standard_name);
         });
-        static::updating(function ($model) { 
+        static::updating(function ($model) {
             $model->standard_name = Str::ucfirst($model->standard_name);
             $model->code = strtolower($model->standard_name);
         });
+    }
+
+    public function channelstandard(){
+        return $this->belongsToMany(ChannelStandard::class);
     }
 }

@@ -14,19 +14,19 @@
           </li>
         @else
         <li class="nav-item active">
-        <a class="nav-link" href="{{url('/user/dashboard')}}">
+        <a class="nav-link" href="{{url('/user/dashboard/'.auth()->user()->channel->title)}}">
         <i class="fa fa-th-large sidebaricons" aria-hidden="true"></i>
             Dashboard
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{url('/user/dashboard/channel')}}">
+          <a class="nav-link" href="{{url('/user/dashboard/channel/'.auth()->user()->channel->title)}}">
           <i class="fa fa-desktop sidebaricons" aria-hidden="true"></i>
             Channel
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{url('/user/dashboard/edit')}}">
+          <a class="nav-link" href="{{url('/user/dashboard/edit/'.auth()->user()->channel->title)}}">
           <i class="fa fa-pencil-square sidebaricons" aria-hidden="true"></i>
               Edit Channel
           </a>

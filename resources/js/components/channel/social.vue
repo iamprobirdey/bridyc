@@ -142,7 +142,7 @@ export default {
     methods:{
         getSocailData(){
             axios
-                .get('api/social')
+                .get('/api/social')
                 .then(response => {
                     this.socialData = response.data.channel.extra_attributes.social;
                     console.log(this.socialData);
@@ -158,7 +158,7 @@ export default {
             this.$validator.validate().then(result => {
                 if(result){
                     axios
-                        .post('api/social',this.formData)
+                        .post('/api/social',this.formData)
                         .then(response => {
                             this.socialData = response.data.data.extra_attributes.social;
                             this.getTheModel = false;

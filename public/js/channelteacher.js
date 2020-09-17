@@ -215,7 +215,7 @@ __webpack_require__.r(__webpack_exports__);
         'password': ''
       },
       additionUrl: '',
-      url: location.origin + '/user/dashboard/api/'
+      url: location.origin + '/api/'
     };
   },
   props: {
@@ -278,7 +278,7 @@ __webpack_require__.r(__webpack_exports__);
     deleteFromChannel: function deleteFromChannel(id, index) {
       var _this2 = this;
 
-      this.additionUrl = 'delete/teacher/';
+      this.additionUrl = '/delete/teacher/';
       axios.post(this.url + this.additionUrl + id).then(function (response) {
         if (response.data.message === true) {
           Vue.toasted.success("Teacher account from your school is destroyed", {

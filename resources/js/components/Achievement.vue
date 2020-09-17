@@ -5,6 +5,14 @@
       <h6 class="d-inline">Add your institute's achievements here</h6>
       <button class="btn btnadd p-1 ml-1 rounded-0" @click="addAchievement()"><i class="fa fa-plus" aria-hidden="true"></i></button>
       <div v-for="(achievement,index) in achievementData" :key="index">
+<<<<<<< HEAD
+          <img :src="baseUrl+achievement.image_path" class="rounded-circle" alt="" height="50" width="50">
+          <h3>{{achievement.title}}</h3>
+          <p>{{achievement.description}}</p>
+
+          <button class="btn btn-success"  @click="editTheForm(achievement,index)">Edit</button>
+
+=======
           
           <div class="card shadow mx-auto sidebar-facard">
             <img :src="baseUrl+ achievement.user_id +'/achievement/'+achievement.image_path">
@@ -18,6 +26,7 @@
           <div class="text-center">
           <button class="btn mb-5 editachieve" data-toggle="tooltip" data-placement="right" title="Edit" @click="editTheForm(achievement,index)"><i class="fa fa-pencil" aria-hidden="true"></i></button>
           </div>
+>>>>>>> 19d61af7f9cecff55717c68ad3feee200ceb4d6c
       </div>
             <br>
             <div class="mt-5" v-if="openAchievementForm">
@@ -105,8 +114,8 @@ export default {
       },
       channelId : '',
       additionUrl: '',
-      url: location.origin + '/user/dashboard/api/achievement/',
-      baseUrl: location.origin+'/media/channel/',
+      url: location.origin + '/api/achievement/',
+      baseUrl: location.origin+'/',
       editingUrlChecker: false,
       achievementId : '',
       achievementIndex : '',

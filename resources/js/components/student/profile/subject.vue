@@ -27,7 +27,13 @@
               v-show="serverError != ''"
               class="text-danger text-center"
             >{{ serverError }}</span>
-            
+            <br>
+            <button
+                class="btn btn-danger"
+                @click="cancelTheForm()"
+            >
+                Cancel
+            </button>
                 <button
                     type="submit"
                     class="btn btnsubmit "
@@ -48,7 +54,7 @@ export default {
             subjectsEntryChecker : true,
             selectedSubjectValueStored: [],
             serverError: '',
-
+            userId: ''
         };
     },
     props:{
@@ -59,11 +65,16 @@ export default {
         studentssubject:{
             type : Array,
             default : null
+        },
+        id : {
+            type : Number,
+            default : null
         }
     },
     created(){
         this.subjectsData = this.subjects;
         this.studentssubjectData = this.studentssubject;
+        this.userId = this.id;
     },
     mounted(){
         if(this.studentssubjectData.length > 0){
@@ -72,6 +83,9 @@ export default {
         }
     },
     methods:{
+        cancelTheForm(){
+            this.subjectsEntryChecker = true;
+        },
          standardNameOnly(subject){
             return `${subject.name}`
         },
@@ -83,7 +97,7 @@ export default {
                 });
                 if(this.isEqual(subjectFormData)){
                     axios
-                        .post('/api/profile/edit/subject',this.value)
+                        .post('/api/profile/edit/subject/'+this.userId,this.value)
                         .then(response => {
                             this.studentssubjectData = [];
                             this.studentssubjectData = response.data.data;
@@ -112,6 +126,7 @@ export default {
                 });
             });
             if(
+                items.length > this.selectedSubjectValueStored ||
                 this.selectedSubjectValueStored.length === 0 ||
                 this.selectedSubjectValueStored.length != counter
                )

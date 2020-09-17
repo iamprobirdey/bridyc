@@ -2,12 +2,12 @@
     <div>
         <!-- Form start from here -->
 
-        
+
             <transition name="slide-fade">
                 <div v-if="websiteOnPresent">
                     <h4>Your website link</h4>
                     <p style="color:blue">
-                        {{ websiteLinkFromServer }}   
+                        {{ websiteLinkFromServer }}
                     </p>
                     <button
                             class="btn btnwebdes rounded-0"
@@ -61,7 +61,7 @@
                 </button>
                 <button type="submit" class="btn btnsubmit mt-n3">Submit</button>
             </form>
-        
+
     </div>
 </template>
 
@@ -75,7 +75,7 @@ export default {
             },
             websiteLinkError: "",
             websiteOnPresent: false,
-            url: "api/website/"
+            url: "/api/website/"
         };
     },
     mounted() {
@@ -86,7 +86,7 @@ export default {
             this.$validator.validate().then(result => {
                 if (result) {
                     if (this.websiteLinkFromServer != "")
-                        this.url = "api/website/edit";
+                        this.url = "/api/website/edit";
                     axios
                         .post(this.url, this.formData)
                         .then(response => {
@@ -109,7 +109,7 @@ export default {
         },
         getWebsiteData() {
             axios
-                .get("api/website")
+                .get("/api/website")
                 .then(response => {
                     if (response.status === 200) {
                         if (response.data.data[0]["website_link"] != null) {

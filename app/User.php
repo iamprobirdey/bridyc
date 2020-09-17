@@ -39,6 +39,19 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
+    public function isInstitute(){
+        if($this->user_type === 'institute')
+            return true;
+    }
+    public function isStudent(){
+        if($this->user_type === 'student')
+            return true;
+    }
+    public function isTeacher(){
+        if($this->user_type === 'teacher')
+            return true;
+    }
+
     public function addEducation($data){
         return $this->education()->create($data);
     }

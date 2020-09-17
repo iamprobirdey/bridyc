@@ -24,16 +24,20 @@ class ImageController extends Controller
     }
 
     public function getIconData(){
+        $this->authorize('viewforchannel',auth()->user());
+        $this->authorize('checkChannelForUser',auth()->user()->channel);
         $channel = Channel::select('icon_avatar')
-                ->where('user_id',Auth::id())
+                ->where('user_id',auth()->id())
                 ->first();
         return response()->json([
             'image' => $channel->icon_avatar,
-            'userId' => Auth::id()
+            'userId' => auth()->id()
         ]);
     }
 
     public function storeImageIcon(StoreIconImageValidation $request){
+        $this->authorize('viewforchannel',auth()->user());
+        $this->authorize('checkChannelForUser',auth()->user()->channel);
         $time = Carbon::now('Asia/Kolkata');
         $imageName = $time->year.$time->month.$time->day.( $time->micro + mt_rand(11111,99999) ).'.webp';
 
@@ -88,6 +92,8 @@ class ImageController extends Controller
     }
 
     public function getCoverData(){
+        $this->authorize('viewforchannel',auth()->user());
+        $this->authorize('checkChannelForUser',auth()->user()->channel);
         $channel = Channel::select('cover_avatar')
                 ->where('user_id',Auth::id())
                 ->first();
@@ -98,6 +104,8 @@ class ImageController extends Controller
     }
 
     public function storeImageCover(StoreCoverImageValidation $request){
+        $this->authorize('viewforchannel',auth()->user());
+        $this->authorize('checkChannelForUser',auth()->user()->channel);
         $time = Carbon::now('Asia/Kolkata');
         $imageName = $time->year.$time->month.$time->day.( $time->micro + mt_rand(11111,99999) ).'.webp';
 

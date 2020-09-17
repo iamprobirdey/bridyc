@@ -7,7 +7,6 @@ use Illuminate\Http\Request;
 use App\Http\Requests\Description\StoreDescriptionValidation;
 use App\Http\Requests\Description\EditDescriptionValidation;
 use App\Channel;
-use Auth;
 use DB;
 
 class DescriptionController extends Controller
@@ -18,7 +17,9 @@ class DescriptionController extends Controller
     }
 
     public function getDescriptionData(){
-        $userId = Auth::id();
+        $this->authorize('viewforchannel',auth()->user());
+        $this->authorize('checkChannelForUser',auth()->user()->channel);
+        $userId = auth()->id();
         $channel =  Channel::select('id','description')->where('user_id',$userId)->get();
         return response()->json([
             'data' => $channel
@@ -26,7 +27,9 @@ class DescriptionController extends Controller
     }
 
     public function editDescriptionData(EditDescriptionValidation $request){
-        $userId = Auth::id();
+        $this->authorize('viewforchannel',auth()->user());
+        $this->authorize('checkChannelForUser',auth()->user()->channel);
+        $userId = auth()->id();
         DB::table('channels')
             ->where('user_id',$userId)
             ->update([
@@ -43,7 +46,9 @@ class DescriptionController extends Controller
     }
 
     public function storeDescriptionData(StoreDescriptionValidation $request){
-        $userId = Auth::id();
+        $this->authorize('viewforchannel',auth()->user());
+        $this->authorize('checkChannelForUser',auth()->user()->channel);
+        $userId = auth()->id();
         DB::table('channels')
             ->where('user_id',$userId)
             ->update([

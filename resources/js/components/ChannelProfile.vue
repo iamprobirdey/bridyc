@@ -3,134 +3,56 @@
 
         <h2 class="mx-sm-4 px-sm-2">Principal's Profile</h2>
         <br>
-        <div v-if="genderVissionChecker" class="mx-sm-4 px-sm-2">
-            <div class="row mx-sm-0">
-                <div class="col-sm-3 d-flex">
-                    Gender:
-                     <div class="card gendercard ml-1">
-                          <div class="card-body">{{channelProfileData.gender}}</div>
-                     </div>
-                </div>
-            <br>
-            <br>
-               <div class="col-sm-9 d-flex">
-                   Vision:
-                    <div class="card visioncard shadow ml-2">
-                         <div class="card-body">{{channelProfileData.vission}}</div>
-                    </div>
-               </div>
-            </div>
-            <br>
-             <button class="btn btnadd" @click="editGenderAndVission()"><i class="fa fa-pencil" aria-hidden="true"></i> Edit</button>
-        </div>
-    <form @submit.prevent="getFormData()" v-if="!genderVissionChecker">
-      <div class="row">
-      <div
-        class="form-group col-sm-5 px-sm-5"
-        :class="{'has-error':errors.has('profileError') || profileError != ''}"
-      >
-        <label for="exampleInputEmail1">Gender</label>
+        <profile-gender :user="channelProfileData"></profile-gender>
 
-            <select
-                v-model="profileData.gender"
-                class="form-control"
-                name="gender"
-                v-validate="'required'"
-          >
-            <option value>Select your gender</option>
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-          </select>
-        <span v-show="errors.has('gender')" class="text-danger">
-          {{
-          errors.first("gender")
-          }}
-        </span>
-        <span v-show="profileError != ''" class="help is-danger">
-          {{
-          profileError.gender
-          }}
-        </span>
-      </div>
-         <div
-          class="form-group col-sm-7"
-          :class="{'has-error': errors.has('vission') || profileError.vission != '' }"
-        >
-          <label>Vission</label>
-          <textarea
-            rows="2"
-            v-model="profileData.vission"
-            v-validate="'required'"
-            class=""
-            data-vv-delay="20"
-            name="vission"
-            type="text"
-            :class="{'form-control': true, 'is-invalid': errors.has('vission') }"
-            placeholder="What's your vission for the institute?"
-          />
-          <i v-show="errors.has('vission')" class="is-invalid"></i>
-
-          <span v-show="errors.has('vission')" class="text-danger">{{ errors.first('vission') }}</span>
-          <span v-show="profileError.vission != ''" class="text-danger">{{ profileError.vission }}</span>
-        </div>
-       </div> 
-       <div class="mx-sm-4 px-sm-2">
-      <button
-        type="button"
-        class="btn btn-success"
-        @click="goBack()"
-      >Go Back</button>
-      <button type="submit" class="btn btnsubmit px-3 mt-n2">Submit</button>
-      </div>
-    </form>
     <br>
    <div class="mx-sm-4 px-sm-2">
     <h4>
         Add more details(Recomended)
     </h4>
-    
+
         <div class="mt-5" v-for="(education,index) in channelProfileData.education" :key="education.id">
             <div class="row mx-auto">
             <ul class="nav flex-column col-sm-6">
                <li>
                    <div class="card mx-sm-3 shadow profiledetails">
                        <div class="card-body mt-n2"><i class="fa fa-university" style="color:#003585;"  aria-hidden="true"></i> School : <strong>{{education.school_name}}</strong></div>
-                    </div> 
+                    </div>
                    </li>
-               <li> 
+               <li>
                    <br>
                    <div class="card mx-sm-3 shadow profiledetails">
                        <div class="card-body mt-n2"><i class="fa fa-graduation-cap" style="color:#003585;"  aria-hidden="true"></i> Degree : {{education.degree}}</div>
                     </div>
                    </li>
-               <li> 
+               <li>
                    <br>
                    <div class="card mx-sm-3 shadow profiledetails">
                        <div class="card-body mt-n2"><i class="fa fa-book" style="color:#003585;" aria-hidden="true"></i> Field of study : {{education.field_of_study}}</div>
                     </div>
                    </li>
                    <br>
-               <li> 
+               <li>
                    <div class="card mx-sm-3 shadow profiledetails">
                        <div class="card-body mt-n2"><i class="fa fa-calendar-o" style="color:#003585;" aria-hidden="true"></i> Start Date : {{education.start_date}}</div>
                     </div>
                    </li>
                    <br>
-               <li> 
+               <li>
                    <div class="card mx-sm-3 shadow profiledetails">
                        <div class="card-body mt-n2"><i class="fa fa-calendar" style="color:#003585;" aria-hidden="true"></i> End Date : {{education.end_date}}</div>
                     </div>
                    </li>
                    <br>
-               <li> 
+               <li>
                    <div class="card mx-sm-3 shadow profiledetails">
                        <div class="card-body mt-n2"><i class="fa fa-percent" style="color:#003585;"  aria-hidden="true"></i> Grade : {{education.grade}}</div>
                     </div>
                    </li>
             </ul>
-            
+
             <ul class="nav flex-column col-sm-6 mt-5 mt-sm-0">
-               <li> 
+               <li>
                    <div class="card mx-sm-3 shadow profiledetails" style="height:auto;">
                        <div class="card-body mt-n2">Activity and Sociaty : {{education.activities_and_sociaties}}</div>
                     </div>
@@ -145,7 +67,7 @@
             </div>
             <button class="btn btnadd p-1" @click="editTheEducation(education,index)"><i class="fa fa-pencil" aria-hidden="true"></i></button>
         </div>
-    
+
 
     <button class="btn btnadd p-1" @click="addEducation()">+</button>
    </div>
@@ -165,7 +87,7 @@
 
                 <form @submit.prevent="getQualificationData()">
                     <h6 class="mb-3 mt-n2">Highest Education:</h6>
-                
+
                     <div
                     class="form-group"
                     :class="{'has-error': errors.has('school_name') || qualificationError.school_name != '' }"
@@ -358,6 +280,12 @@
 </template>
 
 <script>
+
+import PictureInput from "vue-picture-input";
+import profileGender from './channel/profileGender.vue';
+
+
+
 export default {
     data(){
         return{
@@ -394,7 +322,11 @@ export default {
             domainUrl: location.origin,
             educationPath: '',
             qualificationEditDataId: '',
-            qualificationEditIndex: ''
+            qualificationEditIndex: '',
+            //Image profile stuff
+            imageData : '',
+            imageError : '',
+            imageChecker : false,
         };
     },
     props: {
@@ -403,47 +335,21 @@ export default {
             default: null
         }
     },
+    components: {
+        PictureInput,
+        'profile-gender' : profileGender
+    },
     created(){
         this.channelProfileData = this.user;
         if(this.channelProfileData.gender == null) this.genderVissionChecker = false;
+        if(this.channelProfileData.avatar == null) this.imageChecker = true;
+        console.log(this.channelProfileData);
     },
     mounted(){
 
     },
     methods: {
-        getFormData(){
-            this.$validator.validate().then(result => {
-                if (result) {
-                    axios
-                        .post(this.domainUrl+'/user/dashboard/api/gender/vission', this.profileData)
-                        .then(response => {
-                            if (response.data.message === true) {
-                                Vue.toasted.success("Profile is updated", {
-                                    position: "top-center",
-                                    duration: 5000
-                                });
-                                this.channelProfileData.gender = this.profileData.gender;
-                                this.channelProfileData.vission = this.profileData.vission;
-                                this.genderVissionChecker = true;
-                            }
-                        })
-                        .catch(errors => {
-                             Vue.toasted.error("Something went wrong", {
-                                    position: "top-center",
-                                    duration: 5000
-                            });
-                              if (errors.response.data.errors.gender) {
-                                    this.profileError.gender =
-                                    errors.response.data.errors.gender[0];
-                                }
-                                  if (errors.response.data.errors.vission) {
-                                    this.profileError.vission =
-                                    errors.response.data.errors.vission[0];
-                                }
-                        });
-                }
-            });
-        },
+
         getQualificationData(){
              this.$validator.validate().then(result => {
                 if (result) {
@@ -455,12 +361,10 @@ export default {
                                 if(this.qualificationEditDataId == ''){
                                     this.channelProfileData.education.push(this.qualificationData);
                                 }else{
-                                    //this.channelProfileData.education.splice(this.qualificationEditIndex,1,response.data.user);
-                                    this.channelProfileData.education.$set(this.qualificationEditIndex,response.data.user);
-
+                                    this.channelProfileData.education.splice(this.qualificationEditIndex,1,response.data.user);
                                 }
+                                $('#addEducation').modal('hide');
                             }
-                            $('#addEducation').modal('hide');
                         })
                         .catch(errors => {
                             if (errors.response.data.errors.school_name) {
@@ -502,14 +406,10 @@ export default {
         goBack(){
             this.genderVissionChecker = true;
         },
-        editGenderAndVission(){
-            this.profileData.gender = this.channelProfileData.gender;
-            this.profileData.vission = this.channelProfileData.vission;
-            this.genderVissionChecker = false;
-        },
+
         addEducation(){
             this.educationPath = '';
-            this.educationPath = this.domainUrl+'/user/dashboard/api/add/education';
+            this.educationPath = this.domainUrl+'/api/add/education';
             this.qualificationEditDataId = '';
             this.emptyEducationForm();
             $('#addEducation').modal('show');
@@ -525,7 +425,8 @@ export default {
             this.qualificationData.description = education.description;
             this.qualificationEditDataId = education.id;
             this.educationPath = '';
-            this.educationPath = this.domainUrl+'/user/dashboard/api/add/education/edit/'+education.id;
+            this.educationPath = this.domainUrl+'/api/add/education/edit/'+education.id;
+            console.log(this.educationPath);
             this.qualificationEditIndex = index;
             $('#addEducation').modal('show');
 
@@ -539,7 +440,41 @@ export default {
             this.qualificationData.grade = '';
             this.qualificationData.activities_and_sociaties = '';
             this.qualificationData.description = '';
+        },
+         onChange(image) {
+            if (this.$refs.pictureInput.image)
+                this.imageData = this.$refs.pictureInput.image;
+        },
+        onImageSubmit(){
+            if(this.imageData != ''){
+                const formData = new FormData();
+                formData.append("image", this.imageData);
+                axios
+                .post(this.domainUrl+'/api/profile/avatar', formData)
+                .then(response => {
+                    onUploadProgress: progressEvent => {
+                    console.log(progressEvent.loaded / progressEvent.total);
+                    };
+                    this.channelProfileData.avatar = response.data.image;
+                    this.imageChecker = false;
+                })
+                .catch(errors => {
+                    if (errors.response.data.errors.image) {
+                        this.imageError = errors.response.data.errors.image[0];
+                    }
+                });
+            }
+            else{
+                this.imageError = 'Image is empty';
+            }
+        },
+        onCancleImageEdit(){
+            this.imageChecker = false;
+        },
+        editTheImage(){
+            this.imageChecker = true;
         }
-    }
+    },
+
 }
 </script>

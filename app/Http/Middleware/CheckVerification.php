@@ -33,7 +33,7 @@ class CheckVerification
         if(!Auth::user()->is_verified()
             && $request->path() === 'user/dashboard/verification'
         ){
-            return redirect('user/dashboard/');
+            return redirect('user/dashboard/'.current_user()->channel->title);
         }
         return $next($request);
     }

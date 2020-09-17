@@ -22,6 +22,8 @@ class VerificationController extends Controller
     }
 
     public function getVerificationData(ChannelVerificationValidation $request){
+        $this->authorize('viewforchannel',current_user());
+        $this->authorize('checkVerificationDoesntExist',current_user());
         DB::beginTransaction();
         try{
             $verification =

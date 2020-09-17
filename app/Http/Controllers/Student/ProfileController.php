@@ -15,7 +15,6 @@ use App\UserInformation;
 use App\Village;
 use App\Hobby;
 use App\StudentHobby;
-use Illuminate\Support\Facades\Validator as FacadesValidator;
 
 class ProfileController extends Controller
 {
@@ -25,6 +24,7 @@ class ProfileController extends Controller
     }
 
     public function index(User $user){
+        $this->authorize('view',$user);
         $channels = Channel::select('id','title')->get();
         $states = State::select('id','name')->get();
         $districts = District::select('id','name')->get();
@@ -57,7 +57,8 @@ class ProfileController extends Controller
         ]);
     }
 
-    public function storeUsername(Request $request){
+    public function storeUsername(User $user , Request $request){
+        $this->authorize('updatingstudent',$user);
         $validated = $request->validate([
             'username' => 'required|unique:users',
         ]);
@@ -70,7 +71,8 @@ class ProfileController extends Controller
         ]);
     }
 
-    public function storeAddress(Request $request){
+    public function storeAddress(User $user, Request $request){
+        $this->authorize('updatingstudent',$user);
         $validated = $request->validate([
             'channel_id' => 'required|exists:channels,id',
             'state_id' => 'required|exists:states,id',
@@ -79,13 +81,13 @@ class ProfileController extends Controller
             'standard_id' => 'required|exists:standards,id',
         ]);
 
-        $userInformation = new UserInformation();
-        $userInformation->channel_id = $validated['channel_id'];
-        $userInformation->state_id = $validated['state_id'];
-        $userInformation->district_id = $validated['district_id'];
-        $userInformation->village_id = $validated['village_id'];
-        $userInformation->standard_id = $validated['standard_id'];
-        auth()->user()->userInformation()->save($userInformation);
+        $validated['user_id'] = auth()->id();
+
+        if(UserInformation::where('user_id',auth()->id())->exists()){
+            UserInformation::where('user_id',auth()->id())->delete();
+        }
+        UserInformation::create($validated);
+
         $userInformation = UserInformation::where('user_id',auth()->id())
                             ->with([
                                 'channel',
@@ -101,7 +103,10 @@ class ProfileController extends Controller
         ]);
     }
 
-    public function storeSubjectData(Request $request){
+    public function storeSubjectData(User $user, Request $request){
+        $this->authorize('updatingstudent',$user);
+        //$this->authorize('updatingStudentSubject',$user);
+
         $data = $request->all();
         $subjects = Subject::all();
         StudentSubject::where('user_id',auth()->id())
@@ -131,6 +136,7 @@ class ProfileController extends Controller
     }
 
     public function storeHobbyData(User $user , Request $request){
+        $this->authorize('updatingstudent',$user);
         $data = $request->validate([
             'hobby_id' => 'required|array|exists:hobbies,id',
         ]);

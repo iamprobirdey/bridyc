@@ -184,6 +184,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -202,8 +211,8 @@ __webpack_require__.r(__webpack_exports__);
       },
       channelId: '',
       additionUrl: '',
-      url: location.origin + '/user/dashboard/api/achievement/',
-      baseUrl: location.origin + '/media/channel/',
+      url: location.origin + '/api/achievement/',
+      baseUrl: location.origin + '/',
       editingUrlChecker: false,
       achievementId: '',
       achievementIndex: '',
@@ -1802,6 +1811,34 @@ var render = function() {
       _vm._v(" "),
       _vm._l(_vm.achievementData, function(achievement, index) {
         return _c("div", { key: index }, [
+          _vm._v("\n<<<<<<< HEAD\n          "),
+          _c("img", {
+            staticClass: "rounded-circle",
+            attrs: {
+              src: _vm.baseUrl + achievement.image_path,
+              alt: "",
+              height: "50",
+              width: "50"
+            }
+          }),
+          _vm._v(" "),
+          _c("h3", [_vm._v(_vm._s(achievement.title))]),
+          _vm._v(" "),
+          _c("p", [_vm._v(_vm._s(achievement.description))]),
+          _vm._v(" "),
+          _c(
+            "button",
+            {
+              staticClass: "btn btn-success",
+              on: {
+                click: function($event) {
+                  return _vm.editTheForm(achievement, index)
+                }
+              }
+            },
+            [_vm._v("Edit")]
+          ),
+          _vm._v("\n\n=======\n          \n          "),
           _c("div", { staticClass: "card shadow mx-auto sidebar-facard" }, [
             _c("img", {
               attrs: {
@@ -1820,9 +1857,9 @@ var render = function() {
               _vm._v(" "),
               _c("p", { staticClass: "card-text" }, [
                 _vm._v(
-                  "\n              " +
+                  "\n                " +
                     _vm._s(achievement.description) +
-                    "\n            "
+                    "\n              "
                 )
               ])
             ])
@@ -1851,7 +1888,8 @@ var render = function() {
                 })
               ]
             )
-          ])
+          ]),
+          _vm._v("\n>>>>>>> 19d61af7f9cecff55717c68ad3feee200ceb4d6c\n      ")
         ])
       }),
       _vm._v(" "),

@@ -26,8 +26,8 @@
                 </li>
             </ul>
 
-            @if (auth()->check() && auth()->user()->isUser() === 'student')
-                <a class="btn btndashboard mr-2" href="{{url('/edit/profile/'.auth()->user()->username)}}"><i class="fa fa-user-circle-o" aria-hidden="true"></i> Profile</a>
+            @if (auth()->check() && auth()->user()->isStudent())
+                <a class="btn btn-primary" href="{{url('/edit/profile/'.auth()->user()->username)}}">Profile</a>
             @endif
 
 

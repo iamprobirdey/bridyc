@@ -505,7 +505,7 @@ __webpack_require__.r(__webpack_exports__);
       this.wait = true;
       this.$validator.validate().then(function (result) {
         if (result) {
-          axios.post("api/verification", _this3.formData).then(function (response) {
+          axios.post("/api/verification", _this3.formData).then(function (response) {
             if (response.status === 200) {
               if (response.data.message === 'Successful') {
                 _this3.verificationStatus = true;

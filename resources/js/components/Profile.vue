@@ -1,7 +1,7 @@
 <template>
     <div class="profile mx-auto">
         <div>
-            <username :username="userData.username"></username>
+            <username :username="userData.username" :id="userData.id"></username>
         </div>
         <br>
         <br>
@@ -15,6 +15,7 @@
                 :villages="villagesData"
                 :standards="standardsData"
                 :userinformation="userInformationData"
+                :id="userData.id"
                 >
             </address-for-student>
         </div>
@@ -23,6 +24,7 @@
             <subject
                 :subjects="subjectsData"
                 :studentssubject="studentsubjectsData"
+                :id="userData.id"
              >
              </subject>
         </div>

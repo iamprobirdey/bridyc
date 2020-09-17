@@ -180,6 +180,7 @@ export default {
                 'standard_id' : ''
             },
             addressDataChecker: true,
+            userId: ''
         };
     },
     props:{
@@ -206,9 +207,14 @@ export default {
         userinformation:{
             type : Object,
             default : null
+        },
+        id: {
+            type : Number,
+            default : null
         }
     },
     created(){
+        this.userId = this.id;
         this.channelsData = this.channels;
         this.statesData = this.states;
         this.districtsData = this.districts;
@@ -222,15 +228,16 @@ export default {
         this.$validator.validate().then(result => {
             if (result) {
             axios
-                .post('/api/profile/edit/address',this.userFormData)
+                .post('/api/profile/edit/address/'+this.userId,this.userFormData)
                 .then(response => {
                 if (response.data.message === true) {
-                    Vue.toasted.success("User name is succefully created", {
+                    Vue.toasted.success("Address is succefully created", {
                     position: "top-center",
                     duration: 5000
                     });
                     this.userInformationData = {};
                     this.userInformationData = response.data.userData;
+                    console.log(this.userInformationData);
                     this.addressDataChecker = true;
                 }
                 })
