@@ -1,12 +1,12 @@
 <template>
     <div>
         <div v-if="hobbiesEntryChecker">
-            Your filled of interest
+            Your filled of interest: 
             <button class="btn btn-primary m-1" v-for="(hobbie,index) in studentshobbiesData" :key="index">
                 {{hobbie.name}}
             </button>
 
-            <button class="btn btn-warning" @click="editThehobbie()">Edit</button>
+            <button class="btn mt-n2 username-edit" @click="editThehobbie()"><i class="fa fa-pencil" aria-hidden="true"></i></button>
         </div>
         <div v-if="!hobbiesEntryChecker">
             <multiselect
@@ -21,12 +21,12 @@
                 </multiselect>
                      <span
               v-show="serverError != ''"
-              class="text-danger"
+              class="text-danger text-center"
             >{{ serverError }}</span>
-            <br>
+            
                 <button
                     type="submit"
-                    class="btn btn-primary"
+                    class="btn btnsubmit"
                     @click="submitSubjectsData()">
                     Submit
                 </button>

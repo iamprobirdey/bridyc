@@ -1,12 +1,16 @@
 <template>
     <div>
         <div v-if="subjectsEntryChecker">
-            You school sujects are
-            <button class="btn btn-primary m-1" v-for="(subject,index) in studentssubjectData" :key="index">
+            You school sujects are:
+             <button class="btn mt-n2 username-edit" @click="editTheSubject()"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+            <div class="card">
+                 <div class="card-body mb-3" v-for="(subject,index) in studentssubjectData" :key="index">
+                     {{subject.subject.name}}
+                 </div>
+            </div> 
+            <!--button class="btn btn-primary m-1" v-for="(subject,index) in studentssubjectData" :key="index">
                 {{subject.subject.name}}
-            </button>
-
-            <button class="btn btn-warning" @click="editTheSubject()">Edit</button>
+            </button-->
         </div>
         <div v-if="!subjectsEntryChecker">
             <multiselect
@@ -21,12 +25,12 @@
                 </multiselect>
                      <span
               v-show="serverError != ''"
-              class="text-danger"
+              class="text-danger text-center"
             >{{ serverError }}</span>
-            <br>
+            
                 <button
                     type="submit"
-                    class="btn btn-primary"
+                    class="btn btnsubmit "
                     @click="submitSubjectsData()">
                     Submit
                 </button>

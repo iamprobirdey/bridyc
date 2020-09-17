@@ -1,5 +1,4 @@
 .profileheader {
-  background-image: -webkit-gradient(linear, left bottom, right top, from(#011737), color-stop(#002847), color-stop(#003954), color-stop(#004a5f), to(#005b67));
   background-image: linear-gradient(to right top, #011737, #002847, #003954, #004a5f, #005b67);
   font-size: 30px;
   padding-top: 56px;
@@ -45,3 +44,4 @@
   background-color: #011737;
   color: white;
 }
+

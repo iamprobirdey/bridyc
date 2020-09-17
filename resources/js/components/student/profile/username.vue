@@ -1,20 +1,20 @@
 <template>
     <div>
-        <div v-if="!userNameEditing">
-            <p>
+        <div v-if="!userNameEditing" class="text-center pl-4">
                 {{usernameData}}
-            </p>
-            <a class="btn btn-primary text-white" @click="editTheUserName()">Edit</a>
+
+            <button class="btn mt-n2 username-edit" @click="editTheUserName()"><i class="fa fa-pencil" aria-hidden="true"></i></button>
         </div>
 
-        <div v-if="userNameEditing">
+        <div v-if="userNameEditing" class="container mx-auto">
             <form @submit.prevent="userNameForm()">
             <div
-                class="form-group"
+                class="form-group row mx-5"
                 :class="{'has-error':errors.has('userNameError.username') || userNameError.username != ''}"
             >
-                <label>Username</label>
+                <label col="col-sm-3 col-form-label">Username: </label>
                     <input
+                    class="col-sm-9 ml-4"
                     id="username"
                     v-model="userName.username"
                     v-validate="'required'"
@@ -24,11 +24,13 @@
                     :class="{'form-control': true,'is-invalid': errors.has('username')}"
                     placeholder="Enter your favorite user-name"
                     />
-                <span v-show="errors.has('username')" class="text-danger">{{errors.first("username")}}</span>
-                <span v-show="userNameError.username != ''" class="help is-danger">{{userNameError.username}}</span>
+                <span v-show="errors.has('username')" class="text-danger text-center">{{errors.first("username")}}</span>
+                <span v-show="userNameError.username != ''" class="help is-danger text-center">{{userNameError.username}}</span>
             </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+            <div class="ml-5">
                 <button type="btn" class="btn btn-warning" @click="cancelEditing()">Cancel</button>
+                <button type="submit" class="btn btnsubmit mt-n2">Submit</button>
+            </div>   
             </form>
         </div>
 

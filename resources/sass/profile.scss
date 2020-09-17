@@ -1,8 +1,46 @@
 .profileheader{
     background-image: linear-gradient(to right top, #011737, #002847, #003954, #004a5f, #005b67);
     font-size: 30px;
-    padding-top: 220px;
+    padding-top: 56px;
     padding-bottom:25px;
-    text-align: center;
     color: white;
+    
+    .profile-picture{
+        position:relative;
+        top:100px;
+        border: 2px solid gainsboro;
+    }
+    img{
+        width: 200px;
+        height: 200px;
+    }
 }
+.profile-edit{
+   position:relative;
+   left:30%;
+   top:10px;
+   z-index: inherit;
+   background-color:gainsboro;
+}
+
+//scss for username in profile section starts here
+.username-edit{
+    color: rgb(111, 182, 4);
+}
+.btnsubmit{
+    background-color:  #003585;
+    color: white;
+    position: relative;
+    top: 5px;
+    left: 0;
+    border-radius: 20px;
+    padding-left: 15px;
+    padding-right:15px;
+    
+    &:hover{
+      background-color: #011737;
+      color: white;
+    }
+  }
+  
+//scss for username in profile section ends here 

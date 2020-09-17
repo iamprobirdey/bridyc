@@ -12,16 +12,16 @@
         <div v-if="!addressDataChecker">
             <form @submit.prevent="addressForm()">
              <div
-                class="form-group" :class="{'has-error': errors.has('channel') || serverErrors.channel_id != '' }"
+                class="form-group row mx-lg-5" :class="{'has-error': errors.has('channel') || serverErrors.channel_id != '' }"
             >
-            <label>Channel</label>
+            <label col="col-sm-3 col-form-label">CHANNEL:</label>
             <select
               v-model="userFormData.channel_id"
-              class="form-control"
+              class="form-control col-sm-9 ml-auto"
               name="channel"
               v-validate="'required'"
             >
-              <option value>Select Schools</option>
+              <option value>Select School</option>
 
               <option
                 v-for="channel in channelsData"
@@ -31,20 +31,20 @@
             </select>
             <i v-show="errors.has('channel')" class="is-invalid"></i>
 
-            <span v-show="errors.has('channel')" class="text-danger">{{ errors.first('channel') }}</span>
+            <span v-show="errors.has('channel')" class="text-danger text-center">{{ errors.first('channel') }}</span>
             <span
               v-show="serverErrors.channel_id != ''"
-              class="text-danger"
+              class="text-danger text-center"
             >{{ serverErrors.channel_id }}</span>
           </div>
 
             <div
-                class="form-group" :class="{'has-error': errors.has('state') || serverErrors.state_id != '' }"
+                class="form-group row mx-lg-5" :class="{'has-error': errors.has('state') || serverErrors.state_id != '' }"
             >
-            <label>State</label>
+            <label col="col-sm-3 col-form-label">STATE: </label>
             <select
+              class="form-control col-sm-9 ml-auto"
               v-model="userFormData.state_id"
-              class="form-control"
               name="state"
               v-validate="'required'"
             >
@@ -58,20 +58,20 @@
             </select>
             <i v-show="errors.has('state')" class="is-invalid"></i>
 
-            <span v-show="errors.has('state')" class="text-danger">{{ errors.first('state') }}</span>
+            <span v-show="errors.has('state')" class="text-danger text-center">{{ errors.first('state') }}</span>
             <span
               v-show="serverErrors.state_id != ''"
-              class="text-danger"
+              class="text-danger text-center"
             >{{ serverErrors.state_id }}</span>
           </div>
 
             <div
-                class="form-group" :class="{'has-error': errors.has('district') || serverErrors.district_id != '' }"
+                class="form-group row mx-5" :class="{'has-error': errors.has('district') || serverErrors.district_id != '' }"
             >
-            <label>District</label>
+            <label col="col-sm-3 col-form-label">DISTRICT:</label>
             <select
               v-model="userFormData.district_id"
-              class="form-control"
+              class="form-control col-sm-9 ml-auto"
               name="district"
               v-validate="'required'"
             >
@@ -85,20 +85,20 @@
             </select>
             <i v-show="errors.has('district')" class="is-invalid"></i>
 
-            <span v-show="errors.has('district')" class="text-danger">{{ errors.first('district') }}</span>
+            <span v-show="errors.has('district')" class="text-danger text-center">{{ errors.first('district') }}</span>
             <span
               v-show="serverErrors.district_id != ''"
-              class="text-danger"
+              class="text-danger text-center"
             >{{ serverErrors.district_id }}</span>
           </div>
 
             <div
-                class="form-group" :class="{'has-error': errors.has('village') || serverErrors.village_id != '' }"
+                class="form-group row mx-5" :class="{'has-error': errors.has('village') || serverErrors.village_id != '' }"
             >
-            <label>village</label>
+            <label col="col-sm-3 col-form-label">VILLAGE:</label>
             <select
               v-model="userFormData.village_id"
-              class="form-control"
+              class="form-control col-sm-9 ml-auto"
               name="village"
               v-validate="'required'"
             >
@@ -112,20 +112,20 @@
             </select>
             <i v-show="errors.has('village')" class="is-invalid"></i>
 
-            <span v-show="errors.has('village')" class="text-danger">{{ errors.first('village') }}</span>
+            <span v-show="errors.has('village')" class="text-danger text-center">{{ errors.first('village') }}</span>
             <span
               v-show="serverErrors.village_id != ''"
-              class="text-danger"
+              class="text-danger text-center"
             >{{ serverErrors.village_id }}</span>
           </div>
 
           <div
-                class="form-group" :class="{'has-error': errors.has('standard') || serverErrors.standard_id != '' }"
+                class="form-group row mx-5" :class="{'has-error': errors.has('standard') || serverErrors.standard_id != '' }"
             >
-            <label>standard</label>
+            <label col="col-sm-3 col-form-label">STANDARD:</label>
             <select
               v-model="userFormData.standard_id"
-              class="form-control"
+              class="form-control col-sm-9 ml-auto"
               name="standard"
               v-validate="'required'"
             >
@@ -139,14 +139,16 @@
             </select>
             <i v-show="errors.has('standard')" class="is-invalid"></i>
 
-            <span v-show="errors.has('standard')" class="text-danger">{{ errors.first('standard') }}</span>
+            <span v-show="errors.has('standard')" class="text-danger text-center">{{ errors.first('standard') }}</span>
             <span
               v-show="serverErrors.standard_id != ''"
-              class="text-danger"
+              class="text-danger text-center"
             >{{ serverErrors.standard_id }}</span>
           </div>
-            <button v-show="userInformationData != null"  class="btn btn-danger" @click="cancelForm()">Cancel</button>
-            <button type="submit" class="btn btn-primary">Submit</button>
+          <div class="ml-5">
+            <button v-show="userInformationData != null"  class="btn btn-warning" @click="cancelForm()">Cancel</button>
+            <button type="submit" class="btn btnsubmit">Submit</button>
+          </div>
         </form>
         </div>
     </div>
