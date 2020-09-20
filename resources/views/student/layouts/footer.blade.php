@@ -1,10 +1,10 @@
 @include('student.layouts.loginRegister')
 
 <footer>
-    <div class="footclass mx-auto">
-        <div class="d-flex flex-wrap justify-content-between">
+    <div class="footer-class text-center mt-5 py-5">
+        <div class="row mx-0">
 
-          <div class="flexw mb-4">
+          <div class="col-sm-4 mb-4">
             <h5>Legal</h5>
             <div class="d-flex flex-column">
                 <a href="{{url('/privacy')}}">Privacy Policy</a>
@@ -12,7 +12,7 @@
             </div>
           </div>
   <br>
-          <div class="flexw mb-4">
+          <div class="col-sm-4 mb-4">
             <h5>Social</h5>
             <div class="listsocial d-flex flex-column">
                 <a href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
@@ -21,13 +21,13 @@
             </div>
           </div>
   <br>
-          <div class="flexw mb-4">
+          <div class="col-sm-4 mb-4">
             <h5>Partner</h5>
-            <p>If you want to partner with us,
+            <p>If you are an institute and wants to partner with us,
               call us at:
-              <ul>
-                <li>+91-9435285795</li>
-                <li>+91-9476844478</li>
+              <ul class="listsocial mt-n3">
+                <li class="ml-n5">+91-9435285795</li>
+                <li class="ml-n5">+91-9476844478</li>
               </ul> 
             </p>
           </div>
@@ -35,14 +35,14 @@
         </div>
     <br>
     <hr>
-    <div class="comp">
+    <div class="mt-n3">
       <div class="d-flex justify-content-center">
         <a href="#" class="mr-4" >About Us</a>
       <a href="{{url('contact')}}" class="mr-4">Contact Us</a>
         <p>A product by <a href="https://bucketbyte.com/" target="_blank">Bucket Byte</a></p>
       </div>
       <div class="d-flex justify-content-center">
-        <p class="mr-1"><i class="fa fa-copyright" aria-hidden="true"></i> 2020 Bridyc.com |</p>
+        <p class="mr-1"><i class="fa fa-copyright" aria-hidden="true"></i> 2020 bridyc.com |</p>
         <p>All rights reserved </p>
       </div>
     </div>

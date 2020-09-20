@@ -14,17 +14,17 @@
           <p class="sitevalue">Learn | Share | Engage | Find Institute</p>
           <p>And we charge you <strong>Nothing</strong></p>
           <br>
-          <a href="#">Read More</a>
+          <a href="#" class="p-2 p-md-3">Read More</a>
         </div>
     </div>
 
      <div class="container focusplace">
         <div class="row">
-        <div class="col-md-4">
+        <div class="col-lg-4">
                 <img class="imgguest shadow-lg" src="/images/waariko.jpg" alt="guest photo">
            </div>
 
-        <div class="col-md-8">
+        <div class="col-lg-8">
              <div class="videosection">
                 <h2>"I was fascinated by avbshknvkn hssdlskd kemflemf kfldfl dfhkdhn dbdbs s hjasb hd"</h2>
                 <div class="guest mx-auto mt-3">
@@ -35,7 +35,6 @@
                      10 August,2020  |  16 min  |  Season 1
                 </div>
                 <br>
-                <p>Topic of discussion: Startup and the world</p>
                 <p>A paragraph of Summary of what the discussion is like. This helps students to choose whether to watch it or nor.
                   Making it easier for them to decide
                 </p>
@@ -64,33 +63,23 @@
        </div>
    </div>
 
-
-
-    <div id="channel">
-        <channel :channel="{{json_encode($channel)}}"></channel>
-    </div>
-
    <br>
    <section>
      <div class="container-fluid">
-     <div class="row aboutdiv mx-auto">
-       <div class="col-lg-3">
-         <img src="images/aboutimg.png" alt="girl sitting home" class="imgdes">
-       </div>
-       <div class="col-lg-9 aboutdesc">
-         <h4>Find your institute here!</h4>
-         <hr>
+       <div class="aboutdesc mx-auto">
+         <h4>SCHOOLS AND COLLEGES</h4>
+         
          <p>
-           Bridyc helps students get admission in the school of their
-           choice, we provide information to students and parents regarding the best
-           courses, Graduation, Post-graduation and other education programmes available.
-           We arrange meetings with the concerned college
-           officials to ease up the college admission process.
+           Look out for the right institute for you or your kids. Visit the institute you like
+           and find out more about them.
        </p>
        </div>
-     </div>
    </div>
    </section>
+
+   <div id="channel">
+        <channel :channel="{{json_encode($channel)}}"></channel>
+    </div>
 
 @endsection
 

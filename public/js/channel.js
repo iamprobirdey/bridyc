@@ -121,11 +121,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -163,9 +158,7 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("section", [
-    _c("div", { staticClass: "institute container-fluid" }, [
-      _vm._m(0),
-      _vm._v(" "),
+    _c("div", { staticClass: "institute container py-5" }, [
       _c("br"),
       _vm._v(" "),
       _c(
@@ -192,45 +185,48 @@ var render = function() {
                   }
                 }),
                 _vm._v(" "),
-                _c("h4", { staticClass: "card-title" }, [
+                _c("h4", { staticClass: "card-title mt-n5 text-center" }, [
                   _vm._v(_vm._s(channel.title))
                 ]),
                 _vm._v(" "),
-                _c("p", { staticClass: "card-text" }, [
+                _c("p", { staticClass: "card-text mt-n2 district-name" }, [
                   _vm._v(
-                    "\n                 " +
+                    "\n                 Dist: " +
                       _vm._s(channel.district.name) +
                       "\n           "
                   )
                 ]),
                 _vm._v(" "),
                 channel.description != null
-                  ? _c("p", { staticClass: "card-text destext" }, [
-                      _vm._v(
-                        "\n               " +
-                          _vm._s(channel.description) +
-                          "\n           "
-                      )
-                    ])
+                  ? _c(
+                      "p",
+                      {
+                        staticClass: "card-text destext d-none d-md-block mt-3"
+                      },
+                      [
+                        _vm._v(
+                          "\n               " +
+                            _vm._s(channel.description) +
+                            "\n           "
+                        )
+                      ]
+                    )
                   : _vm._e()
               ]),
               _vm._v(" "),
               _c(
                 "a",
                 {
-                  staticClass: "visitins",
+                  staticClass: "btn btnvisit mt-n3",
                   attrs: { href: _vm.domainUrl + "/channel/" + channel.slug }
                 },
-                [_vm._v("Visit Institute")]
-              ),
-              _vm._v(" "),
-              _c(
-                "a",
-                {
-                  staticClass: "btn btnvisit ml-auto",
-                  attrs: { href: _vm.domainUrl + "/channel/" + channel.slug }
-                },
-                [_vm._v("Visit Institute")]
+                [
+                  _vm._v("Visit Institute "),
+                  _c("i", {
+                    staticClass: "fa fa-long-arrow-right",
+                    attrs: { "aria-hidden": "true" }
+                  })
+                ]
               )
             ]
           )
@@ -240,21 +236,7 @@ var render = function() {
     ])
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "insclass" }, [
-      _c("h6", [_vm._v("Institutes")]),
-      _vm._v(" "),
-      _c("img", {
-        staticClass: "gradcap",
-        attrs: { src: "/images/school.svg" }
-      })
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 

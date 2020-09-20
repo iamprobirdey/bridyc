@@ -1,158 +1,75 @@
 
 .institute{
     text-align: center;
-    margin-top: -20px;
     @include screensize(laptop){
-        margin-top: 120px;
+        margin-top: 30px;
        }
 
- .insclass{
-          @include screensize(tablet){
-              text-align: left;
-              margin-left: 12px;
-          }
-              h6{
-                 font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-                 font-size: 22px;
-                 white-space:nowrap;
-                 display:inline-block;
-                @include screensize(tablet){
-                   font-size: 32px;
-                  }
-                }
-             .gradcap{
-                   width: 28px;
-                   height: 28px;
-                   display:inline-block;
-             }
-          }
-
-
     .institutecard{
-       width: 148px;
+       width: 165px;
        height: auto;
-       background-color: white;
        align-items: center;
        margin-bottom: 55px;
        transition: all ease .5s;
        border: 1px;
-
-       @include screensize(formotog4){
-        width: 167px;
-        height: auto;
-       }
-       @include screensize(foriphone6x){
-        width: 175px;
-       height: auto;
-       }
-       @include screensize(forcards){
-        width: 190px;
-        height: auto;
-       }
-       @include screensize(tablet){
-        width: 228px;
-        height:210px;
-       }
-
-       @include screensize(laptop){
-        width: 235px;
-        height:200px;
-       }
-       @include screensize(desktop){
-        width: 275px;
-        height:400px;
-       }
-
-       .card-body{
-           padding-left: 0;
-           padding-right: 0;
-           padding-top: 10px;
-        .inslogo{
-            width: 48px;
-            height: 48px;
-            @include screensize(formotog4){
-                width: 55px;
-               height: 55px;
-               }
-               @include screensize(forcards){
-                width: 63px;
-                height: 63px;
-               }
-               @include screensize(tablet){
-                width: 70px;
-                height: 70px;
-               }
-               @include screensize(desktop){
-                width: 80px;
-                height: 100px;
-               }
+           &:hover{
+            box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;  
+          }
+           @include screensize(laptop){
+          width: 260px;
+          height: auto;
+          }
+           .card-body{
+                 padding-left: 0;
+                 padding-right: 0;
+                 padding-top: 10px;
+                 .inslogo{
+                     width: 65%;
+                     height: auto;
+                     border: 1px solid gainsboro;
+                     position: relative;
+                     top:-50px;
+                     @include screensize(tablet){
+                         width: 45%;
+                         height: auto;
+                  }
         }
+        
         h4{
-            font-size: 15px;
-            margin-top: 10px;
+            font-size: 16px;
             color: #011737;
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            @include screensize(formotog4){
-                font-size: 18px;
-               }
-             @include screensize(forcards){
-            font-size: 20px;
-           }
            @include screensize(tablet){
-            font-size: 20px;
-           }
-           @include screensize(desktop){
-            font-size: 24px;
+               font-size: 20px;
            }
         }
-        p{
+        .district-name{
             font-size: 13px;
             margin-bottom: 2px;
-            @include screensize(formotog4){
-                font-size: 16px;
-               }
-            @include screensize(forcards){
-                font-size: 16px;
+               @include screensize(tablet){
+                   font-weight: 500;
                }
         }
-
-       }
+      }
        .destext{
-           display: none;
-           @include screensize(laptop){
             display: block;
-            height: 30px;
-            margin-bottom: 20px;
-           }
+            height: 100px;
+            margin-bottom: 20px;  
+            color: grey;
+            text-overflow: ellipsis;
        }
 
     }
 
-    .visitins{
-        font-size: small;
-        margin-bottom: 15px;
-        color: #011737;
-        font-weight: 700;
-        text-decoration: underline;
-        @include screensize(desktop){
-            display: none;
-           }
-    }
     .btnvisit{
-        display:none;
-        position: relative;
-        top:-23px;
-        border-bottom-right-radius: 0;
-        border-top-right-radius: 0;
-       background-color: #011737;
-        color: white;
-        @include screensize(desktop){
-            display: block;
-            width: 60%;
-            padding-bottom: 10px;
-           }
-           &:hover{
-            background-color:#012152 ;
-        }
+         font-size: small;
+         margin-bottom: 15px;
+         font-weight: 700;
+       //gradient design below
+       background-image: linear-gradient(45deg, #990066, #003585);   
+       background-clip: text;
+      -webkit-text-fill-color: transparent; 
+      -moz-background-clip: text;
+      -moz-text-fill-color: transparent;       
     }
 }

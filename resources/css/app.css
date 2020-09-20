@@ -319,101 +319,27 @@ nav .navbtn:hover {
   text-decoration: none;
 }
 
-.footclass {
-  text-align: center;
+.footer-class {
   background-image: -webkit-gradient(linear, left bottom, right top, from(#011737), color-stop(#002847), color-stop(#003954), color-stop(#004a5f), to(#005b67));
   background-image: linear-gradient(to right top, #011737, #002847, #003954, #004a5f, #005b67);
-  margin-top: 10px;
-  padding-top: 50px;
-  padding-bottom: 50px;
   color: white;
 }
 
-.footclass a {
+.footer-class a {
   color: white;
 }
 
-.footclass .listsocial {
+.footer-class .listsocial {
   list-style: none;
 }
 
-.footclass .listsocial a {
+.footer-class .listsocial a {
   text-decoration: none;
   font-size: 25px !important;
 }
 
-.footclass .flexw {
-  -webkit-box-flex: 0;
-      -ms-flex-positive: 0;
-          flex-grow: 0;
-  -ms-flex-negative: 0;
-      flex-shrink: 0;
-  -ms-flex-preferred-size: 20em;
-      flex-basis: 20em;
-}
-
-@media only screen and (min-width: 360px) {
-  .footclass .flexw {
-    margin-left: 24px;
-  }
-}
-
-@media only screen and (min-width: 411px) {
-  .footclass .flexw {
-    margin-left: 20px;
-  }
-}
-
-@media only screen and (min-width: 375px) {
-  .footclass .flexw {
-    margin-left: 30px;
-  }
-}
-
-@media only screen and (min-width: 414px) {
-  .footclass .flexw {
-    margin-left: 45px;
-  }
-}
-
-.footclass .flexw h5 {
-  font-size: 20px;
-}
-
-@media only screen and (min-width: 481px) {
-  .footclass .flexw h5 {
-    font-size: 22px;
-  }
-}
-
-@media only screen and (min-width: 360px) {
-  .footclass .flexw p {
-    font-size: 22px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-.footclass .flexw a {
-  font-size: 20px;
-}
-
-.footclass .flexw ul {
-  list-style-type: none;
-  margin-left: -50px;
-  margin-top: -10px;
-}
-
-.footclass .flexw ul li {
-  font-size: 20px;
-}
-
-.footclass hr {
+.footer-class hr {
   border-bottom: 3px solid white;
-}
-
-.footclass .comp {
-  margin-top: -15px;
 }
 
 .float {
