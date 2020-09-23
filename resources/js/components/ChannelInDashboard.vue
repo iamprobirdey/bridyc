@@ -218,43 +218,6 @@
                       
              </div>
           </div>
-
-            <!--div class="row mx-auto">
-            <div class="col-lg-5 insaddress">
-              <h4 class="shadow">Contact Us</h4>
-              <div class="addbody">
-                <ul class="nav flex-column">
-                  <li>
-                        {{channelData.title}},
-                        {{channelData.district.name}},
-                        {{channelData.state.name}}
-                        {{userData.verification.pin}}
-                        ,India
-                    </li>
-                  <li>Email: {{userData.email}}</li>
-                  <li>Phone No: {{phoneNo}}</li>
-                  <li v-if="socialCount === 0">
-                    <a  v-if="channelData.extra_attributes.social.facebook != null"
-                        :href="channelData.extra_attributes.social.facebook != null ? channelData.extra_attributes.social.facebook : 'javascript:void(0)'">
-                            <i :class="'fa fa-facebook-official'" aria-hidden="true"></i>
-                    </a>
-                    <a v-if="channelData.extra_attributes.social.linkedin != null"
-                        :href="channelData.extra_attributes.social.linkedin != null ? channelData.extra_attributes.social.linkedin : 'javascript:void(0)'">
-                        <i class="fa fa-linkedin-square" aria-hidden="true"></i>
-                    </a>
-                    <a  v-if="channelData.extra_attributes.social.youtube != null"
-                        :href="channelData.extra_attributes.social.youtube != null ? channelData.extra_attributes.social.youtube : 'javascript:void(0)'">
-                        <i class="fa fa-youtube-square" aria-hidden="true"></i>
-                    </a>
-                </li>
-                <li v-if="socialCount === 1">
-                    Socials: NA
-                </li>
-                </ul>
-              </div>
-            </div>
-            
-          </div-->
     </div>
     <div id="faculty" class="container-fluid tab-pane fade"><br>
        <div class="container-fluid facultyachieve">

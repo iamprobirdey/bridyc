@@ -1,9 +1,319 @@
 main{
-    .insusercover{
-      padding-left: 0em;
-      padding-right: 0em;
-      width: 100%; 
-      height:400px;
-      margin-top: -10px;
+  padding-top: 70px;
+  margin-bottom: 40px;
+    .inscover{
+      width: 100%;
+      height: 230px;
+      @include screensize(tablet){
+         height: 280px;
+       }
+      @include screensize(laptop){
+         height: 310px;
+       }
+ }
+ .blankdiv{
+     height: auto;
+     width: 100%;
+     position: relative;
+     top: -77px;
+     background-color: #f5f9ff;
+     padding-top: 55px;
+     padding-left: 10px;
+     p{
+       font-size: 14px;
+       @include screensize(tablet){
+         font-size: 16px;
+       }
+     }
+     @include screensize(tablet){
+         height: 130px;
+       }
+     @include screensize(laptop){
+         height: 150px;
+         padding-left: 60px;
+         padding-top: 75px;
+       }
+     .insweb{
+         background-color: #003585;
+         color: white;
+         font-size: 14px;
+         width: 110px;
+         @include screensize(tablet){
+          width: 130px;
+          font-size: 16px;
+         }
+         &:hover{
+             background-color: white;
+             color: #011737;
+             text-decoration: none;
+             border: 1px solid #011737;
+         }
+     }
+     .phemdiv{
+         font-size: 20px;
+         @include screensize(laptop){
+            display: block;
+          }
+     }
+    /* .btnshare{
+      position: relative;
+      top: 30px;
+      left: 90%;
+      font-size: 18px;
+      font-weight: normal;
+      @include screensize(laptop){
+       top: -25px;
+       left: 95%;
+       font-size: 20px;
+       font-weight: 100;
     }
+     }*/
+ }
+ .logo-title{
+     position: relative;
+     top: -250px;
+     margin-bottom: -120px;
+     @include screensize(tablet){
+         top: -255px;
+         left: 10px;
+      }
+     @include screensize(laptop){
+         top: -300px;
+         left: -70px;
+      }
+     .logoinstitute{
+         width: 70px;
+         height: 80px;
+         border: 1px solid gainsboro;
+         transition: all ease .5s;
+              @include screensize(tablet){
+                 width: 90px;
+                 height: 90px;
+              }
+              
+              @include screensize(laptop){
+                 width: 130px;
+                 height: 130px;
+                 margin-left: 120px !important;
+              }
+           }
+           .institle{
+             font-size: 20px;
+             margin-top: 47px;
+             transition: all ease .5s;
+             font-family: Verdana, Geneva, Tahoma, sans-serif;
+             @include screensize(forcards){
+                 font-size: 25px;
+                }
+                 @include screensize(tablet){
+                     font-size: 30px;
+                 }
+                 
+                    @include screensize(laptop){
+                     font-size: 35px;
+                     margin-top: 70px;
+                    }
+                    @include screensize(desktop){
+                      font-size: 38px;
+                      margin-top: 70px;
+                     }
+            }
+ }
+
+ .inssocial{
+   position: relative;
+   top:-90px;
+   left:63%;
+   width:100px !important;
+   overflow-x: hidden;
+   img{
+     width:20px;
+     height:20px;
+   }
+   @include screensize(tablet){
+     top:-105px;
+     left:75%;
+     img{
+       width:25px;
+       height:25px;
+     }
+   }
+   @include screensize(laptop){
+    top:-194px;
+    left:77%;
+  }
+  @include screensize(desktop){
+    top:-224px;
+    left:82%;
+  }
+ }
+ 
+
+ .inspills{
+           margin-top:-112px;
+        @include screensize(tablet){
+           margin-top:-130px;
+         }
+         @include screensize(laptop){
+          margin-top:-160px;
+        }
+           .nav-pills{
+
+             .nav-link{
+               color: #011737; 
+             }
+             .active{
+               background-color:#003585;
+               color:white;
+             }
+             
+           }
+
+         .inscarou{
+                 width: 100%;
+                 height: auto;
+                 
+                li{
+                 position: relative;
+                 top: 10px;
+                 width: 8px;
+                 height: 8px;
+                 border-radius: 100%;
+                 background-color: black;
+                  @include screensize(laptop){
+                     top: 10px;
+                  }
+             }
+             @include screensize(laptop){
+              margin-bottom: 180px;
+           }
+             img{
+                 width: 100%;
+                 height: 200px;
+                 @include screensize(laptop){
+                  height: 400px;
+               }
+           }
+         }
+
+         .notice{
+           background-color: #f5f9ff;
+           align-items: center;
+           margin-bottom: 13px;
+           height:auto;
+           width: 100%;
+           h5{
+             font-weight: 400;
+             color: #003585;
+           }
+           hr{
+             border-bottom: 2px solid rgb(219, 55, 55);
+           }
+           p{
+             color: black;
+           }
+         }
+
+
+         .facultyachieve{ 
+           
+              .facultyachievecard{
+                  width: 200px;
+                  height: 250px;
+               img{
+                  width: 100%;
+                  height: 170px;
+                }
+             }
+           }
+
+           .description{
+             
+             padding: 1rem;
+             margin-left: auto;
+             margin-right: auto;
+             width: 100%;
+             p{
+               border-left: 10px solid #96e0b7;
+               padding-left: 10px;
+               color: #011737;
+             }
+           }
+
+           h2{
+            color: #003585;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+             font-size: 18px;
+            @include screensize(tablet){
+              font-size: 32px;
+            }
+          }
+
+           .princidiv{
+             margin-top: 50px;
+             
+              h3{
+                color: #003585;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                font-size: 18px;
+                @include screensize(tablet){
+                  font-size: 24px;
+                }
+              }
+             
+             img{
+               width: 24px;
+               height:24px;
+               @include screensize(tablet){
+                
+                height:30px;
+               }
+             }
+             .principalcard{
+               text-align: center;
+               color: #011737;
+               border: none;
+               p{
+                 color:#011737;
+               }
+               img{
+                 width: 100%;
+                 height: 250px;
+                 
+               }
+             }
+
+             h6{
+               color:#003585;
+               font-family: Verdana, Geneva, Tahoma, sans-serif;
+             }
+           }
+
+          
+             .insadditionalinfo{
+              p{
+                font-size: 18px;
+              }
+              img{
+                width: 18px;
+                height: 18px;
+              }
+             }
+        
+
+           .facilitydiv{
+             p{
+               font-size: 16px;
+               color: #011737;
+               font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+              img{
+                width: 16px;
+                height: 16px;           
+              }
+             }
+               
+             
+           }
+
+}
 }

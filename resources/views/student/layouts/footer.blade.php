@@ -59,15 +59,13 @@
   @yield('js_code')
 
   <script type="text/javascript">
-    $(document).ready(function(){
+  $(document).ready(function(){
     $(document).on("scroll", function(){
         if($(window).scrollTop()>60){
             $("nav").addClass("shrink");
-            $(".navbar-brand img").attr('src', '/images/circle-bridyc.png')
             }
             else{
                 $("nav").removeClass("shrink");
-                $(".navbar-brand img").attr('src', '/images/bridyc white logo.png')
             }
         })
     });

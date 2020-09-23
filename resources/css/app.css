@@ -1,6 +1,7 @@
 nav {
   margin-left: auto;
   margin-right: auto;
+  background-color: white;
 }
 
 @media only screen and (max-width: 992px) {
@@ -28,9 +29,9 @@ nav #collapsibleNavbar .closemenu {
 }
 
 nav a .imglogo {
-  width: 68px;
+  width: 90px;
   height: auto;
-  margin-top: -9px;
+  margin-top: -12px;
   margin-bottom: -9px;
   margin-left: -5px;
   -webkit-transition: all ease .5s;
@@ -39,21 +40,36 @@ nav a .imglogo {
 
 @media only screen and (min-width: 481px) {
   nav a .imglogo {
-    width: 80px;
+    width: 140px;
     height: auto;
-    margin-top: -10px;
-    margin-bottom: -10px;
+    margin-top: -5px;
+    margin-bottom: -5px;
+  }
+}
+
+nav ul a {
+  font-size: large;
+  color: black;
+  margin-left: 20px;
+  margin-right: 20px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+nav ul a:hover {
+  color: black;
+}
+
+@media only screen and (max-width: 992px) {
+  nav ul a {
+    color: white;
+  }
+  nav ul a:hover {
+    color: white;
   }
 }
 
 nav .colbtn {
-  color: white;
-}
-
-@media only screen and (min-width: 481px) {
-  nav .colbtn {
-    font-size: 25px;
-  }
+  color: #011737;
 }
 
 nav .btndashboard {
@@ -67,23 +83,18 @@ nav .btndashboard:hover {
   background-color: #7e0255;
 }
 
-nav ul a {
-  font-size: large;
-  color: white;
-  margin-left: 20px;
-  margin-right: 20px;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-nav ul a:hover {
-  color: white;
-}
-
 nav .navbtn {
   margin-top: 20px;
+  border-radius: 25px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   color: white;
   background-color: #011737;
+}
+
+@media only screen and (max-width: 992px) {
+  nav .navbtn {
+    background-color: #003585;
+  }
 }
 
 @media only screen and (min-width: 1000px) {
@@ -107,25 +118,26 @@ nav .navbtn:hover {
   color: black;
 }
 
-.shrink a:hover {
-  color: black;
-}
-
 @media only screen and (max-width: 992px) {
   .shrink a {
     color: white;
   }
+  .shrink a:hover {
+    color: white;
+  }
+}
+
+.shrink a:hover {
+  color: black;
+}
+
+.shrink a .imglogo {
+  width: 80px;
 }
 
 @media only screen and (min-width: 481px) {
   .shrink a .imglogo {
-    width: 60px;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  .shrink a .imglogo {
-    width: 70px;
+    width: 110px;
   }
 }
 
@@ -133,6 +145,12 @@ nav .navbtn:hover {
   margin-top: 20px;
   background-color: #011737;
   color: white;
+}
+
+@media only screen and (max-width: 992px) {
+  .shrink .navbtn {
+    background-color: #003585;
+  }
 }
 
 @media only screen and (min-width: 1000px) {

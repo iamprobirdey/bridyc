@@ -55,17 +55,6 @@ main {
                display: block;
              }
         }
-        .btnshare{
-         position: relative;
-         top: 30px;
-         left: 90%;
-         font-size: 20px;
-         @include screensize(laptop){
-          top: -25px;
-          left: 95%;
-          font-size: 25px;
-       }
-        }
     }
     .logo-title{
         position: relative;
