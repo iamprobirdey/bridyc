@@ -36,13 +36,13 @@ DO IT ALL')
             <p class="sitevalue">Learn | Share | Engage | Find Institute</p>
             <p>And we charge you <strong>Nothing</strong></p>
             <br>
-            <a href="#">Read More</a>
+            <a href="#" class="p-2 p-md-3">Read More</a>
         </div>
     </div>
 
     <div class="container focusplace">
         <div class="row">
-            <div class="col-md-4">
+            <div class="col-lg-4">
                 <img class="imgguest shadow-lg" src="/images/waariko.jpg" alt="guest photo">
             </div>
 
@@ -58,7 +58,8 @@ DO IT ALL')
                     </div>
                     <br>
                     <p>Topic of discussion: Startup and the world</p>
-                    <p>A paragraph of Summary of what the discussion is like. This helps students to choose whether to
+                    <p>A paragraph of Summary of what the discussion is like. This helps students to choose
+                        whether to
                         watch it or nor.
                         Making it easier for them to decide
                     </p>
@@ -67,10 +68,7 @@ DO IT ALL')
                         data-target="#podcastModal"><img src="/images/play.svg"> Watch Now</button>
                 </div>
             </div>
-        </div>
-    </div>
 </banner>
-
 
 <div class="modal fade" id="podcastModal">
     <div class="modal-dialog poddialog">
@@ -116,6 +114,25 @@ DO IT ALL')
         </div>
     </div>
 </section>
+
+<br>
+<section>
+    <div class="container-fluid">
+        <div class="aboutdesc mx-auto">
+            <h4>SCHOOLS AND COLLEGES</h4>
+
+            <p>
+                Look out for the right institute for you or your kids. Visit the institute you like
+                and find out more about them.
+            </p>
+        </div>
+    </div>
+</section>
+
+
+{{-- <div id="channel">
+    <channel :channel="{{json_encode($channel)}}"></channel>
+</div> --}}
 
 @endsection
 

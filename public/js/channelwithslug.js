@@ -374,6 +374,161 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -951,48 +1106,45 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _c("main", { staticClass: "container-fluid" }, [
-      _c("img", {
-        staticClass: "inscover insusercover",
-        attrs: {
-          srcset:
-            _vm.channelData.cover_avatar != null
-              ? _vm.domainUrl +
-                "/media/channel/" +
-                _vm.channelData.user_id +
-                "/m-" +
-                _vm.channelData.cover_avatar +
-                "," +
-                _vm.domainUrl +
-                "/media/channel/" +
-                _vm.channelData.user_id +
-                "/s-" +
-                _vm.channelData.cover_avatar
-              : "/images/banner2.png",
-          src:
-            _vm.channelData.cover_avatar != null
-              ? _vm.domainUrl +
-                "/media/channel/" +
-                _vm.channelData.user_id +
-                "/" +
-                _vm.channelData.cover_avatar
-              : "/images/banner2.png"
-        }
-      }),
+  return _c("div", { staticClass: "mx-lg-5 mx-0" }, [
+    _c("main", { staticClass: "container-fluid px-1" }, [
+      _c("div", { staticClass: "mx-lg-5 mt-lg-5 pt-lg-3" }, [
+        _c("img", {
+          staticClass: "inscover mt-n3",
+          attrs: {
+            srcset:
+              _vm.channelData.cover_avatar != null
+                ? _vm.domainUrl +
+                  "/media/channel/" +
+                  _vm.channelData.user_id +
+                  "/m-" +
+                  _vm.channelData.cover_avatar +
+                  "," +
+                  _vm.domainUrl +
+                  "/media/channel/" +
+                  _vm.channelData.user_id +
+                  "/s-" +
+                  _vm.channelData.cover_avatar
+                : "/images/banner2.png",
+            src:
+              _vm.channelData.cover_avatar != null
+                ? _vm.domainUrl +
+                  "/media/channel/" +
+                  _vm.channel.user_id +
+                  "/" +
+                  _vm.channelData.cover_avatar
+                : "/images/banner2.png"
+          }
+        })
+      ]),
       _vm._v(" "),
-      _c("div", { staticClass: "blankdiv" }, [
-        _c("i", {
-          staticClass: "fa fa-share-square-o btnshare",
-          attrs: { "aria-hidden": "true" }
-        }),
-        _vm._v(" "),
-        _c("div", { staticClass: "d-flex mt-n4" }, [
-          _c("div", { staticClass: "d-flex flex-column" }, [
+      _c("div", { staticClass: "blankdiv shadow" }, [
+        _c("div", { staticClass: "row mt-lg-n2 mx-0" }, [
+          _c("div", { staticClass: "col-md-6 d-flex flex-column" }, [
             _c(
               "a",
               {
-                staticClass: "ml-n3 insweb",
+                staticClass: "ml-n4 insweb px-1 mt-n1 mt-md-3",
                 attrs: {
                   target:
                     _vm.channelData.website_link === null ? "_self" : "_blank",
@@ -1003,7 +1155,7 @@ var render = function() {
                 }
               },
               [
-                _vm._v("\n            Visit Website\n            "),
+                _vm._v("Visit Website\n            "),
                 _c("i", {
                   staticClass: "fa fa-external-link",
                   attrs: { "aria-hidden": "true" }
@@ -1012,13 +1164,13 @@ var render = function() {
             )
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "ml-auto phemdiv" }, [
+          _c("div", { staticClass: "col-md-6 phemdiv text-md-right ml-n4" }, [
             _c("p", { staticClass: "m-1 mr-2" }, [
               _c("i", {
                 staticClass: "fa fa-phone mr-1",
                 attrs: { "aria-hidden": "true" }
               }),
-              _vm._v("\n            " + _vm._s(_vm.phoneNo) + "\n          ")
+              _vm._v(_vm._s(_vm.phoneNo) + "\n          ")
             ]),
             _vm._v(" "),
             _c("p", { staticClass: "m-1 mr-2" }, [
@@ -1026,9 +1178,7 @@ var render = function() {
                 staticClass: "fa fa-envelope mr-1",
                 attrs: { "aria-hidden": "true" }
               }),
-              _vm._v(
-                "\n            " + _vm._s(_vm.userData.email) + "\n          "
-              )
+              _vm._v(_vm._s(_vm.userData.email) + "\n          ")
             ]),
             _vm._v(" "),
             _vm.channelRequestChecker
@@ -1042,218 +1192,271 @@ var render = function() {
                       }
                     }
                   },
-                  [
-                    _vm._v(
-                      "\n            Request Channel to accept\n          "
-                    )
-                  ]
+                  [_vm._v("\n            Send Request\n          ")]
                 )
               : _vm._e(),
             _vm._v(" "),
             _vm.channelRequestsuccefull
               ? _c("button", { staticClass: "btn btn-success" }, [
-                  _vm._v(
-                    "\n            Channel Successfully Requested\n          "
-                  )
+                  _vm._v("\n            Request Successfull\n          ")
                 ])
               : _vm._e()
           ])
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "d-flex mt-5 logo-title" }, [
-        _c("img", {
-          staticClass: "img-fluid logoinstitute",
-          attrs: {
-            src:
-              _vm.channelData.icon_avatar != null
-                ? _vm.domainUrl +
-                  "/media/channel/" +
-                  _vm.channelData.user_id +
-                  "/" +
-                  _vm.channelData.icon_avatar
-                : "/images/college logo.jpg",
-            alt: "Institute logo"
-          }
-        }),
-        _vm._v(" "),
-        _c("h1", { staticClass: "ml-4 institle" }, [
-          _vm._v(_vm._s(_vm.channelData.title))
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "row" }, [
-        _vm._m(0),
-        _vm._v(" "),
-        _c("div", { staticClass: "col-sm-9 mb-n5" }, [
-          _c("div", { staticClass: "description" }, [
-            _c("h4", [_vm._v("Overview")]),
-            _vm._v(" "),
-            _c("hr"),
-            _vm._v(" "),
-            _c("p", [
-              _vm._v(
-                "\n            " +
-                  _vm._s(
-                    _vm.channelData.description != null
-                      ? _vm.channelData.description
-                      : ""
-                  ) +
-                  "\n          "
-              )
-            ])
-          ]),
-          _vm._v(" "),
-          _vm._m(1),
-          _vm._v(" "),
-          _vm._m(2)
         ]),
         _vm._v(" "),
-        _c("br"),
-        _vm._v(" "),
-        _c("br"),
-        _vm._v(" "),
-        _c("br"),
-        _vm._v(" "),
-        _c("div", { staticClass: "row mx-auto mt-5" }, [
-          _c("div", { staticClass: "col-sm-5 insaddress" }, [
-            _c("h4", { staticClass: "shadow" }, [_vm._v("Contact Us")]),
-            _vm._v(" "),
-            _c("div", { staticClass: "addbody" }, [
-              _c("ul", { staticClass: "nav flex-column" }, [
-                _c("li", [
-                  _vm._v(
-                    "\n                Address:\n                " +
-                      _vm._s(_vm.channelData.title) +
-                      ", " +
-                      _vm._s(_vm.channelData.district.name) +
-                      ",\n                " +
-                      _vm._s(_vm.channelData.state.name) +
-                      "\n                " +
-                      _vm._s(_vm.userData.verification.pin) +
-                      "\n                ,India\n              "
+        _c("div", { staticClass: "d-flex logo-title" }, [
+          _c("img", {
+            staticClass: "img-fluid logoinstitute",
+            attrs: {
+              src:
+                _vm.channelData.icon_avatar != null
+                  ? _vm.domainUrl +
+                    "/media/channel/" +
+                    _vm.channel.user_id +
+                    "/" +
+                    _vm.channelData.icon_avatar
+                  : "/images/college logo.jpg",
+              alt: "Institute logo"
+            }
+          }),
+          _vm._v(" "),
+          _c("h1", { staticClass: "ml-1 ml-sm-3 institle" }, [
+            _vm._v(_vm._s(_vm.channelData.title))
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "inssocial" }, [
+        _vm.socialCount === 0
+          ? _c("div", { staticClass: "d-flex flex-column flex-lg-row" }, [
+              _vm.channelData.extra_attributes.social.facebook != null
+                ? _c(
+                    "a",
+                    {
+                      staticClass: "mr-1",
+                      attrs: {
+                        href:
+                          _vm.channelData.extra_attributes.social.facebook !=
+                          null
+                            ? _vm.channelData.extra_attributes.social.facebook
+                            : "javascript:void(0)"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        attrs: { src: "/images/facebook.svg", alt: "fb icon" }
+                      })
+                    ]
                   )
-                ]),
-                _vm._v(" "),
-                _c("li", [_vm._v("Email: " + _vm._s(_vm.userData.email))]),
-                _vm._v(" "),
-                _c("li", [_vm._v("Phone No: " + _vm._s(_vm.phoneNo))]),
-                _vm._v(" "),
-                _vm.socialCount === 0
-                  ? _c("li", [
-                      _vm._v("\n                Socials:\n                "),
-                      _vm.channelData.extra_attributes.social.facebook != null
-                        ? _c(
-                            "a",
-                            {
-                              attrs: {
-                                href:
-                                  _vm.channelData.extra_attributes.social
-                                    .facebook != null
-                                    ? _vm.channelData.extra_attributes.social
-                                        .facebook
-                                    : "javascript:void(0)"
-                              }
-                            },
-                            [
-                              _c("i", {
-                                class: "fa fa-facebook-official",
-                                attrs: { "aria-hidden": "true" }
-                              })
-                            ]
-                          )
-                        : _vm._e(),
-                      _vm._v(" "),
-                      _vm.channelData.extra_attributes.social.linkedin != null
-                        ? _c(
-                            "a",
-                            {
-                              attrs: {
-                                href:
-                                  _vm.channelData.extra_attributes.social
-                                    .linkedin != null
-                                    ? _vm.channelData.extra_attributes.social
-                                        .linkedin
-                                    : "javascript:void(0)"
-                              }
-                            },
-                            [
-                              _c("i", {
-                                staticClass: "fa fa-linkedin-square",
-                                attrs: { "aria-hidden": "true" }
-                              })
-                            ]
-                          )
-                        : _vm._e(),
-                      _vm._v(" "),
-                      _vm.channelData.extra_attributes.social.youtube != null
-                        ? _c(
-                            "a",
-                            {
-                              attrs: {
-                                href:
-                                  _vm.channelData.extra_attributes.social
-                                    .youtube != null
-                                    ? _vm.channelData.extra_attributes.social
-                                        .youtube
-                                    : "javascript:void(0)"
-                              }
-                            },
-                            [
-                              _c("i", {
-                                staticClass: "fa fa-youtube-square",
-                                attrs: { "aria-hidden": "true" }
-                              })
-                            ]
-                          )
-                        : _vm._e()
-                    ])
-                  : _vm._e(),
-                _vm._v(" "),
-                _vm.socialCount === 1
-                  ? _c("li", [_vm._v("Socials: Not provided")])
-                  : _vm._e()
-              ])
+                : _vm._e(),
+              _vm._v(" "),
+              _vm.channelData.extra_attributes.social.linkedin != null
+                ? _c(
+                    "a",
+                    {
+                      staticClass: "mr-1",
+                      attrs: {
+                        href:
+                          _vm.channelData.extra_attributes.social.linkedin !=
+                          null
+                            ? _vm.channelData.extra_attributes.social.linkedin
+                            : "javascript:void(0)"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        attrs: { src: "/images/linkedin.svg", alt: "li icon" }
+                      })
+                    ]
+                  )
+                : _vm._e(),
+              _vm._v(" "),
+              _vm.channelData.extra_attributes.social.instagram != null
+                ? _c(
+                    "a",
+                    {
+                      staticClass: "mr-1",
+                      attrs: {
+                        href:
+                          _vm.channelData.extra_attributes.social.instagram !=
+                          null
+                            ? _vm.channelData.extra_attributes.social.instagram
+                            : "javascript:void(0)"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        attrs: { src: "/images/instagram.svg", alt: "ig icon" }
+                      })
+                    ]
+                  )
+                : _vm._e(),
+              _vm._v(" "),
+              _vm.channelData.extra_attributes.social.youtube != null
+                ? _c(
+                    "a",
+                    {
+                      staticClass: "mr-1",
+                      attrs: {
+                        href:
+                          _vm.channelData.extra_attributes.social.youtube !=
+                          null
+                            ? _vm.channelData.extra_attributes.social.youtube
+                            : "javascript:void(0)"
+                      }
+                    },
+                    [
+                      _c("img", {
+                        attrs: { src: "/images/youtube.svg", alt: "yt icon" }
+                      })
+                    ]
+                  )
+                : _vm._e()
             ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-sm-1" }),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-sm-5 card info shadow" }, [
-            _c("div", { staticClass: "card-body" }, [
-              _c("div", { staticClass: "card-title" }, [
-                _vm._v("College Information")
-              ]),
+          : _vm._e(),
+        _vm._v(" "),
+        _vm.socialCount === 1 ? _c("div", [_vm._v("Socials: NA")]) : _vm._e()
+      ]),
+      _vm._v(" "),
+      _c("br"),
+      _vm._v(" "),
+      _c("br"),
+      _vm._v(" "),
+      _c("br"),
+      _vm._v(" "),
+      _c("div", { staticClass: "inspills mx-lg-5" }, [
+        _vm._m(0),
+        _vm._v(" "),
+        _c("div", { staticClass: "tab-content" }, [
+          _c(
+            "div",
+            {
+              staticClass: "container-fluid tab-pane active",
+              attrs: { id: "home" }
+            },
+            [
+              _c("br"),
               _vm._v(" "),
-              _c("hr"),
-              _vm._v(" "),
-              _c("ul", { staticClass: "nav flex-column" }, [
-                _c("li", [_vm._v("Regd No: xxxxxxxxxxxxxxxxxxxx")]),
-                _vm._v(" "),
-                _c("li", [
+              _c("div", { staticClass: "description mb-5 px-0" }, [
+                _c("h2", { staticClass: "mb-4 text-uppercase" }, [
                   _vm._v(
-                    "\n                Location: " +
-                      _vm._s(_vm.channelData.village.name) +
-                      "," +
-                      _vm._s(_vm.channelData.district.name) +
-                      "\n              "
+                    "\n              Welcome to " +
+                      _vm._s(_vm.channelData.title) +
+                      "\n            "
                   )
                 ]),
                 _vm._v(" "),
-                _c("li", [
+                _c("p", [
                   _vm._v(
-                    "Ownership: " + _vm._s(_vm.userData.verification.ownership)
-                  )
-                ]),
-                _vm._v(" "),
-                _c("li", [
-                  _vm._v(
-                    "Founded: " + _vm._s(_vm.userData.verification.founded)
+                    "\n              " +
+                      _vm._s(
+                        _vm.channelData.description != null
+                          ? _vm.channelData.description
+                          : ""
+                      ) +
+                      "\n            "
                   )
                 ])
+              ]),
+              _vm._v(" "),
+              _vm._m(1),
+              _vm._v(" "),
+              _vm._m(2)
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            {
+              staticClass: "container-fluid tab-pane fade",
+              attrs: { id: "about" }
+            },
+            [
+              _vm._m(3),
+              _vm._v(" "),
+              _c("div", { staticClass: "container-fluid mt-5" }, [
+                _c("h2", { staticClass: "text-uppercase" }, [
+                  _vm._v("Additional Information")
+                ]),
+                _vm._v(" "),
+                _c("hr", { staticClass: "mt-n2" }),
+                _vm._v(" "),
+                _c("div", { staticClass: "insadditionalinfo mt-4" }, [
+                  _c("p", [
+                    _c("img", {
+                      attrs: { src: "/images/address.svg", alt: "address icon" }
+                    }),
+                    _vm._v(
+                      " Address:\n                " +
+                        _vm._s(_vm.channelData.district.name) +
+                        ",\n                " +
+                        _vm._s(_vm.channelData.state.name) +
+                        "\n              "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _c("img", {
+                      attrs: {
+                        src: "/images/mailbox.svg",
+                        alt: "pin code icon"
+                      }
+                    }),
+                    _vm._v(
+                      " Pin\n                Code: " +
+                        _vm._s(_vm.userData.verification.pin) +
+                        "\n              "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _c("img", {
+                      attrs: {
+                        src: "/images/translation.svg",
+                        alt: "language icon"
+                      }
+                    }),
+                    _vm._v(
+                      "\n                Medium: " +
+                        _vm._s(_vm.channelData.village.name) +
+                        "\n              "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _vm._m(4),
+                  _vm._v(" "),
+                  _c("p", [
+                    _c("img", {
+                      attrs: { src: "/images/deed.svg", alt: "ownership icon" }
+                    }),
+                    _vm._v(
+                      " Ownership:\n                " +
+                        _vm._s(_vm.userData.verification.ownership) +
+                        "\n              "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _c("img", {
+                      attrs: {
+                        src: "/images/calendar.svg",
+                        alt: "calender icon"
+                      }
+                    }),
+                    _vm._v(
+                      "\n                Founded: " +
+                        _vm._s(_vm.userData.verification.founded) +
+                        "\n              "
+                    )
+                  ])
+                ])
               ])
-            ])
-          ])
+            ]
+          ),
+          _vm._v(" "),
+          _vm._m(5),
+          _vm._v(" "),
+          _vm._m(6)
         ])
       ])
     ]),
@@ -1266,67 +1469,139 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "col-sm-3" }, [
-      _c("div", { staticClass: "card achievecard shadow" }, [
-        _c("div", { staticClass: "card-body" }, [
-          _c("div", { staticClass: "card-title" }, [
-            _vm._v("\n              Achievements\n              "),
-            _c("i", {
-              staticClass: "fa fa-trophy",
-              attrs: { "aria-hidden": "true" }
-            })
-          ]),
-          _vm._v(" "),
-          _c("hr"),
-          _vm._v(" "),
-          _c("ul", { staticClass: "nav" }, [
-            _c("li", [_vm._v("aaaaaaaaaaa")]),
-            _vm._v(" "),
-            _c("li", [_vm._v("bbbbbbbbbbbbbbbb")]),
-            _vm._v(" "),
-            _c("li", [_vm._v("cccccccccccc")]),
-            _vm._v(" "),
-            _c("li", [_vm._v("aaaaaaaaaaa")]),
-            _vm._v(" "),
-            _c("li", [_vm._v("bbbbbbbbbbbbbbbb")]),
-            _vm._v(" "),
-            _c("li", [_vm._v("cccccccccccc")]),
-            _vm._v(" "),
-            _c("li", [_vm._v("aaaaaaaaaaa")]),
-            _vm._v(" "),
-            _c("li", [_vm._v("bbbbbbbbbbbbbbbb")]),
-            _vm._v(" "),
-            _c("li", [_vm._v("cccccccccccc")]),
-            _vm._v(" "),
-            _c("li", [_vm._v("bbbbbbbbbbbbbbbb")]),
-            _vm._v(" "),
-            _c("li", [_vm._v("cccccccccccc")]),
-            _vm._v(" "),
-            _c("li", [_vm._v("aaaaaaaaaaa")]),
-            _vm._v(" "),
-            _c("li", [_vm._v("bbbbbbbbbbbbbbbb")]),
-            _vm._v(" "),
-            _c("li", [_vm._v("cccccccccccc")]),
-            _vm._v(" "),
-            _c("li", [_vm._v("aaaaaaaaaaa")]),
-            _vm._v(" "),
-            _c("li", [_vm._v("bbbbbbbbbbbbbbbb")]),
-            _vm._v(" "),
-            _c("li", [_vm._v("cccccccccccc")])
-          ])
+    return _c(
+      "ul",
+      { staticClass: "nav nav-pills", attrs: { role: "tablist" } },
+      [
+        _c("li", { staticClass: "nav-item" }, [
+          _c(
+            "a",
+            {
+              staticClass: "nav-link active",
+              attrs: { "data-toggle": "pill", href: "#home" }
+            },
+            [_vm._v("Home")]
+          )
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "nav-item" }, [
+          _c(
+            "a",
+            {
+              staticClass: "nav-link",
+              attrs: { "data-toggle": "pill", href: "#about" }
+            },
+            [_vm._v("About")]
+          )
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "nav-item" }, [
+          _c(
+            "a",
+            {
+              staticClass: "nav-link",
+              attrs: { "data-toggle": "pill", href: "#faculty" }
+            },
+            [_vm._v("Faculty")]
+          )
+        ]),
+        _vm._v(" "),
+        _c("li", { staticClass: "nav-item" }, [
+          _c(
+            "a",
+            {
+              staticClass: "nav-link",
+              attrs: { "data-toggle": "pill", href: "#facility" }
+            },
+            [_vm._v("Facility")]
+          )
         ])
-      ])
-    ])
+      ]
+    )
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container mt-3" }, [
+    return _c("div", { staticClass: "row mb-5 mx-0 px-0" }, [
       _c(
         "div",
         {
-          staticClass: "carousel slide inscarou",
+          staticClass:
+            "card notice shadow-sm border-0 mx-0 col-md-5 col-lg-4 px-0"
+        },
+        [
+          _c("div", { staticClass: "card-body" }, [
+            _c("div", { staticClass: "card-title my-n2" }, [
+              _c("h5", { staticClass: "text-uppercase text-center" }, [
+                _vm._v(
+                  "\n                    News and Notifications\n                  "
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _c("hr", { staticClass: "w-25" }),
+            _vm._v(" "),
+            _c("div", { staticClass: "mt-5" }, [
+              _c("p", [
+                _c("i", {
+                  staticClass: "fa fa-long-arrow-right",
+                  attrs: { "aria-hidden": "true" }
+                }),
+                _vm._v(
+                  "\n                    Shads sdjahbdk skasdk jashdas jasdkn\n                    "
+                ),
+                _c("span", { staticClass: "badge badge-info" }, [_vm._v("New")])
+              ]),
+              _vm._v(" "),
+              _c("p", [
+                _c("i", {
+                  staticClass: "fa fa-long-arrow-right",
+                  attrs: { "aria-hidden": "true" }
+                }),
+                _vm._v(
+                  "\n                    Shads sdjahbdk skasdk jashdas jasdkn sbsakd jasdkas\n                  "
+                )
+              ]),
+              _vm._v(" "),
+              _c("p", [
+                _c("i", {
+                  staticClass: "fa fa-long-arrow-right",
+                  attrs: { "aria-hidden": "true" }
+                }),
+                _vm._v(
+                  "\n                    Shads sdjahbdk skasdk jashdas jasdkn sbsakd jasdkas\n                  "
+                )
+              ]),
+              _vm._v(" "),
+              _c("p", [
+                _c("i", {
+                  staticClass: "fa fa-long-arrow-right",
+                  attrs: { "aria-hidden": "true" }
+                }),
+                _vm._v(
+                  "\n                    Shads sdjahbdk skasdk jashdas\n                  "
+                )
+              ]),
+              _vm._v(" "),
+              _c("p", [
+                _c("i", {
+                  staticClass: "fa fa-long-arrow-right",
+                  attrs: { "aria-hidden": "true" }
+                }),
+                _vm._v(
+                  "\n                    Shads sdjahbdk skasdk jashdas jasdkn sbsakd\n                  "
+                )
+              ])
+            ])
+          ])
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        {
+          staticClass: "carousel slide inscarou col-md-7 col-lg-8",
           attrs: { id: "carouid", "data-ride": "carousel" }
         },
         [
@@ -1382,39 +1657,247 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "insimages mt-3" }, [
-      _c("img", {
-        staticClass: "border p-1",
-        attrs: { id: "imgmain", src: "/images/testcollege.jpg" }
-      }),
+    return _c(
+      "div",
+      { staticClass: "container-fluid facultyachieve mt-lg-5 px-0" },
+      [
+        _c("h2", { staticClass: "text-uppercase" }, [
+          _vm._v("Our Achievements")
+        ]),
+        _vm._v(" "),
+        _c("hr", { staticClass: "mt-n2" }),
+        _vm._v(" "),
+        _c("div", { staticClass: "row mb-5 mt-5" }, [
+          _c("div", { staticClass: "card shadow mx-auto facultyachievecard" }, [
+            _c("img", { attrs: { src: "/images/guest.jpg" } }),
+            _vm._v(" "),
+            _c("div", { staticClass: "card-body mt-n1" }, [
+              _c("h6", { staticClass: "card-title my-n1" }, [
+                _vm._v("Name of the individual")
+              ]),
+              _vm._v(" "),
+              _c("p", { staticClass: "card-text" }, [
+                _vm._v("Type of achievement")
+              ])
+            ])
+          ])
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "princidiv mb-5" }, [
+      _c("div", { staticClass: "d-flex" }, [
+        _c("img", {
+          staticClass: "mt-2",
+          attrs: { src: "/images/checkmark.svg" }
+        }),
+        _vm._v(" "),
+        _c("h3", { staticClass: "mt-2 text-uppercase" }, [
+          _vm._v("Message From The Principal")
+        ])
+      ]),
       _vm._v(" "),
-      _c("span", { staticClass: "sub-img" }, [
-        _c("img", {
-          staticClass: "imgpreview border p-1",
-          attrs: { src: "/images/testcollege.jpg" }
-        }),
+      _c("div", { staticClass: "row mt-3" }, [
+        _c("div", { staticClass: "col-md-6" }, [
+          _c("p", { staticClass: "principal-message" }, [
+            _vm._v(
+              "\n                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n                  Quisque iaculis risus quis tortor eleifend, non facilisis\n                  ante vulputate. Donec iaculis, ex in euismod sagittis,\n                  turpis felis malesuada nisi, a facilisis ex enim ut nunc.\n                  Vestibulum ut tincidunt justo, sit amet faucibus elit.\n                  Aliquam ac nibh eros. Nulla id risus dolor. Ut nulla turpis,\n                  laoreet et libero a, faucibus accumsan risus. Morbi euismod\n                  mauris mi, sit amet tempus ligula pretium vel. Nunc sem\n                  ligula, aliquam id purus et, egestas sagittis lorem. Duis at\n                  justo magna. Donec in egestas turpis. Aliquam maximus nulla\n                  sapien, sagittis dictum sem laoreet sit amet. Donec elit\n                  tortor, tincidunt non aliquet id, rhoncus in felis.\n                  Vestibulum ultrices ante id risus vehicula venenatis.Aenean\n                  id pulvinar sem. Cras elementum eu orci nec mollis. Donec\n                  molestie iaculis pharetra. Duis ullamcorper erat ut aliquet\n                  tristique. Etiam venenatis mauris id massa interdum viverra.\n                "
+            )
+          ])
+        ]),
         _vm._v(" "),
-        _c("img", {
-          staticClass: "imgpreview border p-1",
-          attrs: { src: "/images/testcollege2.jpg" }
-        }),
+        _c("div", { staticClass: "col-md-6" }, [
+          _c("div", { staticClass: "card principalcard" }, [
+            _c("img", { attrs: { src: "/images/PrincipalPhoto.jpg" } }),
+            _vm._v(" "),
+            _c("div", { staticClass: "card-body mt-n1" }, [
+              _c("h4", { staticClass: "card-title my-n1" }, [
+                _vm._v("Principal name")
+              ]),
+              _vm._v(" "),
+              _c("p", { staticClass: "card-text" }, [
+                _vm._v("Principal, BCDSER")
+              ])
+            ])
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", [
+        _c("h6", { staticClass: "text-uppercase mt-2" }, [
+          _vm._v("Mission & Vision")
+        ]),
         _vm._v(" "),
-        _c("img", {
-          staticClass: "imgpreview border p-1",
-          attrs: { src: "/images/testcollege3.jpg" }
-        }),
-        _vm._v(" "),
-        _c("img", {
-          staticClass: "imgpreview border p-1",
-          attrs: { src: "/images/testcollege4.jpg" }
-        }),
-        _vm._v(" "),
-        _c("img", {
-          staticClass: "imgpreview border p-1",
-          attrs: { src: "/images/testcollege5.jpg" }
-        })
+        _c("p", [
+          _vm._v(
+            "\n                Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n                Quisque iaculis risus quis tortor eleifend, non facilisis ante\n                vulputate. Donec iaculis, ex in euismod sagittis, turpis felis\n                malesuada nisi, a facilisis ex enim ut nunc. Vestibulum ut\n                tincidunt justo, sit amet faucibus elit.\n              "
+          )
+        ])
       ])
     ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("p", [
+      _c("img", {
+        attrs: { src: "/images/grade.svg", alt: "Exam board icon" }
+      }),
+      _vm._v(" Board:\n                xxxx\n              ")
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass: "container-fluid tab-pane fade",
+        attrs: { id: "faculty" }
+      },
+      [
+        _c("br"),
+        _vm._v(" "),
+        _c("div", { staticClass: "container-fluid facultyachieve" }, [
+          _c("h2", { staticClass: "text-uppercase" }, [
+            _vm._v("Our Faculties")
+          ]),
+          _vm._v(" "),
+          _c("hr", { staticClass: "mt-n2" }),
+          _vm._v(" "),
+          _c("div", { staticClass: "row mb-5 mt-5" }, [
+            _c(
+              "div",
+              { staticClass: "card shadow mx-auto facultyachievecard" },
+              [
+                _c("img", { attrs: { src: "/images/teacher.jpg" } }),
+                _vm._v(" "),
+                _c("div", { staticClass: "card-body mt-n1" }, [
+                  _c("h6", { staticClass: "card-title my-n1" }, [
+                    _vm._v("Faculty Name")
+                  ]),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "card-text" }, [
+                    _vm._v("Qualification")
+                  ])
+                ])
+              ]
+            )
+          ])
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass: "container-fluid tab-pane fade",
+        attrs: { id: "facility" }
+      },
+      [
+        _c("br"),
+        _vm._v(" "),
+        _c("h2", { staticClass: "text-uppercase" }, [_vm._v("Infrastructure")]),
+        _vm._v(" "),
+        _c("hr", { staticClass: "mt-n2" }),
+        _vm._v(" "),
+        _c("div", { staticClass: "row facilitydiv py-3 mt-5" }, [
+          _c("div", { staticClass: "col-sm-4" }, [
+            _c("p", [
+              _c("img", {
+                staticClass: "mr-2",
+                attrs: {
+                  src: "/images/electricity.svg",
+                  alt: "Electricity Image"
+                }
+              }),
+              _vm._v("\n                Electricity:"),
+              _c("strong", { staticClass: "ml-1" }, [_vm._v("Yes")])
+            ]),
+            _vm._v(" "),
+            _c("p", [
+              _c("img", {
+                staticClass: "mr-2",
+                attrs: { src: "/images/computer.svg", alt: "computer Image" }
+              }),
+              _vm._v("\n                Computer:"),
+              _c("strong", { staticClass: "ml-1" }, [_vm._v("Yes")])
+            ]),
+            _vm._v(" "),
+            _c("p", [
+              _c("img", {
+                staticClass: "mr-2",
+                attrs: { src: "/images/fence.svg", alt: "fence Image" }
+              }),
+              _vm._v("\n                Boundary:"),
+              _c("strong", { staticClass: "ml-1" }, [_vm._v("Yes")])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-sm-4" }, [
+            _c("p", [
+              _c("img", {
+                staticClass: "mr-2",
+                attrs: {
+                  src: "/images/playground.svg",
+                  alt: "playground Image"
+                }
+              }),
+              _vm._v("\n                Playground:"),
+              _c("strong", { staticClass: "ml-1" }, [_vm._v("Yes")])
+            ]),
+            _vm._v(" "),
+            _c("p", [
+              _c("img", {
+                staticClass: "mr-2",
+                attrs: { src: "/images/library.svg", alt: "Library Image" }
+              }),
+              _vm._v("\n                Library:"),
+              _c("strong", { staticClass: "ml-1" }, [_vm._v("Yes")])
+            ]),
+            _vm._v(" "),
+            _c("p", [
+              _c("img", {
+                staticClass: "mr-2",
+                attrs: { src: "/images/book.svg", alt: "Books Image" }
+              }),
+              _vm._v("\n                No of Books:"),
+              _c("strong", { staticClass: "ml-1" }, [_vm._v("300")])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-sm-4" }, [
+            _c("p", [
+              _c("img", {
+                staticClass: "mr-2",
+                attrs: { src: "/images/hostel.svg", alt: "Hostel Image" }
+              }),
+              _vm._v("\n                Hostel:"),
+              _c("strong", { staticClass: "ml-1" }, [_vm._v("Yes")])
+            ]),
+            _vm._v(" "),
+            _c("p", [
+              _c("img", {
+                staticClass: "mr-2",
+                attrs: { src: "/images/bus.svg", alt: "Bus Image" }
+              }),
+              _vm._v(" Bus\n                Services:"),
+              _c("strong", { staticClass: "ml-1" }, [_vm._v("Yes")])
+            ])
+          ])
+        ])
+      ]
+    )
   }
 ]
 render._withStripped = true

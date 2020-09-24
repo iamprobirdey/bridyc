@@ -229,21 +229,6 @@ main .blankdiv .insweb:hover {
   }
 }
 
-main .blankdiv .btnshare {
-  position: relative;
-  top: 30px;
-  left: 90%;
-  font-size: 20px;
-}
-
-@media only screen and (min-width: 768px) {
-  main .blankdiv .btnshare {
-    top: -25px;
-    left: 95%;
-    font-size: 25px;
-  }
-}
-
 main .logo-title {
   position: relative;
   top: -280px;

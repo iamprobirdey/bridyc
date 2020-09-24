@@ -1,9 +1,9 @@
 nav{
     margin-left: auto;
     margin-right: auto;
+    background-color: white;
 
     #collapsibleNavbar {
-
       @include screensize(formobilemenu){
         position: fixed;
         top: 0;
@@ -32,27 +32,42 @@ nav{
  
     a{
     .imglogo{
-        width:68px;
+        width:90px;
         height: auto;
-        margin-top: -9px;
+        margin-top: -12px;
         margin-bottom: -9px;
         margin-left: -5px;
         transition: all ease .5s;
         @include screensize(tablet){
-            width: 80px;
+            width: 140px;
             height: auto;
-            margin-top: -10px;
-            margin-bottom:-10px;
+            margin-top: -5px;
+            margin-bottom:-5px;
         }
         
     }
   }
+  ul{
+    a{
+        font-size: large;
+        color: black;
+        margin-left: 20px;
+        margin-right:20px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        &:hover{
+           color: black;
+       }
+       @include screensize(formobilemenu){
+          color:white;
+          &:hover{
+              color: white;
+          }
+      }
+     }
+}
 
   .colbtn{
-      color: white;
-    @include screensize(tablet){
-        font-size: 25px;
-        }
+      color: #011737;
   }
 
   .btndashboard{
@@ -65,24 +80,16 @@ nav{
     }
 }
 
-    ul{
-          a{
-              font-size: large;
-              color: white;
-              margin-left: 20px;
-              margin-right:20px;
-              font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-              &:hover{
-                 color: white;
-             }
-           }
-    }
-
     .navbtn{
+        @include screensize(formobilemenu){
+            background-color: #003585;
+        }
         margin-top: 20px;
+        border-radius: 25px;
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         color: white;
         background-color: #011737;
+
         @include screensize(forbutton){
             margin-top: 0px;
             }
@@ -99,25 +106,30 @@ nav{
     background-color: white;
     transition: all ease-in .5s;
         a{
+            @include screensize(formobilemenu){
+                color:white;
+                &:hover{
+                    color: white;
+                }
+            }
         color: black;
         &:hover{
             color: black;
         }
-        @include screensize(formobilemenu){
-            color:white;
-        }
-
+        
+       
         .imglogo{
+            width: 80px;
             @include screensize(tablet){
-                width: 60px;
-                }
-            @include screensize(laptop){
-                width: 70px;
+                width: 110px;
                 }
         }
     }
 
     .navbtn{
+        @include screensize(formobilemenu){
+            background-color: #003585;
+        }
         margin-top: 20px;
         background-color: #011737;
         color: white;

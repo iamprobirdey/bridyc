@@ -8,22 +8,23 @@
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    top:40px;
     background-image: linear-gradient(to right,rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1)), url("/images/bannernew1.png");
-    @include screensize(laptop){
+    @include screensize(laptop){ 
        height:660px;
+       margin-top:25px;
     }
     .txtbanner {
             width: 100%;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         h1{
             font-size: 20px;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             @include screensize(laptop){
                 font-size: 34px;
             }
         }
         p{
             font-size: 20px;
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             @include screensize(laptop){
                 font-size: 30px;
             }
@@ -34,14 +35,8 @@
         }
         a{
             background-color: #011737;
-            padding: 10px;
-            padding-left:15px;
-            padding-right: 15px;
             color: white;
             text-decoration: none;
-            margin-bottom: 20px !important;
-            border-bottom-left-radius: 10%;
-            border-top-right-radius: 10%;
             &:hover{
                 background-color: #001f4d;
             }
@@ -63,7 +58,6 @@
 
 .focusplace{
     text-align: center;
-    color: black;
     margin-top: 0;
     margin-bottom: 50px;
     width:100%;
@@ -81,13 +75,6 @@
         width: 100%;
         height:auto;
         margin: 0;
-
-        @include screensize(prelaptop){
-            height: 400px;
-            &:hover{
-                left: 20px;
-            }
-        }
     }
 
     .videosection{
@@ -95,12 +82,9 @@
         text-align: center;
 
         p{
-            max-width: 450px;
             color:#011737;
             font-weight: 300;
             font-size: 18px;
-            margin-left: auto;
-            margin-right: auto;
         }
         .guest{
             background-color:#011737;

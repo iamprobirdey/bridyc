@@ -1727,7 +1727,7 @@ exports = module.exports = __webpack_require__(/*! ../css-loader/lib/css-base.js
 
 
 // module
-exports.push([module.i, "\n.picture-input[data-v-431cb064] {\n  width: 100%;\n  margin: 0 auto;\n  text-align: center;\n}\n.preview-container[data-v-431cb064] {\n  width: 100%;\n  box-sizing: border-box;\n  margin: 0 auto;\n  cursor: pointer;\n  overflow: hidden;\n}\n.picture-preview[data-v-431cb064] {\n  width: 100%;\n  height: 100%;\n  position: relative;\n  z-index: 10001;\n  box-sizing: border-box;\n  background-color: rgba(200,200,200,.25);\n}\n.picture-preview.dragging-over[data-v-431cb064] {\n  -webkit-filter: brightness(0.5);\n          filter: brightness(0.5);\n}\n.picture-inner[data-v-431cb064] {\n  position: relative;\n  z-index: 10002;\n  pointer-events: none;\n  box-sizing: border-box;\n  margin: 1em auto;\n  padding: 0.5em;\n  border: .3em dashed rgba(66,66,66,.15);\n  border-radius: 8px;\n  width: calc(100% - 2.5em);\n  height: calc(100% - 2.5em);\n  display: table;\n}\n.picture-inner .picture-inner-text[data-v-431cb064] {\n  display: table-cell;\n  vertical-align: middle;\n  text-align: center;\n  font-size: 2em;\n  line-height: 1.5;\n}\nbutton[data-v-431cb064] {\n  margin: 1em .25em;\n  cursor: pointer;\n}\ninput[type=file][data-v-431cb064] {\n  display: none;\n}\n", ""]);
+exports.push([module.i, "\n.picture-input[data-v-431cb064] {\n  width: 100%;\n  margin: 0 auto;\n  text-align: center;\n}\n.preview-container[data-v-431cb064] {\n  width: 100%;\n  box-sizing: border-box;\n  margin: 0 auto;\n  cursor: pointer;\n  overflow: hidden;\n}\n.picture-preview[data-v-431cb064] {\n  width: 100%;\n  height: 100%;\n  position: relative;\n  z-index: 10001;\n  box-sizing: border-box;\n  background-color: rgba(200,200,200,.25);\n}\n.picture-preview.dragging-over[data-v-431cb064] {\n  -webkit-filter: brightness(0.5);\n          filter: brightness(0.5);\n}\n.picture-inner[data-v-431cb064] {\n  position: relative;\n  z-index: 10002;\n  pointer-events: none;\n  box-sizing: border-box;\n  margin: 1em auto;\n  padding: 0.5em;\n  /*border: .3em dashed rgba(66,66,66,.15); commented because of cover and icon in indtitute edit channel*/\n  border: 4px dashed rgba(66,66,66,.15);\n  border-radius: 8px;\n  width: calc(100% - 2.5em);\n  height: calc(100% - 2.5em);\n  display: table;\n}\n.picture-inner .picture-inner-text[data-v-431cb064] {\n  display: table-cell;\n  vertical-align: middle;\n  text-align: center;\n  /*font-size: 2em; commented because of cover and icon in institute edit channel*/\n  font-size: 18px;\n  line-height: 1.5;\n}\nbutton[data-v-431cb064] {\n  margin: 1em .25em;\n  cursor: pointer;\n}\ninput[type=file][data-v-431cb064] {\n  display: none;\n}\n", ""]);
 
 // exports
 
@@ -1765,7 +1765,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.btnsubmitcover[data-v-ccb8d420]{\n  background-color: #013737;\n  color:white;\n  padding-top: 2px;\n  padding-bottom: 2px;\n  border-radius: 0;\n  z-index: 100;\n}\n.btnsuca[data-v-ccb8d420]{\n  text-align: center;\n}\n.btn-success[data-v-ccb8d420]{\n  padding-top:.1rem !important;\n  padding-bottom: .1rem !important;\n}\n", ""]);
+exports.push([module.i, "\n.btnsubmitcover[data-v-ccb8d420]{\r\n  background-color: #013737;\r\n  color:white;\r\n  padding-top: 2px;\r\n  padding-bottom: 2px;\r\n  border-radius: 0;\r\n  z-index: 100;\n}\n.btnsuca[data-v-ccb8d420]{\r\n  text-align: center;\n}\n.btn-success[data-v-ccb8d420]{\r\n  padding-top:.1rem !important;\r\n  padding-bottom: .1rem !important;\n}\r\n", ""]);
 
 // exports
 
@@ -1784,7 +1784,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.slide-fade-enter-active[data-v-4ad50216] {\n  transition: all 0.5s ease;\n}\n.slide-fade-leave-active[data-v-4ad50216] {\n  transition: all 0.5s cubic-bezier(1, 0.5, 0.8, 1);\n}\n.slide-fade-enter[data-v-4ad50216],\n.slide-fade-leave-to[data-v-4ad50216] {\n  transform: translateX(10px);\n  opacity: 0;\n}\n.desctext[data-v-4ad50216]{\n  background-color: white;\n  color: black;\n}\n", ""]);
+exports.push([module.i, "\n.slide-fade-enter-active[data-v-4ad50216] {\r\n  transition: all 0.5s ease;\n}\n.slide-fade-leave-active[data-v-4ad50216] {\r\n  transition: all 0.5s cubic-bezier(1, 0.5, 0.8, 1);\n}\n.slide-fade-enter[data-v-4ad50216],\r\n.slide-fade-leave-to[data-v-4ad50216] {\r\n  transform: translateX(10px);\r\n  opacity: 0;\n}\n.desctext[data-v-4ad50216]{\r\n  background-color: white;\r\n  color: black;\n}\r\n", ""]);
 
 // exports
 
@@ -1803,7 +1803,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.btnsubmiticon[data-v-d9ed4160]{\n  background-color: #013737;\n  color:white;\n  padding-top: 2px;\n  padding-bottom: 2px;\n  border-radius: 0;\n  z-index: 100;\n}\n.btnsuca[data-v-d9ed4160]{\n  text-align: center;\n}\n.btn-success[data-v-d9ed4160]{\n  padding-top:.1rem !important;\n  padding-bottom: .1rem !important;\n}\n", ""]);
+exports.push([module.i, "\n.btnsubmiticon[data-v-d9ed4160]{\r\n  background-color: #013737;\r\n  color:white;\r\n  padding-top: 2px;\r\n  padding-bottom: 2px;\r\n  border-radius: 0;\r\n  z-index: 100;\n}\n.btnsuca[data-v-d9ed4160]{\r\n  text-align: center;\n}\n.btn-success[data-v-d9ed4160]{\r\n  padding-top:.1rem !important;\r\n  padding-bottom: .1rem !important;\n}\r\n", ""]);
 
 // exports
 
@@ -1822,7 +1822,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.slide-fade-enter-active[data-v-ed4e66d8] {\n    transition: all 0.5s ease;\n}\n.slide-fade-leave-active[data-v-ed4e66d8] {\n    transition: all 0.5s cubic-bezier(1, 0.5, 0.8, 1);\n}\n.slide-fade-enter[data-v-ed4e66d8],\n.slide-fade-leave-to[data-v-ed4e66d8] {\n    transform: translateX(10px);\n    opacity: 0;\n}\n", ""]);
+exports.push([module.i, "\n.slide-fade-enter-active[data-v-ed4e66d8] {\r\n    transition: all 0.5s ease;\n}\n.slide-fade-leave-active[data-v-ed4e66d8] {\r\n    transition: all 0.5s cubic-bezier(1, 0.5, 0.8, 1);\n}\n.slide-fade-enter[data-v-ed4e66d8],\r\n.slide-fade-leave-to[data-v-ed4e66d8] {\r\n    transform: translateX(10px);\r\n    opacity: 0;\n}\r\n", ""]);
 
 // exports
 
@@ -13887,7 +13887,9 @@ __webpack_require__.r(__webpack_exports__);
     },
     hideChangeButton: {
       type: Boolean,
-      default: false
+      /*default: false changed due to icon and cover in institute edit channel*/
+      default: true
+
     },
     autoToggleAspectRatio: {
       type: Boolean,
@@ -13907,7 +13909,8 @@ __webpack_require__.r(__webpack_exports__);
     },
     zIndex: {
       type: Number,
-      default: 10000
+      /*default: 10000  commented because of cover and icon in institute edit channel*/
+      default: 1
     },
     alertOnError: {
       type: Boolean,
@@ -13941,7 +13944,7 @@ __webpack_require__.r(__webpack_exports__);
         upload: '<p>Your device does not support file uploading.</p>',
         drag: 'Drag an image or <br>click here to select a file',
         tap: 'Tap here to select a photo <br>from your gallery',
-        change: 'Change Photo',
+       /* change: 'Change Photo', commented because of cover and icon in edit channel*/
         aspect: 'Landscape/Portrait',
         remove: 'Remove Photo',
         select: 'Select a Photo',
@@ -15286,7 +15289,7 @@ var render = function() {
                 staticClass: "fa fa-pencil",
                 attrs: { "aria-hidden": "true" }
               }),
-              _vm._v("\n            Change Logo")
+              _vm._v("\r\n            Change Logo")
             ]
           )
         ])
@@ -15347,7 +15350,7 @@ var render = function() {
                         staticClass: "fa fa-times",
                         attrs: { "aria-hidden": "true" }
                       }),
-                      _vm._v("Cancel\n            ")
+                      _vm._v("Cancel\r\n            ")
                     ]
                   )
                 : _vm._e()
@@ -18633,7 +18636,7 @@ if (typeof element != "undefined" && element != null) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/js/editChannel.js */"./resources/js/editChannel.js");
+module.exports = __webpack_require__(/*! C:\laragon\www\bridyc\resources\js\editChannel.js */"./resources/js/editChannel.js");
 
 
 /***/ })

@@ -2,27 +2,22 @@
 
    <section>
      <!-- college section starts here-->
-     <div class="institute container-fluid">
-        <div class="insclass">
-        <h6>Institutes</h6>
-        <img class="gradcap" src="/images/school.svg">
-        </div>
+     <div class="institute container py-5">
 
    <br>
         <div class="row mb-5">
           <div class="card institutecard shadow mx-auto" v-for="(channel,index) in channelData" :key="index">
             <div class="card-body">
              <img :src="channel.icon_avatar === null ? '/images/college logo.jpg': domainUrl+'/media/channel/'+channel.user_id+'/'+channel.icon_avatar" alt="college logo" class="inslogo">
-              <h4 class="card-title">{{channel.title}}</h4>
-              <p class="card-text">
-                    {{channel.district.name}}
+              <h4 class="card-title mt-n5 text-center">{{channel.title}}</h4>
+              <p class="card-text mt-n2 district-name">
+                    Dist: {{channel.district.name}}
               </p>
-              <p class="card-text destext" v-if="channel.description != null">
+              <p class="card-text destext d-none d-md-block mt-3" v-if="channel.description != null">
                   {{channel.description}}
               </p>
             </div>
-              <a :href="domainUrl+'/channel/'+channel.slug" class="visitins">Visit Institute</a>
-              <a :href="domainUrl+'/channel/'+channel.slug" class="btn btnvisit ml-auto">Visit Institute</a>
+              <a :href="domainUrl+'/channel/'+channel.slug" class="btn btnvisit mt-n3">Visit Institute <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
           </div>
         </div>
       </div>

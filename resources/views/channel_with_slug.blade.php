@@ -26,15 +26,12 @@
 <link rel="stylesheet" type="text/css" href="{{url('css/institutelandingpage.css')}}">
 @endsection
 @section('content')
-@php
-@endphp
-<div id="channelwithslug">
+
+<div id="channelwithslug" class="mb-n5 mt-2 mx-0" style="background-color:white;">
     <channel-with-slug :user="{{json_encode($user)}}" :channel="{{json_encode($channel)}}"
-        :currentuser="{{json_encode($currentUser)}}" :userid="{{$userId}}">
+        :currentuser="{{json_encode($currentUser)}}">
     </channel-with-slug>
 </div>
-
-
 @endsection
 
 @section('js_code')
