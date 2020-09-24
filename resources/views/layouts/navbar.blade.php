@@ -12,18 +12,6 @@
             <i class="fa fa-bell" aria-hidden="true"></i>
           </a>
         </li> --}}
-        @if (Auth::guard('admin')->check())
-            <li class="nav-item ">
-                <a class="btn btn-danger" href="{{ route('logout') }}"
-                onclick="event.preventDefault();
-                                document.getElementById('logout-form').submit();">
-                    {{ __('Logout') }}
-                </a>
-                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                    @csrf
-                </form>
-            </li>
-        @endif
         @if (Auth::check())
             <a class="btn btn-danger" href="{{ route('logout') }}"
             onclick="event.preventDefault();

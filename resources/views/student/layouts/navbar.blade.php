@@ -27,13 +27,28 @@
             </ul>
 
             @if (auth()->check() && auth()->user()->isStudent())
-                <a class="btn btn-primary" href="{{url('/edit/profile/'.auth()->user()->username)}}">Profile</a>
+                <a class="btn btn-primary" href="{{url('/edit/student/profile/'.auth()->user()->username)}}">Profile</a>
+            @endif
+
+            @if (auth()->check() && auth()->user()->isTeacher())
+                <a class="btn btn-primary" href="{{url('/edit/teacher/profile/'.auth()->user()->username)}}">Profile</a>
             @endif
 
 
-            @if (auth()->check() && auth()->user()->isUser() === 'institute')
-        <a class="btn btndashboard mr-2" data-trigger="focus" data-toggle="popover" data-placement="bottom" href="{{route('channel.index',current_user()->channel->title)}}">
-                <i class="fa fa-th-large" aria-hidden="true"></i> My Dashboard
+            @if (auth()->check() && auth()->user()->isInstitute())
+                @if (current_user()->channel != null)
+                    <a class="btn btndashboard mr-2" data-trigger="focus" data-toggle="popover" data-placement="bottom" href="{{route('channel.index',current_user()->channel->title)}}">
+                        <i class="fa fa-th-large" aria-hidden="true"></i> My Dashboard
+                    </a>
+                @else
+                    <a class="btn btndashboard mr-2" data-trigger="focus" data-toggle="popover" data-placement="bottom" href="{{route('verification')}}">
+                        <i class="fa fa-th-large" aria-hidden="true"></i> Verification
+                    </a>
+                @endif
+            @endif
+            @if (auth()->check() && auth()->user()->isAdmin())
+                <a class="btn btndashboard mr-2" data-trigger="focus" data-toggle="popover" data-placement="bottom" href="{{route('admin')}}">
+                    <i class="fa fa-th-large" aria-hidden="true"></i> Admin Dashboard
                 </a>
             @endif
             @if (Auth::check())
@@ -46,7 +61,8 @@
                     @csrf
                 </form>
             @else
-                <button type="button" id="lognsign" class="btn ml-auto navbtn" data-toggle="modal" data-target="#regForm">Login/Register</button>
+                {{-- <button type="button" id="lognsign" class="btn ml-auto navbtn" data-toggle="modal" data-target="#regForm">Login/Register</button> --}}
+                <a type="button" class="btn ml-auto navbtn" href="{{route('login')}}">Login/Register</a>
             @endif
       </div>
       </nav>

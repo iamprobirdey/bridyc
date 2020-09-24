@@ -4,6 +4,8 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
+use Spatie\Activitylog\Traits\LogsActivity;
+
 class Verification extends Model
 {
     protected $fillable = [
@@ -20,6 +22,24 @@ class Verification extends Model
         'pin',
         'gender'
     ];
+
+    protected static $logAttributes = [
+        'user.name',
+        'state.name',
+        'district.name',
+        'village.name',
+        'language.name',
+        'udise',
+        'location',
+        'title',
+        'ownership',
+        'founded',
+        'pin',
+        'gender'
+    ];
+
+    protected static $logOnlyDirty = true;
+
 
     public function user(){
         return $this->belongsTo(User::class,'user_id','id');

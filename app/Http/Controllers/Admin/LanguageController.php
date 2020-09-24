@@ -17,16 +17,25 @@ class LanguageController extends Controller
         $this->middleware('auth');
     }
 
-    public function index(){
+    public function index()
+    {
+        $this->authorize('superadmin', auth()->user());
+
         $language = $this->modelHelperServices::getLanguages();
-        return view('admin.language.index',compact('language'));
+        return view('admin.language.index', compact('language'));
     }
 
-    public function create(){
+    public function create()
+    {
+        $this->authorize('superadmin', auth()->user());
+
         return view('admin.language.create');
     }
 
-    public function store(Languagevalidation $request){
+    public function store(Languagevalidation $request)
+    {
+        $this->authorize('superadmin', auth()->user());
+
         Language::create([
             'name' => $request->validated()['name'],
             'code' => $request->validated()['code']
@@ -34,22 +43,31 @@ class LanguageController extends Controller
         return redirect()->back()->with('status', 'Succefully created the Language');
     }
 
-    public function delete($id){
+    public function delete($id)
+    {
+        $this->authorize('superadmin', auth()->user());
+
         $language = Language::findorFail($id);
         $language->delete();
-        return redirect()->back()->with('status' , 'Deleted succefully');
+        return redirect()->back()->with('status', 'Deleted succefully');
     }
 
-    public function updating($id){
+    public function updating($id)
+    {
+        $this->authorize('superadmin', auth()->user());
+
         $language = Language::findOrFail($id);
-        return view('admin.language.updating',compact('language',$language));
+        return view('admin.language.updating', compact('language', $language));
     }
 
-    public function update(Languagevalidation $request,$id){
+    public function update(Languagevalidation $request, $id)
+    {
+        $this->authorize('superadmin', auth()->user());
+
         $language = Language::findOrFail($id);
         $language->name = $request->validated()['name'];
         $language->code = $request->validated()['code'];
         $language->update();
-        return redirect('/admin/language/updating/'.$id)->with('status', 'Succefully updated the Language');
+        return redirect('/admin/language/updating/' . $id)->with('status', 'Succefully updated the Language');
     }
 }

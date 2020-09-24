@@ -24,7 +24,7 @@ class StoreWebsiteValidation extends FormRequest
     public function rules()
     {
         return [
-            'website' => 'required|url'
+            'website' => 'required|active_url'
         ];
     }
 }

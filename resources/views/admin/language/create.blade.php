@@ -1,5 +1,10 @@
 @extends('admin.index')
 
+@section('title','')
+@section('desc','')
+@section('keywords','')
+
+
 @section('adminContent')
 
 <div class="card">
@@ -8,9 +13,9 @@
     <a class="btn btn-primary" href="{{url('admin/language/')}}">Go Back to List</a>
 
     @if (session('status'))
-        <div class="alert alert-success">
-            {{ session('status') }}
-        </div>
+    <div class="alert alert-success">
+        {{ session('status') }}
+    </div>
     @endif
 
     <div class="card-body">
@@ -21,24 +26,26 @@
                 <label for="standard" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
 
                 <div class="col-md-6">
-                    <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                    <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name"
+                        value="{{ old('name') }}" required autocomplete="name" autofocus>
 
                     @error('name')
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
                     @enderror
                 </div>
             </div>
             <div class="form-group row">
                 <label for="standard" class="col-md-4 col-form-label text-md-right">{{ __('Code') }}</label>
                 <div class="col-md-6">
-                    <input id="code" type="text" class="form-control @error('code') is-invalid @enderror" name="code" value="{{ old('code') }}" required autocomplete="code" autofocus>
+                    <input id="code" type="text" class="form-control @error('code') is-invalid @enderror" name="code"
+                        value="{{ old('code') }}" required autocomplete="code" autofocus>
 
                     @error('code')
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
                     @enderror
                 </div>
             </div>
@@ -52,6 +59,5 @@
         </form>
     </div>
 </div>
-    
-@endsection
 
+@endsection

@@ -16,16 +16,22 @@ class CountryController extends Controller
         $this->middleware('auth');
     }
 
-    public function index(){
+    public function index()
+    {
+        $this->authorize('superadmin', auth()->user());
         $countries = $this->modelHelperServices::getCountries();
-        return view('admin.country.index',compact('countries'));
+        return view('admin.country.index', compact('countries'));
     }
 
-    public function create(){
+    public function create()
+    {
+        $this->authorize('superadmin', auth()->user());
         return view('admin.country.create');
     }
 
-    public function store(CountryValidation $request){
+    public function store(CountryValidation $request)
+    {
+        $this->authorize('superadmin', auth()->user());
         Country::create([
             'name' => $request->validated()['name'],
             'code' => $request->validated()['code']
@@ -33,16 +39,20 @@ class CountryController extends Controller
         return redirect('admin/country');
     }
 
-    public function updating($id){
+    public function updating($id)
+    {
+        $this->authorize('superadmin', auth()->user());
         $country = Country::findOrFail($id);
-        return view('admin.country.updating',compact('country',$country));
+        return view('admin.country.updating', compact('country', $country));
     }
 
-    public function update(CountryValidation $request,$id){
+    public function update(CountryValidation $request, $id)
+    {
+        $this->authorize('superadmin', auth()->user());
         $country = Country::findOrFail($id);
         $country->name = $request->validated()['name'];
         $country->code = $request->validated()['code'];
         $country->update();
-        return redirect('/admin/country/updating/'.$id)->with('status', 'Succefully updated the Country');
+        return redirect('/admin/country/updating/' . $id)->with('status', 'Succefully updated the Country');
     }
 }

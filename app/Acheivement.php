@@ -3,10 +3,15 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Spatie\Activitylog\Traits\LogsActivity;
 
 class Acheivement extends Model
 {
-    protected $fillable = ['user_id','channel_id','image_path','title','description'];
+    protected $fillable = ['channel_id','image_path','title','description','date'];
+
+    protected static $logAttributes = ['channel_id','image_path','title','description' ,'user.name','user.id','channel.title'];
+
+    protected static $logOnlyDirty = true;
 
     public function getImageAttribute(){
         return $this->image_path;

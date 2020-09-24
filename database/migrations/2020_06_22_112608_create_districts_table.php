@@ -15,10 +15,9 @@ class CreateDistrictsTable extends Migration
     {
         Schema::create('districts', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('state_id')->constrained('states')->onDelete('cascade')->unsigned()->index();
-            $table->string('name');
-            $table->string('code');
-            $table->string('slug');
+            $table->foreignId('state_id')->constrained()->onDelete('cascade');
+            $table->string('name')->unique();
+            $table->string('code')->unique()->index();
             $table->timestamps();
             ;
         });

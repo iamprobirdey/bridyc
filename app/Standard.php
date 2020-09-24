@@ -3,11 +3,20 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+
 use Illuminate\Support\Str;
+
+use Spatie\Activitylog\Traits\LogsActivity;
 
 class Standard extends Model
 {
     protected $fillable = ['standard_name'];
+
+    protected static $logAttributes = ['standard_name'];
+
+    protected static $logOnlyDirty = true;
+
+
     protected static function boot()
     {
         parent::boot();

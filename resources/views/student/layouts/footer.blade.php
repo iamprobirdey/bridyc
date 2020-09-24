@@ -1,4 +1,4 @@
-@include('student.layouts.loginRegister')
+{{-- @include('student.layouts.loginRegister') --}}
 
 <footer>
     <div class="footclass mx-auto">
@@ -28,7 +28,7 @@
               <ul>
                 <li>+91-9435285795</li>
                 <li>+91-9476844478</li>
-              </ul> 
+              </ul>
             </p>
           </div>
 
@@ -37,8 +37,8 @@
     <hr>
     <div class="comp">
       <div class="d-flex justify-content-center">
-        <a href="#" class="mr-4" >About Us</a>
-      <a href="{{url('contact')}}" class="mr-4">Contact Us</a>
+        <a href="{{route('about')}}" class="mr-4" >About Us</a>
+        <a href="{{url('contact')}}" class="mr-4">Contact Us</a>
         <p>A product by <a href="https://bucketbyte.com/" target="_blank">Bucket Byte</a></p>
       </div>
       <div class="d-flex justify-content-center">
@@ -122,7 +122,7 @@
   </script>
 
 
-    <script src="{{url('js/loginSignupModal.js')}}"></script>
+    {{-- <script src="{{url('js/loginSignupModal.js')}}"></script> --}}
 
 </body>
 </html>

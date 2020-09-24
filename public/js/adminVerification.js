@@ -201,28 +201,39 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
       usersData: [],
       slugData: {
-        slug: ''
+        slug: ""
       },
       slugError: {
-        slug: ''
+        slug: ""
       },
-      slugUserId: '',
-      slugIndex: '',
+      slugUserId: "",
+      slugIndex: "",
       metaData: {
-        meta_keywords: '',
-        meta_descriptions: ''
+        meta_keywords: "",
+        meta_descriptions: ""
       },
       metaDataError: {
-        meta_keywords: '',
-        meta_descriptions: ''
+        meta_keywords: "",
+        meta_descriptions: ""
       },
-      metaKeywordsDescriptionsId: ''
+      metaKeywordsDescriptionsId: ""
     };
   },
   props: {
@@ -249,10 +260,17 @@ __webpack_require__.r(__webpack_exports__);
         });
       });
     },
-    onTheStatus: function onTheStatus(userId, Id, index) {
+    onTheStatus: function onTheStatus(userId, verification, index) {
       var _this2 = this;
 
-      axios.get("verification/api/updatingforon/" + userId + "/" + Id).then(function (response) {
+      axios.get("verification/api/updatingforon/" + userId + "/" + verification).then(function (response) {
+        if (response.status === 200 && response.data.error === true) {
+          Vue.toasted.error("Make sure slug is been created", {
+            position: "top-center",
+            duration: 5000
+          });
+        }
+
         if (response.status === 200 && response.data.msg === true) {
           _this2.usersData[index].status = 2;
         }
@@ -278,38 +296,38 @@ __webpack_require__.r(__webpack_exports__);
       });
     },
     slugGenetor: function slugGenetor(title, name, userId, index) {
-      var slug = title + '-' + name;
+      var slug = title + "-" + name;
       this.slugUserId = userId;
       this.slugData.slug = this.slugify(slug);
       this.slugIndex = index;
-      $('#slugGenerator').modal('show');
+      $("#slugGenerator").modal("show");
     },
     slugify: function slugify(string) {
-      var a = 'àáâäæãåāăąçćčđďèéêëēėęěğǵḧîïíīįìłḿñńǹňôöòóœøōõőṕŕřßśšşșťțûüùúūǘůűųẃẍÿýžźż·/_,:;';
-      var b = 'aaaaaaaaaacccddeeeeeeeegghiiiiiilmnnnnoooooooooprrsssssttuuuuuuuuuwxyyzzz------';
-      var p = new RegExp(a.split('').join('|'), 'g');
-      return string.toString().toLowerCase().replace(/\s+/g, '-') // Replace spaces with -
+      var a = "àáâäæãåāăąçćčđďèéêëēėęěğǵḧîïíīįìłḿñńǹňôöòóœøōõőṕŕřßśšşșťțûüùúūǘůűųẃẍÿýžźż·/_,:;";
+      var b = "aaaaaaaaaacccddeeeeeeeegghiiiiiilmnnnnoooooooooprrsssssttuuuuuuuuuwxyyzzz------";
+      var p = new RegExp(a.split("").join("|"), "g");
+      return string.toString().toLowerCase().replace(/\s+/g, "-") // Replace spaces with -
       .replace(p, function (c) {
         return b.charAt(a.indexOf(c));
       }) // Replace special characters
-      .replace(/&/g, '-and-') // Replace & with 'and'
-      .replace(/[^\w\-]+/g, '') // Remove all non-word characters
-      .replace(/\-\-+/g, '-') // Replace multiple - with single -
-      .replace(/^-+/, '') // Trim - from start of text
-      .replace(/-+$/, ''); // Trim - from end of text
+      .replace(/&/g, "-and-") // Replace & with 'and'
+      .replace(/[^\w\-]+/g, "") // Remove all non-word characters
+      .replace(/\-\-+/g, "-") // Replace multiple - with single -
+      .replace(/^-+/, "") // Trim - from start of text
+      .replace(/-+$/, ""); // Trim - from end of text
     },
     slugGenerated: function slugGenerated() {
       var _this4 = this;
 
       this.$validator.validate().then(function (result) {
         if (result) {
-          axios.post('verification/api/channel-slug/' + _this4.slugUserId, _this4.slugData).then(function (response) {
+          axios.post("verification/api/channel-slug/" + _this4.slugUserId, _this4.slugData).then(function (response) {
             if (response.data.msg === true) {
               Vue.toasted.success("Slug is created", {
                 position: "top-center",
                 duration: 5000
               });
-              $('#slugGenerator').modal('hide');
+              $("#slugGenerator").modal("hide");
             }
           })["catch"](function (errors) {
             Vue.toasted.error("Something went wrong", {
@@ -324,8 +342,23 @@ __webpack_require__.r(__webpack_exports__);
         }
       });
     },
+    deleteTheUser: function deleteTheUser(userId, index) {
+      var _this5 = this;
+
+      confirm("Are you sure?");
+      axios.get("verification/api/delete/user/" + userId).then(function (response) {
+        if (response.status === 200 && response.data.msg === true) {
+          _this5.usersData.splice(index, 1);
+        }
+      })["catch"](function (errors) {
+        Vue.toasted.error("Something went wrong", {
+          position: "top-center",
+          duration: 5000
+        });
+      });
+    },
     getMetaModel: function getMetaModel(verification) {
-      this.metaKeywordsDescriptionsId = '';
+      this.metaKeywordsDescriptionsId = "";
       this.metaKeywordsDescriptionsId = verification.id;
 
       if (verification.meta_keywords != undefined) {
@@ -336,21 +369,21 @@ __webpack_require__.r(__webpack_exports__);
         this.metaData.meta_descriptions = this.verification.meta_descriptions;
       }
 
-      $('#metaGenerator').modal('show');
+      $("#metaGenerator").modal("show");
     },
     metaGenerationForm: function metaGenerationForm() {
-      var _this5 = this;
+      var _this6 = this;
 
       this.$validator.validate().then(function (result) {
         if (result) {
-          console.log('called');
-          axios.post('verification/api/keywords/description/' + _this5.metaKeywordsDescriptionsId, _this5.metaData).then(function (response) {
+          console.log("called");
+          axios.post("verification/api/keywords/description/" + _this6.metaKeywordsDescriptionsId, _this6.metaData).then(function (response) {
             if (response.data.msg === true) {
               Vue.toasted.success("Meta data is created", {
                 position: "top-center",
                 duration: 5000
               });
-              $('#slugGenerator').modal('hide');
+              $("#slugGenerator").modal("hide");
             }
           })["catch"](function (errors) {
             Vue.toasted.error("Something went wrong", {
@@ -359,11 +392,11 @@ __webpack_require__.r(__webpack_exports__);
             });
 
             if (errors.response.data.errors.meta_keywords) {
-              _this5.metaDataError.meta_keywords = errors.response.data.errors.meta_keywords[0];
+              _this6.metaDataError.meta_keywords = errors.response.data.errors.meta_keywords[0];
             }
 
             if (errors.response.data.errors.meta_descriptions) {
-              _this5.metaDataError.meta_descriptions = errors.response.data.errors.meta_descriptions[0];
+              _this6.metaDataError.meta_descriptions = errors.response.data.errors.meta_descriptions[0];
             }
           });
         }
@@ -371,7 +404,7 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   components: {
-    'meta-keywords': _model_meta_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
+    "meta-keywords": _model_meta_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
   }
 });
 
@@ -647,7 +680,7 @@ var render = function() {
                     }
                   }
                 },
-                [_vm._v("\n                  URl Gen.\n            ")]
+                [_vm._v("URl Gen.")]
               )
             ]),
             _vm._v(" "),
@@ -673,7 +706,22 @@ var render = function() {
             _vm._v(" "),
             _c("td", [_vm._v(_vm._s(verification.title))]),
             _vm._v(" "),
-            _c("td", [_vm._v(_vm._s(verification.founded))])
+            _c("td", [_vm._v(_vm._s(verification.founded))]),
+            _vm._v(" "),
+            _c("td", [
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-danger",
+                  on: {
+                    click: function($event) {
+                      return _vm.deleteTheUser(verification.user_id, index)
+                    }
+                  }
+                },
+                [_vm._v("Delete Channel")]
+              )
+            ])
           ])
         }),
         0
@@ -827,7 +875,7 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("th", { attrs: { scope: "col" } }, [_vm._v("Status")]),
         _vm._v(" "),
-        _c("th", { attrs: { scope: "col" } }, [_vm._v("Slug Generator ")]),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Slug Generator")]),
         _vm._v(" "),
         _c("th", { attrs: { scope: "col" } }, [_vm._v("Keywords Generator")]),
         _vm._v(" "),
@@ -847,7 +895,9 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("th", { attrs: { scope: "col" } }, [_vm._v("Title")]),
         _vm._v(" "),
-        _c("th", { attrs: { scope: "col" } }, [_vm._v("Founded")])
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Founded")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Delete")])
       ])
     ])
   }
@@ -1397,7 +1447,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\laragon\www\bridyc\resources\js\adminVerification.js */"./resources/js/adminVerification.js");
+module.exports = __webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/js/adminVerification.js */"./resources/js/adminVerification.js");
 
 
 /***/ })

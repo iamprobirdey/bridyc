@@ -258,15 +258,135 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
       channelData: {},
       userData: {},
+      currentuserData: {},
       domainUrl: location.origin,
-      userId: null,
-      phoneNo: '',
-      socialCount: 0
+      phoneNo: "",
+      socialCount: 0,
+      sessionUrl: window.location.pathname.split("/")[2],
+      channelRequestChecker: false,
+      channelRequestsuccefull: false,
+      userID: ""
     };
   },
   props: {
@@ -274,30 +394,76 @@ __webpack_require__.r(__webpack_exports__);
       type: Object,
       "default": null
     },
-    id: {
-      type: Number,
-      "default": null
-    },
     channel: {
       type: Object,
+      "default": null
+    },
+    currentuser: {
+      type: Object,
+      "default": null
+    },
+    userid: {
+      type: Number,
       "default": null
     }
   },
   created: function created() {
     this.userData = this.user;
     this.channelData = this.channel;
-    this.userId = this.id;
-    this.phoneNo = this.userData.phone ? this.userData.phone : 'Not provided';
+    this.currentuserData = this.currentuser;
+    this.phoneNo = this.userData.phone ? this.userData.phone : "Not provided";
+    this.userID = this.userid;
 
     if (this.channelData.extra_attributes.social.facebook === null && this.channelData.extra_attributes.social.linkedin === null && this.channelData.extra_attributes.social.youtube === null) {
       this.socialCount = 1;
     }
 
-    console.log(this.channelData);
-    console.log(this.userData);
+    console.log(this.currentuser);
   },
-  mounted: function mounted() {},
-  methods: {}
+  mounted: function mounted() {
+    this.getChannelSession();
+    this.requestChannelSatisfier();
+  },
+  methods: {
+    requestChannelSatisfier: function requestChannelSatisfier() {
+      if (this.currentuserData != null) {
+        if (this.currentuserData.request === "in-progress" && this.currentuserData.channel_id == this.channelData.id) {
+          this.channelRequestsuccefull = true;
+        }
+
+        if (this.currentuserData.request === "rejected" && this.currentuserData.channel_id != this.channelData.id) {
+          this.channelRequestChecker = true;
+        }
+
+        this.channelRequestChecker = false;
+      }
+
+      if (this.currentuserData == null) this.channelRequestChecker = true;
+    },
+    requestForChannel: function requestForChannel() {
+      var _this = this;
+
+      axios.get("/api/teacher/request/for/channel/" + this.userID + "/" + this.channelData.id).then(function (response) {
+        if (response.data.message) {
+          _this.channelRequestChecker = false;
+          _this.channelRequestsuccefull = true;
+        }
+      })["catch"](function (errors) {});
+    },
+    getChannelSession: function getChannelSession() {
+      if (sessionStorage.getItem([this.sessionUrl]) != this.channelData.id) {
+        sessionStorage.setItem([this.sessionUrl], this.channelData.id);
+        this.goForMostViewed(this.channelData.id);
+      }
+    },
+    goForMostViewed: function goForMostViewed(channelId) {
+      var _this2 = this;
+
+      axios.get("/api/store/channel/session/" + channelId).then(function (response) {
+        if (!response.data.message) _this2.goForMostViewed();
+      })["catch"](function (errors) {});
+    }
+  }
 });
 
 /***/ }),
@@ -790,11 +956,25 @@ var render = function() {
       _c("img", {
         staticClass: "inscover insusercover",
         attrs: {
+          srcset:
+            _vm.channelData.cover_avatar != null
+              ? _vm.domainUrl +
+                "/media/channel/" +
+                _vm.channelData.user_id +
+                "/m-" +
+                _vm.channelData.cover_avatar +
+                "," +
+                _vm.domainUrl +
+                "/media/channel/" +
+                _vm.channelData.user_id +
+                "/s-" +
+                _vm.channelData.cover_avatar
+              : "/images/banner2.png",
           src:
             _vm.channelData.cover_avatar != null
               ? _vm.domainUrl +
                 "/media/channel/" +
-                _vm.channel.user_id +
+                _vm.channelData.user_id +
                 "/" +
                 _vm.channelData.cover_avatar
               : "/images/banner2.png"
@@ -823,7 +1003,7 @@ var render = function() {
                 }
               },
               [
-                _vm._v("Visit Website "),
+                _vm._v("\n            Visit Website\n            "),
                 _c("i", {
                   staticClass: "fa fa-external-link",
                   attrs: { "aria-hidden": "true" }
@@ -838,7 +1018,7 @@ var render = function() {
                 staticClass: "fa fa-phone mr-1",
                 attrs: { "aria-hidden": "true" }
               }),
-              _vm._v(" " + _vm._s(_vm.phoneNo))
+              _vm._v("\n            " + _vm._s(_vm.phoneNo) + "\n          ")
             ]),
             _vm._v(" "),
             _c("p", { staticClass: "m-1 mr-2" }, [
@@ -846,8 +1026,37 @@ var render = function() {
                 staticClass: "fa fa-envelope mr-1",
                 attrs: { "aria-hidden": "true" }
               }),
-              _vm._v(_vm._s(_vm.userData.email))
-            ])
+              _vm._v(
+                "\n            " + _vm._s(_vm.userData.email) + "\n          "
+              )
+            ]),
+            _vm._v(" "),
+            _vm.channelRequestChecker
+              ? _c(
+                  "button",
+                  {
+                    staticClass: "btn btn-primary",
+                    on: {
+                      click: function($event) {
+                        return _vm.requestForChannel()
+                      }
+                    }
+                  },
+                  [
+                    _vm._v(
+                      "\n            Request Channel to accept\n          "
+                    )
+                  ]
+                )
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.channelRequestsuccefull
+              ? _c("button", { staticClass: "btn btn-success" }, [
+                  _vm._v(
+                    "\n            Channel Successfully Requested\n          "
+                  )
+                ])
+              : _vm._e()
           ])
         ])
       ]),
@@ -860,7 +1069,7 @@ var render = function() {
               _vm.channelData.icon_avatar != null
                 ? _vm.domainUrl +
                   "/media/channel/" +
-                  _vm.channel.user_id +
+                  _vm.channelData.user_id +
                   "/" +
                   _vm.channelData.icon_avatar
                 : "/images/college logo.jpg",
@@ -884,13 +1093,13 @@ var render = function() {
             _vm._v(" "),
             _c("p", [
               _vm._v(
-                "\n                " +
+                "\n            " +
                   _vm._s(
                     _vm.channelData.description != null
                       ? _vm.channelData.description
                       : ""
                   ) +
-                  "\n              "
+                  "\n          "
               )
             ])
           ]),
@@ -914,15 +1123,15 @@ var render = function() {
               _c("ul", { staticClass: "nav flex-column" }, [
                 _c("li", [
                   _vm._v(
-                    "Address:\n                  " +
+                    "\n                Address:\n                " +
                       _vm._s(_vm.channelData.title) +
-                      ",\n                  " +
+                      ", " +
                       _vm._s(_vm.channelData.district.name) +
-                      ",\n                  " +
+                      ",\n                " +
                       _vm._s(_vm.channelData.state.name) +
-                      "\n                  " +
+                      "\n                " +
                       _vm._s(_vm.userData.verification.pin) +
-                      "\n                  ,India\n                "
+                      "\n                ,India\n              "
                   )
                 ]),
                 _vm._v(" "),
@@ -932,9 +1141,7 @@ var render = function() {
                 _vm._v(" "),
                 _vm.socialCount === 0
                   ? _c("li", [
-                      _vm._v(
-                        "\n                  Socials:\n                    "
-                      ),
+                      _vm._v("\n                Socials:\n                "),
                       _vm.channelData.extra_attributes.social.facebook != null
                         ? _c(
                             "a",
@@ -1004,11 +1211,7 @@ var render = function() {
                   : _vm._e(),
                 _vm._v(" "),
                 _vm.socialCount === 1
-                  ? _c("li", [
-                      _vm._v(
-                        "\n                    Socials: Not provided\n                "
-                      )
-                    ])
+                  ? _c("li", [_vm._v("Socials: Not provided")])
                   : _vm._e()
               ])
             ])
@@ -1029,10 +1232,11 @@ var render = function() {
                 _vm._v(" "),
                 _c("li", [
                   _vm._v(
-                    "Location: " +
+                    "\n                Location: " +
                       _vm._s(_vm.channelData.village.name) +
                       "," +
-                      _vm._s(_vm.channelData.district.name)
+                      _vm._s(_vm.channelData.district.name) +
+                      "\n              "
                   )
                 ]),
                 _vm._v(" "),
@@ -1066,7 +1270,7 @@ var staticRenderFns = [
       _c("div", { staticClass: "card achievecard shadow" }, [
         _c("div", { staticClass: "card-body" }, [
           _c("div", { staticClass: "card-title" }, [
-            _vm._v("Achievements"),
+            _vm._v("\n              Achievements\n              "),
             _c("i", {
               staticClass: "fa fa-trophy",
               attrs: { "aria-hidden": "true" }
@@ -1186,27 +1390,27 @@ var staticRenderFns = [
       _vm._v(" "),
       _c("span", { staticClass: "sub-img" }, [
         _c("img", {
-          staticClass: "imgpreview  border p-1",
+          staticClass: "imgpreview border p-1",
           attrs: { src: "/images/testcollege.jpg" }
         }),
         _vm._v(" "),
         _c("img", {
-          staticClass: "imgpreview  border p-1",
+          staticClass: "imgpreview border p-1",
           attrs: { src: "/images/testcollege2.jpg" }
         }),
         _vm._v(" "),
         _c("img", {
-          staticClass: "imgpreview  border p-1",
+          staticClass: "imgpreview border p-1",
           attrs: { src: "/images/testcollege3.jpg" }
         }),
         _vm._v(" "),
         _c("img", {
-          staticClass: "imgpreview  border p-1",
+          staticClass: "imgpreview border p-1",
           attrs: { src: "/images/testcollege4.jpg" }
         }),
         _vm._v(" "),
         _c("img", {
-          staticClass: "imgpreview  border p-1",
+          staticClass: "imgpreview border p-1",
           attrs: { src: "/images/testcollege5.jpg" }
         })
       ])
@@ -13443,7 +13647,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\laragon\www\bridyc\resources\js\channelwithslug.js */"./resources/js/channelwithslug.js");
+module.exports = __webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/js/channelwithslug.js */"./resources/js/channelwithslug.js");
 
 
 /***/ })

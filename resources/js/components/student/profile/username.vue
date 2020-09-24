@@ -30,7 +30,7 @@
             <div class="ml-5">
                 <button type="btn" class="btn btn-warning" @click="cancelEditing()">Cancel</button>
                 <button type="submit" class="btn btnsubmit mt-n2">Submit</button>
-            </div>   
+            </div>
             </form>
         </div>
 
@@ -110,7 +110,7 @@ export default {
         urlChanger(username){
             let url = window.location.origin;
             let changeUrl = window.location.pathname.split('/');
-            changeUrl[3] = username;
+            changeUrl[4] = username;
             window.history.pushState('username','on-profile',url+changeUrl.join('/'));
         }
     }

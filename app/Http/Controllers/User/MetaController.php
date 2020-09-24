@@ -14,7 +14,10 @@ class MetaController extends Controller
         $this->middleware('auth');
     }
 
-    public function store($metaId , StoreMetaKeywordsDescriptionsValidation $request){
+    public function store($metaId, StoreMetaKeywordsDescriptionsValidation $request)
+    {
+        $this->authorize('superadmin', auth()->user());
+
         $channel = Channel::findOrFail($metaId);
         $channel->meta_keywords = $request->validated()['meta_keywords'];
         $channel->meta_descriptions = $request->validated()['meta_descriptions'];

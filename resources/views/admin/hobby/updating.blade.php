@@ -1,5 +1,10 @@
 @extends('admin.index')
 
+@section('title','')
+@section('desc','')
+@section('keywords','')
+
+
 @section('adminContent')
 
 <div class="card">
@@ -8,9 +13,9 @@
     <a class="btn btn-primary" href="{{url('admin/hobby/')}}">Go Back to List</a>
 
     @if (session('status'))
-        <div class="alert alert-success">
-            {{ session('status') }}
-        </div>
+    <div class="alert alert-success">
+        {{ session('status') }}
+    </div>
     @endif
 
     @php
@@ -24,12 +29,13 @@
                 <label for="hobby" class="col-md-4 col-form-label text-md-right">{{ __('hobby') }}</label>
 
                 <div class="col-md-6">
-                    <input id="hobby" type="text" class="form-control @error('hobby') is-invalid @enderror" name="hobby" value="{{ $hobby['name'] }}" required autocomplete="hobby" autofocus>
+                    <input id="hobby" type="text" class="form-control @error('hobby') is-invalid @enderror" name="hobby"
+                        value="{{ $hobby['name'] }}" required autocomplete="hobby" autofocus>
 
                     @error('hobby')
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
                     @enderror
                 </div>
             </div>
@@ -44,4 +50,3 @@
     </div>
 </div>
 @endsection
-

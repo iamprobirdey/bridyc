@@ -2,11 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Spatie\Permission\Models\Role;
 use Spatie\Permission\Models\Permission;
-use App\Admin;
 use Illuminate\Support\Str;
 
 class HomeController extends Controller
@@ -47,25 +47,12 @@ class HomeController extends Controller
         return view('terms');
     }
 
+    public function about(){
+        return view('about');
+    }
+
     public function test(){
-        $role1 = Role::create(['name' => 'student']);
-        $role2 = Role::create(['name' => 'institute']);
-        $role3 = Role::create(['name' => 'admin','guard_name'=> 'admin']);
-        $permission1 = Permission::create(['name' => 'apply form']);
-        $permission2 = Permission::create(['name' => 'institute dashboard']);
-        $permission3 = Permission::create(['name' => 'admin dashboard','guard_name'=> 'admin']);
-        $permission4 = Permission::create(['name' => 'delete form','guard_name'=> 'admin']);
 
-        $role1->givePermissionTo($permission1);
-        $role2->givePermissionTo($permission2);
-        $role3->givePermissionTo($permission3);
-        $role3->givePermissionTo($permission4);
-
-        Admin::create([
-            'name' => Str::random(10),
-            'email' => 'deyprobir71@gmail.com',
-            'password' => '$2y$10$A5qfm/Ssy2JOTLf5PQKOxeIFrLTOUaK5nwONeWstGu07wQDAEciwK',
-        ]);
 
         // $user =  Auth::user();
         // $user->assignRole('institute');

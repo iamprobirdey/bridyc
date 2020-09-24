@@ -1,5 +1,11 @@
 @extends('admin.index')
 
+
+@section('title','')
+@section('desc','')
+@section('keywords','')
+
+
 @section('adminContent')
 
 <div class="card">
@@ -8,9 +14,9 @@
     <a class="btn btn-primary" href="{{url('admin/village/')}}">Go Back to List</a>
 
     @if (session('status'))
-        <div class="alert alert-success">
-            {{ session('status') }}
-        </div>
+    <div class="alert alert-success">
+        {{ session('status') }}
+    </div>
     @endif
 
     @php
@@ -25,17 +31,16 @@
                 <label for="district" class="col-md-4 col-form-label text-md-right">Select the district</label>
 
                 <div class="col-md-6">
-                    <select name="district" class="form-control" 
-                    @error('district') is-invalid @enderror required>
+                    <select name="district" class="form-control" @error('district') is-invalid @enderror required>
                         @foreach ($districts as $district)
-                            <option value="{{$district->id}}">{{$district->name}}</option>
+                        <option value="{{$district->id}}">{{$district->name}}</option>
                         @endforeach
-                      </select>
+                    </select>
 
                     @error('district')
-                        <span class="text-danger" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
+                    <span class="text-danger" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
                     @enderror
                 </div>
             </div>
@@ -44,12 +49,13 @@
                 <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
 
                 <div class="col-md-6">
-                    <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ $village['name'] }}" required autocomplete="name" autofocus>
+                    <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name"
+                        value="{{ $village['name'] }}" required autocomplete="name" autofocus>
 
                     @error('name')
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
                     @enderror
                 </div>
             </div>
@@ -57,12 +63,13 @@
                 <label for="code" class="col-md-4 col-form-label text-md-right">{{ __('Code') }}</label>
 
                 <div class="col-md-6">
-                    <input id="code" type="text" class="form-control @error('code') is-invalid @enderror" name="code" value="{{ $district['code'] }}" required autocomplete="code" autofocus>
+                    <input id="code" type="text" class="form-control @error('code') is-invalid @enderror" name="code"
+                        value="{{ $district['code'] }}" required autocomplete="code" autofocus>
 
                     @error('code')
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
                     @enderror
                 </div>
             </div>
@@ -76,6 +83,5 @@
         </form>
     </div>
 </div>
-    
-@endsection
 
+@endsection

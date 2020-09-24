@@ -4,10 +4,17 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
+use Spatie\Activitylog\Traits\LogsActivity;
 
 class Board extends Model
 {
+
     protected $fillable = ['name'];
+
+    protected static $logAttributes = ['name'];
+
+    protected static $logOnlyDirty = true;
+
     protected static function boot()
     {
         parent::boot();
