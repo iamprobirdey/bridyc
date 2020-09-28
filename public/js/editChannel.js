@@ -1746,7 +1746,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.btn-success{\n    border-radius: 0;\n    padding:5px\n}\n", ""]);
+exports.push([module.i, "\n.btn-success{\r\n    border-radius: 0;\r\n    padding:5px\n}\r\n", ""]);
 
 // exports
 
