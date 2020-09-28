@@ -6,6 +6,7 @@
             <button class="btn-primary" @click="editGenderAndVission()">Edit</button>
             <p>{{channelProfileData.gender}}</p>
             <p>{{channelProfileData.vission}}</p>
+            <p>{{channelProfileData.message}}</p>
         </div>
     <form @submit.prevent="getFormData()" v-if="!genderVissionChecker">
       <div
@@ -54,6 +55,25 @@
           <span v-show="errors.has('vission')" class="text-danger">{{ errors.first('vission') }}</span>
           <span v-show="profileError.vission != ''" class="text-danger">{{ profileError.vission }}</span>
         </div>
+              <div
+          class="form-group"
+          :class="{'has-error': errors.has('message') || profileError.message != '' }"
+        >
+          <label >What message do you have for your college</label>
+          <textarea
+            v-model="profileData.message"
+            v-validate="'required'"
+            data-vv-delay="20"
+            name="message"
+            type="text"
+            :class="{'form-control': true, 'is-invalid': errors.has('message') }"
+            placeholder="message"
+          />
+          <i v-show="errors.has('message')" class="is-invalid"></i>
+
+          <span v-show="errors.has('message')" class="text-danger">{{ errors.first('message') }}</span>
+          <span v-show="profileError.message != ''" class="text-danger">{{ profileError.message }}</span>
+        </div>
       <button
         type="button"
         class="btn btn-success"
@@ -72,11 +92,13 @@ export default {
             genderVissionChecker: true,
             profileData: {
                 'gender' :  '',
-                'vission' : ''
+                'vission' : '',
+                'message' : ''
             },
             profileError: {
                 'gender' :  '',
-                'vission' : ''
+                'vission' : '',
+                'message' : ''
             },
         };
     },
@@ -106,6 +128,7 @@ export default {
                                 });
                                 this.channelProfileData.gender = this.profileData.gender;
                                 this.channelProfileData.vission = this.profileData.vission;
+                                this.channelProfileData.message = this.profileData.message;
                                 this.genderVissionChecker = true;
                             }
                         })

@@ -7,7 +7,6 @@ use Illuminate\Http\Request;
 use App\Http\Requests\Website\StoreWebsiteValidation;
 use App\Http\Requests\Website\EditWebsiteValidation;
 use App\Channel;
-use Auth;
 use DB;
 
 class WebsiteController extends Controller
@@ -18,42 +17,56 @@ class WebsiteController extends Controller
     }
 
     public function getWebsiteData(){
-        $this->authorize('viewforchannel',auth()->user());
-        $this->authorize('checkChannelForUser',auth()->user()->channel);
+
+        $this->authorize('viewforchannel',current_user());
+        $this->authorize('checkChannelForUser',current_user()->channel);
         return response()->json([
-            'data' => Channel::select('id','website_link')->where('user_id',auth()->id())->get()
+            'data' => Channel::select('id','website_link')->where('user_id',current_user_id())->get()
         ]);
     }
 
     public function editWebsiteData(EditWebsiteValidation $request){
-        $this->authorize('viewforchannel',auth()->user());
-        $this->authorize('checkChannelForUser',auth()->user()->channel);
+        activity('institute')
+        ->performedOn(current_user()->channel)
+        ->causedBy(current_user())
+        ->withProperties(['website ' => 'website is updated'])
+        ->log('Channel name :subject.title, by :causer.name and :properties.website');
+
+
+        $this->authorize('viewforchannel',current_user());
+        $this->authorize('checkChannelForUser',current_user()->channel);
         DB::table('channels')
-            ->where('user_id',auth()->id())
+            ->where('user_id',current_user_id())
             ->update([
                 'website_link' => $request->validated()['website']
             ]);
         return response()->json([
             'message' => true,
             'data' => DB::table('channels')
-                    ->where('user_id',auth()->id())
+                    ->where('user_id',current_user_id())
                     ->select('website_link')
                     ->get()
         ]);
     }
 
     public function storeWebsiteData(StoreWebsiteValidation $request){
-        $this->authorize('viewforchannel',auth()->user());
-        $this->authorize('checkChannelForUser',auth()->user()->channel);
+        activity('institute')
+        ->performedOn(current_user()->channel)
+        ->causedBy(current_user())
+        ->withProperties(['website ' => 'website is created'])
+        ->log('Channel name :subject.title, by :causer.name and :properties.website');
+
+        $this->authorize('viewforchannel',current_user());
+        $this->authorize('checkChannelForUser',current_user()->channel);
         DB::table('channels')
-            ->where('user_id',auth()->id())
+            ->where('user_id',current_user_id())
             ->update([
                 'website_link' => $request->validated()['website']
             ]);
         return response()->json([
             'message' => true,
             'data' => DB::table('channels')
-                        ->where('user_id',auth()->id())
+                        ->where('user_id',current_user_id())
                         ->select('website_link')
                         ->get()
         ]);

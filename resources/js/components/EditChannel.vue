@@ -28,10 +28,15 @@
           <board></board>
       </div>
       </div>
-      <div class="mt-5">
-          <social></social>
+      <div class="row mt-5">
+          <div class="col-sm-6">
+              <social></social>
+          </div>
+         <div class="col-sm-6">
+              <college :channel="channelData"></college>
+         </div>
       </div>
-    
+
   </div>
 </template>
 
@@ -44,15 +49,25 @@ import infrastructure from "./channel/infrastructure.vue";
 import standard from "./channel/standard.vue";
 import board from "./channel/board.vue";
 import social from "./channel/social.vue";
+import college from "./channel/college.vue";
 export default {
   data() {
     return {
       websiteLink: "",
       websiteLinkError: "",
-      userData: {}
+      userData: {},
+      channelData : []
     };
   },
-  created() {},
+  props:{
+      channel:{
+          type : Array,
+          default : null
+      }
+  },
+  created() {
+      this.channelData = this.channel;
+  },
   mounted() {},
   methods: {},
   components: {
@@ -63,7 +78,8 @@ export default {
     infrastructure,
     standard,
     board,
-    social
+    social,
+    college
   }
 };
 </script>

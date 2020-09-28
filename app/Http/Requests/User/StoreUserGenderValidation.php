@@ -25,7 +25,8 @@ class StoreUserGenderValidation extends FormRequest
     {
         return [
             'gender' => 'required',
-            'vission' => 'required'
+            'vission' => 'required',
+            'message' => 'required'
         ];
     }
 }

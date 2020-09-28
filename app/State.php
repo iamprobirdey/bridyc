@@ -3,21 +3,29 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+
 use Illuminate\Support\Str;
+
+use Spatie\Activitylog\Traits\LogsActivity;
 
 class State extends Model
 {
-    protected $fillable = ['country_id','name','code','slug'];
+    use LogsActivity;
+
+    protected $fillable = ['country_id','name','code'];
+
+    protected static $logFillable = true;
+
+    protected static $logOnlyDirty = true;
+
     protected static function boot()
     {
         parent::boot();
         static::saving(function ($model) {
             $model->name = Str::ucfirst($model->name);
-            $model->slug = Str::slug($model->name);
         });
         static::updating(function ($model) {
             $model->name = Str::ucfirst($model->name);
-            $model->slug = Str::slug($model->name);
         });
     }
 

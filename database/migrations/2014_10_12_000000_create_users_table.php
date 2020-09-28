@@ -24,8 +24,11 @@ class CreateUsersTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('gender')->nullable();
             $table->string('vission')->nullable();
+            $table->string('message')->nullable();
             $table->string('password')->nullable();
             $table->integer('status')->default(0); //verified => 1, block => 2
+            $table->timestamp('last_activity')->nullable();
+            $table->timestamp('phone_verified')->nullable();
             $table->timestamp('blocked_at')->nullable();
             $table->timestamp('verified_at')->nullable();
             $table->rememberToken();

@@ -3,35 +3,90 @@
 namespace App\Http\Controllers;
 
 use App\Channel;
+use App\InstituteAnalysis;
 use App\User;
+use App\UserChannelRequest;
 use Illuminate\Support\Facades\Auth;
+use Spatie\Activitylog\Models\Activity;
 
 class ChannelController extends Controller
 {
-    public function index(){
+    public function index()
+    {
+        activity('all-user')->log('User entered in Bridyc');
         $channel = Channel::select(
-                    'district_id',
-                    'user_id',
-                    'title',
-                    'icon_avatar',
-                    'description',
-                    'slug'
-                )
-                ->where('status',1)
-                ->with('district')
-                ->get();
-        return view('index',compact('channel'));
+            'district_id',
+            'user_id',
+            'title',
+            'icon_avatar',
+            'description',
+            'slug'
+        )
+            ->where('status', 1)
+            ->with('district')
+            ->get();
+        return view('index', compact('channel'));
     }
 
-    public function getChannelBySlug($slug){
-        $channel = Channel::where('slug',$slug)
-                    ->with(['state','district','village','language'])
-                    ->first();
-        if($channel === null) abort(404);
-        $userId = Auth::id();
-        $user = User::where('id',$channel->user_id)
-                ->with('verification')
-                ->first();
-        return view('channel_with_slug',compact(['channel','user','userId']));
+    public function getChannelBySlug(Channel $channel)
+    {
+
+        $this->fireTheLog($channel);
+
+        $channel = $channel
+            ->with(['state', 'district', 'village', 'language'])
+            ->first();
+        $user = User::where('id', $channel->user_id)
+            ->with('verification')
+            ->first();
+        $currentUser = null;
+        if (auth()->check()) {
+            if (current_user()->isTeacher()) {
+                $currentUser = UserChannelRequest::where('user_id', current_user_id())->first();
+            }
+        }
+
+        $userId = current_user_id();
+
+        return view('channel_with_slug', compact(['channel', 'user', 'currentUser', 'userId']));
+    }
+
+    private function fireTheLog($channel)
+    {
+        if (Auth::check()) {
+            $role = current_user()->user_type;
+            activity($role)
+                ->performedOn($channel)
+                ->causedBy(current_user())
+                ->log('edited');
+            activity()->log('User entered in Bridyc');
+        } else {
+            activity('all-user')
+                ->performedOn($channel)
+                ->log('edited');
+            activity()->log('User entered in Bridyc');
+        }
+    }
+
+    public function storeChannelSession($channelId)
+    {
+        $instituteAnalysis = new InstituteAnalysis();
+        if (auth()->check()) {
+            $instituteAnalysis->channel_id = (int)$channelId;
+            $instituteAnalysis->most_viewed_count = 1;
+            $instituteAnalysis->user_ip_address = \Request::ip();
+            if (!collect([1, 2, 3, 4])->contains(current_user_id())) {
+                $instituteAnalysis->extra_attributes->set('user_id', current_user_id());
+            }
+            $instituteAnalysis->save();
+        } else {
+            $instituteAnalysis->channel_id = (int)$channelId;
+            $instituteAnalysis->most_viewed_count = 1;
+            $instituteAnalysis->user_ip_address = \Request::ip();
+            $instituteAnalysis->save();
+        }
+        return response()->json([
+            'message' => true
+        ]);
     }
 }

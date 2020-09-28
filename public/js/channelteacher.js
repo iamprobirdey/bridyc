@@ -136,86 +136,24 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      teachersData: [],
-      channelId: '',
+      teachersData: {},
+      teachersRequestData: {},
+      channelId: "",
       formData: {
-        'name': '',
-        'email': '',
-        'password': ''
+        name: "",
+        email: "",
+        password: ""
       },
       serverErrors: {
-        'name': '',
-        'email': '',
-        'password': ''
+        name: "",
+        email: "",
+        password: ""
       },
-      additionUrl: '',
-      url: location.origin + '/api/'
+      additionUrl: "",
+      url: location.origin + "/api/"
     };
   },
   props: {
@@ -226,59 +164,18 @@ __webpack_require__.r(__webpack_exports__);
   },
   created: function created() {
     this.teachersData = this.teacher[0].teacher;
+    this.teachersRequestData = this.teacher[0].userchannelrequest;
     this.channelId = this.teacher[0].id;
+    console.log(this.teachersData);
   },
-  mounted: function mounted() {},
+  mounted: function mounted() {
+    console.log(this.teachersData);
+  },
   methods: {
-    addUser: function addUser() {
-      $('#addingUserModal').modal('show');
-    },
-    userGenerationForm: function userGenerationForm() {
+    deleteFromChannel: function deleteFromChannel(id, index) {
       var _this = this;
 
-      this.additionUrl = 'add/teacher/';
-      this.$validator.validate().then(function (result) {
-        if (result) {
-          axios.post(_this.url + _this.additionUrl + _this.channelId, _this.formData).then(function (response) {
-            if (response.data.message === true) {
-              Vue.toasted.success("Teacher account is created", {
-                position: "top-center",
-                duration: 5000
-              });
-              _this.teachersData = [];
-              _this.teachersData = response.data.data;
-              console.log(response.data.data);
-              $('#addingUserModal').modal('hide');
-            }
-          })["catch"](function (errors) {
-            Vue.toasted.error("Something went wrong", {
-              position: "top-center",
-              duration: 5000
-            });
-
-            if (errors.response.data.errors.name) {
-              _this.serverErrors.name = errors.response.data.errors.name[0];
-            }
-
-            if (errors.response.data.errors.email) {
-              _this.serverErrors.email = errors.response.data.errors.email[0];
-            }
-
-            if (errors.response.data.errors.gender) {
-              _this.serverErrors.gender = errors.response.data.errors.gender[0];
-            }
-
-            if (errors.response.data.errors.password) {
-              _this.serverErrors.password = errors.response.data.errors.password[0];
-            }
-          });
-        }
-      });
-    },
-    deleteFromChannel: function deleteFromChannel(id, index) {
-      var _this2 = this;
-
-      this.additionUrl = '/delete/teacher/';
+      this.additionUrl = "/delete/teacher/";
       axios.post(this.url + this.additionUrl + id).then(function (response) {
         if (response.data.message === true) {
           Vue.toasted.success("Teacher account from your school is destroyed", {
@@ -287,7 +184,47 @@ __webpack_require__.r(__webpack_exports__);
           });
         }
 
-        _this2.teachersData.splice(index, 1);
+        _this.teachersData.splice(index, 1);
+      })["catch"](function (errors) {
+        Vue.toasted.error("Something went wrong", {
+          position: "top-center",
+          duration: 5000
+        });
+      });
+    },
+    acceptTheTeacher: function acceptTheTeacher(teacher, index) {
+      var _this2 = this;
+
+      axios.post("/api/accept/request/of/teacher/" + teacher.id).then(function (response) {
+        if (response.data.message === true) {
+          Vue.toasted.success("You have successfully accepted the request", {
+            position: "top-center",
+            duration: 5000
+          });
+
+          _this2.teachersRequestData.splice(index, 1);
+
+          window.location.reload();
+        }
+      })["catch"](function (errors) {
+        Vue.toasted.error("Something went wrong", {
+          position: "top-center",
+          duration: 5000
+        });
+      });
+    },
+    deleteTheTeacher: function deleteTheTeacher(teacher, index) {
+      var _this3 = this;
+
+      axios.post("/api/delete/request/of/teacher/" + teacher.id).then(function (response) {
+        if (response.data.message === true) {
+          Vue.toasted.success("You have successfully deleted the request", {
+            position: "top-center",
+            duration: 5000
+          });
+
+          _this3.teachersRequestData.splice(index, 1);
+        }
       })["catch"](function (errors) {
         Vue.toasted.error("Something went wrong", {
           position: "top-center",
@@ -318,17 +255,63 @@ var render = function() {
   return _c(
     "div",
     [
+      _vm.teachersRequestData != null
+        ? _c(
+            "div",
+            [
+              _vm._m(0),
+              _vm._v(" "),
+              _vm._l(_vm.teachersRequestData, function(teacher, index) {
+                return _c("div", { key: index }, [
+                  teacher.request === "in-progress"
+                    ? _c("div", [
+                        _c("h3", [
+                          _vm._v("Teacher name: " + _vm._s(teacher.user.name))
+                        ]),
+                        _vm._v(" "),
+                        _c(
+                          "button",
+                          {
+                            staticClass: "btn btn-primary",
+                            on: {
+                              click: function($event) {
+                                return _vm.acceptTheTeacher(teacher, index)
+                              }
+                            }
+                          },
+                          [_vm._v("\n          Accept\n        ")]
+                        ),
+                        _vm._v(" "),
+                        _c(
+                          "button",
+                          {
+                            staticClass: "btn btn-danger",
+                            on: {
+                              click: function($event) {
+                                return _vm.deleteTheTeacher(teacher, index)
+                              }
+                            }
+                          },
+                          [_vm._v("\n          Delete\n        ")]
+                        )
+                      ])
+                    : _vm._e()
+                ])
+              })
+            ],
+            2
+          )
+        : _vm._e(),
+      _vm._v(" "),
       _c("h1", [_vm._v("Your school teachers")]),
       _vm._v(" "),
-      _c("h3", [_vm._v("Your your schools leave your school?")]),
+      _c("h3", [_vm._v("Teacher has left your school for some reason?")]),
       _vm._v(" "),
       _c("span", [_vm._v("Just remove them from the list")]),
       _vm._v(" "),
       _vm._l(_vm.teachersData, function(teacher, index) {
         return _c("div", { key: index }, [
-          _c("h3", [
-            _vm._v("Teacher name: " + _vm._s(teacher.user.name) + " ")
-          ]),
+          _c("h3", [_vm._v("Teacher name: " + _vm._s(teacher.user.name))]),
           _vm._v(" "),
           _c("h4", [_vm._v("Teacher email id: " + _vm._s(teacher.user.email))]),
           _vm._v(" "),
@@ -342,342 +325,26 @@ var render = function() {
                 }
               }
             },
-            [_vm._v("Delete")]
+            [_vm._v("\n      Delete\n    ")]
           )
         ])
-      }),
-      _vm._v(" "),
-      _c(
-        "button",
-        {
-          staticClass: "btn btn-primary",
-          on: {
-            click: function($event) {
-              return _vm.addUser()
-            }
-          }
-        },
-        [_vm._v("Add")]
-      ),
-      _vm._v(" "),
-      _c(
-        "div",
-        {
-          staticClass: "modal fade",
-          attrs: {
-            id: "addingUserModal",
-            tabindex: "-1",
-            role: "dialog",
-            "aria-labelledby": "exampleModalLabel",
-            "aria-hidden": "true"
-          }
-        },
-        [
-          _c(
-            "div",
-            { staticClass: "modal-dialog", attrs: { role: "document" } },
-            [
-              _c("div", { staticClass: "modal-content" }, [
-                _c("div", { staticClass: "modal-body" }, [
-                  _c(
-                    "form",
-                    {
-                      on: {
-                        submit: function($event) {
-                          $event.preventDefault()
-                          return _vm.userGenerationForm()
-                        }
-                      }
-                    },
-                    [
-                      _c(
-                        "div",
-                        {
-                          staticClass: "form-group",
-                          class: {
-                            "has-error":
-                              _vm.errors.has("serverErrors.name") ||
-                              _vm.serverErrors.name != ""
-                          }
-                        },
-                        [
-                          _c("label", [_vm._v("User name")]),
-                          _vm._v(" "),
-                          _c("input", {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.formData.name,
-                                expression: "formData.name"
-                              },
-                              {
-                                name: "validate",
-                                rawName: "v-validate",
-                                value: "required",
-                                expression: "'required'"
-                              }
-                            ],
-                            class: {
-                              "form-control": true,
-                              "is-invalid": _vm.errors.has("name")
-                            },
-                            attrs: {
-                              "data-vv-delay": "20",
-                              name: "name",
-                              type: "text",
-                              placeholder: "Teacher name"
-                            },
-                            domProps: { value: _vm.formData.name },
-                            on: {
-                              input: function($event) {
-                                if ($event.target.composing) {
-                                  return
-                                }
-                                _vm.$set(
-                                  _vm.formData,
-                                  "name",
-                                  $event.target.value
-                                )
-                              }
-                            }
-                          }),
-                          _vm._v(" "),
-                          _c(
-                            "span",
-                            {
-                              directives: [
-                                {
-                                  name: "show",
-                                  rawName: "v-show",
-                                  value: _vm.errors.has("name"),
-                                  expression: "errors.has('name')"
-                                }
-                              ],
-                              staticClass: "text-danger"
-                            },
-                            [_vm._v(_vm._s(_vm.errors.first("name")))]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "span",
-                            {
-                              directives: [
-                                {
-                                  name: "show",
-                                  rawName: "v-show",
-                                  value: _vm.serverErrors.name != "",
-                                  expression: "serverErrors.name != ''"
-                                }
-                              ],
-                              staticClass: "text-danger"
-                            },
-                            [_vm._v(_vm._s(_vm.serverErrors.name))]
-                          )
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        {
-                          staticClass: "form-group",
-                          class: {
-                            "has-error":
-                              _vm.errors.has("serverErrors.email") ||
-                              _vm.serverErrors.email != ""
-                          }
-                        },
-                        [
-                          _c("label", [_vm._v("User Email")]),
-                          _vm._v(" "),
-                          _c("input", {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.formData.email,
-                                expression: "formData.email"
-                              },
-                              {
-                                name: "validate",
-                                rawName: "v-validate",
-                                value: "required|email",
-                                expression: "'required|email'"
-                              }
-                            ],
-                            class: {
-                              "form-control": true,
-                              "is-invalid": _vm.errors.has("email")
-                            },
-                            attrs: {
-                              "data-vv-delay": "20",
-                              name: "email",
-                              type: "email",
-                              placeholder: "Teacher Email Id"
-                            },
-                            domProps: { value: _vm.formData.email },
-                            on: {
-                              input: function($event) {
-                                if ($event.target.composing) {
-                                  return
-                                }
-                                _vm.$set(
-                                  _vm.formData,
-                                  "email",
-                                  $event.target.value
-                                )
-                              }
-                            }
-                          }),
-                          _vm._v(" "),
-                          _c(
-                            "span",
-                            {
-                              directives: [
-                                {
-                                  name: "show",
-                                  rawName: "v-show",
-                                  value: _vm.errors.has("email"),
-                                  expression: "errors.has('email')"
-                                }
-                              ],
-                              staticClass: "text-danger"
-                            },
-                            [_vm._v(_vm._s(_vm.errors.first("email")))]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "span",
-                            {
-                              directives: [
-                                {
-                                  name: "show",
-                                  rawName: "v-show",
-                                  value: _vm.serverErrors.email != "",
-                                  expression: "serverErrors.email != ''"
-                                }
-                              ],
-                              staticClass: "text-danger"
-                            },
-                            [_vm._v(_vm._s(_vm.serverErrors.email))]
-                          )
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "div",
-                        {
-                          staticClass: "form-group",
-                          class: {
-                            "has-error":
-                              _vm.errors.has("serverErrors.password") ||
-                              _vm.serverErrors.password != ""
-                          }
-                        },
-                        [
-                          _c("label", [_vm._v("User Password")]),
-                          _vm._v(" "),
-                          _c("input", {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.formData.password,
-                                expression: "formData.password"
-                              },
-                              {
-                                name: "validate",
-                                rawName: "v-validate",
-                                value: "required",
-                                expression: "'required'"
-                              }
-                            ],
-                            class: {
-                              "form-control": true,
-                              "is-invalid": _vm.errors.has("password")
-                            },
-                            attrs: {
-                              "data-vv-delay": "20",
-                              name: "password",
-                              type: "password",
-                              placeholder: "User passwords"
-                            },
-                            domProps: { value: _vm.formData.password },
-                            on: {
-                              input: function($event) {
-                                if ($event.target.composing) {
-                                  return
-                                }
-                                _vm.$set(
-                                  _vm.formData,
-                                  "password",
-                                  $event.target.value
-                                )
-                              }
-                            }
-                          }),
-                          _vm._v(" "),
-                          _c(
-                            "span",
-                            {
-                              directives: [
-                                {
-                                  name: "show",
-                                  rawName: "v-show",
-                                  value: _vm.errors.has("password"),
-                                  expression: "errors.has('password')"
-                                }
-                              ],
-                              staticClass: "text-danger"
-                            },
-                            [_vm._v(_vm._s(_vm.errors.first("password")))]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "span",
-                            {
-                              directives: [
-                                {
-                                  name: "show",
-                                  rawName: "v-show",
-                                  value: _vm.serverErrors.password != "",
-                                  expression: "serverErrors.password != ''"
-                                }
-                              ],
-                              staticClass: "text-danger"
-                            },
-                            [_vm._v(_vm._s(_vm.serverErrors.password))]
-                          )
-                        ]
-                      ),
-                      _vm._v(" "),
-                      _c("span", { staticClass: "text-primary" }, [
-                        _vm._v(
-                          "Remember password can be changed any time by Respsected Teacher"
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "button",
-                        {
-                          staticClass: "btn btn-primary",
-                          attrs: { type: "submit" }
-                        },
-                        [_vm._v("Submit")]
-                      )
-                    ]
-                  )
-                ])
-              ])
-            ]
-          )
-        ]
-      )
+      })
     ],
     2
   )
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("h1", [
+      _vm._v("\n      You have a\n      "),
+      _c("span", { staticClass: "text-danger" }, [_vm._v("pending")]),
+      _vm._v(" request\n    ")
+    ])
+  }
+]
 render._withStripped = true
 
 

@@ -72,6 +72,11 @@
     <button class="btn btnadd p-1" @click="addEducation()">+</button>
    </div>
 
+   <div class="ms-sm-4 px-sm-2">
+        <profile-avatar :user="channelProfileData"></profile-avatar>
+   </div>
+
+
     <!-- Modal -->
 
     <div class="modal fade" id="addEducation" tabindex="-1" role="dialog" aria-labelledby="principalprofilemodal" aria-hidden="true">
@@ -283,6 +288,7 @@
 
 import PictureInput from "vue-picture-input";
 import profileGender from './channel/profileGender.vue';
+import ProfileAvatar from "./channel/profile/avatar.vue";
 
 
 
@@ -337,7 +343,8 @@ export default {
     },
     components: {
         PictureInput,
-        'profile-gender' : profileGender
+        'profile-gender' : profileGender,
+        'profile-avatar' : ProfileAvatar
     },
     created(){
         this.channelProfileData = this.user;

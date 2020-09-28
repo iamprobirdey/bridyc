@@ -24,8 +24,8 @@ class CountryValidation extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required',
-            'code' => 'required'
+            'name' => 'required|string|unique:countries,name',
+            'code' => 'required|string|unique:countries,code'
         ];
     }
 }

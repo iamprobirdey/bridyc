@@ -24,7 +24,7 @@ class StoreSlugValidation extends FormRequest
     public function rules()
     {
         return [
-            'slug' => 'required|string|unique:channels'
+            'slug' => 'required|string|unique:channels,slug'
         ];
     }
 }

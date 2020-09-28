@@ -3,6 +3,7 @@
 namespace App\Http\Requests\User;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class ChannelVerificationValidation extends FormRequest
 {
@@ -24,17 +25,17 @@ class ChannelVerificationValidation extends FormRequest
     public function rules()
     {
         return [
-            'state_id' =>  "required|numeric",
-            'district_id' =>  "required|numeric",
-            'village_id' =>  "required|numeric",
-            'language_id' =>  "required|numeric",
-            'title' =>  "required",
-            'udise' =>  "required",
+            'state_id' =>  "required|numeric|exists:states,id",
+            'district_id' =>  "required|numeric|exists:districts,id",
+            'village_id' =>  "required|numeric|exists:villages,id",
+            'language_id' =>  "required|numeric|exists:languages,id",
+            'title' =>  "required|string",
+            'udise' =>  "required|string",
             'location' =>  "required",
-            'ownership' =>  "required",
-            'founded' =>  "required",
-            'pin' =>  "required",
-            'gender' =>  "required"
+            'ownership' =>  ["required",Rule::in(['private', 'government'])],
+            'founded' =>  "required|date",
+            'pin' =>  "required|digits:6",
+            'gender' =>  ["required",Rule::in(['only_boys', 'only_girls','both'])]
         ];
     }
 }

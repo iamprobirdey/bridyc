@@ -76,6 +76,22 @@
             </a>
         </li>
         <li class="nav-item">
+            <a class="nav-link active" href="{{url('/admin/user/online')}}">
+            <span class="material-icons sidebaricons">
+                dashboard
+                </span>
+                User online
+            </a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link active" href="{{url('/admin/podcast')}}">
+            <span class="material-icons sidebaricons">
+                dashboard
+                </span>
+                Podcast
+            </a>
+        </li>
+        <li class="nav-item">
             <a class="nav-link active" href="{{url('/admin/contact')}}">
             <span class="material-icons sidebaricons">
                 dashboard

@@ -1,8 +1,12 @@
 @extends('student.layouts.master')
 
+@section('title','')
+@section('desc','')
+@section('keywords','')
+
 @section('css_code')
-    <link rel="stylesheet" type="text/css" href="{{url('css/app.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{url('css/faq.css')}}">
+<link rel="stylesheet" type="text/css" href="{{url('css/app.css')}}">
+<link rel="stylesheet" type="text/css" href="{{url('css/faq.css')}}">
 @endsection
 @section('content')
 <div class="img-fluid imgbanfaq">
@@ -70,7 +74,7 @@
 
 @section('js_code')
 
-    <script src="{{url('js/app.js')}}"></script>
+<script src="{{url('js/app.js')}}"></script>
 
     <script type="text/javascript">
      
@@ -92,4 +96,3 @@
     </script>
 
 @endsection
-

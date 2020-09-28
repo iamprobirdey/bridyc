@@ -17,18 +17,25 @@ class DistrictController extends Controller
         $this->middleware('auth');
     }
 
-    public function index(){
+    public function index()
+    {
+        $this->authorize('superadmin', auth()->user());
         $districts = $this->modelHelperServices::getDistricts();
         $states = $this->modelHelperServices::getStates();
-        return view('admin.district.index',compact('districts',$districts),compact('states',$states));
+        return view('admin.district.index', compact('districts', $districts), compact('states', $states));
     }
 
-    public function create(){
+    public function create()
+    {
+        $this->authorize('superadmin', auth()->user());
         $states = $this->modelHelperServices::getStates();
-        return view('admin.district.create',compact('states',$states));
+        return view('admin.district.create', compact('states', $states));
     }
 
-    public function store(StoreDistrictValidation $request){
+    public function store(StoreDistrictValidation $request)
+    {
+        $this->authorize('superadmin', auth()->user());
+
         District::create([
             'state_id' => $request->validated()['state'],
             'name' => $request->validated()['name'],
@@ -37,24 +44,33 @@ class DistrictController extends Controller
         return redirect()->back()->with('status', 'Succefully created the District');
     }
 
-    public function delete($id){
+    public function delete($id)
+    {
+        $this->authorize('superadmin', auth()->user());
+
         $district = District::findorFail($id);
         $district->delete();
-        return redirect()->back()->with('status' , 'Deleted succefully');
+        return redirect()->back()->with('status', 'Deleted succefully');
     }
 
-    public function updating($id){
+    public function updating($id)
+    {
+        $this->authorize('superadmin', auth()->user());
+
         $district = District::findOrFail($id);
         $states = $this->modelHelperServices::getStates();
-        return view('admin.district.updating',compact('district',$district),compact('states',$states));
+        return view('admin.district.updating', compact('district', $district), compact('states', $states));
     }
 
-    public function update(UpdateDistrictValidation $request,$id){
+    public function update(UpdateDistrictValidation $request, $id)
+    {
+        $this->authorize('superadmin', auth()->user());
+
         $district = District::findOrFail($id);
         $district->state_id = $request->validated()['state'];
         $district->name = $request->validated()['name'];
         $district->code = $request->validated()['code'];
         $district->update();
-        return redirect('/admin/district/updating/'.$id)->with('status', 'Succefully updated the District');
+        return redirect('/admin/district/updating/' . $id)->with('status', 'Succefully updated the District');
     }
 }

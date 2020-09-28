@@ -193,6 +193,22 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -202,12 +218,14 @@ __webpack_require__.r(__webpack_exports__);
       formData: {
         image_path: '',
         title: '',
-        description: ''
+        description: '',
+        date: ''
       },
       serverErrors: {
         image_path: '',
         title: '',
-        description: ''
+        description: '',
+        date: ''
       },
       channelId: '',
       additionUrl: '',
@@ -248,13 +266,13 @@ __webpack_require__.r(__webpack_exports__);
 
           if (_this.editingUrlChecker) {
             _this.additionUrl = 'edit/';
-            formUrl = _this.url + _this.additionUrl + _this.achievementId + '/';
+            formUrl = _this.url + _this.additionUrl + _this.achievementId;
           } else {
             _this.additionUrl = 'add/';
             formUrl = _this.url + _this.additionUrl;
           }
 
-          axios.post(formUrl + _this.channelId, _this.formData).then(function (response) {
+          axios.post(formUrl, _this.formData).then(function (response) {
             if (response.data.message === true) {
               Vue.toasted.success("Meta data is created", {
                 position: "top-center",
@@ -317,7 +335,7 @@ exports = module.exports = __webpack_require__(/*! ../css-loader/lib/css-base.js
 
 
 // module
-exports.push([module.i, "\n.picture-input[data-v-431cb064] {\n  width: 100%;\n  margin: 0 auto;\n  text-align: center;\n}\n.preview-container[data-v-431cb064] {\n  width: 100%;\n  box-sizing: border-box;\n  margin: 0 auto;\n  cursor: pointer;\n  overflow: hidden;\n}\n.picture-preview[data-v-431cb064] {\n  width: 100%;\n  height: 100%;\n  position: relative;\n  z-index: 10001;\n  box-sizing: border-box;\n  background-color: rgba(200,200,200,.25);\n}\n.picture-preview.dragging-over[data-v-431cb064] {\n  -webkit-filter: brightness(0.5);\n          filter: brightness(0.5);\n}\n.picture-inner[data-v-431cb064] {\n  position: relative;\n  z-index: 10002;\n  pointer-events: none;\n  box-sizing: border-box;\n  margin: 1em auto;\n  padding: 0.5em;\n  /*border: .3em dashed rgba(66,66,66,.15); commented because of cover and icon in indtitute edit channel*/\n  border: 4px dashed rgba(66,66,66,.15);\n  border-radius: 8px;\n  width: calc(100% - 2.5em);\n  height: calc(100% - 2.5em);\n  display: table;\n}\n.picture-inner .picture-inner-text[data-v-431cb064] {\n  display: table-cell;\n  vertical-align: middle;\n  text-align: center;\n  /*font-size: 2em; commented because of cover and icon in institute edit channel*/\n  font-size: 18px;\n  line-height: 1.5;\n}\nbutton[data-v-431cb064] {\n  margin: 1em .25em;\n  cursor: pointer;\n}\ninput[type=file][data-v-431cb064] {\n  display: none;\n}\n", ""]);
+exports.push([module.i, "\n.picture-input[data-v-431cb064] {\n  width: 100%;\n  margin: 0 auto;\n  text-align: center;\n}\n.preview-container[data-v-431cb064] {\n  width: 100%;\n  box-sizing: border-box;\n  margin: 0 auto;\n  cursor: pointer;\n  overflow: hidden;\n}\n.picture-preview[data-v-431cb064] {\n  width: 100%;\n  height: 100%;\n  position: relative;\n  z-index: 10001;\n  box-sizing: border-box;\n  background-color: rgba(200,200,200,.25);\n}\n.picture-preview.dragging-over[data-v-431cb064] {\n  -webkit-filter: brightness(0.5);\n          filter: brightness(0.5);\n}\n.picture-inner[data-v-431cb064] {\n  position: relative;\n  z-index: 10002;\n  pointer-events: none;\n  box-sizing: border-box;\n  margin: 1em auto;\n  padding: 0.5em;\n  border: .3em dashed rgba(66,66,66,.15);\n  border-radius: 8px;\n  width: calc(100% - 2.5em);\n  height: calc(100% - 2.5em);\n  display: table;\n}\n.picture-inner .picture-inner-text[data-v-431cb064] {\n  display: table-cell;\n  vertical-align: middle;\n  text-align: center;\n  font-size: 2em;\n  line-height: 1.5;\n}\nbutton[data-v-431cb064] {\n  margin: 1em .25em;\n  cursor: pointer;\n}\ninput[type=file][data-v-431cb064] {\n  display: none;\n}\n", ""]);
 
 // exports
 
@@ -1069,9 +1087,7 @@ __webpack_require__.r(__webpack_exports__);
     },
     hideChangeButton: {
       type: Boolean,
-      /*default: false changed due to icon and cover in institute edit channel*/
-      default: true
-
+      default: false
     },
     autoToggleAspectRatio: {
       type: Boolean,
@@ -1091,8 +1107,7 @@ __webpack_require__.r(__webpack_exports__);
     },
     zIndex: {
       type: Number,
-      /*default: 10000  commented because of cover and icon in institute edit channel*/
-      default: 1
+      default: 10000
     },
     alertOnError: {
       type: Boolean,
@@ -1126,7 +1141,7 @@ __webpack_require__.r(__webpack_exports__);
         upload: '<p>Your device does not support file uploading.</p>',
         drag: 'Drag an image or <br>click here to select a file',
         tap: 'Tap here to select a photo <br>from your gallery',
-       /* change: 'Change Photo', commented because of cover and icon in edit channel*/
+        change: 'Change Photo',
         aspect: 'Landscape/Portrait',
         remove: 'Remove Photo',
         select: 'Select a Photo',
@@ -1811,44 +1826,8 @@ var render = function() {
       _vm._v(" "),
       _vm._l(_vm.achievementData, function(achievement, index) {
         return _c("div", { key: index }, [
-          _vm._v("\n<<<<<<< HEAD\n          "),
-          _c("img", {
-            staticClass: "rounded-circle",
-            attrs: {
-              src: _vm.baseUrl + achievement.image_path,
-              alt: "",
-              height: "50",
-              width: "50"
-            }
-          }),
-          _vm._v(" "),
-          _c("h3", [_vm._v(_vm._s(achievement.title))]),
-          _vm._v(" "),
-          _c("p", [_vm._v(_vm._s(achievement.description))]),
-          _vm._v(" "),
-          _c(
-            "button",
-            {
-              staticClass: "btn btn-success",
-              on: {
-                click: function($event) {
-                  return _vm.editTheForm(achievement, index)
-                }
-              }
-            },
-            [_vm._v("Edit")]
-          ),
-          _vm._v("\n\n=======\n          \n          "),
           _c("div", { staticClass: "card shadow mx-auto sidebar-facard" }, [
-            _c("img", {
-              attrs: {
-                src:
-                  _vm.baseUrl +
-                  achievement.user_id +
-                  "/achievement/" +
-                  achievement.image_path
-              }
-            }),
+            _c("img", { attrs: { src: _vm.baseUrl + achievement.image_path } }),
             _vm._v(" "),
             _c("div", { staticClass: "card-body mt-n1" }, [
               _c("h6", { staticClass: "card-title my-n1" }, [
@@ -1857,9 +1836,17 @@ var render = function() {
               _vm._v(" "),
               _c("p", { staticClass: "card-text" }, [
                 _vm._v(
-                  "\n                " +
+                  "\n              " +
                     _vm._s(achievement.description) +
-                    "\n              "
+                    "\n            "
+                )
+              ]),
+              _vm._v(" "),
+              _c("p", { staticClass: "card-text" }, [
+                _vm._v(
+                  "\n              " +
+                    _vm._s(achievement.date) +
+                    "\n            "
                 )
               ])
             ])
@@ -1888,8 +1875,7 @@ var render = function() {
                 })
               ]
             )
-          ]),
-          _vm._v("\n>>>>>>> 19d61af7f9cecff55717c68ad3feee200ceb4d6c\n      ")
+          ])
         ])
       }),
       _vm._v(" "),
@@ -2120,6 +2106,109 @@ var render = function() {
                         staticClass: "help is-danger mx-auto"
                       },
                       [_vm._v(_vm._s(_vm.serverErrors.descriptions))]
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass: "form-group row mx-lg-5",
+                    class: {
+                      "has-error":
+                        _vm.errors.has("date") || _vm.serverErrors.date != ""
+                    }
+                  },
+                  [
+                    _c(
+                      "label",
+                      { staticClass: "col-sm-3 col-form-label text-right" },
+                      [_vm._v(" Achievement Event Date :")]
+                    ),
+                    _vm._v(" "),
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.formData.date,
+                          expression: "formData.date"
+                        },
+                        {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required",
+                          expression: "'required'"
+                        }
+                      ],
+                      staticClass: "col-sm-9",
+                      class: {
+                        "form-control": true,
+                        "is-invalid": _vm.errors.has("date")
+                      },
+                      attrs: {
+                        "data-vv-delay": "20",
+                        name: "date",
+                        type: "date",
+                        max: _vm.todaysDate,
+                        placeholder: "date"
+                      },
+                      domProps: { value: _vm.formData.date },
+                      on: {
+                        focus: function($event) {
+                          _vm.serverErrors.date = ""
+                        },
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.formData, "date", $event.target.value)
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("i", {
+                      directives: [
+                        {
+                          name: "show",
+                          rawName: "v-show",
+                          value: _vm.errors.has("date"),
+                          expression: "errors.has('date')"
+                        }
+                      ],
+                      staticClass: "is-invalid"
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.has("date"),
+                            expression: "errors.has('date')"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [_vm._v(_vm._s(_vm.errors.first("date")))]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.serverErrors.date != "",
+                            expression: "serverErrors.date != ''"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [_vm._v(_vm._s(_vm.serverErrors.date))]
                     )
                   ]
                 ),
@@ -2457,7 +2546,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\laragon\www\bridyc\resources\js\achievement.js */"./resources/js/achievement.js");
+module.exports = __webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/js/achievement.js */"./resources/js/achievement.js");
 
 
 /***/ })

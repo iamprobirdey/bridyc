@@ -15,11 +15,11 @@ class CreateVerificationsTable extends Migration
     {
         Schema::create('verifications', function (Blueprint $table) {
             $table->id();
-            $table->integer('user_id')->unsigned();
-            $table->integer('state_id');
-            $table->integer('district_id');
-            $table->integer('village_id');
-            $table->integer('language_id');
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->foreignId('state_id')->constrained()->onDelete('cascade');
+            $table->foreignId('district_id')->constrained()->onDelete('cascade');
+            $table->foreignId('village_id')->constrained()->onDelete('cascade');
+            $table->foreignId('language_id')->constrained()->onDelete('cascade');
             $table->string('udise');
             $table->string('title');
             $table->string('location');

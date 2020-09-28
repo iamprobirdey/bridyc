@@ -1,62 +1,68 @@
 @extends('admin.index')
 
+@section('title','')
+@section('desc','')
+@section('keywords','')
+
+
 @section('adminContent')
 
 <div class="card">
-<div class="card-header">Country updating</div>
+    <div class="card-header">Country updating</div>
 
-<a class="btn btn-primary" href="{{url('admin/country/')}}">Go Back to List</a>
+    <a class="btn btn-primary" href="{{url('admin/country/')}}">Go Back to List</a>
 
-@if (session('status'))
+    @if (session('status'))
     <div class="alert alert-success">
         {{ session('status') }}
     </div>
-@endif
+    @endif
 
-@php
-    
-@endphp
+    @php
 
-<div class="card-body">
-    <form method="POST" action="{{ url('admin/country/update/'.$country->id) }}">
-        @csrf
+    @endphp
 
-        <div class="form-group row">
-            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
+    <div class="card-body">
+        <form method="POST" action="{{ url('admin/country/update/'.$country->id) }}">
+            @csrf
 
-            <div class="col-md-6">
-                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ $country['name'] }}" required autocomplete="name" autofocus>
+            <div class="form-group row">
+                <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
 
-                @error('name')
+                <div class="col-md-6">
+                    <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name"
+                        value="{{ $country['name'] }}" required autocomplete="name" autofocus>
+
+                    @error('name')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
                     </span>
-                @enderror
+                    @enderror
+                </div>
             </div>
-        </div>
-        <div class="form-group row">
-            <label for="code" class="col-md-4 col-form-label text-md-right">{{ __('Code') }}</label>
+            <div class="form-group row">
+                <label for="code" class="col-md-4 col-form-label text-md-right">{{ __('Code') }}</label>
 
-            <div class="col-md-6">
-                <input id="code" type="text" class="form-control @error('code') is-invalid @enderror" name="code" value="{{ $country['code'] }}" required autocomplete="code" autofocus>
+                <div class="col-md-6">
+                    <input id="code" type="text" class="form-control @error('code') is-invalid @enderror" name="code"
+                        value="{{ $country['code'] }}" required autocomplete="code" autofocus>
 
-                @error('code')
+                    @error('code')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
                     </span>
-                @enderror
+                    @enderror
+                </div>
             </div>
-        </div>
-        <div class="form-group row mb-0">
-            <div class="col-md-6 offset-md-4">
-                <button type="submit" class="btn btn-primary">
-                    {{ __('Submit') }}
-                </button>
+            <div class="form-group row mb-0">
+                <div class="col-md-6 offset-md-4">
+                    <button type="submit" class="btn btn-primary">
+                        {{ __('Submit') }}
+                    </button>
+                </div>
             </div>
-        </div>
-    </form>
+        </form>
+    </div>
 </div>
-</div>
-    
+
 @endsection
-

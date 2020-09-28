@@ -17,17 +17,26 @@ class VillageController extends Controller
         $this->middleware('auth');
     }
 
-    public function index(){
+    public function index()
+    {
+        $this->authorize('superadmin', auth()->user());
+
         $villages = $this->modelHelperServices::getPlacesInformation();
-        return view('admin.village.index',compact('villages',$villages));
+        return view('admin.village.index', compact('villages', $villages));
     }
 
-    public function create(){
+    public function create()
+    {
+        $this->authorize('superadmin', auth()->user());
+
         $districts = $this->modelHelperServices::getDistricts();
-        return view('admin.village.create',compact('districts',$districts));
+        return view('admin.village.create', compact('districts', $districts));
     }
 
-    public function store(StoreVillageValidation $request){
+    public function store(StoreVillageValidation $request)
+    {
+        $this->authorize('superadmin', auth()->user());
+
         Village::create([
             'district_id' => $request->validated()['district'],
             'name' => $request->validated()['name'],
@@ -36,24 +45,33 @@ class VillageController extends Controller
         return redirect()->back()->with('status', 'Succefully created the Village');
     }
 
-    public function delete($id){
+    public function delete($id)
+    {
+        $this->authorize('superadmin', auth()->user());
+
         $village = Village::findorFail($id);
         $village->delete();
-        return redirect()->back()->with('status' , 'Deleted succefully');
+        return redirect()->back()->with('status', 'Deleted succefully');
     }
 
-    public function updating($id){
+    public function updating($id)
+    {
+        $this->authorize('superadmin', auth()->user());
+
         $village = Village::findOrFail($id);
         $districts = $this->modelHelperServices::getDistricts();
-        return view('admin.village.updating',compact('village',$village),compact('districts',$districts));
+        return view('admin.village.updating', compact('village', $village), compact('districts', $districts));
     }
 
-    public function update(UpdateVillageValidation $request,$id){
+    public function update(UpdateVillageValidation $request, $id)
+    {
+        $this->authorize('superadmin', auth()->user());
+
         $village = Village::findOrFail($id);
         $village->district_id = $request->validated()['district'];
         $village->name = $request->validated()['name'];
         $village->code = $request->validated()['code'];
         $village->update();
-        return redirect('/admin/village/updating/'.$id)->with('status', 'Succefully updated the Village');
+        return redirect('/admin/village/updating/' . $id)->with('status', 'Succefully updated the Village');
     }
 }

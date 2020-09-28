@@ -5,28 +5,22 @@
       <h6 class="d-inline">Add your institute's achievements here</h6>
       <button class="btn btnadd p-1 ml-1 rounded-0" @click="addAchievement()"><i class="fa fa-plus" aria-hidden="true"></i></button>
       <div v-for="(achievement,index) in achievementData" :key="index">
-<<<<<<< HEAD
-          <img :src="baseUrl+achievement.image_path" class="rounded-circle" alt="" height="50" width="50">
-          <h3>{{achievement.title}}</h3>
-          <p>{{achievement.description}}</p>
 
-          <button class="btn btn-success"  @click="editTheForm(achievement,index)">Edit</button>
-
-=======
-          
           <div class="card shadow mx-auto sidebar-facard">
-            <img :src="baseUrl+ achievement.user_id +'/achievement/'+achievement.image_path">
+            <img :src="baseUrl+achievement.image_path">
             <div class="card-body mt-n1">
               <h6 class="card-title my-n1">{{achievement.title}}</h6>
               <p class="card-text">
                 {{achievement.description}}
+              </p>
+               <p class="card-text">
+                {{achievement.date}}
               </p>
             </div>
           </div>
           <div class="text-center">
           <button class="btn mb-5 editachieve" data-toggle="tooltip" data-placement="right" title="Edit" @click="editTheForm(achievement,index)"><i class="fa fa-pencil" aria-hidden="true"></i></button>
           </div>
->>>>>>> 19d61af7f9cecff55717c68ad3feee200ceb4d6c
       </div>
             <br>
             <div class="mt-5" v-if="openAchievementForm">
@@ -46,7 +40,7 @@
                             @change="onChange"
                     ></picture-input>
                         <span v-show="serverErrors.image_path != ''" class="text-danger">{{serverErrors.image_path}}</span>
-                    
+
                     <br>
                     <div
                         class="form-group row mx-lg-5"
@@ -85,6 +79,28 @@
                         <span v-show="errors.has('descriptions')" class="text-danger mx-auto">{{errors.first("descriptions")}}</span>
                         <span v-show="serverErrors.descriptions != ''" class="help is-danger mx-auto">{{serverErrors.descriptions}}</span>
                     </div>
+                         <div
+                            class="form-group row mx-lg-5"
+                            :class="{'has-error': errors.has('date') || serverErrors.date != '' }"
+                        >
+                            <label class="col-sm-3 col-form-label text-right"> Achievement Event Date :</label>
+                            <input
+                            class="col-sm-9"
+                            v-on:focus="serverErrors.date = ''"
+                            v-model="formData.date"
+                            v-validate="'required'"
+                            data-vv-delay="20"
+                            name="date"
+                            type="date"
+                            :max="todaysDate"
+                            :class="{'form-control': true, 'is-invalid': errors.has('date') }"
+                            placeholder="date"
+                            />
+                            <i v-show="errors.has('date')" class="is-invalid"></i>
+
+                            <span class="text-danger" v-show="errors.has('date')">{{ errors.first('date') }}</span>
+                            <span v-show="serverErrors.date != ''" class="text-danger">{{ serverErrors.date }}</span>
+                        </div>
                     <div class="text-center">
                         <button type="btn" class="btn btn-success rounded-0" @click="canCleSubmittion()">Cancel</button>
                         <button type="submit" class="btn btnsubmit mt-n2">Submit</button>
@@ -105,12 +121,14 @@ export default {
       formData: {
           image_path : '',
           title : '',
-          description : ''
+          description : '',
+          date: ''
       },
       serverErrors : {
           image_path : '',
           title : '',
-          description : ''
+          description : '',
+          date: ''
       },
       channelId : '',
       additionUrl: '',
@@ -151,13 +169,13 @@ export default {
             if(this.editingUrlChecker)
             {
                 this.additionUrl = 'edit/';
-                formUrl = this.url+this.additionUrl+this.achievementId+'/';
+                formUrl = this.url+this.additionUrl+this.achievementId;
             }else{
                 this.additionUrl = 'add/';
                 formUrl = this.url+this.additionUrl;
             }
             axios
-                .post(formUrl+this.channelId,this.formData)
+                .post(formUrl,this.formData)
                 .then(response => {
                 if (response.data.message === true) {
                         Vue.toasted.success("Meta data is created", {

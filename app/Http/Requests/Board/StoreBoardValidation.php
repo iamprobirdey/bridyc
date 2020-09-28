@@ -24,7 +24,7 @@ class StoreBoardValidation extends FormRequest
     public function rules()
     {
         return [
-            'board' => 'required|string',
+            'board' => 'required|string|unique:boards,name'
         ];
     }
 }

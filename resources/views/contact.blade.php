@@ -1,8 +1,12 @@
 @extends('student.layouts.master')
 
+@section('title','')
+@section('desc','')
+@section('keywords','')
+
 @section('css_code')
-    <link rel="stylesheet" type="text/css" href="{{url('css/app.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{url('css/contact.css')}}">
+<link rel="stylesheet" type="text/css" href="{{url('css/app.css')}}">
+<link rel="stylesheet" type="text/css" href="{{url('css/contact.css')}}">
 @endsection
 @section('content')
 <div class="img-fluid imgbancontact">
@@ -46,8 +50,7 @@
 
 @section('js_code')
 
-    <script src="{{url('js/app.js')}}"></script>
-    <script src="{{url('js/contactus.js')}}"></script>
+<script src="{{url('js/app.js')}}"></script>
+<script src="{{url('js/contactus.js')}}"></script>
 
 @endsection
-

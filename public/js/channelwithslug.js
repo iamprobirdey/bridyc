@@ -350,15 +350,198 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
       channelData: {},
       userData: {},
+      currentuserData: {},
       domainUrl: location.origin,
-      userId: null,
-      phoneNo: '',
-      socialCount: 0
+      phoneNo: "",
+      socialCount: 0,
+      sessionUrl: window.location.pathname.split("/")[2],
+      channelRequestChecker: false,
+      channelRequestsuccefull: false,
+      userID: ""
     };
   },
   props: {
@@ -366,30 +549,76 @@ __webpack_require__.r(__webpack_exports__);
       type: Object,
       "default": null
     },
-    id: {
-      type: Number,
-      "default": null
-    },
     channel: {
       type: Object,
+      "default": null
+    },
+    currentuser: {
+      type: Object,
+      "default": null
+    },
+    userid: {
+      type: Number,
       "default": null
     }
   },
   created: function created() {
     this.userData = this.user;
     this.channelData = this.channel;
-    this.userId = this.id;
-    this.phoneNo = this.userData.phone ? this.userData.phone : 'Not provided';
+    this.currentuserData = this.currentuser;
+    this.phoneNo = this.userData.phone ? this.userData.phone : "Not provided";
+    this.userID = this.userid;
 
     if (this.channelData.extra_attributes.social.facebook === null && this.channelData.extra_attributes.social.linkedin === null && this.channelData.extra_attributes.social.youtube === null) {
       this.socialCount = 1;
     }
 
-    console.log(this.channelData);
-    console.log(this.userData);
+    console.log(this.currentuser);
   },
-  mounted: function mounted() {},
-  methods: {}
+  mounted: function mounted() {
+    this.getChannelSession();
+    this.requestChannelSatisfier();
+  },
+  methods: {
+    requestChannelSatisfier: function requestChannelSatisfier() {
+      if (this.currentuserData != null) {
+        if (this.currentuserData.request === "in-progress" && this.currentuserData.channel_id == this.channelData.id) {
+          this.channelRequestsuccefull = true;
+        }
+
+        if (this.currentuserData.request === "rejected" && this.currentuserData.channel_id != this.channelData.id) {
+          this.channelRequestChecker = true;
+        }
+
+        this.channelRequestChecker = false;
+      }
+
+      if (this.currentuserData == null) this.channelRequestChecker = true;
+    },
+    requestForChannel: function requestForChannel() {
+      var _this = this;
+
+      axios.get("/api/teacher/request/for/channel/" + this.userID + "/" + this.channelData.id).then(function (response) {
+        if (response.data.message) {
+          _this.channelRequestChecker = false;
+          _this.channelRequestsuccefull = true;
+        }
+      })["catch"](function (errors) {});
+    },
+    getChannelSession: function getChannelSession() {
+      if (sessionStorage.getItem([this.sessionUrl]) != this.channelData.id) {
+        sessionStorage.setItem([this.sessionUrl], this.channelData.id);
+        this.goForMostViewed(this.channelData.id);
+      }
+    },
+    goForMostViewed: function goForMostViewed(channelId) {
+      var _this2 = this;
+
+      axios.get("/api/store/channel/session/" + channelId).then(function (response) {
+        if (!response.data.message) _this2.goForMostViewed();
+      })["catch"](function (errors) {});
+    }
+  }
 });
 
 /***/ }),
@@ -883,6 +1112,20 @@ var render = function() {
         _c("img", {
           staticClass: "inscover mt-n3",
           attrs: {
+            srcset:
+              _vm.channelData.cover_avatar != null
+                ? _vm.domainUrl +
+                  "/media/channel/" +
+                  _vm.channelData.user_id +
+                  "/m-" +
+                  _vm.channelData.cover_avatar +
+                  "," +
+                  _vm.domainUrl +
+                  "/media/channel/" +
+                  _vm.channelData.user_id +
+                  "/s-" +
+                  _vm.channelData.cover_avatar
+                : "/images/banner2.png",
             src:
               _vm.channelData.cover_avatar != null
                 ? _vm.domainUrl +
@@ -892,53 +1135,72 @@ var render = function() {
                   _vm.channelData.cover_avatar
                 : "/images/banner2.png"
           }
-        }),
-        _vm._v(" "),
-        _c("div", { staticClass: "blankdiv shadow" }, [
-          _c("div", { staticClass: "row mt-lg-n2 mx-0" }, [
-            _c("div", { staticClass: "col-md-6 d-flex flex-column" }, [
-              _c(
-                "a",
-                {
-                  staticClass: "ml-n4 insweb px-1 mt-n1 mt-md-3",
-                  attrs: {
-                    target:
-                      _vm.channelData.website_link === null
-                        ? "_self"
-                        : "_blank",
-                    href:
-                      _vm.channelData.website_link === null
-                        ? "javascript:void(0)"
-                        : _vm.channelData.website_link
-                  }
-                },
-                [
-                  _vm._v("Visit Website "),
-                  _c("i", {
-                    staticClass: "fa fa-external-link",
-                    attrs: { "aria-hidden": "true" }
-                  })
-                ]
-              )
+        })
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "blankdiv shadow" }, [
+        _c("div", { staticClass: "row mt-lg-n2 mx-0" }, [
+          _c("div", { staticClass: "col-md-6 d-flex flex-column" }, [
+            _c(
+              "a",
+              {
+                staticClass: "ml-n4 insweb px-1 mt-n1 mt-md-3",
+                attrs: {
+                  target:
+                    _vm.channelData.website_link === null ? "_self" : "_blank",
+                  href:
+                    _vm.channelData.website_link === null
+                      ? "javascript:void(0)"
+                      : _vm.channelData.website_link
+                }
+              },
+              [
+                _vm._v("Visit Website\n            "),
+                _c("i", {
+                  staticClass: "fa fa-external-link",
+                  attrs: { "aria-hidden": "true" }
+                })
+              ]
+            )
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-6 phemdiv text-md-right ml-n4" }, [
+            _c("p", { staticClass: "m-1 mr-2" }, [
+              _c("i", {
+                staticClass: "fa fa-phone mr-1",
+                attrs: { "aria-hidden": "true" }
+              }),
+              _vm._v(_vm._s(_vm.phoneNo) + "\n          ")
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "col-md-6 phemdiv text-md-right ml-n4" }, [
-              _c("p", { staticClass: "m-1 mr-2" }, [
-                _c("i", {
-                  staticClass: "fa fa-phone mr-1",
-                  attrs: { "aria-hidden": "true" }
-                }),
-                _vm._v(_vm._s(_vm.phoneNo))
-              ]),
-              _vm._v(" "),
-              _c("p", { staticClass: "m-1 mr-2" }, [
-                _c("i", {
-                  staticClass: "fa fa-envelope mr-1",
-                  attrs: { "aria-hidden": "true" }
-                }),
-                _vm._v(_vm._s(_vm.userData.email))
-              ])
-            ])
+            _c("p", { staticClass: "m-1 mr-2" }, [
+              _c("i", {
+                staticClass: "fa fa-envelope mr-1",
+                attrs: { "aria-hidden": "true" }
+              }),
+              _vm._v(_vm._s(_vm.userData.email) + "\n          ")
+            ]),
+            _vm._v(" "),
+            _vm.channelRequestChecker
+              ? _c(
+                  "button",
+                  {
+                    staticClass: "btn btn-primary",
+                    on: {
+                      click: function($event) {
+                        return _vm.requestForChannel()
+                      }
+                    }
+                  },
+                  [_vm._v("\n            Send Request\n          ")]
+                )
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.channelRequestsuccefull
+              ? _c("button", { staticClass: "btn btn-success" }, [
+                  _vm._v("\n            Request Successfull\n          ")
+                ])
+              : _vm._e()
           ])
         ]),
         _vm._v(" "),
@@ -1053,11 +1315,7 @@ var render = function() {
             ])
           : _vm._e(),
         _vm._v(" "),
-        _vm.socialCount === 1
-          ? _c("div", [
-              _vm._v("\n                    Socials: NA\n                ")
-            ])
-          : _vm._e()
+        _vm.socialCount === 1 ? _c("div", [_vm._v("Socials: NA")]) : _vm._e()
       ]),
       _vm._v(" "),
       _c("br"),
@@ -1081,18 +1339,22 @@ var render = function() {
               _vm._v(" "),
               _c("div", { staticClass: "description mb-5 px-0" }, [
                 _c("h2", { staticClass: "mb-4 text-uppercase" }, [
-                  _vm._v("Welcome to " + _vm._s(_vm.channelData.title))
+                  _vm._v(
+                    "\n              Welcome to " +
+                      _vm._s(_vm.channelData.title) +
+                      "\n            "
+                  )
                 ]),
                 _vm._v(" "),
                 _c("p", [
                   _vm._v(
-                    "\n                    " +
+                    "\n              " +
                       _vm._s(
                         _vm.channelData.description != null
                           ? _vm.channelData.description
                           : ""
                       ) +
-                      "\n                "
+                      "\n            "
                   )
                 ])
               ]),
@@ -1125,11 +1387,11 @@ var render = function() {
                       attrs: { src: "/images/address.svg", alt: "address icon" }
                     }),
                     _vm._v(
-                      "  Address:  " +
+                      " Address:\n                " +
                         _vm._s(_vm.channelData.district.name) +
-                        ",\n                                   " +
+                        ",\n                " +
                         _vm._s(_vm.channelData.state.name) +
-                        "\n                      "
+                        "\n              "
                     )
                   ]),
                   _vm._v(" "),
@@ -1141,7 +1403,9 @@ var render = function() {
                       }
                     }),
                     _vm._v(
-                      " Pin Code:   " + _vm._s(_vm.userData.verification.pin)
+                      " Pin\n                Code: " +
+                        _vm._s(_vm.userData.verification.pin) +
+                        "\n              "
                     )
                   ]),
                   _vm._v(" "),
@@ -1152,7 +1416,11 @@ var render = function() {
                         alt: "language icon"
                       }
                     }),
-                    _vm._v(" Medium:  " + _vm._s(_vm.channelData.village.name))
+                    _vm._v(
+                      "\n                Medium: " +
+                        _vm._s(_vm.channelData.village.name) +
+                        "\n              "
+                    )
                   ]),
                   _vm._v(" "),
                   _vm._m(4),
@@ -1162,8 +1430,9 @@ var render = function() {
                       attrs: { src: "/images/deed.svg", alt: "ownership icon" }
                     }),
                     _vm._v(
-                      " Ownership:  " +
-                        _vm._s(_vm.userData.verification.ownership)
+                      " Ownership:\n                " +
+                        _vm._s(_vm.userData.verification.ownership) +
+                        "\n              "
                     )
                   ]),
                   _vm._v(" "),
@@ -1175,7 +1444,9 @@ var render = function() {
                       }
                     }),
                     _vm._v(
-                      " Founded:  " + _vm._s(_vm.userData.verification.founded)
+                      "\n                Founded: " +
+                        _vm._s(_vm.userData.verification.founded) +
+                        "\n              "
                     )
                   ])
                 ])
@@ -1263,7 +1534,9 @@ var staticRenderFns = [
           _c("div", { staticClass: "card-body" }, [
             _c("div", { staticClass: "card-title my-n2" }, [
               _c("h5", { staticClass: "text-uppercase text-center" }, [
-                _vm._v("News and Notifications")
+                _vm._v(
+                  "\n                    News and Notifications\n                  "
+                )
               ])
             ]),
             _vm._v(" "),
@@ -1275,7 +1548,9 @@ var staticRenderFns = [
                   staticClass: "fa fa-long-arrow-right",
                   attrs: { "aria-hidden": "true" }
                 }),
-                _vm._v(" Shads sdjahbdk skasdk jashdas jasdkn "),
+                _vm._v(
+                  "\n                    Shads sdjahbdk skasdk jashdas jasdkn\n                    "
+                ),
                 _c("span", { staticClass: "badge badge-info" }, [_vm._v("New")])
               ]),
               _vm._v(" "),
@@ -1284,7 +1559,9 @@ var staticRenderFns = [
                   staticClass: "fa fa-long-arrow-right",
                   attrs: { "aria-hidden": "true" }
                 }),
-                _vm._v(" Shads sdjahbdk skasdk jashdas jasdkn sbsakd jasdkas")
+                _vm._v(
+                  "\n                    Shads sdjahbdk skasdk jashdas jasdkn sbsakd jasdkas\n                  "
+                )
               ]),
               _vm._v(" "),
               _c("p", [
@@ -1292,7 +1569,9 @@ var staticRenderFns = [
                   staticClass: "fa fa-long-arrow-right",
                   attrs: { "aria-hidden": "true" }
                 }),
-                _vm._v(" Shads sdjahbdk skasdk jashdas jasdkn sbsakd jasdkas")
+                _vm._v(
+                  "\n                    Shads sdjahbdk skasdk jashdas jasdkn sbsakd jasdkas\n                  "
+                )
               ]),
               _vm._v(" "),
               _c("p", [
@@ -1300,7 +1579,9 @@ var staticRenderFns = [
                   staticClass: "fa fa-long-arrow-right",
                   attrs: { "aria-hidden": "true" }
                 }),
-                _vm._v(" Shads sdjahbdk skasdk jashdas ")
+                _vm._v(
+                  "\n                    Shads sdjahbdk skasdk jashdas\n                  "
+                )
               ]),
               _vm._v(" "),
               _c("p", [
@@ -1308,7 +1589,9 @@ var staticRenderFns = [
                   staticClass: "fa fa-long-arrow-right",
                   attrs: { "aria-hidden": "true" }
                 }),
-                _vm._v(" Shads sdjahbdk skasdk jashdas jasdkn sbsakd")
+                _vm._v(
+                  "\n                    Shads sdjahbdk skasdk jashdas jasdkn sbsakd\n                  "
+                )
               ])
             ])
           ])
@@ -1394,7 +1677,7 @@ var staticRenderFns = [
               ]),
               _vm._v(" "),
               _c("p", { staticClass: "card-text" }, [
-                _vm._v("\n                Type of achievement\n              ")
+                _vm._v("Type of achievement")
               ])
             ])
           ])
@@ -1422,7 +1705,7 @@ var staticRenderFns = [
         _c("div", { staticClass: "col-md-6" }, [
           _c("p", { staticClass: "principal-message" }, [
             _vm._v(
-              "Lorem ipsum dolor sit amet, consectetur \n                              adipiscing elit. Quisque iaculis risus quis tortor eleifend, \n                              non facilisis ante vulputate. Donec iaculis, ex in euismod \n                              sagittis, turpis felis malesuada nisi, a facilisis ex \n                              enim ut nunc. Vestibulum ut tincidunt justo, sit amet faucibus \n                              elit. Aliquam ac nibh eros. Nulla id risus dolor. Ut nulla turpis, \n                              laoreet et libero a, faucibus accumsan risus. Morbi euismod mauris\n                              mi, sit amet tempus ligula pretium vel. Nunc sem ligula, aliquam id \n                              purus et, egestas sagittis lorem. Duis at justo magna. Donec in \n                              egestas turpis. Aliquam maximus nulla sapien, sagittis dictum sem \n                              laoreet sit amet. Donec elit tortor, tincidunt non aliquet id, \n                              rhoncus in felis. Vestibulum ultrices ante id risus vehicula \n                              venenatis.Aenean id pulvinar sem. Cras elementum eu orci nec mollis.\n                              Donec molestie iaculis pharetra. Duis ullamcorper erat ut aliquet tristique.\n                              Etiam venenatis mauris id massa interdum viverra. \n                              "
+              "\n                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n                  Quisque iaculis risus quis tortor eleifend, non facilisis\n                  ante vulputate. Donec iaculis, ex in euismod sagittis,\n                  turpis felis malesuada nisi, a facilisis ex enim ut nunc.\n                  Vestibulum ut tincidunt justo, sit amet faucibus elit.\n                  Aliquam ac nibh eros. Nulla id risus dolor. Ut nulla turpis,\n                  laoreet et libero a, faucibus accumsan risus. Morbi euismod\n                  mauris mi, sit amet tempus ligula pretium vel. Nunc sem\n                  ligula, aliquam id purus et, egestas sagittis lorem. Duis at\n                  justo magna. Donec in egestas turpis. Aliquam maximus nulla\n                  sapien, sagittis dictum sem laoreet sit amet. Donec elit\n                  tortor, tincidunt non aliquet id, rhoncus in felis.\n                  Vestibulum ultrices ante id risus vehicula venenatis.Aenean\n                  id pulvinar sem. Cras elementum eu orci nec mollis. Donec\n                  molestie iaculis pharetra. Duis ullamcorper erat ut aliquet\n                  tristique. Etiam venenatis mauris id massa interdum viverra.\n                "
             )
           ])
         ]),
@@ -1437,9 +1720,7 @@ var staticRenderFns = [
               ]),
               _vm._v(" "),
               _c("p", { staticClass: "card-text" }, [
-                _vm._v(
-                  "\n                                       Principal, BCDSER\n                                   "
-                )
+                _vm._v("Principal, BCDSER")
               ])
             ])
           ])
@@ -1453,7 +1734,7 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("p", [
           _vm._v(
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n                    Quisque iaculis risus quis tortor eleifend, non facilisis ante vulputate.\n                    Donec iaculis, ex in euismod sagittis, turpis felis malesuada nisi, a facilisis ex enim ut nunc. Vestibulum ut tincidunt justo, \n                    sit amet faucibus elit."
+            "\n                Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n                Quisque iaculis risus quis tortor eleifend, non facilisis ante\n                vulputate. Donec iaculis, ex in euismod sagittis, turpis felis\n                malesuada nisi, a facilisis ex enim ut nunc. Vestibulum ut\n                tincidunt justo, sit amet faucibus elit.\n              "
           )
         ])
       ])
@@ -1467,7 +1748,7 @@ var staticRenderFns = [
       _c("img", {
         attrs: { src: "/images/grade.svg", alt: "Exam board icon" }
       }),
-      _vm._v(" Board: xxxx")
+      _vm._v(" Board:\n                xxxx\n              ")
     ])
   },
   function() {
@@ -1503,7 +1784,7 @@ var staticRenderFns = [
                   ]),
                   _vm._v(" "),
                   _c("p", { staticClass: "card-text" }, [
-                    _vm._v("\n                Qualification\n              ")
+                    _vm._v("Qualification")
                   ])
                 ])
               ]
@@ -1540,7 +1821,7 @@ var staticRenderFns = [
                   alt: "Electricity Image"
                 }
               }),
-              _vm._v(" Electricity:"),
+              _vm._v("\n                Electricity:"),
               _c("strong", { staticClass: "ml-1" }, [_vm._v("Yes")])
             ]),
             _vm._v(" "),
@@ -1549,7 +1830,7 @@ var staticRenderFns = [
                 staticClass: "mr-2",
                 attrs: { src: "/images/computer.svg", alt: "computer Image" }
               }),
-              _vm._v(" Computer:"),
+              _vm._v("\n                Computer:"),
               _c("strong", { staticClass: "ml-1" }, [_vm._v("Yes")])
             ]),
             _vm._v(" "),
@@ -1558,7 +1839,7 @@ var staticRenderFns = [
                 staticClass: "mr-2",
                 attrs: { src: "/images/fence.svg", alt: "fence Image" }
               }),
-              _vm._v(" Boundary:"),
+              _vm._v("\n                Boundary:"),
               _c("strong", { staticClass: "ml-1" }, [_vm._v("Yes")])
             ])
           ]),
@@ -1572,7 +1853,7 @@ var staticRenderFns = [
                   alt: "playground Image"
                 }
               }),
-              _vm._v(" Playground:"),
+              _vm._v("\n                Playground:"),
               _c("strong", { staticClass: "ml-1" }, [_vm._v("Yes")])
             ]),
             _vm._v(" "),
@@ -1581,7 +1862,7 @@ var staticRenderFns = [
                 staticClass: "mr-2",
                 attrs: { src: "/images/library.svg", alt: "Library Image" }
               }),
-              _vm._v(" Library:"),
+              _vm._v("\n                Library:"),
               _c("strong", { staticClass: "ml-1" }, [_vm._v("Yes")])
             ]),
             _vm._v(" "),
@@ -1590,7 +1871,7 @@ var staticRenderFns = [
                 staticClass: "mr-2",
                 attrs: { src: "/images/book.svg", alt: "Books Image" }
               }),
-              _vm._v(" No of Books:"),
+              _vm._v("\n                No of Books:"),
               _c("strong", { staticClass: "ml-1" }, [_vm._v("300")])
             ])
           ]),
@@ -1601,7 +1882,7 @@ var staticRenderFns = [
                 staticClass: "mr-2",
                 attrs: { src: "/images/hostel.svg", alt: "Hostel Image" }
               }),
-              _vm._v(" Hostel:"),
+              _vm._v("\n                Hostel:"),
               _c("strong", { staticClass: "ml-1" }, [_vm._v("Yes")])
             ]),
             _vm._v(" "),
@@ -1610,7 +1891,7 @@ var staticRenderFns = [
                 staticClass: "mr-2",
                 attrs: { src: "/images/bus.svg", alt: "Bus Image" }
               }),
-              _vm._v(" Bus Services:"),
+              _vm._v(" Bus\n                Services:"),
               _c("strong", { staticClass: "ml-1" }, [_vm._v("Yes")])
             ])
           ])
@@ -13849,7 +14130,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\laragon\www\bridyc\resources\js\channelwithslug.js */"./resources/js/channelwithslug.js");
+module.exports = __webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/js/channelwithslug.js */"./resources/js/channelwithslug.js");
 
 
 /***/ })

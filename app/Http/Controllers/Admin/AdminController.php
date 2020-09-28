@@ -9,10 +9,12 @@ class AdminController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth:admin');
+        $this->middleware('auth');
     }
 
-    public function index(){
+    public function index()
+    {
+        $this->authorize('superadmin', auth()->user());
         return view('admin.index');
     }
 }

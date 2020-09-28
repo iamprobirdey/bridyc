@@ -13,14 +13,17 @@ class ContactUsController extends Controller
         $this->middleware('auth')->except('index');
     }
 
-    public function index(){
-        return view('admin.contact.index',[
+    public function index()
+    {
+        $this->authorize('superadmin', auth()->user());
+        return view('admin.contact.index', [
             'contacts' => Contact::all()
         ]);
     }
 
-    public function enquiry(Request $request,$contactId){
-        $contact = Contact::findOrFail($contactId);
+    public function enquiry(Request $request, Contact $contact)
+    {
+        $this->authorize('superadmin', auth()->user());
         $contact->enquired = 'checked';
         $contact->save();
         return redirect()->back();

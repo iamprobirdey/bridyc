@@ -25,6 +25,7 @@ class ProfileController extends Controller
         $user  = User::findOrFail(current_user_id());
         $user->gender  = $request->validated()['gender'];
         $user->vission = $request->validated()['vission'];
+        $user->message = $request->validated()['message'];
         $user->update();
 
         return response()->json([

@@ -27,8 +27,8 @@ class StoreUserEducationValidation extends FormRequest
             'school_name' => 'required',
             'degree' => 'required',
             'field_of_study' => 'required',
-            'start_date' => 'required',
-            'end_date' => 'required',
+            'start_date' => 'required|date',
+            'end_date' => 'required|date',
             'grade' => 'required',
             'activities_and_sociaties' => 'required',
             'description' => 'required'

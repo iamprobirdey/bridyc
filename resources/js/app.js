@@ -36,6 +36,24 @@ Vue.component(
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
+function getUserActivity(){
+    var sessionUrl = window.location.origin;
+    if(sessionStorage.getItem([sessionUrl]) != 'bridyc'){
+        sessionStorage.setItem([sessionUrl],'bridyc');
+        axios
+        .get('/api/user/activity')
+        .then(response => {
+
+        })
+        .catch(errors => {
+
+        });
+    }
+    console.log('out');
+}
+
+getUserActivity();
+
 const app = new Vue({
     el: "#app"
 });

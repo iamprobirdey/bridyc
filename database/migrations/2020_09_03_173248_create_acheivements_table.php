@@ -15,11 +15,11 @@ class CreateAcheivementsTable extends Migration
     {
         Schema::create('acheivements', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->foreignId('channel_id')->constrained()->onDelete('cascade');
             $table->string('image_path');
             $table->string('title');
             $table->string('description');
+            $table->timestamp('date');
             $table->timestamps();
         });
     }
