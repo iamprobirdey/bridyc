@@ -2,10 +2,10 @@
 
    <section>
      <!-- college section starts here-->
-     <div class="institute container py-5">
+     <div class="institute container-fluid pt-5">
 
    <br>
-        <div class="row mb-5">
+        <div class="row">
           <div class="card institutecard shadow mx-auto" v-for="(channel,index) in channelData" :key="index">
             <div class="card-body">
              <img :src="channel.icon_avatar === null ? '/images/college logo.jpg': domainUrl+'/media/channel/'+channel.user_id+'/'+channel.icon_avatar" alt="college logo" class="inslogo">

@@ -19,7 +19,7 @@
      <div class="definition px-2 px-lg-4 py-5">
    <p>Bridyc is a bi-directional platform. It is dedicated to empower young minds with the real life exposure and activities
    who are looking for cross-training their minds before choosing an institute or a career.</p>
-   <p>For the institutes, it is a place to digitalise there operational needs.</p>
+   <p>For the institutes, it is a place to digitalise there operational needs and do lot more.</p>
    </div>
 </div>
 <div class="col-sm-8 container-fluid  w-lg-75 px-lg-5">
@@ -61,7 +61,7 @@
       <button class="accordion px-2 px-lg-5">As an institute, what is my benefit? </button>
       <div class="panel px-4 py-4">
       <p>As an institute, you will have a digital footprint with complete control over your channel.
-      Bridyc helps you in daily task management and cost optimization in your end. </p>
+      Bridyc helps you in daily task management and cost optimization in your end. To know more please contact us.</p>
       </div>
 
     </div>
