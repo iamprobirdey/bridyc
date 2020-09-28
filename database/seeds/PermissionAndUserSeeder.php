@@ -101,7 +101,6 @@ class PermissionAndUserSeeder extends Seeder
 
         ]);
 
-
         $user1->assignRole('admin');
         $user2->assignRole('admin');
         $user3->assignRole('admin');

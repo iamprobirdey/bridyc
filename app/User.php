@@ -14,7 +14,7 @@ use App\ModelRelationship\UserAffair;
 
 class User extends Authenticatable
 {
-    use Notifiable,HasRoles,UserAffair;
+    use Notifiable, HasRoles, UserAffair;
 
     /**
      * The attributes that are mass assignable.
@@ -22,12 +22,12 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email','password','username','user_type','phone',
+        'name', 'email', 'username', 'avatar', 'email_verified_at'
     ];
 
-    protected static $logAttributes = [
-        'name', 'email','password','username','user_type','phone',
-    ];
+    // protected static $logAttributes = [
+    //     'name', 'email','password','username','user_type','phone',
+    // ];
 
     protected static $logOnlyDirty = true;
 
@@ -49,41 +49,51 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function scopeUsername($query){
-        return $query->select('id','username');
+    public function scopeUsername($query)
+    {
+        return $query->select('id', 'username');
     }
 
-    public function isUser(){
+    public function isUser()
+    {
         return $this->user_type;
     }
 
-    public function isInstitute(){
+    public function isInstitute()
+    {
         return $this->user_type === 'institute';
     }
-    public function isAdmin(){
+    public function isAdmin()
+    {
         return $this->user_type === 'admin';
     }
-    public function isStudent(){
+    public function isStudent()
+    {
         return $this->user_type === 'student';
     }
-    public function isTeacher(){
+    public function isTeacher()
+    {
         return $this->user_type === 'teacher';
     }
 
-    public function is_verified(){
-        if(
+    public function is_verified()
+    {
+        if (
             $this->user_type === 'institute' &&
-            ($this->status === 0 || $this->status === 2)){
-                return true;
+            ($this->status === 0 || $this->status === 2)
+        ) {
+            return true;
         }
         return false;
     }
 
-    public function saveStudentHobbyData($data){
+    public function saveStudentHobbyData($data)
+    {
         return $this->studentHobby()->saveMany($data);
     }
 
-    public function addEducation($data){
+    public function addEducation($data)
+    {
         return $this->education()->create($data);
     }
 }

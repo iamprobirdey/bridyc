@@ -15,7 +15,6 @@ class StandardController extends Controller
     {
         $this->modelHelperServices = $modelHelperServices;
         $this->middleware('auth');
-        $this->authorize('superadmin', auth()->user());
     }
 
     public function index()

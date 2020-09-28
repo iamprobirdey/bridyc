@@ -16,6 +16,7 @@ class ContactUsController extends Controller
     public function index()
     {
         $this->authorize('superadmin', auth()->user());
+        dd(Contact::all());
         return view('admin.contact.index', [
             'contacts' => Contact::all()
         ]);
