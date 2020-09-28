@@ -1,44 +1,140 @@
-.faqheader {
+.imgbanfaq {
+  -webkit-transition: all ease .5sec;
+  transition: all ease .5sec;
+  max-width: 100%;
+  height: 400px;
+  margin-bottom: 80px;
+  background-position: 70% 30%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  top: 40px;
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.6))), url("/images/faq.png");
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url("/images/faq.png");
+}
+
+@media only screen and (min-width: 768px) {
+  .imgbanfaq {
+    height: 350px;
+    margin-top: 25px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .imgbanfaq {
+    margin-bottom: 100px;
+  }
+}
+
+.imgbanfaq .txtbannerfaq {
+  width: 100%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-align: center;
-  background-image: -webkit-gradient(linear, left bottom, right top, from(#011737), color-stop(#002847), color-stop(#003954), color-stop(#004a5f), to(#005b67));
-  background-image: linear-gradient(to right top, #011737, #002847, #003954, #004a5f, #005b67);
+  position: absolute;
+  top: 60%;
+  left: 49%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   color: white;
-  padding-top: 220px;
-  padding-bottom: 25px;
+}
+
+.imgbanfaq .txtbannerfaq h1 {
   font-size: 30px;
 }
 
-.faqbody {
-  margin-bottom: 50px;
+@media only screen and (min-width: 768px) {
+  .imgbanfaq .txtbannerfaq h1 {
+    font-size: 34px;
+  }
 }
 
-.faqbody .faqQ {
+.imgbanfaq .txtbannerfaq p {
+  font-size: 18px;
+}
+
+@media only screen and (min-width: 768px) {
+  .imgbanfaq .txtbannerfaq p {
+    font-size: 20px;
+  }
+}
+
+.faqheader {
+  margin-top: 50px;
+  color: #3659a2;
+  background-color: #f9fafa;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.faqbody {
+  margin-bottom: 70px;
+  margin-top: 70px;
+}
+
+.faqbody .definition {
+  position: relative;
+  top: -50px;
+  color: white;
+  font-weight: 500;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#3659a2), color-stop(#3259ae), color-stop(#3058b9), color-stop(#3157c4), to(#3456cf));
+  background-image: linear-gradient(to bottom, #3659a2, #3259ae, #3058b9, #3157c4, #3456cf);
+}
+
+@media only screen and (min-width: 768px) {
+  .faqbody .definition {
+    left: 25px;
+  }
+}
+
+.faqbody .accordion {
   background: #f9fafa;
   font-family: "Roboto", sans-serif;
+  color: #3659a2;
+  font-size: 14px;
+  font-weight: 700;
+  width: 100%;
+  padding: 7px;
+  border: 1px solid #eceded;
+  text-align: left;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  margin-bottom: 5px;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
 }
 
-.faqbody .faqQ:hover {
+.faqbody .accordion:focus {
+  outline: none !important;
+}
+
+.faqbody .accordion:hover {
   background: #ecf0f0;
 }
 
-.faqbody .faqQ .fa {
-  font-size: 18px;
-  font-weight: 900;
-  -webkit-transition: .3s transform ease-in-out;
-  transition: .3s transform ease-in-out;
-}
-
-.faqbody .faqQ .collapsed .fa {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
-}
-
-.faqbody .faqQ a {
-  color: #3659a2;
-  font-size: 18px;
+.faqbody .accordion::after {
+  content: '\002B';
+  font-size: 20px;
   font-weight: 700;
+  float: right;
 }
 
-.faqbody .card-body {
+.faqbody .active {
+  background: #ecf0f0;
+}
+
+.faqbody .active::after {
+  content: '\2212';
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.faqbody .panel {
   color: #324353;
+  text-align: left;
+  margin-top: -5px;
+  border: 1px solid #eceded;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  display: none;
+  overflow: hidden;
 }

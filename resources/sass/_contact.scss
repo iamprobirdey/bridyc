@@ -1,27 +1,111 @@
 
+.imgbancontact{
+    transition: all ease .5sec;
+    max-width:100%;
+    height:400px;
+    margin-bottom: 80px;
+    background-position:70% 30%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    top:40px;
+    background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url("/images/contactimg.png");
+    @include screensize(laptop){ 
+       height:350px;
+       margin-top:25px;
+    }
+    @include screensize(desktop){ 
+        margin-bottom: 100px;
+     }
+
+     .txtbannercontact {
+        width: 100%;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    h1{
+        font-size: 30px;
+        @include screensize(laptop){
+            font-size: 34px;
+        }
+    }
+    p{
+        font-size: 18px;
+        @include screensize(laptop){
+            font-size: 20px;
+        }
+    }
+    text-align: center;
+    position: absolute;
+    top: 60%;
+    left: 49%;
+    transform: translate(-50%, -50%);
+    color: white;
+  }
+}
+
+
 
 .contactheader{
-    text-align: center;
-    background-image: linear-gradient(to right top, #011737, #002847, #003954, #004a5f, #005b67);
-    color: white;
-    padding-top: 220px;
-    padding-bottom:25px;
-    font-size: 30px;
+    margin-top: 50px;
+    color: #3659a2; 
+    background-color:#f9fafa ;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .contactform{
-    font-family: 'Times New Roman', Times, serif;
+    
     .contactadd{
         text-align: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        h6{
+            img{
+                width: 25px;
+                height: 25px;
+            }
+        }
+        h5{
+            color:#3659a2;
+        }
+
         @include screensize(tablet){
             padding-top: 60px;
         }
     }
+
     h2{
         text-align: center;
         margin-bottom: 20px;
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         font-weight: 100;
         font-size: 25px;
+    }
+
+    
+    .contact-query{
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 20% 100%);
+        background-image: linear-gradient(to right top, #990066, #831874, #67267f, #442f85, #003585);
+        
+        input{
+            background-color:#f9fafa;
+            border-radius: 25px;
+        }
+        textarea{
+            background-color:#f9fafa;
+        }
+
+        label{
+            color: white;
+        }
+
+        h2{
+            color: white;
+        }
+
+        .btncontact{
+            color:white;
+            background-color:#442f85 ;
+               &:hover{
+                background-color:#67267f ;
+             }
+        }
     }
 }

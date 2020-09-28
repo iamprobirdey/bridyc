@@ -5,7 +5,9 @@
     <link rel="stylesheet" type="text/css" href="{{url('css/privacy.css')}}">
 @endsection
 @section('content')
-<h2 class="mainheader">Privacy Policy</h2>
+<div class="mainheader container py-3 shadow">
+<h2 class="text-uppercase mb-5">Privacy Policy</h2>
+</div>
 <div class="container ptbody">
 
 <br>

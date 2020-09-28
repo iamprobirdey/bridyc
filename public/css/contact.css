@@ -1,18 +1,79 @@
-.contactheader {
+.imgbancontact {
+  transition: all ease 0.5sec;
+  max-width: 100%;
+  height: 400px;
+  margin-bottom: 80px;
+  background-position: 70% 30%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  top: 40px;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url("/images/contactimg.png");
+}
+
+@media only screen and (min-width: 768px) {
+  .imgbancontact {
+    height: 350px;
+    margin-top: 25px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .imgbancontact {
+    margin-bottom: 100px;
+  }
+}
+
+.imgbancontact .txtbannercontact {
+  width: 100%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-align: center;
-  background-image: linear-gradient(to right top, #011737, #002847, #003954, #004a5f, #005b67);
+  position: absolute;
+  top: 60%;
+  left: 49%;
+  transform: translate(-50%, -50%);
   color: white;
-  padding-top: 220px;
-  padding-bottom: 25px;
+}
+
+.imgbancontact .txtbannercontact h1 {
   font-size: 30px;
 }
 
-.contactform {
-  font-family: "Times New Roman", Times, serif;
+@media only screen and (min-width: 768px) {
+  .imgbancontact .txtbannercontact h1 {
+    font-size: 34px;
+  }
+}
+
+.imgbancontact .txtbannercontact p {
+  font-size: 18px;
+}
+
+@media only screen and (min-width: 768px) {
+  .imgbancontact .txtbannercontact p {
+    font-size: 20px;
+  }
+}
+
+.contactheader {
+  margin-top: 50px;
+  color: #3659a2;
+  background-color: #f9fafa;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .contactform .contactadd {
   text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.contactform .contactadd h6 img {
+  width: 25px;
+  height: 25px;
+}
+
+.contactform .contactadd h5 {
+  color: #3659a2;
 }
 
 @media only screen and (min-width: 481px) {
@@ -27,5 +88,37 @@
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 100;
   font-size: 25px;
+}
+
+.contactform .contact-query {
+  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 20% 100%);
+          clip-path: polygon(0 0, 100% 0%, 100% 100%, 20% 100%);
+  background-image: linear-gradient(to right top, #990066, #831874, #67267f, #442f85, #003585);
+}
+
+.contactform .contact-query input {
+  background-color: #f9fafa;
+  border-radius: 25px;
+}
+
+.contactform .contact-query textarea {
+  background-color: #f9fafa;
+}
+
+.contactform .contact-query label {
+  color: white;
+}
+
+.contactform .contact-query h2 {
+  color: white;
+}
+
+.contactform .contact-query .btncontact {
+  color: white;
+  background-color: #442f85;
+}
+
+.contactform .contact-query .btncontact:hover {
+  background-color: #67267f;
 }
 

@@ -1,47 +1,115 @@
 
- .faqheader{
+
+.imgbanfaq{
+    transition: all ease .5sec;
+    max-width:100%;
+    height:400px;
+    margin-bottom: 80px;
+    background-position:70% 30%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    top:40px;
+    background-image: linear-gradient(to top,rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url("/images/faq.png");
+    @include screensize(laptop){ 
+       height:350px;
+       margin-top:25px;
+    }
+    @include screensize(desktop){ 
+        margin-bottom: 100px;
+     }
+
+     .txtbannerfaq {
+        width: 100%;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    h1{
+        font-size: 30px;
+        @include screensize(laptop){
+            font-size: 34px;
+        }
+        
+    }
+    p{
+        font-size: 18px;
+        @include screensize(laptop){
+            font-size: 20px;
+        }
+    }
     text-align: center;
-    background-image: linear-gradient(to right top, #011737, #002847, #003954, #004a5f, #005b67);
+    position: absolute;
+    top: 60%;
+    left: 49%;
+    transform: translate(-50%, -50%);
     color: white;
-    padding-top: 220px;
-    padding-bottom:25px;
-    font-size: 30px;
+  }
+}
+.faqheader{
+    margin-top: 50px;
+    color: #3659a2; 
+    background-color:#f9fafa ;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .faqbody{
-    margin-bottom: 50px;
-
-
-
-    .faqQ{
+    margin-bottom: 70px;
+    margin-top: 70px;
+    .definition{
+        position: relative;
+        top:-50px;
+        color:white;
+        font-weight: 500;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        background-image: linear-gradient(to bottom, #3659a2, #3259ae, #3058b9, #3157c4, #3456cf);
+        @include screensize(laptop){
+            left:25px;
+        }
+    }
+    .accordion{
         background: #f9fafa;
         font-family: "Roboto", sans-serif;
+        color: #3659a2;
+        font-size: 14px;
+        font-weight: 700;
+        width: 100%;
+        padding:7px;
+        border:1px solid #eceded;
+        text-align: left;
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+        margin-bottom:5px;
+        transition:0.8s;
+        
+        &:focus{
+            outline: none !important;
+        }
         &:hover{
             background: #ecf0f0;
         }
-
-
-        .fa{
-            font-size: 18px;
-            font-weight: 900;
-            transition: .3s transform ease-in-out;
-        }
-        .collapsed {
-            .fa{
-                transform: rotate(180deg);
-            }
-        }
-
-
-        a{
-            color: #3659a2;
-            font-size: 18px;
+        &::after{
+            content: '\002B';
+            font-size: 20px;
             font-weight: 700;
+            float: right;
+        }
+    }
+    .active{
+        background: #ecf0f0;
+        &::after{
+            content: '\2212';
+            font-size: 20px;
+            font-weight: bolder;
         }
     }
 
-    .card-body{
+    .panel{
         color: #324353;
+        text-align: left;
+        margin-top:-5px;
+        border: 1px solid #eceded;
+        border-bottom-left-radius: 6px;
+        border-bottom-right-radius: 6px;
+        display: none;
+        overflow:hidden;
     }
 
 }

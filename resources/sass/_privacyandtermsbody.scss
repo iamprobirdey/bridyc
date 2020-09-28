@@ -1,17 +1,16 @@
 
 .mainheader{
-    background-image: linear-gradient(to right top, #011737, #002847, #003954, #004a5f, #005b67);
+    background-color: #f5f9ff;
     font-size: 30px;
-    padding-top: 220px;
-    padding-bottom:25px;
+    margin-top: 100px;
+    color: #3659a2;
     text-align: center;
-    color: white;
 }
 
 .ptbody{
     margin-top: 50px;
     @include screensize(laptop){
-        margin-top: 100px;
+        margin-top: 80px;
     }
 
     .mainbody{
