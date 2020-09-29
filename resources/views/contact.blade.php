@@ -35,10 +35,10 @@
                 <h5 class="mx-5">If you are an institute and want to onboard with us, please call us.</h5>
         </div>
     <br>
-        <div class="col-md-7 mt-5 px-5 py-5 contact-query">
+        <div class="col-md-7 mt-5  px-lg-5 py-5 contact-query">
         
         <h2 class="text-uppercase">let's talk</h2>
-            <div id="contact-us" class="mx-5 px-5">
+            <div id="contact-us" class="mx-5 mx-md-4 mx-lg-5">
                 <contact-us></contact-us>
             </div>
           

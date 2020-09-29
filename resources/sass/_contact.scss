@@ -81,9 +81,14 @@
 
     
     .contact-query{
-        clip-path: polygon(0 0, 100% 0%, 100% 100%, 20% 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 8% 100%);
         background-image: linear-gradient(to right top, #990066, #831874, #67267f, #442f85, #003585);
         
+        @include screensize(desktop){
+            clip-path: polygon(0 0, 100% 0%, 100% 100%, 20% 100%);
+            padding-left: 100px !important;
+        }
+
         input{
             background-color:#f9fafa;
             border-radius: 25px;

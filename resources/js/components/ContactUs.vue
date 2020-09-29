@@ -16,7 +16,7 @@
                         :class="{'form-control': true,'is-invalid': errors.has('name')}"
                         placeholder="Enter your full name"
                         />
-                    <span v-show="errors.has('name')" class="text-danger">{{errors.first("name")}}</span>
+                    <span v-show="errors.has('name')" class="text-danger text-center">{{errors.first("name")}}</span>
                     <span v-show="contactError.name != ''" class="help is-danger">{{contactError.name}}</span>
                 </div>
 
@@ -35,7 +35,7 @@
                         :class="{'form-control': true,'is-invalid': errors.has('email')}"
                         placeholder="Enter your email"
                         />
-                    <span v-show="errors.has('email')" class="text-danger">{{errors.first("email")}}</span>
+                    <span v-show="errors.has('email')" class="text-danger text-center">{{errors.first("email")}}</span>
                     <span v-show="contactError.email != ''" class="help is-danger">{{contactError.email}}</span>
                 </div>
 
@@ -43,9 +43,9 @@
                     class="form-group row"
                     :class="{'has-error':errors.has('contactError.phone') || contactError.phone != ''}"
                 >
-                    <label class="col-sm-4 col-form-label">Phone Number :</label>
+                    <label class="col-sm-6 col-form-label">Phone Number :</label>
                         <input
-                        class="col-sm-8"
+                        class="col-sm-6"
                         v-model="contactData.phone"
                         v-validate="'required|numeric|min:10|max:10'"
                         data-vv-delay="20"
@@ -54,16 +54,16 @@
                         :class="{'form-control': true,'is-invalid': errors.has('phone')}"
                         placeholder="Enter your phone number"
                         />
-                    <span v-show="errors.has('phone')" class="text-danger">{{errors.first("phone")}}</span>
+                    <span v-show="errors.has('phone')" class="text-danger text-center">{{errors.first("phone")}}</span>
                     <span v-show="contactError.phone != ''" class="help is-danger">{{contactError.phone}}</span>
                 </div>
                      <div
                     class="form-group row"
                     :class="{'has-error':errors.has('contactError.message') || contactError.message != ''}"
                 >
-                    <label class="col-sm-3 col-form-label">Message :</label>
+                    <label class="col-sm-4 col-form-label">Message :</label>
                         <textarea
-                        class="col-sm-9"
+                        class="col-sm-8"
                         v-model="contactData.message"
                         v-validate="'required'"
                         data-vv-delay="20"
@@ -72,7 +72,7 @@
                         :class="{'form-control': true,'is-invalid': errors.has('message')}"
                         placeholder="Message text"
                         />
-                    <span v-show="errors.has('message')" class="text-danger">{{errors.first("message")}}</span>
+                    <span v-show="errors.has('message')" class="text-danger text-center">{{errors.first("message")}}</span>
                     <span v-show="contactError.message != ''" class="help is-danger">{{contactError.message}}</span>
                 </div>
 

@@ -91,9 +91,17 @@
 }
 
 .contactform .contact-query {
-  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 20% 100%);
-          clip-path: polygon(0 0, 100% 0%, 100% 100%, 20% 100%);
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 8% 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 8% 100%);
   background-image: linear-gradient(to right top, #990066, #831874, #67267f, #442f85, #003585);
+}
+
+@media only screen and (min-width: 1280px) {
+  .contactform .contact-query {
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 20% 100%);
+            clip-path: polygon(0 0, 100% 0%, 100% 100%, 20% 100%);
+    padding-left: 100px !important;
+  }
 }
 
 .contactform .contact-query input {

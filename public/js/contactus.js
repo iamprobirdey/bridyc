@@ -338,7 +338,7 @@ var render = function() {
                     expression: "errors.has('name')"
                   }
                 ],
-                staticClass: "text-danger"
+                staticClass: "text-danger text-center"
               },
               [_vm._v(_vm._s(_vm.errors.first("name")))]
             ),
@@ -424,7 +424,7 @@ var render = function() {
                     expression: "errors.has('email')"
                   }
                 ],
-                staticClass: "text-danger"
+                staticClass: "text-danger text-center"
               },
               [_vm._v(_vm._s(_vm.errors.first("email")))]
             ),
@@ -458,7 +458,7 @@ var render = function() {
             }
           },
           [
-            _c("label", { staticClass: "col-sm-4 col-form-label" }, [
+            _c("label", { staticClass: "col-sm-6 col-form-label" }, [
               _vm._v("Phone Number :")
             ]),
             _vm._v(" "),
@@ -477,7 +477,7 @@ var render = function() {
                   expression: "'required|numeric|min:10|max:10'"
                 }
               ],
-              staticClass: "col-sm-8",
+              staticClass: "col-sm-6",
               class: {
                 "form-control": true,
                 "is-invalid": _vm.errors.has("phone")
@@ -510,7 +510,7 @@ var render = function() {
                     expression: "errors.has('phone')"
                   }
                 ],
-                staticClass: "text-danger"
+                staticClass: "text-danger text-center"
               },
               [_vm._v(_vm._s(_vm.errors.first("phone")))]
             ),
@@ -544,7 +544,7 @@ var render = function() {
             }
           },
           [
-            _c("label", { staticClass: "col-sm-3 col-form-label" }, [
+            _c("label", { staticClass: "col-sm-4 col-form-label" }, [
               _vm._v("Message :")
             ]),
             _vm._v(" "),
@@ -563,7 +563,7 @@ var render = function() {
                   expression: "'required'"
                 }
               ],
-              staticClass: "col-sm-9",
+              staticClass: "col-sm-8",
               class: {
                 "form-control": true,
                 "is-invalid": _vm.errors.has("message")
@@ -596,7 +596,7 @@ var render = function() {
                     expression: "errors.has('message')"
                   }
                 ],
-                staticClass: "text-danger"
+                staticClass: "text-danger text-center"
               },
               [_vm._v(_vm._s(_vm.errors.first("message")))]
             ),

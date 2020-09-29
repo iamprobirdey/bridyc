@@ -68,6 +68,8 @@ DO IT ALL')
                         data-target="#podcastModal"><img src="/images/play.svg"> Watch Now</button>
                 </div>
             </div>
+        </div>
+    </div>
 </banner>
 
 <div class="modal fade" id="podcastModal">
@@ -89,7 +91,7 @@ DO IT ALL')
 
 
 
-<div id="channel">
+<!--div id="channel">
     <channel :channel="{{json_encode($channel)}}"></channel>
 </div>
 
@@ -113,7 +115,7 @@ DO IT ALL')
             </div>
         </div>
     </div>
-</section>
+</section-->
 
 <br>
 <section>
@@ -130,9 +132,9 @@ DO IT ALL')
 </section>
 
 
-{{-- <div id="channel">
+<div id="channel">
     <channel :channel="{{json_encode($channel)}}"></channel>
-</div> --}}
+</div>
 
 @endsection
 
