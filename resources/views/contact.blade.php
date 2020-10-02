@@ -9,14 +9,14 @@
 <link rel="stylesheet" type="text/css" href="{{url('css/contact.css')}}">
 @endsection
 @section('content')
-<div class="img-fluid imgbancontact">
-<div class="txtbannercontact"> 
+<div class="img-fluid imgbancontact about-faq-contact">
+<div class="txtbanner"> 
           <h1>Do you have any queries?</h1>
          <p>We would love to answer them..</p>
         </div>
 </div>
 
-<div class="contactheader container py-3 shadow">
+<div class="allheader container py-3 shadow">
 <h2 class="text-uppercase mb-5 text-center">Contact Us</h2>
 </div>
 <div class="container-fluid mb-5">
@@ -31,8 +31,10 @@
                 <h6 class="text-center"><img src="/images/smartphone.svg" alt="cell phone"> Contact</h6>
                 <h6>+91-9435285795</h6>
                 <h6>+91-9476844478</h6>
+                
+                <h6>E-mail: info@bridyc.com</h6>
                 <br>
-                <h5 class="mx-5">If you are an institute and want to onboard with us, please call us.</h5>
+                <h6 class="contact-line mx-lg-5">If you are an institute and want to onboard with us, please call/email us.</h6>
         </div>
     <br>
         <div class="col-md-7 mt-5  px-lg-5 py-5 contact-query">

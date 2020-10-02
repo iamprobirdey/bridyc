@@ -1,0 +1,40 @@
+@import "mixins";
+
+.imgbanabout{
+    background-image: linear-gradient(to top,rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/aboutus.png");
+}
+
+.about-story{
+    h6{
+        font-size:12px;
+        color: #3659a2;
+    }
+}
+
+.about-mission{
+    .text-mission{
+        @include screensize(laptop){
+            padding-left: 70px;
+        } 
+        @include screensize(desktop){
+            padding-left: 118px;
+        }
+    }
+    .imgmission{
+        width: 100%;
+        clip-path: ellipse(81% 62% at 91% 62%);
+    }
+}
+
+.about-how{
+    .text-how{
+        @include screensize(laptop){
+            padding-right: 70px;
+            text-align: right;
+        }
+        @include screensize(desktop){
+            padding-right: 140px;
+            text-align: right;
+        } 
+    }
+}

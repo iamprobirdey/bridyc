@@ -1,9 +1,9 @@
 <template>
-    <div>
-        <div v-if="!userNameEditing" class="text-center pl-4">
-                {{usernameData}}
+    <div class="username">
+        <div v-if="!userNameEditing" class="text-center">
+                User Name: <strong>{{usernameData}}</strong>
 
-            <button class="btn mt-n2 username-edit" @click="editTheUserName()"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+            <button class="btn mt-n2 edit-btn" @click="editTheUserName()" data-toggle="tooltip" title="Edit"><i class="fa fa-pencil" aria-hidden="true"></i></button>
         </div>
 
         <div v-if="userNameEditing" class="container mx-auto">

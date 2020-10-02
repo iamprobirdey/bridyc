@@ -9,6 +9,7 @@
     background-size: cover;
     position: relative;
     top:40px;
+    //clip-path: ellipse(68% 50% at 50% 35%);
     background-image: linear-gradient(to right,rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1)), url("/images/bannernew1.png");
     @include screensize(laptop){ 
        height:660px;

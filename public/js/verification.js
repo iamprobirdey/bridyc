@@ -393,6 +393,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -594,11 +596,29 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", [
     _vm.verificationStatus === true && _vm.userData === 1
-      ? _c("div", [_vm._m(0)])
+      ? _c("div", [
+          _c("h4", { staticClass: "text-center text-danger" }, [
+            _vm._v("\n    Your data is under verification\n    ")
+          ]),
+          _vm._v(" "),
+          _c("p", { staticClass: "text-center text-success" }, [
+            _vm._v("Once verified, you will have full access to your channel")
+          ])
+        ])
       : _vm._e(),
     _vm._v(" "),
     _vm.userData === 3 && _vm.verificationStatus === true
-      ? _c("div", [_vm._m(1)])
+      ? _c("div", [
+          _c("h4", { staticClass: "text-center text-danger" }, [
+            _vm._v(
+              "\n    You are temporarily restricted from accessing the channel\n    "
+            )
+          ]),
+          _vm._v(" "),
+          _c("h6", { staticClass: "text-center text-success" }, [
+            _vm._v("Please contact the admin")
+          ])
+        ])
       : _vm._e(),
     _vm._v(" "),
     _vm.verificationStatus === false
@@ -1855,28 +1875,7 @@ var render = function() {
       : _vm._e()
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("h4", [
-      _c("span", { staticClass: "text-danger" }, [
-        _vm._v("Your data is under verification")
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("h4", [
-      _c("span", { staticClass: "text-danger" }, [
-        _vm._v("You are blocked by Admin")
-      ])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
@@ -2089,7 +2088,7 @@ if (typeof element != "undefined" && element != null) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/js/verification.js */"./resources/js/verification.js");
+module.exports = __webpack_require__(/*! C:\laragon\www\bridyc\resources\js\verification.js */"./resources/js/verification.js");
 
 
 /***/ })

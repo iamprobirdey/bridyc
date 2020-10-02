@@ -1,28 +1,36 @@
 <template>
-  <div>
-    <div v-if="addressDataChecker">
-      <h3>
-        Your state:
-        <span>{{userInformationData.state.name}}</span>
-      </h3>
-      <h3>
-        Your District:
-        <span>{{userInformationData.district.name}}</span>
-      </h3>
-      <h3>
-        Your Village:
-        <span>{{userInformationData.village.name}}</span>
-      </h3>
-      <h3>
-        Your Standard:
-        <span>{{userInformationData.standard.standard_name}}</span>
-      </h3>
-      <button class="btn btn-primary" @click="editAddress()">Edit</button>
+  <div class="address">
+    <div v-if="addressDataChecker" class="address-display">
+      
+      <div class="row mx-0">
+           <div class="col-sm-6">
+                <strong> Qualification:</strong>
+                <span>{{userInformationData.standard.standard_name}}</span>
+           </div>
+
+           <div class="col-sm-6">
+               <strong>Locality/Village:</strong>
+               <span>{{userInformationData.village.name}}</span>
+           </div>
+      </div>
+      <div class="row mx-0">
+           <div class="col-sm-6">
+               <strong>District:</strong>
+               <span>{{userInformationData.district.name}}</span>
+           </div>
+
+           <div class="col-sm-6">
+             <strong>State:</strong>
+             <span>{{userInformationData.state.name}}</span>
+           </div>
+      </div>
+      
+      <button class="btn edit-btn" @click="editAddress()">Edit</button>
     </div>
     <div v-if="!addressDataChecker">
       <form @submit.prevent="addressForm()">
         <div
-          class="form-group row mx-lg-5"
+          class="form-group row mx-2 mx-lg-5"
           :class="{'has-error': errors.has('state') || serverErrors.state_id != '' }"
         >
           <label col="col-sm-3 col-form-label">STATE:</label>
@@ -49,7 +57,7 @@
         </div>
 
         <div
-          class="form-group row mx-5"
+          class="form-group row mx-2 mx-lg-5"
           :class="{'has-error': errors.has('district') || serverErrors.district_id != '' }"
         >
           <label col="col-sm-3 col-form-label">DISTRICT:</label>
@@ -80,7 +88,7 @@
         </div>
 
         <div
-          class="form-group row mx-5"
+          class="form-group row mx-2 mx-lg-5"
           :class="{'has-error': errors.has('village') || serverErrors.village_id != '' }"
         >
           <label col="col-sm-3 col-form-label">VILLAGE:</label>
@@ -111,7 +119,7 @@
         </div>
 
         <div
-          class="form-group row mx-5"
+          class="form-group row mx-2 mx-lg-5"
           :class="{'has-error': errors.has('standard') || serverErrors.standard_id != '' }"
         >
           <label col="col-sm-3 col-form-label">STANDARD:</label>
@@ -146,7 +154,7 @@
             class="btn btn-warning"
             @click="cancelForm()"
           >Cancel</button>
-          <button type="submit" class="btn btnsubmit">Submit</button>
+          <button type="submit" class="btn btnsubmit mt-n2">Submit</button>
         </div>
       </form>
     </div>

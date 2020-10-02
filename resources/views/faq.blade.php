@@ -9,13 +9,13 @@
 <link rel="stylesheet" type="text/css" href="{{url('css/faq.css')}}">
 @endsection
 @section('content')
-<div class="img-fluid imgbanfaq">
-<div class="txtbannerfaq"> 
+<div class="img-fluid imgbanfaq about-faq-contact">
+<div class="txtbanner">
           <h1>Frequently asked questions</h1>
          <p>We are happy to help you..</p>
         </div>
-    </div>
-<div class="faqheader container py-3 shadow">
+</div>
+<div class="allheader container py-3 shadow">
 <h2 class=" text-uppercase mb-5 text-center">FAQ and Answers</h2>
 </div>
 <div class="row mx-lg-5 faqbody mx-0">

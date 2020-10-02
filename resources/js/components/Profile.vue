@@ -1,13 +1,13 @@
 <template>
-  <div class="profile mx-auto">
+  <div class="profile mx-auto px-lg-5">
     <avatar :user="userData"></avatar>
-    <div>
+    <div class="mt-5">
       <username :username="userData.username" :id="userData.id"></username>
     </div>
     <br />
     <br />
     <br />
-    <div class="shadow py-4">
+    <div class="shadow py-5 mt-n4">
       <div class="container">
         <address-for-student
           :channels="channelsData"
@@ -19,8 +19,8 @@
           :id="userData.id"
         ></address-for-student>
       </div>
-      <div class="row mt-5 mx-auto">
-        <div class="col-sm-6">
+      <div class="row mt-5 pt-3 mx-auto">
+        <div class="col-sm-5 text-center text-lg-left mb-5">
           <subject
             :subjects="subjectsData"
             :studentssubject="studentsubjectsData"
@@ -28,7 +28,7 @@
           ></subject>
         </div>
 
-        <div class="col-sm-6 text-right">
+        <div class="col-sm-7 text-center text-lg-right mb-5">
           <hobby
             :hobbies="hobbiesData"
             :studentshobbies="studentHobbies"
@@ -36,10 +36,9 @@
           ></hobby>
         </div>
       </div>
-      <div class="row mt-5 mx-auto">
-        <div class="col-sm-6 text-right">
+      <hr class="mt-lg-5">
+      <div class="mt-lg-5 pt-3 mx-auto container-fluid">
           <channel :userinstitute="userinstituteData" :user="userData" :channel="channelsData"></channel>
-        </div>
       </div>
     </div>
     <br />

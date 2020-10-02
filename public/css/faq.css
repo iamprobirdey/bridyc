@@ -1,72 +1,12 @@
 @charset "UTF-8";
 
 .imgbanfaq {
-  transition: all ease 0.5sec;
-  max-width: 100%;
-  height: 400px;
-  margin-bottom: 80px;
-  background-position: 70% 30%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  top: 40px;
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url("/images/faq.png");
-}
-
-@media only screen and (min-width: 768px) {
-  .imgbanfaq {
-    height: 350px;
-    margin-top: 25px;
-  }
-}
-
-@media only screen and (min-width: 1280px) {
-  .imgbanfaq {
-    margin-bottom: 100px;
-  }
-}
-
-.imgbanfaq .txtbannerfaq {
-  width: 100%;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  text-align: center;
-  position: absolute;
-  top: 60%;
-  left: 49%;
-  transform: translate(-50%, -50%);
-  color: white;
-}
-
-.imgbanfaq .txtbannerfaq h1 {
-  font-size: 30px;
-}
-
-@media only screen and (min-width: 768px) {
-  .imgbanfaq .txtbannerfaq h1 {
-    font-size: 34px;
-  }
-}
-
-.imgbanfaq .txtbannerfaq p {
-  font-size: 18px;
-}
-
-@media only screen and (min-width: 768px) {
-  .imgbanfaq .txtbannerfaq p {
-    font-size: 20px;
-  }
-}
-
-.faqheader {
-  margin-top: 50px;
-  color: #3659a2;
-  background-color: #f9fafa;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/faq.png");
 }
 
 .faqbody {
   margin-bottom: 70px;
-  margin-top: 70px;
+  margin-top: 100px;
 }
 
 .faqbody .definition {

@@ -15,7 +15,9 @@
 @php
 //dd($userInformation)
 @endphp
-<div id="student-profile">
+<div class="container-fluid profileheader">
+</div>
+<div id="student-profile" class="container-fluid">
     <student-profile :user="{{json_encode($user)}}" :channels="{{json_encode($channels)}}"
         :states="{{json_encode($states)}}" :districts="{{json_encode($districts)}}"
         :villages="{{json_encode($villages)}}" :standards="{{json_encode($standards)}}"

@@ -1,20 +1,21 @@
 <template>
   <div>
     <div v-if="subjectsEntryChecker">
-      You school sujects are:
-      <button class="btn mt-n2 username-edit" @click="editTheSubject()">
+      My Subjects:
+      <button class="btn mt-n2 edit-btn" @click="editTheSubject()" data-toggle="tooltip" title="Edit">
         <i class="fa fa-pencil" aria-hidden="true"></i>
       </button>
-      <div class="card">
-        <div
-          class="card-body mb-3"
-          v-for="(subject,index) in studentssubjectData"
-          :key="index"
-        >{{subject.subject.name}}</div>
-      </div>
-      <!--button class="btn btn-primary m-1" v-for="(subject,index) in studentssubjectData" :key="index">
+      <!--div class="card bg-info mb-2" v-for="(subject,index) in studentssubjectData"
+          :key="index">
+        <div class="card-body my-n3">
+          {{subject.subject.name}}
+        </div>
+      </div-->
+      <div>
+      <button class="btn btn-sm btnsubjects m-1" v-for="(subject,index) in studentssubjectData" :key="index">
                 {{subject.subject.name}}
-      </button-->
+      </button>
+      </div>
     </div>
     <div v-if="!subjectsEntryChecker">
       <multiselect
@@ -27,9 +28,9 @@
         :option-height="104"
       ></multiselect>
       <span v-show="serverError != ''" class="text-danger text-center">{{ serverError }}</span>
-      <br />
-      <button class="btn btn-danger" @click="cancelTheForm()">Cancel</button>
-      <button type="submit" class="btn btnsubmit" @click="submitSubjectsData()">Submit</button>
+      <br>
+      <button class="btn btn-warning" @click="cancelTheForm()">Cancel</button>
+      <button type="submit" class="btn btnsubmit mt-n2" @click="submitSubjectsData()">Submit</button>
     </div>
   </div>
 </template>

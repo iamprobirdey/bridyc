@@ -1,58 +1,5 @@
 .imgbancontact {
-  transition: all ease 0.5sec;
-  max-width: 100%;
-  height: 400px;
-  margin-bottom: 80px;
-  background-position: 70% 30%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  top: 40px;
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url("/images/contactimg.png");
-}
-
-@media only screen and (min-width: 768px) {
-  .imgbancontact {
-    height: 350px;
-    margin-top: 25px;
-  }
-}
-
-@media only screen and (min-width: 1280px) {
-  .imgbancontact {
-    margin-bottom: 100px;
-  }
-}
-
-.imgbancontact .txtbannercontact {
-  width: 100%;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  text-align: center;
-  position: absolute;
-  top: 60%;
-  left: 49%;
-  transform: translate(-50%, -50%);
-  color: white;
-}
-
-.imgbancontact .txtbannercontact h1 {
-  font-size: 30px;
-}
-
-@media only screen and (min-width: 768px) {
-  .imgbancontact .txtbannercontact h1 {
-    font-size: 34px;
-  }
-}
-
-.imgbancontact .txtbannercontact p {
-  font-size: 18px;
-}
-
-@media only screen and (min-width: 768px) {
-  .imgbancontact .txtbannercontact p {
-    font-size: 20px;
-  }
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/contactimg.png");
 }
 
 .contactheader {
@@ -72,7 +19,7 @@
   height: 25px;
 }
 
-.contactform .contactadd h5 {
+.contactform .contactadd .contact-line {
   color: #3659a2;
 }
 

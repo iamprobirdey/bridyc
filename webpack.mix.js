@@ -27,5 +27,6 @@ mix.js("resources/js/app.js", "public/js")
     .sass("resources/sass/institutedashboard.scss", "public/css")
     .sass("resources/sass/institutelandingpage.scss", "public/css")
     .sass("resources/sass/profile.scss", "public/css")
+    .sass("resources/sass/about.scss", "public/css")
     .browserSync("http://127.0.0.1:8000/")
     .version();

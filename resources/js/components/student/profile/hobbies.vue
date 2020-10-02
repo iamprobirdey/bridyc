@@ -1,14 +1,14 @@
 <template>
   <div>
     <div v-if="hobbiesEntryChecker">
-      Your filled of interest:
+      Field of Interest:
       <button
         class="btn btn-primary m-1"
         v-for="(hobbie,index) in studentshobbiesData"
         :key="index"
       >{{hobbie.name}}</button>
 
-      <button class="btn mt-n2 username-edit" @click="editThehobbie()">
+      <button class="btn mt-n2 edit-btn" @click="editThehobbie()" data-toggle="tooltip" title="Edit">
         <i class="fa fa-pencil" aria-hidden="true"></i>
       </button>
     </div>
@@ -23,9 +23,9 @@
         :option-height="104"
       ></multiselect>
       <span v-show="serverError != ''" class="text-danger text-center">{{ serverError }}</span>
-
-      <button class="btn btn-danger" @click="cancelTheForm()">Cancel</button>
-      <button type="submit" class="btn btnsubmit" @click="submitSubjectsData()">Submit</button>
+<br>
+      <button class="btn btn-warning" @click="cancelTheForm()">Cancel</button>
+      <button type="submit" class="btn btnsubmit mt-n2" @click="submitSubjectsData()">Submit</button>
     </div>
   </div>
 </template>

@@ -24,10 +24,11 @@
             <div class="col-sm-4 mb-4">
                 <h5>Partner</h5>
                 <p>If you are an institute and wants to partner with us,
-                    call us at:
+                    call/email us at:
                     <ul class="listsocial mt-n3">
                         <li class="ml-n5">+91-9435285795</li>
                         <li class="ml-n5">+91-9476844478</li>
+                        <li class="ml-n5">E-mail: info@bridyc.com</li>
                     </ul>
                 </p>
             </div>
