@@ -163,13 +163,13 @@ class ProfileController extends Controller
         $realImage = Image::make($request->input('image'));
         $realImage->fit(600, 600, null, 'center');
         $image = $imageS = $imageM = Image::canvas(600, 600, '#ffffff')->insert($realImage);
-        $path = "media/teacher/" . current_user_id() . "/profile/";
+        $path = "/media/users/profile/" . current_user_id() . "/";
 
-        if (is_dir('media/teacher/' . current_user_id())) {
+        if (is_dir('/media/users/profile/' . current_user_id())) {
             if ($user->avatar != null) {
-                @unlink('media/teacher/' . current_user_id() . '/profile/' . $user->avatar);
-                @unlink('media/teacher/' . current_user_id() . '/profile/m-' . $user->avatar);
-                @unlink('media/teacher/' . current_user_id() . '/profile/s-' . $user->avatar);
+                //@unlink('/media/users/profile/' . current_user_id() . '/' . $user->avatar);
+                //@unlink('/media/users/profile/' . current_user_id() . '/m-' . $user->avatar);
+                @unlink('/media/users/profile/' . current_user_id() . '/s-' . $user->avatar);
             }
         }
 
@@ -204,6 +204,20 @@ class ProfileController extends Controller
         return response()->json([
             'message' => true,
             'image' => $imageName
+        ]);
+    }
+
+    public function phoneStore(User $user, Request $request)
+    {
+        $request->validate([
+            'phone' => 'required|numeric|min:10'
+        ]);
+        $user->phone = $request->input('phone');
+        $user->update();
+
+        return response()->json([
+            'message' => true,
+            'user' => $user
         ]);
     }
 }

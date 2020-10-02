@@ -16,6 +16,7 @@ class GoogleLoginController extends Controller
 {
     public function getGoogleLogIn()
     {
+        Session::put('url.intended', URL::previous());
         return Socialite::driver('google')->redirect();
     }
 
@@ -36,12 +37,12 @@ class GoogleLoginController extends Controller
             //Saving avatar from social media
             $fileContents = file_get_contents($social_user->getAvatar());
             $img_name = $social_user->getId() . ".jpg";
-            File::put(public_path() . '/media/users/profile/' . 's-' . $img_name, $fileContents);
+            File::put(public_path() . '/media/users/profile/' . $authUser->id . '/' . 's-' . $img_name, $fileContents);
             User::where('id', $authUser->id)->update(['avatar' => $img_name]);
         }
-        $url = Session::get('url.intended', url('/'));
-        Session::forget('url.intended');
-        return redirect($url);
+        //$url = Session::get('url.intended', url('/'));
+        //Session::forget('url.intended');
+        return redirect(route('validate.user.role', $authUser->email));
     }
 
     //105651899629154890765

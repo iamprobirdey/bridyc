@@ -39,6 +39,11 @@ return [
         'client_secret' => env('FACEBOOK_APP_SECRET'),
         'redirect' => 'http://localhost:3000/facebook/response',
     ],
+    'sms' => [
+        'api' => env('TEXTLOCAL_API_KEY')
+    ]
+
+
 
 
 

@@ -12,7 +12,7 @@ use Spatie\Activitylog\Traits\LogsActivity;
 
 use App\ModelRelationship\UserAffair;
 
-class User extends Authenticatable
+class User extends Authenticatable implements MustVerifyEmail
 {
     use Notifiable, HasRoles, UserAffair;
 
@@ -22,7 +22,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'username', 'avatar', 'email_verified_at'
+        'name', 'email', 'user_type', 'username', 'avatar'
     ];
 
     // protected static $logAttributes = [

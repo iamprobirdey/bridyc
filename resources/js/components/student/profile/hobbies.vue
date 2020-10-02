@@ -4,9 +4,11 @@
       Your filled of interest:
       <button
         class="btn btn-primary m-1"
-        v-for="(hobbie,index) in studentshobbiesData"
+        v-for="(hobbie, index) in studentshobbiesData"
         :key="index"
-      >{{hobbie.name}}</button>
+      >
+        {{ hobbie.name }}
+      </button>
 
       <button class="btn mt-n2 username-edit" @click="editThehobbie()">
         <i class="fa fa-pencil" aria-hidden="true"></i>
@@ -22,10 +24,14 @@
         tag-placeholder="Select classes of your hobbies"
         :option-height="104"
       ></multiselect>
-      <span v-show="serverError != ''" class="text-danger text-center">{{ serverError }}</span>
+      <span v-show="serverError != ''" class="text-danger text-center">{{
+        serverError
+      }}</span>
 
       <button class="btn btn-danger" @click="cancelTheForm()">Cancel</button>
-      <button type="submit" class="btn btnsubmit" @click="submitSubjectsData()">Submit</button>
+      <button type="submit" class="btn btnsubmit" @click="submitSubjectsData()">
+        Submit
+      </button>
     </div>
   </div>
 </template>
@@ -77,7 +83,7 @@ export default {
       return `${hobby.name}`;
     },
     submitSubjectsData() {
-      if (this.item.length) {
+      if (this.value.length) {
         let formData = {
           hobby_id: [],
         };

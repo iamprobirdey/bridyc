@@ -185,13 +185,12 @@ class ProfileController extends Controller
         $realImage = Image::make($request->input('image'));
         $realImage->fit(600, 600, null, 'center');
         $image = $imageS = $imageM = Image::canvas(600, 600, '#ffffff')->insert($realImage);
-        $path = "media/student/" . current_user_id() . "/profile/";
-
-        if (is_dir('media/student/' . current_user_id())) {
+        $path = "/media/users/profile/" . current_user_id() . '/';
+        if (is_dir('/media/users/profile/' . current_user_id())) {
             if ($user->avatar != null) {
-                @unlink('media/student/' . current_user_id() . '/profile/' . $user->avatar);
-                @unlink('media/student/' . current_user_id() . '/profile/m-' . $user->avatar);
-                @unlink('media/student/' . current_user_id() . '/profile/s-' . $user->avatar);
+                //@unlink('/media/users/profile/' . current_user_id() . '/' . $user->avatar);
+                //@unlink('/media/users/profile/' . current_user_id() . '/m-' . $user->avatar);
+                @unlink('/media/users/profile/' . current_user_id() . '/s-' . $user->avatar);
             }
         }
 
