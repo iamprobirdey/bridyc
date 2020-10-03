@@ -71,18 +71,24 @@
           >
             <option value>Select State</option>
 
-            <option v-for="state in statesData" :key="state.id" :value="state.id">{{state.name}}</option>
+            <option
+              v-for="state in statesData"
+              :key="state.id"
+              :value="state.id"
+            >
+              {{ state.name }}
+            </option>
           </select>
           <i v-show="errors.has('state')" class="is-invalid"></i>
 
-          <span
-            v-show="errors.has('state')"
-            class="text-danger text-center"
-          >{{ errors.first('state') }}</span>
+          <span v-show="errors.has('state')" class="text-danger text-center">{{
+            errors.first("state")
+          }}</span>
           <span
             v-show="serverErrors.state_id != ''"
             class="text-danger text-center"
-          >{{ serverErrors.state_id }}</span>
+            >{{ serverErrors.state_id }}</span
+          >
         </div>
 
         <div
@@ -102,23 +108,29 @@
               v-for="district in districtsData"
               :key="district.id"
               :value="district.id"
-            >{{district.name}}</option>
+            >
+              {{ district.name }}
+            </option>
           </select>
           <i v-show="errors.has('district')" class="is-invalid"></i>
 
           <span
             v-show="errors.has('district')"
             class="text-danger text-center"
-          >{{ errors.first('district') }}</span>
+            >{{ errors.first("district") }}</span
+          >
           <span
             v-show="serverErrors.district_id != ''"
             class="text-danger text-center"
-          >{{ serverErrors.district_id }}</span>
+            >{{ serverErrors.district_id }}</span
+          >
         </div>
 
         <div
-          class="form-group row mx-2 mx-lg-5"
-          :class="{'has-error': errors.has('village') || serverErrors.village_id != '' }"
+          class="form-group row mx-5 mx-2 mx-lg-5"
+          :class="{
+            'has-error': errors.has('village') || serverErrors.village_id != '',
+          }"
         >
           <label col="col-sm-3 col-form-label">VILLAGE:</label>
           <select
@@ -133,23 +145,30 @@
               v-for="village in villagesData"
               :key="village.id"
               :value="village.id"
-            >{{village.name}}</option>
+            >
+              {{ village.name }}
+            </option>
           </select>
           <i v-show="errors.has('village')" class="is-invalid"></i>
 
           <span
             v-show="errors.has('village')"
             class="text-danger text-center"
-          >{{ errors.first('village') }}</span>
+            >{{ errors.first("village") }}</span
+          >
           <span
             v-show="serverErrors.village_id != ''"
             class="text-danger text-center"
-          >{{ serverErrors.village_id }}</span>
+            >{{ serverErrors.village_id }}</span
+          >
         </div>
 
         <div
           class="form-group row mx-2 mx-lg-5"
-          :class="{'has-error': errors.has('standard') || serverErrors.standard_id != '' }"
+          :class="{
+            'has-error':
+              errors.has('standard') || serverErrors.standard_id != '',
+          }"
         >
           <label col="col-sm-3 col-form-label">STANDARD:</label>
           <select
@@ -164,18 +183,22 @@
               v-for="standard in standardsData"
               :key="standard.id"
               :value="standard.id"
-            >{{standard.standard_name}}</option>
+            >
+              {{ standard.standard_name }}
+            </option>
           </select>
           <i v-show="errors.has('standard')" class="is-invalid"></i>
 
           <span
             v-show="errors.has('standard')"
             class="text-danger text-center"
-          >{{ errors.first('standard') }}</span>
+            >{{ errors.first("standard") }}</span
+          >
           <span
             v-show="serverErrors.standard_id != ''"
             class="text-danger text-center"
-          >{{ serverErrors.standard_id }}</span>
+            >{{ serverErrors.standard_id }}</span
+          >
         </div>
         <div class="ml-5">
           <button

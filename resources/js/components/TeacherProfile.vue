@@ -28,9 +28,16 @@
           ></subject>
         
       </div>
-      
-        <div class="mt-lg-5 pt-3 mx-auto container-fluid">
-          <channel :userinstitute="userinstituteData" :user="userData" :channel="channelsData"></channel>
+      <div class="row mt-5 mx-auto">
+        <div class="col-sm-6">
+          <channel
+            :userinstitute="userinstituteData"
+            :user="userData"
+            :channel="channelsData"
+          ></channel>
+        </div>
+        <div class="col-sm-6">
+          <phone :user="userData"></phone>
         </div>
       
     </div>
@@ -43,6 +50,7 @@ import address from "./teacher/profile/address.vue";
 import subject from "./teacher/profile/subject.vue";
 import avatar from "./teacher/profile/avatar.vue";
 import channel from "./teacher/profile/channel.vue";
+import phone from "./teacher/profile/phone.vue";
 export default {
   data() {
     return {
@@ -121,6 +129,7 @@ export default {
     subject,
     avatar,
     channel,
+    phone,
   },
 };
 </script>

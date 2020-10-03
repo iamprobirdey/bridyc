@@ -42,7 +42,6 @@ class PermissionAndUserSeeder extends Seeder
             'password' => '$2y$10$A5qfm/Ssy2JOTLf5PQKOxeIFrLTOUaK5nwONeWstGu07wQDAEciwK',
             'username' => 'probir1991',
             'user_type' => 'admin',
-            'phone' => '1234567890'
 
         ]);
         $user2 = User::create([
@@ -51,7 +50,6 @@ class PermissionAndUserSeeder extends Seeder
             'password' => '$2y$10$A5qfm/Ssy2JOTLf5PQKOxeIFrLTOUaK5nwONeWstGu07wQDAEciwK',
             'username' => 'borahsurajit17',
             'user_type' => 'admin',
-            'phone' => '1234567890'
 
         ]);
 
@@ -61,7 +59,6 @@ class PermissionAndUserSeeder extends Seeder
             'password' => '$2y$10$A5qfm/Ssy2JOTLf5PQKOxeIFrLTOUaK5nwONeWstGu07wQDAEciwK',
             'username' => 'terang',
             'user_type' => 'admin',
-            'phone' => '1234567890'
 
         ]);
         $user4 = User::create([
@@ -70,7 +67,6 @@ class PermissionAndUserSeeder extends Seeder
             'password' => '$2y$10$A5qfm/Ssy2JOTLf5PQKOxeIFrLTOUaK5nwONeWstGu07wQDAEciwK',
             'username' => 'medhipranjal1993',
             'user_type' => 'admin',
-            'phone' => '1234567890'
 
         ]);
         $user5 = User::create([
@@ -79,7 +75,6 @@ class PermissionAndUserSeeder extends Seeder
             'password' => '$2y$10$A5qfm/Ssy2JOTLf5PQKOxeIFrLTOUaK5nwONeWstGu07wQDAEciwK',
             'username' => 'pisaxsd',
             'user_type' => 'institute',
-            'phone' => '1234567890'
 
         ]);
         $user6 = User::create([
@@ -88,7 +83,6 @@ class PermissionAndUserSeeder extends Seeder
             'password' => '$2y$10$A5qfm/Ssy2JOTLf5PQKOxeIFrLTOUaK5nwONeWstGu07wQDAEciwK',
             'username' => 'pisax',
             'user_type' => 'student',
-            'phone' => '1234567890'
 
         ]);
         $user7 = User::create([
@@ -97,7 +91,6 @@ class PermissionAndUserSeeder extends Seeder
             'password' => '$2y$10$A5qfm/Ssy2JOTLf5PQKOxeIFrLTOUaK5nwONeWstGu07wQDAEciwK',
             'username' => 'pisasdsx',
             'user_type' => 'teacher',
-            'phone' => '1234567890'
 
         ]);
 

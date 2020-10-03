@@ -51,38 +51,39 @@ class RegisterController extends Controller
      * @return \Illuminate\Contracts\Validation\Validator
      */
 
-    public function postRegister(Request $request){
-            $this->validator($request->all())->validate();
+    public function postRegister(Request $request)
+    {
+        $this->validator($request->all())->validate();
 
-            $user = $this->create($request->all());
-            $credentials = $request->only('email', 'password');
+        $user = $this->create($request->all());
+        $credentials = $request->only('email', 'password');
 
-            // $redirectRoute = [
-            //     'student' => '/',
-            //     'institute' => '/user/dashboard'
-            // ];
-            // if($request->input('user_type') === 'institute'){
-            //     Verification::create([
-            //         'status' => 0
-            //     ]);
-            //     $user->assignRole('institute');
-            // }
-            // if($request->input('user_type') === 'student'){
-            // }
-            $user->assignRole('student');
+        // $redirectRoute = [
+        //     'student' => '/',
+        //     'institute' => '/user/dashboard'
+        // ];
+        // if($request->input('user_type') === 'institute'){
+        //     Verification::create([
+        //         'status' => 0
+        //     ]);
+        //     $user->assignRole('institute');
+        // }
+        // if($request->input('user_type') === 'student'){
+        // }
+        $user->assignRole('student');
 
-            $auth = false;
-            if (Auth::attempt($credentials)) {
-                $auth = true;
-            }
+        $auth = false;
+        if (Auth::attempt($credentials)) {
+            $auth = true;
+        }
 
 
 
-            return response()->json([
-                'status' => 'success',
-                'auth' => $auth,
-                'redirectRoute' => '/'
-            ]);
+        return response()->json([
+            'status' => 'success',
+            'auth' => $auth,
+            'redirectRoute' => '/'
+        ]);
     }
 
 
@@ -92,8 +93,7 @@ class RegisterController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8'],
-            'user_type' => ['required','string'],
-            'phone' => ['required','numeric','min:10']
+            'user_type' => ['required', 'string'],
         ]);
     }
 
@@ -107,20 +107,24 @@ class RegisterController extends Controller
     {
         $username = $this->getUserName($data);
 
-        return User::create([
+        if (!collect(['institute', 'student', 'teacher'])->contains($data['user_type'])) {
+            abort(404);
+        }
+
+        return  User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
             'username' => $username,
             'user_type' => $data['user_type'],
-            'phone' => $data['phone']
         ]);
     }
 
-    protected function getUserName(array $data){
-        $username = $data['name'].random_int(1,1000000);
-        $user = User::where('username',$username)->first();
-        if($user === null) return $username;
+    protected function getUserName(array $data)
+    {
+        $username = $data['name'] . random_int(1, 1000000);
+        $user = User::where('username', $username)->first();
+        if ($user === null) return $username;
         $this->getUserName($data);
     }
 }

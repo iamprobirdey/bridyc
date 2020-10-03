@@ -15,7 +15,8 @@ class CreatePhoneVerificationsTable extends Migration
     {
         Schema::create('phone_verifications', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->foreignId('user_id');
+            $table->string('phone');
             $table->string('code');
             $table->timestamps();
         });

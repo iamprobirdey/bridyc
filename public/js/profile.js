@@ -450,6 +450,33 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+<<<<<<< HEAD
+=======
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+>>>>>>> 691536b17807b310f2fdb39cbc5016841b3905db
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -926,6 +953,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -975,7 +1008,7 @@ __webpack_require__.r(__webpack_exports__);
     submitSubjectsData: function submitSubjectsData() {
       var _this = this;
 
-      if (this.item.length) {
+      if (this.value.length) {
         var formData = {
           hobby_id: []
         };
@@ -3160,7 +3193,13 @@ var render = function() {
                         return _c(
                           "option",
                           { key: state.id, domProps: { value: state.id } },
-                          [_vm._v(_vm._s(state.name))]
+                          [
+                            _vm._v(
+                              "\n            " +
+                                _vm._s(state.name) +
+                                "\n          "
+                            )
+                          ]
                         )
                       })
                     ],
@@ -3279,7 +3318,13 @@ var render = function() {
                             key: district.id,
                             domProps: { value: district.id }
                           },
-                          [_vm._v(_vm._s(district.name))]
+                          [
+                            _vm._v(
+                              "\n            " +
+                                _vm._s(district.name) +
+                                "\n          "
+                            )
+                          ]
                         )
                       })
                     ],
@@ -3395,7 +3440,13 @@ var render = function() {
                         return _c(
                           "option",
                           { key: village.id, domProps: { value: village.id } },
-                          [_vm._v(_vm._s(village.name))]
+                          [
+                            _vm._v(
+                              "\n            " +
+                                _vm._s(village.name) +
+                                "\n          "
+                            )
+                          ]
                         )
                       })
                     ],
@@ -3514,7 +3565,13 @@ var render = function() {
                             key: standard.id,
                             domProps: { value: standard.id }
                           },
-                          [_vm._v(_vm._s(standard.standard_name))]
+                          [
+                            _vm._v(
+                              "\n            " +
+                                _vm._s(standard.standard_name) +
+                                "\n          "
+                            )
+                          ]
                         )
                       })
                     ],
@@ -3586,7 +3643,7 @@ var render = function() {
                       }
                     }
                   },
-                  [_vm._v("Cancel")]
+                  [_vm._v("\n          Cancel\n        ")]
                 ),
                 _vm._v(" "),
                 _c(
@@ -4078,7 +4135,7 @@ var render = function() {
               return _c(
                 "button",
                 { key: index, staticClass: "btn btn-primary m-1" },
-                [_vm._v(_vm._s(hobbie.name))]
+                [_vm._v("\n      " + _vm._s(hobbie.name) + "\n    ")]
               )
             }),
             _vm._v(" "),
@@ -4169,7 +4226,7 @@ var render = function() {
                   }
                 }
               },
-              [_vm._v("Submit")]
+              [_vm._v("\n      Submit\n    ")]
             )
           ],
           1

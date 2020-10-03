@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class PhoneVerification extends Model
 {
-    protected $fillable = ['user_id','code'];
+    protected $fillable = ['user_id', 'phone', 'code'];
 }

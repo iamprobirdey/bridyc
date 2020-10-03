@@ -21,22 +21,47 @@ use Illuminate\Support\Str;
 |
 */
 
-Auth::routes();
+Auth::routes(['verify' => true]);
 
 Route::get('/home', 'HomeController@test');
 
 Route::get('hobby', function () {
-    dd(current_user()->channel->teacher);
+    dd(env('MAIL_USERNAME'));
+    dd(env('MAIL_FROM_ADDRESS'));
+
+
+    $apiKey = urlencode(config('services.sms.api'));
+
+    // Message details
+    $numbers = array(91 . 9531114572);
+    $sender = urlencode('TXTLCL');
+    $message = rawurlencode('Hi samrat from textlocal');
+
+    $numbers = implode(',', $numbers);
+
+    // Prepare data for POST request
+    $data = array('apikey' => $apiKey, 'numbers' => $numbers, "sender" => $sender, "message" => $message);
+
+    // Send the POST request with cURL
+    $ch = curl_init('https://api.textlocal.in/send/');
+    curl_setopt($ch, CURLOPT_POST, true);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    $response = curl_exec($ch);
+    curl_close($ch);
+    return $response;
 });
 
 
-Route::get('test', 'HomeController@test');
+Route::get('test', 'Teacher\PhoneNumberVerificationController@phoneVerification');
 
-Route::get('google-login', 'Auth\GoogleLoginController@getGoogleLogIn')->middleware('guest');
+Route::get('google/login', 'Auth\GoogleLoginController@getGoogleLogIn')->middleware('guest');
 Route::get('google/response', 'Auth\GoogleLoginController@getBackGoogleValiationStore')->middleware('guest');
 
 Route::get('facebook-login', 'Auth\FacebookLoginController@getFacebookLogIn');
 Route::get('facebook/response', 'Auth\FacebookLoginController@getBackFacebookValiationStore');
+
+Route::get('validation/user/role/{user:email}', 'Auth\ValidateUserRoleController@validateRole')->name('validate.user.role');
 //http://localhost:3000/facebook/response
 
 
@@ -214,7 +239,7 @@ Route::get('/terms', 'HomeController@terms');
 Route::get('/about', 'HomeController@about')->name('about');
 
 Route::get('institute/register', 'Auth\InstituteController@instituteRegister');
-Route::post('institute/register', 'Auth\InstituteController@postRegister');
+Route::post('institute/register', 'Auth\RegisterController@register');
 
 Route::get('channel/{channel:slug}', 'ChannelController@getChannelBySlug');
 
@@ -252,6 +277,8 @@ Route::group([
         Route::post('profile/teacher/edit/channel/{user:id}', 'Teacher\ProfileController@storeChannel');
         Route::post('profile/teacher/edit/subject/{user:id}', 'Teacher\ProfileController@storeSubjectData');
         Route::post('profile/teacher/image/upload/{user:id}', 'Teacher\ProfileController@storeAvatar');
+        Route::post('profile/teacher/edit/phone/number/{user:id}', 'Teacher\ProfileController@phoneStore');
+        Route::post('profile/teacher/edit/phone/number/verify/{user:id}', 'Teacher\PhoneNumberVerificationController@phoneVerification');
         Route::get('teacher/request/for/channel/{user:id}/{channel:id}', 'Teacher\RequestForChannelController@requestForChannel');
     });
 

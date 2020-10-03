@@ -4,9 +4,11 @@
       Field of Interest:
       <button
         class="btn btn-primary m-1"
-        v-for="(hobbie,index) in studentshobbiesData"
+        v-for="(hobbie, index) in studentshobbiesData"
         :key="index"
-      >{{hobbie.name}}</button>
+      >
+        {{ hobbie.name }}
+      </button>
 
       <button class="btn mt-n2 edit-btn" @click="editThehobbie()" data-toggle="tooltip" title="Edit">
         <i class="fa fa-pencil" aria-hidden="true"></i>
@@ -77,7 +79,7 @@ export default {
       return `${hobby.name}`;
     },
     submitSubjectsData() {
-      if (this.item.length) {
+      if (this.value.length) {
         let formData = {
           hobby_id: [],
         };
