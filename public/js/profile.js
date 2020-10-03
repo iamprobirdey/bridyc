@@ -450,8 +450,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-<<<<<<< HEAD
-=======
 //
 //
 //
@@ -475,8 +473,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
->>>>>>> 691536b17807b310f2fdb39cbc5016841b3905db
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -922,10 +918,6 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue_multiselect__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-multiselect */ "./node_modules/vue-multiselect/dist/vue-multiselect.min.js");
 /* harmony import */ var vue_multiselect__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue_multiselect__WEBPACK_IMPORTED_MODULE_0__);
-//
-//
-//
-//
 //
 //
 //
@@ -3380,7 +3372,7 @@ var render = function() {
               _c(
                 "div",
                 {
-                  staticClass: "form-group row mx-2 mx-lg-5",
+                  staticClass: "form-group row mx-5 mx-2 mx-lg-5",
                   class: {
                     "has-error":
                       _vm.errors.has("village") ||
@@ -3643,7 +3635,7 @@ var render = function() {
                       }
                     }
                   },
-                  [_vm._v("\n          Cancel\n        ")]
+                  [_vm._v("Cancel")]
                 ),
                 _vm._v(" "),
                 _c(
@@ -4135,7 +4127,7 @@ var render = function() {
               return _c(
                 "button",
                 { key: index, staticClass: "btn btn-primary m-1" },
-                [_vm._v("\n      " + _vm._s(hobbie.name) + "\n    ")]
+                [_vm._v("\n        " + _vm._s(hobbie.name) + "\n      ")]
               )
             }),
             _vm._v(" "),
@@ -4226,7 +4218,7 @@ var render = function() {
                   }
                 }
               },
-              [_vm._v("\n      Submit\n    ")]
+              [_vm._v("Submit")]
             )
           ],
           1
