@@ -7,69 +7,89 @@
           <th scope="col">Status</th>
           <th scope="col">Slug Generator</th>
           <th scope="col">Keywords Generator</th>
-          <th scope="col">Name</th>
-          <th scope="col">Email</th>
-          <th scope="col">State</th>
-          <th scope="col">District</th>
-          <th scope="col">City</th>
-          <th scope="col">Medium</th>
-          <th scope="col">Udise</th>
-          <th scope="col">Title</th>
-          <th scope="col">Founded</th>
+          <th scope="col">Show Channel Data</th>
           <th scope="col">Delete</th>
         </tr>
       </thead>
       <tbody>
-        <tr v-for="(verification,index) in usersData" :key="verification.id">
+        <tr v-for="(verification, index) in usersData" :key="verification.id">
           <td>
             <button
               class="btn btn-primary"
-              @click="blockTheUser(verification.user_id ,verification.id,index)"
+              @click="
+                blockTheUser(verification.user_id, verification.id, index)
+              "
               v-if="verification.status === 1 || verification.status === 2"
-            >Block</button>
+            >
+              Block
+            </button>
             <button
               class="btn btn-primary"
-              @click="offTheStatus(verification.user_id ,verification.id,index)"
+              @click="
+                offTheStatus(verification.user_id, verification.id, index)
+              "
               v-if="verification.status === 3"
-            >unBlock</button>
+            >
+              unBlock
+            </button>
           </td>
           <td>
             <button
               v-if="verification.status === 2"
               class="btn btn-success"
-              @click="offTheStatus(verification.user_id , verification.id,index)"
-            >ON</button>
+              @click="
+                offTheStatus(verification.user_id, verification.id, index)
+              "
+            >
+              ON
+            </button>
             <button
               v-if="verification.status === 1"
               class="btn btn-danger"
-              @click="onTheStatus(verification.user_id ,verification.id,index)"
-            >OFF</button>
-            <span class="text-danger" v-if="verification.status === 3">user is block</span>
+              @click="onTheStatus(verification.user_id, verification.id, index)"
+            >
+              OFF
+            </button>
+            <span class="text-danger" v-if="verification.status === 3"
+              >user is block</span
+            >
           </td>
           <td>
             <button
               class="btn btn-info"
-              :disabled="verification.slug_creation === 'created' ? true : false"
-              @click="slugGenetor(verification.title,verification.state.name,verification.user.id,index)"
-            >URl Gen.</button>
+              :disabled="
+                verification.slug_creation === 'created' ? true : false
+              "
+              @click="
+                slugGenetor(
+                  verification.title,
+                  verification.state.name,
+                  verification.user.id,
+                  index
+                )
+              "
+            >
+              URl Gen.
+            </button>
           </td>
           <td>
             <meta-keywords :verification="verification"></meta-keywords>
           </td>
-          <td>{{verification.user.name}}</td>
-          <td>{{verification.user.email}}</td>
-          <td>{{verification.state.name}}</td>
-          <td>{{verification.district.name}}</td>
-          <td>{{verification.village.name}}</td>
-          <td>{{verification.language.name}}</td>
-          <td>{{verification.udise}}</td>
-          <td>{{verification.title}}</td>
-          <td>{{verification.founded}}</td>
+          <td>
+            <button
+              class="btn btn-primary"
+              @click="showChannelHistoryData(verification)"
+            >
+              Open
+            </button>
+          </td>
           <td>
             <button
               class="btn btn-danger"
-              @click="deleteTheUser(verification.user_id,index)"
-            >Delete Channel</button>
+              @click="deleteTheUser(verification.user_id, index)"
+            >
+              Delete Channel
+            </button>
           </td>
         </tr>
       </tbody>
@@ -89,7 +109,10 @@
             <form @submit.prevent="slugGenerated()">
               <div
                 class="form-group"
-                :class="{'has-error':errors.has('slugError.slug') || slugError.slug != ''}"
+                :class="{
+                  'has-error':
+                    errors.has('slugError.slug') || slugError.slug != '',
+                }"
               >
                 <label>Url for Channel</label>
                 <input
@@ -99,14 +122,75 @@
                   data-vv-delay="20"
                   name="slug"
                   type="text"
-                  :class="{'form-control': true,'is-invalid': errors.has('slug')}"
+                  :class="{
+                    'form-control': true,
+                    'is-invalid': errors.has('slug'),
+                  }"
                   placeholder="Url Generator"
                 />
-                <span v-show="errors.has('slug')" class="text-danger">{{errors.first("slug")}}</span>
-                <span v-show="slugError.slug != ''" class="help is-danger">{{slugError.slug}}</span>
+                <span v-show="errors.has('slug')" class="text-danger">{{
+                  errors.first("slug")
+                }}</span>
+                <span v-show="slugError.slug != ''" class="help is-danger">{{
+                  slugError.slug
+                }}</span>
               </div>
               <button type="submit" class="btn btn-primary">Submit</button>
             </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="showChannelHistory"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <table class="table responsive" v-if="channelHistoryData != ''">
+              <tr>
+                <th>Title:</th>
+                <td>{{ channelHistoryData.title }}</td>
+              </tr>
+              <tr>
+                <th>Name:</th>
+                <td>{{ channelHistoryData.user.name }}</td>
+              </tr>
+              <tr>
+                <th>Email:</th>
+                <td>{{ channelHistoryData.user.email }}</td>
+              </tr>
+              <tr>
+                <th>State:</th>
+                <td>{{ channelHistoryData.state.name }}</td>
+              </tr>
+              <tr>
+                <th>District:</th>
+                <td>{{ channelHistoryData.district.name }}</td>
+              </tr>
+              <tr>
+                <th>Village:</th>
+                <td>{{ channelHistoryData.village.name }}</td>
+              </tr>
+              <tr>
+                <th>Language:</th>
+                <td>{{ channelHistoryData.language.name }}</td>
+              </tr>
+              <tr>
+                <th>Udise:</th>
+                <td>{{ channelHistoryData.udise }}</td>
+              </tr>
+              <tr>
+                <th>Udise:</th>
+                <td>{{ channelHistoryData.founded }}</td>
+              </tr>
+            </table>
           </div>
         </div>
       </div>
@@ -121,6 +205,7 @@ export default {
   data() {
     return {
       usersData: [],
+      channelHistoryData: [],
       slugData: {
         slug: "",
       },
@@ -256,20 +341,21 @@ export default {
       });
     },
     deleteTheUser(userId, index) {
-      confirm("Are you sure?");
-      axios
-        .get("verification/api/delete/user/" + userId)
-        .then((response) => {
-          if (response.status === 200 && response.data.msg === true) {
-            this.usersData.splice(index, 1);
-          }
-        })
-        .catch((errors) => {
-          Vue.toasted.error("Something went wrong", {
-            position: "top-center",
-            duration: 5000,
+      if (confirm("Are you sure?")) {
+        axios
+          .get("verification/api/delete/user/" + userId)
+          .then((response) => {
+            if (response.status === 200 && response.data.msg === true) {
+              this.usersData.splice(index, 1);
+            }
+          })
+          .catch((errors) => {
+            Vue.toasted.error("Something went wrong", {
+              position: "top-center",
+              duration: 5000,
+            });
           });
-        });
+      }
     },
     getMetaModel(verification) {
       this.metaKeywordsDescriptionsId = "";
@@ -281,6 +367,10 @@ export default {
         this.metaData.meta_descriptions = this.verification.meta_descriptions;
       }
       $("#metaGenerator").modal("show");
+    },
+    showChannelHistoryData(data) {
+      this.channelHistoryData = data;
+      $("#showChannelHistory").modal("show");
     },
     metaGenerationForm() {
       this.$validator.validate().then((result) => {

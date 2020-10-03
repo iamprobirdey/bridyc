@@ -212,11 +212,96 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
       usersData: [],
+      channelHistoryData: [],
       slugData: {
         slug: ""
       },
@@ -345,17 +430,18 @@ __webpack_require__.r(__webpack_exports__);
     deleteTheUser: function deleteTheUser(userId, index) {
       var _this5 = this;
 
-      confirm("Are you sure?");
-      axios.get("verification/api/delete/user/" + userId).then(function (response) {
-        if (response.status === 200 && response.data.msg === true) {
-          _this5.usersData.splice(index, 1);
-        }
-      })["catch"](function (errors) {
-        Vue.toasted.error("Something went wrong", {
-          position: "top-center",
-          duration: 5000
+      if (confirm("Are you sure?")) {
+        axios.get("verification/api/delete/user/" + userId).then(function (response) {
+          if (response.status === 200 && response.data.msg === true) {
+            _this5.usersData.splice(index, 1);
+          }
+        })["catch"](function (errors) {
+          Vue.toasted.error("Something went wrong", {
+            position: "top-center",
+            duration: 5000
+          });
         });
-      });
+      }
     },
     getMetaModel: function getMetaModel(verification) {
       this.metaKeywordsDescriptionsId = "";
@@ -370,6 +456,10 @@ __webpack_require__.r(__webpack_exports__);
       }
 
       $("#metaGenerator").modal("show");
+    },
+    showChannelHistoryData: function showChannelHistoryData(data) {
+      this.channelHistoryData = data;
+      $("#showChannelHistory").modal("show");
     },
     metaGenerationForm: function metaGenerationForm() {
       var _this6 = this;
@@ -590,7 +680,7 @@ var render = function() {
                         }
                       }
                     },
-                    [_vm._v("Block")]
+                    [_vm._v("\n            Block\n          ")]
                   )
                 : _vm._e(),
               _vm._v(" "),
@@ -609,7 +699,7 @@ var render = function() {
                         }
                       }
                     },
-                    [_vm._v("unBlock")]
+                    [_vm._v("\n            unBlock\n          ")]
                   )
                 : _vm._e()
             ]),
@@ -630,7 +720,7 @@ var render = function() {
                         }
                       }
                     },
-                    [_vm._v("ON")]
+                    [_vm._v("\n            ON\n          ")]
                   )
                 : _vm._e(),
               _vm._v(" "),
@@ -649,7 +739,7 @@ var render = function() {
                         }
                       }
                     },
-                    [_vm._v("OFF")]
+                    [_vm._v("\n            OFF\n          ")]
                   )
                 : _vm._e(),
               _vm._v(" "),
@@ -680,7 +770,7 @@ var render = function() {
                     }
                   }
                 },
-                [_vm._v("URl Gen.")]
+                [_vm._v("\n            URl Gen.\n          ")]
               )
             ]),
             _vm._v(" "),
@@ -690,23 +780,20 @@ var render = function() {
               1
             ),
             _vm._v(" "),
-            _c("td", [_vm._v(_vm._s(verification.user.name))]),
-            _vm._v(" "),
-            _c("td", [_vm._v(_vm._s(verification.user.email))]),
-            _vm._v(" "),
-            _c("td", [_vm._v(_vm._s(verification.state.name))]),
-            _vm._v(" "),
-            _c("td", [_vm._v(_vm._s(verification.district.name))]),
-            _vm._v(" "),
-            _c("td", [_vm._v(_vm._s(verification.village.name))]),
-            _vm._v(" "),
-            _c("td", [_vm._v(_vm._s(verification.language.name))]),
-            _vm._v(" "),
-            _c("td", [_vm._v(_vm._s(verification.udise))]),
-            _vm._v(" "),
-            _c("td", [_vm._v(_vm._s(verification.title))]),
-            _vm._v(" "),
-            _c("td", [_vm._v(_vm._s(verification.founded))]),
+            _c("td", [
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-primary",
+                  on: {
+                    click: function($event) {
+                      return _vm.showChannelHistoryData(verification)
+                    }
+                  }
+                },
+                [_vm._v("\n            Open\n          ")]
+              )
+            ]),
             _vm._v(" "),
             _c("td", [
               _c(
@@ -719,7 +806,7 @@ var render = function() {
                     }
                   }
                 },
-                [_vm._v("Delete Channel")]
+                [_vm._v("\n            Delete Channel\n          ")]
               )
             ])
           ])
@@ -861,6 +948,103 @@ var render = function() {
           ]
         )
       ]
+    ),
+    _vm._v(" "),
+    _c(
+      "div",
+      {
+        staticClass: "modal fade",
+        attrs: {
+          id: "showChannelHistory",
+          tabindex: "-1",
+          role: "dialog",
+          "aria-labelledby": "exampleModalLabel",
+          "aria-hidden": "true"
+        }
+      },
+      [
+        _c(
+          "div",
+          { staticClass: "modal-dialog", attrs: { role: "document" } },
+          [
+            _c("div", { staticClass: "modal-content" }, [
+              _c("div", { staticClass: "modal-body" }, [
+                _vm.channelHistoryData != ""
+                  ? _c("table", { staticClass: "table responsive" }, [
+                      _c("tr", [
+                        _c("th", [_vm._v("Title:")]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v(_vm._s(_vm.channelHistoryData.title))])
+                      ]),
+                      _vm._v(" "),
+                      _c("tr", [
+                        _c("th", [_vm._v("Name:")]),
+                        _vm._v(" "),
+                        _c("td", [
+                          _vm._v(_vm._s(_vm.channelHistoryData.user.name))
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("tr", [
+                        _c("th", [_vm._v("Email:")]),
+                        _vm._v(" "),
+                        _c("td", [
+                          _vm._v(_vm._s(_vm.channelHistoryData.user.email))
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("tr", [
+                        _c("th", [_vm._v("State:")]),
+                        _vm._v(" "),
+                        _c("td", [
+                          _vm._v(_vm._s(_vm.channelHistoryData.state.name))
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("tr", [
+                        _c("th", [_vm._v("District:")]),
+                        _vm._v(" "),
+                        _c("td", [
+                          _vm._v(_vm._s(_vm.channelHistoryData.district.name))
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("tr", [
+                        _c("th", [_vm._v("Village:")]),
+                        _vm._v(" "),
+                        _c("td", [
+                          _vm._v(_vm._s(_vm.channelHistoryData.village.name))
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("tr", [
+                        _c("th", [_vm._v("Language:")]),
+                        _vm._v(" "),
+                        _c("td", [
+                          _vm._v(_vm._s(_vm.channelHistoryData.language.name))
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("tr", [
+                        _c("th", [_vm._v("Udise:")]),
+                        _vm._v(" "),
+                        _c("td", [_vm._v(_vm._s(_vm.channelHistoryData.udise))])
+                      ]),
+                      _vm._v(" "),
+                      _c("tr", [
+                        _c("th", [_vm._v("Udise:")]),
+                        _vm._v(" "),
+                        _c("td", [
+                          _vm._v(_vm._s(_vm.channelHistoryData.founded))
+                        ])
+                      ])
+                    ])
+                  : _vm._e()
+              ])
+            ])
+          ]
+        )
+      ]
     )
   ])
 }
@@ -879,23 +1063,7 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("th", { attrs: { scope: "col" } }, [_vm._v("Keywords Generator")]),
         _vm._v(" "),
-        _c("th", { attrs: { scope: "col" } }, [_vm._v("Name")]),
-        _vm._v(" "),
-        _c("th", { attrs: { scope: "col" } }, [_vm._v("Email")]),
-        _vm._v(" "),
-        _c("th", { attrs: { scope: "col" } }, [_vm._v("State")]),
-        _vm._v(" "),
-        _c("th", { attrs: { scope: "col" } }, [_vm._v("District")]),
-        _vm._v(" "),
-        _c("th", { attrs: { scope: "col" } }, [_vm._v("City")]),
-        _vm._v(" "),
-        _c("th", { attrs: { scope: "col" } }, [_vm._v("Medium")]),
-        _vm._v(" "),
-        _c("th", { attrs: { scope: "col" } }, [_vm._v("Udise")]),
-        _vm._v(" "),
-        _c("th", { attrs: { scope: "col" } }, [_vm._v("Title")]),
-        _vm._v(" "),
-        _c("th", { attrs: { scope: "col" } }, [_vm._v("Founded")]),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Show Channel Data")]),
         _vm._v(" "),
         _c("th", { attrs: { scope: "col" } }, [_vm._v("Delete")])
       ])
