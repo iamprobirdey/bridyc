@@ -27,14 +27,8 @@
             </div>
         </main>
 
-        @section('model')
-        @include('layouts.model_view')
-        @endsection
     </div>
 </div>
-@endsection
-@section('model')
-@include('layouts.model_view')
 @endsection
 
 @section('js_code')

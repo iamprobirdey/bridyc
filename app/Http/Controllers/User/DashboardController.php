@@ -61,7 +61,8 @@ class DashboardController extends Controller
 
         $channel = Channel::with('collegeImage')->get();
         return view('institute.edit_channel', [
-            'channel' => $channel
+            'channel' => $channel,
+            'user' => current_user()
         ]);
     }
 

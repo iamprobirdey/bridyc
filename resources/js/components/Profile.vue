@@ -38,7 +38,14 @@
       </div>
       <div class="row mt-5 mx-auto">
         <div class="col-sm-6 text-right">
-          <channel :userinstitute="userinstituteData" :user="userData" :channel="channelsData"></channel>
+          <channel
+            :userinstitute="userinstituteData"
+            :user="userData"
+            :channel="channelsData"
+          ></channel>
+        </div>
+        <div class="col-sm-6 text-right">
+          <phone :user="userData"></phone>
         </div>
       </div>
     </div>
@@ -53,6 +60,7 @@ import subject from "./student/profile/subject.vue";
 import hobby from "./student/profile/hobbies.vue";
 import avatar from "./student/profile/avatar.vue";
 import channel from "./student/profile/channel.vue";
+import phone from "./student/profile/phone.vue";
 
 export default {
   data() {
@@ -143,6 +151,7 @@ export default {
     hobby,
     avatar,
     channel,
+    phone,
   },
 };
 </script>

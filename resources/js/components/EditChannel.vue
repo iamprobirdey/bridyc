@@ -7,36 +7,40 @@
       <div class="col-sm-8">
         <cover></cover>
       </div>
-      </div>
+    </div>
 
-      <div class="row">
+    <div class="row">
       <div class="col-sm-4 mb-5">
         <website></website>
       </div>
       <div class="col-sm-8">
         <description></description>
       </div>
-      </div>
-      <div class="container mt-5">
-        <infrastructure></infrastructure>
-      </div>
-      <div class="row mt-5">
+    </div>
+    <div class="container mt-5">
+      <infrastructure></infrastructure>
+    </div>
+    <div class="row mt-5">
       <div class="col-sm-6">
-          <standard></standard>
+        <standard></standard>
       </div>
       <div class="col-sm-6">
-          <board></board>
+        <board></board>
       </div>
+    </div>
+    <div class="row mt-5">
+      <div class="col-sm-6">
+        <social></social>
       </div>
-      <div class="row mt-5">
-          <div class="col-sm-6">
-              <social></social>
-          </div>
-         <div class="col-sm-6">
-              <college :channel="channelData"></college>
-         </div>
+      <div class="col-sm-6">
+        <college :channel="channelData"></college>
       </div>
-
+    </div>
+    <div class="row mt-5">
+      <div class="col-sm-6">
+        <phone :user="userData"></phone>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -50,23 +54,30 @@ import standard from "./channel/standard.vue";
 import board from "./channel/board.vue";
 import social from "./channel/social.vue";
 import college from "./channel/college.vue";
+import phone from "./channel/phone.vue";
 export default {
   data() {
     return {
       websiteLink: "",
       websiteLinkError: "",
       userData: {},
-      channelData : []
+      channelData: [],
+      userData: {},
     };
   },
-  props:{
-      channel:{
-          type : Array,
-          default : null
-      }
+  props: {
+    channel: {
+      type: Array,
+      default: null,
+    },
+    user: {
+      type: Object,
+      default: null,
+    },
   },
   created() {
-      this.channelData = this.channel;
+    this.channelData = this.channel;
+    this.userData = this.user;
   },
   mounted() {},
   methods: {},
@@ -79,8 +90,9 @@ export default {
     standard,
     board,
     social,
-    college
-  }
+    college,
+    phone,
+  },
 };
 </script>
 

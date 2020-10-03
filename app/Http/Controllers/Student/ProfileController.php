@@ -227,4 +227,18 @@ class ProfileController extends Controller
             'image' => $imageName
         ]);
     }
+
+    public function storePhoneNumber(User $user, Request $request)
+    {
+        $request->validate([
+            'phone' => 'required|numeric|min:10'
+        ]);
+        $user->phone = $request->input('phone');
+        $user->update();
+
+        return response()->json([
+            'message' => true,
+            'user' => $user
+        ]);
+    }
 }

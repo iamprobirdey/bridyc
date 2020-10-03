@@ -18,8 +18,8 @@
             <br>
             New Features coming your way
 
-            Make the new feature gradient. <=== </main> </div> </div> @endsection @section('model')
-                @include('layouts.model_view') @endsection @section('js_code') <script src="{{url('js/app.js')}}">
+            Make the new feature gradient. <=== </main> </div> </div> @endsection @section('js_code') <script
+                src="{{url('js/app.js')}}">
                 </script>
                 <script src="{{url('js/dashboardBlade.js')}}"></script>
                 <script src="{{url('js/channelteacher.js')}}"></script>
