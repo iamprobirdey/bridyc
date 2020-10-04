@@ -36,7 +36,7 @@ DO IT ALL')
             <p class="sitevalue">Learn | Share | Engage | Find Institute</p>
             <p>And we charge you <strong>Nothing</strong></p>
             <br>
-            <a href="#" class="p-2 p-md-3">Read More</a>
+            <a href="{{route('about')}}" class="p-2 p-md-3">Read More</a>
         </div>
     </div>
 

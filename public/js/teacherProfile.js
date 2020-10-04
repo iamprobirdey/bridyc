@@ -2865,8 +2865,98 @@ render._withStripped = true
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-var render = function () {}
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { staticClass: "profile mx-auto px-lg-5" },
+    [
+      _c("avatar", { attrs: { user: _vm.userData } }),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "mt-5" },
+        [
+          _c("username", {
+            attrs: { username: _vm.userData.username, id: _vm.userData.id }
+          })
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c("br"),
+      _vm._v(" "),
+      _c("br"),
+      _vm._v(" "),
+      _c("br"),
+      _vm._v(" "),
+      _c("div", { staticClass: "shadow py-5 mt-n4" }, [
+        _c(
+          "div",
+          { staticClass: "container" },
+          [
+            _c("address-for-teacher", {
+              attrs: {
+                channels: _vm.channelsData,
+                states: _vm.statesData,
+                districts: _vm.districtsData,
+                villages: _vm.villagesData,
+                standards: _vm.standardsData,
+                userinformation: _vm.userInformationData,
+                id: _vm.userData.id
+              }
+            })
+          ],
+          1
+        ),
+        _vm._v(" "),
+        _c(
+          "div",
+          { staticClass: "mt-5 pt-3 mb-5 mx-auto text-center" },
+          [
+            _c("subject", {
+              attrs: {
+                subjects: _vm.subjectsData,
+                studentssubject: _vm.studentsubjectsData,
+                id: _vm.userData.id
+              }
+            })
+          ],
+          1
+        ),
+        _vm._v(" "),
+        _c("div", { staticClass: "row mt-5 mx-auto" }, [
+          _c(
+            "div",
+            { staticClass: "col-sm-6" },
+            [
+              _c("channel", {
+                attrs: {
+                  userinstitute: _vm.userinstituteData,
+                  user: _vm.userData,
+                  channel: _vm.channelsData
+                }
+              })
+            ],
+            1
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "col-sm-6" },
+            [_c("phone", { attrs: { user: _vm.userData } })],
+            1
+          )
+        ])
+      ])
+    ],
+    1
+  )
+}
 var staticRenderFns = []
+render._withStripped = true
 
 
 

@@ -4,9 +4,9 @@
     <div class="mt-5">
       <username :username="userData.username" :id="userData.id"></username>
     </div>
-    <br />
-    <br />
-    <br />
+    <br>
+    <br>
+    <br>
     <div class="shadow py-5 mt-n4">
       <div class="container">
         <address-for-student
@@ -37,9 +37,8 @@
         </div>
       </div>
       <hr class="mt-lg-5">
-      <div class="mt-lg-5 pt-3 mx-auto container-fluid">
-          <channel :userinstitute="userinstituteData" :user="userData" :channel="channelsData"></channel>
-          </div>
+      
+          <!-- mt-lg-5 pt-3 mx-auto container-fluid -->
       <div class="row mt-5 mx-auto">
         <div class="col-sm-6 text-right">
           <channel
@@ -53,6 +52,7 @@
         </div>
       </div>
     <br>
+  </div>
   </div>
 </template>
 

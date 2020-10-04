@@ -39,8 +39,8 @@
         <div class="col-sm-6">
           <phone :user="userData"></phone>
         </div>
-      
     </div>
+  </div>
   </div>
 </template>
 

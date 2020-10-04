@@ -1,6 +1,6 @@
 <header>
     <nav class="navbar fixed-top p-0 mx-auto border-gradient border-gradient-color">
-      <button class="navbar-toggler collapsed" data-toggle="slide-collapse" data-target="#sidebarcollapse" aria-expanded="false">
+      <button class="navbar-toggler collapsed d-lg-none" data-toggle="slide-collapse" data-target="#sidebarcollapse" aria-expanded="false">
         <i class="fa fa-bars" aria-hidden="true"></i>
       </button>
 
