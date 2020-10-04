@@ -2,23 +2,25 @@
 
 
 @section('title')
-{{$channel->title}} {{$channel->language->name}} {{$channel->district->name}} {{$channel->village->name}}
-{{$channel->state->name}}
+
+{{$channel[0]->title}} {{$channel[0]->language->name}} {{$channel[0]->district->name}} {{$channel[0]->village->name}}
+{{$channel[0]->state->name}}
 @endsection
 
 @section('desc')
-@if($channel->description != null)
-{{$channel->description}} {{$channel->language->name}} {{$channel->district->name}} {{$channel->village->name}}
-{{$channel->state->name}}
+@if($channel[0]->description != null)
+{{$channel[0]->description}} {{$channel[0]->language->name}} {{$channel[0]->district->name}}
+{{$channel[0]->village->name}}
+{{$channel[0]->state->name}}
 @endif
 @endsection
 
 @section('s_url', (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]")
-@section('s_type', "Insitute .{{$channel->village->name}} .' '.{{$channel->state->name}}")
-@section('s_title', $channel->title)
-@section('s_desc', strip_tags($channel->description))
-@if($channel->icon_avatar != null)
-@section('s_img', url('/media/channel/'.$channel->user_id.'/s-'.$channel->icon_avatar))
+@section('s_type', "Insitute .{{$channel[0]->village->name}} .' '.{{$channel[0]->state->name}}")
+@section('s_title', $channel[0]->title)
+@section('s_desc', strip_tags($channel[0]->description))
+@if($channel[0]->icon_avatar != null)
+@section('s_img', url('/media/channel/'.$channel[0]->user_id.'/s-'.$channel[0]->icon_avatar))
 @endif
 
 
@@ -35,15 +37,12 @@
             <br>
             <div class="container">
                 <div id="edit_channel">
-                    <edit-channel :channel="{{json_encode($channel)}}"></edit-channel>
+                    <edit-channel :channel="{{json_encode($channel)}}" :user="{{json_encode($user)}}"></edit-channel>
                 </div>
             </div>
         </main>
     </div>
 </div>
-@endsection
-@section('model')
-@include('layouts.model_view')
 @endsection
 
 @section('js_code')

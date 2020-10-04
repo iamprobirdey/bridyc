@@ -266,6 +266,7 @@ Route::group([
         Route::post('profile/edit/subject/{user:id}', 'Student\ProfileController@storeSubjectData');
         Route::post('profile/edit/hobbies/{user:username}', 'Student\ProfileController@storeHobbyData');
         Route::post('profile/image/upload/{user:id}', 'Student\ProfileController@storeAvatar');
+        Route::post('profile/edit/phone/{user:id}', 'Student\ProfileController@storePhoneNumber');
     });
 
     Route::group([
@@ -333,5 +334,7 @@ Route::group([
         Route::post('delete/teacher/{channelteacher:id}', 'User\TeachersController@delete');
         //Infructure Image Upload
         Route::post('college/image/upload/{channel:id}', 'User\ChannelCollegeImagesController@store');
+        //Phone Store
+        Route::post('edit/channel/phone/number/{user:id}', 'User\ProfileController@phoneNumberstore');
     });
 });

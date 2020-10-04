@@ -138,10 +138,7 @@ export default {
       this.$validator.validate().then((result) => {
         if (result) {
           axios
-            .post(
-              "/api/profile/teacher/edit/phone/number/" + this.userData.id,
-              this.phoneData
-            )
+            .post("/api/profile/edit/phone/" + this.userData.id, this.phoneData)
             .then((response) => {
               if (response.data.message === true) {
                 Vue.toasted.success("Phone number is succefully created", {
@@ -167,9 +164,7 @@ export default {
     otpVerificationForm() {},
     verifyPhoneNumber() {
       axios
-        .post(
-          "/api/profile/teacher/edit/phone/number/verify" + this.userData.id
-        )
+        .post("/api/edit/channel/phone/number" + this.userData.id)
         .then(
           (response) => {
             if (response.data.message === true) {

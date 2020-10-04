@@ -139,7 +139,7 @@ export default {
         if (result) {
           axios
             .post(
-              "/api/profile/teacher/edit/phone/number/" + this.userData.id,
+              "/api/edit/channel/phone/number/" + this.userData.id,
               this.phoneData
             )
             .then((response) => {
@@ -167,9 +167,7 @@ export default {
     otpVerificationForm() {},
     verifyPhoneNumber() {
       axios
-        .post(
-          "/api/profile/teacher/edit/phone/number/verify" + this.userData.id
-        )
+        .post("/api/edit/channel/phone/number" + this.userData.id)
         .then(
           (response) => {
             if (response.data.message === true) {

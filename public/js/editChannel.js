@@ -104,6 +104,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _channel_board_vue__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./channel/board.vue */ "./resources/js/components/channel/board.vue");
 /* harmony import */ var _channel_social_vue__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./channel/social.vue */ "./resources/js/components/channel/social.vue");
 /* harmony import */ var _channel_college_vue__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./channel/college.vue */ "./resources/js/components/channel/college.vue");
+/* harmony import */ var _channel_phone_vue__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./channel/phone.vue */ "./resources/js/components/channel/phone.vue");
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 //
 //
 //
@@ -146,6 +149,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+
 
 
 
@@ -157,21 +165,26 @@ __webpack_require__.r(__webpack_exports__);
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
-    return {
+    return _defineProperty({
       websiteLink: "",
       websiteLinkError: "",
       userData: {},
       channelData: []
-    };
+    }, "userData", {});
   },
   props: {
     channel: {
       type: Array,
       "default": null
+    },
+    user: {
+      type: Object,
+      "default": null
     }
   },
   created: function created() {
     this.channelData = this.channel;
+    this.userData = this.user;
   },
   mounted: function mounted() {},
   methods: {},
@@ -184,7 +197,8 @@ __webpack_require__.r(__webpack_exports__);
     standard: _channel_standard_vue__WEBPACK_IMPORTED_MODULE_5__["default"],
     board: _channel_board_vue__WEBPACK_IMPORTED_MODULE_6__["default"],
     social: _channel_social_vue__WEBPACK_IMPORTED_MODULE_7__["default"],
-    college: _channel_college_vue__WEBPACK_IMPORTED_MODULE_8__["default"]
+    college: _channel_college_vue__WEBPACK_IMPORTED_MODULE_8__["default"],
+    phone: _channel_phone_vue__WEBPACK_IMPORTED_MODULE_9__["default"]
   }
 });
 
@@ -1237,6 +1251,196 @@ __webpack_require__.r(__webpack_exports__);
             }
           });
         }
+      });
+    }
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/channel/phone.vue?vue&type=script&lang=js&":
+/*!************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/channel/phone.vue?vue&type=script&lang=js& ***!
+  \************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      userData: {},
+      phoneData: {
+        phone: ""
+      },
+      serverError: {
+        phone: ""
+      },
+      otpData: {
+        otp: ""
+      },
+      serverOtpError: {
+        otp: ""
+      },
+      phoneVerificationChecker: true,
+      otpVerificationCheck: false
+    };
+  },
+  props: {
+    user: {
+      type: Object,
+      "default": null
+    }
+  },
+  created: function created() {
+    this.userData = this.user;
+
+    if (this.userData.phone == null) {
+      this.phoneVerificationChecker = false;
+    }
+  },
+  mounted: function mounted() {
+    console.log("Phone Mounted");
+  },
+  methods: {
+    phoneVerificationForm: function phoneVerificationForm() {
+      var _this = this;
+
+      this.$validator.validate().then(function (result) {
+        if (result) {
+          axios.post("/api/edit/channel/phone/number/" + _this.userData.id, _this.phoneData).then(function (response) {
+            if (response.data.message === true) {
+              Vue.toasted.success("Phone number is succefully created", {
+                position: "top-center",
+                duration: 5000
+              });
+              _this.userData = response.data.user;
+              _this.phoneVerificationChecker = true;
+            }
+          })["catch"](function (errors) {
+            Vue.toasted.error("Something went wrong", {
+              position: "top-center",
+              duration: 5000
+            });
+
+            if (errors.response.data.errors.phone) {
+              _this.serverError.phone = errors.response.data.errors.phone[0];
+            }
+          });
+        }
+      });
+    },
+    otpVerificationForm: function otpVerificationForm() {},
+    verifyPhoneNumber: function verifyPhoneNumber() {
+      axios.post("/api/edit/channel/phone/number" + this.userData.id).then(function (response) {
+        if (response.data.message === true) {}
+      }, function (response) {
+        if (response.status === 422) {}
+      })["catch"](function (errors) {
+        Vue.toasted.error("Something went wrong", {
+          position: "top-center",
+          duration: 5000
+        });
       });
     }
   }
@@ -14626,6 +14830,15 @@ var render = function() {
         [_c("college", { attrs: { channel: _vm.channelData } })],
         1
       )
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "row mt-5" }, [
+      _c(
+        "div",
+        { staticClass: "col-sm-6" },
+        [_c("phone", { attrs: { user: _vm.userData } })],
+        1
+      )
     ])
   ])
 }
@@ -16769,6 +16982,280 @@ render._withStripped = true
 
 /***/ }),
 
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/channel/phone.vue?vue&type=template&id=336467b2&":
+/*!****************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/channel/phone.vue?vue&type=template&id=336467b2& ***!
+  \****************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c("div", [
+    _vm.phoneVerificationChecker
+      ? _c("div", [
+          _c("p", [
+            _vm._v("\n      " + _vm._s(_vm.userData.phone) + "\n      "),
+            _vm.userData.phone_verified != null
+              ? _c("span", { staticClass: "text-success" }, [
+                  _vm._v("verified")
+                ])
+              : _vm._e()
+          ])
+        ])
+      : _vm._e(),
+    _vm._v(" "),
+    _c("div", [
+      !_vm.phoneVerificationChecker
+        ? _c("div", [
+            _c(
+              "form",
+              {
+                on: {
+                  submit: function($event) {
+                    $event.preventDefault()
+                    return _vm.phoneVerificationForm()
+                  }
+                }
+              },
+              [
+                _c(
+                  "div",
+                  {
+                    staticClass: "form-group row mx-5",
+                    class: {
+                      "has-error":
+                        _vm.errors.has("serverError.phone") ||
+                        _vm.serverError.phone != ""
+                    }
+                  },
+                  [
+                    _c("label", { attrs: { col: "col-sm-3 col-form-label" } }, [
+                      _vm._v("Phone: ")
+                    ]),
+                    _vm._v(" "),
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.phoneData.phone,
+                          expression: "phoneData.phone"
+                        },
+                        {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required|numeric|max:10|min:10",
+                          expression: "'required|numeric|max:10|min:10'"
+                        }
+                      ],
+                      staticClass: "col-sm-9 ml-4",
+                      class: {
+                        "form-control": true,
+                        "is-invalid": _vm.errors.has("phone")
+                      },
+                      attrs: {
+                        "data-vv-delay": "20",
+                        name: "phone",
+                        type: "text",
+                        placeholder: "Verify your phone"
+                      },
+                      domProps: { value: _vm.phoneData.phone },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.phoneData, "phone", $event.target.value)
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.has("phone"),
+                            expression: "errors.has('phone')"
+                          }
+                        ],
+                        staticClass: "text-danger text-center"
+                      },
+                      [_vm._v(_vm._s(_vm.errors.first("phone")))]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.serverError.phone != "",
+                            expression: "serverError.phone != ''"
+                          }
+                        ],
+                        staticClass: "text-danger text-center"
+                      },
+                      [_vm._v(_vm._s(_vm.serverError.phone))]
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _vm._m(0)
+              ]
+            )
+          ])
+        : _vm._e(),
+      _vm._v(" "),
+      _vm.otpVerificationCheck
+        ? _c("div", [
+            _c(
+              "form",
+              {
+                on: {
+                  submit: function($event) {
+                    $event.preventDefault()
+                    return _vm.otpVerificationForm()
+                  }
+                }
+              },
+              [
+                _c(
+                  "div",
+                  {
+                    staticClass: "form-group row mx-5",
+                    class: {
+                      "has-error":
+                        _vm.errors.has("serverOtpError.otp") ||
+                        _vm.serverOtpError.otp != ""
+                    }
+                  },
+                  [
+                    _c("label", { attrs: { col: "col-sm-3 col-form-label" } }, [
+                      _vm._v("Phone: ")
+                    ]),
+                    _vm._v(" "),
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.otpData.otp,
+                          expression: "otpData.otp"
+                        },
+                        {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required|numeric|min:6|max:6",
+                          expression: "'required|numeric|min:6|max:6'"
+                        }
+                      ],
+                      staticClass: "col-sm-9 ml-4",
+                      class: {
+                        "form-control": true,
+                        "is-invalid": _vm.errors.has("otp")
+                      },
+                      attrs: {
+                        "data-vv-delay": "20",
+                        name: "otp",
+                        type: "text",
+                        placeholder: "Verify your otp"
+                      },
+                      domProps: { value: _vm.otpData.otp },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.otpData, "otp", $event.target.value)
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.has("otp"),
+                            expression: "errors.has('otp')"
+                          }
+                        ],
+                        staticClass: "text-danger text-center"
+                      },
+                      [_vm._v(_vm._s(_vm.errors.first("otp")))]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.serverOtpError.otp != "",
+                            expression: "serverOtpError.otp != ''"
+                          }
+                        ],
+                        staticClass: "help is-danger text-center"
+                      },
+                      [_vm._v(_vm._s(_vm.serverOtpError.otp))]
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _vm._m(1)
+              ]
+            )
+          ])
+        : _vm._e()
+    ])
+  ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "ml-5" }, [
+      _c(
+        "button",
+        { staticClass: "btn btnsubmit mt-n2", attrs: { type: "submit" } },
+        [_vm._v("Submit")]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "ml-5" }, [
+      _c(
+        "button",
+        { staticClass: "btn btnsubmit mt-n2", attrs: { type: "submit" } },
+        [_vm._v("Submit")]
+      )
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/channel/social.vue?vue&type=template&id=38e126f8&":
 /*!*****************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/channel/social.vue?vue&type=template&id=38e126f8& ***!
@@ -18376,6 +18863,75 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_infrastructure_vue_vue_type_template_id_3138e0ba___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_infrastructure_vue_vue_type_template_id_3138e0ba___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/channel/phone.vue":
+/*!***************************************************!*\
+  !*** ./resources/js/components/channel/phone.vue ***!
+  \***************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _phone_vue_vue_type_template_id_336467b2___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./phone.vue?vue&type=template&id=336467b2& */ "./resources/js/components/channel/phone.vue?vue&type=template&id=336467b2&");
+/* harmony import */ var _phone_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./phone.vue?vue&type=script&lang=js& */ "./resources/js/components/channel/phone.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _phone_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _phone_vue_vue_type_template_id_336467b2___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _phone_vue_vue_type_template_id_336467b2___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/channel/phone.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/channel/phone.vue?vue&type=script&lang=js&":
+/*!****************************************************************************!*\
+  !*** ./resources/js/components/channel/phone.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_phone_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/babel-loader/lib??ref--4-0!../../../../node_modules/vue-loader/lib??vue-loader-options!./phone.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/channel/phone.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_phone_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/channel/phone.vue?vue&type=template&id=336467b2&":
+/*!**********************************************************************************!*\
+  !*** ./resources/js/components/channel/phone.vue?vue&type=template&id=336467b2& ***!
+  \**********************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_phone_vue_vue_type_template_id_336467b2___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../node_modules/vue-loader/lib??vue-loader-options!./phone.vue?vue&type=template&id=336467b2& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/channel/phone.vue?vue&type=template&id=336467b2&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_phone_vue_vue_type_template_id_336467b2___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_phone_vue_vue_type_template_id_336467b2___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

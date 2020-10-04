@@ -14,13 +14,13 @@
 <div class="container-fluid">
     <div class="row">
         @include('admin.sidebar')
-        <main role="main" class="col-lg-10 ml-lg-auto">
+        <main role="main" class="container ml-0 pr-5">
             <br>
             <br>
 
-            <div class="container">
+            
                 @yield('adminContent')
-            </div>
+            
         </main>
     </div>
 </div>

@@ -3939,22 +3939,7 @@ var render = function() {
                   _vm._v("verified")
                 ])
               : _vm._e()
-          ]),
-          _vm._v(" "),
-          _vm.userData.phone_verified == null
-            ? _c(
-                "button",
-                {
-                  staticClass: "btn btn-primary",
-                  on: {
-                    click: function($event) {
-                      return _vm.verifyPhoneNumber()
-                    }
-                  }
-                },
-                [_vm._v("\n      Verify Your Number\n    ")]
-              )
-            : _vm._e()
+          ])
         ])
       : _vm._e(),
     _vm._v(" "),

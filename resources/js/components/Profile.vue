@@ -39,9 +39,20 @@
       <hr class="mt-lg-5">
       <div class="mt-lg-5 pt-3 mx-auto container-fluid">
           <channel :userinstitute="userinstituteData" :user="userData" :channel="channelsData"></channel>
+          </div>
+      <div class="row mt-5 mx-auto">
+        <div class="col-sm-6 text-right">
+          <channel
+            :userinstitute="userinstituteData"
+            :user="userData"
+            :channel="channelsData"
+          ></channel>
+        </div>
+        <div class="col-sm-6 text-right">
+          <phone :user="userData"></phone>
+        </div>
       </div>
-    </div>
-    <br />
+    <br>
   </div>
 </template>
 
@@ -52,6 +63,7 @@ import subject from "./student/profile/subject.vue";
 import hobby from "./student/profile/hobbies.vue";
 import avatar from "./student/profile/avatar.vue";
 import channel from "./student/profile/channel.vue";
+import phone from "./student/profile/phone.vue";
 
 export default {
   data() {
@@ -142,6 +154,7 @@ export default {
     hobby,
     avatar,
     channel,
+    phone,
   },
 };
 </script>

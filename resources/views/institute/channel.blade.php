@@ -36,14 +36,7 @@
         </channel-in-dashboard>
     </div>
 
-    @section('model')
-    @include('layouts.model_view')
-    @endsection
-
 </div>
-@endsection
-@section('model')
-@include('layouts.model_view')
 @endsection
 
 @section('js_code')

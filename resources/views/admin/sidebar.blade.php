@@ -1,4 +1,4 @@
-<div id="sidebarcollapse" class="col-lg-2 collapse d-lg-block sidebar shadow-lg">
+<div id="sidebarcollapse" class="collapse sidebar shadow-lg">
     <div class="left-sidebar" style="overflow: auto;">
 
       <ul class="nav flex-column">
