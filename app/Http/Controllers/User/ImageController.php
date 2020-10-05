@@ -49,40 +49,33 @@ class ImageController extends Controller
         $realImage = Image::make($request->validated()['image']);
         $realImage->fit(600, 600, null, 'center');
         $image = $imageS = $imageM = Image::canvas(600, 600, '#ffffff')->insert($realImage);
-        $path = "media/channel/" . $currentUserId . "/";
-        if (is_dir('media/channel/' . $currentUserId)) {
+        $path = "media/channel/" . $currentUserId . "/avatar/";
+        if (is_dir('media/channel/' . $currentUserId . '/avatar/')) {
             $avatar = Channel::where('user_id', $currentUserId)
                 ->select('icon_avatar')
                 ->first();
             if ($avatar->icon_avatar != null) {
-                @unlink('media/channel/' . $currentUserId . '/' . $avatar->icon_avatar);
-                @unlink('media/channel/' . $currentUserId . '/m-' . $avatar->icon_avatar);
-                @unlink('media/channel/' . $currentUserId . '/s-' . $avatar->icon_avatar);
+                @unlink('media/channel/' . $currentUserId . '/avatar/' . $avatar->icon_avatar);
             }
         }
         if (!is_dir($path)) {
             if (File::makeDirectory(public_path($path), 0777, true)) {
-                $image->resize(600, 600);
+                $image->resize(130, 130);
                 $image->save(public_path($path) . $imageName);
-                //FacadesImageOptimizer::optimize($path.$imageName);
+                $image->resize(120, 120);
+                $image->save(public_path($path) . 'm-' . $imageName);
+                $image->resize(90, 90);
+                $image->save(public_path($path) . 's-' . $imageName);
                 ///app(Spatie\ImageOptimizer\OptimizerChain::class)->optimize($path.$imageName);
-                $imageM->resize(300, 300);
-                $imageM->save(public_path($path) . 'm-' . $imageName);
-                //FacadesImageOptimizer::optimize($path.'m-',$imageName);
-                $imageS->resize(200, 200);
-                $imageS->save(public_path($path) . 's-' . $imageName);
                 //FacadesImageOptimizer::optimize($path.'s-',$imageName);
             }
         } else {
-            $image->resize(600, 600);
+            $image->resize(130, 130);
             $image->save(public_path($path) . $imageName);
-            //FacadesImageOptimizer::optimize($path.$imageName);
-            $imageM->resize(300, 300);
-            $imageM->save(public_path($path) . 'm-' . $imageName);
-            //FacadesImageOptimizer::optimize($path.'m-',$imageName);
-            $imageS->resize(200, 200);
-            $imageS->save(public_path($path) . 's-' . $imageName);
-            //FacadesImageOptimizer::optimize($path.'s-',$imageName);
+            $image->resize(120, 120);
+            $image->save(public_path($path) . 'm-' . $imageName);
+            $image->resize(90, 90);
+            $image->save(public_path($path) . 's-' . $imageName);
         }
         $channel = Channel::where('user_id', $currentUserId)
             ->first();
@@ -118,39 +111,39 @@ class ImageController extends Controller
         $realImage = Image::make($request->validated()['image']);
         $realImage->fit(600, 600, null, 'center');
         $image = $imageS = $imageM = Image::canvas(600, 600, '#ffffff')->insert($realImage);
-        $path = "media/channel/" . $currentUserId . "/";
+        $path = "media/channel/" . $currentUserId . "/cover/";
 
         if (is_dir('media/channel/' . $currentUserId)) {
             $icon = Channel::where('user_id', $currentUserId)
                 ->select('cover_avatar')
                 ->first();
             if ($icon->cover_avatar != null) {
-                @unlink('media/channel/' . $currentUserId . '/' . $icon->cover_avatar);
-                @unlink('media/channel/' . $currentUserId . '/m-' . $icon->cover_avatar);
-                @unlink('media/channel/' . $currentUserId . '/s-' . $icon->cover_avatar);
+                @unlink('media/channel/' . $currentUserId . '/cover/' . $icon->cover_avatar);
+                @unlink('media/channel/' . $currentUserId . '/cover/m-' . $icon->cover_avatar);
+                @unlink('media/channel/' . $currentUserId . '/cover/s-' . $icon->cover_avatar);
             }
         }
         if (!is_dir($path)) {
             if (File::makeDirectory(public_path($path), 0777, true)) {
-                $image->resize(1000, 320);
+                $image->resize(1300, 350);
                 $image->save(public_path($path) . $imageName);
                 //FacadesImageOptimizer::optimize($path.$imageName);
                 ///app(Spatie\ImageOptimizer\OptimizerChain::class)->optimize($path.$imageName);
-                $imageM->resize(740, 320);
+                $imageM->resize(850, 350);
                 $imageM->save(public_path($path) . 'm-' . $imageName);
                 //FacadesImageOptimizer::optimize($path.'m-',$imageName);
-                $imageS->resize(390, 250);
+                $imageS->resize(420, 250);
                 $imageS->save(public_path($path) . 's-' . $imageName);
                 //FacadesImageOptimizer::optimize($path.'s-',$imageName);
             }
         } else {
-            $image->resize(1000, 320);
+            $image->resize(1300, 350);
             $image->save(public_path($path) . $imageName);
             //FacadesImageOptimizer::optimize($path.$imageName);
-            $imageM->resize(740, 320);
+            $imageM->resize(850, 350);
             $imageM->save(public_path($path) . 'm-' . $imageName);
             //FacadesImageOptimizer::optimize($path.'m-',$imageName);
-            $imageS->resize(390, 250);
+            $imageS->resize(420, 250);
             $imageS->save(public_path($path) . 's-' . $imageName);
             //FacadesImageOptimizer::optimize($path.'s-',$imageName);
         }

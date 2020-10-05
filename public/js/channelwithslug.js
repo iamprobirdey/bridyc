@@ -529,6 +529,25 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -539,9 +558,9 @@ __webpack_require__.r(__webpack_exports__);
       phoneNo: "",
       socialCount: 0,
       sessionUrl: window.location.pathname.split("/")[2],
-      channelRequestChecker: false,
-      channelRequestsuccefull: false,
-      userID: ""
+      userID: "",
+      isTeacher: false,
+      channelRequestDecider: ""
     };
   },
   props: {
@@ -560,20 +579,25 @@ __webpack_require__.r(__webpack_exports__);
     userid: {
       type: Number,
       "default": null
+    },
+    isteacher: {
+      type: Boolean,
+      "default": null
     }
   },
   created: function created() {
     this.userData = this.user;
     this.channelData = this.channel;
+    console.log(this.userData);
+    console.log(this.channelData);
     this.currentuserData = this.currentuser;
     this.phoneNo = this.userData.phone ? this.userData.phone : "Not provided";
     this.userID = this.userid;
+    this.isTeacher = this.isteacher;
 
     if (this.channelData.extra_attributes.social.facebook === null && this.channelData.extra_attributes.social.linkedin === null && this.channelData.extra_attributes.social.youtube === null) {
       this.socialCount = 1;
     }
-
-    console.log(this.currentuser);
   },
   mounted: function mounted() {
     this.getChannelSession();
@@ -581,27 +605,24 @@ __webpack_require__.r(__webpack_exports__);
   },
   methods: {
     requestChannelSatisfier: function requestChannelSatisfier() {
-      if (this.currentuserData != null) {
-        if (this.currentuserData.request === "in-progress" && this.currentuserData.channel_id == this.channelData.id) {
-          this.channelRequestsuccefull = true;
-        }
-
-        if (this.currentuserData.request === "rejected" && this.currentuserData.channel_id != this.channelData.id) {
-          this.channelRequestChecker = true;
-        }
-
-        this.channelRequestChecker = false;
+      if (this.isTeacher && this.currentuserData != null) {
+        if (this.currentuserData.request === "in-progress" && this.currentuserData.channel_id == this.channelData.id) this.channelRequestDecider = "in-progress";
+        if (this.currentuserData.request === "accepted" && this.currentuserData.channel_id == this.channelData.id) this.channelRequestDecider = "accepted";
+        if (this.currentuserData.request === "rejected" && this.currentuserData.channel_id == this.channelData.id) this.channelRequestDecider = "rejected";
+        if (this.currentuserData.request === "rejected" && this.currentuserData.channel_id != this.channelData.id) this.channelRequestDecider = "can-request";
       }
 
-      if (this.currentuserData == null) this.channelRequestChecker = true;
+      if (this.isTeacher && this.currentuserData == null) {
+        this.channelRequestDecider = "can-request";
+      }
     },
     requestForChannel: function requestForChannel() {
       var _this = this;
 
+      console.log("clicked request");
       axios.get("/api/teacher/request/for/channel/" + this.userID + "/" + this.channelData.id).then(function (response) {
         if (response.data.message) {
-          _this.channelRequestChecker = false;
-          _this.channelRequestsuccefull = true;
+          _this.channelRequestDecider = "in-progress";
         }
       })["catch"](function (errors) {});
     },
@@ -617,6 +638,9 @@ __webpack_require__.r(__webpack_exports__);
       axios.get("/api/store/channel/session/" + channelId).then(function (response) {
         if (!response.data.message) _this2.goForMostViewed();
       })["catch"](function (errors) {});
+    },
+    teacherDecider: function teacherDecider(teacher) {
+      if (teacher.avatar === "default.jpg") return "/images/teacher.jpg";
     }
   }
 });
@@ -1112,26 +1136,12 @@ var render = function() {
         _c("img", {
           staticClass: "inscover mt-n3",
           attrs: {
-            srcset:
-              _vm.channelData.cover_avatar != null
-                ? _vm.domainUrl +
-                  "/media/channel/" +
-                  _vm.channelData.user_id +
-                  "/m-" +
-                  _vm.channelData.cover_avatar +
-                  "," +
-                  _vm.domainUrl +
-                  "/media/channel/" +
-                  _vm.channelData.user_id +
-                  "/s-" +
-                  _vm.channelData.cover_avatar
-                : "/images/banner2.png",
             src:
               _vm.channelData.cover_avatar != null
                 ? _vm.domainUrl +
                   "/media/channel/" +
                   _vm.channel.user_id +
-                  "/" +
+                  "/cover/" +
                   _vm.channelData.cover_avatar
                 : "/images/banner2.png"
           }
@@ -1155,7 +1165,15 @@ var render = function() {
                 }
               },
               [
-                _vm._v("Visit Website\n            "),
+                _vm._v(
+                  "\n            " +
+                    _vm._s(
+                      _vm.channelData.website_link === null
+                        ? "Website link not-provided"
+                        : "Visit Website"
+                    ) +
+                    "\n            "
+                ),
                 _c("i", {
                   staticClass: "fa fa-external-link",
                   attrs: { "aria-hidden": "true" }
@@ -1181,24 +1199,42 @@ var render = function() {
               _vm._v(_vm._s(_vm.userData.email) + "\n          ")
             ]),
             _vm._v(" "),
-            _vm.channelRequestChecker
-              ? _c(
-                  "button",
-                  {
-                    staticClass: "btn btn-primary",
-                    on: {
-                      click: function($event) {
-                        return _vm.requestForChannel()
-                      }
-                    }
-                  },
-                  [_vm._v("\n            Send Request\n          ")]
-                )
-              : _vm._e(),
-            _vm._v(" "),
-            _vm.channelRequestsuccefull
-              ? _c("button", { staticClass: "btn btn-success" }, [
-                  _vm._v("\n            Request Successfull\n          ")
+            _vm.isTeacher
+              ? _c("div", [
+                  _vm.channelRequestDecider === "can-request"
+                    ? _c(
+                        "button",
+                        {
+                          staticClass: "btn btn-primary",
+                          on: {
+                            click: function($event) {
+                              return _vm.requestForChannel()
+                            }
+                          }
+                        },
+                        [_vm._v("\n              Send Request\n            ")]
+                      )
+                    : _vm._e(),
+                  _vm._v(" "),
+                  _vm.channelRequestDecider === "in-progress"
+                    ? _c("button", { staticClass: "btn btn-success" }, [
+                        _vm._v(
+                          "\n              Request Successfull\n            "
+                        )
+                      ])
+                    : _vm._e(),
+                  _vm._v(" "),
+                  _vm.channelRequestDecider === "rejected"
+                    ? _c("button", { staticClass: "btn btn-danger" }, [
+                        _vm._v("\n              Request Rejected\n            ")
+                      ])
+                    : _vm._e(),
+                  _vm._v(" "),
+                  _vm.channelRequestDecider === "accepted"
+                    ? _c("button", { staticClass: "btn btn-primary" }, [
+                        _vm._v("\n              Your School\n            ")
+                      ])
+                    : _vm._e()
                 ])
               : _vm._e()
           ])
@@ -1213,7 +1249,7 @@ var render = function() {
                   ? _vm.domainUrl +
                     "/media/channel/" +
                     _vm.channel.user_id +
-                    "/" +
+                    "/avatar/" +
                     _vm.channelData.icon_avatar
                   : "/images/college logo.jpg",
               alt: "Institute logo"
@@ -1359,9 +1395,144 @@ var render = function() {
                 ])
               ]),
               _vm._v(" "),
-              _vm._m(1),
+              _c("div", { staticClass: "row mb-5 mx-0 px-0" }, [
+                _c(
+                  "div",
+                  {
+                    staticClass:
+                      "card notice shadow-sm border-0 mx-0 col-md-5 col-lg-4 px-0"
+                  },
+                  [
+                    _c("div", { staticClass: "card-body" }, [
+                      _vm._m(1),
+                      _vm._v(" "),
+                      _c("hr", { staticClass: "w-25" }),
+                      _vm._v(" "),
+                      _c(
+                        "div",
+                        { staticClass: "mt-5" },
+                        _vm._l(_vm.channelData.notification, function(
+                          notification,
+                          index
+                        ) {
+                          return _c("p", { key: index }, [
+                            _c("i", {
+                              staticClass: "fa fa-long-arrow-right",
+                              attrs: { "aria-hidden": "true" }
+                            }),
+                            _vm._v(
+                              "\n                    " +
+                                _vm._s(notification.notify) +
+                                "\n                    "
+                            ),
+                            index === 0
+                              ? _c(
+                                  "span",
+                                  { staticClass: "badge badge-info" },
+                                  [_vm._v("New")]
+                                )
+                              : _vm._e()
+                          ])
+                        }),
+                        0
+                      )
+                    ])
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass: "carousel slide inscarou col-md-7 col-lg-8",
+                    attrs: { id: "carouid", "data-ride": "carousel" }
+                  },
+                  [
+                    _vm._m(2),
+                    _vm._v(" "),
+                    _c(
+                      "div",
+                      { staticClass: "carousel-inner" },
+                      _vm._l(_vm.channelData.college_image, function(
+                        college,
+                        index
+                      ) {
+                        return _c(
+                          "div",
+                          {
+                            key: index,
+                            staticClass: "carousel-item",
+                            class: index === 0 ? "active" : ""
+                          },
+                          [
+                            _c("img", {
+                              attrs: {
+                                src:
+                                  _vm.domainUrl +
+                                  "/media/channel/" +
+                                  _vm.channelData.user_id +
+                                  "/college/" +
+                                  college.image_path
+                              }
+                            })
+                          ]
+                        )
+                      }),
+                      0
+                    )
+                  ]
+                )
+              ]),
               _vm._v(" "),
-              _vm._m(2)
+              _c(
+                "div",
+                { staticClass: "container-fluid facultyachieve mt-lg-5 px-0" },
+                [
+                  _c("h2", { staticClass: "text-uppercase" }, [
+                    _vm._v("Our Achievements")
+                  ]),
+                  _vm._v(" "),
+                  _c("hr", { staticClass: "mt-n2" }),
+                  _vm._v(" "),
+                  _vm.channelData.achievement != null
+                    ? _c(
+                        "div",
+                        { staticClass: "row mb-5 mt-5" },
+                        _vm._l(_vm.channelData.achievement, function(
+                          achievement,
+                          index
+                        ) {
+                          return _c(
+                            "div",
+                            {
+                              key: index,
+                              staticClass:
+                                "card shadow mx-auto facultyachievecard"
+                            },
+                            [
+                              _c("img", {
+                                attrs: {
+                                  src:
+                                    _vm.domainUrl + "/" + achievement.image_path
+                                }
+                              }),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "card-body mt-n1" }, [
+                                _c("h6", { staticClass: "card-title my-n1" }, [
+                                  _vm._v(_vm._s(achievement.title))
+                                ]),
+                                _vm._v(" "),
+                                _c("p", { staticClass: "card-text" }, [
+                                  _vm._v(_vm._s(achievement.description))
+                                ])
+                              ])
+                            ]
+                          )
+                        }),
+                        0
+                      )
+                    : _c("div", [_vm._v("No Achievements Provided")])
+                ]
+              )
             ]
           ),
           _vm._v(" "),
@@ -1372,7 +1543,67 @@ var render = function() {
               attrs: { id: "about" }
             },
             [
-              _vm._m(3),
+              _c("div", { staticClass: "princidiv mb-5" }, [
+                _vm._m(3),
+                _vm._v(" "),
+                _c("div", { staticClass: "row mt-3" }, [
+                  _c("div", { staticClass: "col-md-6" }, [
+                    _c("p", { staticClass: "principal-message" }, [
+                      _vm._v(
+                        "\n                  " +
+                          _vm._s(
+                            _vm.userData.message != null
+                              ? _vm.userData.message
+                              : "Message from Institute not provided"
+                          ) +
+                          "\n                "
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-md-6" }, [
+                    _c("div", { staticClass: "card principalcard" }, [
+                      _c("img", {
+                        attrs: {
+                          src: _vm.domainUrl + "/images/" + _vm.userData.avatar
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c("div", { staticClass: "card-body mt-n1" }, [
+                        _c("h4", { staticClass: "card-title my-n1" }, [
+                          _vm._v(
+                            "\n                      " +
+                              _vm._s(_vm.userData.name) +
+                              "\n                    "
+                          )
+                        ]),
+                        _vm._v(" "),
+                        _c("p", { staticClass: "card-text" }, [
+                          _vm._v("Principal, " + _vm._s(_vm.channel.title))
+                        ])
+                      ])
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", [
+                  _c("h6", { staticClass: "text-uppercase mt-2" }, [
+                    _vm._v("Mission & Vision")
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(
+                      "\n                " +
+                        _vm._s(
+                          _vm.userData.vission != null
+                            ? _vm.userData.vission
+                            : "Vission from Institute not provided"
+                        ) +
+                        "\n              "
+                    )
+                  ])
+                ])
+              ]),
               _vm._v(" "),
               _c("div", { staticClass: "container-fluid mt-5" }, [
                 _c("h2", { staticClass: "text-uppercase" }, [
@@ -1454,9 +1685,61 @@ var render = function() {
             ]
           ),
           _vm._v(" "),
-          _vm._m(5),
+          _c(
+            "div",
+            {
+              staticClass: "container-fluid tab-pane fade",
+              attrs: { id: "faculty" }
+            },
+            [
+              _c("br"),
+              _vm._v(" "),
+              _c("div", { staticClass: "container-fluid facultyachieve" }, [
+                _c("h2", { staticClass: "text-uppercase" }, [
+                  _vm._v("Our Faculties")
+                ]),
+                _vm._v(" "),
+                _c("hr", { staticClass: "mt-n2" }),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "row mb-5 mt-5" },
+                  _vm._l(_vm.channelData.teacher, function(teacher, index) {
+                    return _c(
+                      "div",
+                      {
+                        key: index,
+                        staticClass: "card shadow mx-auto facultyachievecard"
+                      },
+                      [
+                        _c("img", {
+                          attrs: {
+                            src:
+                              teacher.user.avatar === "default.jpg"
+                                ? "/images/teacher.jpg"
+                                : "/images/" + teacher.user.avatar
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c("div", { staticClass: "card-body mt-n1" }, [
+                          _c("h6", { staticClass: "card-title my-n1" }, [
+                            _vm._v(_vm._s(teacher.user.name))
+                          ]),
+                          _vm._v(" "),
+                          _c("p", { staticClass: "card-text" }, [
+                            _vm._v("Qualification")
+                          ])
+                        ])
+                      ]
+                    )
+                  }),
+                  0
+                )
+              ])
+            ]
+          ),
           _vm._v(" "),
-          _vm._m(6)
+          _vm._m(5)
         ])
       ])
     ]),
@@ -1523,220 +1806,45 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row mb-5 mx-0 px-0" }, [
-      _c(
-        "div",
-        {
-          staticClass:
-            "card notice shadow-sm border-0 mx-0 col-md-5 col-lg-4 px-0"
-        },
-        [
-          _c("div", { staticClass: "card-body" }, [
-            _c("div", { staticClass: "card-title my-n2" }, [
-              _c("h5", { staticClass: "text-uppercase text-center" }, [
-                _vm._v(
-                  "\n                    News and Notifications\n                  "
-                )
-              ])
-            ]),
-            _vm._v(" "),
-            _c("hr", { staticClass: "w-25" }),
-            _vm._v(" "),
-            _c("div", { staticClass: "mt-5" }, [
-              _c("p", [
-                _c("i", {
-                  staticClass: "fa fa-long-arrow-right",
-                  attrs: { "aria-hidden": "true" }
-                }),
-                _vm._v(
-                  "\n                    Shads sdjahbdk skasdk jashdas jasdkn\n                    "
-                ),
-                _c("span", { staticClass: "badge badge-info" }, [_vm._v("New")])
-              ]),
-              _vm._v(" "),
-              _c("p", [
-                _c("i", {
-                  staticClass: "fa fa-long-arrow-right",
-                  attrs: { "aria-hidden": "true" }
-                }),
-                _vm._v(
-                  "\n                    Shads sdjahbdk skasdk jashdas jasdkn sbsakd jasdkas\n                  "
-                )
-              ]),
-              _vm._v(" "),
-              _c("p", [
-                _c("i", {
-                  staticClass: "fa fa-long-arrow-right",
-                  attrs: { "aria-hidden": "true" }
-                }),
-                _vm._v(
-                  "\n                    Shads sdjahbdk skasdk jashdas jasdkn sbsakd jasdkas\n                  "
-                )
-              ]),
-              _vm._v(" "),
-              _c("p", [
-                _c("i", {
-                  staticClass: "fa fa-long-arrow-right",
-                  attrs: { "aria-hidden": "true" }
-                }),
-                _vm._v(
-                  "\n                    Shads sdjahbdk skasdk jashdas\n                  "
-                )
-              ]),
-              _vm._v(" "),
-              _c("p", [
-                _c("i", {
-                  staticClass: "fa fa-long-arrow-right",
-                  attrs: { "aria-hidden": "true" }
-                }),
-                _vm._v(
-                  "\n                    Shads sdjahbdk skasdk jashdas jasdkn sbsakd\n                  "
-                )
-              ])
-            ])
-          ])
-        ]
-      ),
-      _vm._v(" "),
-      _c(
-        "div",
-        {
-          staticClass: "carousel slide inscarou col-md-7 col-lg-8",
-          attrs: { id: "carouid", "data-ride": "carousel" }
-        },
-        [
-          _c("ul", { staticClass: "carousel-indicators" }, [
-            _c("li", {
-              staticClass: "active",
-              attrs: { "data-target": "#carouid", "data-slide-to": "0" }
-            }),
-            _vm._v(" "),
-            _c("li", {
-              attrs: { "data-target": "#carouid", "data-slide-to": "1" }
-            }),
-            _vm._v(" "),
-            _c("li", {
-              attrs: { "data-target": "#carouid", "data-slide-to": "2" }
-            }),
-            _vm._v(" "),
-            _c("li", {
-              attrs: { "data-target": "#carouid", "data-slide-to": "3" }
-            }),
-            _vm._v(" "),
-            _c("li", {
-              attrs: { "data-target": "#carouid", "data-slide-to": "4" }
-            })
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "carousel-inner" }, [
-            _c("div", { staticClass: "carousel-item active" }, [
-              _c("img", { attrs: { src: "/images/testcollege.jpg" } })
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "carousel-item" }, [
-              _c("img", { attrs: { src: "/images/testcollege2.jpg" } })
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "carousel-item" }, [
-              _c("img", { attrs: { src: "/images/testcollege3.jpg" } })
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "carousel-item" }, [
-              _c("img", { attrs: { src: "/images/testcollege4.jpg" } })
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "carousel-item" }, [
-              _c("img", { attrs: { src: "/images/testcollege5.jpg" } })
-            ])
-          ])
-        ]
-      )
+    return _c("div", { staticClass: "card-title my-n2" }, [
+      _c("h5", { staticClass: "text-uppercase text-center" }, [
+        _vm._v(
+          "\n                    News and Notifications\n                  "
+        )
+      ])
     ])
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      { staticClass: "container-fluid facultyachieve mt-lg-5 px-0" },
-      [
-        _c("h2", { staticClass: "text-uppercase" }, [
-          _vm._v("Our Achievements")
-        ]),
-        _vm._v(" "),
-        _c("hr", { staticClass: "mt-n2" }),
-        _vm._v(" "),
-        _c("div", { staticClass: "row mb-5 mt-5" }, [
-          _c("div", { staticClass: "card shadow mx-auto facultyachievecard" }, [
-            _c("img", { attrs: { src: "/images/guest.jpg" } }),
-            _vm._v(" "),
-            _c("div", { staticClass: "card-body mt-n1" }, [
-              _c("h6", { staticClass: "card-title my-n1" }, [
-                _vm._v("Name of the individual")
-              ]),
-              _vm._v(" "),
-              _c("p", { staticClass: "card-text" }, [
-                _vm._v("Type of achievement")
-              ])
-            ])
-          ])
-        ])
-      ]
-    )
+    return _c("ul", { staticClass: "carousel-indicators" }, [
+      _c("li", {
+        staticClass: "active",
+        attrs: { "data-target": "#carouid", "data-slide-to": "0" }
+      }),
+      _vm._v(" "),
+      _c("li", { attrs: { "data-target": "#carouid", "data-slide-to": "1" } }),
+      _vm._v(" "),
+      _c("li", { attrs: { "data-target": "#carouid", "data-slide-to": "2" } }),
+      _vm._v(" "),
+      _c("li", { attrs: { "data-target": "#carouid", "data-slide-to": "3" } }),
+      _vm._v(" "),
+      _c("li", { attrs: { "data-target": "#carouid", "data-slide-to": "4" } })
+    ])
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "princidiv mb-5" }, [
-      _c("div", { staticClass: "d-flex" }, [
-        _c("img", {
-          staticClass: "mt-2",
-          attrs: { src: "/images/checkmark.svg" }
-        }),
-        _vm._v(" "),
-        _c("h3", { staticClass: "mt-2 text-uppercase" }, [
-          _vm._v("Message From The Principal")
-        ])
-      ]),
+    return _c("div", { staticClass: "d-flex" }, [
+      _c("img", {
+        staticClass: "mt-2",
+        attrs: { src: "/images/checkmark.svg" }
+      }),
       _vm._v(" "),
-      _c("div", { staticClass: "row mt-3" }, [
-        _c("div", { staticClass: "col-md-6" }, [
-          _c("p", { staticClass: "principal-message" }, [
-            _vm._v(
-              "\n                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n                  Quisque iaculis risus quis tortor eleifend, non facilisis\n                  ante vulputate. Donec iaculis, ex in euismod sagittis,\n                  turpis felis malesuada nisi, a facilisis ex enim ut nunc.\n                  Vestibulum ut tincidunt justo, sit amet faucibus elit.\n                  Aliquam ac nibh eros. Nulla id risus dolor. Ut nulla turpis,\n                  laoreet et libero a, faucibus accumsan risus. Morbi euismod\n                  mauris mi, sit amet tempus ligula pretium vel. Nunc sem\n                  ligula, aliquam id purus et, egestas sagittis lorem. Duis at\n                  justo magna. Donec in egestas turpis. Aliquam maximus nulla\n                  sapien, sagittis dictum sem laoreet sit amet. Donec elit\n                  tortor, tincidunt non aliquet id, rhoncus in felis.\n                  Vestibulum ultrices ante id risus vehicula venenatis.Aenean\n                  id pulvinar sem. Cras elementum eu orci nec mollis. Donec\n                  molestie iaculis pharetra. Duis ullamcorper erat ut aliquet\n                  tristique. Etiam venenatis mauris id massa interdum viverra.\n                "
-            )
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "col-md-6" }, [
-          _c("div", { staticClass: "card principalcard" }, [
-            _c("img", { attrs: { src: "/images/PrincipalPhoto.jpg" } }),
-            _vm._v(" "),
-            _c("div", { staticClass: "card-body mt-n1" }, [
-              _c("h4", { staticClass: "card-title my-n1" }, [
-                _vm._v("Principal name")
-              ]),
-              _vm._v(" "),
-              _c("p", { staticClass: "card-text" }, [
-                _vm._v("Principal, BCDSER")
-              ])
-            ])
-          ])
-        ])
-      ]),
-      _vm._v(" "),
-      _c("div", [
-        _c("h6", { staticClass: "text-uppercase mt-2" }, [
-          _vm._v("Mission & Vision")
-        ]),
-        _vm._v(" "),
-        _c("p", [
-          _vm._v(
-            "\n                Lorem ipsum dolor sit amet, consectetur adipiscing elit.\n                Quisque iaculis risus quis tortor eleifend, non facilisis ante\n                vulputate. Donec iaculis, ex in euismod sagittis, turpis felis\n                malesuada nisi, a facilisis ex enim ut nunc. Vestibulum ut\n                tincidunt justo, sit amet faucibus elit.\n              "
-          )
-        ])
+      _c("h3", { staticClass: "mt-2 text-uppercase" }, [
+        _vm._v("Message From The Principal")
       ])
     ])
   },
@@ -1750,49 +1858,6 @@ var staticRenderFns = [
       }),
       _vm._v(" Board:\n                xxxx\n              ")
     ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass: "container-fluid tab-pane fade",
-        attrs: { id: "faculty" }
-      },
-      [
-        _c("br"),
-        _vm._v(" "),
-        _c("div", { staticClass: "container-fluid facultyachieve" }, [
-          _c("h2", { staticClass: "text-uppercase" }, [
-            _vm._v("Our Faculties")
-          ]),
-          _vm._v(" "),
-          _c("hr", { staticClass: "mt-n2" }),
-          _vm._v(" "),
-          _c("div", { staticClass: "row mb-5 mt-5" }, [
-            _c(
-              "div",
-              { staticClass: "card shadow mx-auto facultyachievecard" },
-              [
-                _c("img", { attrs: { src: "/images/teacher.jpg" } }),
-                _vm._v(" "),
-                _c("div", { staticClass: "card-body mt-n1" }, [
-                  _c("h6", { staticClass: "card-title my-n1" }, [
-                    _vm._v("Faculty Name")
-                  ]),
-                  _vm._v(" "),
-                  _c("p", { staticClass: "card-text" }, [
-                    _vm._v("Qualification")
-                  ])
-                ])
-              ]
-            )
-          ])
-        ])
-      ]
-    )
   },
   function() {
     var _vm = this

@@ -10,7 +10,8 @@ class ChannelTeacherPloicy
 {
     use HandlesAuthorization;
 
-    public function checkAvailabilityOfTeacher(User $user,ChannelTeacher $teacher){
+    public function checkAvailabilityOfTeacher(User $user, ChannelTeacher $teacher)
+    {
         return $teacher->channel_id === $user->channel->id;
     }
 }

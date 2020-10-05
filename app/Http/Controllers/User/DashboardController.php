@@ -45,12 +45,13 @@ class DashboardController extends Controller
     {
         $this->authorize('checkChannelForUser', $channel);
         $channel = Channel::where('user_id', auth()->id())
-            ->with([
-                'state',
-                'district',
-                'village',
-                'language',
-            ])
+            ->with(['state', 'district', 'village', 'language', 'achievement', 'collegeImage'])
+            ->with(['teacher' => function ($query) {
+                $query->with(['user']);
+            }])
+            ->with(['notification' => function ($query) {
+                $query->orderBy('created_at', 'desc');
+            }])
             ->first();
         $user = User::where('id', auth()->id())->with('verification')->first();
         return view('institute.channel', compact(['user', 'channel']));

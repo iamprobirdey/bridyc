@@ -77,66 +77,74 @@ export default {
   },
   methods: {
     deleteFromChannel(id, index) {
-      this.additionUrl = "/delete/teacher/";
-      axios
-        .post(this.url + this.additionUrl + id)
-        .then((response) => {
-          if (response.data.message === true) {
-            Vue.toasted.success(
-              "Teacher account from your school is destroyed",
-              {
-                position: "top-center",
-                duration: 5000,
-              }
-            );
-          }
-          this.teachersData.splice(index, 1);
-        })
-        .catch((errors) => {
-          Vue.toasted.error("Something went wrong", {
-            position: "top-center",
-            duration: 5000,
+      if (confirm("Are you sure?")) {
+        axios
+          .post("/api/delete/teacher/" + id)
+          .then((response) => {
+            if (response.data.message === true) {
+              Vue.toasted.success(
+                "Teacher account from your school is destroyed",
+                {
+                  position: "top-center",
+                  duration: 5000,
+                }
+              );
+            }
+            this.teachersData.splice(index, 1);
+          })
+          .catch((errors) => {
+            Vue.toasted.error("Something went wrong", {
+              position: "top-center",
+              duration: 5000,
+            });
           });
-        });
+      }
     },
     acceptTheTeacher(teacher, index) {
-      axios
-        .post("/api/accept/request/of/teacher/" + teacher.id)
-        .then((response) => {
-          if (response.data.message === true) {
-            Vue.toasted.success("You have successfully accepted the request", {
+      if (confirm("Are you sure? ")) {
+        axios
+          .post("/api/accept/request/of/teacher/" + teacher.id)
+          .then((response) => {
+            if (response.data.message === true) {
+              Vue.toasted.success(
+                "You have successfully accepted the request",
+                {
+                  position: "top-center",
+                  duration: 5000,
+                }
+              );
+              this.teachersRequestData.splice(index, 1);
+              window.location.reload();
+            }
+          })
+          .catch((errors) => {
+            Vue.toasted.error("Something went wrong", {
               position: "top-center",
               duration: 5000,
             });
-            this.teachersRequestData.splice(index, 1);
-            window.location.reload();
-          }
-        })
-        .catch((errors) => {
-          Vue.toasted.error("Something went wrong", {
-            position: "top-center",
-            duration: 5000,
           });
-        });
+      }
     },
     deleteTheTeacher(teacher, index) {
-      axios
-        .post("/api/delete/request/of/teacher/" + teacher.id)
-        .then((response) => {
-          if (response.data.message === true) {
-            Vue.toasted.success("You have successfully deleted the request", {
+      if (confirm("Are you sure you want to teacher ")) {
+        axios
+          .post("/api/delete/request/of/teacher/" + teacher.id)
+          .then((response) => {
+            if (response.data.message === true) {
+              Vue.toasted.success("You have successfully deleted the request", {
+                position: "top-center",
+                duration: 5000,
+              });
+              this.teachersRequestData.splice(index, 1);
+            }
+          })
+          .catch((errors) => {
+            Vue.toasted.error("Something went wrong", {
               position: "top-center",
               duration: 5000,
             });
-            this.teachersRequestData.splice(index, 1);
-          }
-        })
-        .catch((errors) => {
-          Vue.toasted.error("Something went wrong", {
-            position: "top-center",
-            duration: 5000,
           });
-        });
+      }
     },
   },
 };

@@ -6,6 +6,12 @@
     <ul>
       <li v-for="(notification, index) in notificationData" :key="index">
         {{ notification.notify }}
+        <button
+          class="btn btn-danger"
+          @click="deleteNotification(notification, index)"
+        >
+          Delete Notification
+        </button>
       </li>
     </ul>
 
@@ -127,6 +133,25 @@ export default {
             });
         }
       });
+    },
+    deleteNotification(notification, index) {
+      axios
+        .post("/api/channel/delete/notification/" + notification.id)
+        .then((response) => {
+          if (response.data.message === true) {
+            Vue.toasted.success("New Notification is been added", {
+              position: "top-center",
+              duration: 5000,
+            });
+            this.notificationData.splice(index, 1);
+          }
+        })
+        .catch((errors) => {
+          Vue.toasted.error("Something went wrong", {
+            position: "top-center",
+            duration: 5000,
+          });
+        });
     },
   },
 };

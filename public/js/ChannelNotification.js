@@ -158,6 +158,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -220,6 +226,25 @@ __webpack_require__.r(__webpack_exports__);
           });
         }
       });
+    },
+    deleteNotification: function deleteNotification(notification, index) {
+      var _this2 = this;
+
+      axios.post("/api/channel/delete/notification/" + notification.id).then(function (response) {
+        if (response.data.message === true) {
+          Vue.toasted.success("New Notification is been added", {
+            position: "top-center",
+            duration: 5000
+          });
+
+          _this2.notificationData.splice(index, 1);
+        }
+      })["catch"](function (errors) {
+        Vue.toasted.error("Something went wrong", {
+          position: "top-center",
+          duration: 5000
+        });
+      });
     }
   }
 });
@@ -259,7 +284,19 @@ var render = function() {
       "ul",
       _vm._l(_vm.notificationData, function(notification, index) {
         return _c("li", { key: index }, [
-          _vm._v("\n      " + _vm._s(notification.notify) + "\n    ")
+          _vm._v("\n      " + _vm._s(notification.notify) + "\n      "),
+          _c(
+            "button",
+            {
+              staticClass: "btn btn-danger",
+              on: {
+                click: function($event) {
+                  return _vm.deleteNotification(notification, index)
+                }
+              }
+            },
+            [_vm._v("\n        Delete Notification\n      ")]
+          )
         ])
       }),
       0
