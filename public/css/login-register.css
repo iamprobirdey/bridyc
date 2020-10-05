@@ -1,0 +1,41 @@
+.imglogin-register {
+  border-radius: 15px;
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/login-register.png");
+}
+
+.body-login-register input {
+  border: none;
+  border-bottom: 1px solid #d1d1d1;
+  border-radius: 0;
+}
+
+.body-login-register input::-moz-placeholder {
+  color: #b1b1b1;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.body-login-register input:-ms-input-placeholder {
+  color: #b1b1b1;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.body-login-register input::-ms-input-placeholder {
+  color: #b1b1b1;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.body-login-register input::placeholder {
+  color: #b1b1b1;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.body-login-register input:focus {
+  box-shadow: none;
+  border-bottom-color: #4BB543;
+}
+
+.body-login-register label {
+  color: #b1b1b1;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+

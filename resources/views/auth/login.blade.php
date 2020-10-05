@@ -2,24 +2,29 @@
 
 @section('css_code')
 <link rel="stylesheet" type="text/css" href="{{url('css/app.css')}}">
-<link rel="stylesheet" type="text/css" href="{{url('css/privacy.css')}}">
+<link rel="stylesheet" type="text/css" href="{{url('css/login-register.css')}}">
 
 @endsection
 @section('content')
 
-<div class="container ptbody">
+<div class="container-fluid about-faq-contact imglogin-register">
+<div class="txtbanner">
+          <h1 class="text-uppercase mt-n5">Sign In</h1>
+        </div>
+</div>
 
+<div class="container w-75 body-login-register">
     <br>
-    <div class="mainbody">
+
         <form method="POST" action="{{ route('login') }}">
             @csrf
 
-            <div class="form-group row">
-                <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+            <div class="form-group row mx-lg-5">
+                <label for="email" class="col-md-3 col-form-label text-right">{{ __('E-mail id') }}:</label>
 
-                <div class="col-md-6">
+                <div class="col-md-9">
                     <input id="email" type="email" class="form-control @error('email') is-invalid @enderror"
-                        name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                        placeholder="Enter email" name="email" value="{{ old('email') }}" required autocomplete="email">
 
                     @error('email')
                     <span class="invalid-feedback" role="alert">
@@ -29,12 +34,12 @@
                 </div>
             </div>
 
-            <div class="form-group row">
-                <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
+            <div class="form-group row mx-lg-5">
+                <label for="password" class="col-md-3 col-form-label text-right">{{ __('Password') }}:</label>
 
-                <div class="col-md-6">
+                <div class="col-md-9">
                     <input id="password" type="password" class="form-control @error('password') is-invalid @enderror"
-                        name="password" required autocomplete="current-password">
+                    placeholder="Enter password" name="password" required autocomplete="current-password">
 
                     @error('password')
                     <span class="invalid-feedback" role="alert">
@@ -74,7 +79,7 @@
                 </div>
             </div>
         </form>
-    </div>
+
 </div>
 
 @endsection

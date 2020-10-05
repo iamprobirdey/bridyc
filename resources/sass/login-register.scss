@@ -1,0 +1,29 @@
+@import "mixins";
+
+
+.imglogin-register{
+    border-radius: 15px;
+    background-image: linear-gradient(to top,rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/login-register.png");
+}
+
+.body-login-register{
+    input{
+       border: none;
+       border-bottom: 1px solid rgb(209, 209, 209);
+       border-radius: 0;
+       &::placeholder{
+           color: rgb(177, 177, 177);
+           font-family: Verdana, Geneva, Tahoma, sans-serif;
+       }
+
+       &:focus{
+         box-shadow: none;
+         border-bottom-color: #4BB543;
+       }
+    }
+
+    label{
+        color: rgb(177, 177, 177);
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+}
