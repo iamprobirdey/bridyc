@@ -7,6 +7,7 @@ use App\Http\Requests\StoreUserEducationValidation;
 use Illuminate\Http\Request;
 use App\Http\Requests\User\StoreUserGenderValidation;
 use App\User;
+use App\UserActivity;
 use App\UserEducation;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\File;
@@ -40,7 +41,8 @@ class ProfileController extends Controller
         $this->authorize('viewforchannel', current_user());
         auth()->user()->addEducation($request->validated());
         return response()->json([
-            'message' => true
+            'message' => true,
+            'data' => current_user()->education
         ]);
     }
     public function storeEditEducation(UserEducation $userEducation, StoreUserEducationValidation $request)
@@ -128,6 +130,35 @@ class ProfileController extends Controller
         return response()->json([
             'message' => true,
             'user' => $user
+        ]);
+    }
+
+    public function storeActivity(Request $request)
+    {
+        $this->authorize('viewforchannel', current_user());
+        $request->validate([
+            'activity' => 'required|string',
+            'description' => 'required|string'
+        ]);
+        current_user()->activities()->create($request->all());
+
+        return response()->json([
+            'message' => true,
+            'data' => current_user()->activities
+        ]);
+    }
+
+    public function editActivity(UserActivity $userActivity, Request $request)
+    {
+        $this->authorize('viewforchannel', current_user());
+        $request->validate([
+            'activity' => 'required|string',
+            'description' => 'required|string'
+        ]);
+        $userActivity->update($request->all());
+        return response()->json([
+            'message' => true,
+            'data' => current_user()->activities
         ]);
     }
 }

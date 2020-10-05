@@ -323,6 +323,9 @@ Route::group([
         //Add Education
         Route::post('add/education', 'User\ProfileController@storeEducation');
         Route::post('add/education/edit/{user_education:id}', 'User\ProfileController@storeEditEducation');
+        //Activity
+        Route::post('add/activity', 'User\ProfileController@storeActivity');
+        Route::post('edit/activity/{user_activity:id}', 'User\ProfileController@editActivity');
         //Achievement Upload
         Route::post('achievement/add', 'User\AchievementController@store');
         Route::post('achievement/edit/{acheivement:id}', 'User\AchievementController@editStore');

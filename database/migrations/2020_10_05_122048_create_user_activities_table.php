@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateUserEducationTable extends Migration
+class CreateUserActivitiesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,11 @@ class CreateUserEducationTable extends Migration
      */
     public function up()
     {
-        Schema::create('user_education', function (Blueprint $table) {
+        Schema::create('user_activities', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
-            $table->string('school_name');
-            $table->string('degree');
-            $table->string('field_of_study');
+            $table->string('activity');
+            $table->string('description');
             $table->timestamps();
         });
     }
@@ -30,6 +29,6 @@ class CreateUserEducationTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('user_education');
+        Schema::dropIfExists('user_activities');
     }
 }
