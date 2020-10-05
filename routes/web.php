@@ -226,6 +226,7 @@ Route::group([
     Route::get('achievement/{channel:title}', 'User\DashboardController@acheivement')->name('channel.achievement');
     Route::get('teacher/{channel:title}', 'User\DashboardController@teacher')->name('channel.teacher');
     Route::get('new/feature/{channel:title}', 'User\DashboardController@newFeature')->name('channel.feature');
+    Route::get('notification/{channel:title}', 'User\DashboardController@notification')->name('channel.notification');
 });
 
 
@@ -336,5 +337,14 @@ Route::group([
         Route::post('college/image/upload/{channel:id}', 'User\ChannelCollegeImagesController@store');
         //Phone Store
         Route::post('edit/channel/phone/number/{user:id}', 'User\ProfileController@phoneNumberstore');
+        //Store Channel Notifiation
+        Route::post('channel/add/notification/{channel:id}', 'User\ChannelNotificationController@store');
     });
 });
+
+//institue multi image upload ==> done
+//Admin side delete user problem ==> done
+//user verification layout changes with modal ==> done
+//teacher friend request problem ==>
+//Channel profile picture ==> done
+//Notification in channel

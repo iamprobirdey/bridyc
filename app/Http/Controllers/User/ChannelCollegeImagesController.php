@@ -16,49 +16,50 @@ class ChannelCollegeImagesController extends Controller
         $this->middleware('auth');
     }
 
-    public function store(Channel $channel, Request $request){
+    public function store(Channel $channel, Request $request)
+    {
         $request->validate([
             'image' => 'required'
         ]);
-        $this->authorize('viewforchannel',current_user());
-        $this->authorize('checkChannelForUser',$channel);
+        $this->authorize('viewforchannel', current_user());
+        $this->authorize('checkChannelForUser', $channel);
         $time = Carbon::now('Asia/Kolkata');
-        $imageName = $time->year.$time->month.$time->day.( $time->micro + mt_rand(11111,99999) ).'.webp';
+        $imageName = $time->year . $time->month . $time->day . ($time->micro + mt_rand(11111, 99999)) . '.webp';
 
 
 
         $realImage = Image::make($request->input('image'));
-        $realImage->fit(600,600,null,'center');
-        $image = $imageS = $imageM = Image::canvas(600,600, '#ffffff')->insert($realImage);
-        $path = "media/channel/" . current_user_id()."/college/";
-        if(!is_dir($path)){
-            if(File::makeDirectory(public_path($path), 0777, true)){
+        $realImage->fit(600, 600, null, 'center');
+        $image = $imageS = $imageM = Image::canvas(600, 600, '#ffffff')->insert($realImage);
+        $path = "media/channel/" . current_user_id() . "/college/";
+        if (!is_dir($path)) {
+            if (File::makeDirectory(public_path($path), 0777, true)) {
                 $image->resize(600, 600);
-                $image->save(public_path($path).$imageName);
+                $image->save(public_path($path) . $imageName);
                 //FacadesImageOptimizer::optimize($path.$imageName);
                 ///app(Spatie\ImageOptimizer\OptimizerChain::class)->optimize($path.$imageName);
-                $imageM->resize(300,300);
-                $imageM->save(public_path($path).'m-'.$imageName);
+                $imageM->resize(300, 300);
+                $imageM->save(public_path($path) . 'm-' . $imageName);
                 //FacadesImageOptimizer::optimize($path.'m-',$imageName);
-                $imageS->resize(200,200);
-                $imageS->save(public_path($path).'s-'.$imageName);
+                $imageS->resize(200, 200);
+                $imageS->save(public_path($path) . 's-' . $imageName);
                 //FacadesImageOptimizer::optimize($path.'s-',$imageName);
             }
-        }else{
+        } else {
             $image->resize(600, 600);
-            $image->save(public_path($path).$imageName);
+            $image->save(public_path($path) . $imageName);
             //FacadesImageOptimizer::optimize($path.$imageName);
-            $imageM->resize(300,300);
-            $imageM->save(public_path($path).'m-'.$imageName);
+            $imageM->resize(300, 300);
+            $imageM->save(public_path($path) . 'm-' . $imageName);
             //FacadesImageOptimizer::optimize($path.'m-',$imageName);
-            $imageS->resize(200,200);
-            $imageS->save(public_path($path).'s-'.$imageName);
+            $imageS->resize(200, 200);
+            $imageS->save(public_path($path) . 's-' . $imageName);
             //FacadesImageOptimizer::optimize($path.'s-',$imageName);
         }
-        current_user()->channel->collegeImage()->create(['image_path'=>$imageName]);
+        current_user()->channel->collegeImage()->create(['image_path' => $imageName]);
         return response()->json([
             'message' => true,
-            'image' => $imageName
+            'image' => current_user()->channel->collegeImage
         ]);
     }
 }

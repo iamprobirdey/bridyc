@@ -6,6 +6,7 @@ use App\Acheivement;
 use App\Board;
 use App\Channel;
 use App\ChannelCollegeImages;
+use App\ChannelNotification;
 use App\ChannelTeacher;
 use App\District;
 use App\Language;
@@ -80,5 +81,10 @@ trait ChannelAffair
     public function instituteAnalysis()
     {
         return $this->belongsToMany(User::class, 'institute_analyses', 'user_id', 'channel_id');
+    }
+
+    public function notification()
+    {
+        return $this->hasMany(ChannelNotification::class, 'channel_id', 'id');
     }
 }

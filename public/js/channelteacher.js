@@ -255,7 +255,7 @@ var render = function() {
   return _c(
     "div",
     [
-      _vm.teachersRequestData != null
+      _vm.teachersRequestData != ""
         ? _c(
             "div",
             [

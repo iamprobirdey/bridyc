@@ -105,4 +105,13 @@ class DashboardController extends Controller
     {
         return view('institute.new-feature');
     }
+
+    public function notification(Channel $channel)
+    {
+
+        return view('institute.notification', [
+            'notification' => $channel->notification,
+            'channelId' => $channel->id
+        ]);
+    }
 }

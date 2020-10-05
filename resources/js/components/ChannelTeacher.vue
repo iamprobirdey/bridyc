@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-if="teachersRequestData != null">
+    <div v-if="teachersRequestData != ''">
       <h1>
         You have a
         <span class="text-danger">pending</span> request
