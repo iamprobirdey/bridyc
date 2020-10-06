@@ -641,6 +641,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -3624,7 +3625,7 @@ var render = function() {
                     _vm.userId +
                     "/avatar/" +
                     _vm.userImage,
-              alt: "icon image"
+              alt: "principal profile picture"
             }
           }),
           _vm._v(" "),
@@ -3632,7 +3633,6 @@ var render = function() {
             "button",
             {
               staticClass: "btn princi-profile-edit p-2",
-              attrs: { "data-toggle": "tooltip", title: "Change Picture" },
               on: {
                 click: function($event) {
                   return _vm.editTheIcon()
@@ -3641,7 +3641,7 @@ var render = function() {
             },
             [
               _c("i", {
-                staticClass: "fa fa-camera",
+                staticClass: "fa fa-pencil",
                 attrs: { "aria-hidden": "true" }
               }),
               _vm._v(" Change Logo\n    ")

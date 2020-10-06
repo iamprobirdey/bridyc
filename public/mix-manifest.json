@@ -1,6 +1,6 @@
 {
     "/js/ChannelNotification.js": "/js/ChannelNotification.js?id=bcf0736ec418f0dfe43e",
-    "/js/ChannelProfile.js": "/js/ChannelProfile.js?id=a70612365aa78c05ef74",
+    "/js/ChannelProfile.js": "/js/ChannelProfile.js?id=dda449afa37c4d7e8cf7",
     "/js/achievement.js": "/js/achievement.js?id=ffbc0dedb5ceadedc28c",
     "/js/adminVerification.js": "/js/adminVerification.js?id=da29f761fdabf84181ff",
     "/js/app.js": "/js/app.js?id=09b04e99121d641694c6",
@@ -15,17 +15,17 @@
     "/css/profile.css": "/css/profile.css?id=9fd8ffffcccf7c140552",
     "/css/about.css": "/css/about.css?id=4b349bee3dd5a7117d35",
     "/css/login-register.css": "/css/login-register.css?id=47510912efc74b9fae90",
-    "/js/channel.js": "/js/channel.js?id=02e58a6a90d09f46d262",
+    "/js/channel.js": "/js/channel.js?id=4e6bc0612aa285c8532e",
     "/js/channelInDashboard.js": "/js/channelInDashboard.js?id=c5eedae5ce5301fe3bb1",
     "/js/channelteacher.js": "/js/channelteacher.js?id=d499d6addf47fd5d9bdf",
     "/js/channelwithslug.js": "/js/channelwithslug.js?id=98014ed8a88e5ea2a5d8",
     "/js/contactus.js": "/js/contactus.js?id=4e6497d701f68fd9c614",
     "/js/dashboard.js": "/js/dashboard.js?id=c7ca2e3610669845932b",
     "/js/dashboardBlade.js": "/js/dashboardBlade.js?id=6acb35d2f9962618f5b0",
-    "/js/editChannel.js": "/js/editChannel.js?id=d64e7976488a946c5e51",
+    "/js/editChannel.js": "/js/editChannel.js?id=f631235b2dde34b5af9a",
     "/js/instituteRegister.js": "/js/instituteRegister.js?id=9a39d791ba491ae31ba6",
     "/js/loginSignupModal.js": "/js/loginSignupModal.js?id=7acfd01a7ac8da5ab85a",
     "/js/profile.js": "/js/profile.js?id=3954d27ad0e62fa22c4a",
     "/js/teacherProfile.js": "/js/teacherProfile.js?id=e0c85826c1dbaa8793b8",
-    "/js/verification.js": "/js/verification.js?id=a0cd11ec41ee10f2abef"
+    "/js/verification.js": "/js/verification.js?id=a51cb1d045b847a09287"
 }

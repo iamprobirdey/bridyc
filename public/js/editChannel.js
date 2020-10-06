@@ -406,6 +406,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -2064,7 +2067,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.btnsubmitcover[data-v-ccb8d420] {\n  background-color: #013737;\n  color: white;\n  padding-top: 2px;\n  padding-bottom: 2px;\n  border-radius: 0;\n  z-index: 100;\n}\n.btnsuca[data-v-ccb8d420] {\n  text-align: center;\n}\n.btn-success[data-v-ccb8d420] {\n  padding-top: 0.1rem !important;\n  padding-bottom: 0.1rem !important;\n}\n", ""]);
+exports.push([module.i, "\n.btnsubmitcover[data-v-ccb8d420] {\r\n  background-color: #013737;\r\n  color: white;\r\n  padding-top: 2px;\r\n  padding-bottom: 2px;\r\n  border-radius: 0;\r\n  z-index: 100;\n}\n.btnsuca[data-v-ccb8d420] {\r\n  text-align: center;\n}\n.btn-success[data-v-ccb8d420] {\r\n  padding-top: 0.1rem !important;\r\n  padding-bottom: 0.1rem !important;\n}\r\n", ""]);
 
 // exports
 
@@ -2102,7 +2105,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.btnsubmiticon[data-v-d9ed4160] {\n  background-color: #013737;\n  color: white;\n  padding-top: 2px;\n  padding-bottom: 2px;\n  border-radius: 0;\n  z-index: 100;\n}\n.btnsuca[data-v-d9ed4160] {\n  text-align: center;\n}\n.btn-success[data-v-d9ed4160] {\n  padding-top: 0.1rem !important;\n  padding-bottom: 0.1rem !important;\n}\n", ""]);
+exports.push([module.i, "\n.btnsubmiticon[data-v-d9ed4160] {\r\n  background-color: #013737;\r\n  color: white;\r\n  padding-top: 2px;\r\n  padding-bottom: 2px;\r\n  border-radius: 0;\r\n  z-index: 100;\n}\n.btnsuca[data-v-d9ed4160] {\r\n  text-align: center;\n}\n.btn-success[data-v-d9ed4160] {\r\n  padding-top: 0.1rem !important;\r\n  padding-bottom: 0.1rem !important;\n}\r\n", ""]);
 
 // exports
 
