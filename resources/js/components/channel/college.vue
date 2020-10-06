@@ -1,7 +1,7 @@
 <template>
   <div>
     <div>
-      <ul>
+      <ul class="nav">
         <li v-for="(image, index) in channelData.college_image" :key="index">
           <img
             :src="
@@ -13,20 +13,23 @@
             "
             height="120"
             width="120"
-            alt=""
+            alt="college infrastructure"
+            class="border border-light m-1"
           />
         </li>
       </ul>
     </div>
     <button
       v-if="!collegeImageEntry"
-      class="btn btn-primary"
+      class="btn btnsubmit rounded-0"
       @click="insertImage()"
     >
-      Insert image for your College
+      Insert images
     </button>
+
     <div v-if="collegeImageEntry">
       <picture-input
+      
         ref="pictureInput"
         width="152"
         height="150"
@@ -36,16 +39,16 @@
         button-class="btn"
         :custom-strings="{
           upload: '<h1>Bummer!</h1>',
-          drag: 'Upload your logo',
+          drag: 'Upload Infrastructure images',
         }"
         @change="onChange"
         name="image"
       ></picture-input>
-      <div class="btnsuca">
+      <div class="btnsuca mt-2 text-center">
         <button
           v-if="imageData != ''"
           type="button"
-          class="btn btn-primary btnsubmiticon rounded-0"
+          class="btn btnsubmit mt-n2"
           @click="onImageSubmit()"
         >
           Submit
@@ -55,10 +58,10 @@
           @click="canTheEdit()"
           class="btn btn-success"
         >
-          <i class="fa fa-times" aria-hidden="true"></i>Cancel
+          <i class="fa fa-times" aria-hidden="true"></i> Cancel
         </button>
       </div>
-      <span v-show="imageError" class="text-danger">{{ imageError }}</span>
+      <span v-show="imageError" class="text-danger text-center">{{ imageError }}</span>
     </div>
   </div>
 </template>

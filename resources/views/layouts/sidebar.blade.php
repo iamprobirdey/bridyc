@@ -36,7 +36,7 @@
             <li class="nav-item">
                 <a class="nav-link" href="{{route('user.profile',auth()->user()->username)}}">
                     <i class="fa fa-user-circle-o sidebaricons" aria-hidden="true"></i>
-                    Profile
+                    Principal Profile
                 </a>
             </li>
             <li class="nav-item">

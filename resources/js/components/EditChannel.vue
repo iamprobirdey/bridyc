@@ -36,10 +36,10 @@
         <college :channel="channelData"></college>
       </div>
     </div>
-    <div class="row mt-5">
-      <div class="col-sm-6">
+    <div class="container mt-5 ml-0 w-50">
+      
         <phone :user="userData"></phone>
-      </div>
+      
     </div>
   </div>
 </template>

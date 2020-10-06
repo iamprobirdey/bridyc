@@ -730,3 +730,115 @@ main .editachieve:focus {
   box-shadow: none;
 }
 
+main .body-channelprofile {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+main .body-channelprofile::-moz-placeholder {
+  color: gainsboro;
+}
+
+main .body-channelprofile:-ms-input-placeholder {
+  color: gainsboro;
+}
+
+main .body-channelprofile::-ms-input-placeholder {
+  color: gainsboro;
+}
+
+main .body-channelprofile::placeholder {
+  color: gainsboro;
+}
+
+main .body-channelprofile h4 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+main .profile {
+  max-width: 100%;
+}
+
+main .profile .princi-profile-picture {
+  border: 2px solid gainsboro;
+}
+
+main .profile img {
+  width: 170px;
+  height: 170px;
+}
+
+@media only screen and (min-width: 768px) {
+  main .profile img {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+main .profile .princi-profile-edit {
+  position: relative;
+  left: -16%;
+  top: 53px;
+  z-index: inherit;
+  cursor: pointer;
+  background-color: gainsboro;
+}
+
+@media only screen and (min-width: 481px) {
+  main .profile .princi-profile-edit {
+    left: -11%;
+    top: 55px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  main .profile .princi-profile-edit {
+    left: -7%;
+    top: 70px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  main .profile .princi-profile-edit {
+    left: -6%;
+  }
+}
+
+main .profile .upload-profile-pic {
+  position: relative;
+  top: -153px;
+}
+
+main .profile .edit-btn {
+  color: #6fb604;
+}
+
+main .profile .btnsubmit {
+  background-color: #003585;
+  color: white;
+  position: relative;
+  top: 5px;
+  left: 0;
+  border-radius: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+main .profile .btnsubmit:hover {
+  background-color: #011737;
+  color: white;
+}
+
+main .profile .pricipal-modal h5 {
+  color: #003585;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+main .profile .pricipal-modal h6 {
+  color: #003585;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+main .profile .princi-profile-display .mission-message-display {
+  background-color: #f9fafa;
+}
+

@@ -1,6 +1,6 @@
 <template>
   <div>
-        <h4>We can't see your social media handles</h4>
+        <h4>Social Media handles</h4>
           <ul v-if="getTheModel === false">
               <li v-if="socialData.facebook != null">
                     <a :href="socialData.facebook" target="_blank"><span>Facebook</span></a>
@@ -16,7 +16,7 @@
               </li>
           </ul>
           <button @click="editTheSocial()"
-            class="btn btn-success">
+            class="btn btnwebdes"><i class="fa fa-pencil" aria-hidden="true"></i> 
             Edit
           </button>
           <div v-if="getTheModel">

@@ -403,6 +403,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -1289,6 +1292,7 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
 //
 //
 //
@@ -14854,14 +14858,12 @@ var render = function() {
       )
     ]),
     _vm._v(" "),
-    _c("div", { staticClass: "row mt-5" }, [
-      _c(
-        "div",
-        { staticClass: "col-sm-6" },
-        [_c("phone", { attrs: { user: _vm.userData } })],
-        1
-      )
-    ])
+    _c(
+      "div",
+      { staticClass: "container mt-5 ml-0 w-50" },
+      [_c("phone", { attrs: { user: _vm.userData } })],
+      1
+    )
   ])
 }
 var staticRenderFns = []
@@ -15002,9 +15004,11 @@ var render = function() {
     _c("div", [
       _c(
         "ul",
+        { staticClass: "nav" },
         _vm._l(_vm.channelData.college_image, function(image, index) {
           return _c("li", { key: index }, [
             _c("img", {
+              staticClass: "border border-light m-1",
               attrs: {
                 src:
                   _vm.domainUrl +
@@ -15014,7 +15018,7 @@ var render = function() {
                   image.image_path,
                 height: "120",
                 width: "120",
-                alt: ""
+                alt: "college infrastructure"
               }
             })
           ])
@@ -15027,14 +15031,14 @@ var render = function() {
       ? _c(
           "button",
           {
-            staticClass: "btn btn-primary",
+            staticClass: "btn btnsubmit rounded-0",
             on: {
               click: function($event) {
                 return _vm.insertImage()
               }
             }
           },
-          [_vm._v("\n    Insert image for your College\n  ")]
+          [_vm._v("\n    Insert images\n  ")]
         )
       : _vm._e(),
     _vm._v(" "),
@@ -15053,19 +15057,19 @@ var render = function() {
                 "button-class": "btn",
                 "custom-strings": {
                   upload: "<h1>Bummer!</h1>",
-                  drag: "Upload your logo"
+                  drag: "Upload Infrastructure images"
                 },
                 name: "image"
               },
               on: { change: _vm.onChange }
             }),
             _vm._v(" "),
-            _c("div", { staticClass: "btnsuca" }, [
+            _c("div", { staticClass: "btnsuca mt-2 text-center" }, [
               _vm.imageData != ""
                 ? _c(
                     "button",
                     {
-                      staticClass: "btn btn-primary btnsubmiticon rounded-0",
+                      staticClass: "btn btnsubmit mt-n2",
                       attrs: { type: "button" },
                       on: {
                         click: function($event) {
@@ -15093,7 +15097,7 @@ var render = function() {
                         staticClass: "fa fa-times",
                         attrs: { "aria-hidden": "true" }
                       }),
-                      _vm._v("Cancel\n      ")
+                      _vm._v(" Cancel\n      ")
                     ]
                   )
                 : _vm._e()
@@ -15110,7 +15114,7 @@ var render = function() {
                     expression: "imageError"
                   }
                 ],
-                staticClass: "text-danger"
+                staticClass: "text-danger text-center"
               },
               [_vm._v(_vm._s(_vm.imageError))]
             )
@@ -15201,7 +15205,7 @@ var render = function() {
               on: { change: _vm.onChange }
             }),
             _vm._v(" "),
-            _c("div", { staticClass: "btnsuca" }, [
+            _c("div", { staticClass: "btnsuca mt-2" }, [
               _vm.imageData != ""
                 ? _c(
                     "button",
@@ -15552,7 +15556,7 @@ var render = function() {
               on: { change: _vm.onChange }
             }),
             _vm._v(" "),
-            _c("div", { staticClass: "btnsuca" }, [
+            _c("div", { staticClass: "btnsuca mt-2" }, [
               _vm.imageData != ""
                 ? _c(
                     "button",
@@ -17022,10 +17026,14 @@ var render = function() {
   return _c("div", [
     _vm.phoneVerificationChecker
       ? _c("div", [
-          _c("p", [
-            _vm._v("\n      " + _vm._s(_vm.userData.phone) + "\n      "),
+          _c("label", { attrs: { col: "col-sm-3 col-form-label" } }, [
+            _vm._v("Phone: ")
+          ]),
+          _vm._v(" "),
+          _c("button", { staticClass: "btn btn-info" }, [
+            _vm._v("\n      +91 " + _vm._s(_vm.userData.phone) + "\n      "),
             _vm.userData.phone_verified != null
-              ? _c("span", { staticClass: "text-success" }, [
+              ? _c("span", { staticClass: "text-success text-center" }, [
                   _vm._v("verified")
                 ])
               : _vm._e()
@@ -17254,8 +17262,11 @@ var staticRenderFns = [
     return _c("div", { staticClass: "ml-5" }, [
       _c(
         "button",
-        { staticClass: "btn btnsubmit mt-n2", attrs: { type: "submit" } },
-        [_vm._v("Submit")]
+        {
+          staticClass: "btn btnsubmit mt-n2 rounded-0",
+          attrs: { type: "submit" }
+        },
+        [_vm._v("Verify")]
       )
     ])
   },
@@ -17294,7 +17305,7 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c("h4", [_vm._v("We can't see your social media handles")]),
+    _c("h4", [_vm._v("Social Media handles")]),
     _vm._v(" "),
     _vm.getTheModel === false
       ? _c("ul", [
@@ -17349,14 +17360,20 @@ var render = function() {
     _c(
       "button",
       {
-        staticClass: "btn btn-success",
+        staticClass: "btn btnwebdes",
         on: {
           click: function($event) {
             return _vm.editTheSocial()
           }
         }
       },
-      [_vm._v("\n          Edit\n        ")]
+      [
+        _c("i", {
+          staticClass: "fa fa-pencil",
+          attrs: { "aria-hidden": "true" }
+        }),
+        _vm._v(" \n          Edit\n        ")
+      ]
     ),
     _vm._v(" "),
     _vm.getTheModel

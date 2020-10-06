@@ -1,12 +1,13 @@
 <template>
   <div>
     <div v-if="phoneVerificationChecker">
-      <p>
-        {{ userData.phone }}
-        <span v-if="userData.phone_verified != null" class="text-success"
+      <label col="col-sm-3 col-form-label">Phone: </label>
+      <button class="btn btn-info">
+        +91 {{ userData.phone }}
+        <span v-if="userData.phone_verified != null" class="text-success text-center"
           >verified</span
         >
-      </p>
+      </button>
       <!-- <button
         v-if="userData.phone_verified == null"
         class="btn btn-primary"
@@ -52,7 +53,7 @@
             >
           </div>
           <div class="ml-5">
-            <button type="submit" class="btn btnsubmit mt-n2">Submit</button>
+            <button type="submit" class="btn btnsubmit mt-n2 rounded-0">Verify</button>
           </div>
         </form>
       </div>
