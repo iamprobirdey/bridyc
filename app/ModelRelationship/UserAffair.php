@@ -6,6 +6,7 @@ use App\Acheivement;
 use App\Channel;
 use App\Hobby;
 use App\Subject;
+use App\UserActivity;
 use App\UserChannelRequest;
 use App\UserEducation;
 use App\UserInformation;
@@ -16,6 +17,11 @@ trait UserAffair
     public function userinstitute()
     {
         return $this->hasOne(UserInstitute::class, 'user_id', 'id');
+    }
+
+    public function activities()
+    {
+        return $this->hasMany(UserActivity::class, 'user_id', 'id');
     }
 
     public function education()

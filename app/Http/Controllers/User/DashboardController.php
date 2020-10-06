@@ -70,7 +70,7 @@ class DashboardController extends Controller
     public function profile(User $user)
     {
         $this->authorize('view', $user);
-        $user = User::where('id', auth()->id())->with('education')->get();
+        $user = User::where('id', auth()->id())->with('education')->with('activities')->get();
         return view('institute.profile')
             ->with([
                 'user' => $user[0]

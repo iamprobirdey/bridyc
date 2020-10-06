@@ -40,9 +40,7 @@
           }}
         </span>
         <span v-show="profileError != ''" class="help is-danger">
-          {{
-          profileError.gender
-          }}
+          {{ profileError.gender }}
         </span>
       </div>
          <div
@@ -89,79 +87,80 @@
          <button type="button" class="btn btn-success" @click="goBack()">Back</button>
       <button type="submit" class="btn btnsubmit mt-n2">Submit</button>
     </form>
-    </div>
+  </div>
 </template>
 
 <script>
 export default {
-    data(){
-        return{
-            channelProfileData : [],
-            genderVissionChecker: true,
-            profileData: {
-                'gender' :  '',
-                'vission' : '',
-                'message' : ''
-            },
-            profileError: {
-                'gender' :  '',
-                'vission' : '',
-                'message' : ''
-            },
-        };
+  data() {
+    return {
+      channelProfileData: [],
+      genderVissionChecker: true,
+      profileData: {
+        gender: "",
+        vission: "",
+        message: "",
+      },
+      profileError: {
+        gender: "",
+        vission: "",
+        message: "",
+      },
+    };
+  },
+  props: {
+    user: {
+      type: Array,
+      default: null,
     },
-    props:{
-        user : {
-            type : Object,
-            default : null
-        }
-    },
-    created(){
-        this.channelProfileData = this.user;
-        if(this.channelProfileData.gender == null) this.genderVissionChecker = false;
-    },
-    mounted(){},
-    methods:{
-            getFormData(){
-            this.$validator.validate().then(result => {
-                console.log(result);
-                if (result) {
-                    axios
-                        .post('/api/gender/vission', this.profileData)
-                        .then(response => {
-                            if (response.data.message === true) {
-                                Vue.toasted.success("Profile is updated", {
-                                    position: "top-center",
-                                    duration: 5000
-                                });
-                                this.channelProfileData.gender = this.profileData.gender;
-                                this.channelProfileData.vission = this.profileData.vission;
-                                this.channelProfileData.message = this.profileData.message;
-                                this.genderVissionChecker = true;
-                            }
-                        })
-                        .catch(errors => {
-                             Vue.toasted.error("Something went wrong", {
-                                    position: "top-center",
-                                    duration: 5000
-                            });
-                              if (errors.response.data.errors.gender) {
-                                    this.profileError.gender =
-                                    errors.response.data.errors.gender[0];
-                                }
-                                  if (errors.response.data.errors.vission) {
-                                    this.profileError.vission =
-                                    errors.response.data.errors.vission[0];
-                                }
-                        });
-                }
+  },
+  created() {
+    this.channelProfileData = this.user;
+    if (this.channelProfileData.gender == null)
+      this.genderVissionChecker = false;
+  },
+  mounted() {},
+  methods: {
+    getFormData() {
+      this.$validator.validate().then((result) => {
+        console.log(result);
+        if (result) {
+          axios
+            .post("/api/gender/vission", this.profileData)
+            .then((response) => {
+              if (response.data.message === true) {
+                Vue.toasted.success("Profile is updated", {
+                  position: "top-center",
+                  duration: 5000,
+                });
+                this.channelProfileData.gender = this.profileData.gender;
+                this.channelProfileData.vission = this.profileData.vission;
+                this.channelProfileData.message = this.profileData.message;
+                this.genderVissionChecker = true;
+              }
+            })
+            .catch((errors) => {
+              Vue.toasted.error("Something went wrong", {
+                position: "top-center",
+                duration: 5000,
+              });
+              if (errors.response.data.errors.gender) {
+                this.profileError.gender =
+                  errors.response.data.errors.gender[0];
+              }
+              if (errors.response.data.errors.vission) {
+                this.profileError.vission =
+                  errors.response.data.errors.vission[0];
+              }
             });
-        },
-        editGenderAndVission(){
-            this.profileData.gender = this.channelProfileData.gender;
-            this.profileData.vission = this.channelProfileData.vission;
-            this.genderVissionChecker = false;
-        },
-    }
-}
+        }
+      });
+    },
+    editGenderAndVission() {
+      this.profileData.gender = this.channelProfileData.gender;
+      this.profileData.vission = this.channelProfileData.vission;
+      this.genderVissionChecker = false;
+    },
+  },
+};
 </script>

@@ -26,12 +26,10 @@ class StoreUserEducationValidation extends FormRequest
         return [
             'school_name' => 'required',
             'degree' => 'required',
-            'field_of_study' => 'required',
-            'start_date' => 'required|date',
-            'end_date' => 'required|date',
-            'grade' => 'required',
-            'activities_and_sociaties' => 'required',
-            'description' => 'required'
+            'field_of_study' => 'required'
+
+            // 'activities_and_sociaties' => 'required',
+            // 'description' => 'required'
         ];
     }
 }
