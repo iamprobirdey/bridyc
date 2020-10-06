@@ -30,12 +30,12 @@ class ChannelVerificationValidation extends FormRequest
             'village_id' =>  "required|numeric|exists:villages,id",
             'language_id' =>  "required|numeric|exists:languages,id",
             'title' =>  "required|string",
-            'udise' =>  "required|string",
+            'udise' =>  "nullable|string",
             'location' =>  "required",
-            'ownership' =>  ["required",Rule::in(['private', 'government'])],
+            'ownership' =>  ["required", Rule::in(['private', 'government'])],
             'founded' =>  "required|date",
             'pin' =>  "required|digits:6",
-            'gender' =>  ["required",Rule::in(['only_boys', 'only_girls','both'])]
+            'gender' =>  ["required", Rule::in(['only_boys', 'only_girls', 'both'])]
         ];
     }
 }

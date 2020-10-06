@@ -34,21 +34,30 @@ class ChannelController extends Controller
         $this->fireTheLog($channel);
 
         $channel = $channel
-            ->with(['state', 'district', 'village', 'language'])
+            ->with(['state', 'district', 'village', 'language', 'achievement', 'collegeImage'])
+            ->with(['teacher' => function ($query) {
+                $query->with(['user']);
+            }])
+            ->with(['notification' => function ($query) {
+                $query->orderBy('created_at', 'desc');
+            }])
             ->first();
         $user = User::where('id', $channel->user_id)
+            ->select('id', 'email', 'vission', 'message', 'name', 'avatar')
             ->with('verification')
             ->first();
         $currentUser = null;
+        $isTeacher = false;
         if (auth()->check()) {
             if (current_user()->isTeacher()) {
                 $currentUser = UserChannelRequest::where('user_id', current_user_id())->first();
             }
+            $isTeacher = current_user()->isTeacher();
         }
 
         $userId = current_user_id();
 
-        return view('channel_with_slug', compact(['channel', 'user', 'currentUser', 'userId']));
+        return view('channel_with_slug', compact(['channel', 'user', 'currentUser', 'userId', 'isTeacher']));
     }
 
     private function fireTheLog($channel)

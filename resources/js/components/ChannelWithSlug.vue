@@ -3,8 +3,7 @@
     <main class="container-fluid px-1">
       <!--coverpic addition-->
       <div class="mx-lg-5 mt-lg-5 pt-lg-3">
-        <img
-          :srcset="
+        <!-- :srcset="
             channelData.cover_avatar != null
               ? domainUrl +
                 '/media/channel/' +
@@ -18,13 +17,14 @@
                 '/s-' +
                 channelData.cover_avatar
               : '/images/banner2.png'
-          "
+          " -->
+        <img
           :src="
             channelData.cover_avatar != null
               ? domainUrl +
                 '/media/channel/' +
                 channel.user_id +
-                '/' +
+                '/cover/' +
                 channelData.cover_avatar
               : '/images/banner2.png'
           "
@@ -44,7 +44,12 @@
                   ? 'javascript:void(0)'
                   : channelData.website_link
               "
-              >Visit Website
+            >
+              {{
+                channelData.website_link === null
+                  ? "Website link not-provided"
+                  : "Visit Website"
+              }}
               <i class="fa fa-external-link" aria-hidden="true"></i
             ></a>
           </div>
@@ -57,16 +62,33 @@
               <i class="fa fa-envelope mr-1" aria-hidden="true"></i
               >{{ userData.email }}
             </p>
-            <button
-              class="btn btn-primary"
-              v-if="channelRequestChecker"
-              @click="requestForChannel()"
-            >
-              Send Request
-            </button>
-            <button class="btn btn-success" v-if="channelRequestsuccefull">
-              Request Successfull
-            </button>
+            <div v-if="isTeacher">
+              <button
+                class="btn btn-primary"
+                v-if="channelRequestDecider === 'can-request'"
+                @click="requestForChannel()"
+              >
+                Send Request
+              </button>
+              <button
+                class="btn btn-success"
+                v-if="channelRequestDecider === 'in-progress'"
+              >
+                Request Successfull
+              </button>
+              <button
+                class="btn btn-danger"
+                v-if="channelRequestDecider === 'rejected'"
+              >
+                Request Rejected
+              </button>
+              <button
+                class="btn btn-primary"
+                v-if="channelRequestDecider === 'accepted'"
+              >
+                Your School
+              </button>
+            </div>
           </div>
         </div>
 
@@ -77,7 +99,7 @@
                 ? domainUrl +
                   '/media/channel/' +
                   channel.user_id +
-                  '/' +
+                  '/avatar/' +
                   channelData.icon_avatar
                 : '/images/college logo.jpg'
             "
@@ -185,26 +207,15 @@
                   </div>
                   <hr class="w-25" />
                   <div class="mt-5">
-                    <p>
+                    <p
+                      v-for="(notification, index) in channelData.notification"
+                      :key="index"
+                    >
                       <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-                      Shads sdjahbdk skasdk jashdas jasdkn
-                      <span class="badge badge-info">New</span>
-                    </p>
-                    <p>
-                      <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-                      Shads sdjahbdk skasdk jashdas jasdkn sbsakd jasdkas
-                    </p>
-                    <p>
-                      <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-                      Shads sdjahbdk skasdk jashdas jasdkn sbsakd jasdkas
-                    </p>
-                    <p>
-                      <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-                      Shads sdjahbdk skasdk jashdas
-                    </p>
-                    <p>
-                      <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
-                      Shads sdjahbdk skasdk jashdas jasdkn sbsakd
+                      {{ notification.notify }}
+                      <span class="badge badge-info" v-if="index === 0"
+                        >New</span
+                      >
                     </p>
                   </div>
                 </div>
@@ -227,20 +238,21 @@
                   <li data-target="#carouid" data-slide-to="4"></li>
                 </ul>
                 <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img src="/images/testcollege.jpg" />
-                  </div>
-                  <div class="carousel-item">
-                    <img src="/images/testcollege2.jpg" />
-                  </div>
-                  <div class="carousel-item">
-                    <img src="/images/testcollege3.jpg" />
-                  </div>
-                  <div class="carousel-item">
-                    <img src="/images/testcollege4.jpg" />
-                  </div>
-                  <div class="carousel-item">
-                    <img src="/images/testcollege5.jpg" />
+                  <div
+                    class="carousel-item"
+                    :class="index === 0 ? 'active' : ''"
+                    v-for="(college, index) in channelData.college_image"
+                    :key="index"
+                  >
+                    <img
+                      :src="
+                        domainUrl +
+                        '/media/channel/' +
+                        channelData.user_id +
+                        '/college/' +
+                        college.image_path
+                      "
+                    />
                   </div>
                 </div>
               </div>
@@ -249,15 +261,20 @@
             <div class="container-fluid facultyachieve mt-lg-5 px-0">
               <h2 class="text-uppercase">Our Achievements</h2>
               <hr class="mt-n2" />
-              <div class="row mb-5 mt-5">
-                <div class="card shadow mx-auto facultyachievecard">
-                  <img src="/images/guest.jpg" />
+              <div class="row mb-5 mt-5" v-if="channelData.achievement != null">
+                <div
+                  class="card shadow mx-auto facultyachievecard"
+                  v-for="(achievement, index) in channelData.achievement"
+                  :key="index"
+                >
+                  <img :src="domainUrl + '/' + achievement.image_path" />
                   <div class="card-body mt-n1">
-                    <h6 class="card-title my-n1">Name of the individual</h6>
-                    <p class="card-text">Type of achievement</p>
+                    <h6 class="card-title my-n1">{{ achievement.title }}</h6>
+                    <p class="card-text">{{ achievement.description }}</p>
                   </div>
                 </div>
               </div>
+              <div v-else>No Achievements Provided</div>
             </div>
             <!-- home content from below ends-->
           </div>
@@ -271,30 +288,22 @@
               <div class="row mt-3">
                 <div class="col-md-6">
                   <p class="principal-message">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Quisque iaculis risus quis tortor eleifend, non facilisis
-                    ante vulputate. Donec iaculis, ex in euismod sagittis,
-                    turpis felis malesuada nisi, a facilisis ex enim ut nunc.
-                    Vestibulum ut tincidunt justo, sit amet faucibus elit.
-                    Aliquam ac nibh eros. Nulla id risus dolor. Ut nulla turpis,
-                    laoreet et libero a, faucibus accumsan risus. Morbi euismod
-                    mauris mi, sit amet tempus ligula pretium vel. Nunc sem
-                    ligula, aliquam id purus et, egestas sagittis lorem. Duis at
-                    justo magna. Donec in egestas turpis. Aliquam maximus nulla
-                    sapien, sagittis dictum sem laoreet sit amet. Donec elit
-                    tortor, tincidunt non aliquet id, rhoncus in felis.
-                    Vestibulum ultrices ante id risus vehicula venenatis.Aenean
-                    id pulvinar sem. Cras elementum eu orci nec mollis. Donec
-                    molestie iaculis pharetra. Duis ullamcorper erat ut aliquet
-                    tristique. Etiam venenatis mauris id massa interdum viverra.
+                    {{
+                      userData.message != null
+                        ? userData.message
+                        : "Message from Institute not provided"
+                    }}
                   </p>
                 </div>
                 <div class="col-md-6">
                   <div class="card principalcard">
-                    <img src="/images/PrincipalPhoto.jpg" />
+                    <img :src="domainUrl + '/images/' + userData.avatar" />
+                    <!-- <img src="/image/default.jpg" /> -->
                     <div class="card-body mt-n1">
-                      <h4 class="card-title my-n1">Principal name</h4>
-                      <p class="card-text">Principal, BCDSER</p>
+                      <h4 class="card-title my-n1">
+                        {{ userData.name }}
+                      </h4>
+                      <p class="card-text">Principal, {{ channel.title }}</p>
                     </div>
                   </div>
                 </div>
@@ -302,11 +311,11 @@
               <div>
                 <h6 class="text-uppercase mt-2">Mission & Vision</h6>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Quisque iaculis risus quis tortor eleifend, non facilisis ante
-                  vulputate. Donec iaculis, ex in euismod sagittis, turpis felis
-                  malesuada nisi, a facilisis ex enim ut nunc. Vestibulum ut
-                  tincidunt justo, sit amet faucibus elit.
+                  {{
+                    userData.vission != null
+                      ? userData.vission
+                      : "Vission from Institute not provided"
+                  }}
                 </p>
               </div>
             </div>
@@ -349,10 +358,20 @@
               <h2 class="text-uppercase">Our Faculties</h2>
               <hr class="mt-n2" />
               <div class="row mb-5 mt-5">
-                <div class="card shadow mx-auto facultyachievecard">
-                  <img src="/images/teacher.jpg" />
+                <div
+                  class="card shadow mx-auto facultyachievecard"
+                  v-for="(teacher, index) in channelData.teacher"
+                  :key="index"
+                >
+                  <img
+                    :src="
+                      teacher.user.avatar === 'default.jpg'
+                        ? '/images/teacher.jpg'
+                        : '/images/' + teacher.user.avatar
+                    "
+                  />
                   <div class="card-body mt-n1">
-                    <h6 class="card-title my-n1">Faculty Name</h6>
+                    <h6 class="card-title my-n1">{{ teacher.user.name }}</h6>
                     <p class="card-text">Qualification</p>
                   </div>
                 </div>
@@ -443,9 +462,9 @@ export default {
       phoneNo: "",
       socialCount: 0,
       sessionUrl: window.location.pathname.split("/")[2],
-      channelRequestChecker: false,
-      channelRequestsuccefull: false,
       userID: "",
+      isTeacher: false,
+      channelRequestDecider: "",
     };
   },
   props: {
@@ -465,13 +484,20 @@ export default {
       type: Number,
       default: null,
     },
+    isteacher: {
+      type: Boolean,
+      default: null,
+    },
   },
   created() {
     this.userData = this.user;
     this.channelData = this.channel;
+    console.log(this.userData);
+    console.log(this.channelData);
     this.currentuserData = this.currentuser;
     this.phoneNo = this.userData.phone ? this.userData.phone : "Not provided";
     this.userID = this.userid;
+    this.isTeacher = this.isteacher;
     if (
       this.channelData.extra_attributes.social.facebook === null &&
       this.channelData.extra_attributes.social.linkedin === null &&
@@ -479,7 +505,6 @@ export default {
     ) {
       this.socialCount = 1;
     }
-    console.log(this.currentuser);
   },
   mounted() {
     this.getChannelSession();
@@ -487,24 +512,37 @@ export default {
   },
   methods: {
     requestChannelSatisfier() {
-      if (this.currentuserData != null) {
+      if (this.isTeacher && this.currentuserData != null) {
         if (
           this.currentuserData.request === "in-progress" &&
           this.currentuserData.channel_id == this.channelData.id
-        ) {
-          this.channelRequestsuccefull = true;
-        }
+        )
+          this.channelRequestDecider = "in-progress";
+
+        if (
+          this.currentuserData.request === "accepted" &&
+          this.currentuserData.channel_id == this.channelData.id
+        )
+          this.channelRequestDecider = "accepted";
+
+        if (
+          this.currentuserData.request === "rejected" &&
+          this.currentuserData.channel_id == this.channelData.id
+        )
+          this.channelRequestDecider = "rejected";
+
         if (
           this.currentuserData.request === "rejected" &&
           this.currentuserData.channel_id != this.channelData.id
-        ) {
-          this.channelRequestChecker = true;
-        }
-        this.channelRequestChecker = false;
+        )
+          this.channelRequestDecider = "can-request";
       }
-      if (this.currentuserData == null) this.channelRequestChecker = true;
+      if (this.isTeacher && this.currentuserData == null) {
+        this.channelRequestDecider = "can-request";
+      }
     },
     requestForChannel() {
+      console.log("clicked request");
       axios
         .get(
           "/api/teacher/request/for/channel/" +
@@ -514,8 +552,7 @@ export default {
         )
         .then((response) => {
           if (response.data.message) {
-            this.channelRequestChecker = false;
-            this.channelRequestsuccefull = true;
+            this.channelRequestDecider = "in-progress";
           }
         })
         .catch((errors) => {});
@@ -533,6 +570,9 @@ export default {
           if (!response.data.message) this.goForMostViewed();
         })
         .catch((errors) => {});
+    },
+    teacherDecider(teacher) {
+      if (teacher.avatar === "default.jpg") return "/images/teacher.jpg";
     },
   },
 };

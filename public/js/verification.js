@@ -395,6 +395,78 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -432,7 +504,7 @@ __webpack_require__.r(__webpack_exports__);
         gender: ""
       },
       wait: false,
-      todaysDate: ''
+      todaysDate: ""
     };
   },
   props: {
@@ -509,7 +581,7 @@ __webpack_require__.r(__webpack_exports__);
         if (result) {
           axios.post("/api/verification", _this3.formData).then(function (response) {
             if (response.status === 200) {
-              if (response.data.message === 'Successful') {
+              if (response.data.message === "Successful") {
                 _this3.verificationStatus = true;
                 _this3.userData = 1;
                 Vue.toasted.success("Data is successfully submited", {
@@ -518,7 +590,7 @@ __webpack_require__.r(__webpack_exports__);
                 });
               }
 
-              if (response.data.message === 'failed') {
+              if (response.data.message === "failed") {
                 _this3.wait = false;
                 Vue.toasted.error("Something went wrong", {
                   position: "top-center",
@@ -756,12 +828,6 @@ var render = function() {
                           rawName: "v-model",
                           value: _vm.formData.udise,
                           expression: "formData.udise"
-                        },
-                        {
-                          name: "validate",
-                          rawName: "v-validate",
-                          value: "required",
-                          expression: "'required'"
                         }
                       ],
                       class: {
@@ -773,7 +839,7 @@ var render = function() {
                         "data-vv-delay": "20",
                         name: "udise",
                         type: "text",
-                        placeholder: "Enter your institute udise code"
+                        placeholder: "Enter your institute udise code Optinal"
                       },
                       domProps: { value: _vm.formData.udise },
                       on: {
@@ -1438,7 +1504,13 @@ var render = function() {
                               key: language.id,
                               domProps: { value: language.id }
                             },
-                            [_vm._v(_vm._s(language.name))]
+                            [
+                              _vm._v(
+                                "\n              " +
+                                  _vm._s(language.name) +
+                                  "\n            "
+                              )
+                            ]
                           )
                         })
                       ],
@@ -1552,7 +1624,13 @@ var render = function() {
                           return _c(
                             "option",
                             { key: state.id, domProps: { value: state.id } },
-                            [_vm._v(_vm._s(state.name))]
+                            [
+                              _vm._v(
+                                "\n              " +
+                                  _vm._s(state.name) +
+                                  "\n            "
+                              )
+                            ]
                           )
                         })
                       ],
@@ -1670,7 +1748,13 @@ var render = function() {
                                   key: district.id,
                                   domProps: { value: district.id }
                                 },
-                                [_vm._v(_vm._s(district.name))]
+                                [
+                                  _vm._v(
+                                    "\n              " +
+                                      _vm._s(district.name) +
+                                      "\n            "
+                                  )
+                                ]
                               )
                             })
                           ],
@@ -1789,7 +1873,13 @@ var render = function() {
                                   key: village.id,
                                   domProps: { value: village.id }
                                 },
-                                [_vm._v(_vm._s(village.name))]
+                                [
+                                  _vm._v(
+                                    "\n              " +
+                                      _vm._s(village.name) +
+                                      "\n            "
+                                  )
+                                ]
                               )
                             })
                           ],
@@ -1865,7 +1955,7 @@ var render = function() {
                         staticClass: "btn btnveri mt-3",
                         attrs: { type: "submit" }
                       },
-                      [_vm._v("Submit")]
+                      [_vm._v("\n          Submit\n        ")]
                     )
                   : _vm._e()
               ]

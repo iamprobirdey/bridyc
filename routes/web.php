@@ -222,7 +222,7 @@ Route::group([
     Route::get('/{channel:title}', 'User\DashboardController@index')->name('channel.index');
     Route::get('channel/{channel:title}', 'User\DashboardController@channel')->name('channel.show');
     Route::get('edit/{channel:title}', 'User\DashboardController@editChannel')->name('channel.edit');
-    Route::get('profile/{user:username}/edit', 'User\DashboardController@profile')->name('user.profile');
+    Route::get('edit/profile/{user:username}', 'User\DashboardController@profile')->name('user.profile');
     Route::get('achievement/{channel:title}', 'User\DashboardController@acheivement')->name('channel.achievement');
     Route::get('teacher/{channel:title}', 'User\DashboardController@teacher')->name('channel.teacher');
     Route::get('new/feature/{channel:title}', 'User\DashboardController@newFeature')->name('channel.feature');
@@ -332,13 +332,17 @@ Route::group([
         Route::post('delete/request/of/teacher/{user_channel_request:id}', 'User\TeachersController@deleteRequest');
 
         //Teacher Deletion
-        Route::post('delete/teacher/{channelteacher:id}', 'User\TeachersController@delete');
+        Route::post('delete/teacher/{channel_teacher:id}', 'User\TeachersController@delete');
         //Infructure Image Upload
         Route::post('college/image/upload/{channel:id}', 'User\ChannelCollegeImagesController@store');
+        //Infructure Image delete
+        Route::post('delete/college/image/{channel_college_image:id}', 'User\ChannelCollegeImagesController@delete');
         //Phone Store
         Route::post('edit/channel/phone/number/{user:id}', 'User\ProfileController@phoneNumberstore');
         //Store Channel Notifiation
         Route::post('channel/add/notification/{channel:id}', 'User\ChannelNotificationController@store');
+        //Delete channel Notification
+        Route::post('channel/delete/notification/{channel_notifications:id}', 'User\ChannelNotificationController@delete');
     });
 });
 

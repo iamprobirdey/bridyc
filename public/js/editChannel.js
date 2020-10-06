@@ -455,6 +455,25 @@ __webpack_require__.r(__webpack_exports__);
         });
       }
     },
+    deleteCollege: function deleteCollege(image, index) {
+      var _this2 = this;
+
+      axios.post("/api/delete/college/image/" + image.id).then(function (response) {
+        if (response.data.message) {
+          _this2.channelData.college_image.splice(index, 1);
+
+          Vue.toasted.success("Image successfully deleted", {
+            position: "top-center",
+            duration: 5000
+          });
+        }
+      })["catch"](function (errors) {
+        Vue.toasted.error("Image successfully deleted", {
+          position: "top-center",
+          duration: 5000
+        });
+      });
+    },
     insertImage: function insertImage() {
       this.collegeImageEntry = true;
     },
@@ -524,17 +543,23 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      userImage: '',
+      userImage: "",
       userImageStatus: false,
       userId: null,
       imageData: "",
       selectedImagefile: null,
       imageError: "",
-      url: '/api/cover/upload',
+      url: "/api/cover/upload",
       domainUrl: location.origin
     };
   },
@@ -548,7 +573,7 @@ __webpack_require__.r(__webpack_exports__);
     getCoverData: function getCoverData() {
       var _this = this;
 
-      axios.get('/api/cover').then(function (response) {
+      axios.get("/api/cover").then(function (response) {
         _this.userImage = response.data.image;
         _this.userId = response.data.userId;
         if (_this.userImage != null) _this.userImageStatus = true;
@@ -562,7 +587,7 @@ __webpack_require__.r(__webpack_exports__);
     onImageSubmit: function onImageSubmit() {
       var _this2 = this;
 
-      if (this.imageData != '') {
+      if (this.imageData != "") {
         var formData = new FormData();
         formData.append("image", this.imageData);
         axios.post(this.url, formData).then(function (response) {
@@ -781,6 +806,13 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -790,10 +822,10 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       imageData: "",
       url: "api/icon",
       imageError: "",
-      userImage: '',
+      userImage: "",
       userImageStatus: false,
       userId: null
-    }, _defineProperty(_ref, "url", '/api/icon/upload'), _defineProperty(_ref, "domainUrl", location.origin), _ref;
+    }, _defineProperty(_ref, "url", "/api/icon/upload"), _defineProperty(_ref, "domainUrl", location.origin), _ref;
   },
   mounted: function mounted() {
     this.getImageData();
@@ -802,7 +834,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     getImageData: function getImageData() {
       var _this = this;
 
-      axios.get('/api/icon').then(function (response) {
+      axios.get("/api/icon").then(function (response) {
         _this.userImage = response.data.image;
         _this.userId = response.data.userId;
         if (_this.userImage != null) _this.userImageStatus = true;
@@ -819,7 +851,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     onImageSubmit: function onImageSubmit() {
       var _this2 = this;
 
-      if (this.imageData != '') {
+      if (this.imageData != "") {
         var formData = new FormData();
         formData.append("image", this.imageData);
         axios.post(this.url, formData).then(function (response) {
@@ -1601,6 +1633,43 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -1608,16 +1677,16 @@ __webpack_require__.r(__webpack_exports__);
       getTheModel: false,
       socialData: [],
       formData: {
-        facebook: '',
-        instagram: '',
-        linkedIn: '',
-        youtube: ''
+        facebook: "",
+        instagram: "",
+        linkedIn: "",
+        youtube: ""
       },
       serverErrors: {
-        facebook: '',
-        instagram: '',
-        linkedIn: '',
-        youtube: ''
+        facebook: "",
+        instagram: "",
+        linkedIn: "",
+        youtube: ""
       }
     };
   },
@@ -1628,7 +1697,7 @@ __webpack_require__.r(__webpack_exports__);
     getSocailData: function getSocailData() {
       var _this = this;
 
-      axios.get('/api/social').then(function (response) {
+      axios.get("/api/social").then(function (response) {
         _this.socialData = response.data.channel.extra_attributes.social;
         console.log(_this.socialData);
       })["catch"](function (errors) {
@@ -1643,7 +1712,7 @@ __webpack_require__.r(__webpack_exports__);
 
       this.$validator.validate().then(function (result) {
         if (result) {
-          axios.post('/api/social', _this2.formData).then(function (response) {
+          axios.post("/api/social", _this2.formData).then(function (response) {
             _this2.socialData = response.data.data.extra_attributes.social;
             _this2.getTheModel = false;
           })["catch"](function (errors) {
@@ -1667,7 +1736,7 @@ __webpack_require__.r(__webpack_exports__);
       });
     },
     editTheSocial: function editTheSocial() {
-      this.getTheModel = true;
+      this.getTheModel = !this.getTheModel;
       if (this.socialData.facebook != null) this.formData.facebook = this.socialData.facebook;
       if (this.socialData.instagram != null) this.formData.instagram = this.socialData.instagram;
       if (this.socialData.linkedIn != null) this.formData.linkedIn = this.socialData.linkedIn;
@@ -1995,7 +2064,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.btnsubmitcover[data-v-ccb8d420]{\r\n  background-color: #013737;\r\n  color:white;\r\n  padding-top: 2px;\r\n  padding-bottom: 2px;\r\n  border-radius: 0;\r\n  z-index: 100;\n}\n.btnsuca[data-v-ccb8d420]{\r\n  text-align: center;\n}\n.btn-success[data-v-ccb8d420]{\r\n  padding-top:.1rem !important;\r\n  padding-bottom: .1rem !important;\n}\r\n", ""]);
+exports.push([module.i, "\n.btnsubmitcover[data-v-ccb8d420] {\n  background-color: #013737;\n  color: white;\n  padding-top: 2px;\n  padding-bottom: 2px;\n  border-radius: 0;\n  z-index: 100;\n}\n.btnsuca[data-v-ccb8d420] {\n  text-align: center;\n}\n.btn-success[data-v-ccb8d420] {\n  padding-top: 0.1rem !important;\n  padding-bottom: 0.1rem !important;\n}\n", ""]);
 
 // exports
 
@@ -2033,7 +2102,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.btnsubmiticon[data-v-d9ed4160]{\r\n  background-color: #013737;\r\n  color:white;\r\n  padding-top: 2px;\r\n  padding-bottom: 2px;\r\n  border-radius: 0;\r\n  z-index: 100;\n}\n.btnsuca[data-v-d9ed4160]{\r\n  text-align: center;\n}\n.btn-success[data-v-d9ed4160]{\r\n  padding-top:.1rem !important;\r\n  padding-bottom: .1rem !important;\n}\r\n", ""]);
+exports.push([module.i, "\n.btnsubmiticon[data-v-d9ed4160] {\n  background-color: #013737;\n  color: white;\n  padding-top: 2px;\n  padding-bottom: 2px;\n  border-radius: 0;\n  z-index: 100;\n}\n.btnsuca[data-v-d9ed4160] {\n  text-align: center;\n}\n.btn-success[data-v-d9ed4160] {\n  padding-top: 0.1rem !important;\n  padding-bottom: 0.1rem !important;\n}\n", ""]);
 
 // exports
 
@@ -15020,7 +15089,20 @@ var render = function() {
                 width: "120",
                 alt: "college infrastructure"
               }
-            })
+            }),
+            _vm._v(" "),
+            _c(
+              "button",
+              {
+                staticClass: "btn btn-danger",
+                on: {
+                  click: function($event) {
+                    return _vm.deleteCollege(image, index)
+                  }
+                }
+              },
+              [_vm._v("\n          Delete college image\n        ")]
+            )
           ])
         }),
         0
@@ -15157,7 +15239,7 @@ var render = function() {
                 _vm.domainUrl +
                 "/media/channel/" +
                 _vm.userId +
-                "/" +
+                "/cover/" +
                 _vm.userImage,
               alt: "icon image"
             }
@@ -15178,7 +15260,7 @@ var render = function() {
                 staticClass: "fa fa-pencil",
                 attrs: { "aria-hidden": "true" }
               }),
-              _vm._v("\n          Change Cover Photo")
+              _vm._v(" Change Cover Photo\n    ")
             ]
           )
         ])
@@ -15218,7 +15300,7 @@ var render = function() {
                         }
                       }
                     },
-                    [_vm._v("Submit")]
+                    [_vm._v("\n        Submit\n      ")]
                   )
                 : _vm._e(),
               _vm._v(" "),
@@ -15238,7 +15320,7 @@ var render = function() {
                         staticClass: "fa fa-times",
                         attrs: { "aria-hidden": "true" }
                       }),
-                      _vm._v("Cancel\n          ")
+                      _vm._v("Cancel\n      ")
                     ]
                   )
                 : _vm._e()
@@ -15252,7 +15334,7 @@ var render = function() {
                     name: "show",
                     rawName: "v-show",
                     value: _vm.imageError,
-                    expression: "imageError "
+                    expression: "imageError"
                   }
                 ],
                 staticClass: "text-danger"
@@ -15507,7 +15589,7 @@ var render = function() {
                 _vm.domainUrl +
                 "/media/channel/" +
                 _vm.userId +
-                "/" +
+                "/avatar/" +
                 _vm.userImage,
               alt: "icon image"
             }
@@ -15528,7 +15610,7 @@ var render = function() {
                 staticClass: "fa fa-pencil",
                 attrs: { "aria-hidden": "true" }
               }),
-              _vm._v("\r\n            Change Logo")
+              _vm._v(" Change Logo\n    ")
             ]
           )
         ])
@@ -15569,7 +15651,7 @@ var render = function() {
                         }
                       }
                     },
-                    [_vm._v("Submit")]
+                    [_vm._v("\n        Submit\n      ")]
                   )
                 : _vm._e(),
               _vm._v(" "),
@@ -15589,7 +15671,7 @@ var render = function() {
                         staticClass: "fa fa-times",
                         attrs: { "aria-hidden": "true" }
                       }),
-                      _vm._v("Cancel\r\n            ")
+                      _vm._v("Cancel\n      ")
                     ]
                   )
                 : _vm._e()
@@ -15603,7 +15685,7 @@ var render = function() {
                     name: "show",
                     rawName: "v-show",
                     value: _vm.imageError,
-                    expression: "imageError "
+                    expression: "imageError"
                   }
                 ],
                 staticClass: "text-danger"
@@ -17367,13 +17449,7 @@ var render = function() {
           }
         }
       },
-      [
-        _c("i", {
-          staticClass: "fa fa-pencil",
-          attrs: { "aria-hidden": "true" }
-        }),
-        _vm._v(" \n          Edit\n        ")
-      ]
+      [_vm._v("Edit")]
     ),
     _vm._v(" "),
     _vm.getTheModel

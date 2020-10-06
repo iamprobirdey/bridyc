@@ -80,26 +80,32 @@ class ProfileController extends Controller
         }
         if (!is_dir($path)) {
             if (File::makeDirectory(public_path($path), 0777, true)) {
-                $image->resize(600, 600);
+                $image->resize(600, 270);
                 $image->save(public_path($path) . $imageName);
                 //FacadesImageOptimizer::optimize($path.$imageName);
                 ///app(Spatie\ImageOptimizer\OptimizerChain::class)->optimize($path.$imageName);
-                $imageM->resize(300, 300);
+                $imageM->resize(510, 270);
                 $imageM->save(public_path($path) . 'm-' . $imageName);
                 //FacadesImageOptimizer::optimize($path.'m-',$imageName);
-                $imageS->resize(200, 200);
+                $imageS->resize(390, 270);
                 $imageS->save(public_path($path) . 's-' . $imageName);
+
+                $imageS->resize(390, 270);
+                $imageS->save(public_path($path) . 'xs-' . $imageName);
                 //FacadesImageOptimizer::optimize($path.'s-',$imageName);
             }
         } else {
-            $image->resize(600, 600);
+            $image->resize(600, 270);
             $image->save(public_path($path) . $imageName);
             //FacadesImageOptimizer::optimize($path.$imageName);
-            $imageM->resize(300, 300);
+            $imageM->resize(510, 270);
             $imageM->save(public_path($path) . 'm-' . $imageName);
             //FacadesImageOptimizer::optimize($path.'m-',$imageName);
-            $imageS->resize(200, 200);
+            $imageS->resize(390, 270);
             $imageS->save(public_path($path) . 's-' . $imageName);
+
+            $imageS->resize(390, 270);
+            $imageS->save(public_path($path) . 'xs-' . $imageName);
             //FacadesImageOptimizer::optimize($path.'s-',$imageName);
         }
         $user = User::find(current_user_id());

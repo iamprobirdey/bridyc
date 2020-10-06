@@ -19,8 +19,7 @@ class TeachersController extends Controller
 
     public function delete(ChannelTeacher $teacher)
     {
-        $this->authorize('view', current_user());
-        $this->authorize('viewforchannel', current_user());
+        dd($teacher->channel_id);
         $this->authorize('checkAvailabilityOfTeacher', $teacher);
         $teacher->delete();
         return response()->json([
@@ -30,26 +29,29 @@ class TeachersController extends Controller
 
     public function acceptRequest(UserChannelRequest $userChannelRequest)
     {
-        $userChannelRequest->request = 'accepted';
-        $userChannelRequest->save();
-        $teacher = ChannelTeacher::create([
-            'user_id' => $userChannelRequest->user_id,
-            'channel_id' => $userChannelRequest->channel_id
-        ]);
+        if (current_user()->channel->id === $userChannelRequest->channel_id) {
+            $userChannelRequest->request = 'accepted';
+            $userChannelRequest->save();
+            $teacher = ChannelTeacher::create([
+                'user_id' => $userChannelRequest->user_id,
+                'channel_id' => $userChannelRequest->channel_id
+            ]);
 
-        return response()->json([
-            'message' => true,
-            'data' => $teacher->with('user')->get()
-        ]);
+            return response()->json([
+                'message' => true
+            ]);
+        }
     }
 
     public function deleteRequest(UserChannelRequest $userChannelRequest)
     {
-        $userChannelRequest->request = 'rejected';
-        $userChannelRequest->save();
+        if (current_user()->channel->id === $userChannelRequest->channel_id) {
+            $userChannelRequest->request = 'rejected';
+            $userChannelRequest->save();
 
-        return response()->json([
-            'message' => true
-        ]);
+            return response()->json([
+                'message' => true
+            ]);
+        }
     }
 }

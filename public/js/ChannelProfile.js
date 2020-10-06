@@ -630,17 +630,28 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
       imageError: "",
-      userImage: '',
+      userImage: "",
       userImageStatus: false,
-      userId: '',
-      url: '/api/profile/avatar',
+      userId: "",
+      url: "/api/profile/avatar",
       domainUrl: location.origin,
-      imageData: ''
+      imageData: ""
     };
   },
   props: {
@@ -668,7 +679,7 @@ __webpack_require__.r(__webpack_exports__);
     onImageSubmit: function onImageSubmit() {
       var _this = this;
 
-      if (this.imageData != '') {
+      if (this.imageData != "") {
         var formData = new FormData();
         formData.append("image", this.imageData);
         axios.post(this.url, formData).then(function (response) {
@@ -3606,12 +3617,14 @@ var render = function() {
               height: "150",
               width: "152",
               src:
-                _vm.domainUrl +
-                "/media/channel/" +
-                _vm.userId +
-                "/profile/" +
-                _vm.userImage,
-              alt: "principal profile picture"
+                _vm.userImage === "default.jpg"
+                  ? "/images/default.jpg"
+                  : _vm.domainUrl +
+                    "/media/channel/" +
+                    _vm.userId +
+                    "/avatar/" +
+                    _vm.userImage,
+              alt: "icon image"
             }
           }),
           _vm._v(" "),
@@ -3630,7 +3643,8 @@ var render = function() {
               _c("i", {
                 staticClass: "fa fa-camera",
                 attrs: { "aria-hidden": "true" }
-              })
+              }),
+              _vm._v(" Change Logo\n    ")
             ]
           )
         ])
@@ -3672,7 +3686,7 @@ var render = function() {
                         }
                       }
                     },
-                    [_vm._v("Submit")]
+                    [_vm._v("\n        Submit\n      ")]
                   )
                 : _vm._e(),
               _vm._v(" "),
@@ -3692,7 +3706,7 @@ var render = function() {
                         staticClass: "fa fa-times",
                         attrs: { "aria-hidden": "true" }
                       }),
-                      _vm._v(" Cancel\n          ")
+                      _vm._v("Cancel\n      ")
                     ]
                   )
                 : _vm._e()
@@ -3706,7 +3720,7 @@ var render = function() {
                     name: "show",
                     rawName: "v-show",
                     value: _vm.imageError,
-                    expression: "imageError "
+                    expression: "imageError"
                   }
                 ],
                 staticClass: "text-danger text-center"

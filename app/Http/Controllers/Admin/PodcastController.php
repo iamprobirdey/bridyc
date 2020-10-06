@@ -51,20 +51,26 @@ class PodcastController extends Controller
             if (!is_dir($path)) {
                 if (File::makeDirectory(public_path($path), 0777, true)) {
 
-                    $image->resize(700, 650);
+                    $image->resize(710, 650);
                     $image->save(public_path($path) . $imageName);
                     //FacadesImageOptimizer::optimize($path.$imageName);
                     ///app(Spatie\ImageOptimizer\OptimizerChain::class)->optimize($path.$imageName);
-                    $imageM->resize(390, 360);
+                    $imageM->resize(400, 360);
                     $imageM->save(public_path($path) . 'm-' . $imageName);
+                    $imageM->resize(350, 280);
+                    $imageM->save(public_path($path) . 's-' . $imageName);
                     //FacadesImageOptimizer::optimize($path.'m-',$imageName);
                 }
             } else {
-                $image->resize(700, 650);
+                $image->resize(710, 650);
                 $image->save(public_path($path) . $imageName);
                 //FacadesImageOptimizer::optimize($path.$imageName);
-                $imageM->resize(390, 360);
+                ///app(Spatie\ImageOptimizer\OptimizerChain::class)->optimize($path.$imageName);
+                $imageM->resize(400, 360);
                 $imageM->save(public_path($path) . 'm-' . $imageName);
+
+                $imageM->resize(350, 280);
+                $imageM->save(public_path($path) . 's-' . $imageName);
                 //FacadesImageOptimizer::optimize($path.'m-',$imageName);
                 //FacadesImageOptimizer::optimize($path.'s-',$imageName);
             }
