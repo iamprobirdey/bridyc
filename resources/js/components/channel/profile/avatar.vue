@@ -16,8 +16,8 @@
                         :srcset="domainUrl+'/media/channel/'+userId+'/m-'+userImage+','+domainUrl+'/media/channel/'+userId+'/s-'+userImage"
                      -->
 
-      <button @click="editTheIcon()" class="btn princi-profile-edit p-2">
-        <i class="fa fa-pencil" aria-hidden="true"></i> Change Logo
+      <button @click="editTheIcon()" class="btn princi-profile-edit edit-btn p-2">
+        <i class="fa fa-camera" aria-hidden="true"></i>
       </button>
     </div>
 
@@ -37,7 +37,7 @@
         @change="onChange"
         name="image"
       ></picture-input>
-      <div class="btnsuca mt-2">
+      <div class="btnsuca text-center mt-2">
         <button
           v-if="imageData != ''"
           type="button"

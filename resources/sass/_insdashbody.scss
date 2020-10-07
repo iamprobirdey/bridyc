@@ -19,7 +19,7 @@ main {
         width: 100%;
         position: relative;
         top: -70px;
-        background-color: white;
+        background-color: #f5f9ff;
         padding-top: 55px;
         padding-left: 10px;
         p{
@@ -126,9 +126,12 @@ main {
     
 
     .inspills{
-              margin-top:-170px;
+              margin-top:-112px;
            @include screensize(tablet){
-              margin-top:-200px;
+              margin-top:-130px;
+            }
+            @include screensize(laptop){
+              margin-top:-140px;
             }
               .nav-pills{
                 .nav-link{
@@ -143,66 +146,53 @@ main {
 
     .inscarou{
                     width: 100%;
-                    height: 180px;
-                    margin-bottom: 80px;
-               @include screensize(tablet){
-                    margin-bottom: -190px;
-                }
-               @include screensize(laptop){
-                    margin-bottom: 390px;
-                }
-                   li{
+                    height: auto;
+                    
+                li{
                     position: relative;
                     width: 8px;
                     height: 8px;
                     top: 30px;
                     border-radius: 100%;
                     background-color: black;
-                     @include screensize(prelaptop){
-                        top: 250px;
+                     @include screensize(laptop){
+                        top: 10px;
                      }
                 }
+                @include screensize(laptop){
+                  margin-bottom: 180px;
+               }
                    img{
                     width: 100%;
-                    height: 100%;
+                    height: 200px;
+                    @include screensize(laptop){
+                      height: 400px;
+                   }
               }
 
             }
 
             .notice{
-              background-color: white;
+              background-color: #f5f9ff;
               align-items: center;
               margin-bottom: 13px;
-              border: 1px;
               height:auto;
-              margin-left: auto;
-              margin-right: auto;
               width: 100%;
               h5{
                 font-weight: 400;
-                color: #011737;
+                color: #003585;
               }
-              
-              @include screensize(tablet){
-                  font-size: x-large;
-                }
-              @include screensize(prelaptop){
-                font-size: small;
+              hr{
+                border-bottom: 2px solid rgb(219, 55, 55);
               }
-              @include screensize(laptop){
-                  font-size: large;
-                }
+              p{
+                color: black;
+              }
             }
 
 
             .facultyachieve{
-         
-              h3{
-                background-color: #011737;
-                color: white;
-                padding: 7px;
-                text-align: center;
-              }
+        
                  .facultyachievecard{
                      width: 200px;
                      height: 250px;
@@ -214,43 +204,45 @@ main {
               }
 
               .description{
-                h4{
-                  text-align: center;
-                  color: #011737;
-                  font-family: Verdana, Geneva, Tahoma, sans-serif;
-                }
-                background-color: white;
                 padding: 1rem;
                 margin-left: auto;
                 margin-right: auto;
                 width: 100%;
                 p{
-                  //border-left: 10px solid #96e0b7;
-                  
-                  //border-left: 10px solid #ffcdb0;
-                  border-left: 10px solid #ffbcb091;
+                  border-left: 10px solid #96e0b7;
+                  color: #011737;
                   padding-left: 10px;
                   
                 }
+              }
+
+              h2{
+                color: #003585;
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                 font-size: 18px;
                 @include screensize(tablet){
-                    font-size: x-large;
-                  }
-                @include screensize(prelaptop){
-                    height:auto;
-                    margin-left: auto;
-                    margin-right: auto;
-                  }
-                  @include screensize(laptop){
-                   font-size: large;
-                  }
+                  font-size: 32px;
+                }
               }
 
               .princidiv{
                 margin-top: 50px;
                
+                h3{
+                  color: #003585;
+                  font-family: Verdana, Geneva, Tahoma, sans-serif;
+                  font-size: 18px;
+                  @include screensize(tablet){
+                    font-size: 24px;
+                  }
+                }
                 img{
-                  width: 50px;
-                  height:50px;
+                  width: 24px;
+                  height:24px;
+                  @include screensize(tablet){
+                
+                    height:30px;
+                   }
                 }
                 .principalcard{
                   text-align: center;
@@ -264,37 +256,32 @@ main {
                     height: 250px;
                     
                   }
-                  .card-body{
-                    background-color: rgb(249, 252, 255);
-                  }
+                }
+                h6{
+                  color:#003585;
+                  font-family: Verdana, Geneva, Tahoma, sans-serif;
                 }
               }
 
-              .additionalinfo{
-                h3{
-                  color: #011737;
-                }
                 .insadditionalinfo{
-                 
-                 ul{
-                    list-style: none;
-                    line-height: 38px;
+                  p{
                     font-size: 18px;
-                    text-align: center;
-                    
+                  }
+                  img{
+                    width: 18px;
+                    height: 18px;
                   }
                 }
-              }
+      
 
               .facilitydiv{
-                background-color: white;
-                div{
+                p{
                   font-size: 16px;
                   color: #011737;
                   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
                  img{
-                   width: 30px;
-                   height: 30px;           
+                   width: 16px;
+                   height: 16px;           
                  }
                 }
                   
@@ -303,50 +290,6 @@ main {
 
   }
           
-          
-          .insaddress{
-              h4{
-                  text-align: center;
-                  padding-top: .5rem;
-                  padding-bottom: .5rem;
-              }
-              .addbody{
-                  margin-top:-8px;
-                  padding: 2rem;
-                  font-size: large;
-                  font-weight: 500;
-                  border-left: 2px solid gainsboro;
-                  border-right: 2px solid gainsboro;;
-                  border-bottom: 2px solid gainsboro;;
-                  @include screensize(tablet){
-                    font-size: x-large;
-               }
-               @include screensize(laptop){
-                font-size: large;
-                }
-                  ul{
-                      line-height: 2rem;
-                  }
-              }
-              @include screensize(foriphone6x){
-                margin-top: 40px;
-           }
-              @include screensize(forcards){
-                margin-top: 60px;
-           }
-              @include screensize(tablet){
-                width: 90%;
-                margin-left: auto;
-                margin-right: auto;
-                margin-top: 350px;
-           }
-           @include screensize(prelaptop){
-            margin-top: 590px;
-       }
-           @include screensize(laptop){
-            margin-top: 0px;
-       }
-          }
          
           // css for institute verification page starts here
           .btnveri{
@@ -514,6 +457,11 @@ main {
 
           .profile{
             max-width: 100%;
+
+            .princi-name{
+              background-color: #cce0fd;
+              color: black;
+            }
             
             .princi-profile-picture{
               
@@ -595,6 +543,48 @@ main {
           }
         } 
         
+        .teacher-section{
+          color: #003585;
+          h3{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+          }
+          h5{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+          }
+        }
+
+        .notification-section{
+          font-family: Verdana, Geneva, Tahoma, sans-serif;
+          h3{
+            color: #003585;
+          }
+          .add-notifications{
+            background-color: #003585;
+            color: white;
+          }
+          label{
+            color:#003585;
+          }
+          .btn-publish{
+            background-color: #990066;
+            color: white;
+          }
+          input{
+            &::placeholder{
+              color: rgb(139, 139, 139);
+            }
+          }
+          ul{
+            list-style: none;
+            li{
+              &::before{
+                content: "\2B9A";
+                font-size: larger;
+                color: #003585;
+              }
+            }
+          }
+        }
            
   }
 

@@ -7,23 +7,66 @@
 }
 
 .body-login-register{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    @include screensize(laptop){
+        max-width: 60%;
+    }
     input{
        border: none;
        border-bottom: 1px solid rgb(209, 209, 209);
        border-radius: 0;
        &::placeholder{
            color: rgb(177, 177, 177);
-           font-family: Verdana, Geneva, Tahoma, sans-serif;
        }
 
        &:focus{
          box-shadow: none;
-         border-bottom-color: #4BB543;
+         border-bottom-color: #57b846;
        }
     }
 
     label{
-        color: rgb(177, 177, 177);
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: rgb(149, 149, 149);
+    }
+    .remember-forget{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-size: 16px;
+        @include screensize(desktop){
+            margin-left: -45px !important;
+        }
+        a{
+            color:#6c757d;
+            &:hover{
+                color:#57b846;
+            }
+        }
+    }
+
+
+    .log-reg{
+        @include screensize(desktop){
+            margin-left: -5px !important;
+        }
+        .btnlogin{
+            background-color: #57b846;
+            color: white;
+            border-radius: 25px;
+            font-weight: 700;
+            
+            &:hover{
+                background-color: #6c757d;
+            }
+        }
+    }
+
+    .btnregister{
+            background-color: #57b846;
+            color: white;
+            border-radius: 25px;
+            font-weight: 700;
+            
+            &:hover{
+                background-color: #6c757d;
+            }
     }
 }

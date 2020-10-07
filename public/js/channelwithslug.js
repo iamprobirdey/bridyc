@@ -548,6 +548,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -1188,7 +1189,11 @@ var render = function() {
                 staticClass: "fa fa-phone mr-1",
                 attrs: { "aria-hidden": "true" }
               }),
-              _vm._v(_vm._s(_vm.phoneNo) + "\n          ")
+              _vm._v(
+                "\n            Call us at: " +
+                  _vm._s(_vm.phoneNo) +
+                  "\n          "
+              )
             ]),
             _vm._v(" "),
             _c("p", { staticClass: "m-1 mr-2" }, [
@@ -1256,7 +1261,7 @@ var render = function() {
             }
           }),
           _vm._v(" "),
-          _c("h1", { staticClass: "ml-1 ml-sm-3 institle" }, [
+          _c("h1", { staticClass: "ml-1 ml-sm-3 institle text-capitalize" }, [
             _vm._v(_vm._s(_vm.channelData.title))
           ])
         ])
@@ -1496,7 +1501,7 @@ var render = function() {
                   _vm.channelData.achievement != null
                     ? _c(
                         "div",
-                        { staticClass: "row mb-5 mt-5" },
+                        { staticClass: "row my-5" },
                         _vm._l(_vm.channelData.achievement, function(
                           achievement,
                           index
@@ -1530,7 +1535,9 @@ var render = function() {
                         }),
                         0
                       )
-                    : _c("div", [_vm._v("No Achievements Provided")])
+                    : _c("div", { staticClass: "text-center" }, [
+                        _vm._v("No Achievements Provided")
+                      ])
                 ]
               )
             ]
@@ -1570,15 +1577,19 @@ var render = function() {
                       }),
                       _vm._v(" "),
                       _c("div", { staticClass: "card-body mt-n1" }, [
-                        _c("h4", { staticClass: "card-title my-n1" }, [
-                          _vm._v(
-                            "\n                      " +
-                              _vm._s(_vm.userData.name) +
-                              "\n                    "
-                          )
-                        ]),
+                        _c(
+                          "h4",
+                          { staticClass: "card-title my-n1 text-capitalize" },
+                          [
+                            _vm._v(
+                              "\n                      " +
+                                _vm._s(_vm.userData.name) +
+                                "\n                    "
+                            )
+                          ]
+                        ),
                         _vm._v(" "),
-                        _c("p", { staticClass: "card-text" }, [
+                        _c("p", { staticClass: "card-text text-capitalize" }, [
                           _vm._v("Principal, " + _vm._s(_vm.channel.title))
                         ])
                       ])
@@ -1703,7 +1714,7 @@ var render = function() {
                 _vm._v(" "),
                 _c(
                   "div",
-                  { staticClass: "row mb-5 mt-5" },
+                  { staticClass: "row my-5" },
                   _vm._l(_vm.channelData.teacher, function(teacher, index) {
                     return _c(
                       "div",
@@ -1722,13 +1733,17 @@ var render = function() {
                         }),
                         _vm._v(" "),
                         _c("div", { staticClass: "card-body mt-n1" }, [
-                          _c("h6", { staticClass: "card-title my-n1" }, [
-                            _vm._v(_vm._s(teacher.user.name))
-                          ]),
+                          _c(
+                            "h6",
+                            { staticClass: "card-title my-n1 text-center" },
+                            [_vm._v(_vm._s(teacher.user.name))]
+                          ),
                           _vm._v(" "),
-                          _c("p", { staticClass: "card-text" }, [
-                            _vm._v("Qualification")
-                          ])
+                          _c(
+                            "p",
+                            { staticClass: "card-text mx-n2 text-center" },
+                            [_vm._v("Qualification")]
+                          )
                         ])
                       ]
                     )
@@ -1796,7 +1811,7 @@ var staticRenderFns = [
               staticClass: "nav-link",
               attrs: { "data-toggle": "pill", href: "#facility" }
             },
-            [_vm._v("Facility")]
+            [_vm._v("Facilities")]
           )
         ])
       ]

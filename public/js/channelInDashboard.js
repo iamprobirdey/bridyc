@@ -509,6 +509,20 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -1044,7 +1058,7 @@ var render = function() {
           }
         }),
         _vm._v(" "),
-        _c("div", { staticClass: "blankdiv" }, [
+        _c("div", { staticClass: "blankdiv shadow" }, [
           _c("div", { staticClass: "d-flex" }, [
             _c("div", { staticClass: "d-flex flex-column" }, [
               _c("p", { staticClass: "m-1" }, [
@@ -1087,7 +1101,7 @@ var render = function() {
                   attrs: { "aria-hidden": "true" }
                 }),
                 _vm._v(
-                  "\n            Call us at " +
+                  "\n            Call us at: " +
                     _vm._s(_vm.phoneNo) +
                     "\n          "
                 )
@@ -1123,7 +1137,7 @@ var render = function() {
               }
             }),
             _vm._v(" "),
-            _c("h1", { staticClass: "ml-1 ml-sm-4 institle" }, [
+            _c("h1", { staticClass: "ml-1 ml-sm-4 institle text-capitalize" }, [
               _vm._v(_vm._s(_vm.channelData.title))
             ])
           ])
@@ -1131,7 +1145,7 @@ var render = function() {
         _vm._v(" "),
         _c("div", { staticClass: "inssocial" }, [
           _vm.socialCount === 0
-            ? _c("div", { staticClass: "d-flex" }, [
+            ? _c("div", { staticClass: "d-flex flex-column flex-lg-row" }, [
                 _vm.channelData.extra_attributes.social.facebook != null
                   ? _c(
                       "a",
@@ -1222,9 +1236,7 @@ var render = function() {
               ])
             : _vm._e(),
           _vm._v(" "),
-          _vm.socialCount === 1
-            ? _c("div", { staticClass: "d-none" }, [_vm._v("Socials: NA")])
-            : _vm._e()
+          _vm.socialCount === 1 ? _c("div", [_vm._v("Socials: NA")]) : _vm._e()
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "inspills" }, [
@@ -1240,46 +1252,65 @@ var render = function() {
               [
                 _c("br"),
                 _vm._v(" "),
-                _c("div", { staticClass: "row mb-5" }, [
+                _c("div", { staticClass: "description mb-5 px-0" }, [
+                  _c("h2", { staticClass: "mb-4 text-uppercase" }, [
+                    _vm._v("Welcome to " + _vm._s(_vm.channelData.title))
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _vm._v(
+                      "\n              " +
+                        _vm._s(
+                          _vm.channelData.description != null
+                            ? _vm.channelData.description
+                            : ""
+                        ) +
+                        "\n            "
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "row mb-5 mx-0 px-0" }, [
                   _c(
                     "div",
-                    { staticClass: "card notice shadow-sm mx-0 col-sm-4" },
+                    {
+                      staticClass:
+                        "card notice shadow-sm border-0 col-md-5 col-lg-4 px-0"
+                    },
                     [
                       _c("div", { staticClass: "card-body" }, [
                         _vm._m(1),
                         _vm._v(" "),
-                        _c("hr", { staticClass: "mx-n3" }),
+                        _c("hr", { staticClass: "w-25" }),
                         _vm._v(" "),
-                        _c("ul", { staticClass: "nav" }, [
-                          _c(
-                            "div",
-                            { staticClass: "mt-5" },
-                            _vm._l(_vm.channelData.notification, function(
-                              notification,
-                              index
-                            ) {
-                              return _c("p", { key: index }, [
-                                _c("i", {
-                                  staticClass: "fa fa-long-arrow-right",
-                                  attrs: { "aria-hidden": "true" }
-                                }),
-                                _vm._v(
-                                  "\n                      " +
-                                    _vm._s(notification.notify) +
-                                    "\n                      "
-                                ),
-                                index === 0
-                                  ? _c(
-                                      "span",
-                                      { staticClass: "badge badge-info" },
-                                      [_vm._v("New")]
-                                    )
-                                  : _vm._e()
-                              ])
-                            }),
-                            0
-                          )
-                        ])
+                        _c(
+                          "div",
+                          { staticClass: "mt-5" },
+                          _vm._l(_vm.channelData.notification, function(
+                            notification,
+                            index
+                          ) {
+                            return _c("p", { key: index }, [
+                              _c("i", {
+                                staticClass: "fa fa-long-arrow-right",
+                                attrs: { "aria-hidden": "true" }
+                              }),
+                              _vm._v(
+                                "\n                      " +
+                                  _vm._s(notification.notify) +
+                                  "\n                      "
+                              ),
+                              index === 0
+                                ? _c(
+                                    "span",
+                                    { staticClass: "badge badge-info" },
+                                    [_vm._v("New")]
+                                  )
+                                : _vm._e()
+                            ])
+                          }),
+                          0
+                        )
                       ])
                     ]
                   ),
@@ -1287,7 +1318,7 @@ var render = function() {
                   _c(
                     "div",
                     {
-                      staticClass: "carousel slide inscarou col-sm-8",
+                      staticClass: "carousel slide inscarou col-md-7 col-lg-8",
                       attrs: { id: "carouid", "data-ride": "carousel" }
                     },
                     [
@@ -1329,18 +1360,18 @@ var render = function() {
                 _vm._v(" "),
                 _c(
                   "div",
-                  {
-                    staticClass: "container-fluid facultyachieve mt-n5 mt-sm-0"
-                  },
+                  { staticClass: "container-fluid facultyachieve px-0" },
                   [
-                    _c("h3", { staticClass: "mx-auto" }, [
-                      _vm._v("Achievements")
+                    _c("h2", { staticClass: "text-uppercase" }, [
+                      _vm._v("Our Achievements")
                     ]),
+                    _vm._v(" "),
+                    _c("hr", { staticClass: "mt-n2" }),
                     _vm._v(" "),
                     _vm.channelData.achievement != null
                       ? _c(
                           "div",
-                          { staticClass: "row mb-5 mt-4" },
+                          { staticClass: "row my-5" },
                           _vm._l(_vm.channelData.achievement, function(
                             achievement,
                             index
@@ -1378,7 +1409,9 @@ var render = function() {
                           }),
                           0
                         )
-                      : _c("div", [_vm._v("No Achievements Provided")])
+                      : _c("div", { staticClass: "text-center" }, [
+                          _vm._v("No Achievements Provided")
+                        ])
                   ]
                 )
               ]
@@ -1391,32 +1424,12 @@ var render = function() {
                 attrs: { id: "about" }
               },
               [
-                _c("br"),
-                _vm._v(" "),
-                _c("div", { staticClass: "description shadow-sm mb-5" }, [
-                  _c("h4", { staticClass: "mb-4" }, [
-                    _vm._v("Welcome to " + _vm._s(_vm.channelData.title))
-                  ]),
-                  _vm._v(" "),
-                  _c("p", [
-                    _vm._v(
-                      "\n              " +
-                        _vm._s(
-                          _vm.channelData.description != null
-                            ? _vm.channelData.description
-                            : ""
-                        ) +
-                        "\n            "
-                    )
-                  ])
-                ]),
-                _vm._v(" "),
                 _c("div", { staticClass: "princidiv mb-5" }, [
                   _vm._m(3),
                   _vm._v(" "),
                   _c("div", { staticClass: "row mt-3" }, [
                     _c("div", { staticClass: "col-md-6" }, [
-                      _c("p", [
+                      _c("p", { staticClass: "principal-message" }, [
                         _vm._v(
                           "\n                  " +
                             _vm._s(
@@ -1439,87 +1452,129 @@ var render = function() {
                         }),
                         _vm._v(" "),
                         _c("div", { staticClass: "card-body mt-n1" }, [
-                          _c("h4", { staticClass: "card-title my-n1" }, [
-                            _vm._v(
-                              "\n                      " +
-                                _vm._s(_vm.userData.name) +
-                                "\n                    "
-                            )
-                          ]),
+                          _c(
+                            "h4",
+                            { staticClass: "card-title my-n1 text-capitalize" },
+                            [
+                              _vm._v(
+                                "\n                      " +
+                                  _vm._s(_vm.userData.name) +
+                                  "\n                    "
+                              )
+                            ]
+                          ),
                           _vm._v(" "),
-                          _c("p", { staticClass: "card-text" }, [
-                            _vm._v("Principal, " + _vm._s(_vm.channel.title))
-                          ])
+                          _c(
+                            "p",
+                            { staticClass: "card-text text-capitalize" },
+                            [_vm._v("Principal, " + _vm._s(_vm.channel.title))]
+                          )
                         ])
                       ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", [
+                    _c(
+                      "h6",
+                      { staticClass: "text-uppercase mt-2 mission-vision" },
+                      [_vm._v("Mission & Vision")]
+                    ),
+                    _vm._v(" "),
+                    _c("p", [
+                      _vm._v(
+                        "\n            " +
+                          _vm._s(
+                            _vm.userData.vission != null
+                              ? _vm.userData.vission
+                              : "Vission from Institute not provided"
+                          ) +
+                          "\n          "
+                      )
                     ])
                   ])
                 ]),
                 _vm._v(" "),
-                _c("h6", { staticClass: "text-uppercase mt-2" }, [
-                  _vm._v("Mission & Vision")
-                ]),
-                _vm._v(" "),
-                _c("p", [
-                  _vm._v(
-                    "\n            " +
-                      _vm._s(
-                        _vm.userData.vission != null
-                          ? _vm.userData.vission
-                          : "Vission from Institute not provided"
-                      ) +
-                      "\n          "
-                  )
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "container-fluid additionalinfo" }, [
-                  _c("h3", { staticClass: "text-uppercase" }, [
+                _c("div", { staticClass: "container-fluid mt-5" }, [
+                  _c("h2", { staticClass: "text-uppercase" }, [
                     _vm._v("Additional Information")
                   ]),
                   _vm._v(" "),
-                  _c("hr"),
+                  _c("hr", { staticClass: "mt-n2" }),
                   _vm._v(" "),
-                  _c("div", { staticClass: "insadditionalinfo row" }, [
-                    _c("ul", { staticClass: "col" }, [
-                      _c("li", [
-                        _vm._v(
-                          "\n                  Address: " +
-                            _vm._s(_vm.channelData.district.name) +
-                            ",\n                  " +
-                            _vm._s(_vm.channelData.state.name) +
-                            "\n                "
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c("li", [
-                        _vm._v(
-                          "Pin Code: " + _vm._s(_vm.userData.verification.pin)
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c("li", [
-                        _vm._v(
-                          "Founded: " +
-                            _vm._s(_vm.userData.verification.founded)
-                        )
-                      ])
+                  _c("div", { staticClass: "insadditionalinfo mt-4" }, [
+                    _c("p", [
+                      _c("img", {
+                        attrs: {
+                          src: "/images/address.svg",
+                          alt: "address icon"
+                        }
+                      }),
+                      _vm._v(
+                        " Address: \n                  " +
+                          _vm._s(_vm.channelData.district.name) +
+                          ",\n                  " +
+                          _vm._s(_vm.channelData.state.name) +
+                          "\n                "
+                      )
                     ]),
                     _vm._v(" "),
-                    _c("ul", { staticClass: "col" }, [
-                      _c("li", [
-                        _vm._v(
-                          "Medium: " + _vm._s(_vm.channelData.village.name)
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _c("li", [_vm._v("Board: xxxx")]),
-                      _vm._v(" "),
-                      _c("li", [
-                        _vm._v(
-                          "Ownership: " +
-                            _vm._s(_vm.userData.verification.ownership)
-                        )
-                      ])
+                    _c("p", [
+                      _c("img", {
+                        attrs: {
+                          src: "/images/mailbox.svg",
+                          alt: "pin code icon"
+                        }
+                      }),
+                      _vm._v(
+                        " Pin Code: \n                " +
+                          _vm._s(_vm.userData.verification.pin) +
+                          "\n                "
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _c("img", {
+                        attrs: {
+                          src: "/images/translation.svg",
+                          alt: "language icon"
+                        }
+                      }),
+                      _vm._v(
+                        "\n                 Medium: " +
+                          _vm._s(_vm.channelData.village.name) +
+                          "\n                 "
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _vm._m(4),
+                    _vm._v(" "),
+                    _c("p", [
+                      _c("img", {
+                        attrs: {
+                          src: "/images/deed.svg",
+                          alt: "ownership icon"
+                        }
+                      }),
+                      _vm._v(
+                        " Ownership: \n                " +
+                          _vm._s(_vm.userData.verification.ownership) +
+                          "\n                 "
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _c("img", {
+                        attrs: {
+                          src: "/images/calendar.svg",
+                          alt: "calender icon"
+                        }
+                      }),
+                      _vm._v(
+                        " Founded: \n                " +
+                          _vm._s(_vm.userData.verification.founded) +
+                          "\n                "
+                      )
                     ])
                   ])
                 ])
@@ -1536,13 +1591,15 @@ var render = function() {
                 _c("br"),
                 _vm._v(" "),
                 _c("div", { staticClass: "container-fluid facultyachieve" }, [
-                  _c("h3", { staticClass: "mx-auto" }, [
+                  _c("h2", { staticClass: "text-uppercase" }, [
                     _vm._v("Our Faculties")
                   ]),
                   _vm._v(" "),
+                  _c("hr", { staticClass: "mt-n2" }),
+                  _vm._v(" "),
                   _c(
                     "div",
-                    { staticClass: "row mb-5 mt-4" },
+                    { staticClass: "row my-5" },
                     _vm._l(_vm.channelData.teacher, function(teacher, index) {
                       return _c(
                         "div",
@@ -1561,13 +1618,17 @@ var render = function() {
                           }),
                           _vm._v(" "),
                           _c("div", { staticClass: "card-body mt-n1" }, [
-                            _c("h6", { staticClass: "card-title my-n1" }, [
-                              _vm._v(_vm._s(teacher.user.name))
-                            ]),
+                            _c(
+                              "h6",
+                              { staticClass: "card-title my-n1 text-center" },
+                              [_vm._v(_vm._s(teacher.user.name))]
+                            ),
                             _vm._v(" "),
-                            _c("p", { staticClass: "card-text" }, [
-                              _vm._v("Qualification")
-                            ])
+                            _c(
+                              "p",
+                              { staticClass: "card-text mx-n2 text-center" },
+                              [_vm._v("Qualification")]
+                            )
                           ])
                         ]
                       )
@@ -1578,7 +1639,7 @@ var render = function() {
               ]
             ),
             _vm._v(" "),
-            _vm._m(4)
+            _vm._m(5)
           ])
         ])
       ]
@@ -1634,7 +1695,7 @@ var staticRenderFns = [
               staticClass: "nav-link",
               attrs: { "data-toggle": "pill", href: "#facility" }
             },
-            [_vm._v("Facility")]
+            [_vm._v("Facilities")]
           )
         ])
       ]
@@ -1645,7 +1706,9 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "card-title my-n2" }, [
-      _c("h5", [_vm._v("News and Notifications")])
+      _c("h5", { staticClass: "text-uppercase text-center" }, [
+        _vm._v("News and Notifications")
+      ])
     ])
   },
   function() {
@@ -1672,9 +1735,25 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "d-flex" }, [
-      _c("img", { attrs: { src: "/images/checkmark.svg" } }),
+      _c("img", {
+        staticClass: "mt-2",
+        attrs: { src: "/images/checkmark.svg" }
+      }),
       _vm._v(" "),
-      _c("h3", { staticClass: "mt-2" }, [_vm._v("Message From The Principal")])
+      _c("h3", { staticClass: "mt-2 text-uppercase" }, [
+        _vm._v("Message From The Principal")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("p", [
+      _c("img", {
+        attrs: { src: "/images/grade.svg", alt: "Exam board icon" }
+      }),
+      _vm._v(" Board: xxxx\n                 ")
     ])
   },
   function() {
@@ -1690,15 +1769,13 @@ var staticRenderFns = [
       [
         _c("br"),
         _vm._v(" "),
-        _c("h3", [_vm._v("Our Facilities")]),
+        _c("h2", { staticClass: "text-uppercase" }, [_vm._v("Our Facilities")]),
         _vm._v(" "),
-        _c("hr"),
+        _c("hr", { staticClass: "mt-n2" }),
         _vm._v(" "),
-        _c("br"),
-        _vm._v(" "),
-        _c("div", { staticClass: "row facilitydiv shadow py-3" }, [
-          _c("div", { staticClass: "col-sm-4 mb-n4" }, [
-            _c("div", { staticClass: "d-flex justify-content-center my-4" }, [
+        _c("div", { staticClass: "row facilitydiv mt-5 py-3" }, [
+          _c("div", { staticClass: "col-sm-4" }, [
+            _c("p", [
               _c("img", {
                 staticClass: "mr-2",
                 attrs: {
@@ -1710,7 +1787,7 @@ var staticRenderFns = [
               _c("strong", { staticClass: "ml-1" }, [_vm._v("Yes")])
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "d-flex justify-content-center my-4" }, [
+            _c("p", [
               _c("img", {
                 staticClass: "mr-2",
                 attrs: { src: "/images/computer.svg", alt: "computer Image" }
@@ -1719,7 +1796,7 @@ var staticRenderFns = [
               _c("strong", { staticClass: "ml-1" }, [_vm._v("Yes")])
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "d-flex justify-content-center my-4" }, [
+            _c("p", [
               _c("img", {
                 staticClass: "mr-2",
                 attrs: { src: "/images/fence.svg", alt: "fence Image" }
@@ -1729,8 +1806,8 @@ var staticRenderFns = [
             ])
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "col-sm-4 mb-n4" }, [
-            _c("div", { staticClass: "d-flex justify-content-center my-4" }, [
+          _c("div", { staticClass: "col-sm-4" }, [
+            _c("p", [
               _c("img", {
                 staticClass: "mr-2",
                 attrs: {
@@ -1742,7 +1819,7 @@ var staticRenderFns = [
               _c("strong", { staticClass: "ml-1" }, [_vm._v("Yes")])
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "d-flex justify-content-center my-4" }, [
+            _c("p", [
               _c("img", {
                 staticClass: "mr-2",
                 attrs: { src: "/images/library.svg", alt: "Library Image" }
@@ -1751,7 +1828,7 @@ var staticRenderFns = [
               _c("strong", { staticClass: "ml-1" }, [_vm._v("Yes")])
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "d-flex justify-content-center my-4" }, [
+            _c("p", [
               _c("img", {
                 staticClass: "mr-2",
                 attrs: { src: "/images/book.svg", alt: "Books Image" }
@@ -1762,7 +1839,7 @@ var staticRenderFns = [
           ]),
           _vm._v(" "),
           _c("div", { staticClass: "col-sm-4" }, [
-            _c("div", { staticClass: "d-flex justify-content-center my-4" }, [
+            _c("p", [
               _c("img", {
                 staticClass: "mr-2",
                 attrs: { src: "/images/hostel.svg", alt: "Hostel Image" }
@@ -1771,7 +1848,7 @@ var staticRenderFns = [
               _c("strong", { staticClass: "ml-1" }, [_vm._v("Yes")])
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "d-flex justify-content-center my-4" }, [
+            _c("p", [
               _c("img", {
                 staticClass: "mr-2",
                 attrs: { src: "/images/bus.svg", alt: "Bus Image" }

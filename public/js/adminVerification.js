@@ -1032,7 +1032,7 @@ var render = function() {
                       ]),
                       _vm._v(" "),
                       _c("tr", [
-                        _c("th", [_vm._v("Udise:")]),
+                        _c("th", [_vm._v("Founded:")]),
                         _vm._v(" "),
                         _c("td", [
                           _vm._v(_vm._s(_vm.channelHistoryData.founded))

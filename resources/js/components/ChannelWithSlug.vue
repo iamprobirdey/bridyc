@@ -56,7 +56,8 @@
 
           <div class="col-md-6 phemdiv text-md-right ml-n4">
             <p class="m-1 mr-2">
-              <i class="fa fa-phone mr-1" aria-hidden="true"></i>{{ phoneNo }}
+              <i class="fa fa-phone mr-1" aria-hidden="true"></i>
+              Call us at: {{ phoneNo }}
             </p>
             <p class="m-1 mr-2">
               <i class="fa fa-envelope mr-1" aria-hidden="true"></i
@@ -106,7 +107,7 @@
             alt="Institute logo"
             class="img-fluid logoinstitute"
           />
-          <h1 class="ml-1 ml-sm-3 institle">{{ channelData.title }}</h1>
+          <h1 class="ml-1 ml-sm-3 institle text-capitalize">{{ channelData.title }}</h1>
         </div>
       </div>
       <!-- social links-->
@@ -176,7 +177,7 @@
             <a class="nav-link" data-toggle="pill" href="#faculty">Faculty</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" data-toggle="pill" href="#facility">Facility</a>
+            <a class="nav-link" data-toggle="pill" href="#facility">Facilities</a>
           </li>
         </ul>
 
@@ -261,7 +262,7 @@
             <div class="container-fluid facultyachieve mt-lg-5 px-0">
               <h2 class="text-uppercase">Our Achievements</h2>
               <hr class="mt-n2" />
-              <div class="row mb-5 mt-5" v-if="channelData.achievement != null">
+              <div class="row my-5" v-if="channelData.achievement != null">
                 <div
                   class="card shadow mx-auto facultyachievecard"
                   v-for="(achievement, index) in channelData.achievement"
@@ -274,7 +275,7 @@
                   </div>
                 </div>
               </div>
-              <div v-else>No Achievements Provided</div>
+              <div class="text-center" v-else>No Achievements Provided</div>
             </div>
             <!-- home content from below ends-->
           </div>
@@ -300,10 +301,10 @@
                     <img :src="domainUrl + '/images/' + userData.avatar" />
                     <!-- <img src="/image/default.jpg" /> -->
                     <div class="card-body mt-n1">
-                      <h4 class="card-title my-n1">
+                      <h4 class="card-title my-n1 text-capitalize">
                         {{ userData.name }}
                       </h4>
-                      <p class="card-text">Principal, {{ channel.title }}</p>
+                      <p class="card-text text-capitalize">Principal, {{ channel.title }}</p>
                     </div>
                   </div>
                 </div>
@@ -357,7 +358,7 @@
             <div class="container-fluid facultyachieve">
               <h2 class="text-uppercase">Our Faculties</h2>
               <hr class="mt-n2" />
-              <div class="row mb-5 mt-5">
+              <div class="row my-5">
                 <div
                   class="card shadow mx-auto facultyachievecard"
                   v-for="(teacher, index) in channelData.teacher"
@@ -371,8 +372,8 @@
                     "
                   />
                   <div class="card-body mt-n1">
-                    <h6 class="card-title my-n1">{{ teacher.user.name }}</h6>
-                    <p class="card-text">Qualification</p>
+                    <h6 class="card-title my-n1 text-center">{{ teacher.user.name }}</h6>
+                    <p class="card-text mx-n2 text-center">Qualification</p>
                   </div>
                 </div>
               </div>

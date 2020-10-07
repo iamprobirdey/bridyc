@@ -136,6 +136,27 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -257,96 +278,124 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    [
-      _vm.teachersRequestData != ""
-        ? _c(
-            "div",
-            [
-              _vm._m(0),
-              _vm._v(" "),
-              _vm._l(_vm.teachersRequestData, function(teacher, index) {
-                return _c("div", { key: index }, [
-                  teacher.request === "in-progress"
-                    ? _c("div", [
-                        _c("h3", [
-                          _vm._v("Teacher name: " + _vm._s(teacher.user.name))
-                        ]),
-                        _vm._v(" "),
-                        _c(
-                          "button",
-                          {
-                            staticClass: "btn btn-primary",
-                            on: {
-                              click: function($event) {
-                                return _vm.acceptTheTeacher(teacher, index)
-                              }
+  return _c("div", { staticClass: "teacher-section" }, [
+    _vm.teachersRequestData != ""
+      ? _c(
+          "div",
+          { staticClass: "mb-5" },
+          [
+            _vm._m(0),
+            _vm._v(" "),
+            _vm._l(_vm.teachersRequestData, function(teacher, index) {
+              return _c("div", { key: index }, [
+                teacher.request === "in-progress"
+                  ? _c("div", [
+                      _c("h3", { staticClass: "text-capitalized" }, [
+                        _vm._v("Faculty name: " + _vm._s(teacher.user.name))
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "button",
+                        {
+                          staticClass: "btn btn-success",
+                          on: {
+                            click: function($event) {
+                              return _vm.acceptTheTeacher(teacher, index)
                             }
-                          },
-                          [_vm._v("\n          Accept\n        ")]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "button",
-                          {
-                            staticClass: "btn btn-danger",
-                            on: {
-                              click: function($event) {
-                                return _vm.deleteTheTeacher(teacher, index)
-                              }
+                          }
+                        },
+                        [_vm._v("\n            Accept\n          ")]
+                      ),
+                      _vm._v(" "),
+                      _c(
+                        "button",
+                        {
+                          staticClass: "btn btn-danger",
+                          on: {
+                            click: function($event) {
+                              return _vm.deleteTheTeacher(teacher, index)
                             }
-                          },
-                          [_vm._v("\n          Delete\n        ")]
-                        )
-                      ])
-                    : _vm._e()
-                ])
-              })
-            ],
-            2
-          )
-        : _vm._e(),
-      _vm._v(" "),
-      _c("h1", [_vm._v("Your school teachers")]),
-      _vm._v(" "),
-      _c("h3", [_vm._v("Teacher has left your school for some reason?")]),
-      _vm._v(" "),
-      _c("span", [_vm._v("Just remove them from the list")]),
-      _vm._v(" "),
+                          }
+                        },
+                        [_vm._v("\n            Delete\n          ")]
+                      )
+                    ])
+                  : _vm._e()
+              ])
+            })
+          ],
+          2
+        )
+      : _vm._e(),
+    _vm._v(" "),
+    _c("h3", { staticClass: "text-uppercase" }, [_vm._v("Faculty Members")]),
+    _vm._v(" "),
+    _c("p", { staticClass: "mb-n2 text-secondary" }, [
+      _vm._v(
+        "(If someone from the faculty left the institute, you may remove them from this section.)"
+      )
+    ]),
+    _vm._v(" "),
+    _c("hr"),
+    _vm._v(" "),
+    _c(
+      "div",
+      { staticClass: "row mx-0 mt-5" },
       _vm._l(_vm.teachersData, function(teacher, index) {
-        return _c("div", { key: index }, [
-          _c("h3", [_vm._v("Teacher name: " + _vm._s(teacher.user.name))]),
-          _vm._v(" "),
-          _c("h4", [_vm._v("Teacher email id: " + _vm._s(teacher.user.email))]),
-          _vm._v(" "),
-          _c(
-            "button",
-            {
-              staticClass: "btn btn-danger",
-              on: {
-                click: function($event) {
-                  return _vm.deleteFromChannel(teacher.id, index)
+        return _c(
+          "div",
+          { key: index, staticClass: "card shadow mx-auto sidebar-facard" },
+          [
+            _c("img", {
+              attrs: { src: "/images/teacher.jpg", alt: "faculty member image" }
+            }),
+            _vm._v(" "),
+            _c("div", { staticClass: "card-body mt-n1" }, [
+              _c(
+                "h6",
+                {
+                  staticClass: "card-title my-n1 text-capitalized text-center"
+                },
+                [_vm._v(_vm._s(teacher.user.name))]
+              ),
+              _vm._v(" "),
+              _c("p", { staticClass: "card-text mx-n3 text-center" }, [
+                _vm._v(
+                  "\n                " +
+                    _vm._s(teacher.user.email) +
+                    "\n              "
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _c(
+              "button",
+              {
+                staticClass: "btn btn-danger mt-5",
+                on: {
+                  click: function($event) {
+                    return _vm.deleteFromChannel(teacher.id, index)
+                  }
                 }
-              }
-            },
-            [_vm._v("\n      Delete\n    ")]
-          )
-        ])
-      })
-    ],
-    2
-  )
+              },
+              [_vm._v("\n        Remove\n      ")]
+            )
+          ]
+        )
+      }),
+      0
+    )
+  ])
 }
 var staticRenderFns = [
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("h1", [
-      _vm._v("\n      You have a\n      "),
+    return _c("h5", [
+      _vm._v("\n        You have a\n        "),
       _c("span", { staticClass: "text-danger" }, [_vm._v("pending")]),
-      _vm._v(" request\n    ")
+      _vm._v(" request, please act!\n      ")
     ])
   }
 ]

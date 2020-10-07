@@ -57,7 +57,6 @@ DO IT ALL')
                         10 August,2020 | 16 min | Season 1
                     </div>
                     <br>
-                    <p>Topic of discussion: Startup and the world</p>
                     <p>A paragraph of Summary of what the discussion is like. This helps students to choose
                         whether to
                         watch it or nor.
