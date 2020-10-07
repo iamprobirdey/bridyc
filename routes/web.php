@@ -21,6 +21,18 @@ use Illuminate\Support\Str;
 |
 */
 
+Route::get('/pass1', function () {
+    return view('auth.passwords.confirm');
+});
+
+Route::get('/pass2', function () {
+    return view('auth.passwords.email');
+});
+Route::get('/pass3', function () {
+    return view('auth.passwords.reset');
+});
+
+
 Auth::routes(['verify' => true]);
 
 Route::get('/home', 'HomeController@test');
@@ -244,9 +256,9 @@ Route::post('institute/register', 'Auth\RegisterController@register');
 
 Route::get('channel/{channel:slug}', 'ChannelController@getChannelBySlug');
 
-Route::get('edit/student/profile/{user:username}', 'Student\ProfileController@index')->middleware(['can:student']);
+Route::get('edit/student/profile/{user:username}', 'Student\ProfileController@index')->middleware(['can:student'])->middleware('verified');
 
-Route::get('edit/teacher/profile/{user:username}', 'Teacher\ProfileController@index')->middleware(['can:teacher']);
+Route::get('edit/teacher/profile/{user:username}', 'Teacher\ProfileController@index')->middleware(['can:teacher'])->middleware('verified');
 
 
 Route::group([
