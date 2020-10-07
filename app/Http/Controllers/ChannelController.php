@@ -14,8 +14,8 @@ class ChannelController extends Controller
 {
     public function index()
     {
-        $podcast = Podcast::orderBy('created_at', 'desc')->limit(1)->get();
 
+        $podcast = Podcast::orderBy('created_at', 'desc')->limit(1)->first();
         //activity('all-user')->log('User entered in Bridyc');
 
         $channel = Channel::select(

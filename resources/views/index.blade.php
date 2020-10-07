@@ -41,29 +41,31 @@ DO IT ALL')
     </div>
     <div class="container focusplace">
         <div class="row">
-            <div class="col-lg-4">
-                <img class="imgguest shadow-lg" src="{{asset('podcast/'.$podcast[0]['image_path'])}}" alt="guest photo">
-            </div>
+            @if ($podcast != null)
 
+            <div class="col-lg-4">
+                <img class="imgguest shadow-lg" src="{{asset('podcast/'.$podcast->image_path)}}" alt="guest photo">
+            </div>
             <div class="col-md-8">
                 <div class="videosection">
-                    <h2>"{{$podcast[0]['thumbnail']}}"</h2>
+                    <h2>"{{$podcast->thumbnail}}"</h2>
                     <div class="guest mx-auto mt-3">
-                        <h2>Guest: {{$podcast[0]['name']}}</h2>
-                        <h6>{{$podcast[0]['designation']}}</h6>
+                        <h2>Guest: {{$podcast['name']}}</h2>
+                        <h6>{{$podcast->designation}}</h6>
                     </div>
                     <div class="d-flex justify-content-center mt-2">
-                        {{$podcast[0]['created_at']->diffForHumans()}} | 16 min | Season 1
+                        {{$podcast->created_at->diffForHumans()}} | 16 min | Season 1
                     </div>
                     <br>
                     <p>
-                        {{$podcast[0]['summary']}}
+                        {{$podcast->summary}}
                     </p>
 
-                    <button class="btn playbtn" data-toggle="modal" data-src="{{$podcast[0]['youtube_link']}}"
+                    <button class="btn playbtn" data-toggle="modal" data-src="{{$podcast->youtube_link}}"
                         data-target="#podcastModal"><img src="/images/play.svg"> Watch Now</button>
                 </div>
             </div>
+            @endif
         </div>
     </div>
 </banner>
