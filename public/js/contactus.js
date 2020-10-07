@@ -174,6 +174,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -274,7 +278,7 @@ var render = function() {
         _c(
           "div",
           {
-            staticClass: "form-group",
+            staticClass: "form-group row",
             class: {
               "has-error":
                 _vm.errors.has("contactError.name") ||
@@ -282,7 +286,9 @@ var render = function() {
             }
           },
           [
-            _c("label", [_vm._v("Name")]),
+            _c("label", { staticClass: "col-sm-3 col-form-label" }, [
+              _vm._v("Name :")
+            ]),
             _vm._v(" "),
             _c("input", {
               directives: [
@@ -299,6 +305,7 @@ var render = function() {
                   expression: "'required'"
                 }
               ],
+              staticClass: "col-sm-9",
               class: {
                 "form-control": true,
                 "is-invalid": _vm.errors.has("name")
@@ -307,7 +314,7 @@ var render = function() {
                 "data-vv-delay": "20",
                 name: "name",
                 type: "text",
-                placeholder: "Enter your name"
+                placeholder: "Enter your full name"
               },
               domProps: { value: _vm.contactData.name },
               on: {
@@ -331,7 +338,7 @@ var render = function() {
                     expression: "errors.has('name')"
                   }
                 ],
-                staticClass: "text-danger"
+                staticClass: "text-danger text-center"
               },
               [_vm._v(_vm._s(_vm.errors.first("name")))]
             ),
@@ -357,7 +364,7 @@ var render = function() {
         _c(
           "div",
           {
-            staticClass: "form-group",
+            staticClass: "form-group row",
             class: {
               "has-error":
                 _vm.errors.has("contactError.email") ||
@@ -365,7 +372,9 @@ var render = function() {
             }
           },
           [
-            _c("label", [_vm._v("E-mail")]),
+            _c("label", { staticClass: "col-sm-3 col-form-label" }, [
+              _vm._v("E-mail :")
+            ]),
             _vm._v(" "),
             _c("input", {
               directives: [
@@ -382,6 +391,7 @@ var render = function() {
                   expression: "'required|email'"
                 }
               ],
+              staticClass: "col-sm-9",
               class: {
                 "form-control": true,
                 "is-invalid": _vm.errors.has("email")
@@ -414,7 +424,7 @@ var render = function() {
                     expression: "errors.has('email')"
                   }
                 ],
-                staticClass: "text-danger"
+                staticClass: "text-danger text-center"
               },
               [_vm._v(_vm._s(_vm.errors.first("email")))]
             ),
@@ -440,7 +450,7 @@ var render = function() {
         _c(
           "div",
           {
-            staticClass: "form-group",
+            staticClass: "form-group row",
             class: {
               "has-error":
                 _vm.errors.has("contactError.phone") ||
@@ -448,7 +458,9 @@ var render = function() {
             }
           },
           [
-            _c("label", [_vm._v("Phone Number")]),
+            _c("label", { staticClass: "col-sm-6 col-form-label" }, [
+              _vm._v("Phone Number :")
+            ]),
             _vm._v(" "),
             _c("input", {
               directives: [
@@ -465,6 +477,7 @@ var render = function() {
                   expression: "'required|numeric|min:10|max:10'"
                 }
               ],
+              staticClass: "col-sm-6",
               class: {
                 "form-control": true,
                 "is-invalid": _vm.errors.has("phone")
@@ -473,7 +486,7 @@ var render = function() {
                 "data-vv-delay": "20",
                 name: "phone",
                 type: "text",
-                placeholder: "Enter your phone number like: 1234567890"
+                placeholder: "Enter your phone number"
               },
               domProps: { value: _vm.contactData.phone },
               on: {
@@ -497,7 +510,7 @@ var render = function() {
                     expression: "errors.has('phone')"
                   }
                 ],
-                staticClass: "text-danger"
+                staticClass: "text-danger text-center"
               },
               [_vm._v(_vm._s(_vm.errors.first("phone")))]
             ),
@@ -523,7 +536,7 @@ var render = function() {
         _c(
           "div",
           {
-            staticClass: "form-group",
+            staticClass: "form-group row",
             class: {
               "has-error":
                 _vm.errors.has("contactError.message") ||
@@ -531,7 +544,9 @@ var render = function() {
             }
           },
           [
-            _c("label", [_vm._v("Message")]),
+            _c("label", { staticClass: "col-sm-4 col-form-label" }, [
+              _vm._v("Message :")
+            ]),
             _vm._v(" "),
             _c("textarea", {
               directives: [
@@ -548,6 +563,7 @@ var render = function() {
                   expression: "'required'"
                 }
               ],
+              staticClass: "col-sm-8",
               class: {
                 "form-control": true,
                 "is-invalid": _vm.errors.has("message")
@@ -556,7 +572,7 @@ var render = function() {
                 "data-vv-delay": "20",
                 name: "message",
                 type: "text",
-                placeholder: "Enter your message"
+                placeholder: "Message text"
               },
               domProps: { value: _vm.contactData.message },
               on: {
@@ -580,7 +596,7 @@ var render = function() {
                     expression: "errors.has('message')"
                   }
                 ],
-                staticClass: "text-danger"
+                staticClass: "text-danger text-center"
               },
               [_vm._v(_vm._s(_vm.errors.first("message")))]
             ),
@@ -605,7 +621,7 @@ var render = function() {
         _vm._v(" "),
         _c(
           "button",
-          { staticClass: "btn btn-primary", attrs: { type: "submit" } },
+          { staticClass: "btn btncontact", attrs: { type: "submit" } },
           [_vm._v("Submit")]
         )
       ]
@@ -825,7 +841,7 @@ if (typeof element != "undefined" && element != null) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/js/contactus.js */"./resources/js/contactus.js");
+module.exports = __webpack_require__(/*! C:\laragon\www\bridyc\resources\js\contactus.js */"./resources/js/contactus.js");
 
 
 /***/ })

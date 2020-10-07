@@ -44,7 +44,7 @@
                 <a class="nav-link {{$router[$routerCount - 2] === 'profile' ? 'active' : '' }}"
                     href="{{route('user.profile',auth()->user()->username)}}">
                     <i class="fa fa-user-circle-o sidebaricons" aria-hidden="true"></i>
-                    Profile
+                    Principal Profile
                 </a>
             </li>
             <li class="nav-item">
@@ -71,7 +71,7 @@
             <li class="nav-item">
                 <a class="nav-link {{$router[$routerCount - 2] === 'feature' ? 'active' : '' }}"
                     href="{{route('channel.feature',$channelTitle)}}">
-                    <i class="fa fa-users sidebaricons" aria-hidden="true"></i>
+                    <i class="fa fa-plus sidebaricons" aria-hidden="true"></i>
                     New Feature
                 </a>
             </li>

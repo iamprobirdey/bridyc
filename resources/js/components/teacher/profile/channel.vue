@@ -1,7 +1,7 @@
 <template>
-  <div>
-    <div v-if="channelChecker">
-      <h3>Your School name:</h3>
+  <div class="channelname">
+    <div v-if="channelChecker" class="mt-n4">
+      <h4>Your School name:</h4>
       <span v-if="userInstituteData.channel_id != null">{{userInstituteData.channel.title}}</span>
       <span>{{userInstituteData.school_name}}</span>
       <button class="btn btn-primary" @click="editAddress()">Edit</button>
@@ -9,14 +9,14 @@
     <div v-if="!channelChecker">
       <form @submit.prevent="channelForm()">
         <div
-          class="form-group row mx-lg-5"
+          class="form-group row mx-2"
           :class="{'has-error': errors.has('channel') || serverErrors.channel_id != '' }"
         >
-          <label col="col-sm-3 col-form-label">CHANNEL:</label>
-          <span class="text-danger">If you don't find your college you can type it</span>
+          <label col="col-sm-3 col-form-label" class="mt-2">Institute : </label>
+          
           <select
             v-model="userFormData.channel_id"
-            class="form-control col-sm-9 ml-auto"
+            class="form-control col-sm-9 mx-lg-2"
             name="channel"
             v-validate="'numeric'"
           >
@@ -28,6 +28,7 @@
               :value="channel.id"
             >{{channel.title}}</option>
           </select>
+          <p class="text-danger mx-auto" style="font-size:14px;">*If your institute is not listed here, you can always type it below.</p>
           <i v-show="errors.has('channel')" class="is-invalid"></i>
 
           <span
@@ -41,28 +42,31 @@
         </div>
 
         <div
-          class="form-group"
+          class="form-group row mx-2"
           :class="{'has-error' :errors.has('serverErrors.school_name') || serverErrors.school_name != ''}"
         >
-          <label>Name Optional</label>
+          <label col="col-sm-4 col-form-label" class="mt-2">Institute Name : </label>
           <input
             v-model="userFormData.school_name"
+            class="form-control col-sm-8 mx-lg-2"
             data-vv-delay="20"
             name="school_name"
             type="text"
             :class="{'form-control': true,'is-invalid': errors.has('school_name')}"
-            placeholder="OPTIONAL Enter your school name  "
+            placeholder="Type your institute name (optional)"
           />
           <span
             v-show="errors.has('school_name')"
-            class="text-danger"
+            class="text-danger text-center"
           >{{errors.first("school_name")}}</span>
           <span
             v-show="serverErrors.school_name != ''"
-            class="help is-danger"
+            class="help is-danger text-center"
           >{{serverErrors.school_name}}</span>
         </div>
+        <div class="container text-center">
         <button type="submit" class="btn btnsubmit">Submit</button>
+        </div>
       </form>
     </div>
   </div>

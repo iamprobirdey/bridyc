@@ -1,43 +1,33 @@
 <template>
   <div>
-    <br />
-    <br />
-    <br />
-    <br />
-    Add your Extra Cirruculum Activities
+    
+    <h4 class="mt-5 mb-5">
+         Other Activities  
+         <button class="btn btnadd p-1" @click="addActivity()">+</button>
+       </h4>
     <div v-if="activities != null">
       <ul
-        class="nav flex-column col-sm-6 mt-5 mt-sm-0"
+        class="nav flex-column"
         v-for="(activity, index) in activities"
         :key="index"
       >
         <li>
-          <div class="card mx-sm-3 shadow profiledetails" style="height: auto">
-            <div class="card-body mt-n2">
-              Activity and Sociaty :
-              {{ activity.activity }}
-            </div>
-          </div>
+            <div class="card mx-sm-3 shadow profiledetails" style="height:auto;">
+               <div class="card-body mt-n2">Activity: {{ activity.activity }}</div>
+           </div>
         </li>
-        <br />
+        <br>
         <li>
-          <div class="card mx-sm-3 shadow profiledetails">
-            <div class="card-body mt-n2">
-              Description:
-              {{ activity.description }}
-            </div>
-          </div>
+           <div class="card mx-sm-3 shadow profiledetails" style="height:auto;">
+               <div class="card-body mt-n2">Description : {{ activity.description }}</div>
+           </div>
         </li>
-        <button class="btn btn-success" @click="editActivity(activity, index)">
-          Edit
-        </button>
-        <br />
-        <br />
-        <br />
+        <div class="ml-3 mt-2">
+            <button class="btn btnadd p-1" @click="editActivity(activity, index)"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+        </div>
       </ul>
     </div>
 
-    <button class="btn btn-primary" @click="addActivity()">Add</button>
 
     <div
       class="modal fade"
@@ -49,10 +39,7 @@
     >
       <div class="modal-dialog" role="document">
         <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="principalprofilemodal">
-              Please fill in these details
-            </h5>
+          <div>
             <button
               type="button"
               class="close"
@@ -64,8 +51,8 @@
           </div>
           <div class="modal-body">
             <form @submit.prevent="getActivityData()">
-              <h6 class="mb-3 mt-n2">Activities:</h6>
-
+              <h6 class="mb-3 mt-n2" style="color:#003585">Other activities (non academic)</h6>
+                    <hr class="mx-n3">
               <div
                 class="form-group"
                 :class="{
@@ -73,7 +60,7 @@
                     errors.has('activity') || activityError.activity != '',
                 }"
               >
-                <label for="exampleInputEmail1">Activity</label>
+                <label for="exampleInputEmail1">Activity: </label>
                 <input
                   v-model="activityFormData.activity"
                   v-validate="'required'"
@@ -84,16 +71,16 @@
                     'form-control': true,
                     'is-invalid': errors.has('activity'),
                   }"
-                  placeholder="Field of study(specialization)"
+                  placeholder="Name the activity"
                 />
                 <i v-show="errors.has('class')" class="is-invalid"></i>
 
-                <span v-show="errors.has('activity')" class="text-danger">{{
+                <span v-show="errors.has('activity')" class="text-danger text-center">{{
                   errors.first("activity")
                 }}</span>
                 <span
                   v-show="activityError.activity != ''"
-                  class="text-danger"
+                  class="text-danger text-center"
                   >{{ activityError.activity }}</span
                 >
               </div>
@@ -106,7 +93,7 @@
                     activityError.description != '',
                 }"
               >
-                <label for="exampleInputEmail1">Description</label>
+                <label for="exampleInputEmail1">Description: </label>
                 <input
                   v-model="activityFormData.description"
                   v-validate="'required'"
@@ -117,16 +104,16 @@
                     'form-control': true,
                     'is-invalid': errors.has('description'),
                   }"
-                  placeholder="Name of your description"
+                  placeholder="Describe your activities here"
                 />
                 <i v-show="errors.has('class')" class="is-invalid"></i>
 
-                <span v-show="errors.has('description')" class="text-danger">{{
+                <span v-show="errors.has('description')" class="text-danger text-center">{{
                   errors.first("description")
                 }}</span>
                 <span
                   v-show="activityError.description != ''"
-                  class="text-danger"
+                  class="text-danger text-center"
                   >{{ activityError.description }}</span
                 >
               </div>

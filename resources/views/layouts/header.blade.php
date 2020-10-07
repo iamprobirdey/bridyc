@@ -66,7 +66,7 @@
 
     <style>
         body {
-            background-color: rgb(248, 252, 255);
+            /*background-color: rgb(248, 252, 255);*/
             overflow-x: hidden;
         }
     </style>

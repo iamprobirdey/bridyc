@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h4>We can't see your social media handles</h4>
+    <h4>Social Media handles</h4>
     <ul v-if="getTheModel === false">
       <li v-if="socialData.facebook != null">
         <a :href="socialData.facebook" target="_blank"><span>Facebook</span></a>
@@ -17,7 +17,7 @@
         <a :href="socialData.youtube" target="_blank"><span> Youtube</span></a>
       </li>
     </ul>
-    <button @click="editTheSocial()" class="btn btn-success">Edit</button>
+    <button @click="editTheSocial()" class="btn btnwebdes">Edit</button>
     <div v-if="getTheModel">
       <form @submit.prevent="validateForm()">
         <div class="row">

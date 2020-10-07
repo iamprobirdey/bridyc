@@ -1,16 +1,20 @@
 <template>
-  <div>
-    <button class="btn btn-primary" @click="addNewNotification()">
-      Add new Notification
+  <div class="notification-section">
+    <button class="btn add-notifications mb-5" @click="addNewNotification()">
+      Add New Notification
     </button>
+    
+    <h3 class="text-uppercase mb-n2">News and Notifications</h3>
+    <hr>
+    
     <ul>
-      <li v-for="(notification, index) in notificationData" :key="index">
+      <li  class="mb-1" v-for="(notification, index) in notificationData" :key="index">
         {{ notification.notify }}
         <button
           class="btn btn-danger"
           @click="deleteNotification(notification, index)"
         >
-          Delete Notification
+          Remove
         </button>
       </li>
     </ul>
@@ -25,6 +29,11 @@
     >
       <div class="modal-dialog" role="document">
         <div class="modal-content">
+
+          <button type="button" class="close ml-auto mr-2" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+
           <div class="modal-body">
             <form @submit.prevent="submitForm()">
               <div
@@ -35,7 +44,7 @@
                     serverError.notify != '',
                 }"
               >
-                <label>Add new Notification</label>
+                <label>Add News and Notification</label>
                 <input
                   id="notify"
                   v-model="notificationForm.notify"
@@ -49,7 +58,7 @@
                   }"
                   placeholder="Notify anything to your student"
                 />
-                <span v-show="errors.has('notify')" class="text-danger">{{
+                <span v-show="errors.has('notify')" class="text-danger text-center">{{
                   errors.first("notify")
                 }}</span>
                 <span
@@ -58,7 +67,7 @@
                   >{{ serverError.notify }}</span
                 >
               </div>
-              <button type="submit" class="btn btn-primary">Submit</button>
+              <button type="submit" class="btn btn-success">Publish</button>
             </form>
           </div>
         </div>

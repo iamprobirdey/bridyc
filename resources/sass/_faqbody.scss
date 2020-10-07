@@ -1,47 +1,71 @@
 
- .faqheader{
-    text-align: center;
-    background-image: linear-gradient(to right top, #011737, #002847, #003954, #004a5f, #005b67);
-    color: white;
-    padding-top: 220px;
-    padding-bottom:25px;
-    font-size: 30px;
+
+.imgbanfaq{
+    background-image: linear-gradient(to top,rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/faq.png");
 }
 
+
 .faqbody{
-    margin-bottom: 50px;
-
-
-
-    .faqQ{
+    margin-bottom: 70px;
+    margin-top: 100px;
+    .definition{
+        position: relative;
+        top:-50px;
+        color:white;
+        font-weight: 500;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        
+        background-image: linear-gradient(to bottom, #3659a2, #3259ae, #3058b9, #3157c4, #3456cf);
+        @include screensize(laptop){
+            left:25px;
+        }
+    }
+    .accordion{
         background: #f9fafa;
         font-family: "Roboto", sans-serif;
+        color: #3659a2;
+        font-size: 14px;
+        font-weight: 700;
+        width: 100%;
+        padding:7px;
+        border:1px solid #eceded;
+        text-align: left;
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+        margin-bottom:5px;
+        transition:0.8s;
+        
+        &:focus{
+            outline: none !important;
+        }
         &:hover{
             background: #ecf0f0;
         }
-
-
-        .fa{
-            font-size: 18px;
-            font-weight: 900;
-            transition: .3s transform ease-in-out;
-        }
-        .collapsed {
-            .fa{
-                transform: rotate(180deg);
-            }
-        }
-
-
-        a{
-            color: #3659a2;
-            font-size: 18px;
+        &::after{
+            content: '\002B';
+            font-size: 20px;
             font-weight: 700;
+            float: right;
+        }
+    }
+    .active{
+        background: #ecf0f0;
+        &::after{
+            content: '\2212';
+            font-size: 20px;
+            font-weight: bolder;
         }
     }
 
-    .card-body{
+    .panel{
         color: #324353;
+        text-align: left;
+        margin-top:-5px;
+        border: 1px solid #eceded;
+        border-bottom-left-radius: 6px;
+        border-bottom-right-radius: 6px;
+        display: none;
+        overflow:hidden;
     }
 
 }

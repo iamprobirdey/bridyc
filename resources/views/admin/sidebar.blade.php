@@ -1,9 +1,9 @@
 <div id="sidebarcollapse" class="col-lg-2 collapse d-lg-block sidebar shadow-lg">
     <div class="left-sidebar" style="overflow: auto;">
 
-      <ul class="nav flex-column sidebar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" href="{{url('/admin/country')}}">
+      <ul class="nav flex-column">
+        <li class="nav-item active">
+          <a class="nav-link" href="{{url('/admin/country')}}">
               <span class="material-icons sidebaricons">
                 dashboard
                 </span>
@@ -11,7 +11,7 @@
             </a>
           </li>
         <li class="nav-item">
-        <a class="nav-link active" href="{{url('/admin/state')}}">
+        <a class="nav-link" href="{{url('/admin/state')}}">
             <span class="material-icons sidebaricons">
               dashboard
               </span>
@@ -19,7 +19,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="{{url('/admin/district')}}">
+          <a class="nav-link" href="{{url('/admin/district')}}">
             <span class="material-icons sidebaricons">
               dashboard
               </span>
@@ -27,7 +27,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="{{url('/admin/village')}}">
+          <a class="nav-link" href="{{url('/admin/village')}}">
             <span class="material-icons sidebaricons">
               dashboard
               </span>
@@ -35,7 +35,7 @@
           </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link active" href="{{url('/admin/board')}}">
+            <a class="nav-link" href="{{url('/admin/board')}}">
                 <span class="material-icons sidebaricons">
                   dashboard
                   </span>
@@ -43,7 +43,7 @@
               </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link active" href="{{url('/admin/standard')}}">
+            <a class="nav-link" href="{{url('/admin/standard')}}">
             <span class="material-icons sidebaricons">
                 dashboard
                 </span>
@@ -51,7 +51,7 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link active" href="{{url('/admin/language')}}">
+            <a class="nav-link" href="{{url('/admin/language')}}">
             <span class="material-icons sidebaricons">
                 dashboard
                 </span>
@@ -59,7 +59,7 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link active" href="{{url('/admin/subject')}}">
+            <a class="nav-link" href="{{url('/admin/subject')}}">
             <span class="material-icons sidebaricons">
                 dashboard
                 </span>
@@ -67,7 +67,7 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link active" href="{{url('/admin/hobby')}}">
+            <a class="nav-link" href="{{url('/admin/hobby')}}">
             <span class="material-icons sidebaricons">
                 dashboard
                 </span>
@@ -76,7 +76,7 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link active" href="{{url('/admin/user/online')}}">
+            <a class="nav-link" href="{{url('/admin/user/online')}}">
             <span class="material-icons sidebaricons">
                 dashboard
                 </span>
@@ -84,7 +84,7 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link active" href="{{url('/admin/podcast')}}">
+            <a class="nav-link" href="{{url('/admin/podcast')}}">
             <span class="material-icons sidebaricons">
                 dashboard
                 </span>
@@ -92,7 +92,7 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link active" href="{{url('/admin/contact')}}">
+            <a class="nav-link" href="{{url('/admin/contact')}}">
             <span class="material-icons sidebaricons">
                 dashboard
                 </span>
@@ -100,7 +100,7 @@
             </a>
         </li>
         <li class="nav-item">
-            <a class="nav-link active" href="{{url('/admin/verification')}}">
+            <a class="nav-link" href="{{url('/admin/verification')}}">
             <span class="material-icons sidebaricons">
                 dashboard
                 </span>

@@ -17,11 +17,10 @@
         <main role="main" class="col-lg-10 ml-lg-auto">
             <br>
             <br>
-            <div class="container">
+            
                 <div id="channel-profile">
                     <channel-profile :user="{{json_encode($user)}}"></channel-profile>
                 </div>
-            </div>
         </main>
     </div>
 </div>

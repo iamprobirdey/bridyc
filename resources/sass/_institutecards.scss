@@ -1,6 +1,7 @@
 
 .institute{
     text-align: center;
+    background-color: #f9fafa;
     @include screensize(laptop){
         margin-top: 30px;
        }

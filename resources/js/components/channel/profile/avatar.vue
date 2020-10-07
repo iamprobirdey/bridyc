@@ -1,7 +1,8 @@
 <template>
   <div class="mb-3">
-    <div v-if="userImageStatus">
+    <div class="container text-center ml-3" v-if="userImageStatus">
       <img
+        class="princi-profile-picture rounded-circle"
         height="150"
         width="152"
         :src="
@@ -9,18 +10,18 @@
             ? '/images/default.jpg'
             : domainUrl + '/media/channel/' + userId + '/avatar/' + userImage
         "
-        alt="icon image"
+        alt="principal profile picture"
       />
       <!--
                         :srcset="domainUrl+'/media/channel/'+userId+'/m-'+userImage+','+domainUrl+'/media/channel/'+userId+'/s-'+userImage"
                      -->
 
-      <button @click="editTheIcon()" class="btn">
-        <i class="fa fa-pencil" aria-hidden="true"></i> Change Logo
+      <button @click="editTheIcon()" class="btn princi-profile-edit edit-btn p-2">
+        <i class="fa fa-camera" aria-hidden="true"></i>
       </button>
     </div>
 
-    <div v-if="!userImageStatus">
+    <div class="princi-upload-profile-pic" v-if="!userImageStatus">
       <picture-input
         ref="pictureInput"
         width="152"
@@ -31,16 +32,16 @@
         button-class="btn"
         :custom-strings="{
           upload: '<h1>Bummer!</h1>',
-          drag: 'Upload your logo',
+          drag: 'Upload your profile picture',
         }"
         @change="onChange"
         name="image"
       ></picture-input>
-      <div class="btnsuca">
+      <div class="btnsuca text-center mt-2">
         <button
           v-if="imageData != ''"
           type="button"
-          class="btn btnsubmiticon rounded-0"
+          class="btn btnsubmit mt-n2"
           @click="onImageSubmit()"
         >
           Submit
@@ -53,7 +54,7 @@
           <i class="fa fa-times" aria-hidden="true"></i>Cancel
         </button>
       </div>
-      <span v-show="imageError" class="text-danger">{{ imageError }}</span>
+      <span v-show="imageError" class="text-danger text-center">{{ imageError }}</span>
     </div>
   </div>
 </template>

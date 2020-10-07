@@ -180,12 +180,12 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("section", [
-    _c("div", { staticClass: "institute container py-5" }, [
+    _c("div", { staticClass: "institute container-fluid pt-5" }, [
       _c("br"),
       _vm._v(" "),
       _c(
         "div",
-        { staticClass: "row mb-5" },
+        { staticClass: "row" },
         _vm._l(_vm.channelData, function(channel, index) {
           return _c(
             "div",
@@ -471,7 +471,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/js/channel.js */"./resources/js/channel.js");
+module.exports = __webpack_require__(/*! C:\laragon\www\bridyc\resources\js\channel.js */"./resources/js/channel.js");
 
 
 /***/ })

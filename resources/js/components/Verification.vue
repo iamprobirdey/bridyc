@@ -1,14 +1,16 @@
 <template>
   <div>
     <div v-if="verificationStatus === true && userData === 1">
-      <h4>
-        <span class="text-danger">Your data is under verification</span>
+      <h4 class="text-center text-danger">
+      Your data is under verification
       </h4>
+      <p class="text-center text-success">Once verified, you will have full access to your channel</P>
     </div>
     <div v-if="userData === 3 && verificationStatus === true">
-      <h4>
-        <span class="text-danger">You are blocked by Admin</span>
+      <h4 class="text-center text-danger">
+      You are temporarily restricted from accessing the channel
       </h4>
+     <h6 class="text-center text-success">Please contact the admin</h6>
     </div>
     <div v-if="verificationStatus === false">
       <div>

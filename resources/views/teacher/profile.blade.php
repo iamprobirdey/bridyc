@@ -10,8 +10,9 @@
 <link rel="stylesheet" type="text/css" href="{{url('css/profile.css')}}">
 @endsection
 @section('content')
-
-<div id="teacher-profile">
+<div class="container-fluid profileheader">
+</div>
+<div id="teacher-profile" class="container-fluid">
     <teacher-profile :user="{{json_encode($user)}}" :channels="{{json_encode($channels)}}"
         :states="{{json_encode($states)}}" :districts="{{json_encode($districts)}}"
         :villages="{{json_encode($villages)}}" :standards="{{json_encode($standards)}}"

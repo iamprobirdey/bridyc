@@ -1032,7 +1032,7 @@ var render = function() {
                       ]),
                       _vm._v(" "),
                       _c("tr", [
-                        _c("th", [_vm._v("Udise:")]),
+                        _c("th", [_vm._v("Founded:")]),
                         _vm._v(" "),
                         _c("td", [
                           _vm._v(_vm._s(_vm.channelHistoryData.founded))
@@ -1615,7 +1615,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/js/adminVerification.js */"./resources/js/adminVerification.js");
+module.exports = __webpack_require__(/*! C:\laragon\www\bridyc\resources\js\adminVerification.js */"./resources/js/adminVerification.js");
 
 
 /***/ })

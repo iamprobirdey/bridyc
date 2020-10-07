@@ -13,8 +13,10 @@
 @endsection
 @section('content')
 
-<h2 class="mainheader">Terms & Conditions</h2>
-<div class="container ptbody">
+<div class="mainheader container py-3 shadow">
+<h2 class="text-uppercase mb-5">Terms and Conditions</h2>
+</div>
+    <div class="container ptbody">
 
     <br>
     <div class="mainbody">

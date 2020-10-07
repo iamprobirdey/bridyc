@@ -1,14 +1,15 @@
 <template>
     <div>
 
-        <div class="container-fluid profileheader text-center" v-if="userImageStatus">
+        <div class="text-center" v-if="userImageStatus">
             <img class="profile-picture rounded-circle shadow"
             :src="domainUrl+'/media/student/'+userId+'/profile/'+userImage"
             alt="student profile pictures">
+            <a class="profile-edit p-2 rounded" @click="editTheIcon()" data-toggle="tooltip" title="Change Picture"><i class="fa fa-camera" aria-hidden="true"></i></a>
         </div>
-        <a class="profile-edit p-2 rounded" @click="editTheIcon()"><i class="fa fa-camera" aria-hidden="true"></i></a>
+        
 
-        <div  v-if="!userImageStatus">
+        <div  class="upload-profile-pic" v-if="!userImageStatus">
             <picture-input
                 ref="pictureInput"
                 width="152"
@@ -19,26 +20,26 @@
                 button-class="btn"
                 :custom-strings="{
                         upload: '<h1>Bummer!</h1>',
-                        drag: 'Upload your logo'
+                        drag: 'Upload your profile picture'
                     }"
                 @change="onChange"
                 name="image"
             ></picture-input>
-        <div class="btnsuca">
+        <div class="text-center mt-2">
             <button
                 v-if="imageData != ''"
                 type="button"
-                class="btn btnsubmiticon rounded-0"
+                class="btn btnsubmit mt-n2"
                 @click="onImageSubmit()"
             >Submit</button>
             <button
                 v-if="userImage != ''"
                 @click="canTheEdit()"
-                class="btn btn-success">
-                <i class="fa fa-times" aria-hidden="true"></i>Cancel
+                class="btn btn-warning">
+                Cancel
             </button>
        </div>
-            <span v-show="imageError " class="text-danger">{{ imageError }}</span>
+            <span v-show="imageError " class="text-danger text-center">{{ imageError }}</span>
         </div>
 
 

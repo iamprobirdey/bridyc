@@ -1,19 +1,27 @@
-.contactheader {
-  text-align: center;
-  background-image: -webkit-gradient(linear, left bottom, right top, from(#011737), color-stop(#002847), color-stop(#003954), color-stop(#004a5f), to(#005b67));
-  background-image: linear-gradient(to right top, #011737, #002847, #003954, #004a5f, #005b67);
-  color: white;
-  padding-top: 220px;
-  padding-bottom: 25px;
-  font-size: 30px;
+.imgbancontact {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url("/images/contactimg.png");
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/contactimg.png");
 }
 
-.contactform {
-  font-family: 'Times New Roman', Times, serif;
+.contactheader {
+  margin-top: 50px;
+  color: #3659a2;
+  background-color: #f9fafa;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .contactform .contactadd {
   text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.contactform .contactadd h6 img {
+  width: 25px;
+  height: 25px;
+}
+
+.contactform .contactadd .contact-line {
+  color: #3659a2;
 }
 
 @media only screen and (min-width: 481px) {
@@ -28,4 +36,45 @@
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-weight: 100;
   font-size: 25px;
+}
+
+.contactform .contact-query {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 8% 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 8% 100%);
+  background-image: -webkit-gradient(linear, left bottom, right top, from(#990066), color-stop(#831874), color-stop(#67267f), color-stop(#442f85), to(#003585));
+  background-image: linear-gradient(to right top, #990066, #831874, #67267f, #442f85, #003585);
+}
+
+@media only screen and (min-width: 1280px) {
+  .contactform .contact-query {
+    -webkit-clip-path: polygon(0 0, 100% 0%, 100% 100%, 20% 100%);
+            clip-path: polygon(0 0, 100% 0%, 100% 100%, 20% 100%);
+    padding-left: 100px !important;
+  }
+}
+
+.contactform .contact-query input {
+  background-color: #f9fafa;
+  border-radius: 25px;
+}
+
+.contactform .contact-query textarea {
+  background-color: #f9fafa;
+}
+
+.contactform .contact-query label {
+  color: white;
+}
+
+.contactform .contact-query h2 {
+  color: white;
+}
+
+.contactform .contact-query .btncontact {
+  color: white;
+  background-color: #442f85;
+}
+
+.contactform .contact-query .btncontact:hover {
+  background-color: #67267f;
 }

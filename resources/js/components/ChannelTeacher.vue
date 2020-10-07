@@ -1,15 +1,15 @@
 <template>
-  <div>
-    <div v-if="teachersRequestData != ''">
-      <h1>
+  <div class="teacher-section">
+    <div class="mb-5" v-if="teachersRequestData != ''">
+      <h5>
         You have a
-        <span class="text-danger">pending</span> request
-      </h1>
+        <span class="text-danger">pending</span> request, please act!
+      </h5>
       <div v-for="(teacher, index) in teachersRequestData" :key="index">
         <div v-if="teacher.request === 'in-progress'">
-          <h3>Teacher name: {{ teacher.user.name }}</h3>
+          <h3 class="text-capitalized">Faculty name: {{ teacher.user.name }}</h3>
           <button
-            class="btn btn-primary"
+            class="btn btn-success"
             @click="acceptTheTeacher(teacher, index)"
           >
             Accept
@@ -23,18 +23,39 @@
         </div>
       </div>
     </div>
-    <h1>Your school teachers</h1>
-    <h3>Teacher has left your school for some reason?</h3>
-    <span>Just remove them from the list</span>
-    <div v-for="(teacher, index) in teachersData" :key="index">
-      <h3>Teacher name: {{ teacher.user.name }}</h3>
-      <h4>Teacher email id: {{ teacher.user.email }}</h4>
+    <h3 class="text-uppercase">Faculty Members</h3>
+    <p class="mb-n2 text-secondary">(If someone from the faculty left the institute, you may remove them from this section.)</p>
+    <hr>
+    <!--h3>Teacher has left your school for some reason?</h3>
+    <span>Just remove them from the list</span-->
+    <!--div class="row mx-0">
+    <div class="mt-5" v-for="(teacher, index) in teachersData" :key="index">
+      <img src="/images/teacher.jpg" alt="faculty member image">
+      <h3>{{ teacher.user.name }}</h3>
+      <h6>{{ teacher.user.email }}</h6>
       <button
         class="btn btn-danger"
         @click="deleteFromChannel(teacher.id, index)"
       >
         Delete
       </button>
+    </div-->
+<div class="row mx-0 mt-5">
+    <div class="card shadow mx-auto sidebar-facard" v-for="(teacher, index) in teachersData" :key="index">
+            <img src="/images/teacher.jpg" alt="faculty member image">
+            <div class="card-body mt-n1">
+              <h6 class="card-title my-n1 text-capitalized text-center">{{ teacher.user.name }}</h6>
+              <p class="card-text mx-n3 text-center">
+                {{ teacher.user.email }}
+              </p>
+            </div>
+            <button
+            class="btn btn-danger mt-5"
+            @click="deleteFromChannel(teacher.id, index)"
+           >
+        Remove
+      </button>
+      </div>
     </div>
   </div>
 </template>

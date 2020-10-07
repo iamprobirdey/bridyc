@@ -164,6 +164,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -266,24 +275,30 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
+  return _c("div", { staticClass: "notification-section" }, [
     _c(
       "button",
       {
-        staticClass: "btn btn-primary",
+        staticClass: "btn add-notifications mb-5",
         on: {
           click: function($event) {
             return _vm.addNewNotification()
           }
         }
       },
-      [_vm._v("\n    Add new Notification\n  ")]
+      [_vm._v("\n    Add New Notification\n  ")]
     ),
+    _vm._v(" "),
+    _c("h3", { staticClass: "text-uppercase mb-n2" }, [
+      _vm._v("News and Notifications")
+    ]),
+    _vm._v(" "),
+    _c("hr"),
     _vm._v(" "),
     _c(
       "ul",
       _vm._l(_vm.notificationData, function(notification, index) {
-        return _c("li", { key: index }, [
+        return _c("li", { key: index, staticClass: "mb-1" }, [
           _vm._v("\n      " + _vm._s(notification.notify) + "\n      "),
           _c(
             "button",
@@ -295,7 +310,7 @@ var render = function() {
                 }
               }
             },
-            [_vm._v("\n        Delete Notification\n      ")]
+            [_vm._v("\n        Remove\n      ")]
           )
         ])
       }),
@@ -320,6 +335,8 @@ var render = function() {
           { staticClass: "modal-dialog", attrs: { role: "document" } },
           [
             _c("div", { staticClass: "modal-content" }, [
+              _vm._m(0),
+              _vm._v(" "),
               _c("div", { staticClass: "modal-body" }, [
                 _c(
                   "form",
@@ -343,7 +360,7 @@ var render = function() {
                         }
                       },
                       [
-                        _c("label", [_vm._v("Add new Notification")]),
+                        _c("label", [_vm._v("Add News and Notification")]),
                         _vm._v(" "),
                         _c("input", {
                           directives: [
@@ -397,7 +414,7 @@ var render = function() {
                                 expression: "errors.has('notify')"
                               }
                             ],
-                            staticClass: "text-danger"
+                            staticClass: "text-danger text-center"
                           },
                           [_vm._v(_vm._s(_vm.errors.first("notify")))]
                         ),
@@ -423,10 +440,10 @@ var render = function() {
                     _c(
                       "button",
                       {
-                        staticClass: "btn btn-primary",
+                        staticClass: "btn btn-success",
                         attrs: { type: "submit" }
                       },
-                      [_vm._v("Submit")]
+                      [_vm._v("Publish")]
                     )
                   ]
                 )
@@ -438,7 +455,25 @@ var render = function() {
     )
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "button",
+      {
+        staticClass: "close ml-auto mr-2",
+        attrs: {
+          type: "button",
+          "data-dismiss": "modal",
+          "aria-label": "Close"
+        }
+      },
+      [_c("span", { attrs: { "aria-hidden": "true" } }, [_vm._v("×")])]
+    )
+  }
+]
 render._withStripped = true
 
 
@@ -651,7 +686,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/js/ChannelNotification.js */"./resources/js/ChannelNotification.js");
+module.exports = __webpack_require__(/*! C:\laragon\www\bridyc\resources\js\ChannelNotification.js */"./resources/js/ChannelNotification.js");
 
 
 /***/ })

@@ -187,7 +187,7 @@
                 <td>{{ channelHistoryData.udise }}</td>
               </tr>
               <tr>
-                <th>Udise:</th>
+                <th>Founded:</th>
                 <td>{{ channelHistoryData.founded }}</td>
               </tr>
             </table>

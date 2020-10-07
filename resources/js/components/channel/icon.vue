@@ -32,7 +32,7 @@
         @change="onChange"
         name="image"
       ></picture-input>
-      <div class="btnsuca">
+      <div class="btnsuca mt-2">
         <button
           v-if="imageData != ''"
           type="button"

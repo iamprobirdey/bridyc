@@ -1,214 +1,145 @@
 <template>
-  <div>
-    <h2 class="mx-sm-4 px-sm-2">Principal's Profile</h2>
-    <br />
-    <h2>Principle name {{ channelProfileData.name }}</h2>
-    <profile-gender :user="channelProfileData.activities"></profile-gender>
+    <div class="profile">
+       
+        <profile-avatar :user="channelProfileData"></profile-avatar>
+       <h4 class="text-center text-capitalized princi-name w-25 mx-auto shadow p-2">Name: {{ channelProfileData.name }}</h4>
+    <div class="body-channelprofile py-5">
+        <profile-gender :user="channelProfileData"></profile-gender>
 
-    <br />
-    <div class="mx-sm-4 px-sm-2">
-      <h4>Add more details(Recomended)</h4>
+    <br>
+<div class="row">
+    <div class="col-sm-6">
+       <h4 class="mt-5">
+         Educational Details (Recomended)  
+         <button class="btn btnadd p-1" @click="addEducation()">+</button>
+       </h4>
 
-      <div
-        class="mt-5"
-        v-for="(education, index) in channelProfileData.education"
-        :key="education.id"
-      >
-        <div class="row mx-auto">
-          <ul class="nav flex-column col-sm-6">
-            <li>
-              <div class="card mx-sm-3 shadow profiledetails">
-                <div class="card-body mt-n2">
-                  <i
-                    class="fa fa-university"
-                    style="color: #003585"
-                    aria-hidden="true"
-                  ></i>
-                  School : <strong>{{ education.school_name }}</strong>
-                </div>
-              </div>
-            </li>
-            <li>
-              <br />
-              <div class="card mx-sm-3 shadow profiledetails">
-                <div class="card-body mt-n2">
-                  <i
-                    class="fa fa-graduation-cap"
-                    style="color: #003585"
-                    aria-hidden="true"
-                  ></i>
-                  Degree : {{ education.degree }}
-                </div>
-              </div>
-            </li>
-            <li>
-              <br />
-              <div class="card mx-sm-3 shadow profiledetails">
-                <div class="card-body mt-n2">
-                  <i
-                    class="fa fa-book"
-                    style="color: #003585"
-                    aria-hidden="true"
-                  ></i>
-                  Field of study : {{ education.field_of_study }}
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <button
-          class="btn btnadd p-1"
-          @click="editTheEducation(education, index)"
-        >
-          <i class="fa fa-pencil" aria-hidden="true"></i>
-        </button>
+        <div class="mx-0 mt-5" v-for="(education,index) in channelProfileData.education" :key="education.id">
+            
+            <ul class="nav flex-column pr-0">
+               <li>
+                   <div class="card mx-sm-3 shadow profiledetails">
+                       <div class="card-body mt-n2"><i class="fa fa-university" style="color:#003585;"  aria-hidden="true"></i> University : <strong>{{education.school_name}}</strong></div>
+                    </div>
+                   </li>
+               <li>
+                   <br>
+                   <div class="card mx-sm-3 shadow profiledetails">
+                       <div class="card-body mt-n2"><i class="fa fa-graduation-cap" style="color:#003585;"  aria-hidden="true"></i> Degree : {{education.degree}}</div>
+                    </div>
+                   </li>
+               <li>
+                   <br>
+                   <div class="card mx-sm-3 shadow profiledetails">
+                       <div class="card-body mt-n2"><i class="fa fa-book" style="color:#003585;" aria-hidden="true"></i> Field of study : {{education.field_of_study}}</div>
+                    </div>
+                   </li>
+                   <br>
+            </ul>
+            
+            <div class="ml-3 mt-2">
+            <button class="btn btnadd p-1" @click="editTheEducation(education,index)"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+            </div>
+            </div>
+          </div>
+           <div class="col-sm-6 pr-0">
+            <activities :profiledata="channelProfileData"></activities>
+            </div>
       </div>
+  </div>
 
-      <button class="btn btnadd p-1" @click="addEducation()">+</button>
-    </div>
-
-    <activities :profiledata="channelProfileData"></activities>
-
-    <div class="ms-sm-4 px-sm-2">
-      <profile-avatar :user="channelProfileData"></profile-avatar>
-    </div>
 
     <!-- Modal -->
 
-    <div
-      class="modal fade"
-      id="addEducation"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="principalprofilemodal"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="principalprofilemodal">
-              Please fill in these details
-            </h5>
-            <button
-              type="button"
-              class="close"
-              data-dismiss="modal"
-              aria-label="Close"
-            >
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <form @submit.prevent="getQualificationData()">
-              <h6 class="mb-3 mt-n2">Highest Education:</h6>
+    <div class="modal fade pricipal-modal" id="addEducation" tabindex="-1" role="dialog" aria-labelledby="principalprofilemodal" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div>
+                <button type="button" class="close mr-2" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
 
-              <div
-                class="form-group"
-                :class="{
-                  'has-error':
-                    errors.has('school_name') ||
-                    qualificationError.school_name != '',
-                }"
-              >
-                <label for="exampleInputEmail1">University</label>
-                <input
-                  v-model="qualificationData.school_name"
-                  v-validate="'required'"
-                  data-vv-delay="20"
-                  name="school_name"
-                  type="text"
-                  :class="{
-                    'form-control': true,
-                    'is-invalid': errors.has('school_name'),
-                  }"
-                  placeholder="Your university name"
-                />
-                <i v-show="errors.has('class')" class="is-invalid"></i>
+                <form @submit.prevent="getQualificationData()">
+                    <h6 class="mb-3 mt-n2">Highest Education</h6>
+                    <hr class="mx-n3">
+                    <div
+                    class="form-group"
+                    :class="{'has-error': errors.has('school_name') || qualificationError.school_name != '' }"
+                    >
+                    <label for="exampleInputEmail1">University:</label>
+                    <input
+                        v-model="qualificationData.school_name"
+                        v-validate="'required'"
+                        data-vv-delay="20"
+                        name="school_name"
+                        type="text"
+                        :class="{'form-control': true, 'is-invalid': errors.has('school_name') }"
+                        placeholder="Your university name"
+                    />
+                    <i v-show="errors.has('class')" class="is-invalid"></i>
 
-                <span v-show="errors.has('school_name')" class="text-danger">{{
-                  errors.first("school_name")
-                }}</span>
-                <span
-                  v-show="qualificationError.school_name != ''"
-                  class="text-danger"
-                  >{{ qualificationError.school_name }}</span
-                >
-              </div>
+                    <span v-show="errors.has('school_name')" class="text-danger text-center">{{ errors.first('school_name') }}</span>
+                    <span
+                        v-show="qualificationError.school_name != ''"
+                        class="text-danger"
+                    >{{ qualificationError.school_name }}</span>
+                    </div>
 
-              <div
-                class="form-group"
-                :class="{
-                  'has-error':
-                    errors.has('field_of_study') ||
-                    qualificationError.field_of_study != '',
-                }"
-              >
-                <label for="exampleInputEmail1">Field of study</label>
-                <input
-                  v-model="qualificationData.field_of_study"
-                  v-validate="'required'"
-                  data-vv-delay="20"
-                  name="field_of_study"
-                  type="text"
-                  :class="{
-                    'form-control': true,
-                    'is-invalid': errors.has('field_of_study'),
-                  }"
-                  placeholder="Field of study(specialization)"
-                />
-                <i v-show="errors.has('class')" class="is-invalid"></i>
+                        <div
+                    class="form-group"
+                    :class="{'has-error': errors.has('field_of_study') || qualificationError.field_of_study != '' }"
+                    >
+                    <label for="exampleInputEmail1">Field of study:</label>
+                    <input
+                        v-model="qualificationData.field_of_study"
+                        v-validate="'required'"
+                        data-vv-delay="20"
+                        name="field_of_study"
+                        type="text"
+                        :class="{'form-control': true, 'is-invalid': errors.has('field_of_study') }"
+                        placeholder="Field of study(specialization)"
+                    />
+                    <i v-show="errors.has('class')" class="is-invalid"></i>
 
-                <span
-                  v-show="errors.has('field_of_study')"
-                  class="text-danger"
-                  >{{ errors.first("field_of_study") }}</span
-                >
-                <span
-                  v-show="qualificationError.field_of_study != ''"
-                  class="text-danger"
-                  >{{ qualificationError.field_of_study }}</span
-                >
-              </div>
+                    <span v-show="errors.has('field_of_study')" class="text-danger text-center">{{ errors.first('field_of_study') }}</span>
+                    <span
+                        v-show="qualificationError.field_of_study != ''"
+                        class="text-danger"
+                    >{{ qualificationError.field_of_study }}</span>
+                    </div>
 
-              <div
-                class="form-group"
-                :class="{
-                  'has-error':
-                    errors.has('degree') || qualificationError.degree != '',
-                }"
-              >
-                <label for="exampleInputEmail1">Degree</label>
-                <input
-                  v-model="qualificationData.degree"
-                  v-validate="'required'"
-                  data-vv-delay="20"
-                  name="degree"
-                  type="text"
-                  :class="{
-                    'form-control': true,
-                    'is-invalid': errors.has('degree'),
-                  }"
-                  placeholder="Name of your degree"
-                />
-                <i v-show="errors.has('class')" class="is-invalid"></i>
+                        <div
+                    class="form-group"
+                    :class="{'has-error': errors.has('degree') || qualificationError.degree != '' }"
+                    >
+                    <label for="exampleInputEmail1">Degree:</label>
+                    <input
+                        v-model="qualificationData.degree"
+                        v-validate="'required'"
+                        data-vv-delay="20"
+                        name="degree"
+                        type="text"
+                        :class="{'form-control': true, 'is-invalid': errors.has('degree') }"
+                        placeholder="Name of your degree"
+                    />
+                    <i v-show="errors.has('class')" class="is-invalid"></i>
 
-                <span v-show="errors.has('degree')" class="text-danger">{{
-                  errors.first("degree")
-                }}</span>
-                <span
-                  v-show="qualificationError.degree != ''"
-                  class="text-danger"
-                  >{{ qualificationError.degree }}</span
-                >
-              </div>
+                    <span v-show="errors.has('degree')" class="text-danger text-center">{{ errors.first('degree') }}</span>
+                    <span
+                        v-show="qualificationError.degree != ''"
+                        class="text-danger"
+                    >{{ qualificationError.degree }}</span>
+                    </div>
+                <button type="submit" class="btn btnadd ml-0">Submit</button>
+                </form>
 
-              <button type="submit" class="btn btnadd ml-0">Submit</button>
-            </form>
-          </div>
+            </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
+    </div>
 </template>
 
 <script>

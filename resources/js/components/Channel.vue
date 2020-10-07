@@ -1,9 +1,9 @@
 <template>
   <section>
     <!-- college section starts here-->
-    <div class="institute container py-5">
-      <br />
-      <div class="row mb-5">
+    <div class="institute container-fluid pt-5">
+      <br>
+      <div class="row">
         <div
           class="card institutecard shadow mx-auto"
           v-for="(channel, index) in channelData"
