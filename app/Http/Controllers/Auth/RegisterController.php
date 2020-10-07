@@ -126,4 +126,17 @@ class RegisterController extends Controller
         if ($user === null) return $username;
         $this->getUserName($data);
     }
+
+    protected function registered(Request $request, $user)
+    {
+        if ($request->input('user_type') === 'institute') {
+            $user->assignRole('institute');
+        }
+        if ($request->input('user_type') === 'student') {
+            $user->assignRole('student');
+        }
+        if ($request->input('user_type') === 'teacher') {
+            $user->assignRole('teacher');
+        }
+    }
 }
