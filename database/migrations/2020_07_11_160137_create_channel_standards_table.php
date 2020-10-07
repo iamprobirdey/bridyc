@@ -15,9 +15,8 @@ class CreateChannelStandardsTable extends Migration
     {
         Schema::create('channel_standards', function (Blueprint $table) {
             $table->id();
-            $table->integer('user_id')->unsigned();
-            $table->integer('channel_id')->unsigned();
-            $table->integer('standard_id')->unsigned();
+            $table->foreignId('channel_id')->constrained()->onDelete('cascade');
+            $table->foreignId('standard_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });
     }

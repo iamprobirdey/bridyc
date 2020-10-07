@@ -1,18 +1,17 @@
 
 
 .applbody{
-    background-image: url("/images/comming\ soon.jpg");
-    opacity: .7;
-    margin-bottom: -18px;
+    background-image:linear-gradient(to right,rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1)), url("/images/coming soon.png");
+    height: 100%;
     .blocks {
-        height: 90vh;
+        height: 529px;
         display: flex;
         align-items: center;
         position: relative;
         justify-content: center;
-       
+
       }
-      
+
       .block {
         --sz: 8vmin;
         --tX: 0;
@@ -25,32 +24,32 @@
         transform: translateX(var(--tX));
         mix-blend-mode: lighten;
       }
-      
+
       .orange {
         --bg: linear-gradient(-50deg, #fbab7e 0%, #f7ce68 100%);
         margin-right: var(--hm);
         animation: attract-orange var(--animation);
       }
-      
+
       .blue {
         --bg: linear-gradient(50deg, #00bfd5 0%, #c5f5ff 100%);
         margin-left: var(--hm);
         animation: attract-blue var(--animation);
       }
-      
+
       @keyframes attract-orange {
         to {
           transform: translateX(calc(var(--sz) + calc(var(--hm) / 4)));
         }
       }
-      
+
       @keyframes attract-blue {
         to {
           transform: translateX(calc(var(--sz) * -1 - calc(var(--hm) / 4)));
         }
       }
-      
-      
+
+
       .comingsoon{
           position: relative;
           top: -210px;
@@ -60,7 +59,7 @@
           h5{
               font-size: 70px;
               font-weight: 700;
-              
+
           }
           p{
               font-size: 20px;

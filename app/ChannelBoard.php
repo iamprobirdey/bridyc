@@ -4,11 +4,16 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
+use Spatie\Activitylog\Traits\LogsActivity;
+
 class ChannelBoard extends Model
 {
-    protected $fillable = ['user_id','channel_id','board_id'];
+    protected $fillable = ['channel_id','board_id'];
 
-    public function board(){
-        return $this->belongsTo(Board::class,'board_id','id');
-    }
+    protected static $logAttributes = [
+        'channel_id',
+        'board_id'
+    ];
+
+    protected static $logOnlyDirty = true;
 }

@@ -24,9 +24,9 @@ class StoreDistrictValidation extends FormRequest
     public function rules()
     {
         return [
-            'state' => 'required|integer',
-            'name' => 'required|string',
-            'code' => 'required|string'
+            'state' => 'required|integer|exists:App\State,id',
+            'name' => 'required|string|unique:App\District,name',
+            'code' => 'required|string|unique:App\District,code'
         ];
     }
 }

@@ -5,10 +5,17 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
 use App\State;
+use Spatie\Activitylog\Traits\LogsActivity;
 
 class District extends Model
 {
+    use LogsActivity;
+
     protected $fillable = ['state_id','name','code','slug'];
+
+    protected static $logAttributes = ['name','code','slug','state.name'];
+
+    protected static $logOnlyDirty = true;
 
     public function state(){
         return $this->belongsTo(State::class,'state_id','id');
@@ -19,19 +26,22 @@ class District extends Model
     protected static function boot()
     {
         parent::boot();
-        static::saving(function ($model) { 
+        static::saving(function ($model) {
             $model->name = Str::ucfirst($model->name);
-            $model->slug = Str::slug($model->name);
             if(!$model->state->id) {
                 abort(404);
             }
         });
-        static::updating(function ($model) { 
+        static::updating(function ($model) {
             $model->name = Str::ucfirst($model->name);
-            $model->slug = Str::slug($model->name);
             if(!$model->state->id) {
                 abort(404);
             }
         });
     }
+
+    public function userInformation(){
+        return $this->hasOne(UserInformation::class,'district_id','id');
+    }
+
 }

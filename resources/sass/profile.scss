@@ -1,0 +1,112 @@
+@import "mixins";
+
+.profileheader{
+    background-image: linear-gradient(to right top, #990066, #831874, #67267f, #442f85, #003585);
+     height: 250px;
+    max-width: 100%; 
+    //clip-path: polygon(0 0, 100% 0, 100% 100%, 0 82%);
+
+}
+
+
+.profile{
+    max-width: 100%;
+    
+    .profile-picture{
+        position:relative;
+        top:-180px;
+        left: 17px;
+        border: 2px solid gainsboro;
+    }
+    img{
+        width: 170px;
+        height: 170px;
+        @include screensize(laptop){
+        width: 200px;
+        height: 200px;
+        }
+    }
+//}
+.profile-edit{
+   position:relative;
+   left:-12%;
+   top:-113px;
+   z-index: inherit;
+   cursor: pointer;
+   background-color:gainsboro;
+   @include screensize(tablet){
+    left:-8%;
+   }
+
+   @include screensize(laptop){
+    left:-7%;
+    top:-105px;
+    }
+}
+
+.upload-profile-pic{
+    position:relative;
+    top:-153px;
+}
+.edit-btn{
+    color: rgb(111, 182, 4);
+}
+//scss for username in profile section starts here
+
+.username{
+    margin-top:-160px;
+    //color:#003585;
+    font-size: 18px;
+}
+
+.btnsubmit{
+    background-color:  #003585;
+    color: white;
+    position: relative;
+    top: 5px;
+    left: 0;
+    border-radius: 20px;
+    padding-left: 20px;
+    padding-right:20px;
+    
+    &:hover{
+      background-color: #011737;
+      color: white;
+    }
+  }
+
+  .address{
+      .address-display{
+          font-size: 18px;
+          @include screensize(laptop){
+              font-size: 16px;
+          }
+      }
+  }
+
+  .btnsubjects{
+      background-color: #5B2C6F;
+      color: white;
+  }
+  .channelname{
+    
+      select{
+          background-color: #f9fafa;
+          width: 100%;
+          &:focus{
+            box-shadow: none !important;      
+          }
+      }
+      input{
+        border: 0;
+        border-bottom: 1px solid gainsboro;
+        width: 100%;
+        &:focus{
+        box-shadow: none !important;
+        }
+        &::placeholder{
+            color: rgb(165, 165, 165);
+        }
+      }
+  }
+} 

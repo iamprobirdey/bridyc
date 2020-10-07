@@ -1,6 +1,9 @@
-
-
 @extends('admin.index')
+
+@section('title','')
+@section('desc','')
+@section('keywords','')
+
 
 @section('adminContent')
 
@@ -10,9 +13,9 @@
     <a class="btn btn-primary" href="{{url('admin/stream/')}}">Go Back to List</a>
 
     @if (session('status'))
-        <div class="alert alert-success">
-            {{ session('status') }}
-        </div>
+    <div class="alert alert-success">
+        {{ session('status') }}
+    </div>
     @endif
 
     <div class="card-body">
@@ -23,12 +26,13 @@
                 <label for="stream" class="col-md-4 col-form-label text-md-right">{{ __('Stream') }}</label>
 
                 <div class="col-md-6">
-                    <input id="stream" type="text" class="form-control @error('stream') is-invalid @enderror" name="stream" value="{{ old('stream') }}" required autocomplete="stream" autofocus>
+                    <input id="stream" type="text" class="form-control @error('stream') is-invalid @enderror"
+                        name="stream" value="{{ old('stream') }}" required autocomplete="stream" autofocus>
 
                     @error('stream')
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
                     @enderror
                 </div>
             </div>
@@ -42,6 +46,5 @@
         </form>
     </div>
 </div>
-    
-@endsection
 
+@endsection

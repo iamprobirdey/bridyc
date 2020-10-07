@@ -1,0 +1,41 @@
+.imgbanabout {
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url("/images/aboutus.png");
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/aboutus.png");
+}
+
+.about-story h6 {
+  font-size: 12px;
+  color: #3659a2;
+}
+
+@media only screen and (min-width: 768px) {
+  .about-mission .text-mission {
+    padding-left: 70px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .about-mission .text-mission {
+    padding-left: 118px;
+  }
+}
+
+.about-mission .imgmission {
+  width: 100%;
+  -webkit-clip-path: ellipse(81% 62% at 91% 62%);
+          clip-path: ellipse(81% 62% at 91% 62%);
+}
+
+@media only screen and (min-width: 768px) {
+  .about-how .text-how {
+    padding-right: 70px;
+    text-align: right;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .about-how .text-how {
+    padding-right: 140px;
+    text-align: right;
+  }
+}

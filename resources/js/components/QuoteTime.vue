@@ -1,15 +1,15 @@
 <template>
   <div>
-    <div class="col-sm-6">
-      <div class="quote" :style="{backgroundColor: colorMatch}">
-        <h3 :style="{color : colorWhite}">{{ quoteName }}</h3>
-        <span :style="{color : colorWhite}">{{ quoteAuthor }}</span>
-      </div>
-    </div>
-    <div class="col-sm-3" style="background-color: #1F2041">
+    <div class="datetime mb-2">
       <h1 :style="{color : colorWhite}">{{ timeData.time }}</h1>
       <h5 :style="{color : colorWhite}">{{ timeData.date }}</h5>
     </div>
+    
+    
+      <div class="quote" :style="{backgroundColor: colorMatch}">
+        <h3 :style="{color : colorWhite}">{{ quoteName }}</h3>
+        <span :style="{color : colorWhite}">~{{ quoteAuthor }}</span>
+      </div>
   </div>
 </template>
 
@@ -88,4 +88,5 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+</style>

@@ -7,8 +7,10 @@ use App\Village;
 use App\Stream;
 use App\Board;
 use App\Channel;
+use App\Hobby;
 use App\Standard;
 use App\Language;
+use App\Subject;
 use App\Verification;
 use Auth;
 
@@ -63,6 +65,14 @@ class ModelHelperServices{
         return Channel::where('user_id',auth()->id())
                         ->select('extra_attributes')
                         ->first();
+    }
+
+    public static function getAllSubject(){
+        return Subject::all();
+    }
+
+    public static function getAllHobby(){
+        return Hobby::all();
     }
 }
 ?>

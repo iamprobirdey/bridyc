@@ -24,9 +24,9 @@ class UpdateVillageValidation extends FormRequest
     public function rules()
     {
         return [
-            'district' => 'required|integer',
-            'name' => 'required|string',
-            'code' => 'required|string'
+            'district' => 'required|integer|exists:App\District,id',
+            'name' => 'required|string|unique:villages,name',
+            'code' => 'required|string|unique:villages,code'
         ];
     }
 }

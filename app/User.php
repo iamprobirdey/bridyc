@@ -8,9 +8,13 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Facades\Auth;
 use Spatie\Permission\Traits\HasRoles;
 
-class User extends Authenticatable
+use Spatie\Activitylog\Traits\LogsActivity;
+
+use App\ModelRelationship\UserAffair;
+
+class User extends Authenticatable implements MustVerifyEmail
 {
-    use Notifiable,HasRoles;
+    use Notifiable, HasRoles, UserAffair;
 
     /**
      * The attributes that are mass assignable.
@@ -18,8 +22,14 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email','password','username','user_type','phone'
+        'name', 'email', 'user_type', 'username', 'avatar', 'password'
     ];
+
+    // protected static $logAttributes = [
+    //     'name', 'email','password','username','user_type','phone',
+    // ];
+
+    protected static $logOnlyDirty = true;
 
     /**
      * The attributes that should be hidden for arrays.
@@ -39,29 +49,56 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function verification(){
-        return $this->hasOne(Verification::class,'user_id','id');
-    }
-    public function channel(){
-        return $this->hasOne(Channel::class,'user_id','id');
+    public function scopeUsername($query)
+    {
+        return $query->select('id', 'username');
     }
 
-    public function is_verified(){
+    public function scopeSpecific($query)
+    {
+        $query->select('name', 'email', 'avatar');
+    }
 
-        // $verified = Verification::where('user_id',Auth::id())->first();
-        // if(
-        //     $verified->status === 0 ||
-        //     $verified->status === 1 ||
-        //     $verified->status === 3)
-        //     {
-        //         return true;
-        //     }
-        $user = auth()->user();
-        if(
-            $user->user_type === 'institute' &&
-            ($user->status === 0 || $user->status === 2)){
-                return true;
+    public function isUser()
+    {
+        return $this->user_type;
+    }
+
+    public function isInstitute()
+    {
+        return $this->user_type === 'institute';
+    }
+    public function isAdmin()
+    {
+        return $this->user_type === 'admin';
+    }
+    public function isStudent()
+    {
+        return $this->user_type === 'student';
+    }
+    public function isTeacher()
+    {
+        return $this->user_type === 'teacher';
+    }
+
+    public function is_verified()
+    {
+        if (
+            $this->user_type === 'institute' &&
+            ($this->status === 0 || $this->status === 2)
+        ) {
+            return true;
         }
         return false;
+    }
+
+    public function saveStudentHobbyData($data)
+    {
+        return $this->studentHobby()->saveMany($data);
+    }
+
+    public function addEducation($data)
+    {
+        return $this->education()->create($data);
     }
 }

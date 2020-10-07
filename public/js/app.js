@@ -60887,6 +60887,18 @@ Vue.component("example-component", __webpack_require__(/*! ./components/ExampleC
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
+function getUserActivity() {
+  var sessionUrl = window.location.origin;
+
+  if (sessionStorage.getItem([sessionUrl]) != 'bridyc') {
+    sessionStorage.setItem([sessionUrl], 'bridyc');
+    axios.get('/api/user/activity').then(function (response) {})["catch"](function (errors) {});
+  }
+
+  console.log('out');
+}
+
+getUserActivity();
 var app = new Vue({
   el: "#app"
 });
@@ -61102,7 +61114,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-throw new Error("Module build failed (from ./node_modules/css-loader/index.js):\nModuleBuildError: Module build failed (from ./node_modules/sass-loader/dist/cjs.js):\nError: ENOENT: no such file or directory, open '/home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/sass/profile.scss'\n    at /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/node_modules/webpack/lib/NormalModule.js:316:20\n    at /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/node_modules/loader-runner/lib/LoaderRunner.js:367:11\n    at /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/node_modules/loader-runner/lib/LoaderRunner.js:203:19\n    at /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/node_modules/enhanced-resolve/lib/CachedInputFileSystem.js:85:15\n    at processTicksAndRejections (internal/process/task_queues.js:79:11)");
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 

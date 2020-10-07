@@ -15,9 +15,8 @@ class CreateChannelBoardsTable extends Migration
     {
         Schema::create('channel_boards', function (Blueprint $table) {
             $table->id();
-            $table->integer('user_id')->unsigned();
-            $table->integer('channel_id')->unsigned();
-            $table->integer('board_id')->unsigned();
+            $table->foreignId('channel_id')->constrained()->onDelete('cascade');
+            $table->foreignId('board_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });
     }

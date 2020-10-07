@@ -46,52 +46,51 @@ class LoginController extends Controller
     public function showAdminLoginForm()
     {
         return view('auth.login');
-        abort(404);
     }
 
-    public function login(Request $request){
-        $this->validate($request, [
-            'email' => 'required|email|max:255',
-            'password' => 'required|min:6',
-        ]);
-        $auth = false;
-        $user = User::where('email', $request->input('email'))->first();
-        if($user){
-            $credentials = $request->only('email', 'password');
-            if (Auth::attempt($credentials, $request->has('remember'))) {
-                $auth = true;
+    // public function login(Request $request){
+    //     $this->validate($request, [
+    //         'email' => 'required|email|max:255',
+    //         'password' => 'required|min:6',
+    //     ]);
+    //     $auth = false;
+    //     $user = User::where('email', $request->input('email'))->first();
+    //     if($user){
+    //         $credentials = $request->only('email', 'password');
+    //         if (Auth::attempt($credentials, $request->has('remember'))) {
+    //             $auth = true;
 
 
-                //UserLoginLog
-                /*$userLoginLog = new UserLoginLog();
-                $userLoginLog->user_id = Auth::user()->id;
-                $userLoginLog->save();*/
+    //             //UserLoginLog
+    //             /*$userLoginLog = new UserLoginLog();
+    //             $userLoginLog->user_id = Auth::user()->id;
+    //             $userLoginLog->save();*/
 
-                //Fire Event That Seller Has LoggedIn
-                //event(new UserHasLoggedIn(Auth::user()->id));
+    //             //Fire Event That Seller Has LoggedIn
+    //             //event(new UserHasLoggedIn(Auth::user()->id));
 
-                $redirectRoute = [
-                    'student' => '/',
-                    'institute' => '/user/dashboard'
-                ];
+    //             $redirectRoute = [
+    //                 'student' => '/',
+    //                 'institute' => '/'
+    //             ];
 
 
-                return response()->json([
-                    'status'=> 'success',
-                    'message' => $auth,
-                    'route' => $redirectRoute[$user->user_type]
-                ]);
-            }else{
-                return response()->json([
-                    'status'=> 'failed',
-                    'message' => 'Password did not match.'
-                ]);
-            }
-        }
+    //             return response()->json([
+    //                 'status'=> 'success',
+    //                 'message' => $auth,
+    //                 'route' => $redirectRoute[$user->user_type]
+    //             ]);
+    //         }else{
+    //             return response()->json([
+    //                 'status'=> 'failed',
+    //                 'message' => 'Password did not match.'
+    //             ]);
+    //         }
+    //     }
 
-        return response()->json([
-            'status'=> 'failed',
-            'message' => 'Email-Id does not exist.'
-        ]);
-    }
+    //     return response()->json([
+    //         'status'=> 'failed',
+    //         'message' => 'Email-Id does not exist.'
+    //     ]);
+    // }
 }

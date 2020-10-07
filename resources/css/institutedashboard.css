@@ -1,0 +1,897 @@
+nav {
+  max-width: 100%;
+  background-color: white;
+}
+
+nav .navbar-toggler:focus {
+  outline: 0;
+}
+
+nav .imglogodash {
+  width: 60px;
+  height: auto;
+  margin-left: -12%;
+  -webkit-transition: all ease .5s;
+  transition: all ease .5s;
+}
+
+@media only screen and (min-width: 481px) {
+  nav .imglogodash {
+    width: 70px;
+    height: auto;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  nav .imglogodash {
+    margin-left: 10px;
+  }
+}
+
+nav ul li .accounticon {
+  font-size: 20px;
+  color: #96511f;
+  padding: 7px;
+}
+
+@media only screen and (min-width: 481px) {
+  nav ul li .accounticon {
+    font-size: 23px;
+    padding: 15px;
+  }
+}
+
+.border-gradient {
+  border-bottom: 4px solid;
+  border-image-slice: 1;
+}
+
+.border-gradient-color {
+  border-image-source: linear-gradient(to right, #990066, #f1aa00);
+}
+
+.popnav {
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-left: -26px;
+  margin-right: -26px;
+  text-align: left;
+}
+
+.popnav li {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding-left: 25px;
+  padding-right: 25px;
+  list-style-type: none;
+}
+
+.popnav li:hover {
+  background-color: #96511f;
+}
+
+.popnav li a {
+  color: black;
+  font-size: 18px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.popnav li a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.linklog {
+  text-align: left;
+  margin-left: -13px;
+  margin-right: -13px;
+  padding-left: 25px;
+}
+
+.linklog a {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: black;
+  font-size: 18px;
+}
+
+.linklog a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.linklog:hover {
+  background-color: #96511f;
+}
+
+#sidebarcollapse {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  padding: 70px 0 0 10px;
+  background-color: white;
+  width: 70%;
+  overflow: auto;
+}
+
+#sidebarcollapse .left-sidebar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  height: calc(100vh - 70px);
+  padding-top: 50px;
+}
+
+#sidebarcollapse .left-sidebar ul li {
+  margin-bottom: 20px;
+  margin-left: -10px;
+}
+
+#sidebarcollapse .left-sidebar ul li a {
+  color: #011737;
+  font-weight: 500;
+}
+
+#sidebarcollapse .left-sidebar ul .active {
+  background-color: #990066;
+}
+
+#sidebarcollapse .left-sidebar ul .active a {
+  color: white;
+}
+
+#sidebarcollapse .left-sidebar ul .sidebaricons {
+  font-size: 0.9rem;
+}
+
+.modaltext {
+  width: 100% !important;
+}
+
+.short {
+  width: 100% !important;
+}
+
+main {
+  padding-top: 70px;
+  margin-bottom: 40px;
+  /* .profile-edit{
+            position:relative;
+            left:-12%;
+            top:-113px;
+            z-index: inherit;
+            cursor: pointer;
+            background-color:gainsboro;
+            @include screensize(tablet){
+             left:-8%;
+            }
+         
+            @include screensize(laptop){
+             left:-7%;
+             top:-105px;
+             }
+         }*/
+}
+
+main .inscover {
+  width: 100%;
+  height: 230px;
+}
+
+@media only screen and (min-width: 481px) {
+  main .inscover {
+    height: 280px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  main .inscover {
+    height: 310px;
+  }
+}
+
+main .blankdiv {
+  height: auto;
+  width: 100%;
+  position: relative;
+  top: -70px;
+  background-color: white;
+  padding-top: 55px;
+  padding-left: 10px;
+}
+
+main .blankdiv p {
+  font-size: 12px;
+}
+
+@media only screen and (min-width: 481px) {
+  main .blankdiv p {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 481px) {
+  main .blankdiv {
+    height: 130px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  main .blankdiv {
+    height: 150px;
+    padding-left: 60px;
+    padding-top: 75px;
+  }
+}
+
+main .blankdiv .insweb {
+  background-color: #003585;
+  color: white;
+  width: 138px;
+  padding-left: 15px;
+  padding-right: 12px;
+}
+
+main .blankdiv .insweb:hover {
+  background-color: white;
+  color: #011737;
+  text-decoration: none;
+  border: 1px solid #011737;
+}
+
+@media only screen and (min-width: 768px) {
+  main .blankdiv .phemdiv {
+    display: block;
+  }
+}
+
+main .logo-title {
+  position: relative;
+  top: -280px;
+  margin-bottom: -120px;
+}
+
+@media only screen and (min-width: 481px) {
+  main .logo-title {
+    top: -290px;
+    left: 10px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  main .logo-title {
+    top: -330px;
+    left: -70px;
+  }
+}
+
+main .logo-title .logoinstitute {
+  width: 70px;
+  height: 80px;
+  border: 1px solid gainsboro;
+  -webkit-transition: all ease .5s;
+  transition: all ease .5s;
+}
+
+@media only screen and (min-width: 481px) {
+  main .logo-title .logoinstitute {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  main .logo-title .logoinstitute {
+    width: 130px;
+    height: 130px;
+    margin-left: 120px !important;
+  }
+}
+
+main .logo-title .institle {
+  font-size: 18px;
+  margin-top: 45px;
+  -webkit-transition: all ease .5s;
+  transition: all ease .5s;
+}
+
+@media only screen and (min-width: 375px) {
+  main .logo-title .institle {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-width: 411px) {
+  main .logo-title .institle {
+    font-size: 25px;
+  }
+}
+
+@media only screen and (min-width: 481px) {
+  main .logo-title .institle {
+    font-size: 30px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  main .logo-title .institle {
+    font-size: 40px;
+    margin-top: 70px;
+  }
+}
+
+main .inssocial {
+  position: relative;
+  top: -175px;
+  left: 71%;
+  z-index: 1000;
+}
+
+main .inssocial img {
+  width: 20px;
+  height: 20px;
+}
+
+@media only screen and (min-width: 481px) {
+  main .inssocial {
+    top: -240px;
+    left: 85%;
+  }
+  main .inssocial img {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+main .inspills {
+  margin-top: -170px;
+}
+
+@media only screen and (min-width: 481px) {
+  main .inspills {
+    margin-top: -200px;
+  }
+}
+
+main .inspills .nav-pills .nav-link {
+  color: #011737;
+}
+
+main .inspills .nav-pills .active {
+  background-color: #003585;
+  color: white;
+}
+
+main .inspills .inscarou {
+  width: 100%;
+  height: 180px;
+  margin-bottom: 80px;
+}
+
+@media only screen and (min-width: 481px) {
+  main .inspills .inscarou {
+    margin-bottom: -190px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  main .inspills .inscarou {
+    margin-bottom: 390px;
+  }
+}
+
+main .inspills .inscarou li {
+  position: relative;
+  width: 8px;
+  height: 8px;
+  top: 30px;
+  border-radius: 100%;
+  background-color: black;
+}
+
+main .inspills .inscarou img {
+  width: 100%;
+  height: 100%;
+}
+
+main .inspills .notice {
+  background-color: white;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 13px;
+  border: 1px;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+main .inspills .notice h5 {
+  font-weight: 400;
+  color: #011737;
+}
+
+@media only screen and (min-width: 481px) {
+  main .inspills .notice {
+    font-size: x-large;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  main .inspills .notice {
+    font-size: large;
+  }
+}
+
+main .inspills .facultyachieve h3 {
+  background-color: #011737;
+  color: white;
+  padding: 7px;
+  text-align: center;
+}
+
+main .inspills .facultyachieve .facultyachievecard {
+  width: 200px;
+  height: 250px;
+}
+
+main .inspills .facultyachieve .facultyachievecard img {
+  width: 100%;
+  height: 170px;
+}
+
+main .inspills .description {
+  background-color: white;
+  padding: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+main .inspills .description h4 {
+  text-align: center;
+  color: #011737;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+main .inspills .description p {
+  border-left: 10px solid #ffbcb091;
+  padding-left: 10px;
+}
+
+@media only screen and (min-width: 481px) {
+  main .inspills .description {
+    font-size: x-large;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  main .inspills .description {
+    font-size: large;
+  }
+}
+
+main .inspills .princidiv {
+  margin-top: 50px;
+}
+
+main .inspills .princidiv img {
+  width: 50px;
+  height: 50px;
+}
+
+main .inspills .princidiv .principalcard {
+  text-align: center;
+  color: #011737;
+  border: none;
+}
+
+main .inspills .princidiv .principalcard p {
+  color: #011737;
+}
+
+main .inspills .princidiv .principalcard img {
+  width: 100%;
+  height: 250px;
+}
+
+main .inspills .princidiv .principalcard .card-body {
+  background-color: #f9fcff;
+}
+
+main .inspills .additionalinfo h3 {
+  color: #011737;
+}
+
+main .inspills .additionalinfo .insadditionalinfo ul {
+  list-style: none;
+  line-height: 38px;
+  font-size: 18px;
+  text-align: center;
+}
+
+main .inspills .facilitydiv {
+  background-color: white;
+}
+
+main .inspills .facilitydiv div {
+  font-size: 16px;
+  color: #011737;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+main .inspills .facilitydiv div img {
+  width: 30px;
+  height: 30px;
+}
+
+main .insaddress h4 {
+  text-align: center;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+}
+
+main .insaddress .addbody {
+  margin-top: -8px;
+  padding: 2rem;
+  font-size: large;
+  font-weight: 500;
+  border-left: 2px solid gainsboro;
+  border-right: 2px solid gainsboro;
+  border-bottom: 2px solid gainsboro;
+}
+
+@media only screen and (min-width: 481px) {
+  main .insaddress .addbody {
+    font-size: x-large;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  main .insaddress .addbody {
+    font-size: large;
+  }
+}
+
+main .insaddress .addbody ul {
+  line-height: 2rem;
+}
+
+@media only screen and (min-width: 375px) {
+  main .insaddress {
+    margin-top: 40px;
+  }
+}
+
+@media only screen and (min-width: 411px) {
+  main .insaddress {
+    margin-top: 60px;
+  }
+}
+
+@media only screen and (min-width: 481px) {
+  main .insaddress {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 350px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  main .insaddress {
+    margin-top: 0px;
+  }
+}
+
+main .btnveri {
+  background-color: #011737;
+  width: 100%;
+  color: white;
+  padding: 10px;
+  font-weight: 700;
+}
+
+@media only screen and (min-width: 768px) {
+  main .btnveri {
+    font-weight: 300;
+    padding: 7px;
+  }
+}
+
+main .btnveri:hover {
+  color: white;
+}
+
+main .datetime {
+  background-color: #011737;
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  main .datetime {
+    width: 300px;
+  }
+}
+
+main .quote {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-style: italic;
+  text-align: center;
+}
+
+main .infraheader {
+  text-align: center;
+  background-color: #011737;
+  color: white;
+}
+
+main .infrabtn {
+  margin-left: -15px;
+  background-color: #011737;
+  color: white;
+}
+
+main .infrabtn:hover {
+  color: white;
+}
+
+@media only screen and (min-width: 768px) {
+  main .infrabtn {
+    margin-left: 0px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  main .infrabtn {
+    margin-left: 60px;
+  }
+}
+
+main .btnsubmit {
+  background-color: #011737;
+  color: white;
+  position: relative;
+  top: 5px;
+  left: 0;
+  border-radius: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+main .btnsubmit:hover {
+  background-color: #003585;
+  color: white;
+}
+
+main .btnwebdes {
+  color: white;
+  background-color: #003585;
+}
+
+main .btnwebdes:hover {
+  color: white;
+}
+
+main .btnadd {
+  background-color: #003585;
+  color: white;
+}
+
+main .btnadd:hover {
+  color: white;
+}
+
+main .btnadd:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+main .gendercard {
+  width: 80px;
+  height: 40px;
+  border: 0;
+  border-radius: 20px;
+  float: right;
+  margin-top: -5px;
+  background-color: #d30383;
+  color: white;
+}
+
+main .gendercard .card-body {
+  margin-top: -15px;
+}
+
+main .visioncard {
+  width: 90%;
+  border: 0;
+  height: auto;
+}
+
+main .profiledetails {
+  border: 0;
+  border-radius: 15px;
+  height: auto;
+}
+
+main .profiledetails .card-body {
+  font-size: 18px;
+}
+
+@media only screen and (min-width: 481px) {
+  main .profiledetails {
+    height: 50px;
+  }
+}
+
+main .sidebar-facard {
+  width: 200px;
+  height: 250px;
+}
+
+main .sidebar-facard .card-text {
+  margin-top: 5px;
+  line-height: .9rem;
+}
+
+main .sidebar-facard img {
+  width: 100%;
+  height: 170px;
+}
+
+main .editachieve {
+  position: relative;
+  top: -80px;
+  left: 80px;
+  color: #6fb604;
+}
+
+main .editachieve:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+main .body-channelprofile {
+  background-color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+main .body-channelprofile::-webkit-input-placeholder {
+  color: gainsboro;
+}
+
+main .body-channelprofile:-ms-input-placeholder {
+  color: gainsboro;
+}
+
+main .body-channelprofile::-ms-input-placeholder {
+  color: gainsboro;
+}
+
+main .body-channelprofile::placeholder {
+  color: gainsboro;
+}
+
+main .profile {
+  max-width: 100%;
+}
+
+main .profile .princi-profile-picture {
+  position: relative;
+  border: 2px solid gainsboro;
+}
+
+main .profile img {
+  width: 170px;
+  height: 170px;
+}
+
+@media only screen and (min-width: 768px) {
+  main .profile img {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+main .profile .princi-profile-edit {
+  position: relative;
+  z-index: inherit;
+  cursor: pointer;
+  background-color: gainsboro;
+}
+
+@media only screen and (min-width: 481px) {
+  main .profile .princi-profile-edit {
+    left: -8%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  main .profile .princi-profile-edit {
+    left: -4%;
+    top: 78px;
+  }
+}
+
+main .profile .upload-profile-pic {
+  position: relative;
+  top: -153px;
+}
+
+main .profile .edit-btn {
+  color: #6fb604;
+}
+
+main .profile .username {
+  margin-top: -160px;
+  font-size: 18px;
+}
+
+main .profile .btnsubmit {
+  background-color: #003585;
+  color: white;
+  position: relative;
+  top: 5px;
+  left: 0;
+  border-radius: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+main .profile .btnsubmit:hover {
+  background-color: #011737;
+  color: white;
+}
+
+main .profile .address .address-display {
+  font-size: 18px;
+}
+
+@media only screen and (min-width: 768px) {
+  main .profile .address .address-display {
+    font-size: 16px;
+  }
+}
+
+main .profile .btnsubjects {
+  background-color: #5B2C6F;
+  color: white;
+}
+
+main .profile .channelname select {
+  background-color: #f9fafa;
+  width: 100%;
+}
+
+main .profile .channelname select:focus {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+main .profile .channelname input {
+  border: 0;
+  border-bottom: 1px solid gainsboro;
+  width: 100%;
+}
+
+main .profile .channelname input:focus {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+}
+
+main .profile .channelname input::-webkit-input-placeholder {
+  color: #a5a5a5;
+}
+
+main .profile .channelname input:-ms-input-placeholder {
+  color: #a5a5a5;
+}
+
+main .profile .channelname input::-ms-input-placeholder {
+  color: #a5a5a5;
+}
+
+main .profile .channelname input::placeholder {
+  color: #a5a5a5;
+}

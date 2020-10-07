@@ -1,16 +1,21 @@
 @extends('admin.index')
 
+@section('title','')
+@section('desc','')
+@section('keywords','')
+
+
 @section('adminContent')
 
 <div class="card">
-    <div class="card-header">Board creating</div>
+    <div class="card-header">Standard creating</div>
 
     <a class="btn btn-primary" href="{{url('admin/standard/')}}">Go Back to List</a>
 
     @if (session('status'))
-        <div class="alert alert-success">
-            {{ session('status') }}
-        </div>
+    <div class="alert alert-success">
+        {{ session('status') }}
+    </div>
     @endif
 
     <div class="card-body">
@@ -21,12 +26,13 @@
                 <label for="standard" class="col-md-4 col-form-label text-md-right">{{ __('Standard') }}</label>
 
                 <div class="col-md-6">
-                    <input id="standard" type="text" class="form-control @error('standard') is-invalid @enderror" name="standard" value="{{ old('standard') }}" required autocomplete="standard" autofocus>
+                    <input id="standard" type="text" class="form-control @error('standard') is-invalid @enderror"
+                        name="standard" value="{{ old('standard') }}" required autocomplete="standard" autofocus>
 
                     @error('standard')
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
                     @enderror
                 </div>
             </div>
@@ -40,6 +46,5 @@
         </form>
     </div>
 </div>
-    
-@endsection
 
+@endsection

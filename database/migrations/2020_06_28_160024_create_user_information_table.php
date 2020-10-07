@@ -15,12 +15,11 @@ class CreateUserInformationTable extends Migration
     {
         Schema::create('user_information', function (Blueprint $table) {
             $table->id();
-            $table->integer('user_id')->unsigned();
-            $table->string('school_or_college_name')->nullable();
-            $table->string('channel_id')->nullable();
-            $table->integer('state_id')->unsigned();
-            $table->integer('district_id')->unsigned();
-            $table->integer('village_id')->unsigned();
+            $table->foreignId('user_id')->constrained()->onDelete('cascade');
+            $table->foreignId('state_id')->constrained()->onDelete('cascade');
+            $table->foreignId('district_id')->constrained()->onDelete('cascade');
+            $table->foreignId('village_id')->constrained()->onDelete('cascade');
+            $table->foreignId('standard_id')->constrained()->onDelete('cascade');
             $table->timestamps();
         });
     }

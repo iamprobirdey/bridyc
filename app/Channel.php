@@ -5,21 +5,45 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Spatie\SchemalessAttributes\SchemalessAttributes;
 use Illuminate\Database\Eloquent\Builder;
+use Spatie\Activitylog\Traits\LogsActivity;
+use App\ModelRelationship\ChannelAffair;
 
 class Channel extends Model
 {
+    use ChannelAffair;
     protected $fillable = [
-                        'user_id',
-                        'state_id',
-                        'district_id',
-                        'village_id',
-                        'language_id',
-                        'title',
-                        'slug',
+        'user_id',
+        'state_id',
+        'district_id',
+        'village_id',
+        'language_id',
+        'title',
     ];
     public $casts = [
-      'extra_attributes' => 'array',
+        'extra_attributes' => 'array',
     ];
+
+    protected static $logAttributes = [
+        'user_id',
+        'state_id',
+        'district_id',
+        'village_id',
+        'language_id',
+        'title',
+        'user.name',
+        'user.id',
+        'state.name',
+        'district.name',
+        'village.name',
+        'language.name',
+        'standard.standard_name',
+        'board.name'
+
+    ];
+
+    protected static $logOnlyDirty = true;
+
+
 
     public function getExtraAttributesAttribute(): SchemalessAttributes
     {
@@ -31,29 +55,8 @@ class Channel extends Model
         return SchemalessAttributes::scopeWithSchemalessAttributes('extra_attributes');
     }
 
-
-    public function user(){
-        return $this->belongsTo(Channel::class,'user_id','id');
+    public function getStatusAttribute($value)
+    {
+        return $value == 1;
     }
-
-    public function state(){
-        return $this->belongsTo(State::class,'state_id','id');
-    }
-
-    public function district(){
-        return $this->belongsTo(District::class,'district_id','id');
-    }
-
-    public function village(){
-        return $this->belongsTo(Language::class,'village_id','id');
-    }
-
-    public function language(){
-        return $this->belongsTo(Language::class,'language_id','id');
-    }
-
-    public function stream(){
-        return $this->hasMany(Stream::class,'id','channel_id');
-    }
-
 }

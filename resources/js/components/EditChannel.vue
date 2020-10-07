@@ -1,33 +1,45 @@
 <template>
   <div>
-    <div class="row">
-      <div class="col-sm-6">
-        <website></website>
-      </div>
-      <div class="col-sm-6">
-        <description></description>
-      </div>
-      <div class="col-sm-6">
-        <cover></cover>
-      </div>
-      <div class="col-sm-6">
+    <div class="row mb-5 mx-auto">
+      <div class="col-sm-4">
         <icon></icon>
       </div>
-      <div class="col-sm-12">
-        <infrastructure></infrastructure>
+      <div class="col-sm-8">
+        <cover></cover>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-sm-4 mb-5">
+        <website></website>
+      </div>
+      <div class="col-sm-8">
+        <description></description>
+      </div>
+    </div>
+    <div class="container mt-5">
+      <infrastructure></infrastructure>
+    </div>
+    <div class="row mt-5">
+      <div class="col-sm-6">
+        <standard></standard>
       </div>
       <div class="col-sm-6">
-          <standard></standard>
+        <board></board>
+      </div>
+    </div>
+    <div class="row mt-5">
+      <div class="col-sm-6">
+        <social></social>
       </div>
       <div class="col-sm-6">
-          <stream></stream>
+        <college :channel="channelData"></college>
       </div>
-      <div class="col-sm-6">
-          <board></board>
-      </div>
-      <div class="col-sm-6">
-          <social></social>
-      </div>
+    </div>
+    <div class="container mt-5 ml-0 w-50">
+      
+        <phone :user="userData"></phone>
+      
     </div>
   </div>
 </template>
@@ -39,18 +51,34 @@ import cover from "./channel/cover.vue";
 import icon from "./channel/icon.vue";
 import infrastructure from "./channel/infrastructure.vue";
 import standard from "./channel/standard.vue";
-import stream from "./channel/stream.vue";
 import board from "./channel/board.vue";
 import social from "./channel/social.vue";
+import college from "./channel/college.vue";
+import phone from "./channel/phone.vue";
 export default {
   data() {
     return {
       websiteLink: "",
       websiteLinkError: "",
-      userData: {}
+      userData: {},
+      channelData: [],
+      userData: {},
     };
   },
-  created() {},
+  props: {
+    channel: {
+      type: Array,
+      default: null,
+    },
+    user: {
+      type: Object,
+      default: null,
+    },
+  },
+  created() {
+    this.channelData = this.channel;
+    this.userData = this.user;
+  },
   mounted() {},
   methods: {},
   components: {
@@ -60,11 +88,13 @@ export default {
     icon,
     infrastructure,
     standard,
-    stream,
     board,
-    social
-  }
+    social,
+    college,
+    phone,
+  },
 };
 </script>
 
-<style></style>
+<style>
+</style>

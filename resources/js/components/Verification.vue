@@ -1,24 +1,27 @@
 <template>
   <div>
     <div v-if="verificationStatus === true && userData === 1">
-      <h2>
-        <span class="text-danger">Your data is under verification</span>
-      </h2>
+      <h4 class="text-center text-danger">
+      Your data is under verification
+      </h4>
+      <p class="text-center text-success">Once verified, you will have full access to your channel</P>
     </div>
     <div v-if="userData === 3 && verificationStatus === true">
-      <h2>
-        <span class="text-danger">You are blocked by Admin</span>
-      </h2>
+      <h4 class="text-center text-danger">
+      You are temporarily restricted from accessing the channel
+      </h4>
+     <h6 class="text-center text-success">Please contact the admin</h6>
     </div>
     <div v-if="verificationStatus === false">
       <div>
-
         <form @submit.prevent="validateForm()">
           <div
             class="form-group"
-            :class="{'has-error': errors.has('title') || serverErrors.title != '' }"
+            :class="{
+              'has-error': errors.has('title') || serverErrors.title != '',
+            }"
           >
-            <label for="exampleInputEmail1">Title</label>
+            <label for="exampleInputEmail1">Institute Name</label>
             <input
               id="title"
               v-on:focus="serverErrors.title = ''"
@@ -27,40 +30,58 @@
               data-vv-delay="20"
               name="title"
               type="text"
-              :class="{'form-control': true, 'is-invalid': errors.has('title') }"
-              placeholder="title"
+              :class="{
+                'form-control': true,
+                'is-invalid': errors.has('title'),
+              }"
+              placeholder="Insert your institute name"
             />
             <i v-show="errors.has('title')" class="is-invalid"></i>
 
-            <span v-show="errors.has('title')" class="text-danger">{{ errors.first('title') }}</span>
-            <span v-show="serverErrors.title != ''" class="text-danger">{{ serverErrors.title }}</span>
+            <span v-show="errors.has('title')" class="text-danger">{{
+              errors.first("title")
+            }}</span>
+            <span v-show="serverErrors.title != ''" class="text-danger">{{
+              serverErrors.title
+            }}</span>
           </div>
 
           <div
             class="form-group"
-            :class="{'has-error': errors.has('udise') || serverErrors.udise != '' }"
+            :class="{
+              'has-error': errors.has('udise') || serverErrors.udise != '',
+            }"
           >
-            <label for="exampleInputEmail1">udise</label>
+            <label for="exampleInputEmail1">Udise Code</label>
             <input
               id="udise"
               v-on:focus="serverErrors.udise = ''"
               v-model="formData.udise"
-              v-validate="'required'"
               data-vv-delay="20"
               name="udise"
               type="text"
-              :class="{'form-control': true, 'is-invalid': errors.has('udise') }"
-              placeholder="udise"
+              :class="{
+                'form-control': true,
+                'is-invalid': errors.has('udise'),
+              }"
+              placeholder="Enter your institute udise code Optinal"
             />
             <i v-show="errors.has('udise')" class="is-invalid"></i>
 
-            <span v-show="errors.has('udise')" class="text-danger">{{ errors.first('udise') }}</span>
-            <span v-show="serverErrors.udise != ''" class="text-danger">{{ serverErrors.udise }}</span>
+            <span v-show="errors.has('udise')" class="text-danger">{{
+              errors.first("udise")
+            }}</span>
+            <span v-show="serverErrors.udise != ''" class="text-danger">{{
+              serverErrors.udise
+            }}</span>
           </div>
 
           <div
             class="form-group"
-            :class="{'has-error': errors.has('location') || serverErrors.location != '' }"
+            :class="{
+              'has-error':
+                errors.has('location') || serverErrors.location != '',
+            }"
           >
             <label for="exampleInputEmail1">Location</label>
             <input
@@ -71,21 +92,28 @@
               data-vv-delay="20"
               name="location"
               type="text"
-              :class="{'form-control': true, 'is-invalid': errors.has('location') }"
-              placeholder="location"
+              :class="{
+                'form-control': true,
+                'is-invalid': errors.has('location'),
+              }"
+              placeholder="Insert your institute location"
             />
             <i v-show="errors.has('location')" class="is-invalid"></i>
 
-            <span v-show="errors.has('location')" class="text-danger">{{ errors.first('location') }}</span>
-            <span
-              v-show="serverErrors.location != ''"
-              class="text-danger"
-            >{{ serverErrors.location }}</span>
+            <span v-show="errors.has('location')" class="text-danger">{{
+              errors.first("location")
+            }}</span>
+            <span v-show="serverErrors.location != ''" class="text-danger">{{
+              serverErrors.location
+            }}</span>
           </div>
 
           <div
             class="form-group"
-            :class="{'has-error': errors.has('ownership') || serverErrors.ownership != '' }"
+            :class="{
+              'has-error':
+                errors.has('ownership') || serverErrors.ownership != '',
+            }"
           >
             <label>Ownership</label>
             <select
@@ -100,21 +128,21 @@
             </select>
             <i v-show="errors.has('ownership')" class="is-invalid"></i>
 
-            <span
-              class="text-danger"
-              v-show="errors.has('ownership')"
-            >{{ errors.first('ownership') }}</span>
-            <span
-              v-show="serverErrors.ownership != ''"
-              class="text-danger"
-            >{{ serverErrors.ownership }}</span>
+            <span class="text-danger" v-show="errors.has('ownership')">{{
+              errors.first("ownership")
+            }}</span>
+            <span v-show="serverErrors.ownership != ''" class="text-danger">{{
+              serverErrors.ownership
+            }}</span>
           </div>
 
           <div
             class="form-group"
-            :class="{'has-error': errors.has('founded') || serverErrors.founded != '' }"
+            :class="{
+              'has-error': errors.has('founded') || serverErrors.founded != '',
+            }"
           >
-            <label for="exampleInputEmail1">founded</label>
+            <label for="exampleInputEmail1">Founded</label>
             <input
               id="founded"
               v-on:focus="serverErrors.founded = ''"
@@ -123,40 +151,56 @@
               data-vv-delay="20"
               name="founded"
               type="date"
-              :class="{'form-control': true, 'is-invalid': errors.has('founded') }"
+              :max="todaysDate"
+              :class="{
+                'form-control': true,
+                'is-invalid': errors.has('founded'),
+              }"
               placeholder="founded"
             />
             <i v-show="errors.has('founded')" class="is-invalid"></i>
 
-            <span class="text-danger" v-show="errors.has('founded')">{{ errors.first('founded') }}</span>
-            <span v-show="serverErrors.founded != ''" class="text-danger">{{ serverErrors.founded }}</span>
+            <span class="text-danger" v-show="errors.has('founded')">{{
+              errors.first("founded")
+            }}</span>
+            <span v-show="serverErrors.founded != ''" class="text-danger">{{
+              serverErrors.founded
+            }}</span>
           </div>
 
           <div
             class="form-group"
-            :class="{'has-error': errors.has('pin') || serverErrors.pin != '' }"
+            :class="{
+              'has-error': errors.has('pin') || serverErrors.pin != '',
+            }"
           >
-            <label for="exampleInputEmail1">pin</label>
+            <label for="exampleInputEmail1">Pin Code</label>
             <input
               id="text"
               v-on:focus="serverErrors.pin = ''"
               v-model="formData.pin"
-              v-validate="'required|numeric'"
+              v-validate="'required|numeric|min:6|max:6'"
               data-vv-delay="20"
               name="pin"
               type="text"
-              :class="{'form-control': true, 'is-invalid': errors.has('pin') }"
-              placeholder="pin"
+              :class="{ 'form-control': true, 'is-invalid': errors.has('pin') }"
+              placeholder="Insert your area pin code"
             />
             <i v-show="errors.has('pin')" class="is-invalid"></i>
 
-            <span class="text-danger" v-show="errors.has('pin')">{{ errors.first('pin') }}</span>
-            <span v-show="serverErrors.pin != ''" class="text-danger">{{ serverErrors.pin }}</span>
+            <span class="text-danger" v-show="errors.has('pin')">{{
+              errors.first("pin")
+            }}</span>
+            <span v-show="serverErrors.pin != ''" class="text-danger">{{
+              serverErrors.pin
+            }}</span>
           </div>
 
           <div
             class="form-group"
-            :class="{'has-error': errors.has('gender') || serverErrors.gender != '' }"
+            :class="{
+              'has-error': errors.has('gender') || serverErrors.gender != '',
+            }"
           >
             <label for="exampleInputEmail1">Gender</label>
             <select
@@ -172,15 +216,22 @@
             </select>
             <i v-show="errors.has('gender')" class="is-invalid"></i>
 
-            <span class="text-danger" v-show="errors.has('gender')">{{ errors.first('gender') }}</span>
-            <span v-show="serverErrors.gender != ''" class="text-danger">{{ serverErrors.gender }}</span>
+            <span class="text-danger" v-show="errors.has('gender')">{{
+              errors.first("gender")
+            }}</span>
+            <span v-show="serverErrors.gender != ''" class="text-danger">{{
+              serverErrors.gender
+            }}</span>
           </div>
 
           <div
             class="form-group"
-            :class="{'has-error': errors.has('language') || serverErrors.language_id != '' }"
+            :class="{
+              'has-error':
+                errors.has('language') || serverErrors.language_id != '',
+            }"
           >
-            <label>Select Institute Medium</label>
+            <label>Medium</label>
 
             <select
               v-model="formData.language_id"
@@ -193,22 +244,27 @@
                 v-for="language in languages"
                 :key="language.id"
                 :value="language.id"
-              >{{language.name}}</option>
+              >
+                {{ language.name }}
+              </option>
             </select>
             <i v-show="errors.has('language')" class="is-invalid"></i>
 
-            <span v-show="errors.has('language')" class="text-danger">{{ errors.first('language') }}</span>
-            <span
-              v-show="serverErrors.language_id != ''"
-              class="text-danger"
-            >{{ serverErrors.language_id }}</span>
+            <span v-show="errors.has('language')" class="text-danger">{{
+              errors.first("language")
+            }}</span>
+            <span v-show="serverErrors.language_id != ''" class="text-danger">{{
+              serverErrors.language_id
+            }}</span>
           </div>
 
           <div
             class="form-group"
-            :class="{'has-error': errors.has('state') || serverErrors.state_id != '' }"
+            :class="{
+              'has-error': errors.has('state') || serverErrors.state_id != '',
+            }"
           >
-            <label>Select State</label>
+            <label>State</label>
 
             <select
               v-model="formData.state_id"
@@ -217,23 +273,33 @@
               v-validate="'required'"
             >
               <option value>Select State</option>
-              <option v-for="state in placesData" :key="state.id" :value="state.id">{{state.name}}</option>
+              <option
+                v-for="state in placesData"
+                :key="state.id"
+                :value="state.id"
+              >
+                {{ state.name }}
+              </option>
             </select>
             <i v-show="errors.has('state')" class="is-invalid"></i>
 
-            <span v-show="errors.has('state')" class="text-danger">{{ errors.first('state') }}</span>
-            <span
-              v-show="serverErrors.state_id != ''"
-              class="text-danger"
-            >{{ serverErrors.state_id }}</span>
+            <span v-show="errors.has('state')" class="text-danger">{{
+              errors.first("state")
+            }}</span>
+            <span v-show="serverErrors.state_id != ''" class="text-danger">{{
+              serverErrors.state_id
+            }}</span>
           </div>
 
           <div
             class="form-group"
-            :class="{'has-error': errors.has('district') || serverErrors.district_id != '' }"
+            :class="{
+              'has-error':
+                errors.has('district') || serverErrors.district_id != '',
+            }"
             v-if="districtStatusComputed"
           >
-            <label>Select Dis</label>
+            <label>District</label>
             <select
               v-model="formData.district_id"
               class="form-control"
@@ -246,23 +312,29 @@
                 v-for="district in districtData[0]"
                 :key="district.id"
                 :value="district.id"
-              >{{district.name}}</option>
+              >
+                {{ district.name }}
+              </option>
             </select>
             <i v-show="errors.has('district')" class="is-invalid"></i>
 
-            <span v-show="errors.has('district')" class="text-danger">{{ errors.first('district') }}</span>
-            <span
-              v-show="serverErrors.district_id != ''"
-              class="text-danger"
-            >{{ serverErrors.district_id }}</span>
+            <span v-show="errors.has('district')" class="text-danger">{{
+              errors.first("district")
+            }}</span>
+            <span v-show="serverErrors.district_id != ''" class="text-danger">{{
+              serverErrors.district_id
+            }}</span>
           </div>
 
           <div
             class="form-group"
-            :class="{'has-error': errors.has('village') || serverErrors.village_id != '' }"
+            :class="{
+              'has-error':
+                errors.has('village') || serverErrors.village_id != '',
+            }"
             v-if="villageStatusComputed"
           >
-            <label>Select Village</label>
+            <label>Village</label>
             <select
               v-model="formData.village_id"
               class="form-control"
@@ -275,20 +347,25 @@
                 v-for="village in villageData[0]"
                 :key="village.id"
                 :value="village.id"
-              >{{village.name}}</option>
+              >
+                {{ village.name }}
+              </option>
             </select>
             <i v-show="errors.has('village')" class="is-invalid"></i>
 
-            <span v-show="errors.has('village')" class="text-danger">{{ errors.first('village') }}</span>
-            <span
-              v-show="serverErrors.village_id != ''"
-              class="text-danger"
-            >{{ serverErrors.village_id }}</span>
+            <span v-show="errors.has('village')" class="text-danger">{{
+              errors.first("village")
+            }}</span>
+            <span v-show="serverErrors.village_id != ''" class="text-danger">{{
+              serverErrors.village_id
+            }}</span>
           </div>
-            <div v-if="wait" class="spinner-border text-primary" role="status">
-                <span class="sr-only">Loading...</span>
-            </div>
-          <button v-if="wait === false" type="submit" class="btn btn-primary">Submit</button>
+          <div v-if="wait" class="spinner-border text-primary" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+          <button v-if="wait === false" type="submit" class="btn btnveri mt-3">
+            Submit
+          </button>
         </form>
       </div>
     </div>
@@ -317,7 +394,7 @@ export default {
         ownership: "",
         founded: "",
         pin: "",
-        gender: ""
+        gender: "",
       },
       serverErrors: {
         state_id: "",
@@ -330,34 +407,39 @@ export default {
         ownership: "",
         founded: "",
         pin: "",
-        gender: ""
+        gender: "",
       },
-      wait: false
+      wait: false,
+      todaysDate: "",
     };
   },
   props: {
     places: {
       type: Array,
-      default: null
+      default: null,
     },
     user: {
       type: Object,
-      default: null
+      default: null,
     },
     languages: {
       type: Array,
-      default: null
+      default: null,
     },
     auth: {
-        type: Object,
-        default: null
-    }
+      type: Object,
+      default: null,
+    },
+    date: {
+      type: String,
+      default: null,
+    },
   },
   computed: {
-    districtStatusComputed: function() {
+    districtStatusComputed: function () {
       if (this.formData.state_id != "") {
         this.districtData = [];
-        this.placesData.filter(item => {
+        this.placesData.filter((item) => {
           if (item.id === this.formData.state_id) {
             this.districtData.push(item.district);
           }
@@ -366,10 +448,10 @@ export default {
       }
       return false;
     },
-    villageStatusComputed: function() {
+    villageStatusComputed: function () {
       if (this.formData.state_id != "" && this.formData.district_id != "") {
         this.villageData = [];
-        this.districtData[0].filter(item => {
+        this.districtData[0].filter((item) => {
           if (item.id === this.formData.district_id) {
             this.villageData.push(item.village);
           }
@@ -377,42 +459,47 @@ export default {
         return true;
       }
       return false;
-    }
+    },
   },
-  created(){
-      this.placesData = this.places;
-      if(this.user != null)this.userData = this.user.status;
-      if(this.userData === 1 || this.userData === 3) this.verificationStatus = true;
-      this.languagesData = this.languages;
-      this.authData = this.auth;
+  created() {
+    this.placesData = this.places;
+    if (this.user != null) this.userData = this.user.status;
+    if (this.userData === 1 || this.userData === 3)
+      this.verificationStatus = true;
+    this.languagesData = this.languages;
+    this.authData = this.auth;
+    this.getDate();
   },
   methods: {
+    getDate() {
+      this.todaysDate = this.date;
+    },
     validateForm() {
-        this.wait = true;
-      this.$validator.validate().then(result => {
+      this.wait = true;
+      this.$validator.validate().then((result) => {
         if (result) {
           axios
-            .post("api/verification", this.formData)
-            .then(response => {
+            .post("/api/verification", this.formData)
+            .then((response) => {
               if (response.status === 200) {
-                  if(response.data.message === 'Successful'){
-                      this.verificationStatus = true;
-                      this.userData = 1;
-                      Vue.toasted.success("Data is successfully submited", {
-                        position: "top-center",
-                        duration: 5000
-                      });
-                  }
-                  if(response.data.message === 'failed'){
-                      this.wait = false;
-                      Vue.toasted.error("Something went wrong", {
-                        position: "top-center",
-                        duration: 5000
-                      });
-                  }
+                if (response.data.message === "Successful") {
+                  this.verificationStatus = true;
+                  this.userData = 1;
+                  Vue.toasted.success("Data is successfully submited", {
+                    position: "top-center",
+                    duration: 5000,
+                  });
+                }
+                if (response.data.message === "failed") {
+                  this.wait = false;
+                  Vue.toasted.error("Something went wrong", {
+                    position: "top-center",
+                    duration: 5000,
+                  });
+                }
               }
             })
-            .catch(errors => {
+            .catch((errors) => {
               if (errors.response.data.errors.state_id) {
                 this.serverErrors.state_id =
                   errors.response.data.errors.state_id[0];
@@ -457,8 +544,8 @@ export default {
             });
         }
       });
-    }
-  }
+    },
+  },
 };
 </script>
 

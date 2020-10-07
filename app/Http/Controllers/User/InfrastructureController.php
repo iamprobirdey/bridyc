@@ -14,6 +14,8 @@ class InfrastructureController extends Controller
     }
 
     public function getUserData(){
+        $this->authorize('viewforchannel',auth()->user());
+        $this->authorize('checkChannelForUser',auth()->user()->channel);
         $user = Channel::select(
                 [
                     'id',
@@ -27,13 +29,15 @@ class InfrastructureController extends Controller
                     'no_of_books',
                     'playground'
                 ])
-            ->where('user_id',Auth::Id())
+            ->where('user_id',auth()->id())
             ->get();
         return response()->json([
             'user' => $user
         ]);
     }
     public function storeUserInformation(InfrastructureValidation $request,$Id){
+        $this->authorize('viewforchannel',auth()->user());
+        $this->authorize('checkChannelForUser',auth()->user()->channel);
         $channel = Channel::findOrFail($Id);
         $channel->no_of_class = $request->validated()['no_of_class'];
         $channel->boys_toilet = $request->validated()['boys_toilet'];
@@ -44,6 +48,8 @@ class InfrastructureController extends Controller
         $channel->library = $request->validated()['library'];
         $channel->no_of_books = $request->validated()['no_of_books'];
         $channel->playground = $request->validated()['playground'];
+        $channel->hostel = $request->validated()['hostel'];
+        $channel->bus_services = $request->validated()['bus_services'];
         $channel->update();
 
         return response()->json([

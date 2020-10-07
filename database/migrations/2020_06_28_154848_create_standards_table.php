@@ -15,8 +15,8 @@ class CreateStandardsTable extends Migration
     {
         Schema::create('standards', function (Blueprint $table) {
             $table->id();
-            $table->string('standard_name');
-            $table->string('code');
+            $table->string('standard_name')->unique();
+            $table->string('code')->unique()->index();
             $table->timestamps();
         });
     }

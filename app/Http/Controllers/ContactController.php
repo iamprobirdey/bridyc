@@ -8,12 +8,14 @@ use App\Contact;
 class ContactController extends Controller
 {
     public function store(StoreContact $request){
-        Contact::craete([
+        Contact::create([
             'name' => $request->validated()['name'],
             'email' => $request->validated()['email'],
             'phone' => $request->validated()['phone'],
             'message' => $request->validated()['message']
         ]);
-        return redirect()->back()->with('status' , 'Thank you, Will contact you soon!!');
+        return response()->json([
+            'message' => true
+        ]);
     }
 }

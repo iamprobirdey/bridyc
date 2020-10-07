@@ -19,7 +19,7 @@ class CheckVerification
     public function handle($request, Closure $next)
     {
         if(
-        Auth::user()->is_verified() &&
+        current_user()->is_verified() &&
         (
         collect([
                 'user/dashboard',
@@ -30,10 +30,10 @@ class CheckVerification
         ){
             return redirect('user/dashboard/verification');
         }
-        if(!Auth::user()->is_verified()
+        if(!current_user()->is_verified()
             && $request->path() === 'user/dashboard/verification'
         ){
-            return redirect('user/dashboard/');
+            return redirect('user/dashboard/'.current_user()->channel->title);
         }
         return $next($request);
     }

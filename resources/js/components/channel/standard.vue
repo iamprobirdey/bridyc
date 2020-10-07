@@ -1,13 +1,13 @@
 <template>
     <div>
-        <h2>School Standard</h2>
+        <h4>School Standard</h4>
         <div v-if="userData != null && standardDataStatus === true">
-            <h3>Here, is your list of standard available in your school</h3>
+            <h5>Here, is your list of standard available in your school</h5>
             <button class="btn btn-success" v-for="(standard,index) in userData" :key="index">
-                {{standard.standard.standard_name}}
+                {{standard.standard_name}}
             </button>
-            <button class="btn btn-primary" @click="editTheStandard()">
-                Edit
+            <button class="btn" @click="editTheStandard()">
+                <i class="fa fa-pencil" aria-hidden="true"></i>
             </button>
         </div>
         <div v-if="standardDataStatus === false">
@@ -23,19 +23,14 @@
             </multiselect>
             <button
                 type="submit"
-                class="btn btn-primary"
+                class="btn btnsubmit"
                 @click="submitStandardData()">
                 Submit
             </button>
         </div>
         <br>
         <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
+
     </div>
 </template>
 
@@ -61,9 +56,9 @@ export default {
   methods: {
     getStandardData() {
       axios
-        .get("api/standard")
+        .get("/api/standard")
         .then(response => {
-          this.userData = response.data.channel;
+          this.userData = response.data.channel[0].standard;
           this.userDataLength = this.userData.length;
           this.standardData = response.data.standard;
           if(this.userData.length > 0) this.standardDataStatus = true;
@@ -86,7 +81,7 @@ export default {
         if(this.userData != null){
             this.standardData.map(item => {
                 this.userData.map(data =>{
-                    if(data.standard.standard_name === item.standard_name){
+                    if(data.standard_name === item.standard_name){
                         this.value.push(item);
                     }
                 });
@@ -96,10 +91,11 @@ export default {
     submitStandardData(){
         if(this.userDataLength != this.value.length)
         axios
-            .post('api/standard',this.value)
+            .post('/api/standard',this.value)
             .then(response => {
                 this.userData = [];
-                this.userData = response.data.data;
+                this.userData = response.data.data[0].standard;
+                console.log(this.userData);
                 this.standardDataStatus = true;
                 this.theStandardDecider();
             })

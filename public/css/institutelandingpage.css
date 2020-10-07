@@ -1,5 +1,6 @@
 main {
   padding-top: 70px;
+  margin-bottom: 40px;
 }
 
 main .inscover {
@@ -20,13 +21,36 @@ main .inscover {
 }
 
 main .blankdiv {
-  height: 130px;
+  height: auto;
   width: 100%;
   position: relative;
-  top: -70px;
-  background-color: white;
+  top: -77px;
+  background-color: #f5f9ff;
   padding-top: 55px;
-  padding-left: 20px;
+  padding-left: 10px;
+  /* .btnshare{
+    position: relative;
+    top: 30px;
+    left: 90%;
+    font-size: 18px;
+    font-weight: normal;
+    @include screensize(laptop){
+     top: -25px;
+     left: 95%;
+     font-size: 20px;
+     font-weight: 100;
+  }
+   }*/
+}
+
+main .blankdiv p {
+  font-size: 14px;
+}
+
+@media only screen and (min-width: 481px) {
+  main .blankdiv p {
+    font-size: 16px;
+  }
 }
 
 @media only screen and (min-width: 481px) {
@@ -38,30 +62,34 @@ main .blankdiv {
 @media only screen and (min-width: 768px) {
   main .blankdiv {
     height: 150px;
-    padding-left: 70px;
+    padding-left: 60px;
     padding-top: 75px;
   }
 }
 
 main .blankdiv .insweb {
-  border: 1px solid #96511f;
-  background-color: #96511f;
+  background-color: #003585;
   color: white;
-  width: 150px;
-  padding-left: 15px;
-  padding-right: 12px;
+  font-size: 14px;
+  width: 110px;
+}
+
+@media only screen and (min-width: 481px) {
+  main .blankdiv .insweb {
+    width: 130px;
+    font-size: 16px;
+  }
 }
 
 main .blankdiv .insweb:hover {
   background-color: white;
-  color: #96511f;
+  color: #011737;
   text-decoration: none;
-  font-size: 17px;
-  border: 2px solid #96511f;
+  border: 1px solid #011737;
 }
 
 main .blankdiv .phemdiv {
-  display: none;
+  font-size: 20px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -70,38 +98,22 @@ main .blankdiv .phemdiv {
   }
 }
 
-main .blankdiv .btnshare {
-  position: relative;
-  top: 30px;
-  left: 90%;
-  font-size: 20px;
-}
-
-@media only screen and (min-width: 768px) {
-  main .blankdiv .btnshare {
-    top: -25px;
-    left: 95%;
-    font-size: 25px;
-  }
-}
-
 main .logo-title {
   position: relative;
-  top: -280px;
-  left: 5px;
+  top: -250px;
   margin-bottom: -120px;
 }
 
 @media only screen and (min-width: 481px) {
   main .logo-title {
-    top: -290px;
+    top: -255px;
     left: 10px;
   }
 }
 
 @media only screen and (min-width: 768px) {
   main .logo-title {
-    top: -330px;
+    top: -300px;
     left: -70px;
   }
 }
@@ -109,6 +121,7 @@ main .logo-title {
 main .logo-title .logoinstitute {
   width: 70px;
   height: 80px;
+  border: 1px solid gainsboro;
   transition: all ease 0.5s;
 }
 
@@ -123,20 +136,15 @@ main .logo-title .logoinstitute {
   main .logo-title .logoinstitute {
     width: 130px;
     height: 130px;
-    margin-left: 130px !important;
+    margin-left: 120px !important;
   }
 }
 
 main .logo-title .institle {
-  font-size: 18px;
-  margin-top: 45px;
+  font-size: 20px;
+  margin-top: 47px;
   transition: all ease 0.5s;
-}
-
-@media only screen and (min-width: 375px) {
-  main .logo-title .institle {
-    font-size: 20px;
-  }
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 @media only screen and (min-width: 411px) {
@@ -153,251 +161,239 @@ main .logo-title .institle {
 
 @media only screen and (min-width: 768px) {
   main .logo-title .institle {
-    font-size: 40px;
+    font-size: 35px;
     margin-top: 70px;
   }
 }
 
-main .achievecard {
-  background-color: white;
-  text-align: center;
-  align-items: center;
-  margin-bottom: 13px;
-  border: 1px;
-  margin-top: -43px;
-  height: auto;
-  margin-left: auto;
-  margin-right: auto;
-  width: 90%;
-}
-
-@media only screen and (min-width: 481px) {
-  main .achievecard {
-    font-size: x-large;
+@media only screen and (min-width: 1280px) {
+  main .logo-title .institle {
+    font-size: 38px;
+    margin-top: 70px;
   }
 }
 
-@media only screen and (min-width: 765px) {
-  main .achievecard {
-    font-size: small;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  main .achievecard {
-    font-size: large;
-  }
-}
-
-main .description {
-  background-color: white;
-  padding: 1rem;
-  margin-left: auto;
-  margin-right: auto;
-  width: 90%;
-}
-
-@media only screen and (min-width: 481px) {
-  main .description {
-    font-size: x-large;
-  }
-}
-
-@media only screen and (min-width: 765px) {
-  main .description {
-    width: 90%;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  main .description {
-    font-size: large;
-  }
-}
-
-main .info {
-  margin-top: 0.2rem;
-  line-height: 2rem;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  font-size: 20px;
-  color: black;
-  padding-top: 10px;
-  line-height: 3rem;
-  margin-top: 40px;
-}
-
-main .info h4 {
-  background-color: #96511f;
-}
-
-main .info .card-title {
-  text-align: center;
-}
-
-main .info hr {
-  border-bottom: 3px solid white;
-}
-
-@media only screen and (min-width: 481px) {
-  main .info {
-    font-size: x-large;
-  }
-}
-
-@media only screen and (min-width: 765px) {
-  main .info {
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  main .info {
-    margin-top: 0px;
-    font-size: large;
-  }
-}
-
-main .insaddress h4 {
-  text-align: center;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-}
-
-main .insaddress .addbody {
-  margin-top: -8px;
-  padding: 2rem;
-  font-size: large;
-  font-weight: 500;
-  border-left: 2px solid gainsboro;
-  border-right: 2px solid gainsboro;
-  border-bottom: 2px solid gainsboro;
-}
-
-@media only screen and (min-width: 481px) {
-  main .insaddress .addbody {
-    font-size: x-large;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  main .insaddress .addbody {
-    font-size: large;
-  }
-}
-
-main .insaddress .addbody ul {
-  line-height: 2rem;
-}
-
-@media only screen and (min-width: 375px) {
-  main .insaddress {
-    margin-top: 40px;
-  }
-}
-
-@media only screen and (min-width: 411px) {
-  main .insaddress {
-    margin-top: 60px;
-  }
-}
-
-@media only screen and (min-width: 481px) {
-  main .insaddress {
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 350px;
-  }
-}
-
-@media only screen and (min-width: 765px) {
-  main .insaddress {
-    margin-top: 590px;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  main .insaddress {
-    margin-top: 0px;
-  }
-}
-
-main .inscarou {
-  width: 100%;
-  height: 180px;
-  margin-bottom: 80px;
-}
-
-@media only screen and (min-width: 481px) {
-  main .inscarou {
-    margin-bottom: -190px;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  main .inscarou {
-    display: none;
-  }
-}
-
-main .inscarou li {
+main .inssocial {
   position: relative;
+  top: -90px;
+  left: 63%;
+  width: 100px !important;
+  overflow-x: hidden;
+}
+
+main .inssocial img {
+  width: 20px;
+  height: 20px;
+}
+
+@media only screen and (min-width: 481px) {
+  main .inssocial {
+    top: -105px;
+    left: 75%;
+  }
+
+  main .inssocial img {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  main .inssocial {
+    top: -194px;
+    left: 77%;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  main .inssocial {
+    top: -224px;
+    left: 82%;
+  }
+}
+
+main .inspills {
+  margin-top: -112px;
+}
+
+@media only screen and (min-width: 481px) {
+  main .inspills {
+    margin-top: -130px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  main .inspills {
+    margin-top: -160px;
+  }
+}
+
+main .inspills .nav-pills .nav-link {
+  color: #011737;
+}
+
+main .inspills .nav-pills .active {
+  background-color: #003585;
+  color: white;
+}
+
+main .inspills .inscarou {
+  width: 100%;
+  height: auto;
+}
+
+main .inspills .inscarou li {
+  position: relative;
+  top: 10px;
   width: 8px;
   height: 8px;
-  top: 30px;
   border-radius: 100%;
   background-color: black;
 }
 
-@media only screen and (min-width: 765px) {
-  main .inscarou li {
-    top: 250px;
+@media only screen and (min-width: 768px) {
+  main .inspills .inscarou li {
+    top: 10px;
   }
-}
-
-main .inscarou img {
-  width: 100%;
-  height: 100%;
-}
-
-main .insimages {
-  display: none;
 }
 
 @media only screen and (min-width: 768px) {
-  main .insimages {
-    display: block;
-    width: 90%;
-    height: 700px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: -50px;
+  main .inspills .inscarou {
+    margin-bottom: 180px;
   }
 }
 
-main .insimages img {
+main .inspills .inscarou img {
   width: 100%;
-  height: 50%;
+  height: 200px;
 }
 
-main .insimages .sub-img img {
-  margin-top: 5px;
-  width: 100px;
-  height: 110px;
-  cursor: pointer;
+@media only screen and (min-width: 768px) {
+  main .inspills .inscarou img {
+    height: 400px;
+  }
 }
 
-main .insusercover {
-  padding-left: 0em;
-  padding-right: 0em;
+main .inspills .notice {
+  background-color: #f5f9ff;
+  align-items: center;
+  margin-bottom: 13px;
+  height: auto;
   width: 100%;
-  height: 400px;
-  margin-top: -10px;
+}
+
+main .inspills .notice h5 {
+  font-weight: 400;
+  color: #003585;
+}
+
+main .inspills .notice hr {
+  border-bottom: 2px solid #db3737;
+}
+
+main .inspills .notice p {
+  color: black;
+}
+
+main .inspills .facultyachieve .facultyachievecard {
+  width: 200px;
+  height: 250px;
+}
+
+main .inspills .facultyachieve .facultyachievecard img {
+  width: 100%;
+  height: 170px;
+}
+
+main .inspills .description {
+  padding: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+main .inspills .description p {
+  border-left: 10px solid #96e0b7;
+  padding-left: 10px;
+  color: #011737;
+}
+
+main .inspills h2 {
+  color: #003585;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 18px;
+}
+
+@media only screen and (min-width: 481px) {
+  main .inspills h2 {
+    font-size: 32px;
+  }
+}
+
+main .inspills .princidiv {
+  margin-top: 50px;
+}
+
+main .inspills .princidiv h3 {
+  color: #003585;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 18px;
+}
+
+@media only screen and (min-width: 481px) {
+  main .inspills .princidiv h3 {
+    font-size: 24px;
+  }
+}
+
+main .inspills .princidiv img {
+  width: 24px;
+  height: 24px;
+}
+
+@media only screen and (min-width: 481px) {
+  main .inspills .princidiv img {
+    height: 30px;
+  }
+}
+
+main .inspills .princidiv .principalcard {
+  text-align: center;
+  color: #011737;
+  border: none;
+}
+
+main .inspills .princidiv .principalcard p {
+  color: #011737;
+}
+
+main .inspills .princidiv .principalcard img {
+  width: 100%;
+  height: 250px;
+}
+
+main .inspills .princidiv h6 {
+  color: #003585;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+main .inspills .insadditionalinfo p {
+  font-size: 18px;
+}
+
+main .inspills .insadditionalinfo img {
+  width: 18px;
+  height: 18px;
+}
+
+main .inspills .facilitydiv p {
+  font-size: 16px;
+  color: #011737;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+main .inspills .facilitydiv p img {
+  width: 16px;
+  height: 16px;
 }
 

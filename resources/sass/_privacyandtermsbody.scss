@@ -1,16 +1,18 @@
+
+.mainheader{
+    background-color: #f9fafa;
+    font-size: 30px;
+    margin-top: 100px;
+    color: #3659a2;
+    text-align: center;
+}
+
 .ptbody{
     margin-top: 50px;
     @include screensize(laptop){
-        margin-top: 100px;
+        margin-top: 80px;
     }
-    .mainheader{
-        background-color: #96511f;
-        font-size: 30px;
-        padding-top: 25px;
-        padding-bottom:25px;
-        text-align: center;
-        color: white;
-    }
+
     .mainbody{
         background-color: white;
         padding: 30px;

@@ -1,13 +1,13 @@
 <template>
   <div>
-        <h2>School Board</h2>
+        <h4>School Board</h4>
         <div v-if="userData != null && boardDataStatus === true">
-            <h3>Here, is your list of board available in your school</h3>
+            <h5>Here, is your list of board available in your school</h5>
             <button class="btn btn-success" v-for="(board,index) in userData" :key="index">
-                {{board.board.name}}
+                {{board.name}}
             </button>
-            <button class="btn btn-primary" @click="editTheboard()">
-                Edit
+            <button class="btn" @click="editTheboard()">
+                <i class="fa fa-pencil" aria-hidden="true"></i>
             </button>
         </div>
         <div v-if="boardDataStatus === false">
@@ -23,15 +23,14 @@
             </multiselect>
             <button
                 type="submit"
-                class="btn btn-primary"
+                class="btn btnsubmit"
                 @click="submitStandardData()">
                 Submit
             </button>
         </div>
         <br>
         <br>
-        <br>
-        <br>
+
   </div>
 </template>
 
@@ -52,13 +51,13 @@ export default {
     methods:{
         getBoardData(){
                 axios
-            .get("api/board")
+            .get("/api/board")
             .then(response => {
-            this.userData = response.data.channel;
-            this.boardData = response.data.board;
-            if(this.userData.length > 0) this.boardDataStatus = true;
-                this.theBoardDecider();
-            })
+                    this.userData = response.data.channel[0].board;
+                    this.boardData = response.data.board;
+                    if(this.userData.length > 0) this.boardDataStatus = true;
+                        this.theBoardDecider();
+                })
             .catch(errors => {
                 console.log('i am error'+errors);
                 Vue.toasted.error("Something went wrong", {
@@ -72,7 +71,7 @@ export default {
             if(this.userData != null){
                 this.boardData.map(board => {
                     this.userData.map(data =>{
-                        if(data.board.name === board.name){
+                        if(data.name === board.name){
                             this.value.push(board);
                             }
                         });
@@ -88,10 +87,10 @@ export default {
         submitStandardData(){
               if(this.userData.length != this.value.length)
             axios
-                .post('api/board',this.value)
+                .post('/api/board',this.value)
                 .then(response => {
                     this.userData = [];
-                    this.userData = response.data.data;
+                    this.userData = response.data.data[0].board;
                     this.streamDataStatus = true;
                     this.theBoardDecider();
                 })
@@ -112,5 +111,8 @@ export default {
 </script>
 <style src="vue-multiselect/dist/vue-multiselect.min.css"></style>
 <style>
-
+.btn-success{
+    border-radius: 0;
+    padding:5px
+}
 </style>

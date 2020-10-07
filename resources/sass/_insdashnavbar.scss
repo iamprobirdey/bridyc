@@ -1,19 +1,24 @@
 
 nav{
-    
+    max-width: 100%;
     background-color: white;
-    border-bottom: 10px solid #96511f;
+    .navbar-toggler{
+        &:focus{
+            outline: 0;
+        }
+    }
     .imglogodash{
         width:60px; 
         height: auto;
-        margin-left: 8%;
-        margin-top: -2px;
-        margin-bottom: -2px;
+        margin-left: -12%;
         transition: all ease .5s;
         @include screensize(tablet){
-          width: 85px;
+          width: 70px;
           height: auto;
        }
+       @include screensize(laptop){
+        margin-left: 10px;
+     }
       
     }
     ul{
@@ -31,6 +36,13 @@ nav{
 
     }
 }
+.border-gradient {
+    border-bottom: 4px solid; 
+    border-image-slice: 1;
+  }
+  .border-gradient-color {
+    border-image-source: linear-gradient(to right, #990066,  #f1aa00);
+  }
 
 .popnav{
     padding-left: 1em;

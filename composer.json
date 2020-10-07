@@ -13,9 +13,12 @@
         "fruitcake/laravel-cors": "^1.0",
         "guzzlehttp/guzzle": "^6.3",
         "jenssegers/agent": "^2.6",
+        "laravel/cashier": "^12.4",
         "laravel/framework": "^7.0",
+        "laravel/socialite": "^5.0",
         "laravel/tinker": "^2.0",
         "laravel/ui": "^2.0",
+        "spatie/laravel-activitylog": "^3.16",
         "spatie/laravel-image-optimizer": "^1.6",
         "spatie/laravel-permission": "^3.13",
         "spatie/laravel-schemaless-attributes": "^1.7"
@@ -44,6 +47,10 @@
         "classmap": [
             "database/seeds",
             "database/factories"
+        ],
+        "files": [
+            "app/Helper/currentuser.php",
+            "app/Helper/currentuserid.php"
         ]
     },
     "autoload-dev": {

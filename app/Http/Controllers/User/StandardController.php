@@ -8,7 +8,8 @@ use Illuminate\Http\Request;
 use App\Standard;
 use App\ChannelStandard;
 use App\Http\Requests\Standard\StoreAndUpdateUserStandardValidation;
-use Auth;
+use DB;
+use Illuminate\Auth\Events\CurrentDeviceLogout;
 
 class StandardController extends Controller
 {
@@ -18,8 +19,10 @@ class StandardController extends Controller
     }
 
     public function getStandardData(){
+        $this->authorize('viewforchannel',current_user());
+        $this->authorize('view',current_user());
         $standard = Standard::all();
-        $channelStandard = ChannelStandard::where('user_id',Auth::Id())
+        $channelStandard = Channel::select('id')->where('user_id',current_user_id())
                             ->with('standard')
                             ->get();
         return response()->json([
@@ -28,11 +31,11 @@ class StandardController extends Controller
         ]);
     }
     public function store(Request $requets){
+        $this->authorize('viewforchannel',current_user());
+        $this->authorize('view',current_user());
         $data = $requets->all();
         $standard = Standard::all();
-        ChannelStandard::where('user_id',Auth::Id())
-                            ->delete();
-        $channel = Channel::where('user_id',Auth::id())->first();
+        $channel = Channel::select('id')->where('user_id',current_user_id())->first();
         $insertData = array();
         foreach($data as $item){
             foreach($standard as $stand){
@@ -41,19 +44,22 @@ class StandardController extends Controller
                     array(
                         'standard_id' => $item['id'],
                         'channel_id' => $channel->id,
-                        'user_id' => Auth::id()
                         )
                     );
                 }
             }
         }
+        if(ChannelStandard::where('channel_id',current_user()->channel->id)->exists()){
+            //ChannelStandard::where('channel_id',current_user()->channel->id)->delete();
+            $channel->standard()->detach();
+        }
 
-        ChannelStandard::insert($insertData);
-        $insertData = ChannelStandard::where('user_id',Auth::id())
-                        ->with('standard')
-                        ->get();
+        if(!empty($insertData)){
+            $channel->standard()->attach($insertData);
+        }
+
         return response()->json([
-            'data' => $insertData
+            'data' => $channel->with('standard')->get()
         ]);
     }
 }

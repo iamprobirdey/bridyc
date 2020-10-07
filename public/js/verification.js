@@ -392,6 +392,83 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -428,7 +505,8 @@ __webpack_require__.r(__webpack_exports__);
         pin: "",
         gender: ""
       },
-      wait: false
+      wait: false,
+      todaysDate: ""
     };
   },
   props: {
@@ -446,6 +524,10 @@ __webpack_require__.r(__webpack_exports__);
     },
     auth: {
       type: Object,
+      "default": null
+    },
+    date: {
+      type: String,
       "default": null
     }
   },
@@ -487,17 +569,21 @@ __webpack_require__.r(__webpack_exports__);
     if (this.userData === 1 || this.userData === 3) this.verificationStatus = true;
     this.languagesData = this.languages;
     this.authData = this.auth;
+    this.getDate();
   },
   methods: {
+    getDate: function getDate() {
+      this.todaysDate = this.date;
+    },
     validateForm: function validateForm() {
       var _this3 = this;
 
       this.wait = true;
       this.$validator.validate().then(function (result) {
         if (result) {
-          axios.post("api/verification", _this3.formData).then(function (response) {
+          axios.post("/api/verification", _this3.formData).then(function (response) {
             if (response.status === 200) {
-              if (response.data.message === 'Successful') {
+              if (response.data.message === "Successful") {
                 _this3.verificationStatus = true;
                 _this3.userData = 1;
                 Vue.toasted.success("Data is successfully submited", {
@@ -506,7 +592,7 @@ __webpack_require__.r(__webpack_exports__);
                 });
               }
 
-              if (response.data.message === 'failed') {
+              if (response.data.message === "failed") {
                 _this3.wait = false;
                 Vue.toasted.error("Something went wrong", {
                   position: "top-center",
@@ -584,11 +670,29 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", [
     _vm.verificationStatus === true && _vm.userData === 1
-      ? _c("div", [_vm._m(0)])
+      ? _c("div", [
+          _c("h4", { staticClass: "text-center text-danger" }, [
+            _vm._v("\n    Your data is under verification\n    ")
+          ]),
+          _vm._v(" "),
+          _c("p", { staticClass: "text-center text-success" }, [
+            _vm._v("Once verified, you will have full access to your channel")
+          ])
+        ])
       : _vm._e(),
     _vm._v(" "),
     _vm.userData === 3 && _vm.verificationStatus === true
-      ? _c("div", [_vm._m(1)])
+      ? _c("div", [
+          _c("h4", { staticClass: "text-center text-danger" }, [
+            _vm._v(
+              "\n    You are temporarily restricted from accessing the channel\n    "
+            )
+          ]),
+          _vm._v(" "),
+          _c("h6", { staticClass: "text-center text-success" }, [
+            _vm._v("Please contact the admin")
+          ])
+        ])
       : _vm._e(),
     _vm._v(" "),
     _vm.verificationStatus === false
@@ -616,7 +720,7 @@ var render = function() {
                   },
                   [
                     _c("label", { attrs: { for: "exampleInputEmail1" } }, [
-                      _vm._v("Title")
+                      _vm._v("Institute Name")
                     ]),
                     _vm._v(" "),
                     _c("input", {
@@ -643,7 +747,7 @@ var render = function() {
                         "data-vv-delay": "20",
                         name: "title",
                         type: "text",
-                        placeholder: "title"
+                        placeholder: "Insert your institute name"
                       },
                       domProps: { value: _vm.formData.title },
                       on: {
@@ -716,7 +820,7 @@ var render = function() {
                   },
                   [
                     _c("label", { attrs: { for: "exampleInputEmail1" } }, [
-                      _vm._v("udise")
+                      _vm._v("Udise Code")
                     ]),
                     _vm._v(" "),
                     _c("input", {
@@ -726,12 +830,6 @@ var render = function() {
                           rawName: "v-model",
                           value: _vm.formData.udise,
                           expression: "formData.udise"
-                        },
-                        {
-                          name: "validate",
-                          rawName: "v-validate",
-                          value: "required",
-                          expression: "'required'"
                         }
                       ],
                       class: {
@@ -743,7 +841,7 @@ var render = function() {
                         "data-vv-delay": "20",
                         name: "udise",
                         type: "text",
-                        placeholder: "udise"
+                        placeholder: "Enter your institute udise code Optinal"
                       },
                       domProps: { value: _vm.formData.udise },
                       on: {
@@ -844,7 +942,7 @@ var render = function() {
                         "data-vv-delay": "20",
                         name: "location",
                         type: "text",
-                        placeholder: "location"
+                        placeholder: "Insert your institute location"
                       },
                       domProps: { value: _vm.formData.location },
                       on: {
@@ -1035,7 +1133,7 @@ var render = function() {
                   },
                   [
                     _c("label", { attrs: { for: "exampleInputEmail1" } }, [
-                      _vm._v("founded")
+                      _vm._v("Founded")
                     ]),
                     _vm._v(" "),
                     _c("input", {
@@ -1062,6 +1160,7 @@ var render = function() {
                         "data-vv-delay": "20",
                         name: "founded",
                         type: "date",
+                        max: _vm.todaysDate,
                         placeholder: "founded"
                       },
                       domProps: { value: _vm.formData.founded },
@@ -1135,7 +1234,7 @@ var render = function() {
                   },
                   [
                     _c("label", { attrs: { for: "exampleInputEmail1" } }, [
-                      _vm._v("pin")
+                      _vm._v("Pin Code")
                     ]),
                     _vm._v(" "),
                     _c("input", {
@@ -1149,8 +1248,8 @@ var render = function() {
                         {
                           name: "validate",
                           rawName: "v-validate",
-                          value: "required|numeric",
-                          expression: "'required|numeric'"
+                          value: "required|numeric|min:6|max:6",
+                          expression: "'required|numeric|min:6|max:6'"
                         }
                       ],
                       class: {
@@ -1162,7 +1261,7 @@ var render = function() {
                         "data-vv-delay": "20",
                         name: "pin",
                         type: "text",
-                        placeholder: "pin"
+                        placeholder: "Insert your area pin code"
                       },
                       domProps: { value: _vm.formData.pin },
                       on: {
@@ -1354,7 +1453,7 @@ var render = function() {
                     }
                   },
                   [
-                    _c("label", [_vm._v("Select Institute Medium")]),
+                    _c("label", [_vm._v("Medium")]),
                     _vm._v(" "),
                     _c(
                       "select",
@@ -1407,7 +1506,13 @@ var render = function() {
                               key: language.id,
                               domProps: { value: language.id }
                             },
-                            [_vm._v(_vm._s(language.name))]
+                            [
+                              _vm._v(
+                                "\n              " +
+                                  _vm._s(language.name) +
+                                  "\n            "
+                              )
+                            ]
                           )
                         })
                       ],
@@ -1471,7 +1576,7 @@ var render = function() {
                     }
                   },
                   [
-                    _c("label", [_vm._v("Select State")]),
+                    _c("label", [_vm._v("State")]),
                     _vm._v(" "),
                     _c(
                       "select",
@@ -1521,7 +1626,13 @@ var render = function() {
                           return _c(
                             "option",
                             { key: state.id, domProps: { value: state.id } },
-                            [_vm._v(_vm._s(state.name))]
+                            [
+                              _vm._v(
+                                "\n              " +
+                                  _vm._s(state.name) +
+                                  "\n            "
+                              )
+                            ]
                           )
                         })
                       ],
@@ -1586,7 +1697,7 @@ var render = function() {
                         }
                       },
                       [
-                        _c("label", [_vm._v("Select Dis")]),
+                        _c("label", [_vm._v("District")]),
                         _vm._v(" "),
                         _c(
                           "select",
@@ -1639,7 +1750,13 @@ var render = function() {
                                   key: district.id,
                                   domProps: { value: district.id }
                                 },
-                                [_vm._v(_vm._s(district.name))]
+                                [
+                                  _vm._v(
+                                    "\n              " +
+                                      _vm._s(district.name) +
+                                      "\n            "
+                                  )
+                                ]
                               )
                             })
                           ],
@@ -1705,7 +1822,7 @@ var render = function() {
                         }
                       },
                       [
-                        _c("label", [_vm._v("Select Village")]),
+                        _c("label", [_vm._v("Village")]),
                         _vm._v(" "),
                         _c(
                           "select",
@@ -1758,7 +1875,13 @@ var render = function() {
                                   key: village.id,
                                   domProps: { value: village.id }
                                 },
-                                [_vm._v(_vm._s(village.name))]
+                                [
+                                  _vm._v(
+                                    "\n              " +
+                                      _vm._s(village.name) +
+                                      "\n            "
+                                  )
+                                ]
                               )
                             })
                           ],
@@ -1831,10 +1954,10 @@ var render = function() {
                   ? _c(
                       "button",
                       {
-                        staticClass: "btn btn-primary",
+                        staticClass: "btn btnveri mt-3",
                         attrs: { type: "submit" }
                       },
-                      [_vm._v("Submit")]
+                      [_vm._v("\n          Submit\n        ")]
                     )
                   : _vm._e()
               ]
@@ -1844,28 +1967,7 @@ var render = function() {
       : _vm._e()
   ])
 }
-var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("h2", [
-      _c("span", { staticClass: "text-danger" }, [
-        _vm._v("Your data is under verification")
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("h2", [
-      _c("span", { staticClass: "text-danger" }, [
-        _vm._v("You are blocked by Admin")
-      ])
-    ])
-  }
-]
+var staticRenderFns = []
 render._withStripped = true
 
 
