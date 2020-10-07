@@ -89,12 +89,6 @@ class DashboardController extends Controller
     public function teacher(Channel $channel)
     {
         $this->authorize('checkChannelForUser', $channel);
-        // 'teacher' => $channel->select('id')
-        //         ->with(['userchannelrequest' => function ($query) {
-        //             $query->with(['user']);
-        //         }])
-        //         ->with('teacher.user')->get()
-
         return view('institute.teacher', [
             'teacher' => $channel->select('id')
                 ->with('userchannelrequest.user')

@@ -6,26 +6,27 @@
         <span class="text-danger">pending</span> request, please act!
       </h5>
       <div v-for="(teacher, index) in teachersRequestData" :key="index">
-        <div v-if="teacher.request === 'in-progress'">
-          <h3 class="text-capitalized">Faculty name: {{ teacher.user.name }}</h3>
-          <button
-            class="btn btn-success"
-            @click="acceptTheTeacher(teacher, index)"
-          >
-            Accept
-          </button>
-          <button
-            class="btn btn-danger"
-            @click="deleteTheTeacher(teacher, index)"
-          >
-            Delete
-          </button>
-        </div>
+        <h3 class="text-capitalized">Faculty name: {{ teacher.user.name }}</h3>
+        <button
+          class="btn btn-success"
+          @click="acceptTheTeacher(teacher, index)"
+        >
+          Accept
+        </button>
+        <button
+          class="btn btn-danger"
+          @click="deleteTheTeacher(teacher, index)"
+        >
+          Delete
+        </button>
       </div>
     </div>
     <h3 class="text-uppercase">Faculty Members</h3>
-    <p class="mb-n2 text-secondary">(If someone from the faculty left the institute, you may remove them from this section.)</p>
-    <hr>
+    <p class="mb-n2 text-secondary">
+      (If someone from the faculty left the institute, you may remove them from
+      this section.)
+    </p>
+    <hr />
     <!--h3>Teacher has left your school for some reason?</h3>
     <span>Just remove them from the list</span-->
     <!--div class="row mx-0">
@@ -40,21 +41,27 @@
         Delete
       </button>
     </div-->
-<div class="row mx-0 mt-5">
-    <div class="card shadow mx-auto sidebar-facard" v-for="(teacher, index) in teachersData" :key="index">
-            <img src="/images/teacher.jpg" alt="faculty member image">
-            <div class="card-body mt-n1">
-              <h6 class="card-title my-n1 text-capitalized text-center">{{ teacher.user.name }}</h6>
-              <p class="card-text mx-n3 text-center">
-                {{ teacher.user.email }}
-              </p>
-            </div>
-            <button
-            class="btn btn-danger mt-5"
-            @click="deleteFromChannel(teacher.id, index)"
-           >
-        Remove
-      </button>
+    <div class="row mx-0 mt-5">
+      <div
+        class="card shadow mx-auto sidebar-facard"
+        v-for="(teacher, index) in teachersData"
+        :key="index"
+      >
+        <img src="/images/teacher.jpg" alt="faculty member image" />
+        <div class="card-body mt-n1">
+          <h6 class="card-title my-n1 text-capitalized text-center">
+            {{ teacher.user.name }}
+          </h6>
+          <p class="card-text mx-n3 text-center">
+            {{ teacher.user.email }}
+          </p>
+        </div>
+        <button
+          class="btn btn-danger mt-5"
+          @click="deleteFromChannel(teacher.id, index)"
+        >
+          Remove
+        </button>
       </div>
     </div>
   </div>
@@ -91,11 +98,9 @@ export default {
     this.teachersData = this.teacher[0].teacher;
     this.teachersRequestData = this.teacher[0].userchannelrequest;
     this.channelId = this.teacher[0].id;
-    console.log(this.teachersData);
+    console.log(this.teachersRequestData);
   },
-  mounted() {
-    console.log(this.teachersData);
-  },
+  mounted() {},
   methods: {
     deleteFromChannel(id, index) {
       if (confirm("Are you sure?")) {

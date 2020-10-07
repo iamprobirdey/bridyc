@@ -54,6 +54,11 @@ class User extends Authenticatable implements MustVerifyEmail
         return $query->select('id', 'username');
     }
 
+    public function scopeSpecific($query)
+    {
+        $query->select('name', 'email', 'avatar');
+    }
+
     public function isUser()
     {
         return $this->user_type;

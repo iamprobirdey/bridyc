@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Channel;
 use App\InstituteAnalysis;
+use App\Podcast;
 use App\User;
 use App\UserChannelRequest;
 use Illuminate\Support\Facades\Auth;
@@ -13,7 +14,10 @@ class ChannelController extends Controller
 {
     public function index()
     {
-        activity('all-user')->log('User entered in Bridyc');
+        $podcast = Podcast::orderBy('created_at', 'desc')->limit(1)->get();
+
+        //activity('all-user')->log('User entered in Bridyc');
+
         $channel = Channel::select(
             'district_id',
             'user_id',
@@ -25,7 +29,7 @@ class ChannelController extends Controller
             ->where('status', 1)
             ->with('district')
             ->get();
-        return view('index', compact('channel'));
+        return view('index', compact('channel', 'podcast'));
     }
 
     public function getChannelBySlug(Channel $channel)
@@ -56,6 +60,7 @@ class ChannelController extends Controller
         }
 
         $userId = current_user_id();
+
 
         return view('channel_with_slug', compact(['channel', 'user', 'currentUser', 'userId', 'isTeacher']));
     }

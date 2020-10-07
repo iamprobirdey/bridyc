@@ -157,6 +157,13 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -187,11 +194,9 @@ __webpack_require__.r(__webpack_exports__);
     this.teachersData = this.teacher[0].teacher;
     this.teachersRequestData = this.teacher[0].userchannelrequest;
     this.channelId = this.teacher[0].id;
-    console.log(this.teachersData);
+    console.log(this.teachersRequestData);
   },
-  mounted: function mounted() {
-    console.log(this.teachersData);
-  },
+  mounted: function mounted() {},
   methods: {
     deleteFromChannel: function deleteFromChannel(id, index) {
       var _this = this;
@@ -288,39 +293,35 @@ var render = function() {
             _vm._v(" "),
             _vm._l(_vm.teachersRequestData, function(teacher, index) {
               return _c("div", { key: index }, [
-                teacher.request === "in-progress"
-                  ? _c("div", [
-                      _c("h3", { staticClass: "text-capitalized" }, [
-                        _vm._v("Faculty name: " + _vm._s(teacher.user.name))
-                      ]),
-                      _vm._v(" "),
-                      _c(
-                        "button",
-                        {
-                          staticClass: "btn btn-success",
-                          on: {
-                            click: function($event) {
-                              return _vm.acceptTheTeacher(teacher, index)
-                            }
-                          }
-                        },
-                        [_vm._v("\n            Accept\n          ")]
-                      ),
-                      _vm._v(" "),
-                      _c(
-                        "button",
-                        {
-                          staticClass: "btn btn-danger",
-                          on: {
-                            click: function($event) {
-                              return _vm.deleteTheTeacher(teacher, index)
-                            }
-                          }
-                        },
-                        [_vm._v("\n            Delete\n          ")]
-                      )
-                    ])
-                  : _vm._e()
+                _c("h3", { staticClass: "text-capitalized" }, [
+                  _vm._v("Faculty name: " + _vm._s(teacher.user.name))
+                ]),
+                _vm._v(" "),
+                _c(
+                  "button",
+                  {
+                    staticClass: "btn btn-success",
+                    on: {
+                      click: function($event) {
+                        return _vm.acceptTheTeacher(teacher, index)
+                      }
+                    }
+                  },
+                  [_vm._v("\n        Accept\n      ")]
+                ),
+                _vm._v(" "),
+                _c(
+                  "button",
+                  {
+                    staticClass: "btn btn-danger",
+                    on: {
+                      click: function($event) {
+                        return _vm.deleteTheTeacher(teacher, index)
+                      }
+                    }
+                  },
+                  [_vm._v("\n        Delete\n      ")]
+                )
               ])
             })
           ],
@@ -332,7 +333,7 @@ var render = function() {
     _vm._v(" "),
     _c("p", { staticClass: "mb-n2 text-secondary" }, [
       _vm._v(
-        "(If someone from the faculty left the institute, you may remove them from this section.)"
+        "\n    (If someone from the faculty left the institute, you may remove them from\n    this section.)\n  "
       )
     ]),
     _vm._v(" "),
@@ -356,14 +357,16 @@ var render = function() {
                 {
                   staticClass: "card-title my-n1 text-capitalized text-center"
                 },
-                [_vm._v(_vm._s(teacher.user.name))]
+                [
+                  _vm._v(
+                    "\n          " + _vm._s(teacher.user.name) + "\n        "
+                  )
+                ]
               ),
               _vm._v(" "),
               _c("p", { staticClass: "card-text mx-n3 text-center" }, [
                 _vm._v(
-                  "\n                " +
-                    _vm._s(teacher.user.email) +
-                    "\n              "
+                  "\n          " + _vm._s(teacher.user.email) + "\n        "
                 )
               ])
             ]),
@@ -393,9 +396,9 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("h5", [
-      _vm._v("\n        You have a\n        "),
+      _vm._v("\n      You have a\n      "),
       _c("span", { staticClass: "text-danger" }, [_vm._v("pending")]),
-      _vm._v(" request, please act!\n      ")
+      _vm._v(" request, please act!\n    ")
     ])
   }
 ]
@@ -611,7 +614,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\laragon\www\bridyc\resources\js\channelteacher.js */"./resources/js/channelteacher.js");
+module.exports = __webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/js/channelteacher.js */"./resources/js/channelteacher.js");
 
 
 /***/ })

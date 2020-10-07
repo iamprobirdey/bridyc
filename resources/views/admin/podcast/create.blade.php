@@ -10,7 +10,7 @@
 
 
 <div class="card">
-    <div class="card-header">Language creating</div>
+    <div class="card-header">Podcast creating</div>
 
     <a class="btn btn-primary" href="{{url('admin/podcast/')}}">Go Back to List</a>
 

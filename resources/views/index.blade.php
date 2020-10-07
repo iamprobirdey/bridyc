@@ -39,31 +39,28 @@ DO IT ALL')
             <a href="{{route('about')}}" class="p-2 p-md-3">Read More</a>
         </div>
     </div>
-
     <div class="container focusplace">
         <div class="row">
             <div class="col-lg-4">
-                <img class="imgguest shadow-lg" src="/images/waariko.jpg" alt="guest photo">
+                <img class="imgguest shadow-lg" src="{{asset('podcast/'.$podcast[0]['image_path'])}}" alt="guest photo">
             </div>
 
             <div class="col-md-8">
                 <div class="videosection">
-                    <h2>"I was fascinated by avbshknvkn hssdlskd kemflemf kfldfl dfhkdhn dbdbs s hjasb hd"</h2>
+                    <h2>"{{$podcast[0]['thumbnail']}}"</h2>
                     <div class="guest mx-auto mt-3">
-                        <h2>Guest: Ankur Waariko</h2>
-                        <h6>CEO at Nearbuy</h6>
+                        <h2>Guest: {{$podcast[0]['name']}}</h2>
+                        <h6>{{$podcast[0]['designation']}}</h6>
                     </div>
                     <div class="d-flex justify-content-center mt-2">
-                        10 August,2020 | 16 min | Season 1
+                        {{$podcast[0]['created_at']->diffForHumans()}} | 16 min | Season 1
                     </div>
                     <br>
-                    <p>A paragraph of Summary of what the discussion is like. This helps students to choose
-                        whether to
-                        watch it or nor.
-                        Making it easier for them to decide
+                    <p>
+                        {{$podcast[0]['summary']}}
                     </p>
 
-                    <button class="btn playbtn" data-toggle="modal" data-src="https://www.youtube.com/embed/jCPqJVirnz8"
+                    <button class="btn playbtn" data-toggle="modal" data-src="{{$podcast[0]['youtube_link']}}"
                         data-target="#podcastModal"><img src="/images/play.svg"> Watch Now</button>
                 </div>
             </div>
