@@ -487,6 +487,20 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -566,7 +580,6 @@ __webpack_require__.r(__webpack_exports__);
               });
               _this.userInformationData = {};
               _this.userInformationData = response.data.userData;
-              console.log(_this.userInformationData);
               _this.addressDataChecker = true;
             }
           })["catch"](function (errors) {
@@ -673,17 +686,26 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
       imageError: "",
-      userImage: '',
+      userImage: "",
       userImageStatus: false,
-      userId: '',
-      url: '/api/profile/image/upload/',
+      userId: "",
+      url: "/api/profile/image/upload/",
       domainUrl: location.origin,
-      imageData: ''
+      imageData: ""
     };
   },
   props: {
@@ -696,7 +718,7 @@ __webpack_require__.r(__webpack_exports__);
     PictureInput: vue_picture_input__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
   created: function created() {
-    console.log('avatar');
+    console.log("avatar");
 
     if (this.user.avatar) {
       this.userImage = this.user.avatar;
@@ -713,7 +735,7 @@ __webpack_require__.r(__webpack_exports__);
     onImageSubmit: function onImageSubmit() {
       var _this = this;
 
-      if (this.imageData != '') {
+      if (this.imageData != "") {
         var formData = new FormData();
         formData.append("image", this.imageData);
         axios.post(this.url + this.userId, formData).then(function (response) {
@@ -750,6 +772,27 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -887,8 +930,6 @@ __webpack_require__.r(__webpack_exports__);
         }
 
         if (result) {
-          console.log("Called");
-          console.log(_this.userFormData);
           axios.post("/api/profile/edit/address/channel/" + _this.userData.id, _this.userFormData).then(function (response) {
             if (response.data.message) {
               Vue.toasted.success("School  is succefully updated", {
@@ -897,7 +938,6 @@ __webpack_require__.r(__webpack_exports__);
               });
               _this.userInstituteData = {};
               _this.userInstituteData = response.data.data;
-              console.log(_this.userInstituteData);
               _this.channelChecker = true;
             }
           })["catch"](function (errors) {
@@ -965,6 +1005,19 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -996,7 +1049,6 @@ __webpack_require__.r(__webpack_exports__);
     this.hobbiesData = this.hobbies;
     this.studentshobbiesData = this.studentshobbies;
     this.userName = this.username;
-    console.log(this.studentshobbiesData);
   },
   mounted: function mounted() {
     if (this.studentshobbiesData.length > 0) {
@@ -1324,6 +1376,23 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -1379,7 +1448,6 @@ __webpack_require__.r(__webpack_exports__);
         this.value.map(function (item) {
           subjectFormData.subject_id.push(item.id);
         });
-        console.log(subjectFormData);
         axios.post("/api/profile/edit/subject/" + this.userId, subjectFormData).then(function (response) {
           _this.studentssubjectData = [];
           _this.studentssubjectData = response.data.data;
@@ -1422,9 +1490,8 @@ __webpack_require__.r(__webpack_exports__);
         this.subjectsData.map(function (item) {
           _this3.studentssubjectData.map(function (data) {
             if (data.subject.name === item.name) {
-              _this3.value.push(item);
+              _this3.value.push(item); //this.selectedSubjectValueStored.push(data.subject.id);
 
-              _this3.selectedSubjectValueStored.push(data.subject.id);
             }
           });
         });
@@ -1489,18 +1556,41 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      usernameData: '',
+      usernameData: "",
       userNameEditing: false,
       userName: {
-        username: ''
+        username: ""
       },
       userNameError: {
-        username: ''
+        username: ""
       },
-      userId: ''
+      userId: ""
     };
   },
   props: {
@@ -1527,7 +1617,7 @@ __webpack_require__.r(__webpack_exports__);
 
       this.$validator.validate().then(function (result) {
         if (result) {
-          axios.post('/api/profile/edit/username/' + _this.userId, _this.userName).then(function (response) {
+          axios.post("/api/profile/edit/username/" + _this.userId, _this.userName).then(function (response) {
             if (response.data.message === true) {
               Vue.toasted.success("User name is succefully created", {
                 position: "top-center",
@@ -1558,9 +1648,9 @@ __webpack_require__.r(__webpack_exports__);
     },
     urlChanger: function urlChanger(username) {
       var url = window.location.origin;
-      var changeUrl = window.location.pathname.split('/');
+      var changeUrl = window.location.pathname.split("/");
       changeUrl[4] = username;
-      window.history.pushState('username', 'on-profile', url + changeUrl.join('/'));
+      window.history.pushState("username", "on-profile", url + changeUrl.join("/"));
     }
   }
 });
@@ -3845,7 +3935,7 @@ var render = function() {
                       }
                     }
                   },
-                  [_vm._v("Cancel")]
+                  [_vm._v("\n          Cancel\n        ")]
                 ),
                 _vm._v(" "),
                 _c(
@@ -3893,9 +3983,9 @@ var render = function() {
             attrs: {
               src:
                 _vm.domainUrl +
-                "/media/student/" +
+                "/media/users/profile/" +
                 _vm.userId +
-                "/profile/" +
+                "/s-" +
                 _vm.userImage,
               alt: "student profile pictures"
             }
@@ -3958,7 +4048,7 @@ var render = function() {
                         }
                       }
                     },
-                    [_vm._v("Submit")]
+                    [_vm._v("\n        Submit\n      ")]
                   )
                 : _vm._e(),
               _vm._v(" "),
@@ -3973,7 +4063,7 @@ var render = function() {
                         }
                       }
                     },
-                    [_vm._v("\n            Cancel\n        ")]
+                    [_vm._v("\n        Cancel\n      ")]
                   )
                 : _vm._e()
             ]),
@@ -3986,7 +4076,7 @@ var render = function() {
                     name: "show",
                     rawName: "v-show",
                     value: _vm.imageError,
-                    expression: "imageError "
+                    expression: "imageError"
                   }
                 ],
                 staticClass: "text-danger text-center"
@@ -4063,7 +4153,7 @@ var render = function() {
               _c(
                 "div",
                 {
-                  staticClass: "form-group row  mx-2",
+                  staticClass: "form-group row mx-2",
                   class: {
                     "has-error":
                       _vm.errors.has("channel") ||
@@ -4128,7 +4218,13 @@ var render = function() {
                         return _c(
                           "option",
                           { key: channel.id, domProps: { value: channel.id } },
-                          [_vm._v(_vm._s(channel.title))]
+                          [
+                            _vm._v(
+                              "\n            " +
+                                _vm._s(channel.title) +
+                                "\n          "
+                            )
+                          ]
                         )
                       })
                     ],
@@ -4143,7 +4239,7 @@ var render = function() {
                     },
                     [
                       _vm._v(
-                        "*If your institute is not listed here, you can always type it below."
+                        "\n          *If your institute is not listed here, you can always type it below.\n        "
                       )
                     ]
                   ),
@@ -4211,7 +4307,7 @@ var render = function() {
                       staticClass: "mt-2",
                       attrs: { col: "col-sm-4 col-form-label" }
                     },
-                    [_vm._v("Institute Name : ")]
+                    [_vm._v("Institute Name :\n        ")]
                   ),
                   _vm._v(" "),
                   _c("input", {
@@ -4276,7 +4372,7 @@ var render = function() {
                           expression: "serverErrors.school_name != ''"
                         }
                       ],
-                      staticClass: "help is-danger text-center"
+                      staticClass: "text-danger text-center"
                     },
                     [_vm._v(_vm._s(_vm.serverErrors.school_name))]
                   )
@@ -4332,12 +4428,12 @@ var render = function() {
       ? _c(
           "div",
           [
-            _vm._v("\n      Field of Interest:\n      "),
+            _vm._v("\n    Field of Interest:\n    "),
             _vm._l(_vm.studentshobbiesData, function(hobbie, index) {
               return _c(
                 "button",
                 { key: index, staticClass: "btn btn-primary m-1" },
-                [_vm._v("\n        " + _vm._s(hobbie.name) + "\n      ")]
+                [_vm._v("\n      " + _vm._s(hobbie.name) + "\n    ")]
               )
             }),
             _vm._v(" "),
@@ -4428,7 +4524,7 @@ var render = function() {
                   }
                 }
               },
-              [_vm._v("Submit")]
+              [_vm._v("\n      Submit\n    ")]
             )
           ],
           1
@@ -4763,7 +4859,7 @@ var render = function() {
                 { key: index, staticClass: "btn btn-sm btnsubjects m-1" },
                 [
                   _vm._v(
-                    "\n              " + _vm._s(subject.subject.name) + "\n    "
+                    "\n        " + _vm._s(subject.subject.name) + "\n      "
                   )
                 ]
               )
@@ -4837,7 +4933,7 @@ var render = function() {
                   }
                 }
               },
-              [_vm._v("Submit")]
+              [_vm._v("\n      Submit\n    ")]
             )
           ],
           1
@@ -4870,7 +4966,7 @@ var render = function() {
   return _c("div", { staticClass: "username" }, [
     !_vm.userNameEditing
       ? _c("div", { staticClass: "text-center" }, [
-          _vm._v("\n            User Name: "),
+          _vm._v("\n    User Name: "),
           _c("strong", [_vm._v(_vm._s(_vm.usernameData))]),
           _vm._v(" "),
           _c(
@@ -5006,7 +5102,7 @@ var render = function() {
                       }
                     }
                   },
-                  [_vm._v("Cancel")]
+                  [_vm._v("\n          Cancel\n        ")]
                 ),
                 _vm._v(" "),
                 _c(

@@ -4,6 +4,7 @@ use App\Channel;
 use App\User;
 use App\UserEducation;
 use App\UserInstitute;
+use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Route;
@@ -33,37 +34,26 @@ Route::get('/pass3', function () {
 });
 
 
-Auth::routes(['verify' => true]);
 
 Route::get('/home', 'HomeController@test');
 
 Route::get('hobby', function () {
-    dd(env('MAIL_USERNAME'));
-    dd(env('MAIL_FROM_ADDRESS'));
+    $user4 = User::create([
+        'name' => Str::random(10),
+        'email' => 'institute2@gmail.com',
+        'password' => '$2y$10$A5qfm/Ssy2JOTLf5PQKOxeIFrLTOUaK5nwONeWstGu07wQDAEciwK',
+        'username' => 'institute2',
+        'user_type' => 'institute',
+
+    ]);
 
 
-    $apiKey = urlencode(config('services.sms.api'));
+    $user4->update(['email_verified_at' => Carbon::now()]);
 
-    // Message details
-    $numbers = array(91 . 9531114572);
-    $sender = urlencode('TXTLCL');
-    $message = rawurlencode('Hi samrat from textlocal');
-
-    $numbers = implode(',', $numbers);
-
-    // Prepare data for POST request
-    $data = array('apikey' => $apiKey, 'numbers' => $numbers, "sender" => $sender, "message" => $message);
-
-    // Send the POST request with cURL
-    $ch = curl_init('https://api.textlocal.in/send/');
-    curl_setopt($ch, CURLOPT_POST, true);
-    curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    $response = curl_exec($ch);
-    curl_close($ch);
-    return $response;
+    $user4->assignRole('institute');
 });
 
+Auth::routes(['verify' => true]);
 
 Route::get('test', 'Teacher\PhoneNumberVerificationController@phoneVerification');
 
@@ -87,7 +77,6 @@ Route::group([
     'middleware' => ['can:admin']
 ], function () {
     Route::get('/', 'Admin\AdminController@index')->name('admin');
-    Route::get('/user/online', 'Admin\UserOnlineController@index');
     Route::group([
         'name' => 'contact.',
         'prefix' => 'contact'
@@ -110,11 +99,11 @@ Route::group([
         'name' => 'country.',
         'prefix' => 'country'
     ], function () {
-        Route::get('/', 'Admin\CountryController@index');
+        Route::get('/', 'Admin\CountryController@index')->name('admin.country.index');
         Route::get('create', 'Admin\CountryController@create');
         Route::post('create', 'Admin\CountryController@store')->name('admin.country.create');
-        Route::get('updating/{id}', 'Admin\CountryController@updating');
-        Route::post('update/{id}', 'Admin\CountryController@update')->name('admin.country.update');
+        Route::get('updating/{country:id}', 'Admin\CountryController@updating');
+        Route::post('update/{country:id}', 'Admin\CountryController@update')->name('admin.country.update');
     });
     Route::group([
         'name' => 'state.',
@@ -123,7 +112,6 @@ Route::group([
         Route::get('/', 'Admin\StateController@index');
         Route::get('create', 'Admin\StateController@create');
         Route::post('create', 'Admin\StateController@store')->name('admin.state.create');
-        Route::get('delete/{id}', 'Admin\StateController@delete');
         Route::get('updating/{id}', 'Admin\StateController@updating');
         Route::post('update/{id}', 'Admin\StateController@update')->name('admin.state.update');
     });
@@ -135,7 +123,6 @@ Route::group([
         Route::get('/', 'Admin\DistrictController@index');
         Route::get('create', 'Admin\DistrictController@create');
         Route::post('create', 'Admin\DistrictController@store')->name('admin.district.create');
-        Route::get('delete/{id}', 'Admin\DistrictController@delete');
         Route::get('updating/{id}', 'Admin\DistrictController@updating');
         Route::post('update/{id}', 'Admin\DistrictController@update')->name('admin.district.update');
     });
@@ -147,7 +134,6 @@ Route::group([
         Route::get('/', 'Admin\VillageController@index');
         Route::get('create', 'Admin\VillageController@create');
         Route::post('create', 'Admin\VillageController@store')->name('admin.village.create');
-        Route::get('delete/{id}', 'Admin\VillageController@delete');
         Route::get('updating/{id}', 'Admin\VillageController@updating');
         Route::post('update/{id}', 'Admin\VillageController@update')->name('admin.village.update');
     });
@@ -159,7 +145,6 @@ Route::group([
         Route::get('/', 'Admin\BoardController@index');
         Route::get('create', 'Admin\BoardController@create');
         Route::post('create', 'Admin\BoardController@store')->name('admin.board.create');
-        Route::get('delete/{id}', 'Admin\BoardController@delete');
         Route::get('updating/{id}', 'Admin\BoardController@updating');
         Route::post('update/{id}', 'Admin\BoardController@update')->name('admin.board.update');
     });
@@ -171,7 +156,6 @@ Route::group([
         Route::get('/', 'Admin\StandardController@index');
         Route::get('create', 'Admin\StandardController@create');
         Route::post('create', 'Admin\StandardController@store')->name('admin.standard.create');
-        Route::get('delete/{id}', 'Admin\StandardController@delete');
         Route::get('updating/{id}', 'Admin\StandardController@updating');
         Route::post('update/{id}', 'Admin\StandardController@update')->name('admin.standard.update');
     });
@@ -204,7 +188,6 @@ Route::group([
         Route::get('/', 'Admin\LanguageController@index');
         Route::get('create', 'Admin\LanguageController@create');
         Route::post('create', 'Admin\LanguageController@store')->name('admin.language.create');
-        Route::get('delete/{id}', 'Admin\LanguageController@delete');
         Route::get('updating/{id}', 'Admin\LanguageController@updating');
         Route::post('update/{id}', 'Admin\LanguageController@update')->name('admin.language.update');
     });
@@ -219,28 +202,12 @@ Route::group([
         Route::get('api/updatingforoff/{user:id}/{verification:id}', 'Admin\VerificationController@updatingforoff');
         Route::get('api/updatingforblock/{user:id}/{id}', 'Admin\VerificationController@updatingforblock');
         Route::post('api/channel-slug/{channel:user_id}', 'Admin\VerificationController@slugGenerator');
+        Route::get('api/get-slug-of-channel/{user:id}', 'Admin\VerificationController@getSlugOfChannel');
         //Add meta-keywords and meta-description
         Route::post('api/keywords/description/{id}', 'User\MetaController@store');
         Route::get('api/delete/user/{user:id}', 'Admin\VerificationController@deleteUser');
     });
 });
-
-Route::group([
-    'name' => 'user.',
-    'prefix' => 'user/dashboard',
-    'middleware' => ['auth', 'can:institute', 'check_verification']
-], function () {
-    Route::get('verification', 'User\DashboardController@verification')->name('verification');
-    Route::get('/{channel:title}', 'User\DashboardController@index')->name('channel.index');
-    Route::get('channel/{channel:title}', 'User\DashboardController@channel')->name('channel.show');
-    Route::get('edit/{channel:title}', 'User\DashboardController@editChannel')->name('channel.edit');
-    Route::get('edit/profile/{user:username}', 'User\DashboardController@profile')->name('user.profile');
-    Route::get('achievement/{channel:title}', 'User\DashboardController@acheivement')->name('channel.achievement');
-    Route::get('teacher/{channel:title}', 'User\DashboardController@teacher')->name('channel.teacher');
-    Route::get('new/feature/{channel:title}', 'User\DashboardController@newFeature')->name('channel.feature');
-    Route::get('notification/{channel:title}', 'User\DashboardController@notification')->name('channel.notification');
-});
-
 
 Route::get('/', 'ChannelController@index');
 Route::get('/application', 'HomeController@application');
@@ -256,6 +223,24 @@ Route::post('institute/register', 'Auth\RegisterController@register');
 
 Route::get('channel/{channel:slug}', 'ChannelController@getChannelBySlug');
 
+
+
+Route::group([
+    'name' => 'user.',
+    'prefix' => 'user/dashboard',
+    'middleware' => ['auth', 'can:institute', 'check_verification', 'verified']
+], function () {
+    Route::get('verification', 'User\DashboardController@verification')->name('verification');
+    Route::get('/{channel:title}', 'User\DashboardController@index')->name('channel.index');
+    Route::get('channel/{channel:title}', 'User\DashboardController@channel')->name('channel.show');
+    Route::get('edit/{channel:title}', 'User\DashboardController@editChannel')->name('channel.edit');
+    Route::get('edit/profile/{user:username}', 'User\DashboardController@profile')->name('user.profile');
+    Route::get('achievement/{channel:title}', 'User\DashboardController@acheivement')->name('channel.achievement');
+    Route::get('teacher/{channel:title}', 'User\DashboardController@teacher')->name('channel.teacher');
+    Route::get('new/feature/{channel:title}', 'User\DashboardController@newFeature')->name('channel.feature');
+    Route::get('notification/{channel:title}', 'User\DashboardController@notification')->name('channel.notification');
+});
+
 Route::get('edit/student/profile/{user:username}', 'Student\ProfileController@index')->middleware(['can:student'])->middleware('verified');
 
 Route::get('edit/teacher/profile/{user:username}', 'Teacher\ProfileController@index')->middleware(['can:teacher'])->middleware('verified');
@@ -263,11 +248,11 @@ Route::get('edit/teacher/profile/{user:username}', 'Teacher\ProfileController@in
 
 Route::group([
     'name' => 'api.',
-    'prefix' => 'api'
+    'prefix' => 'api',
+    'middleware' => 'verified'
 ], function () {
     //Independent
     Route::get('store/channel/session/{channelId}', 'ChannelController@storeChannelSession');
-    Route::get('user/activity', 'ActivityController@store');
 
     Route::group([
         'middleware' => ['can:student']
@@ -304,11 +289,11 @@ Route::group([
         Route::get('getUserData', 'User\InfrastructureController@getUserData');
         Route::post('infra/store/{id}', 'User\InfrastructureController@storeUserInformation');
         //Website
-        Route::get('/website', 'User\WebsiteController@getWebsiteData');
+        Route::get('website', 'User\WebsiteController@getWebsiteData');
         Route::post('website', 'User\WebsiteController@storeWebsiteData');
         Route::post('website/edit', 'User\WebsiteController@editWebsiteData');
         //Description
-        Route::get('/description', 'User\DescriptionController@getDescriptionData');
+        Route::get('description', 'User\DescriptionController@getDescriptionData');
         Route::post('description', 'User\DescriptionController@storeDescriptionData');
         Route::post('description/edit', 'User\DescriptionController@editDescriptionData');
         //Cover

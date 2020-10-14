@@ -8,7 +8,7 @@
         :src="
           userImage === 'default.jpg'
             ? '/images/default.jpg'
-            : domainUrl + '/media/channel/' + userId + '/avatar/' + userImage
+            : domainUrl + '/media/channel/' + userId + '/profile/' + userImage
         "
         alt="principal profile picture"
       />
@@ -16,7 +16,10 @@
                         :srcset="domainUrl+'/media/channel/'+userId+'/m-'+userImage+','+domainUrl+'/media/channel/'+userId+'/s-'+userImage"
                      -->
 
-      <button @click="editTheIcon()" class="btn princi-profile-edit edit-btn p-2">
+      <button
+        @click="editTheIcon()"
+        class="btn princi-profile-edit edit-btn p-2"
+      >
         <i class="fa fa-camera" aria-hidden="true"></i>
       </button>
     </div>
@@ -54,7 +57,9 @@
           <i class="fa fa-times" aria-hidden="true"></i>Cancel
         </button>
       </div>
-      <span v-show="imageError" class="text-danger text-center">{{ imageError }}</span>
+      <span v-show="imageError" class="text-danger text-center">{{
+        imageError
+      }}</span>
     </div>
   </div>
 </template>

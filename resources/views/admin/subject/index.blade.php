@@ -18,8 +18,8 @@
     <thead>
         <tr>
             <th scope="col">Id</th>
-            <th scope="col">Subject Name
-            <th>
+            <th scope="col">Subject Name</th>
+            <th scope="col">Code</th>
             <th scope="col">Update</th>
         </tr>
     </thead>
@@ -28,6 +28,7 @@
         <tr>
             <td>{{$item->id}}</td>
             <td>{{$item->name}}</td>
+            <td>{{$item->code}}</td>
             <td>
                 <a href="{{url('admin/subject/updating/'.$item->id)}}" class="btn btn-success">Update</a>
             </td>

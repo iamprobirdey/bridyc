@@ -60887,18 +60887,6 @@ Vue.component("example-component", __webpack_require__(/*! ./components/ExampleC
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-function getUserActivity() {
-  var sessionUrl = window.location.origin;
-
-  if (sessionStorage.getItem([sessionUrl]) != 'bridyc') {
-    sessionStorage.setItem([sessionUrl], 'bridyc');
-    axios.get('/api/user/activity').then(function (response) {})["catch"](function (errors) {});
-  }
-
-  console.log('out');
-}
-
-getUserActivity();
 var app = new Vue({
   el: "#app"
 });

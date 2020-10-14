@@ -95,10 +95,10 @@ class ProfileController extends Controller
         $userinfo = UserInstitute::create(['user_id' => $user->id]);
         if ($request->input('channel_id') == null) {
             $userinfo->school_name = $request->input('school_name');
-            $userinfo->save();
+            $userinfo->update();
         } else {
             $userinfo->channel_id = $request->input('channel_id');
-            $userinfo->save();
+            $userinfo->update();
         }
         $userInstitute = UserInstitute::where('user_id', $user->id)
             ->with([
@@ -151,7 +151,7 @@ class ProfileController extends Controller
             'subject_id' => 'required|array|exists:subjects,id',
         ]);
         $user->studentSubject()->sync((array)$request->input('subject_id'));
-        $hobby = User::where('id', current_user_id())->with('studentSubject')->first();
+        //$hobby = User::where('id', current_user_id())->with('studentSubject')->first();
         $studentSubjects = StudentSubject::where('user_id', current_user_id())->with('subject')->get();
         return response()->json([
             'message' => true,
@@ -175,29 +175,30 @@ class ProfileController extends Controller
 
     public function storeAvatar(User $user, Request $request)
     {
+        dd($request->input('image'));
+        dd(explode(',', $request->input('image'))[0]);
         $this->authorize('updatingstudent', $user);
         $request->validate([
-            'image' => 'required'
+            'image' => 'required|mimes:jpeg,bmp,png,jpg'
         ]);
-
+        dd('pro');
         $time = Carbon::now('Asia/Kolkata');
         $imageName = $time->year . $time->month . $time->day . ($time->micro + mt_rand(11111, 99999)) . '.webp';
         $realImage = Image::make($request->input('image'));
         $realImage->fit(600, 600, null, 'center');
         $image = $imageS = $imageM = Image::canvas(600, 600, '#ffffff')->insert($realImage);
-        $path = "/media/users/profile/" . current_user_id() . '/';
-        if (is_dir('/media/users/profile/' . current_user_id())) {
+        $path = "media/users/profile/" . current_user_id() . '/';
+        if (is_dir($path)) {
             if ($user->avatar != null) {
                 //@unlink('/media/users/profile/' . current_user_id() . '/' . $user->avatar);
                 //@unlink('/media/users/profile/' . current_user_id() . '/m-' . $user->avatar);
-                @unlink('/media/users/profile/' . current_user_id() . '/s-' . $user->avatar);
+                @unlink($path . 's-' . $user->avatar);
             }
         }
-
         if (!is_dir($path)) {
             if (File::makeDirectory(public_path($path), 0777, true)) {
                 $image->resize(170, 170);
-                $image->save(public_path($path) . $imageName);
+                $image->save(public_path($path) . 's-' . $imageName);
                 //FacadesImageOptimizer::optimize($path.$imageName);
                 ///app(Spatie\ImageOptimizer\OptimizerChain::class)->optimize($path.$imageName);
 
@@ -205,7 +206,7 @@ class ProfileController extends Controller
             }
         } else {
             $image->resize(170, 170);
-            $image->save(public_path($path) . $imageName);
+            $image->save(public_path($path) . 's-' . $imageName);
             //FacadesImageOptimizer::optimize($path.'s-',$imageName);
         }
 

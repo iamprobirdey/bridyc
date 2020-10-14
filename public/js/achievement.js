@@ -209,6 +209,58 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -216,25 +268,25 @@ __webpack_require__.r(__webpack_exports__);
       achievementData: [],
       openAchievementForm: false,
       formData: {
-        image_path: '',
-        title: '',
-        description: '',
-        date: ''
+        image_path: "",
+        title: "",
+        description: "",
+        date: ""
       },
       serverErrors: {
-        image_path: '',
-        title: '',
-        description: '',
-        date: ''
+        image_path: "",
+        title: "",
+        description: "",
+        date: ""
       },
-      channelId: '',
-      additionUrl: '',
-      url: location.origin + '/api/achievement/',
-      baseUrl: location.origin + '/',
+      channelId: "",
+      additionUrl: "",
+      url: location.origin + "/api/achievement/",
+      baseUrl: location.origin + "/",
       editingUrlChecker: false,
-      achievementId: '',
-      achievementIndex: '',
-      authValue: ''
+      achievementId: "",
+      achievementIndex: "",
+      authValue: ""
     };
   },
   props: {
@@ -253,28 +305,29 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     addAchievement: function addAchievement() {
       this.openAchievementForm = true;
-      this.formData.title = '';
-      this.formData.description = '';
+      this.formData.title = "";
+      this.formData.description = "";
+      this.formData.date = "";
     },
     achievementSubmit: function achievementSubmit() {
       var _this = this;
 
       this.$validator.validate().then(function (result) {
         if (result) {
-          if (_this.formData.image_path === '') _this.serverErrors.image_path = 'Image is required';
-          var formUrl = '';
+          if (_this.formData.image_path === "") _this.serverErrors.image_path = "Image is required";
+          var formUrl = "";
 
           if (_this.editingUrlChecker) {
-            _this.additionUrl = 'edit/';
+            _this.additionUrl = "edit/";
             formUrl = _this.url + _this.additionUrl + _this.achievementId;
           } else {
-            _this.additionUrl = 'add/';
+            _this.additionUrl = "add/";
             formUrl = _this.url + _this.additionUrl;
           }
 
           axios.post(formUrl, _this.formData).then(function (response) {
             if (response.data.message === true) {
-              Vue.toasted.success("Meta data is created", {
+              Vue.toasted.success("Achievement data is created", {
                 position: "top-center",
                 duration: 5000
               });
@@ -304,6 +357,7 @@ __webpack_require__.r(__webpack_exports__);
       this.editingUrlChecker = true;
       this.formData.title = data.title;
       this.formData.description = data.description;
+      this.formData.date = data.date;
       this.achievementId = data.id;
       this.openAchievementForm = true;
       this.achievementIndex = index;
@@ -1836,18 +1890,14 @@ var render = function() {
               _vm._v(" "),
               _c("p", { staticClass: "card-text" }, [
                 _vm._v(
-                  "\n              " +
+                  "\n          " +
                     _vm._s(achievement.description) +
-                    "\n            "
+                    "\n        "
                 )
               ]),
               _vm._v(" "),
               _c("p", { staticClass: "card-text" }, [
-                _vm._v(
-                  "\n              " +
-                    _vm._s(achievement.date) +
-                    "\n            "
-                )
+                _vm._v("\n          " + _vm._s(achievement.date) + "\n        ")
               ])
             ])
           ]),
@@ -2032,7 +2082,7 @@ var render = function() {
                     _c(
                       "label",
                       { staticClass: "col-sm-3 col-form-label text-right" },
-                      [_vm._v(" Achievement Description :")]
+                      [_vm._v("\n          Achievement Description :")]
                     ),
                     _vm._v(" "),
                     _c("input", {
@@ -2123,7 +2173,7 @@ var render = function() {
                     _c(
                       "label",
                       { staticClass: "col-sm-3 col-form-label text-right" },
-                      [_vm._v(" Achievement Event Date :")]
+                      [_vm._v("\n          Achievement Event Date :")]
                     ),
                     _vm._v(" "),
                     _c("input", {
@@ -2225,7 +2275,7 @@ var render = function() {
                         }
                       }
                     },
-                    [_vm._v("Cancel")]
+                    [_vm._v("\n          Cancel\n        ")]
                   ),
                   _vm._v(" "),
                   _c(

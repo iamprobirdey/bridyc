@@ -1,263 +1,20 @@
 <template>
   <div>
     <div v-if="verificationStatus === true && userData === 1">
-      <h4 class="text-center text-danger">
-      Your data is under verification
-      </h4>
-      <p class="text-center text-success">Once verified, you will have full access to your channel</P>
+      <h4 class="text-center text-danger">Your data is under verification</h4>
+      <p class="text-center text-success">
+        Once verified, you will have full access to your channel
+      </p>
     </div>
     <div v-if="userData === 3 && verificationStatus === true">
       <h4 class="text-center text-danger">
-      You are temporarily restricted from accessing the channel
+        You are temporarily restricted from accessing the channel
       </h4>
-     <h6 class="text-center text-success">Please contact the admin</h6>
+      <h6 class="text-center text-success">Please contact the admin</h6>
     </div>
     <div v-if="verificationStatus === false">
       <div>
         <form @submit.prevent="validateForm()">
-          <div
-            class="form-group"
-            :class="{
-              'has-error': errors.has('title') || serverErrors.title != '',
-            }"
-          >
-            <label for="exampleInputEmail1">Institute Name</label>
-            <input
-              id="title"
-              v-on:focus="serverErrors.title = ''"
-              v-model="formData.title"
-              v-validate="'required|alpha_spaces'"
-              data-vv-delay="20"
-              name="title"
-              type="text"
-              :class="{
-                'form-control': true,
-                'is-invalid': errors.has('title'),
-              }"
-              placeholder="Insert your institute name"
-            />
-            <i v-show="errors.has('title')" class="is-invalid"></i>
-
-            <span v-show="errors.has('title')" class="text-danger">{{
-              errors.first("title")
-            }}</span>
-            <span v-show="serverErrors.title != ''" class="text-danger">{{
-              serverErrors.title
-            }}</span>
-          </div>
-
-          <div
-            class="form-group"
-            :class="{
-              'has-error': errors.has('udise') || serverErrors.udise != '',
-            }"
-          >
-            <label for="exampleInputEmail1">Udise Code</label>
-            <input
-              id="udise"
-              v-on:focus="serverErrors.udise = ''"
-              v-model="formData.udise"
-              data-vv-delay="20"
-              name="udise"
-              type="text"
-              :class="{
-                'form-control': true,
-                'is-invalid': errors.has('udise'),
-              }"
-              placeholder="Enter your institute udise code Optinal"
-            />
-            <i v-show="errors.has('udise')" class="is-invalid"></i>
-
-            <span v-show="errors.has('udise')" class="text-danger">{{
-              errors.first("udise")
-            }}</span>
-            <span v-show="serverErrors.udise != ''" class="text-danger">{{
-              serverErrors.udise
-            }}</span>
-          </div>
-
-          <div
-            class="form-group"
-            :class="{
-              'has-error':
-                errors.has('location') || serverErrors.location != '',
-            }"
-          >
-            <label for="exampleInputEmail1">Location</label>
-            <input
-              id="location"
-              v-on:focus="serverErrors.location = ''"
-              v-model="formData.location"
-              v-validate="'required'"
-              data-vv-delay="20"
-              name="location"
-              type="text"
-              :class="{
-                'form-control': true,
-                'is-invalid': errors.has('location'),
-              }"
-              placeholder="Insert your institute location"
-            />
-            <i v-show="errors.has('location')" class="is-invalid"></i>
-
-            <span v-show="errors.has('location')" class="text-danger">{{
-              errors.first("location")
-            }}</span>
-            <span v-show="serverErrors.location != ''" class="text-danger">{{
-              serverErrors.location
-            }}</span>
-          </div>
-
-          <div
-            class="form-group"
-            :class="{
-              'has-error':
-                errors.has('ownership') || serverErrors.ownership != '',
-            }"
-          >
-            <label>Ownership</label>
-            <select
-              v-model="formData.ownership"
-              class="form-control"
-              name="ownership"
-              v-validate="'required'"
-            >
-              <option value>Select ownership</option>
-              <option value="private">Private</option>
-              <option value="government">Government</option>
-            </select>
-            <i v-show="errors.has('ownership')" class="is-invalid"></i>
-
-            <span class="text-danger" v-show="errors.has('ownership')">{{
-              errors.first("ownership")
-            }}</span>
-            <span v-show="serverErrors.ownership != ''" class="text-danger">{{
-              serverErrors.ownership
-            }}</span>
-          </div>
-
-          <div
-            class="form-group"
-            :class="{
-              'has-error': errors.has('founded') || serverErrors.founded != '',
-            }"
-          >
-            <label for="exampleInputEmail1">Founded</label>
-            <input
-              id="founded"
-              v-on:focus="serverErrors.founded = ''"
-              v-model="formData.founded"
-              v-validate="'required'"
-              data-vv-delay="20"
-              name="founded"
-              type="date"
-              :max="todaysDate"
-              :class="{
-                'form-control': true,
-                'is-invalid': errors.has('founded'),
-              }"
-              placeholder="founded"
-            />
-            <i v-show="errors.has('founded')" class="is-invalid"></i>
-
-            <span class="text-danger" v-show="errors.has('founded')">{{
-              errors.first("founded")
-            }}</span>
-            <span v-show="serverErrors.founded != ''" class="text-danger">{{
-              serverErrors.founded
-            }}</span>
-          </div>
-
-          <div
-            class="form-group"
-            :class="{
-              'has-error': errors.has('pin') || serverErrors.pin != '',
-            }"
-          >
-            <label for="exampleInputEmail1">Pin Code</label>
-            <input
-              id="text"
-              v-on:focus="serverErrors.pin = ''"
-              v-model="formData.pin"
-              v-validate="'required|numeric|min:6|max:6'"
-              data-vv-delay="20"
-              name="pin"
-              type="text"
-              :class="{ 'form-control': true, 'is-invalid': errors.has('pin') }"
-              placeholder="Insert your area pin code"
-            />
-            <i v-show="errors.has('pin')" class="is-invalid"></i>
-
-            <span class="text-danger" v-show="errors.has('pin')">{{
-              errors.first("pin")
-            }}</span>
-            <span v-show="serverErrors.pin != ''" class="text-danger">{{
-              serverErrors.pin
-            }}</span>
-          </div>
-
-          <div
-            class="form-group"
-            :class="{
-              'has-error': errors.has('gender') || serverErrors.gender != '',
-            }"
-          >
-            <label for="exampleInputEmail1">Gender</label>
-            <select
-              v-model="formData.gender"
-              class="form-control"
-              name="gender"
-              v-validate="'required'"
-            >
-              <option value>Select Gender</option>
-              <option value="only_boys">Only Boys</option>
-              <option value="only_girls">Only Girls</option>
-              <option value="both">Both Girls and boys</option>
-            </select>
-            <i v-show="errors.has('gender')" class="is-invalid"></i>
-
-            <span class="text-danger" v-show="errors.has('gender')">{{
-              errors.first("gender")
-            }}</span>
-            <span v-show="serverErrors.gender != ''" class="text-danger">{{
-              serverErrors.gender
-            }}</span>
-          </div>
-
-          <div
-            class="form-group"
-            :class="{
-              'has-error':
-                errors.has('language') || serverErrors.language_id != '',
-            }"
-          >
-            <label>Medium</label>
-
-            <select
-              v-model="formData.language_id"
-              class="form-control"
-              name="language"
-              v-validate="'required'"
-            >
-              <option value>Select language</option>
-              <option
-                v-for="language in languages"
-                :key="language.id"
-                :value="language.id"
-              >
-                {{ language.name }}
-              </option>
-            </select>
-            <i v-show="errors.has('language')" class="is-invalid"></i>
-
-            <span v-show="errors.has('language')" class="text-danger">{{
-              errors.first("language")
-            }}</span>
-            <span v-show="serverErrors.language_id != ''" class="text-danger">{{
-              serverErrors.language_id
-            }}</span>
-          </div>
-
           <div
             class="form-group"
             :class="{
@@ -360,6 +117,249 @@
               serverErrors.village_id
             }}</span>
           </div>
+          <div
+            class="form-group"
+            :class="{
+              'has-error': errors.has('title') || serverErrors.title != '',
+            }"
+          >
+            <label for="exampleInputEmail1">Institute Name</label>
+            <input
+              id="title"
+              v-on:focus="serverErrors.title = ''"
+              v-model="formData.title"
+              v-validate="'required|alpha_spaces'"
+              data-vv-delay="20"
+              name="title"
+              type="text"
+              :class="{
+                'form-control': true,
+                'is-invalid': errors.has('title'),
+              }"
+              placeholder="Insert your institute name"
+            />
+            <i v-show="errors.has('title')" class="is-invalid"></i>
+
+            <span v-show="errors.has('title')" class="text-danger">{{
+              errors.first("title")
+            }}</span>
+            <span v-show="serverErrors.title != ''" class="text-danger">{{
+              serverErrors.title
+            }}</span>
+          </div>
+
+          <div
+            class="form-group"
+            :class="{
+              'has-error': errors.has('udise') || serverErrors.udise != '',
+            }"
+          >
+            <label for="exampleInputEmail1">Udise Code</label>
+            <input
+              id="udise"
+              v-on:focus="serverErrors.udise = ''"
+              v-model="formData.udise"
+              data-vv-delay="20"
+              name="udise"
+              type="text"
+              :class="{
+                'form-control': true,
+                'is-invalid': errors.has('udise'),
+              }"
+              placeholder="Enter your institute udise code Optinal"
+            />
+            <i v-show="errors.has('udise')" class="is-invalid"></i>
+
+            <span v-show="errors.has('udise')" class="text-danger">{{
+              errors.first("udise")
+            }}</span>
+            <span v-show="serverErrors.udise != ''" class="text-danger">{{
+              serverErrors.udise
+            }}</span>
+          </div>
+
+          <div
+            class="form-group"
+            :class="{
+              'has-error':
+                errors.has('location') || serverErrors.location != '',
+            }"
+          >
+            <label for="exampleInputEmail1">Institute Location</label>
+            <input
+              id="location"
+              v-on:focus="serverErrors.location = ''"
+              v-model="formData.location"
+              v-validate="'required'"
+              data-vv-delay="20"
+              name="location"
+              type="text"
+              :class="{
+                'form-control': true,
+                'is-invalid': errors.has('location'),
+              }"
+              placeholder="Insert your institute location"
+            />
+            <i v-show="errors.has('location')" class="is-invalid"></i>
+
+            <span v-show="errors.has('location')" class="text-danger">{{
+              errors.first("location")
+            }}</span>
+            <span v-show="serverErrors.location != ''" class="text-danger">{{
+              serverErrors.location
+            }}</span>
+          </div>
+
+          <div
+            class="form-group"
+            :class="{
+              'has-error':
+                errors.has('ownership') || serverErrors.ownership != '',
+            }"
+          >
+            <label>Ownership</label>
+            <select
+              v-model="formData.ownership"
+              class="form-control"
+              name="ownership"
+              v-validate="'required'"
+            >
+              <option value>Select ownership</option>
+              <option value="private">Private</option>
+              <option value="government">Government</option>
+            </select>
+            <i v-show="errors.has('ownership')" class="is-invalid"></i>
+
+            <span class="text-danger" v-show="errors.has('ownership')">{{
+              errors.first("ownership")
+            }}</span>
+            <span v-show="serverErrors.ownership != ''" class="text-danger">{{
+              serverErrors.ownership
+            }}</span>
+          </div>
+
+          <div
+            class="form-group"
+            :class="{
+              'has-error': errors.has('founded') || serverErrors.founded != '',
+            }"
+          >
+            <label for="exampleInputEmail1">Institue Founded on</label>
+            <input
+              id="founded"
+              v-on:focus="serverErrors.founded = ''"
+              v-model="formData.founded"
+              v-validate="'required'"
+              data-vv-delay="20"
+              name="founded"
+              type="date"
+              :max="todaysDate"
+              :class="{
+                'form-control': true,
+                'is-invalid': errors.has('founded'),
+              }"
+              placeholder="founded"
+            />
+            <i v-show="errors.has('founded')" class="is-invalid"></i>
+
+            <span class="text-danger" v-show="errors.has('founded')">{{
+              errors.first("founded")
+            }}</span>
+            <span v-show="serverErrors.founded != ''" class="text-danger">{{
+              serverErrors.founded
+            }}</span>
+          </div>
+
+          <div
+            class="form-group"
+            :class="{
+              'has-error': errors.has('pin') || serverErrors.pin != '',
+            }"
+          >
+            <label for="exampleInputEmail1">Pin Code</label>
+            <input
+              id="text"
+              v-on:focus="serverErrors.pin = ''"
+              v-model="formData.pin"
+              v-validate="'required|numeric|min:6|max:6'"
+              data-vv-delay="20"
+              name="pin"
+              type="text"
+              :class="{ 'form-control': true, 'is-invalid': errors.has('pin') }"
+              placeholder="Insert your area pin code"
+            />
+            <i v-show="errors.has('pin')" class="is-invalid"></i>
+
+            <span class="text-danger" v-show="errors.has('pin')">{{
+              errors.first("pin")
+            }}</span>
+            <span v-show="serverErrors.pin != ''" class="text-danger">{{
+              serverErrors.pin
+            }}</span>
+          </div>
+
+          <div
+            class="form-group"
+            :class="{
+              'has-error': errors.has('gender') || serverErrors.gender != '',
+            }"
+          >
+            <label for="exampleInputEmail1">Institute Gender</label>
+            <select
+              v-model="formData.gender"
+              class="form-control"
+              name="gender"
+              v-validate="'required'"
+            >
+              <option value>Select Gender</option>
+              <option value="only_boys">Only Boys Institute?</option>
+              <option value="only_girls">Only Girls Institute?</option>
+              <option value="both">Both Girls and boys Institute?</option>
+            </select>
+            <i v-show="errors.has('gender')" class="is-invalid"></i>
+
+            <span class="text-danger" v-show="errors.has('gender')">{{
+              errors.first("gender")
+            }}</span>
+            <span v-show="serverErrors.gender != ''" class="text-danger">{{
+              serverErrors.gender
+            }}</span>
+          </div>
+
+          <div
+            class="form-group"
+            :class="{
+              'has-error':
+                errors.has('language') || serverErrors.language_id != '',
+            }"
+          >
+            <label>Medium</label>
+
+            <select
+              v-model="formData.language_id"
+              class="form-control"
+              name="language"
+              v-validate="'required'"
+            >
+              <option value>Select language</option>
+              <option
+                v-for="language in languages"
+                :key="language.id"
+                :value="language.id"
+              >
+                {{ language.name }}
+              </option>
+            </select>
+            <i v-show="errors.has('language')" class="is-invalid"></i>
+
+            <span v-show="errors.has('language')" class="text-danger">{{
+              errors.first("language")
+            }}</span>
+            <span v-show="serverErrors.language_id != ''" class="text-danger">{{
+              serverErrors.language_id
+            }}</span>
+          </div>
+
           <div v-if="wait" class="spinner-border text-primary" role="status">
             <span class="sr-only">Loading...</span>
           </div>
@@ -500,6 +500,11 @@ export default {
               }
             })
             .catch((errors) => {
+              this.wait = false;
+              Vue.toasted.error("Something went wrong", {
+                position: "top-center",
+                duration: 5000,
+              });
               if (errors.response.data.errors.state_id) {
                 this.serverErrors.state_id =
                   errors.response.data.errors.state_id[0];

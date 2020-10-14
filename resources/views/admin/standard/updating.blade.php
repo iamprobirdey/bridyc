@@ -17,11 +17,6 @@
         {{ session('status') }}
     </div>
     @endif
-
-    @php
-
-    @endphp
-
     <div class="card-body">
         <form method="POST" action="{{ url('admin/standard/update/'.$standard->id) }}">
             @csrf
@@ -34,6 +29,20 @@
                         autofocus>
 
                     @error('standard')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
+                </div>
+            </div>
+            <div class="form-group row">
+                <label for="code" class="col-md-4 col-form-label text-md-right">{{ __('Code') }}</label>
+
+                <div class="col-md-6">
+                    <input id="code" type="text" class="form-control @error('code') is-invalid @enderror" name="code"
+                        value="{{ $standard['code'] }}" required autocomplete="code" autofocus>
+
+                    @error('code')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
                     </span>

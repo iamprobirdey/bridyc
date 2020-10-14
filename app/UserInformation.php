@@ -17,17 +17,6 @@ class UserInformation extends Model
         'standard_id'
     ];
 
-    protected static $logAttributes = [
-        'user.name',
-        'channel.title',
-        'state.name',
-        'district.name',
-        'village.name',
-        'standard.standard_name'
-    ];
-
-    protected static $logOnlyDirty = true;
-
     public function user()
     {
         return $this->belongsTo(User::class);

@@ -84,7 +84,6 @@ class PodcastController extends Controller
                 'youtube_link' => $request->input('youtube_link')
             ]);
             return redirect()->back()->with('status', 'Podcast Created succefully');
-            dd($request->all());
         } catch (\Throwable $th) {
             report($th);
         }
@@ -146,6 +145,9 @@ class PodcastController extends Controller
                     ///app(Spatie\ImageOptimizer\OptimizerChain::class)->optimize($path.$imageName);
                     $imageM->resize(390, 360);
                     $imageM->save(public_path($path) . 'm-' . $imageName);
+
+                    $imageM->resize(350, 280);
+                    $imageM->save(public_path($path) . 's-' . $imageName);
                     //FacadesImageOptimizer::optimize($path.'m-',$imageName);
                 }
             } else {
@@ -154,10 +156,13 @@ class PodcastController extends Controller
                 //FacadesImageOptimizer::optimize($path.$imageName);
                 $imageM->resize(390, 360);
                 $imageM->save(public_path($path) . 'm-' . $imageName);
+
+                $imageM->resize(350, 280);
+                $imageM->save(public_path($path) . 's-' . $imageName);
                 //FacadesImageOptimizer::optimize($path.'m-',$imageName);
             }
 
-            $podcast->image_path  = $path . $imageName;
+            $podcast->image_path  = $imageName;
             $podcast->thumbnail = $validated['thumbnail'];
             $podcast->name = $validated['name'];
             $podcast->designation = $validated['designation'];

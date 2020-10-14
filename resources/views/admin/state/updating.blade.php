@@ -7,7 +7,6 @@
 
 @section('adminContent')
 
-div class="card">
 <div class="card-header">State updating</div>
 
 <a class="btn btn-primary" href="{{url('admin/state/')}}">Go Back to List</a>

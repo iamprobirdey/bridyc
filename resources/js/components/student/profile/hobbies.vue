@@ -10,7 +10,12 @@
         {{ hobbie.name }}
       </button>
 
-      <button class="btn mt-n2 edit-btn" @click="editThehobbie()" data-toggle="tooltip" title="Edit">
+      <button
+        class="btn mt-n2 edit-btn"
+        @click="editThehobbie()"
+        data-toggle="tooltip"
+        title="Edit"
+      >
         <i class="fa fa-pencil" aria-hidden="true"></i>
       </button>
     </div>
@@ -24,10 +29,18 @@
         tag-placeholder="Select classes of your hobbies"
         :option-height="104"
       ></multiselect>
-      <span v-show="serverError != ''" class="text-danger text-center">{{ serverError }}</span>
-<br>
+      <span v-show="serverError != ''" class="text-danger text-center">{{
+        serverError
+      }}</span>
+      <br />
       <button class="btn btn-warning" @click="cancelTheForm()">Cancel</button>
-      <button type="submit" class="btn btnsubmit mt-n2" @click="submitSubjectsData()">Submit</button>
+      <button
+        type="submit"
+        class="btn btnsubmit mt-n2"
+        @click="submitSubjectsData()"
+      >
+        Submit
+      </button>
     </div>
   </div>
 </template>
@@ -63,7 +76,6 @@ export default {
     this.hobbiesData = this.hobbies;
     this.studentshobbiesData = this.studentshobbies;
     this.userName = this.username;
-    console.log(this.studentshobbiesData);
   },
   mounted() {
     if (this.studentshobbiesData.length > 0) {

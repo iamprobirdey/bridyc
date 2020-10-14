@@ -66,7 +66,7 @@ class ProfileController extends Controller
         $validated = $request->validate([
             'username' => 'required|unique:App\User,username',
         ]);
-        $user = User::findOrFail(current_user_id());
+        //$user = User::findOrFail(current_user_id());
         $user->username = $validated['username'];
         $user->save();
 
@@ -143,7 +143,7 @@ class ProfileController extends Controller
             'subject_id' => 'required|array|exists:subjects,id',
         ]);
         $user->studentSubject()->sync((array)$request->input('subject_id'));
-        $hobby = User::where('id', current_user_id())->with('studentSubject')->first();
+        //$hobby = User::where('id', current_user_id())->with('studentSubject')->first();
         $studentSubjects = StudentSubject::where('user_id', current_user_id())->with('subject')->get();
         return response()->json([
             'message' => true,
@@ -163,20 +163,20 @@ class ProfileController extends Controller
         $realImage = Image::make($request->input('image'));
         $realImage->fit(600, 600, null, 'center');
         $image = $imageS = $imageM = Image::canvas(600, 600, '#ffffff')->insert($realImage);
-        $path = "/media/users/profile/" . current_user_id() . "/";
+        $path = "media/users/profile/" . current_user_id() . "/";
 
-        if (is_dir('/media/users/profile/' . current_user_id())) {
+        if (is_dir($path)) {
             if ($user->avatar != null) {
                 //@unlink('/media/users/profile/' . current_user_id() . '/' . $user->avatar);
                 //@unlink('/media/users/profile/' . current_user_id() . '/m-' . $user->avatar);
-                @unlink('/media/users/profile/' . current_user_id() . '/s-' . $user->avatar);
+                @unlink($path . 's-' . $user->avatar);
             }
         }
 
         if (!is_dir($path)) {
             if (File::makeDirectory(public_path($path), 0777, true)) {
                 $image->resize(170, 170);
-                $image->save(public_path($path) . $imageName);
+                $image->save(public_path($path) . 's-' . $imageName);
                 //FacadesImageOptimizer::optimize($path.$imageName);
                 ///app(Spatie\ImageOptimizer\OptimizerChain::class)->optimize($path.$imageName);
 
@@ -184,7 +184,7 @@ class ProfileController extends Controller
             }
         } else {
             $image->resize(170, 170);
-            $image->save(public_path($path) . $imageName);
+            $image->save(public_path($path) . 's-' . $imageName);
             //FacadesImageOptimizer::optimize($path.$imageName);
             //FacadesImageOptimizer::optimize($path.'s-',$imageName);
         }

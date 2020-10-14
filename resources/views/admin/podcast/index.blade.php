@@ -17,13 +17,15 @@
 <table class="table">
     <thead>
         <tr>
-            <th scope="col">Image
-            <th>
+            <th scope="col">Image</th>
             <th scope="col">Thumbnail</th>
             <th scope="col">Name</th>
             <th scope="col">Designation</th>
             <th scope="col">Summary</th>
             <th scope="col">Youtube Link</th>
+            <th scope="col">Time of update</th>
+            <th scope="col">Update</th>
+            <th scope="col">Delete</th>
         </tr>
     </thead>
     <tbody>

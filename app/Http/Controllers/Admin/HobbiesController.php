@@ -6,6 +6,8 @@ use App\Hobby;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Hobby\StoreHobbyValidation;
 use App\Services\ModelHelperServices;
+use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class HobbiesController extends Controller
 {
@@ -36,7 +38,8 @@ class HobbiesController extends Controller
         $this->authorize('superadmin', auth()->user());
 
         Hobby::create([
-            'name' => $request->validated()['hobby']
+            'name' => Str::ucfirst($request->validated()['hobby']),
+            'code' => strtolower($request->validated()['code'])
         ]);
         return redirect()->back()->with('status', 'Succefully created the hobby');
     }
@@ -49,12 +52,16 @@ class HobbiesController extends Controller
         return view('admin.hobby.updating', compact('hobby', $hobby));
     }
 
-    public function update(StoreHobbyValidation $request, $id)
+    public function update(Request $request, $id)
     {
         $this->authorize('superadmin', auth()->user());
-
+        $request->validate([
+            'hobby' => 'required|string|unique:hobbies,name,' . $id,
+            'code' => 'required|string|unique:hobbies,code,' . $id
+        ]);
         $hobby = Hobby::findOrFail($id);
-        $hobby->name = $request->validated()['hobby'];
+        $hobby->name = Str::ucfirst($request->input(['hobby']));
+        $hobby->code = strtolower($request->input(['code']));
         $hobby->update();
         return redirect('/admin/hobby/updating/' . $id)->with('status', 'Succefully updated the hobby');
     }

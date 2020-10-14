@@ -9,6 +9,7 @@ use Illuminate\Database\Seeder;
 
 use App\User;
 use App\Village;
+use Carbon\Carbon;
 use Spatie\Permission\Models\Role;
 use Spatie\Permission\Models\Permission;
 use Illuminate\Support\Str;
@@ -69,41 +70,31 @@ class PermissionAndUserSeeder extends Seeder
             'user_type' => 'admin',
 
         ]);
+
         $user5 = User::create([
             'name' => Str::random(10),
-            'email' => 'institute@gmail.com',
+            'email' => 'institute2@gmail.com',
             'password' => '$2y$10$A5qfm/Ssy2JOTLf5PQKOxeIFrLTOUaK5nwONeWstGu07wQDAEciwK',
-            'username' => 'pisaxsd',
+            'username' => 'institute2',
             'user_type' => 'institute',
 
         ]);
-        $user6 = User::create([
-            'name' => Str::random(10),
-            'email' => 'student@gmail.com',
-            'password' => '$2y$10$A5qfm/Ssy2JOTLf5PQKOxeIFrLTOUaK5nwONeWstGu07wQDAEciwK',
-            'username' => 'pisax',
-            'user_type' => 'student',
 
-        ]);
-        $user7 = User::create([
-            'name' => Str::random(10),
-            'email' => 'teacher@gmail.com',
-            'password' => '$2y$10$A5qfm/Ssy2JOTLf5PQKOxeIFrLTOUaK5nwONeWstGu07wQDAEciwK',
-            'username' => 'pisasdsx',
-            'user_type' => 'teacher',
-
-        ]);
+        $user1->update(['email_verified_at' => Carbon::now()]);
+        $user2->update(['email_verified_at' => Carbon::now()]);
+        $user3->update(['email_verified_at' => Carbon::now()]);
+        $user4->update(['email_verified_at' => Carbon::now()]);
+        $user5->update(['email_verified_at' => Carbon::now()]);
 
         $user1->assignRole('admin');
         $user2->assignRole('admin');
         $user3->assignRole('admin');
         $user4->assignRole('admin');
-        $user5->assignRole('institute');
-        $user6->assignRole('student');
-        $user7->assignRole('teacher');
+        $user4->assignRole('institute');
 
         Country::create([
-            'name' => 'India'
+            'name' => 'India',
+            'code' => 'in'
         ]);
 
         State::create([
@@ -130,7 +121,8 @@ class PermissionAndUserSeeder extends Seeder
         ]);
 
         Standard::create([
-            'standard_name' => 'Class 1'
+            'standard_name' => 'Class 1',
+            'code' => 'class1'
         ]);
     }
 }

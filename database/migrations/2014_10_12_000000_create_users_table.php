@@ -17,17 +17,16 @@ class CreateUsersTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
-            $table->string('username');
+            $table->string('username')->unique();
             $table->string('user_type');
-            $table->string('avatar')->default('default.jpg');
+            $table->string('avatar')->default('default.webp');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('phone')->nullable();
             $table->string('gender')->nullable();
             $table->string('vission')->nullable();
-            $table->string('message')->nullable();
+            $table->text('message')->nullable();
             $table->string('password')->nullable();
             $table->integer('status')->default(0); //verified => 1, block => 2
-            $table->timestamp('last_activity')->nullable();
             $table->timestamp('phone_verified')->nullable();
             $table->timestamp('blocked_at')->nullable();
             $table->timestamp('verified_at')->nullable();

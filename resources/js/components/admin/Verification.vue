@@ -3,6 +3,7 @@
     <table class="table responsive">
       <thead>
         <tr>
+          <th scope="col">Serial Number</th>
           <th scope="col">Block</th>
           <th scope="col">Status</th>
           <th scope="col">Slug Generator</th>
@@ -13,6 +14,7 @@
       </thead>
       <tbody>
         <tr v-for="(verification, index) in usersData" :key="verification.id">
+          <td>{{ verification.id }}</td>
           <td>
             <button
               class="btn btn-primary"
@@ -57,9 +59,6 @@
           <td>
             <button
               class="btn btn-info"
-              :disabled="
-                verification.slug_creation === 'created' ? true : false
-              "
               @click="
                 slugGenetor(
                   verification.title,
@@ -287,10 +286,26 @@ export default {
         });
     },
     slugGenetor(title, name, userId, index) {
-      let slug = title + "-" + name;
       this.slugUserId = userId;
-      this.slugData.slug = this.slugify(slug);
-      this.slugIndex = index;
+      axios
+        .get("verification/api/get-slug-of-channel/" + userId)
+        .then((response) => {
+          if (response.data.message === true) {
+            if (response.data.channel_slug === null) {
+              let slug = title + "-" + name;
+              this.slugData.slug = this.slugify(slug);
+            } else {
+              this.slugData.slug = response.data.channel_slug;
+            }
+          }
+        })
+        .catch((errors) => {
+          Vue.toasted.error("Something went wrong.Try again", {
+            position: "top-center",
+            duration: 5000,
+          });
+          $("#slugGenerator").modal("hide");
+        });
       $("#slugGenerator").modal("show");
     },
     slugify(string) {

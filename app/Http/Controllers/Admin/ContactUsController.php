@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Admin;
 
 use App\Contact;
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
 
 class ContactUsController extends Controller
 {
@@ -21,7 +20,7 @@ class ContactUsController extends Controller
         ]);
     }
 
-    public function enquiry(Request $request, Contact $contact)
+    public function enquiry(Contact $contact)
     {
         $this->authorize('superadmin', auth()->user());
         $contact->enquired = 'checked';

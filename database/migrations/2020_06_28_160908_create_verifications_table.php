@@ -27,7 +27,6 @@ class CreateVerificationsTable extends Migration
             $table->string('founded');
             $table->string('pin');
             $table->string('gender');
-            $table->string('slug_creation')->default('not-created');
             $table->tinyInteger('status')->default(1); //default = 1,verified = 2, block = 3
             $table->timestamps();
         });

@@ -7,6 +7,7 @@ use App\Http\Requests\State\StoreStateValidation;
 use App\Http\Requests\State\UpdateStateValidation;
 use App\Services\ModelHelperServices;
 use App\State;
+use Illuminate\Http\Request;
 
 class StateController extends Controller
 {
@@ -42,14 +43,6 @@ class StateController extends Controller
         return redirect()->back()->with('status', 'Succefully created the State');
     }
 
-    public function delete($id)
-    {
-        $this->authorize('superadmin', auth()->user());
-        $state = State::findorFail($id);
-        $state->delete();
-        return redirect()->back()->with('status', 'Deleted succefully');
-    }
-
     public function updating($id)
     {
         $this->authorize('superadmin', auth()->user());
@@ -57,12 +50,17 @@ class StateController extends Controller
         return view('admin.state.updating', compact('state', $state));
     }
 
-    public function update(UpdateStateValidation $request, $id)
+    public function update(Request $request, $id)
     {
         $this->authorize('superadmin', auth()->user());
+        $request->validate([
+            'name' => 'required|string|unique:states,name,' . $id,
+            'code' => 'required|string|unique:states,code,' . $id
+        ]);
+
         $state = State::findOrFail($id);
-        $state->name = $request->validated()['name'];
-        $state->code = $request->validated()['code'];
+        $state->name = $request->input('name');
+        $state->code = $request->input('code');
         $state->update();
         return redirect('/admin/state/updating/' . $id)->with('status', 'Succefully updated the State');
     }

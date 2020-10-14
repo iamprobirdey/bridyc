@@ -25,6 +25,7 @@ class StoreSubjectValidation extends FormRequest
     {
         return [
             'subject' => 'required|string|unique:subjects,name',
+            'code' => 'required|string|unique:subjects,code',
         ];
     }
 }
