@@ -12,8 +12,8 @@
           <div class="card-body">
             <img
               :src="
-                channel.icon_avatar === null
-                  ? '/images/college logo.jpg'
+                channel.icon_avatar === 'institute-logo-default.webp'
+                  ? '/images/institute-logo-default.webp'
                   : domainUrl +
                     '/media/channel/' +
                     channel.user_id +
@@ -23,7 +23,9 @@
               alt="college logo"
               class="inslogo"
             />
-            <h4 class="card-title mt-n5 text-center text-capitalize">{{ channel.title }}</h4>
+            <h4 class="card-title mt-n5 text-center text-capitalize">
+              {{ channel.title }}
+            </h4>
             <p class="card-text mt-n2 district-name text-capitalize">
               Dist: {{ channel.district.name }}
             </p>

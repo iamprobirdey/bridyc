@@ -143,6 +143,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -196,8 +198,8 @@ var render = function() {
                   staticClass: "inslogo",
                   attrs: {
                     src:
-                      channel.icon_avatar === null
-                        ? "/images/college logo.jpg"
+                      channel.icon_avatar === "institute-logo-default.webp"
+                        ? "/images/institute-logo-default.webp"
                         : _vm.domainUrl +
                           "/media/channel/" +
                           channel.user_id +
@@ -212,7 +214,11 @@ var render = function() {
                   {
                     staticClass: "card-title mt-n5 text-center text-capitalize"
                   },
-                  [_vm._v(_vm._s(channel.title))]
+                  [
+                    _vm._v(
+                      "\n            " + _vm._s(channel.title) + "\n          "
+                    )
+                  ]
                 ),
                 _vm._v(" "),
                 _c(
