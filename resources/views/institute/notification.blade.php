@@ -42,8 +42,8 @@ video')
 @endsection
 
 @section('js_code')
-<script src="{{mix('js/app.js')}}"></script>
-<script src="{{mix('js/dashboardBlade.js')}}"></script>
-<script src="{{mix('js/ChannelNotification.js')}}"></script>
+<script src="{{url('js/app.js')}}"></script>
+<script src="{{url('js/dashboardBlade.js')}}"></script>
+<script src="{{url('js/ChannelNotification.js')}}"></script>
 {{-- <script src="{{env('APP_URL')}}{{mix('/js/editChannel.js')}}"></script> --}}
 @endsection
