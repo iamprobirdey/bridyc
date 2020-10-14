@@ -31,7 +31,9 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = RouteServiceProvider::HOME;
+    //protected $redirectTo = RouteServiceProvider::HOME;
+
+    protected $redirectTo = 'email/verify';
 
     /**
      * Create a new controller instance.
@@ -110,13 +112,23 @@ class RegisterController extends Controller
             abort(404);
         }
 
-        return User::create([
+        $user = User::create([
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
             'username' => $username,
             'user_type' => $data['user_type'],
         ]);
+
+        if ($data['user_type'] === 'institute') {
+            $user->assignRole('institute');
+        }
+        if ($data['user_type'] === 'student') {
+            $user->assignRole('student');
+        }
+        if ($data['user_type'] === 'teacher') {
+            $user->assignRole('teacher');
+        }
     }
 
     protected function getUserName(array $data)
@@ -125,18 +137,5 @@ class RegisterController extends Controller
         $user = User::where('username', $username)->first();
         if ($user === null) return $username;
         $this->getUserName($data);
-    }
-
-    protected function registered(Request $request, $user)
-    {
-        if ($request->input('user_type') === 'institute') {
-            $user->assignRole('institute');
-        }
-        if ($request->input('user_type') === 'student') {
-            $user->assignRole('student');
-        }
-        if ($request->input('user_type') === 'teacher') {
-            $user->assignRole('teacher');
-        }
     }
 }

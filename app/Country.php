@@ -12,11 +12,7 @@ class Country extends Model
 {
     use LogsActivity;
 
-    protected $fillable = ['name','code'];
-
-    protected static $logAttributes = ['name','code'];
-
-    protected static $logOnlyDirty = true;
+    protected $fillable = ['name', 'code'];
 
     protected static function boot()
     {

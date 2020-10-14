@@ -26,16 +26,16 @@ class InfrastructureValidation extends FormRequest
     {
         return [
             'no_of_class' => 'required|numeric',
-            'boys_toilet' => ['required|string',Rule::in(['one', 'two','three','four','five','six'])],
-            'girls_toilet' => ['required|string',Rule::in(['one', 'two','three','four','five','six'])],
-            'computer_learning' => ['required|string',Rule::in(['yes', 'no'])],
-            'electricity' => ['required|string',Rule::in(['yes', 'no'])],
-            'wall' => ['required|string',Rule::in(['no_wall', 'fetch','wall'])],
-            'library' => ['required|string',Rule::in(['yes', 'no'])],
+            'boys_hostel' => 'required|string', Rule::in(['yes', 'no']),
+            'girls_hostel' => 'required|string', Rule::in(['one', 'two']),
+            'computer_learning' => 'required|string', Rule::in(['yes', 'no']),
+            'canteen' => 'required|string', Rule::in(['yes', 'no']),
+            'stationary' => 'required|string', Rule::in(['yes', 'no']),
+            'wall' => 'required|string', Rule::in(['no_wall', 'fence', 'wall']),
+            'library' => 'required|string', Rule::in(['yes', 'no']),
             'no_of_books' => 'required|integer',
-            'playground' => ['required|string',Rule::in(['yes', 'no'])],
-            'hostel' => 'required|integer',
-            'bus_services' => ['required|string',Rule::in(['yes', 'no'])],
+            'playground' => 'required|string', Rule::in(['yes', 'no']),
+            'bus_services' => 'required|string', Rule::in(['yes', 'no']),
         ];
     }
 }

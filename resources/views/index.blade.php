@@ -44,7 +44,7 @@ DO IT ALL')
             @if ($podcast != null)
 
             <div class="col-lg-4">
-                <img class="imgguest shadow-lg" src="{{asset('podcast/'.$podcast->image_path)}}" alt="guest photo">
+                <img class="imgguest shadow-lg" src="{{asset($podcast->image_path)}}" alt="guest photo">
             </div>
             <div class="col-md-8">
                 <div class="videosection">

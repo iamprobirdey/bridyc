@@ -7,6 +7,7 @@ use App\Http\Requests\Subject\StoreSubjectValidation;
 use App\Services\ModelHelperServices;
 use App\Subject;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class SubjectController extends Controller
 {
@@ -37,7 +38,8 @@ class SubjectController extends Controller
         $this->authorize('superadmin', auth()->user());
 
         Subject::create([
-            'name' => $request->validated()['subject']
+            'name' => Str::ucfirst($request->validated()['subject']),
+            'code' => strtolower($request->validated()['code'])
         ]);
         return redirect()->back()->with('status', 'Succefully created the subject');
     }
@@ -50,12 +52,16 @@ class SubjectController extends Controller
         return view('admin.subject.updating', compact('subject', $subject));
     }
 
-    public function update(StoreSubjectValidation $request, $id)
+    public function update(Request $request, $id)
     {
         $this->authorize('superadmin', auth()->user());
-
+        $request->validate([
+            'subject' => 'required|string|unique:subjects,name,' . $id,
+            'code' => 'required|string|unique:subjects,code,' . $id,
+        ]);
         $subject = Subject::findOrFail($id);
-        $subject->name = $request->validated()['subject'];
+        $subject->name = $request->input('subject');
+        $subject->code = $request->input('code');
         $subject->update();
         return redirect('/admin/subject/updating/' . $id)->with('status', 'Succefully updated the subject');
     }

@@ -17,8 +17,8 @@
     <thead>
         <tr>
             <th scope="col">Id</th>
-            <th scope="col">Hobby Name
-            <th>
+            <th scope="col">Hobby Name</th>
+            <th scope="col">Code</th>
             <th scope="col">Update</th>
         </tr>
     </thead>
@@ -27,10 +27,10 @@
         <tr>
             <td>{{$item->id}}</td>
             <td>{{$item->name}}</td>
+            <td>{{$item->code}}</td>
             <td>
                 <a href="{{url('admin/hobby/updating/'.$item->id)}}" class="btn btn-success">Update</a>
             </td>
-
         </tr>
         @endforeach
     </tbody>

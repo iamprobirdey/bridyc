@@ -60887,18 +60887,6 @@ Vue.component("example-component", __webpack_require__(/*! ./components/ExampleC
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-function getUserActivity() {
-  var sessionUrl = window.location.origin;
-
-  if (sessionStorage.getItem([sessionUrl]) != 'bridyc') {
-    sessionStorage.setItem([sessionUrl], 'bridyc');
-    axios.get('/api/user/activity').then(function (response) {})["catch"](function (errors) {});
-  }
-
-  console.log('out');
-}
-
-getUserActivity();
 var app = new Vue({
   el: "#app"
 });
@@ -61019,6 +61007,17 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/sass/about.scss":
+/*!***********************************!*\
+  !*** ./resources/sass/about.scss ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ "./resources/sass/app.scss":
 /*!*********************************!*\
   !*** ./resources/sass/app.scss ***!
@@ -61096,6 +61095,17 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/sass/login-register.scss":
+/*!********************************************!*\
+  !*** ./resources/sass/login-register.scss ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ "./resources/sass/privacy.scss":
 /*!*************************************!*\
   !*** ./resources/sass/privacy.scss ***!
@@ -61119,9 +61129,9 @@ __webpack_require__.r(__webpack_exports__);
 /***/ }),
 
 /***/ 0:
-/*!***********************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/index.scss ./resources/sass/application.scss ./resources/sass/faq.scss ./resources/sass/contact.scss ./resources/sass/privacy.scss ./resources/sass/institutedashboard.scss ./resources/sass/institutelandingpage.scss ./resources/sass/profile.scss ***!
-  \***********************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/index.scss ./resources/sass/application.scss ./resources/sass/faq.scss ./resources/sass/contact.scss ./resources/sass/privacy.scss ./resources/sass/institutedashboard.scss ./resources/sass/institutelandingpage.scss ./resources/sass/profile.scss ./resources/sass/about.scss ./resources/sass/login-register.scss ***!
+  \****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -61134,7 +61144,9 @@ __webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Brid
 __webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/sass/privacy.scss */"./resources/sass/privacy.scss");
 __webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/sass/institutedashboard.scss */"./resources/sass/institutedashboard.scss");
 __webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/sass/institutelandingpage.scss */"./resources/sass/institutelandingpage.scss");
-module.exports = __webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/sass/profile.scss */"./resources/sass/profile.scss");
+__webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/sass/profile.scss */"./resources/sass/profile.scss");
+__webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/sass/about.scss */"./resources/sass/about.scss");
+module.exports = __webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/sass/login-register.scss */"./resources/sass/login-register.scss");
 
 
 /***/ })

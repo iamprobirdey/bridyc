@@ -601,6 +601,12 @@ __webpack_require__.r(__webpack_exports__);
               }
             }
           })["catch"](function (errors) {
+            _this3.wait = false;
+            Vue.toasted.error("Something went wrong", {
+              position: "top-center",
+              duration: 5000
+            });
+
             if (errors.response.data.errors.state_id) {
               _this3.serverErrors.state_id = errors.response.data.errors.state_id[0];
             }
@@ -672,11 +678,13 @@ var render = function() {
     _vm.verificationStatus === true && _vm.userData === 1
       ? _c("div", [
           _c("h4", { staticClass: "text-center text-danger" }, [
-            _vm._v("\n    Your data is under verification\n    ")
+            _vm._v("Your data is under verification")
           ]),
           _vm._v(" "),
           _c("p", { staticClass: "text-center text-success" }, [
-            _vm._v("Once verified, you will have full access to your channel")
+            _vm._v(
+              "\n      Once verified, you will have full access to your channel\n    "
+            )
           ])
         ])
       : _vm._e(),
@@ -685,7 +693,7 @@ var render = function() {
       ? _c("div", [
           _c("h4", { staticClass: "text-center text-danger" }, [
             _vm._v(
-              "\n    You are temporarily restricted from accessing the channel\n    "
+              "\n      You are temporarily restricted from accessing the channel\n    "
             )
           ]),
           _vm._v(" "),
@@ -709,862 +717,6 @@ var render = function() {
                 }
               },
               [
-                _c(
-                  "div",
-                  {
-                    staticClass: "form-group",
-                    class: {
-                      "has-error":
-                        _vm.errors.has("title") || _vm.serverErrors.title != ""
-                    }
-                  },
-                  [
-                    _c("label", { attrs: { for: "exampleInputEmail1" } }, [
-                      _vm._v("Institute Name")
-                    ]),
-                    _vm._v(" "),
-                    _c("input", {
-                      directives: [
-                        {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.formData.title,
-                          expression: "formData.title"
-                        },
-                        {
-                          name: "validate",
-                          rawName: "v-validate",
-                          value: "required|alpha_spaces",
-                          expression: "'required|alpha_spaces'"
-                        }
-                      ],
-                      class: {
-                        "form-control": true,
-                        "is-invalid": _vm.errors.has("title")
-                      },
-                      attrs: {
-                        id: "title",
-                        "data-vv-delay": "20",
-                        name: "title",
-                        type: "text",
-                        placeholder: "Insert your institute name"
-                      },
-                      domProps: { value: _vm.formData.title },
-                      on: {
-                        focus: function($event) {
-                          _vm.serverErrors.title = ""
-                        },
-                        input: function($event) {
-                          if ($event.target.composing) {
-                            return
-                          }
-                          _vm.$set(_vm.formData, "title", $event.target.value)
-                        }
-                      }
-                    }),
-                    _vm._v(" "),
-                    _c("i", {
-                      directives: [
-                        {
-                          name: "show",
-                          rawName: "v-show",
-                          value: _vm.errors.has("title"),
-                          expression: "errors.has('title')"
-                        }
-                      ],
-                      staticClass: "is-invalid"
-                    }),
-                    _vm._v(" "),
-                    _c(
-                      "span",
-                      {
-                        directives: [
-                          {
-                            name: "show",
-                            rawName: "v-show",
-                            value: _vm.errors.has("title"),
-                            expression: "errors.has('title')"
-                          }
-                        ],
-                        staticClass: "text-danger"
-                      },
-                      [_vm._v(_vm._s(_vm.errors.first("title")))]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "span",
-                      {
-                        directives: [
-                          {
-                            name: "show",
-                            rawName: "v-show",
-                            value: _vm.serverErrors.title != "",
-                            expression: "serverErrors.title != ''"
-                          }
-                        ],
-                        staticClass: "text-danger"
-                      },
-                      [_vm._v(_vm._s(_vm.serverErrors.title))]
-                    )
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticClass: "form-group",
-                    class: {
-                      "has-error":
-                        _vm.errors.has("udise") || _vm.serverErrors.udise != ""
-                    }
-                  },
-                  [
-                    _c("label", { attrs: { for: "exampleInputEmail1" } }, [
-                      _vm._v("Udise Code")
-                    ]),
-                    _vm._v(" "),
-                    _c("input", {
-                      directives: [
-                        {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.formData.udise,
-                          expression: "formData.udise"
-                        }
-                      ],
-                      class: {
-                        "form-control": true,
-                        "is-invalid": _vm.errors.has("udise")
-                      },
-                      attrs: {
-                        id: "udise",
-                        "data-vv-delay": "20",
-                        name: "udise",
-                        type: "text",
-                        placeholder: "Enter your institute udise code Optinal"
-                      },
-                      domProps: { value: _vm.formData.udise },
-                      on: {
-                        focus: function($event) {
-                          _vm.serverErrors.udise = ""
-                        },
-                        input: function($event) {
-                          if ($event.target.composing) {
-                            return
-                          }
-                          _vm.$set(_vm.formData, "udise", $event.target.value)
-                        }
-                      }
-                    }),
-                    _vm._v(" "),
-                    _c("i", {
-                      directives: [
-                        {
-                          name: "show",
-                          rawName: "v-show",
-                          value: _vm.errors.has("udise"),
-                          expression: "errors.has('udise')"
-                        }
-                      ],
-                      staticClass: "is-invalid"
-                    }),
-                    _vm._v(" "),
-                    _c(
-                      "span",
-                      {
-                        directives: [
-                          {
-                            name: "show",
-                            rawName: "v-show",
-                            value: _vm.errors.has("udise"),
-                            expression: "errors.has('udise')"
-                          }
-                        ],
-                        staticClass: "text-danger"
-                      },
-                      [_vm._v(_vm._s(_vm.errors.first("udise")))]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "span",
-                      {
-                        directives: [
-                          {
-                            name: "show",
-                            rawName: "v-show",
-                            value: _vm.serverErrors.udise != "",
-                            expression: "serverErrors.udise != ''"
-                          }
-                        ],
-                        staticClass: "text-danger"
-                      },
-                      [_vm._v(_vm._s(_vm.serverErrors.udise))]
-                    )
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticClass: "form-group",
-                    class: {
-                      "has-error":
-                        _vm.errors.has("location") ||
-                        _vm.serverErrors.location != ""
-                    }
-                  },
-                  [
-                    _c("label", { attrs: { for: "exampleInputEmail1" } }, [
-                      _vm._v("Location")
-                    ]),
-                    _vm._v(" "),
-                    _c("input", {
-                      directives: [
-                        {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.formData.location,
-                          expression: "formData.location"
-                        },
-                        {
-                          name: "validate",
-                          rawName: "v-validate",
-                          value: "required",
-                          expression: "'required'"
-                        }
-                      ],
-                      class: {
-                        "form-control": true,
-                        "is-invalid": _vm.errors.has("location")
-                      },
-                      attrs: {
-                        id: "location",
-                        "data-vv-delay": "20",
-                        name: "location",
-                        type: "text",
-                        placeholder: "Insert your institute location"
-                      },
-                      domProps: { value: _vm.formData.location },
-                      on: {
-                        focus: function($event) {
-                          _vm.serverErrors.location = ""
-                        },
-                        input: function($event) {
-                          if ($event.target.composing) {
-                            return
-                          }
-                          _vm.$set(
-                            _vm.formData,
-                            "location",
-                            $event.target.value
-                          )
-                        }
-                      }
-                    }),
-                    _vm._v(" "),
-                    _c("i", {
-                      directives: [
-                        {
-                          name: "show",
-                          rawName: "v-show",
-                          value: _vm.errors.has("location"),
-                          expression: "errors.has('location')"
-                        }
-                      ],
-                      staticClass: "is-invalid"
-                    }),
-                    _vm._v(" "),
-                    _c(
-                      "span",
-                      {
-                        directives: [
-                          {
-                            name: "show",
-                            rawName: "v-show",
-                            value: _vm.errors.has("location"),
-                            expression: "errors.has('location')"
-                          }
-                        ],
-                        staticClass: "text-danger"
-                      },
-                      [_vm._v(_vm._s(_vm.errors.first("location")))]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "span",
-                      {
-                        directives: [
-                          {
-                            name: "show",
-                            rawName: "v-show",
-                            value: _vm.serverErrors.location != "",
-                            expression: "serverErrors.location != ''"
-                          }
-                        ],
-                        staticClass: "text-danger"
-                      },
-                      [_vm._v(_vm._s(_vm.serverErrors.location))]
-                    )
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticClass: "form-group",
-                    class: {
-                      "has-error":
-                        _vm.errors.has("ownership") ||
-                        _vm.serverErrors.ownership != ""
-                    }
-                  },
-                  [
-                    _c("label", [_vm._v("Ownership")]),
-                    _vm._v(" "),
-                    _c(
-                      "select",
-                      {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.formData.ownership,
-                            expression: "formData.ownership"
-                          },
-                          {
-                            name: "validate",
-                            rawName: "v-validate",
-                            value: "required",
-                            expression: "'required'"
-                          }
-                        ],
-                        staticClass: "form-control",
-                        attrs: { name: "ownership" },
-                        on: {
-                          change: function($event) {
-                            var $$selectedVal = Array.prototype.filter
-                              .call($event.target.options, function(o) {
-                                return o.selected
-                              })
-                              .map(function(o) {
-                                var val = "_value" in o ? o._value : o.value
-                                return val
-                              })
-                            _vm.$set(
-                              _vm.formData,
-                              "ownership",
-                              $event.target.multiple
-                                ? $$selectedVal
-                                : $$selectedVal[0]
-                            )
-                          }
-                        }
-                      },
-                      [
-                        _c("option", { attrs: { value: "" } }, [
-                          _vm._v("Select ownership")
-                        ]),
-                        _vm._v(" "),
-                        _c("option", { attrs: { value: "private" } }, [
-                          _vm._v("Private")
-                        ]),
-                        _vm._v(" "),
-                        _c("option", { attrs: { value: "government" } }, [
-                          _vm._v("Government")
-                        ])
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c("i", {
-                      directives: [
-                        {
-                          name: "show",
-                          rawName: "v-show",
-                          value: _vm.errors.has("ownership"),
-                          expression: "errors.has('ownership')"
-                        }
-                      ],
-                      staticClass: "is-invalid"
-                    }),
-                    _vm._v(" "),
-                    _c(
-                      "span",
-                      {
-                        directives: [
-                          {
-                            name: "show",
-                            rawName: "v-show",
-                            value: _vm.errors.has("ownership"),
-                            expression: "errors.has('ownership')"
-                          }
-                        ],
-                        staticClass: "text-danger"
-                      },
-                      [_vm._v(_vm._s(_vm.errors.first("ownership")))]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "span",
-                      {
-                        directives: [
-                          {
-                            name: "show",
-                            rawName: "v-show",
-                            value: _vm.serverErrors.ownership != "",
-                            expression: "serverErrors.ownership != ''"
-                          }
-                        ],
-                        staticClass: "text-danger"
-                      },
-                      [_vm._v(_vm._s(_vm.serverErrors.ownership))]
-                    )
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticClass: "form-group",
-                    class: {
-                      "has-error":
-                        _vm.errors.has("founded") ||
-                        _vm.serverErrors.founded != ""
-                    }
-                  },
-                  [
-                    _c("label", { attrs: { for: "exampleInputEmail1" } }, [
-                      _vm._v("Founded")
-                    ]),
-                    _vm._v(" "),
-                    _c("input", {
-                      directives: [
-                        {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.formData.founded,
-                          expression: "formData.founded"
-                        },
-                        {
-                          name: "validate",
-                          rawName: "v-validate",
-                          value: "required",
-                          expression: "'required'"
-                        }
-                      ],
-                      class: {
-                        "form-control": true,
-                        "is-invalid": _vm.errors.has("founded")
-                      },
-                      attrs: {
-                        id: "founded",
-                        "data-vv-delay": "20",
-                        name: "founded",
-                        type: "date",
-                        max: _vm.todaysDate,
-                        placeholder: "founded"
-                      },
-                      domProps: { value: _vm.formData.founded },
-                      on: {
-                        focus: function($event) {
-                          _vm.serverErrors.founded = ""
-                        },
-                        input: function($event) {
-                          if ($event.target.composing) {
-                            return
-                          }
-                          _vm.$set(_vm.formData, "founded", $event.target.value)
-                        }
-                      }
-                    }),
-                    _vm._v(" "),
-                    _c("i", {
-                      directives: [
-                        {
-                          name: "show",
-                          rawName: "v-show",
-                          value: _vm.errors.has("founded"),
-                          expression: "errors.has('founded')"
-                        }
-                      ],
-                      staticClass: "is-invalid"
-                    }),
-                    _vm._v(" "),
-                    _c(
-                      "span",
-                      {
-                        directives: [
-                          {
-                            name: "show",
-                            rawName: "v-show",
-                            value: _vm.errors.has("founded"),
-                            expression: "errors.has('founded')"
-                          }
-                        ],
-                        staticClass: "text-danger"
-                      },
-                      [_vm._v(_vm._s(_vm.errors.first("founded")))]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "span",
-                      {
-                        directives: [
-                          {
-                            name: "show",
-                            rawName: "v-show",
-                            value: _vm.serverErrors.founded != "",
-                            expression: "serverErrors.founded != ''"
-                          }
-                        ],
-                        staticClass: "text-danger"
-                      },
-                      [_vm._v(_vm._s(_vm.serverErrors.founded))]
-                    )
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticClass: "form-group",
-                    class: {
-                      "has-error":
-                        _vm.errors.has("pin") || _vm.serverErrors.pin != ""
-                    }
-                  },
-                  [
-                    _c("label", { attrs: { for: "exampleInputEmail1" } }, [
-                      _vm._v("Pin Code")
-                    ]),
-                    _vm._v(" "),
-                    _c("input", {
-                      directives: [
-                        {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.formData.pin,
-                          expression: "formData.pin"
-                        },
-                        {
-                          name: "validate",
-                          rawName: "v-validate",
-                          value: "required|numeric|min:6|max:6",
-                          expression: "'required|numeric|min:6|max:6'"
-                        }
-                      ],
-                      class: {
-                        "form-control": true,
-                        "is-invalid": _vm.errors.has("pin")
-                      },
-                      attrs: {
-                        id: "text",
-                        "data-vv-delay": "20",
-                        name: "pin",
-                        type: "text",
-                        placeholder: "Insert your area pin code"
-                      },
-                      domProps: { value: _vm.formData.pin },
-                      on: {
-                        focus: function($event) {
-                          _vm.serverErrors.pin = ""
-                        },
-                        input: function($event) {
-                          if ($event.target.composing) {
-                            return
-                          }
-                          _vm.$set(_vm.formData, "pin", $event.target.value)
-                        }
-                      }
-                    }),
-                    _vm._v(" "),
-                    _c("i", {
-                      directives: [
-                        {
-                          name: "show",
-                          rawName: "v-show",
-                          value: _vm.errors.has("pin"),
-                          expression: "errors.has('pin')"
-                        }
-                      ],
-                      staticClass: "is-invalid"
-                    }),
-                    _vm._v(" "),
-                    _c(
-                      "span",
-                      {
-                        directives: [
-                          {
-                            name: "show",
-                            rawName: "v-show",
-                            value: _vm.errors.has("pin"),
-                            expression: "errors.has('pin')"
-                          }
-                        ],
-                        staticClass: "text-danger"
-                      },
-                      [_vm._v(_vm._s(_vm.errors.first("pin")))]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "span",
-                      {
-                        directives: [
-                          {
-                            name: "show",
-                            rawName: "v-show",
-                            value: _vm.serverErrors.pin != "",
-                            expression: "serverErrors.pin != ''"
-                          }
-                        ],
-                        staticClass: "text-danger"
-                      },
-                      [_vm._v(_vm._s(_vm.serverErrors.pin))]
-                    )
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticClass: "form-group",
-                    class: {
-                      "has-error":
-                        _vm.errors.has("gender") ||
-                        _vm.serverErrors.gender != ""
-                    }
-                  },
-                  [
-                    _c("label", { attrs: { for: "exampleInputEmail1" } }, [
-                      _vm._v("Gender")
-                    ]),
-                    _vm._v(" "),
-                    _c(
-                      "select",
-                      {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.formData.gender,
-                            expression: "formData.gender"
-                          },
-                          {
-                            name: "validate",
-                            rawName: "v-validate",
-                            value: "required",
-                            expression: "'required'"
-                          }
-                        ],
-                        staticClass: "form-control",
-                        attrs: { name: "gender" },
-                        on: {
-                          change: function($event) {
-                            var $$selectedVal = Array.prototype.filter
-                              .call($event.target.options, function(o) {
-                                return o.selected
-                              })
-                              .map(function(o) {
-                                var val = "_value" in o ? o._value : o.value
-                                return val
-                              })
-                            _vm.$set(
-                              _vm.formData,
-                              "gender",
-                              $event.target.multiple
-                                ? $$selectedVal
-                                : $$selectedVal[0]
-                            )
-                          }
-                        }
-                      },
-                      [
-                        _c("option", { attrs: { value: "" } }, [
-                          _vm._v("Select Gender")
-                        ]),
-                        _vm._v(" "),
-                        _c("option", { attrs: { value: "only_boys" } }, [
-                          _vm._v("Only Boys")
-                        ]),
-                        _vm._v(" "),
-                        _c("option", { attrs: { value: "only_girls" } }, [
-                          _vm._v("Only Girls")
-                        ]),
-                        _vm._v(" "),
-                        _c("option", { attrs: { value: "both" } }, [
-                          _vm._v("Both Girls and boys")
-                        ])
-                      ]
-                    ),
-                    _vm._v(" "),
-                    _c("i", {
-                      directives: [
-                        {
-                          name: "show",
-                          rawName: "v-show",
-                          value: _vm.errors.has("gender"),
-                          expression: "errors.has('gender')"
-                        }
-                      ],
-                      staticClass: "is-invalid"
-                    }),
-                    _vm._v(" "),
-                    _c(
-                      "span",
-                      {
-                        directives: [
-                          {
-                            name: "show",
-                            rawName: "v-show",
-                            value: _vm.errors.has("gender"),
-                            expression: "errors.has('gender')"
-                          }
-                        ],
-                        staticClass: "text-danger"
-                      },
-                      [_vm._v(_vm._s(_vm.errors.first("gender")))]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "span",
-                      {
-                        directives: [
-                          {
-                            name: "show",
-                            rawName: "v-show",
-                            value: _vm.serverErrors.gender != "",
-                            expression: "serverErrors.gender != ''"
-                          }
-                        ],
-                        staticClass: "text-danger"
-                      },
-                      [_vm._v(_vm._s(_vm.serverErrors.gender))]
-                    )
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticClass: "form-group",
-                    class: {
-                      "has-error":
-                        _vm.errors.has("language") ||
-                        _vm.serverErrors.language_id != ""
-                    }
-                  },
-                  [
-                    _c("label", [_vm._v("Medium")]),
-                    _vm._v(" "),
-                    _c(
-                      "select",
-                      {
-                        directives: [
-                          {
-                            name: "model",
-                            rawName: "v-model",
-                            value: _vm.formData.language_id,
-                            expression: "formData.language_id"
-                          },
-                          {
-                            name: "validate",
-                            rawName: "v-validate",
-                            value: "required",
-                            expression: "'required'"
-                          }
-                        ],
-                        staticClass: "form-control",
-                        attrs: { name: "language" },
-                        on: {
-                          change: function($event) {
-                            var $$selectedVal = Array.prototype.filter
-                              .call($event.target.options, function(o) {
-                                return o.selected
-                              })
-                              .map(function(o) {
-                                var val = "_value" in o ? o._value : o.value
-                                return val
-                              })
-                            _vm.$set(
-                              _vm.formData,
-                              "language_id",
-                              $event.target.multiple
-                                ? $$selectedVal
-                                : $$selectedVal[0]
-                            )
-                          }
-                        }
-                      },
-                      [
-                        _c("option", { attrs: { value: "" } }, [
-                          _vm._v("Select language")
-                        ]),
-                        _vm._v(" "),
-                        _vm._l(_vm.languages, function(language) {
-                          return _c(
-                            "option",
-                            {
-                              key: language.id,
-                              domProps: { value: language.id }
-                            },
-                            [
-                              _vm._v(
-                                "\n              " +
-                                  _vm._s(language.name) +
-                                  "\n            "
-                              )
-                            ]
-                          )
-                        })
-                      ],
-                      2
-                    ),
-                    _vm._v(" "),
-                    _c("i", {
-                      directives: [
-                        {
-                          name: "show",
-                          rawName: "v-show",
-                          value: _vm.errors.has("language"),
-                          expression: "errors.has('language')"
-                        }
-                      ],
-                      staticClass: "is-invalid"
-                    }),
-                    _vm._v(" "),
-                    _c(
-                      "span",
-                      {
-                        directives: [
-                          {
-                            name: "show",
-                            rawName: "v-show",
-                            value: _vm.errors.has("language"),
-                            expression: "errors.has('language')"
-                          }
-                        ],
-                        staticClass: "text-danger"
-                      },
-                      [_vm._v(_vm._s(_vm.errors.first("language")))]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "span",
-                      {
-                        directives: [
-                          {
-                            name: "show",
-                            rawName: "v-show",
-                            value: _vm.serverErrors.language_id != "",
-                            expression: "serverErrors.language_id != ''"
-                          }
-                        ],
-                        staticClass: "text-danger"
-                      },
-                      [_vm._v(_vm._s(_vm.serverErrors.language_id))]
-                    )
-                  ]
-                ),
-                _vm._v(" "),
                 _c(
                   "div",
                   {
@@ -1934,6 +1086,862 @@ var render = function() {
                       ]
                     )
                   : _vm._e(),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass: "form-group",
+                    class: {
+                      "has-error":
+                        _vm.errors.has("title") || _vm.serverErrors.title != ""
+                    }
+                  },
+                  [
+                    _c("label", { attrs: { for: "exampleInputEmail1" } }, [
+                      _vm._v("Institute Name")
+                    ]),
+                    _vm._v(" "),
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.formData.title,
+                          expression: "formData.title"
+                        },
+                        {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required|alpha_spaces",
+                          expression: "'required|alpha_spaces'"
+                        }
+                      ],
+                      class: {
+                        "form-control": true,
+                        "is-invalid": _vm.errors.has("title")
+                      },
+                      attrs: {
+                        id: "title",
+                        "data-vv-delay": "20",
+                        name: "title",
+                        type: "text",
+                        placeholder: "Insert your institute name"
+                      },
+                      domProps: { value: _vm.formData.title },
+                      on: {
+                        focus: function($event) {
+                          _vm.serverErrors.title = ""
+                        },
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.formData, "title", $event.target.value)
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("i", {
+                      directives: [
+                        {
+                          name: "show",
+                          rawName: "v-show",
+                          value: _vm.errors.has("title"),
+                          expression: "errors.has('title')"
+                        }
+                      ],
+                      staticClass: "is-invalid"
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.has("title"),
+                            expression: "errors.has('title')"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [_vm._v(_vm._s(_vm.errors.first("title")))]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.serverErrors.title != "",
+                            expression: "serverErrors.title != ''"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [_vm._v(_vm._s(_vm.serverErrors.title))]
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass: "form-group",
+                    class: {
+                      "has-error":
+                        _vm.errors.has("udise") || _vm.serverErrors.udise != ""
+                    }
+                  },
+                  [
+                    _c("label", { attrs: { for: "exampleInputEmail1" } }, [
+                      _vm._v("Udise Code")
+                    ]),
+                    _vm._v(" "),
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.formData.udise,
+                          expression: "formData.udise"
+                        }
+                      ],
+                      class: {
+                        "form-control": true,
+                        "is-invalid": _vm.errors.has("udise")
+                      },
+                      attrs: {
+                        id: "udise",
+                        "data-vv-delay": "20",
+                        name: "udise",
+                        type: "text",
+                        placeholder: "Enter your institute udise code Optinal"
+                      },
+                      domProps: { value: _vm.formData.udise },
+                      on: {
+                        focus: function($event) {
+                          _vm.serverErrors.udise = ""
+                        },
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.formData, "udise", $event.target.value)
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("i", {
+                      directives: [
+                        {
+                          name: "show",
+                          rawName: "v-show",
+                          value: _vm.errors.has("udise"),
+                          expression: "errors.has('udise')"
+                        }
+                      ],
+                      staticClass: "is-invalid"
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.has("udise"),
+                            expression: "errors.has('udise')"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [_vm._v(_vm._s(_vm.errors.first("udise")))]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.serverErrors.udise != "",
+                            expression: "serverErrors.udise != ''"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [_vm._v(_vm._s(_vm.serverErrors.udise))]
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass: "form-group",
+                    class: {
+                      "has-error":
+                        _vm.errors.has("location") ||
+                        _vm.serverErrors.location != ""
+                    }
+                  },
+                  [
+                    _c("label", { attrs: { for: "exampleInputEmail1" } }, [
+                      _vm._v("Institute Location")
+                    ]),
+                    _vm._v(" "),
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.formData.location,
+                          expression: "formData.location"
+                        },
+                        {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required",
+                          expression: "'required'"
+                        }
+                      ],
+                      class: {
+                        "form-control": true,
+                        "is-invalid": _vm.errors.has("location")
+                      },
+                      attrs: {
+                        id: "location",
+                        "data-vv-delay": "20",
+                        name: "location",
+                        type: "text",
+                        placeholder: "Insert your institute location"
+                      },
+                      domProps: { value: _vm.formData.location },
+                      on: {
+                        focus: function($event) {
+                          _vm.serverErrors.location = ""
+                        },
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(
+                            _vm.formData,
+                            "location",
+                            $event.target.value
+                          )
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("i", {
+                      directives: [
+                        {
+                          name: "show",
+                          rawName: "v-show",
+                          value: _vm.errors.has("location"),
+                          expression: "errors.has('location')"
+                        }
+                      ],
+                      staticClass: "is-invalid"
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.has("location"),
+                            expression: "errors.has('location')"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [_vm._v(_vm._s(_vm.errors.first("location")))]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.serverErrors.location != "",
+                            expression: "serverErrors.location != ''"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [_vm._v(_vm._s(_vm.serverErrors.location))]
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass: "form-group",
+                    class: {
+                      "has-error":
+                        _vm.errors.has("ownership") ||
+                        _vm.serverErrors.ownership != ""
+                    }
+                  },
+                  [
+                    _c("label", [_vm._v("Ownership")]),
+                    _vm._v(" "),
+                    _c(
+                      "select",
+                      {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.formData.ownership,
+                            expression: "formData.ownership"
+                          },
+                          {
+                            name: "validate",
+                            rawName: "v-validate",
+                            value: "required",
+                            expression: "'required'"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { name: "ownership" },
+                        on: {
+                          change: function($event) {
+                            var $$selectedVal = Array.prototype.filter
+                              .call($event.target.options, function(o) {
+                                return o.selected
+                              })
+                              .map(function(o) {
+                                var val = "_value" in o ? o._value : o.value
+                                return val
+                              })
+                            _vm.$set(
+                              _vm.formData,
+                              "ownership",
+                              $event.target.multiple
+                                ? $$selectedVal
+                                : $$selectedVal[0]
+                            )
+                          }
+                        }
+                      },
+                      [
+                        _c("option", { attrs: { value: "" } }, [
+                          _vm._v("Select ownership")
+                        ]),
+                        _vm._v(" "),
+                        _c("option", { attrs: { value: "private" } }, [
+                          _vm._v("Private")
+                        ]),
+                        _vm._v(" "),
+                        _c("option", { attrs: { value: "government" } }, [
+                          _vm._v("Government")
+                        ])
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c("i", {
+                      directives: [
+                        {
+                          name: "show",
+                          rawName: "v-show",
+                          value: _vm.errors.has("ownership"),
+                          expression: "errors.has('ownership')"
+                        }
+                      ],
+                      staticClass: "is-invalid"
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.has("ownership"),
+                            expression: "errors.has('ownership')"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [_vm._v(_vm._s(_vm.errors.first("ownership")))]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.serverErrors.ownership != "",
+                            expression: "serverErrors.ownership != ''"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [_vm._v(_vm._s(_vm.serverErrors.ownership))]
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass: "form-group",
+                    class: {
+                      "has-error":
+                        _vm.errors.has("founded") ||
+                        _vm.serverErrors.founded != ""
+                    }
+                  },
+                  [
+                    _c("label", { attrs: { for: "exampleInputEmail1" } }, [
+                      _vm._v("Institue Founded on")
+                    ]),
+                    _vm._v(" "),
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.formData.founded,
+                          expression: "formData.founded"
+                        },
+                        {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required",
+                          expression: "'required'"
+                        }
+                      ],
+                      class: {
+                        "form-control": true,
+                        "is-invalid": _vm.errors.has("founded")
+                      },
+                      attrs: {
+                        id: "founded",
+                        "data-vv-delay": "20",
+                        name: "founded",
+                        type: "date",
+                        max: _vm.todaysDate,
+                        placeholder: "founded"
+                      },
+                      domProps: { value: _vm.formData.founded },
+                      on: {
+                        focus: function($event) {
+                          _vm.serverErrors.founded = ""
+                        },
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.formData, "founded", $event.target.value)
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("i", {
+                      directives: [
+                        {
+                          name: "show",
+                          rawName: "v-show",
+                          value: _vm.errors.has("founded"),
+                          expression: "errors.has('founded')"
+                        }
+                      ],
+                      staticClass: "is-invalid"
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.has("founded"),
+                            expression: "errors.has('founded')"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [_vm._v(_vm._s(_vm.errors.first("founded")))]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.serverErrors.founded != "",
+                            expression: "serverErrors.founded != ''"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [_vm._v(_vm._s(_vm.serverErrors.founded))]
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass: "form-group",
+                    class: {
+                      "has-error":
+                        _vm.errors.has("pin") || _vm.serverErrors.pin != ""
+                    }
+                  },
+                  [
+                    _c("label", { attrs: { for: "exampleInputEmail1" } }, [
+                      _vm._v("Pin Code")
+                    ]),
+                    _vm._v(" "),
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.formData.pin,
+                          expression: "formData.pin"
+                        },
+                        {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required|numeric|min:6|max:6",
+                          expression: "'required|numeric|min:6|max:6'"
+                        }
+                      ],
+                      class: {
+                        "form-control": true,
+                        "is-invalid": _vm.errors.has("pin")
+                      },
+                      attrs: {
+                        id: "text",
+                        "data-vv-delay": "20",
+                        name: "pin",
+                        type: "text",
+                        placeholder: "Insert your area pin code"
+                      },
+                      domProps: { value: _vm.formData.pin },
+                      on: {
+                        focus: function($event) {
+                          _vm.serverErrors.pin = ""
+                        },
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.formData, "pin", $event.target.value)
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c("i", {
+                      directives: [
+                        {
+                          name: "show",
+                          rawName: "v-show",
+                          value: _vm.errors.has("pin"),
+                          expression: "errors.has('pin')"
+                        }
+                      ],
+                      staticClass: "is-invalid"
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.has("pin"),
+                            expression: "errors.has('pin')"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [_vm._v(_vm._s(_vm.errors.first("pin")))]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.serverErrors.pin != "",
+                            expression: "serverErrors.pin != ''"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [_vm._v(_vm._s(_vm.serverErrors.pin))]
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass: "form-group",
+                    class: {
+                      "has-error":
+                        _vm.errors.has("gender") ||
+                        _vm.serverErrors.gender != ""
+                    }
+                  },
+                  [
+                    _c("label", { attrs: { for: "exampleInputEmail1" } }, [
+                      _vm._v("Institute Gender")
+                    ]),
+                    _vm._v(" "),
+                    _c(
+                      "select",
+                      {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.formData.gender,
+                            expression: "formData.gender"
+                          },
+                          {
+                            name: "validate",
+                            rawName: "v-validate",
+                            value: "required",
+                            expression: "'required'"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { name: "gender" },
+                        on: {
+                          change: function($event) {
+                            var $$selectedVal = Array.prototype.filter
+                              .call($event.target.options, function(o) {
+                                return o.selected
+                              })
+                              .map(function(o) {
+                                var val = "_value" in o ? o._value : o.value
+                                return val
+                              })
+                            _vm.$set(
+                              _vm.formData,
+                              "gender",
+                              $event.target.multiple
+                                ? $$selectedVal
+                                : $$selectedVal[0]
+                            )
+                          }
+                        }
+                      },
+                      [
+                        _c("option", { attrs: { value: "" } }, [
+                          _vm._v("Select Gender")
+                        ]),
+                        _vm._v(" "),
+                        _c("option", { attrs: { value: "only_boys" } }, [
+                          _vm._v("Only Boys Institute?")
+                        ]),
+                        _vm._v(" "),
+                        _c("option", { attrs: { value: "only_girls" } }, [
+                          _vm._v("Only Girls Institute?")
+                        ]),
+                        _vm._v(" "),
+                        _c("option", { attrs: { value: "both" } }, [
+                          _vm._v("Both Girls and boys Institute?")
+                        ])
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c("i", {
+                      directives: [
+                        {
+                          name: "show",
+                          rawName: "v-show",
+                          value: _vm.errors.has("gender"),
+                          expression: "errors.has('gender')"
+                        }
+                      ],
+                      staticClass: "is-invalid"
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.has("gender"),
+                            expression: "errors.has('gender')"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [_vm._v(_vm._s(_vm.errors.first("gender")))]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.serverErrors.gender != "",
+                            expression: "serverErrors.gender != ''"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [_vm._v(_vm._s(_vm.serverErrors.gender))]
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass: "form-group",
+                    class: {
+                      "has-error":
+                        _vm.errors.has("language") ||
+                        _vm.serverErrors.language_id != ""
+                    }
+                  },
+                  [
+                    _c("label", [_vm._v("Medium")]),
+                    _vm._v(" "),
+                    _c(
+                      "select",
+                      {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.formData.language_id,
+                            expression: "formData.language_id"
+                          },
+                          {
+                            name: "validate",
+                            rawName: "v-validate",
+                            value: "required",
+                            expression: "'required'"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: { name: "language" },
+                        on: {
+                          change: function($event) {
+                            var $$selectedVal = Array.prototype.filter
+                              .call($event.target.options, function(o) {
+                                return o.selected
+                              })
+                              .map(function(o) {
+                                var val = "_value" in o ? o._value : o.value
+                                return val
+                              })
+                            _vm.$set(
+                              _vm.formData,
+                              "language_id",
+                              $event.target.multiple
+                                ? $$selectedVal
+                                : $$selectedVal[0]
+                            )
+                          }
+                        }
+                      },
+                      [
+                        _c("option", { attrs: { value: "" } }, [
+                          _vm._v("Select language")
+                        ]),
+                        _vm._v(" "),
+                        _vm._l(_vm.languages, function(language) {
+                          return _c(
+                            "option",
+                            {
+                              key: language.id,
+                              domProps: { value: language.id }
+                            },
+                            [
+                              _vm._v(
+                                "\n              " +
+                                  _vm._s(language.name) +
+                                  "\n            "
+                              )
+                            ]
+                          )
+                        })
+                      ],
+                      2
+                    ),
+                    _vm._v(" "),
+                    _c("i", {
+                      directives: [
+                        {
+                          name: "show",
+                          rawName: "v-show",
+                          value: _vm.errors.has("language"),
+                          expression: "errors.has('language')"
+                        }
+                      ],
+                      staticClass: "is-invalid"
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.has("language"),
+                            expression: "errors.has('language')"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [_vm._v(_vm._s(_vm.errors.first("language")))]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.serverErrors.language_id != "",
+                            expression: "serverErrors.language_id != ''"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [_vm._v(_vm._s(_vm.serverErrors.language_id))]
+                    )
+                  ]
+                ),
                 _vm._v(" "),
                 _vm.wait
                   ? _c(

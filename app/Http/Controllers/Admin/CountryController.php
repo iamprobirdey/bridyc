@@ -39,20 +39,18 @@ class CountryController extends Controller
         return redirect('admin/country');
     }
 
-    public function updating($id)
+    public function updating(Country $country)
     {
         $this->authorize('superadmin', auth()->user());
-        $country = Country::findOrFail($id);
         return view('admin.country.updating', compact('country', $country));
     }
 
-    public function update(CountryValidation $request, $id)
+    public function update(CountryValidation $request, Country $country)
     {
         $this->authorize('superadmin', auth()->user());
-        $country = Country::findOrFail($id);
         $country->name = $request->validated()['name'];
         $country->code = $request->validated()['code'];
         $country->update();
-        return redirect('/admin/country/updating/' . $id)->with('status', 'Succefully updated the Country');
+        return redirect('/admin/country/updating/' . $country->id)->with('status', 'Succefully updated the Country');
     }
 }

@@ -2,7 +2,7 @@
   <section>
     <!-- college section starts here-->
     <div class="institute container-fluid pt-5">
-      <br>
+      <br />
       <div class="row">
         <div
           class="card institutecard shadow mx-auto"
@@ -31,7 +31,7 @@
               class="card-text destext d-none d-md-block mt-3"
               v-if="channel.description != null"
             >
-              {{ channel.description }}
+              {{ channel.description.substr(1, 100) }}
             </p>
           </div>
           <a

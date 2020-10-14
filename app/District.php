@@ -11,37 +11,35 @@ class District extends Model
 {
     use LogsActivity;
 
-    protected $fillable = ['state_id','name','code','slug'];
+    protected $fillable = ['state_id', 'name', 'code', 'slug'];
 
-    protected static $logAttributes = ['name','code','slug','state.name'];
-
-    protected static $logOnlyDirty = true;
-
-    public function state(){
-        return $this->belongsTo(State::class,'state_id','id');
+    public function state()
+    {
+        return $this->belongsTo(State::class, 'state_id', 'id');
     }
-    public function village(){
-        return $this->hasMany(Village::class,'district_id','id');
+    public function village()
+    {
+        return $this->hasMany(Village::class, 'district_id', 'id');
     }
     protected static function boot()
     {
         parent::boot();
         static::saving(function ($model) {
             $model->name = Str::ucfirst($model->name);
-            if(!$model->state->id) {
+            if (!$model->state->id) {
                 abort(404);
             }
         });
         static::updating(function ($model) {
             $model->name = Str::ucfirst($model->name);
-            if(!$model->state->id) {
+            if (!$model->state->id) {
                 abort(404);
             }
         });
     }
 
-    public function userInformation(){
-        return $this->hasOne(UserInformation::class,'district_id','id');
+    public function userInformation()
+    {
+        return $this->hasOne(UserInformation::class, 'district_id', 'id');
     }
-
 }

@@ -22,7 +22,6 @@
             <th scope="col">District Name</th>
             <th scope="col">Name</th>
             <th scope="col">Code</th>
-            <th scope="col">Slug</th>
         </tr>
     </thead>
     <tbody>
@@ -35,7 +34,6 @@
             </td>
             <td>{{$village->name}}</td>
             <td>{{$village->code}}</td>
-            <td>{{$village->slug}}</td>
             <td>
                 <a href="{{url('admin/village/updating/'.$village->id)}}" class="btn btn-success">Update</a>
             </td>

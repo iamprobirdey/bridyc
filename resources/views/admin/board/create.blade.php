@@ -26,10 +26,23 @@
                 <label for="board" class="col-md-4 col-form-label text-md-right">{{ __('board') }}</label>
 
                 <div class="col-md-6">
-                    <input id="board" type="text" class="form-control @error('board') is-invalid @enderror" name="board"
+                    <input type="text" class="form-control @error('board') is-invalid @enderror" name="board"
                         value="{{ old('board') }}" required autocomplete="board" autofocus>
 
                     @error('board')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                    @enderror
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-6">
+                    <label for="board" class="col-md-4 col-form-label text-md-right">{{ __('Code') }}</label>
+                    <input type="text" class="form-control @error('code') is-invalid @enderror" name="code"
+                        value="{{ old('code') }}" required autocomplete="code" autofocus>
+
+                    @error('code')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
                     </span>

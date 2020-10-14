@@ -25,19 +25,19 @@ class CreateChannelsTable extends Migration
             $table->text('description')->nullable();
             $table->string('meta_keywords')->nullable();
             $table->string('meta_descriptions')->nullable();
-            $table->string('icon_avatar')->nullable();
-            $table->string('cover_avatar')->nullable();
+            $table->string('icon_avatar')->default('Institute-logo-default.webp');
+            $table->string('cover_avatar')->default('Institute-cover-default.webp');
             $table->string('website_link')->nullable();
             $table->string('no_of_class')->nullable();
-            $table->string('boys_toilet')->nullable();
-            $table->string('girls_toilet')->nullable();
+            $table->string('canteen')->nullable();
+            $table->string('stationary')->nullable();
+            $table->string('boys_hostel')->nullable();
+            $table->string('girls_hostel')->nullable();
             $table->string('computer_learning')->nullable();
-            $table->string('electricity')->nullable();
             $table->string('wall')->nullable();
             $table->string('library')->nullable();
             $table->string('no_of_books')->nullable();
             $table->string('playground')->nullable();
-            $table->string('hostel')->nullable();
             $table->string('bus_services')->nullable();
             $table->tinyInteger('status')->default(0); // 1 => verified , 2 => block
             $table->schemalessAttributes('extra_attributes');

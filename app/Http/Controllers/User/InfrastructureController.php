@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Infrastructure\InfrastructureValidation;
 use App\Channel;
 use Auth;
+
 class InfrastructureController extends Controller
 {
     public function __construct()
@@ -13,42 +14,46 @@ class InfrastructureController extends Controller
         $this->middleware('auth');
     }
 
-    public function getUserData(){
-        $this->authorize('viewforchannel',auth()->user());
-        $this->authorize('checkChannelForUser',auth()->user()->channel);
+    public function getUserData()
+    {
+        $this->authorize('viewforchannel', auth()->user());
+        $this->authorize('checkChannelForUser', auth()->user()->channel);
         $user = Channel::select(
-                [
-                    'id',
-                    'no_of_class',
-                    'boys_toilet',
-                    'girls_toilet',
-                    'computer_learning',
-                    'electricity',
-                    'wall',
-                    'library',
-                    'no_of_books',
-                    'playground'
-                ])
-            ->where('user_id',auth()->id())
+            [
+                'id',
+                'no_of_class',
+                'canteen',
+                'stationary',
+                'boys_hostel',
+                'girls_hostel',
+                'computer_learning',
+                'wall',
+                'library',
+                'no_of_books',
+                'playground'
+            ]
+        )
+            ->where('user_id', auth()->id())
             ->get();
         return response()->json([
             'user' => $user
         ]);
     }
-    public function storeUserInformation(InfrastructureValidation $request,$Id){
-        $this->authorize('viewforchannel',auth()->user());
-        $this->authorize('checkChannelForUser',auth()->user()->channel);
+    public function storeUserInformation(InfrastructureValidation $request, $Id)
+    {
+        $this->authorize('viewforchannel', auth()->user());
+        $this->authorize('checkChannelForUser', auth()->user()->channel);
         $channel = Channel::findOrFail($Id);
         $channel->no_of_class = $request->validated()['no_of_class'];
-        $channel->boys_toilet = $request->validated()['boys_toilet'];
-        $channel->girls_toilet = $request->validated()['girls_toilet'];
+        $channel->boys_hostel = $request->validated()['boys_hostel'];
+        $channel->girls_hostel = $request->validated()['girls_hostel'];
         $channel->computer_learning = $request->validated()['computer_learning'];
-        $channel->electricity = $request->validated()['electricity'];
+        $channel->canteen = $request->validated()['canteen'];
+        $channel->stationary = $request->validated()['stationary'];
         $channel->wall = $request->validated()['wall'];
         $channel->library = $request->validated()['library'];
         $channel->no_of_books = $request->validated()['no_of_books'];
         $channel->playground = $request->validated()['playground'];
-        $channel->hostel = $request->validated()['hostel'];
         $channel->bus_services = $request->validated()['bus_services'];
         $channel->update();
 

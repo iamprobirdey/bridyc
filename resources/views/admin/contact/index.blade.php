@@ -10,8 +10,7 @@
 <table class="table">
     <thead>
         <tr>
-            <th scope="col">Name
-            <th>
+            <th scope="col">Name</th>
             <th scope="col">Email</th>
             <th scope="col">Phone</th>
             <th scope="col">Message</th>

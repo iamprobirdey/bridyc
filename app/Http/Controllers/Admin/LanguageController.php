@@ -43,15 +43,6 @@ class LanguageController extends Controller
         return redirect()->back()->with('status', 'Succefully created the Language');
     }
 
-    public function delete($id)
-    {
-        $this->authorize('superadmin', auth()->user());
-
-        $language = Language::findorFail($id);
-        $language->delete();
-        return redirect()->back()->with('status', 'Deleted succefully');
-    }
-
     public function updating($id)
     {
         $this->authorize('superadmin', auth()->user());
@@ -60,13 +51,18 @@ class LanguageController extends Controller
         return view('admin.language.updating', compact('language', $language));
     }
 
-    public function update(Languagevalidation $request, $id)
+    public function update(Request $request, $id)
     {
         $this->authorize('superadmin', auth()->user());
 
+        $request->validate([
+            'name' => 'required|string|unique:languages,name,' . $id,
+            'code' => 'required|string|unique:languages,name,' . $id
+        ]);
+
         $language = Language::findOrFail($id);
-        $language->name = $request->validated()['name'];
-        $language->code = $request->validated()['code'];
+        $language->name = $request->input('name');
+        $language->code = $request->input('code');
         $language->update();
         return redirect('/admin/language/updating/' . $id)->with('status', 'Succefully updated the Language');
     }

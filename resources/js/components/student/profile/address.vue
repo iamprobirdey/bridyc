@@ -2,28 +2,35 @@
   <div class="address">
     <div v-if="addressDataChecker" class="address-display">
       <div class="row mx-0">
-         <div class="col-sm-6">
-            <strong>Standard:</strong>
-            <span>{{userInformationData.standard.standard_name}}</span>
-         </div>
-         <div class="col-sm-6">
-           <strong>Locality/Village:</strong>
-           <span>{{userInformationData.village.name}}</span>
-         </div>
+        <div class="col-sm-6">
+          <strong>Standard:</strong>
+          <span>{{ userInformationData.standard.standard_name }}</span>
+        </div>
+        <div class="col-sm-6">
+          <strong>Locality/Village:</strong>
+          <span>{{ userInformationData.village.name }}</span>
+        </div>
       </div>
       <div class="row mx-0">
-           <div class="col-sm-6">
-               <strong>District:</strong>
-              <span>{{userInformationData.district.name}}</span>
-            </div>
-      
-           <div class="col-sm-6">
-                <strong>State:</strong>
-                <span>{{userInformationData.state.name}}</span> 
-           </div>
+        <div class="col-sm-6">
+          <strong>District:</strong>
+          <span>{{ userInformationData.district.name }}</span>
+        </div>
+
+        <div class="col-sm-6">
+          <strong>State:</strong>
+          <span>{{ userInformationData.state.name }}</span>
+        </div>
       </div>
 
-      <button class="btn edit-btn" @click="editAddress()" data-toggle="tooltip" title="Edit"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+      <button
+        class="btn edit-btn"
+        @click="editAddress()"
+        data-toggle="tooltip"
+        title="Edit"
+      >
+        <i class="fa fa-pencil" aria-hidden="true"></i>
+      </button>
     </div>
     <div v-if="!addressDataChecker">
       <form @submit.prevent="addressForm()">
@@ -60,7 +67,9 @@
 
         <div
           class="form-group row mx-2 mx-lg-5"
-          :class="{'has-error': errors.has('state') || serverErrors.state_id != '' }"
+          :class="{
+            'has-error': errors.has('state') || serverErrors.state_id != '',
+          }"
         >
           <label col="col-sm-3 col-form-label">STATE:</label>
           <select
@@ -93,7 +102,10 @@
 
         <div
           class="form-group row mx-2 mx-lg-5"
-          :class="{'has-error': errors.has('district') || serverErrors.district_id != '' }"
+          :class="{
+            'has-error':
+              errors.has('district') || serverErrors.district_id != '',
+          }"
         >
           <label col="col-sm-3 col-form-label">DISTRICT:</label>
           <select
@@ -205,7 +217,9 @@
             v-show="userInformationData != null"
             class="btn btn-warning"
             @click="cancelForm()"
-          >Cancel</button>
+          >
+            Cancel
+          </button>
           <button type="submit" class="btn btnsubmit mt-n2">Submit</button>
         </div>
       </form>
@@ -294,7 +308,6 @@ export default {
                 });
                 this.userInformationData = {};
                 this.userInformationData = response.data.userData;
-                console.log(this.userInformationData);
                 this.addressDataChecker = true;
               }
             })

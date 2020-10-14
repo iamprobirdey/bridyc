@@ -24,7 +24,8 @@ class UpdateBoardValidation extends FormRequest
     public function rules()
     {
         return [
-            'board' => 'required|string|unique:boards,name'
+            'board' => 'required|string|unique:boards,name',
+            'code' => 'required|string|unique:boards,code'
         ];
     }
 }

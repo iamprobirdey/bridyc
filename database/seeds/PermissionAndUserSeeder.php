@@ -71,18 +71,30 @@ class PermissionAndUserSeeder extends Seeder
 
         ]);
 
+        $user5 = User::create([
+            'name' => Str::random(10),
+            'email' => 'institute2@gmail.com',
+            'password' => '$2y$10$A5qfm/Ssy2JOTLf5PQKOxeIFrLTOUaK5nwONeWstGu07wQDAEciwK',
+            'username' => 'institute2',
+            'user_type' => 'institute',
+
+        ]);
+
         $user1->update(['email_verified_at' => Carbon::now()]);
         $user2->update(['email_verified_at' => Carbon::now()]);
         $user3->update(['email_verified_at' => Carbon::now()]);
         $user4->update(['email_verified_at' => Carbon::now()]);
+        $user5->update(['email_verified_at' => Carbon::now()]);
 
         $user1->assignRole('admin');
         $user2->assignRole('admin');
         $user3->assignRole('admin');
         $user4->assignRole('admin');
+        $user4->assignRole('institute');
 
         Country::create([
-            'name' => 'India'
+            'name' => 'India',
+            'code' => 'in'
         ]);
 
         State::create([
@@ -109,7 +121,8 @@ class PermissionAndUserSeeder extends Seeder
         ]);
 
         Standard::create([
-            'standard_name' => 'Class 1'
+            'standard_name' => 'Class 1',
+            'code' => 'class1'
         ]);
     }
 }

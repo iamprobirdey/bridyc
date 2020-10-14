@@ -2,7 +2,12 @@
   <div>
     <div v-if="subjectsEntryChecker">
       My Subjects:
-      <button class="btn mt-n2 edit-btn" @click="editTheSubject()" data-toggle="tooltip" title="Edit">
+      <button
+        class="btn mt-n2 edit-btn"
+        @click="editTheSubject()"
+        data-toggle="tooltip"
+        title="Edit"
+      >
         <i class="fa fa-pencil" aria-hidden="true"></i>
       </button>
       <!--div class="card bg-info mb-2" v-for="(subject,index) in studentssubjectData"
@@ -12,9 +17,13 @@
         </div>
       </div-->
       <div>
-      <button class="btn btn-sm btnsubjects m-1" v-for="(subject,index) in studentssubjectData" :key="index">
-                {{subject.subject.name}}
-      </button>
+        <button
+          class="btn btn-sm btnsubjects m-1"
+          v-for="(subject, index) in studentssubjectData"
+          :key="index"
+        >
+          {{ subject.subject.name }}
+        </button>
       </div>
     </div>
     <div v-if="!subjectsEntryChecker">
@@ -27,10 +36,18 @@
         tag-placeholder="Select classes of your subjects"
         :option-height="104"
       ></multiselect>
-      <span v-show="serverError != ''" class="text-danger text-center">{{ serverError }}</span>
-      <br>
+      <span v-show="serverError != ''" class="text-danger text-center">{{
+        serverError
+      }}</span>
+      <br />
       <button class="btn btn-warning" @click="cancelTheForm()">Cancel</button>
-      <button type="submit" class="btn btnsubmit mt-n2" @click="submitSubjectsData()">Submit</button>
+      <button
+        type="submit"
+        class="btn btnsubmit mt-n2"
+        @click="submitSubjectsData()"
+      >
+        Submit
+      </button>
     </div>
   </div>
 </template>
@@ -88,7 +105,6 @@ export default {
         this.value.map((item) => {
           subjectFormData.subject_id.push(item.id);
         });
-        console.log(subjectFormData);
         axios
           .post("/api/profile/edit/subject/" + this.userId, subjectFormData)
           .then((response) => {
@@ -134,7 +150,7 @@ export default {
           this.studentssubjectData.map((data) => {
             if (data.subject.name === item.name) {
               this.value.push(item);
-              this.selectedSubjectValueStored.push(data.subject.id);
+              //this.selectedSubjectValueStored.push(data.subject.id);
             }
           });
         });
