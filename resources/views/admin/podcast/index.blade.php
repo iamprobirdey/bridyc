@@ -15,7 +15,7 @@ best educational podcasts for college students, best career coaching podcast, be
 
 @section('adminContent')
 
-@if (session('delete'))
+@if (session('status'))
 <div class="alert alert-success">
     {{ session('status') }}
 </div>

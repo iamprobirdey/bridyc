@@ -46,7 +46,7 @@ trait ChannelAffair
 
     public function  userchannelrequest()
     {
-        return $this->hasMany(UserChannelRequest::class, 'channel_id', 'id');
+        return $this->hasMany(UserChannelRequest::class, 'channel_id', 'id')->where('request', '=', 'in-progress');
     }
 
     public function userinstitute()

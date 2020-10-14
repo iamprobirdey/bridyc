@@ -22,7 +22,7 @@ class User extends Authenticatable implements MustVerifyEmail
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'user_type', 'username', 'avatar'
+        'name', 'email', 'user_type', 'username', 'avatar', 'password'
     ];
 
     // protected static $logAttributes = [
@@ -52,6 +52,11 @@ class User extends Authenticatable implements MustVerifyEmail
     public function scopeUsername($query)
     {
         return $query->select('id', 'username');
+    }
+
+    public function scopeSpecific($query)
+    {
+        $query->select('name', 'email', 'avatar');
     }
 
     public function isUser()

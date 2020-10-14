@@ -87,7 +87,9 @@
             alt="Institute logo"
             class="img-fluid logoinstitute"
           />
-          <h1 class="ml-1 ml-sm-3 institle text-capitalize">{{ channelData.title }}</h1>
+          <h1 class="ml-1 ml-sm-3 institle text-capitalize">
+            {{ channelData.title }}
+          </h1>
         </div>
       </div>
 
@@ -317,7 +319,9 @@
                       <h4 class="card-title my-n1 text-capitalize">
                         {{ userData.name }}
                       </h4>
-                      <p class="card-text text-capitalize">Principal, {{ channel.title }}</p>
+                      <p class="card-text text-capitalize">
+                        Principal, {{ channel.title }}
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -385,7 +389,9 @@
                     "
                   />
                   <div class="card-body mt-n1">
-                    <h6 class="card-title my-n1 text-center">{{ teacher.user.name }}</h6>
+                    <h6 class="card-title my-n1 text-center">
+                      {{ teacher.user.name }}
+                    </h6>
                     <p class="card-text mx-n2 text-center">Qualification</p>
                   </div>
                 </div>
@@ -405,7 +411,13 @@
                     src="/images/electricity.svg"
                     alt="Electricity Image"
                   />
-                  Electricity:<strong class="ml-1">Yes</strong>
+                  Electricity:<strong class="ml-1">
+                    {{
+                      channelData.electricity != null
+                        ? channelData.electricity
+                        : "N/A"
+                    }}
+                  </strong>
                 </p>
                 <p>
                   <img
@@ -413,11 +425,21 @@
                     src="/images/computer.svg"
                     alt="computer Image"
                   />
-                  Computer:<strong class="ml-1">Yes</strong>
+                  Computer:<strong class="ml-1"
+                    >Y
+
+                    {{
+                      channelData.computer_learning != null
+                        ? channelData.computer_learning
+                        : "N/A"
+                    }}
+                  </strong>
                 </p>
                 <p>
                   <img class="mr-2" src="/images/fence.svg" alt="fence Image" />
-                  Boundary:<strong class="ml-1">Yes</strong>
+                  Boundary:<strong class="ml-1">
+                    {{ channelData.wall != null ? channelData.wall : "N/A" }}
+                  </strong>
                 </p>
               </div>
               <div class="col-sm-4">
@@ -427,7 +449,13 @@
                     src="/images/playground.svg"
                     alt="playground Image"
                   />
-                  Playground:<strong class="ml-1">Yes</strong>
+                  Playground:<strong class="ml-1">
+                    {{
+                      channelData.playground != null
+                        ? channelData.playground
+                        : "N/A"
+                    }}
+                  </strong>
                 </p>
                 <p>
                   <img
@@ -435,11 +463,21 @@
                     src="/images/library.svg"
                     alt="Library Image"
                   />
-                  Library:<strong class="ml-1">Yes</strong>
+                  Library:<strong class="ml-1">
+                    {{
+                      channelData.library != null ? channelData.library : "N/A"
+                    }}
+                  </strong>
                 </p>
                 <p>
                   <img class="mr-2" src="/images/book.svg" alt="Books Image" />
-                  No of Books:<strong class="ml-1">300</strong>
+                  No of Books:<strong class="ml-1">
+                    {{
+                      channelData.no_of_books != null
+                        ? channelData.no_of_books
+                        : "N/A"
+                    }}
+                  </strong>
                 </p>
               </div>
               <div class="col-sm-4">
@@ -449,11 +487,21 @@
                     src="/images/hostel.svg"
                     alt="Hostel Image"
                   />
-                  Hostel:<strong class="ml-1">Yes</strong>
+                  Hostel:<strong class="ml-1">
+                    {{
+                      channelData.hostel != null ? channelData.hostel : "N/A"
+                    }}
+                  </strong>
                 </p>
                 <p>
                   <img class="mr-2" src="/images/bus.svg" alt="Bus Image" /> Bus
-                  Services:<strong class="ml-1">Yes</strong>
+                  Services:<strong class="ml-1">
+                    {{
+                      channelData.bus_services != null
+                        ? channelData.bus_services
+                        : "N/A"
+                    }}
+                  </strong>
                 </p>
               </div>
             </div>
@@ -479,6 +527,7 @@ export default {
       userID: "",
       isTeacher: false,
       channelRequestDecider: "",
+      channelFacker: false,
     };
   },
   props: {
@@ -553,23 +602,26 @@ export default {
       }
       if (this.isTeacher && this.currentuserData == null) {
         this.channelRequestDecider = "can-request";
+        this.channelFacker = true;
       }
     },
     requestForChannel() {
-      console.log("clicked request");
-      axios
-        .get(
-          "/api/teacher/request/for/channel/" +
-            this.userID +
-            "/" +
-            this.channelData.id
-        )
-        .then((response) => {
-          if (response.data.message) {
-            this.channelRequestDecider = "in-progress";
-          }
-        })
-        .catch((errors) => {});
+      if (this.channelFacker) {
+        axios
+          .get(
+            "/api/teacher/request/for/channel/" +
+              this.userID +
+              "/" +
+              this.channelData.id
+          )
+          .then((response) => {
+            if (response.data.message) {
+              this.channelRequestDecider = "in-progress";
+              this.channelFacker = false;
+            }
+          })
+          .catch((errors) => {});
+      }
     },
     getChannelSession() {
       if (sessionStorage.getItem([this.sessionUrl]) != this.channelData.id) {

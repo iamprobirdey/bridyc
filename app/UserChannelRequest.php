@@ -10,7 +10,7 @@ class UserChannelRequest extends Model
 
     public function user()
     {
-        return $this->belongsTo(User::class, 'user_id', 'id');
+        return $this->belongsTo(User::class, 'user_id', 'id')->select('id', 'name', 'email', 'avatar');
     }
 
     public function channel()

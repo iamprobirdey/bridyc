@@ -71,7 +71,7 @@ class PermissionAndUserSeeder extends Seeder
         ]);
         $user5 = User::create([
             'name' => Str::random(10),
-            'email' => 'pisaxsd@mailinator.com',
+            'email' => 'institute@gmail.com',
             'password' => '$2y$10$A5qfm/Ssy2JOTLf5PQKOxeIFrLTOUaK5nwONeWstGu07wQDAEciwK',
             'username' => 'pisaxsd',
             'user_type' => 'institute',
@@ -79,7 +79,7 @@ class PermissionAndUserSeeder extends Seeder
         ]);
         $user6 = User::create([
             'name' => Str::random(10),
-            'email' => 'pisax@mailinator.com',
+            'email' => 'student@gmail.com',
             'password' => '$2y$10$A5qfm/Ssy2JOTLf5PQKOxeIFrLTOUaK5nwONeWstGu07wQDAEciwK',
             'username' => 'pisax',
             'user_type' => 'student',
@@ -87,7 +87,7 @@ class PermissionAndUserSeeder extends Seeder
         ]);
         $user7 = User::create([
             'name' => Str::random(10),
-            'email' => 'pisasdsx@mailinator.com',
+            'email' => 'teacher@gmail.com',
             'password' => '$2y$10$A5qfm/Ssy2JOTLf5PQKOxeIFrLTOUaK5nwONeWstGu07wQDAEciwK',
             'username' => 'pisasdsx',
             'user_type' => 'teacher',

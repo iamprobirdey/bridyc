@@ -15,9 +15,12 @@
             <div class="col-sm-4 mb-4">
                 <h5>Social</h5>
                 <div class="listsocial d-flex flex-column">
-                    <a href="https://www.facebook.com/bridyc"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
-                    <a href="https://www.instagram.com/bridyc_official/?hl=en"><i class="fa fa-instagram" aria-hidden="true"></i></a>
-                    <a href="https://www.youtube.com/channel/UCMNZ_Y-eBM1rteVfLMqHH7A"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                    <a target="_blank" href="https://www.facebook.com/bridyc"><i class="fa fa-facebook-official"
+                            aria-hidden="true"></i></a>
+                    <a target="_blank" href="https://www.instagram.com/bridyc_official/?hl=en"><i
+                            class="fa fa-instagram" aria-hidden="true"></i></a>
+                    <a target="_blank" href="https://www.youtube.com/channel/UCMNZ_Y-eBM1rteVfLMqHH7A"><i
+                            class="fa fa-youtube-play" aria-hidden="true"></i></a>
                 </div>
             </div>
             <br>

@@ -32,15 +32,15 @@ class PodcastController extends Controller
     public function store(Request $request)
     {
         $this->authorize('superadmin', auth()->user());
+        $request->validate([
+            'image_path' => 'required|image|mimes:jpeg,png,jpg|max:2048',
+            'thumbnail' => 'required|string',
+            'name' => 'required|string',
+            'designation' => 'required|string',
+            'summary' => 'required|string',
+            'youtube_link' => 'required|string|url'
+        ]);
         try {
-            $validated = $request->validate([
-                'image_path' => 'required|image|mimes:jpeg,png,jpg|max:2048',
-                'thumbnail' => 'required|string',
-                'name' => 'required|string',
-                'designation' => 'required|string',
-                'summary' => 'required|string',
-                'youtube_link' => 'required|string|url'
-            ]);
             $time = Carbon::now('Asia/Kolkata');
             $imageName = $time->year . $time->month . $time->day . ($time->micro + mt_rand(11111, 99999)) . '.webp';
             $realImage = Image::make($request->file('image_path'));
@@ -77,13 +77,14 @@ class PodcastController extends Controller
 
             Podcast::create([
                 'image_path'  => $imageName,
-                'thumbnail' => $validated['thumbnail'],
-                'name' => $validated['name'],
-                'designation' => $validated['designation'],
-                'summary' => $validated['summary'],
-                'youtube_link' => $validated['youtube_link']
+                'thumbnail' => $request->input('thumbnail'),
+                'name' => $request->input('name'),
+                'designation' => $request->input('designation'),
+                'summary' => $request->input('summary'),
+                'youtube_link' => $request->input('youtube_link')
             ]);
             return redirect()->back()->with('status', 'Podcast Created succefully');
+            dd($request->all());
         } catch (\Throwable $th) {
             report($th);
         }

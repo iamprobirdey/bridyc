@@ -85,7 +85,9 @@
             alt="Institute logo"
             class="logoinstitute"
           />
-          <h1 class="ml-1 ml-sm-4 institle text-capitalize">{{ channelData.title }}</h1>
+          <h1 class="ml-1 ml-sm-4 institle text-capitalize">
+            {{ channelData.title }}
+          </h1>
         </div>
       </div>
 
@@ -163,7 +165,9 @@
             <br />
             <!-- home content from  below STARTS-->
             <div class="description mb-5 px-0">
-              <h2 class="mb-4 text-uppercase">Welcome to {{ channelData.title }}</h2>
+              <h2 class="mb-4 text-uppercase">
+                Welcome to {{ channelData.title }}
+              </h2>
               <p>
                 {{
                   channelData.description != null ? channelData.description : ""
@@ -175,14 +179,20 @@
               <div class="card notice shadow-sm border-0 col-md-5 col-lg-4 px-0">
                 <div class="card-body px-0">
                   <div class="card-title my-n2">
-                    <h5 class="text-uppercase text-center">News and Notifications</h5>
+                    <h5 class="text-uppercase text-center">
+                      News and Notifications
+                    </h5>
                   </div>
                   <hr class="w-25" />
-                    <div class="mt-5">
-                      <p
-                        v-for="(notification,
-                        index) in channelData.notification"
-                        :key="index"
+                  <div class="mt-5">
+                    <p
+                      v-for="(notification, index) in channelData.notification"
+                      :key="index"
+                    >
+                      <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                      {{ notification.notify }}
+                      <span class="badge badge-info" v-if="index === 0"
+                        >New</span
                       >
                         {{ notification.notify }}
                         <span class="badge badge-info" v-if="index === 0"
@@ -251,7 +261,7 @@
             <!-- home content from below ends-->
           </div>
 
-          <div id="about" class="container-fluid tab-pane fade">      
+          <div id="about" class="container-fluid tab-pane fade">
             <div class="princidiv mb-5">
               <div class="d-flex">
                 <img class="mt-2" src="/images/checkmark.svg" />
@@ -275,53 +285,61 @@
                       <h4 class="card-title my-n1 text-capitalize">
                         {{ userData.name }}
                       </h4>
-                      <p class="card-text text-capitalize">Principal, {{ channel.title }}</p>
+                      <p class="card-text text-capitalize">
+                        Principal, {{ channel.title }}
+                      </p>
                     </div>
                   </div>
                 </div>
               </div>
               <div>
-            <h6 class="text-uppercase mt-2 mission-vision">Mission & Vision</h6>
-            <p>
-              {{
-                userData.vission != null
-                  ? userData.vission
-                  : "Vission from Institute not provided"
-              }}
-            </p>
+                <h6 class="text-uppercase mt-2 mission-vision">
+                  Mission & Vision
+                </h6>
+                <p>
+                  {{
+                    userData.vission != null
+                      ? userData.vission
+                      : "Vission from Institute not provided"
+                  }}
+                </p>
+              </div>
             </div>
-          </div>
-            
+
             <div class="container-fluid mt-5">
               <h2 class="text-uppercase">Additional Information</h2>
               <hr class="mt-n2" />
               <div class="insadditionalinfo mt-4">
-                
-                  <p>
-                    <img src="/images/address.svg" alt="address icon" /> Address: 
-                    {{ channelData.district.name }},
-                    {{ channelData.state.name }}
-                  </p>
+                <p>
+                  <img src="/images/address.svg" alt="address icon" /> Address:
+                  {{ channelData.district.name }},
+                  {{ channelData.state.name }}
+                </p>
 
-                  <p>
-                  <img src="/images/mailbox.svg" alt="pin code icon" /> Pin Code: 
+                <p>
+                  <img src="/images/mailbox.svg" alt="pin code icon" /> Pin
+                  Code:
                   {{ userData.verification.pin }}
-                  </p>
-                  <p>
-                   <img src="/images/translation.svg" alt="language icon" />
-                   Medium: {{ channelData.village.name }}
-                   </p>
-                   <p>
-                    <img src="/images/grade.svg" alt="Exam board icon" /> Board: xxxx
-                   </p>
-                   
-                   <p><img src="/images/deed.svg" alt="ownership icon" /> Ownership: 
-                  {{ userData.verification.ownership }}
-                   </p>
+                </p>
+                <p>
+                  <img src="/images/translation.svg" alt="language icon" />
+                  Medium: {{ channelData.village.name }}
+                </p>
+                <p>
+                  <img src="/images/grade.svg" alt="Exam board icon" /> Board:
+                  xxxx
+                </p>
 
-                  <p><img src="/images/calendar.svg" alt="calender icon" /> Founded: 
+                <p>
+                  <img src="/images/deed.svg" alt="ownership icon" /> Ownership:
+                  {{ userData.verification.ownership }}
+                </p>
+
+                <p>
+                  <img src="/images/calendar.svg" alt="calender icon" />
+                  Founded:
                   {{ userData.verification.founded }}
-                  </p>
+                </p>
               </div>
             </div>
           </div>
@@ -344,7 +362,9 @@
                     "
                   />
                   <div class="card-body mt-n1">
-                    <h6 class="card-title my-n1 text-center">{{ teacher.user.name }}</h6>
+                    <h6 class="card-title my-n1 text-center">
+                      {{ teacher.user.name }}
+                    </h6>
                     <p class="card-text mx-n2 text-center">Qualification</p>
                   </div>
                 </div>
@@ -355,7 +375,7 @@
             <br />
             <h2 class="text-uppercase">Infrastructure</h2>
             <hr class="mt-n2" />
-            
+
             <div class="row facilitydiv mt-5 py-3">
               <div class="col-sm-4">
                 <p>
@@ -364,7 +384,13 @@
                     src="/images/electricity.svg"
                     alt="Electricity Image"
                   />
-                  Electricity:<strong class="ml-1">Yes</strong>
+                  Electricity:<strong class="ml-1">
+                    {{
+                      channelData.electricity != null
+                        ? channelData.electricity
+                        : "N/A"
+                    }}
+                  </strong>
                 </p>
                 <p>
                   <img
@@ -372,11 +398,19 @@
                     src="/images/computer.svg"
                     alt="computer Image"
                   />
-                  Computer:<strong class="ml-1">Yes</strong>
+                  Computer:<strong class="ml-1">
+                    {{
+                      channelData.computer_learning != null
+                        ? channelData.computer_learning
+                        : "N/A"
+                    }}
+                  </strong>
                 </p>
                 <p>
                   <img class="mr-2" src="/images/fence.svg" alt="fence Image" />
-                  Boundary:<strong class="ml-1">Yes</strong>
+                  Boundary:<strong class="ml-1">
+                    {{ channelData.wall != null ? channelData.wall : "N/A" }}
+                  </strong>
                 </p>
               </div>
               <div class="col-sm-4">
@@ -386,7 +420,13 @@
                     src="/images/playground.svg"
                     alt="playground Image"
                   />
-                  Playground:<strong class="ml-1">Yes</strong>
+                  Playground:<strong class="ml-1">
+                    {{
+                      channelData.playground != null
+                        ? channelData.playground
+                        : "N/A"
+                    }}
+                  </strong>
                 </p>
                 <p>
                   <img
@@ -394,11 +434,21 @@
                     src="/images/library.svg"
                     alt="Library Image"
                   />
-                  Library:<strong class="ml-1">Yes</strong>
+                  Library:<strong class="ml-1">
+                    {{
+                      channelData.library != null ? channelData.library : "N/A"
+                    }}
+                  </strong>
                 </p>
                 <p>
                   <img class="mr-2" src="/images/book.svg" alt="Books Image" />
-                  No of Books:<strong class="ml-1">300</strong>
+                  No of Books:<strong class="ml-1">
+                    {{
+                      channelData.no_of_books != null
+                        ? channelData.no_of_books
+                        : "N/A"
+                    }}
+                  </strong>
                 </p>
               </div>
               <div class="col-sm-4">
@@ -408,11 +458,21 @@
                     src="/images/hostel.svg"
                     alt="Hostel Image"
                   />
-                  Hostel:<strong class="ml-1">Yes</strong>
+                  Hostel:<strong class="ml-1">
+                    {{
+                      channelData.hostel != null ? channelData.hostel : "N/A"
+                    }}
+                  </strong>
                 </p>
                 <p>
                   <img class="mr-2" src="/images/bus.svg" alt="Bus Image" /> Bus
-                  Services:<strong class="ml-1">Yes</strong>
+                  Services:<strong class="ml-1">
+                    {{
+                      channelData.bus_services != null
+                        ? channelData.bus_services
+                        : "N/A"
+                    }}
+                  </strong>
                 </p>
               </div>
             </div>

@@ -521,6 +521,66 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -1136,7 +1196,9 @@ var render = function() {
             }),
             _vm._v(" "),
             _c("h1", { staticClass: "ml-1 ml-sm-4 institle text-capitalize" }, [
-              _vm._v(_vm._s(_vm.channelData.title))
+              _vm._v(
+                "\n          " + _vm._s(_vm.channelData.title) + "\n        "
+              )
             ])
           ])
         ]),
@@ -1268,7 +1330,11 @@ var render = function() {
                 _vm._v(" "),
                 _c("div", { staticClass: "description mb-5 px-0" }, [
                   _c("h2", { staticClass: "mb-4 text-uppercase" }, [
-                    _vm._v("Welcome to " + _vm._s(_vm.channelData.title))
+                    _vm._v(
+                      "\n              Welcome to " +
+                        _vm._s(_vm.channelData.title) +
+                        "\n            "
+                    )
                   ]),
                   _vm._v(" "),
                   _c("p", [
@@ -1305,6 +1371,22 @@ var render = function() {
                             index
                           ) {
                             return _c("p", { key: index }, [
+                              _c("i", {
+                                staticClass: "fa fa-long-arrow-right",
+                                attrs: { "aria-hidden": "true" }
+                              }),
+                              _vm._v(
+                                "\n                    " +
+                                  _vm._s(notification.notify) +
+                                  "\n                    "
+                              ),
+                              index === 0
+                                ? _c(
+                                    "span",
+                                    { staticClass: "badge badge-info" },
+                                    [_vm._v("New")]
+                                  )
+                                : _vm._e(),
                               _vm._v(
                                 "\n                      " +
                                   _vm._s(notification.notify) +
@@ -1477,7 +1559,13 @@ var render = function() {
                           _c(
                             "p",
                             { staticClass: "card-text text-capitalize" },
-                            [_vm._v("Principal, " + _vm._s(_vm.channel.title))]
+                            [
+                              _vm._v(
+                                "\n                      Principal, " +
+                                  _vm._s(_vm.channel.title) +
+                                  "\n                    "
+                              )
+                            ]
                           )
                         ])
                       ])
@@ -1488,18 +1576,22 @@ var render = function() {
                     _c(
                       "h6",
                       { staticClass: "text-uppercase mt-2 mission-vision" },
-                      [_vm._v("Mission & Vision")]
+                      [
+                        _vm._v(
+                          "\n                Mission & Vision\n              "
+                        )
+                      ]
                     ),
                     _vm._v(" "),
                     _c("p", [
                       _vm._v(
-                        "\n            " +
+                        "\n                " +
                           _vm._s(
                             _vm.userData.vission != null
                               ? _vm.userData.vission
                               : "Vission from Institute not provided"
                           ) +
-                          "\n          "
+                          "\n              "
                       )
                     ])
                   ])
@@ -1521,11 +1613,11 @@ var render = function() {
                         }
                       }),
                       _vm._v(
-                        " Address: \n                  " +
+                        " Address:\n                " +
                           _vm._s(_vm.channelData.district.name) +
-                          ",\n                  " +
+                          ",\n                " +
                           _vm._s(_vm.channelData.state.name) +
-                          "\n                "
+                          "\n              "
                       )
                     ]),
                     _vm._v(" "),
@@ -1537,9 +1629,9 @@ var render = function() {
                         }
                       }),
                       _vm._v(
-                        " Pin Code: \n                " +
+                        " Pin\n                Code:\n                " +
                           _vm._s(_vm.userData.verification.pin) +
-                          "\n                "
+                          "\n              "
                       )
                     ]),
                     _vm._v(" "),
@@ -1551,9 +1643,9 @@ var render = function() {
                         }
                       }),
                       _vm._v(
-                        "\n                 Medium: " +
+                        "\n                Medium: " +
                           _vm._s(_vm.channelData.village.name) +
-                          "\n                 "
+                          "\n              "
                       )
                     ]),
                     _vm._v(" "),
@@ -1567,9 +1659,9 @@ var render = function() {
                         }
                       }),
                       _vm._v(
-                        " Ownership: \n                " +
+                        " Ownership:\n                " +
                           _vm._s(_vm.userData.verification.ownership) +
-                          "\n                 "
+                          "\n              "
                       )
                     ]),
                     _vm._v(" "),
@@ -1581,9 +1673,9 @@ var render = function() {
                         }
                       }),
                       _vm._v(
-                        " Founded: \n                " +
+                        "\n                Founded:\n                " +
                           _vm._s(_vm.userData.verification.founded) +
-                          "\n                "
+                          "\n              "
                       )
                     ])
                   ])
@@ -1631,7 +1723,13 @@ var render = function() {
                             _c(
                               "h6",
                               { staticClass: "card-title my-n1 text-center" },
-                              [_vm._v(_vm._s(teacher.user.name))]
+                              [
+                                _vm._v(
+                                  "\n                    " +
+                                    _vm._s(teacher.user.name) +
+                                    "\n                  "
+                                )
+                              ]
                             ),
                             _vm._v(" "),
                             _c(
@@ -1649,7 +1747,197 @@ var render = function() {
               ]
             ),
             _vm._v(" "),
-            _vm._m(5)
+            _c(
+              "div",
+              {
+                staticClass: "container-fluid tab-pane fade",
+                attrs: { id: "facility" }
+              },
+              [
+                _c("br"),
+                _vm._v(" "),
+                _c("h2", { staticClass: "text-uppercase" }, [
+                  _vm._v("Infrastructure")
+                ]),
+                _vm._v(" "),
+                _c("hr", { staticClass: "mt-n2" }),
+                _vm._v(" "),
+                _c("div", { staticClass: "row facilitydiv mt-5 py-3" }, [
+                  _c("div", { staticClass: "col-sm-4" }, [
+                    _c("p", [
+                      _c("img", {
+                        staticClass: "mr-2",
+                        attrs: {
+                          src: "/images/electricity.svg",
+                          alt: "Electricity Image"
+                        }
+                      }),
+                      _vm._v("\n                Electricity:"),
+                      _c("strong", { staticClass: "ml-1" }, [
+                        _vm._v(
+                          "\n                  " +
+                            _vm._s(
+                              _vm.channelData.electricity != null
+                                ? _vm.channelData.electricity
+                                : "N/A"
+                            ) +
+                            "\n                "
+                        )
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _c("img", {
+                        staticClass: "mr-2",
+                        attrs: {
+                          src: "/images/computer.svg",
+                          alt: "computer Image"
+                        }
+                      }),
+                      _vm._v("\n                Computer:"),
+                      _c("strong", { staticClass: "ml-1" }, [
+                        _vm._v(
+                          "\n                  " +
+                            _vm._s(
+                              _vm.channelData.computer_learning != null
+                                ? _vm.channelData.computer_learning
+                                : "N/A"
+                            ) +
+                            "\n                "
+                        )
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _c("img", {
+                        staticClass: "mr-2",
+                        attrs: { src: "/images/fence.svg", alt: "fence Image" }
+                      }),
+                      _vm._v("\n                Boundary:"),
+                      _c("strong", { staticClass: "ml-1" }, [
+                        _vm._v(
+                          "\n                  " +
+                            _vm._s(
+                              _vm.channelData.wall != null
+                                ? _vm.channelData.wall
+                                : "N/A"
+                            ) +
+                            "\n                "
+                        )
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-sm-4" }, [
+                    _c("p", [
+                      _c("img", {
+                        staticClass: "mr-2",
+                        attrs: {
+                          src: "/images/playground.svg",
+                          alt: "playground Image"
+                        }
+                      }),
+                      _vm._v("\n                Playground:"),
+                      _c("strong", { staticClass: "ml-1" }, [
+                        _vm._v(
+                          "\n                  " +
+                            _vm._s(
+                              _vm.channelData.playground != null
+                                ? _vm.channelData.playground
+                                : "N/A"
+                            ) +
+                            "\n                "
+                        )
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _c("img", {
+                        staticClass: "mr-2",
+                        attrs: {
+                          src: "/images/library.svg",
+                          alt: "Library Image"
+                        }
+                      }),
+                      _vm._v("\n                Library:"),
+                      _c("strong", { staticClass: "ml-1" }, [
+                        _vm._v(
+                          "\n                  " +
+                            _vm._s(
+                              _vm.channelData.library != null
+                                ? _vm.channelData.library
+                                : "N/A"
+                            ) +
+                            "\n                "
+                        )
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _c("img", {
+                        staticClass: "mr-2",
+                        attrs: { src: "/images/book.svg", alt: "Books Image" }
+                      }),
+                      _vm._v("\n                No of Books:"),
+                      _c("strong", { staticClass: "ml-1" }, [
+                        _vm._v(
+                          "\n                  " +
+                            _vm._s(
+                              _vm.channelData.no_of_books != null
+                                ? _vm.channelData.no_of_books
+                                : "N/A"
+                            ) +
+                            "\n                "
+                        )
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-sm-4" }, [
+                    _c("p", [
+                      _c("img", {
+                        staticClass: "mr-2",
+                        attrs: {
+                          src: "/images/hostel.svg",
+                          alt: "Hostel Image"
+                        }
+                      }),
+                      _vm._v("\n                Hostel:"),
+                      _c("strong", { staticClass: "ml-1" }, [
+                        _vm._v(
+                          "\n                  " +
+                            _vm._s(
+                              _vm.channelData.hostel != null
+                                ? _vm.channelData.hostel
+                                : "N/A"
+                            ) +
+                            "\n                "
+                        )
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _c("img", {
+                        staticClass: "mr-2",
+                        attrs: { src: "/images/bus.svg", alt: "Bus Image" }
+                      }),
+                      _vm._v(" Bus\n                Services:"),
+                      _c("strong", { staticClass: "ml-1" }, [
+                        _vm._v(
+                          "\n                  " +
+                            _vm._s(
+                              _vm.channelData.bus_services != null
+                                ? _vm.channelData.bus_services
+                                : "N/A"
+                            ) +
+                            "\n                "
+                        )
+                      ])
+                    ])
+                  ])
+                ])
+              ]
+            )
           ])
         ])
       ]
@@ -1717,7 +2005,9 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "card-title my-n2" }, [
       _c("h5", { staticClass: "text-uppercase text-center" }, [
-        _vm._v("News and Notifications")
+        _vm._v(
+          "\n                    News and Notifications\n                  "
+        )
       ])
     ])
   },
@@ -1763,113 +2053,8 @@ var staticRenderFns = [
       _c("img", {
         attrs: { src: "/images/grade.svg", alt: "Exam board icon" }
       }),
-      _vm._v(" Board: xxxx\n                 ")
+      _vm._v(" Board:\n                xxxx\n              ")
     ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass: "container-fluid tab-pane fade",
-        attrs: { id: "facility" }
-      },
-      [
-        _c("br"),
-        _vm._v(" "),
-        _c("h2", { staticClass: "text-uppercase" }, [_vm._v("Infrastructure")]),
-        _vm._v(" "),
-        _c("hr", { staticClass: "mt-n2" }),
-        _vm._v(" "),
-        _c("div", { staticClass: "row facilitydiv mt-5 py-3" }, [
-          _c("div", { staticClass: "col-sm-4" }, [
-            _c("p", [
-              _c("img", {
-                staticClass: "mr-2",
-                attrs: {
-                  src: "/images/electricity.svg",
-                  alt: "Electricity Image"
-                }
-              }),
-              _vm._v("\n                Electricity:"),
-              _c("strong", { staticClass: "ml-1" }, [_vm._v("Yes")])
-            ]),
-            _vm._v(" "),
-            _c("p", [
-              _c("img", {
-                staticClass: "mr-2",
-                attrs: { src: "/images/computer.svg", alt: "computer Image" }
-              }),
-              _vm._v("\n                Computer:"),
-              _c("strong", { staticClass: "ml-1" }, [_vm._v("Yes")])
-            ]),
-            _vm._v(" "),
-            _c("p", [
-              _c("img", {
-                staticClass: "mr-2",
-                attrs: { src: "/images/fence.svg", alt: "fence Image" }
-              }),
-              _vm._v("\n                Boundary:"),
-              _c("strong", { staticClass: "ml-1" }, [_vm._v("Yes")])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-sm-4" }, [
-            _c("p", [
-              _c("img", {
-                staticClass: "mr-2",
-                attrs: {
-                  src: "/images/playground.svg",
-                  alt: "playground Image"
-                }
-              }),
-              _vm._v("\n                Playground:"),
-              _c("strong", { staticClass: "ml-1" }, [_vm._v("Yes")])
-            ]),
-            _vm._v(" "),
-            _c("p", [
-              _c("img", {
-                staticClass: "mr-2",
-                attrs: { src: "/images/library.svg", alt: "Library Image" }
-              }),
-              _vm._v("\n                Library:"),
-              _c("strong", { staticClass: "ml-1" }, [_vm._v("Yes")])
-            ]),
-            _vm._v(" "),
-            _c("p", [
-              _c("img", {
-                staticClass: "mr-2",
-                attrs: { src: "/images/book.svg", alt: "Books Image" }
-              }),
-              _vm._v("\n                No of Books:"),
-              _c("strong", { staticClass: "ml-1" }, [_vm._v("300")])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-sm-4" }, [
-            _c("p", [
-              _c("img", {
-                staticClass: "mr-2",
-                attrs: { src: "/images/hostel.svg", alt: "Hostel Image" }
-              }),
-              _vm._v("\n                Hostel:"),
-              _c("strong", { staticClass: "ml-1" }, [_vm._v("Yes")])
-            ]),
-            _vm._v(" "),
-            _c("p", [
-              _c("img", {
-                staticClass: "mr-2",
-                attrs: { src: "/images/bus.svg", alt: "Bus Image" }
-              }),
-              _vm._v(" Bus\n                Services:"),
-              _c("strong", { staticClass: "ml-1" }, [_vm._v("Yes")])
-            ])
-          ])
-        ])
-      ]
-    )
   }
 ]
 render._withStripped = true

@@ -562,6 +562,54 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -574,7 +622,8 @@ __webpack_require__.r(__webpack_exports__);
       sessionUrl: window.location.pathname.split("/")[2],
       userID: "",
       isTeacher: false,
-      channelRequestDecider: ""
+      channelRequestDecider: "",
+      channelFacker: false
     };
   },
   props: {
@@ -628,17 +677,20 @@ __webpack_require__.r(__webpack_exports__);
 
       if (this.isTeacher && this.currentuserData == null) {
         this.channelRequestDecider = "can-request";
+        this.channelFacker = true;
       }
     },
     requestForChannel: function requestForChannel() {
       var _this = this;
 
-      console.log("clicked request");
-      axios.get("/api/teacher/request/for/channel/" + this.userID + "/" + this.channelData.id).then(function (response) {
-        if (response.data.message) {
-          _this.channelRequestDecider = "in-progress";
-        }
-      })["catch"](function (errors) {});
+      if (this.channelFacker) {
+        axios.get("/api/teacher/request/for/channel/" + this.userID + "/" + this.channelData.id).then(function (response) {
+          if (response.data.message) {
+            _this.channelRequestDecider = "in-progress";
+            _this.channelFacker = false;
+          }
+        })["catch"](function (errors) {});
+      }
     },
     getChannelSession: function getChannelSession() {
       if (sessionStorage.getItem([this.sessionUrl]) != this.channelData.id) {
@@ -1242,7 +1294,9 @@ var render = function() {
           }),
           _vm._v(" "),
           _c("h1", { staticClass: "ml-1 ml-sm-3 institle text-capitalize" }, [
-            _vm._v(_vm._s(_vm.channelData.title))
+            _vm._v(
+              "\n            " + _vm._s(_vm.channelData.title) + "\n          "
+            )
           ])
         ])
       ]),
@@ -1627,7 +1681,11 @@ var render = function() {
                         ),
                         _vm._v(" "),
                         _c("p", { staticClass: "card-text text-capitalize" }, [
-                          _vm._v("Principal, " + _vm._s(_vm.channel.title))
+                          _vm._v(
+                            "\n                        Principal, " +
+                              _vm._s(_vm.channel.title) +
+                              "\n                      "
+                          )
                         ])
                       ])
                     ])
@@ -1773,7 +1831,13 @@ var render = function() {
                           _c(
                             "h6",
                             { staticClass: "card-title my-n1 text-center" },
-                            [_vm._v(_vm._s(teacher.user.name))]
+                            [
+                              _vm._v(
+                                "\n                      " +
+                                  _vm._s(teacher.user.name) +
+                                  "\n                    "
+                              )
+                            ]
                           ),
                           _vm._v(" "),
                           _c(
@@ -1791,7 +1855,194 @@ var render = function() {
             ]
           ),
           _vm._v(" "),
-          _vm._m(5)
+          _c(
+            "div",
+            {
+              staticClass: "container-fluid tab-pane fade",
+              attrs: { id: "facility" }
+            },
+            [
+              _c("br"),
+              _vm._v(" "),
+              _c("h2", { staticClass: "text-uppercase" }, [
+                _vm._v("Infrastructure")
+              ]),
+              _vm._v(" "),
+              _c("hr", { staticClass: "mt-n2" }),
+              _vm._v(" "),
+              _c("div", { staticClass: "row facilitydiv py-3 mt-5" }, [
+                _c("div", { staticClass: "col-sm-4" }, [
+                  _c("p", [
+                    _c("img", {
+                      staticClass: "mr-2",
+                      attrs: {
+                        src: "/images/electricity.svg",
+                        alt: "Electricity Image"
+                      }
+                    }),
+                    _vm._v("\n                  Electricity:"),
+                    _c("strong", { staticClass: "ml-1" }, [
+                      _vm._v(
+                        "\n                    " +
+                          _vm._s(
+                            _vm.channelData.electricity != null
+                              ? _vm.channelData.electricity
+                              : "N/A"
+                          ) +
+                          "\n                  "
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _c("img", {
+                      staticClass: "mr-2",
+                      attrs: {
+                        src: "/images/computer.svg",
+                        alt: "computer Image"
+                      }
+                    }),
+                    _vm._v("\n                  Computer:"),
+                    _c("strong", { staticClass: "ml-1" }, [
+                      _vm._v(
+                        "Y\n\n                    " +
+                          _vm._s(
+                            _vm.channelData.computer_learning != null
+                              ? _vm.channelData.computer_learning
+                              : "N/A"
+                          ) +
+                          "\n                  "
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _c("img", {
+                      staticClass: "mr-2",
+                      attrs: { src: "/images/fence.svg", alt: "fence Image" }
+                    }),
+                    _vm._v("\n                  Boundary:"),
+                    _c("strong", { staticClass: "ml-1" }, [
+                      _vm._v(
+                        "\n                    " +
+                          _vm._s(
+                            _vm.channelData.wall != null
+                              ? _vm.channelData.wall
+                              : "N/A"
+                          ) +
+                          "\n                  "
+                      )
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-sm-4" }, [
+                  _c("p", [
+                    _c("img", {
+                      staticClass: "mr-2",
+                      attrs: {
+                        src: "/images/playground.svg",
+                        alt: "playground Image"
+                      }
+                    }),
+                    _vm._v("\n                  Playground:"),
+                    _c("strong", { staticClass: "ml-1" }, [
+                      _vm._v(
+                        "\n                    " +
+                          _vm._s(
+                            _vm.channelData.playground != null
+                              ? _vm.channelData.playground
+                              : "N/A"
+                          ) +
+                          "\n                  "
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _c("img", {
+                      staticClass: "mr-2",
+                      attrs: {
+                        src: "/images/library.svg",
+                        alt: "Library Image"
+                      }
+                    }),
+                    _vm._v("\n                  Library:"),
+                    _c("strong", { staticClass: "ml-1" }, [
+                      _vm._v(
+                        "\n                    " +
+                          _vm._s(
+                            _vm.channelData.library != null
+                              ? _vm.channelData.library
+                              : "N/A"
+                          ) +
+                          "\n                  "
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _c("img", {
+                      staticClass: "mr-2",
+                      attrs: { src: "/images/book.svg", alt: "Books Image" }
+                    }),
+                    _vm._v("\n                  No of Books:"),
+                    _c("strong", { staticClass: "ml-1" }, [
+                      _vm._v(
+                        "\n                    " +
+                          _vm._s(
+                            _vm.channelData.no_of_books != null
+                              ? _vm.channelData.no_of_books
+                              : "N/A"
+                          ) +
+                          "\n                  "
+                      )
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "col-sm-4" }, [
+                  _c("p", [
+                    _c("img", {
+                      staticClass: "mr-2",
+                      attrs: { src: "/images/hostel.svg", alt: "Hostel Image" }
+                    }),
+                    _vm._v("\n                  Hostel:"),
+                    _c("strong", { staticClass: "ml-1" }, [
+                      _vm._v(
+                        "\n                    " +
+                          _vm._s(
+                            _vm.channelData.hostel != null
+                              ? _vm.channelData.hostel
+                              : "N/A"
+                          ) +
+                          "\n                  "
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _c("img", {
+                      staticClass: "mr-2",
+                      attrs: { src: "/images/bus.svg", alt: "Bus Image" }
+                    }),
+                    _vm._v(" Bus\n                  Services:"),
+                    _c("strong", { staticClass: "ml-1" }, [
+                      _vm._v(
+                        "\n                    " +
+                          _vm._s(
+                            _vm.channelData.bus_services != null
+                              ? _vm.channelData.bus_services
+                              : "N/A"
+                          ) +
+                          "\n                  "
+                      )
+                    ])
+                  ])
+                ])
+              ])
+            ]
+          )
         ])
       ])
     ]),
@@ -1910,111 +2161,6 @@ var staticRenderFns = [
       }),
       _vm._v(" Board:\n                  xxxx\n                ")
     ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "div",
-      {
-        staticClass: "container-fluid tab-pane fade",
-        attrs: { id: "facility" }
-      },
-      [
-        _c("br"),
-        _vm._v(" "),
-        _c("h2", { staticClass: "text-uppercase" }, [_vm._v("Infrastructure")]),
-        _vm._v(" "),
-        _c("hr", { staticClass: "mt-n2" }),
-        _vm._v(" "),
-        _c("div", { staticClass: "row facilitydiv py-3 mt-5" }, [
-          _c("div", { staticClass: "col-sm-4" }, [
-            _c("p", [
-              _c("img", {
-                staticClass: "mr-2",
-                attrs: {
-                  src: "/images/electricity.svg",
-                  alt: "Electricity Image"
-                }
-              }),
-              _vm._v("\n                  Electricity:"),
-              _c("strong", { staticClass: "ml-1" }, [_vm._v("Yes")])
-            ]),
-            _vm._v(" "),
-            _c("p", [
-              _c("img", {
-                staticClass: "mr-2",
-                attrs: { src: "/images/computer.svg", alt: "computer Image" }
-              }),
-              _vm._v("\n                  Computer:"),
-              _c("strong", { staticClass: "ml-1" }, [_vm._v("Yes")])
-            ]),
-            _vm._v(" "),
-            _c("p", [
-              _c("img", {
-                staticClass: "mr-2",
-                attrs: { src: "/images/fence.svg", alt: "fence Image" }
-              }),
-              _vm._v("\n                  Boundary:"),
-              _c("strong", { staticClass: "ml-1" }, [_vm._v("Yes")])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-sm-4" }, [
-            _c("p", [
-              _c("img", {
-                staticClass: "mr-2",
-                attrs: {
-                  src: "/images/playground.svg",
-                  alt: "playground Image"
-                }
-              }),
-              _vm._v("\n                  Playground:"),
-              _c("strong", { staticClass: "ml-1" }, [_vm._v("Yes")])
-            ]),
-            _vm._v(" "),
-            _c("p", [
-              _c("img", {
-                staticClass: "mr-2",
-                attrs: { src: "/images/library.svg", alt: "Library Image" }
-              }),
-              _vm._v("\n                  Library:"),
-              _c("strong", { staticClass: "ml-1" }, [_vm._v("Yes")])
-            ]),
-            _vm._v(" "),
-            _c("p", [
-              _c("img", {
-                staticClass: "mr-2",
-                attrs: { src: "/images/book.svg", alt: "Books Image" }
-              }),
-              _vm._v("\n                  No of Books:"),
-              _c("strong", { staticClass: "ml-1" }, [_vm._v("300")])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col-sm-4" }, [
-            _c("p", [
-              _c("img", {
-                staticClass: "mr-2",
-                attrs: { src: "/images/hostel.svg", alt: "Hostel Image" }
-              }),
-              _vm._v("\n                  Hostel:"),
-              _c("strong", { staticClass: "ml-1" }, [_vm._v("Yes")])
-            ]),
-            _vm._v(" "),
-            _c("p", [
-              _c("img", {
-                staticClass: "mr-2",
-                attrs: { src: "/images/bus.svg", alt: "Bus Image" }
-              }),
-              _vm._v(" Bus\n                  Services:"),
-              _c("strong", { staticClass: "ml-1" }, [_vm._v("Yes")])
-            ])
-          ])
-        ])
-      ]
-    )
   }
 ]
 render._withStripped = true
