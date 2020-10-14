@@ -18,54 +18,52 @@
         " -->
       <img
         :src="
-          channelData.cover_avatar != null
-            ? domainUrl +
+          channelData.cover_avatar === 'institute-cover-default.webp'
+            ? '/images/' + channelData.cover_avatar
+            : domainUrl +
               '/media/channel/' +
               channelData.user_id +
               '/cover/' +
               channelData.cover_avatar
-            : '/images/banner2.png'
         "
-        class="inscover"
+        class="inscover mt-n3"
       />
 
       <div class="blankdiv shadow">
-        <div class="d-flex">
-          <div class="d-flex flex-column">
-            <p class="m-1">
-              {{ channelData.title }}
-            </p>
-            <a
-              class="m-1 insweb"
-              :target="channelData.website_link === null ? '_self' : '_blank'"
-              :href="
-                channelData.website_link === null
-                  ? 'javascript:void(0)'
-                  : channelData.website_link
-              "
+        <div class="row mx-0">
+          <div class="col-md-6 d-flex flex-column">
+            <div
+              class="insweb text-center"
+              v-if="channelData.website_link === null"
             >
-              {{
-                channelData.website_link === null
-                  ? "Website link not-provided"
-                  : "Visit Website"
-              }}
-              <i class="fa fa-external-link-square" aria-hidden="true"></i
-            ></a>
+              Website: NA
+            </div>
+            <div v-else>
+              <a
+                class="ml-n4 insweb insweb-available px-2 py-1 mt-n1 mt-md-3"
+                :target="channelData.website_link === null ? '_self' : '_blank'"
+                :href="
+                  channelData.website_link === null
+                    ? 'javascript:void(0)'
+                    : channelData.website_link
+                "
+                >Visit Website
+                <img
+                  src="/images/external-link-symbol.svg"
+                  class="mt-n1"
+                  alt="external link symbol"
+                />
+              </a>
+            </div>
           </div>
 
-          <div class="ml-auto phemdiv">
+          <div class="col-md-6 phemdiv text-md-right ml-n4">
             <p class="m-1 mr-2">
-              <i
-                class="fa fa-phone mr-1 d-none d-sm-inline"
-                aria-hidden="true"
-              ></i>
-              Call us at: {{ phoneNo }}
+              <i class="fa fa-phone mr-1" aria-hidden="true"></i>
+              {{ phoneNo }}
             </p>
             <p class="m-1 mr-2">
-              <i
-                class="fa fa-envelope mr-1 d-none d-sm-inline"
-                aria-hidden="true"
-              ></i>
+              <i class="fa fa-envelope mr-1" aria-hidden="true"></i>
               {{ userData.email }}
             </p>
           </div>
@@ -77,16 +75,16 @@
         <div class="d-flex mt-5 logo-title">
           <img
             :src="
-              channelData.icon_avatar != null
-                ? domainUrl +
+              channelData.icon_avatar === 'institute-logo-default.webp'
+                ? '/images/' + channelData.icon_avatar
+                : domainUrl +
                   '/media/channel/' +
                   channel.user_id +
                   '/avatar/' +
                   channelData.icon_avatar
-                : '/images/college logo.jpg'
             "
             alt="Institute logo"
-            class="img-fluid logoinstitute"
+            class="logoinstitute"
           />
           <h1 class="ml-1 ml-sm-4 institle text-capitalize">
             {{ channelData.title }}
@@ -95,7 +93,10 @@
       </div>
 
       <div class="inssocial">
-        <div class="d-flex flex-column flex-lg-row" v-if="socialCount === 0">
+        <div
+          class="d-flex flex-lg-row justify-content-center"
+          v-if="socialCount === 0"
+        >
           <a
             class="mr-1"
             v-if="channelData.extra_attributes.social.facebook != null"
@@ -110,11 +111,7 @@
           <a
             class="mr-1"
             v-if="channelData.extra_attributes.social.linkedin != null"
-            :href="
-              channelData.extra_attributes.social.linkedin != null
-                ? channelData.extra_attributes.social.linkedin
-                : 'javascript:void(0)'
-            "
+            :href="channelData.extra_attributes.social.linkedin"
           >
             <img src="/images/linkedin.svg" alt="li icon" />
           </a>
@@ -158,9 +155,7 @@
             <a class="nav-link" data-toggle="pill" href="#faculty">Faculty</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" data-toggle="pill" href="#facility"
-              >Facilities</a
-            >
+            <a class="nav-link" data-toggle="pill" href="#facility">Facility</a>
           </li>
         </ul>
 
@@ -184,7 +179,7 @@
               <div
                 class="card notice shadow-sm border-0 col-md-5 col-lg-4 px-0"
               >
-                <div class="card-body">
+                <div class="card-body px-0">
                   <div class="card-title my-n2">
                     <h5 class="text-uppercase text-center">
                       News and Notifications
@@ -197,6 +192,10 @@
                       :key="index"
                     >
                       <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                      {{ notification.notify }}
+                      <span class="badge badge-info" v-if="index === 0"
+                        >New</span
+                      >
                       {{ notification.notify }}
                       <span class="badge badge-info" v-if="index === 0"
                         >New</span
@@ -376,7 +375,7 @@
           </div>
           <div id="facility" class="container-fluid tab-pane fade">
             <br />
-            <h2 class="text-uppercase">Our Facilities</h2>
+            <h2 class="text-uppercase">Infrastructure</h2>
             <hr class="mt-n2" />
 
             <div class="row facilitydiv mt-5 py-3">
@@ -391,7 +390,7 @@
                     {{
                       channelData.stationary != null
                         ? channelData.stationary
-                        : "N/A"
+                        : "Not Provided"
                     }}
                   </strong>
                 </p>
@@ -405,14 +404,18 @@
                     {{
                       channelData.computer_learning != null
                         ? channelData.computer_learning
-                        : "N/A"
+                        : "Not Provided"
                     }}
                   </strong>
                 </p>
                 <p>
                   <img class="mr-2" src="/images/fence.svg" alt="fence Image" />
                   Boundary:<strong class="ml-1">
-                    {{ channelData.wall != null ? channelData.wall : "N/A" }}
+                    {{
+                      channelData.wall != null
+                        ? channelData.wall
+                        : "Not Provided"
+                    }}
                   </strong>
                 </p>
               </div>
@@ -427,7 +430,7 @@
                     {{
                       channelData.playground != null
                         ? channelData.playground
-                        : "N/A"
+                        : "Not Provided"
                     }}
                   </strong>
                 </p>
@@ -439,7 +442,9 @@
                   />
                   Library:<strong class="ml-1">
                     {{
-                      channelData.library != null ? channelData.library : "N/A"
+                      channelData.library != null
+                        ? channelData.library
+                        : "Not Provided"
                     }}
                   </strong>
                 </p>
@@ -449,7 +454,7 @@
                     {{
                       channelData.no_of_books != null
                         ? channelData.no_of_books
-                        : "N/A"
+                        : "Not Provided"
                     }}
                   </strong>
                 </p>
@@ -463,7 +468,9 @@
                   />
                   Canteen:<strong class="ml-1">
                     {{
-                      channelData.canteen != null ? channelData.canteen : "N/A"
+                      channelData.canteen != null
+                        ? channelData.canteen
+                        : "Not Provided"
                     }}
                   </strong>
                 </p>
@@ -473,7 +480,7 @@
                     {{
                       channelData.bus_services != null
                         ? channelData.bus_services
-                        : "N/A"
+                        : "Not Provided"
                     }}
                   </strong>
                 </p>
@@ -489,7 +496,7 @@
                     {{
                       channelData.boys_hostel != null
                         ? channelData.boys_hostel
-                        : "N/A"
+                        : "Not Provided"
                     }}
                   </strong>
                 </p>
@@ -499,7 +506,7 @@
                     {{
                       channelData.girls_hostel != null
                         ? channelData.girls_hostel
-                        : "N/A"
+                        : "Not Provided"
                     }}
                   </strong>
                 </p>
@@ -520,6 +527,7 @@ export default {
       userData: {},
       channelData: {},
       domainUrl: location.origin,
+      socialCount: 0,
     };
   },
   props: {
@@ -535,11 +543,13 @@ export default {
   created() {
     this.userData = this.user;
     this.channelData = this.channel;
+    console.log(this.channelData.extra_attributes.social);
     this.phoneNo = this.userData.phone ? this.userData.phone : "Not provided";
     if (
       this.channelData.extra_attributes.social.facebook === null &&
       this.channelData.extra_attributes.social.linkedin === null &&
-      this.channelData.extra_attributes.social.youtube === null
+      this.channelData.extra_attributes.social.youtube === null &&
+      this.channelData.extra_attributes.social.instagram === null
     ) {
       this.socialCount = 1;
     }

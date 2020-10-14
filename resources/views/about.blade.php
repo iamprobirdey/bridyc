@@ -1,8 +1,16 @@
 @extends('student.layouts.master')
 
-@section('title','')
-@section('desc','')
-@section('keywords','')
+@section('title','Bridyc – Explore career possibilities|Learn from Achiever’s|Find Institute')
+@section('desc','BRIDYC is dedicated to empower young minds with the real life exposure and 
+activities and provide access to students and parents in particular, who are looking for 
+cross-training their minds before choosing an institute or a career. The platform will allow 
+students to share their learnings, learn from their peers and from the people who have already 
+crossed those paths')
+@section('keywords','Best school in Assam, Junior college in Karbi Anglong, best school in diphu, Online career guidance in Assam, 
+Schools in Guwahati, Career guidance in Assam, Online admission in junior college, career guidance in assam school, career guidance in assam website online zoology,
+career guidance in Assam website details, career guidance in assam website Guwahati, career guidance in Assam website link,
+career guidance in Assam website online youtube, career counselling Assam website, best educational podcasts for students, Collectibles,
+best educational podcasts for college students, best career coaching podcast, best career advice videos, biology career video')
 
 @section('css_code')
 <link rel="stylesheet" type="text/css" href="{{url('css/app.css')}}">
@@ -28,22 +36,40 @@
 </div>
 
 <div class="row about-mission mt-4 mx-0 d-flex flex-column-reverse flex-sm-row"> 
-    <div class="col-sm-8 text-mission my-auto">
+    <div class="col-md-8 text-mission my-auto">
     <h4 class="text-uppercase">our mission</h4>
     <p>Every student is uniquely smart. We believe that the right exposure and the right information can lead them to 
     a happy decision. Bridyc is determined to expose you to all the possible career options, the real life skills and activities, helps you learn, unlearn, 
     relearn and share your learnings  with peer group of students.</p>
     </div>
-    <div class="col-sm-4 imgmission pr-0 mb-5">
-         <img src="/images/mission.png" class="rounded img-fluid" alt="our mission image">
+    <div class="col-md-4 imgmission pr-0 mb-5">
+         <!--img src="/images/mission.png" class="rounded img-fluid" alt="our mission image"
+         srcset=""-->
+
+         <picture>
+     <source media="(min-width:1281px)" srcset="/images/mission-img-large.webp">
+     <source media="(min-width:1024px)" srcset="/images/mission-img-xsmall.webp">
+     <source media="(min-width:768px)" srcset="/images/mission-img-medium.webp">
+     <source media="(min-width:481px)" srcset="/images/mission-img-small.webp">
+     <source srcset="/images/mission-img-xsmall.webp">
+     <img src="images/mission.webp" class="rounded float-right" alt="our mission image">
+     </picture>
     </div>
 </div>
 
 <div class="row about-how mx-0">
-     <div class="col-sm-4 pl-0">
-     <img src="/images/how.png" class="img-fluid" alt="how we do it image">
+     <div class="col-md-4 pl-0">
+     <picture>
+     <source media="(min-width:1281px)" srcset="/images/about-man-large.webp">
+     <source media="(min-width:1024px)" srcset="/images/about-man-xsmall.webp">
+     <source media="(min-width:768px)" srcset="/images/aboutus-mediumsc.webp">
+     <source media="(min-width:481px)" srcset="/images/about-man-small.webp">
+     <source srcset="/images/aboutus-man-xxsmall.webp">
+     <img src="images/aboutus.webp" class="" alt="how we do it image">
+     </picture>
+
      </div>
-     <div class="col-sm-8 text-how my-auto">
+     <div class="col-md-8 text-how my-auto">
      <h4 class="text-uppercase text-lg-right">how do we do it?</h4>
      <p>We constantly research and post about all the possible and underrated career options 
      and the way to pursue them. We host podcast with people who have already crossed those 

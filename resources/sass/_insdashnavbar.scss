@@ -8,18 +8,23 @@ nav{
         }
     }
     .imglogodash{
-        width:60px; 
+        width:110px; 
         height: auto;
         margin-left: -12%;
         transition: all ease .5s;
         @include screensize(tablet){
-          width: 70px;
+          width: 115px;
           height: auto;
        }
        @include screensize(laptop){
-        margin-left: 10px;
+        margin: 5px;
+        width: 150px;
      }
       
+     @include screensize(desktop){
+        margin: 7px;
+        width: 120px;
+     }
     }
     ul{
         li{

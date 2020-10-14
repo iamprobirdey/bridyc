@@ -18,37 +18,61 @@ main {
         height: auto;
         width: 100%;
         position: relative;
-        top: -70px;
-        background-color: #f5f9ff;
+        background-color: #f9fafa;
         padding-top: 55px;
         padding-left: 10px;
+        //padding-bottom: 95px;
         p{
-          font-size: 12px;
+          font-size: 15px;
           @include screensize(tablet){
             font-size: 16px;
           }
+          @include screensize(laptop){
+           font-size: 18px;
+         }
         }
         @include screensize(tablet){
-            height: 130px;
-          }
-        @include screensize(laptop){
-            height: 150px;
-            padding-left: 60px;
-            padding-top: 75px;
-          }
-        .insweb{
-            background-color: #003585;
-            color: white;
-            width: 138px;
-            padding-left: 15px;
-            padding-right: 12px;
-            &:hover{
-                background-color: white;
-                color: #011737;
-                text-decoration: none;
-                border: 1px solid #011737;
-            }
+          height: 130px;
+          padding-bottom: 95px;
         }
+      @include screensize(laptop){
+          height: 150px;
+          padding-left: 60px;
+          padding-top: 110px;
+        }
+        @include screensize(desktop){
+         padding-top: 90px;
+       }
+
+      .insweb{
+          background-color: #003585;
+          color: white;
+          font-size: 14px;
+          width: 110px;
+          margin-left: -20px;
+          @include screensize(tablet){
+            width: 130px;
+            font-size: 16px;
+           }
+           @include screensize(laptop){
+            width: 157px;
+            font-size: 18px;
+            margin-left:-58px;
+           }
+           @include screensize(desktop){
+            margin-left:-25px;
+           }
+        }
+        .insweb-available{
+          img{
+            width: 15px;
+            height: 15px;
+          }
+            &:hover{
+              text-decoration: none;
+              
+            }
+      }
         .phemdiv{
             
             @include screensize(laptop){
@@ -58,16 +82,23 @@ main {
     }
     .logo-title{
         position: relative;
-        top: -280px;
+        top: -224px;
         margin-bottom: -120px;
+        left: -12px;
+        @include screensize(iphone5above){
+          top: -220px;
+        }
         @include screensize(tablet){
-            top: -290px;
-            left: 10px;
+            top: -245px;
          }
         @include screensize(laptop){
-            top: -330px;
-            left: -70px;
+            top: -318px;
+            left: -127px;
          }
+         @include screensize(desktop){
+           top:-299px;
+           left: -86px;
+        }
         .logoinstitute{
             width: 70px;
             height: 80px;
@@ -85,53 +116,63 @@ main {
                  }
               }
               .institle{
-                font-size: 18px;
+                font-size: 17px;
                 margin-top: 45px;
                 transition: all ease .5s;
-                @include screensize(foriphone6x){
-                    font-size: 20px;   
-                   }
-                @include screensize(forcards){
-                    font-size: 25px;
-                   }
-                    @include screensize(tablet){
-                        font-size: 30px;
-                    }
-                    
-                       @include screensize(laptop){
-                        font-size: 40px;
-                        margin-top: 70px;
-                       }
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                @include screensize(iphone5above){
+                  font-size: 20px;
+                  margin-top: 38px;
+                 }
+                 @include screensize(tablet){
+                  font-size: 21px;
+                  margin-top: 45px;
+              }
+                @include screensize(laptop){
+                font-size: 32px;
+                margin-top: 65px;
+               }
+               @include screensize(desktop){
+                font-size: 34px;
+               }
                }
     }
 
     .inssocial{
       position: relative;
-      top:-175px;
-      left:71%;
-      z-index:1000;
+      top:-61px;
+      left:68%;
+      width:100px;
+      font-size: 15px;
       img{
         width:20px;
         height:20px;
       }
       @include screensize(tablet){
-        top:-240px;
-        left:85%;
+        top:-88px;
+        left:70%;
         img{
           width:25px;
           height:25px;
         }
       }
+      @include screensize(laptop){
+        top:-179px;
+        left:80%;
+        font-size: 18px;
+      }
     }
     
 
     .inspills{
-              margin-top:-112px;
+              margin-top:-20px;
+              margin-left: -.7rem;
+              margin-right: -.7rem;
            @include screensize(tablet){
-              margin-top:-130px;
+              margin-top:-25px;
             }
             @include screensize(laptop){
-              margin-top:-140px;
+              margin-top:-70px;
             }
               .nav-pills{
                 .nav-link{
@@ -187,6 +228,11 @@ main {
               }
               p{
                 color: black;
+                &::before{
+                 content: "\2B9A";
+                 font-size: larger;
+                 color: #003585;
+               }
               }
             }
 
@@ -343,6 +389,19 @@ main {
               margin-left:60px;
             }
           }
+          .edit-social{
+            list-style: none;
+            margin-left: -40px;
+            margin-bottom: 20px;
+            li{
+              color: black;
+             &::before{
+              content: "\2B9A";
+              font-size: larger;
+              color: #003585;
+            }
+            }
+          }
           //css for institute edit channel ends here
 
           //css for board and standard and social starts here
@@ -457,10 +516,10 @@ main {
 
           .profile{
             max-width: 100%;
-
+          
             .princi-name{
-              background-color: #cce0fd;
-              color: black;
+              font-family: Verdana, Geneva, Tahoma, sans-serif;
+              color: #003585;
             }
             
             .princi-profile-picture{
@@ -475,14 +534,14 @@ main {
                 height: 200px;
                 }
             }
-        //}
+        }
         .princi-profile-edit{
            position:relative;
            left:-16%;
            top:53px;
            z-index: inherit;
            cursor: pointer;
-           background-color:gainsboro;
+           background-color:rgb(241, 240, 240);
            @include screensize(tablet){
             left:-11%;
             top: 55px;
@@ -541,7 +600,7 @@ main {
               background-color: #f9fafa;
             }
           }
-        } 
+        
         
         .teacher-section{
           color: #003585;

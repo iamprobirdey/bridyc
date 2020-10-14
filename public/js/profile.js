@@ -695,6 +695,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -772,6 +776,17 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -972,6 +987,16 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue_multiselect__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-multiselect */ "./node_modules/vue-multiselect/dist/vue-multiselect.min.js");
 /* harmony import */ var vue_multiselect__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue_multiselect__WEBPACK_IMPORTED_MODULE_0__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -3227,7 +3252,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "div",
-    { staticClass: "profile mx-auto px-lg-5" },
+    { staticClass: "profile mx-auto" },
     [
       _c("avatar", { attrs: { user: _vm.userData } }),
       _vm._v(" "),
@@ -3305,7 +3330,7 @@ var render = function() {
         _c("div", { staticClass: "row mt-5 mx-auto" }, [
           _c(
             "div",
-            { staticClass: "col-sm-6 text-right" },
+            { staticClass: "text-right" },
             [
               _c("channel", {
                 attrs: {
@@ -3315,13 +3340,6 @@ var render = function() {
                 }
               })
             ],
-            1
-          ),
-          _vm._v(" "),
-          _c(
-            "div",
-            { staticClass: "col-sm-6 text-right" },
-            [_c("phone", { attrs: { user: _vm.userData } })],
             1
           )
         ]),
@@ -3359,7 +3377,7 @@ var render = function() {
       ? _c("div", { staticClass: "address-display" }, [
           _c("div", { staticClass: "row mx-0" }, [
             _c("div", { staticClass: "col-sm-6" }, [
-              _c("strong", [_vm._v("Standard:")]),
+              _c("strong", [_vm._v("Standard :")]),
               _vm._v(" "),
               _c("span", [
                 _vm._v(_vm._s(_vm.userInformationData.standard.standard_name))
@@ -3367,7 +3385,7 @@ var render = function() {
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "col-sm-6" }, [
-              _c("strong", [_vm._v("Locality/Village:")]),
+              _c("strong", [_vm._v("Locality/Village :")]),
               _vm._v(" "),
               _c("span", [_vm._v(_vm._s(_vm.userInformationData.village.name))])
             ])
@@ -3375,7 +3393,7 @@ var render = function() {
           _vm._v(" "),
           _c("div", { staticClass: "row mx-0" }, [
             _c("div", { staticClass: "col-sm-6" }, [
-              _c("strong", [_vm._v("District:")]),
+              _c("strong", [_vm._v("District :")]),
               _vm._v(" "),
               _c("span", [
                 _vm._v(_vm._s(_vm.userInformationData.district.name))
@@ -3383,7 +3401,7 @@ var render = function() {
             ]),
             _vm._v(" "),
             _c("div", { staticClass: "col-sm-6" }, [
-              _c("strong", [_vm._v("State:")]),
+              _c("strong", [_vm._v("State :")]),
               _vm._v(" "),
               _c("span", [_vm._v(_vm._s(_vm.userInformationData.state.name))])
             ])
@@ -3982,11 +4000,13 @@ var render = function() {
             staticClass: "profile-picture rounded-circle shadow",
             attrs: {
               src:
-                _vm.domainUrl +
-                "/media/users/profile/" +
-                _vm.userId +
-                "/s-" +
-                _vm.userImage,
+                _vm.userImage === "default.webp"
+                  ? "/images/" + _vm.userImage
+                  : _vm.domainUrl +
+                    "/media/users/profile/" +
+                    _vm.userId +
+                    "/s-" +
+                    _vm.userImage,
               alt: "student profile pictures"
             }
           }),
@@ -4113,32 +4133,42 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "channelname" }, [
     _vm.channelChecker
-      ? _c("div", { staticClass: "mt-n4" }, [
-          _c("h4", [_vm._v("Institute:")]),
+      ? _c("div", { staticClass: "mt-n4 mb-3 container text-center" }, [
+          _c("h4", [_vm._v("Your Institute Name:")]),
           _vm._v(" "),
           _vm.userInstituteData.channel_id != null
-            ? _c("span", [_vm._v(_vm._s(_vm.userInstituteData.channel.title))])
+            ? _c("span", { staticClass: "text-capitalize" }, [
+                _vm._v(_vm._s(_vm.userInstituteData.channel.title))
+              ])
             : _vm._e(),
           _vm._v(" "),
-          _c("span", [_vm._v(_vm._s(_vm.userInstituteData.school_name))]),
+          _c("span", { staticClass: "text-capitalize text-center" }, [
+            _vm._v(_vm._s(_vm.userInstituteData.school_name))
+          ]),
           _vm._v(" "),
           _c(
             "button",
             {
-              staticClass: "btn btn-primary",
+              staticClass: "btn edit-btn",
+              attrs: { "data-toggle": "tooltip", title: "Edit" },
               on: {
                 click: function($event) {
                   return _vm.editAddress()
                 }
               }
             },
-            [_vm._v("Edit")]
+            [
+              _c("i", {
+                staticClass: "fa fa-pencil",
+                attrs: { "aria-hidden": "true" }
+              })
+            ]
           )
         ])
       : _vm._e(),
     _vm._v(" "),
     !_vm.channelChecker
-      ? _c("div", [
+      ? _c("div", { staticClass: "container-fluid" }, [
           _c(
             "form",
             {
@@ -4187,7 +4217,7 @@ var render = function() {
                           expression: "'numeric'"
                         }
                       ],
-                      staticClass: "form-control col-sm-9 mx-lg-2",
+                      staticClass: "form-control col-sm-9 mx-md-2",
                       attrs: { name: "channel" },
                       on: {
                         change: function($event) {
@@ -4211,7 +4241,7 @@ var render = function() {
                     },
                     [
                       _c("option", { attrs: { value: "" } }, [
-                        _vm._v("Select your institute (optional)")
+                        _vm._v("Select your institute")
                       ]),
                       _vm._v(" "),
                       _vm._l(_vm.channelsData, function(channel) {
@@ -4319,7 +4349,7 @@ var render = function() {
                         expression: "userFormData.school_name"
                       }
                     ],
-                    staticClass: "form-control col-sm-8 mx-lg-2",
+                    staticClass: "form-control col-sm-8 mx-md-2",
                     class: {
                       "form-control": true,
                       "is-invalid": _vm.errors.has("school_name")
@@ -4425,39 +4455,60 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", [
     _vm.hobbiesEntryChecker
-      ? _c(
-          "div",
-          [
-            _vm._v("\n    Field of Interest:\n    "),
-            _vm._l(_vm.studentshobbiesData, function(hobbie, index) {
-              return _c(
-                "button",
-                { key: index, staticClass: "btn btn-primary m-1" },
-                [_vm._v("\n      " + _vm._s(hobbie.name) + "\n    ")]
-              )
-            }),
-            _vm._v(" "),
-            _c(
-              "button",
-              {
-                staticClass: "btn mt-n2 edit-btn",
-                attrs: { "data-toggle": "tooltip", title: "Edit" },
-                on: {
-                  click: function($event) {
-                    return _vm.editThehobbie()
-                  }
+      ? _c("div", [
+          _vm._v("\n    Field of Interest:\n    "),
+          _c(
+            "button",
+            {
+              staticClass: "btn mt-n2 edit-btn",
+              attrs: { "data-toggle": "tooltip", title: "Edit" },
+              on: {
+                click: function($event) {
+                  return _vm.editThehobbie()
                 }
-              },
-              [
-                _c("i", {
-                  staticClass: "fa fa-pencil",
-                  attrs: { "aria-hidden": "true" }
-                })
-              ]
-            )
-          ],
-          2
-        )
+              }
+            },
+            [
+              _c("i", {
+                staticClass: "fa fa-pencil",
+                attrs: { "aria-hidden": "true" }
+              })
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            [
+              _vm._l(_vm.studentshobbiesData, function(hobbie, index) {
+                return _c(
+                  "button",
+                  { key: index, staticClass: "btn btn-sm btnsubjects m-1" },
+                  [_vm._v("\n        " + _vm._s(hobbie.name) + "\n      ")]
+                )
+              }),
+              _vm._v(" "),
+              _c(
+                "button",
+                {
+                  staticClass: "btn mt-n2 edit-btn",
+                  attrs: { "data-toggle": "tooltip", title: "Edit" },
+                  on: {
+                    click: function($event) {
+                      return _vm.editThehobbie()
+                    }
+                  }
+                },
+                [
+                  _c("i", {
+                    staticClass: "fa fa-pencil",
+                    attrs: { "aria-hidden": "true" }
+                  })
+                ]
+              )
+            ],
+            2
+          )
+        ])
       : _vm._e(),
     _vm._v(" "),
     !_vm.hobbiesEntryChecker
@@ -4585,7 +4636,7 @@ var render = function() {
                 _c(
                   "div",
                   {
-                    staticClass: "form-group row mx-5",
+                    staticClass: "form-group row mx-auto",
                     class: {
                       "has-error":
                         _vm.errors.has("serverError.phone") ||
@@ -4612,7 +4663,7 @@ var render = function() {
                           expression: "'required|numeric|max:10|min:10'"
                         }
                       ],
-                      staticClass: "col-sm-9 ml-4",
+                      staticClass: "col-sm-9 mx-md-2",
                       class: {
                         "form-control": true,
                         "is-invalid": _vm.errors.has("phone")
@@ -4690,7 +4741,7 @@ var render = function() {
                 _c(
                   "div",
                   {
-                    staticClass: "form-group row mx-5",
+                    staticClass: "form-group row mx-auto",
                     class: {
                       "has-error":
                         _vm.errors.has("serverOtpError.otp") ||
@@ -4717,7 +4768,7 @@ var render = function() {
                           expression: "'required|numeric|min:6|max:6'"
                         }
                       ],
-                      staticClass: "col-sm-9 ml-4",
+                      staticClass: "col-sm-9 mx-md-2",
                       class: {
                         "form-control": true,
                         "is-invalid": _vm.errors.has("otp")
@@ -4786,7 +4837,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "ml-5" }, [
+    return _c("div", { staticClass: "ml-md-5" }, [
       _c(
         "button",
         { staticClass: "btn btnsubmit mt-n2", attrs: { type: "submit" } },
@@ -4798,7 +4849,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "ml-5" }, [
+    return _c("div", { staticClass: "ml-md-5" }, [
       _c(
         "button",
         { staticClass: "btn btnsubmit mt-n2", attrs: { type: "submit" } },

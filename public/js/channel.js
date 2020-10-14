@@ -207,17 +207,27 @@ var render = function() {
                   }
                 }),
                 _vm._v(" "),
-                _c("h4", { staticClass: "card-title mt-n5 text-center" }, [
-                  _vm._v(_vm._s(channel.title))
-                ]),
+                _c(
+                  "h4",
+                  {
+                    staticClass: "card-title mt-n5 text-center text-capitalize"
+                  },
+                  [_vm._v(_vm._s(channel.title))]
+                ),
                 _vm._v(" "),
-                _c("p", { staticClass: "card-text mt-n2 district-name" }, [
-                  _vm._v(
-                    "\n            Dist: " +
-                      _vm._s(channel.district.name) +
-                      "\n          "
-                  )
-                ]),
+                _c(
+                  "p",
+                  {
+                    staticClass: "card-text mt-n2 district-name text-capitalize"
+                  },
+                  [
+                    _vm._v(
+                      "\n            Dist: " +
+                        _vm._s(channel.district.name) +
+                        "\n          "
+                    )
+                  ]
+                ),
                 _vm._v(" "),
                 channel.description != null
                   ? _c(

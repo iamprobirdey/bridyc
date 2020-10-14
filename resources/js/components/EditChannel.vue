@@ -36,7 +36,7 @@
         <college :channel="channelData"></college>
       </div>
     </div>
-    <div class="container mt-5 ml-0 w-50">
+    <div class="mt-5 ml-n5">
       
         <phone :user="userData"></phone>
       

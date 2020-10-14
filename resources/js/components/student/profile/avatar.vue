@@ -3,7 +3,11 @@
     <div class="text-center" v-if="userImageStatus">
       <img
         class="profile-picture rounded-circle shadow"
-        :src="domainUrl + '/media/users/profile/' + userId + '/s-' + userImage"
+        :src="
+          userImage === 'default.webp'
+            ? '/images/' + userImage
+            : domainUrl + '/media/users/profile/' + userId + '/s-' + userImage
+        "
         alt="student profile pictures"
       />
       <a

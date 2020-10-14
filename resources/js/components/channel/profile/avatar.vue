@@ -6,8 +6,8 @@
         height="150"
         width="152"
         :src="
-          userImage === 'default.jpg'
-            ? '/images/default.jpg'
+          userImage === 'default.webp'
+            ? '/images/default.webp'
             : domainUrl + '/media/channel/' + userId + '/profile/' + userImage
         "
         alt="principal profile picture"
@@ -16,10 +16,7 @@
                         :srcset="domainUrl+'/media/channel/'+userId+'/m-'+userImage+','+domainUrl+'/media/channel/'+userId+'/s-'+userImage"
                      -->
 
-      <button
-        @click="editTheIcon()"
-        class="btn princi-profile-edit edit-btn p-2"
-      >
+      <button @click="editTheIcon()" class="btn princi-profile-edit p-2">
         <i class="fa fa-camera" aria-hidden="true"></i>
       </button>
     </div>
@@ -129,3 +126,9 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.picture-preview {
+  position: static;
+}
+</style>

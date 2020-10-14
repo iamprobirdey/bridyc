@@ -1,8 +1,17 @@
 
 
 .imgbanfaq{
-    background-image: linear-gradient(to top,rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/faq.png");
-}
+    background-image: linear-gradient(to top,rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/faq-header-m.webp");
+    @include screensize(tablet){
+        background-image: linear-gradient(to top,rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/faq-header-t.webp");
+    }
+    @include screensize(laptop){
+        background-image: linear-gradient(to top,rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/faq-header-l.webp");
+    }
+    @include screensize(desktop){
+        background-image: linear-gradient(to top,rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/faq-header-d.webp");
+    }
+  }
 
 
 .faqbody{

@@ -1,8 +1,17 @@
 
 
 .applbody{
-    background-image:linear-gradient(to right,rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1)), url("/images/coming soon.png");
+    background-image:linear-gradient(to right,rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1)), url("/images/coming-soon-m.webp");
     height: 100%;
+    @include screensize(tablet){
+      background-image:linear-gradient(to right,rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1)), url("/images/coming-soon-t.webp");
+    }
+    @include screensize(laptop){
+      background-image:linear-gradient(to right,rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1)), url("/images/coming-soon-l.webp");
+    }
+    @include screensize(desktop){
+      background-image:linear-gradient(to right,rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1)), url("/images/coming-soon-d.webp");
+    }
     .blocks {
         height: 529px;
         display: flex;

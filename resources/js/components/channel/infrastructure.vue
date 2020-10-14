@@ -129,7 +129,7 @@
               serverErrors.computer_learning != '',
           }"
         >
-          <label class="col-sm-3 col-form-label">Computer Learning</label>
+          <label class="col-sm-3 col-form-label">Computer Learning:</label>
           <select
             v-model="formData.computer_learning"
             class="col-sm-9 form-control"
@@ -238,7 +238,7 @@
             'has-error': errors.has('library') || serverErrors.library != '',
           }"
         >
-          <label class="col-sm-3 col-form-label">Library Availability</label>
+          <label class="col-sm-3 col-form-label">Library Availability:</label>
           <select
             v-model="formData.library"
             class="col-sm-9 form-control"
@@ -296,7 +296,7 @@
               errors.has('playground') || serverErrors.playground != '',
           }"
         >
-          <label class="col-sm-2 col-form-label">Playground</label>
+          <label class="col-sm-2 col-form-label">Playground:</label>
           <select
             v-model="formData.playground"
             class="col-sm-10 form-control"
@@ -324,7 +324,7 @@
               errors.has('bus_services') || serverErrors.bus_services != '',
           }"
         >
-          <label class="col-sm-2 col-form-label">Bus Services</label>
+          <label class="col-sm-2 col-form-label">Bus Services:</label>
           <select
             v-model="formData.bus_services"
             class="col-sm-10 form-control"

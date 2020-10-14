@@ -3,22 +3,22 @@
     <div v-if="addressDataChecker" class="address-display">
       <div class="row mx-0">
         <div class="col-sm-6">
-          <strong>Standard:</strong>
+          <strong>Standard :</strong>
           <span>{{ userInformationData.standard.standard_name }}</span>
         </div>
         <div class="col-sm-6">
-          <strong>Locality/Village:</strong>
+          <strong>Locality/Village :</strong>
           <span>{{ userInformationData.village.name }}</span>
         </div>
       </div>
       <div class="row mx-0">
         <div class="col-sm-6">
-          <strong>District:</strong>
+          <strong>District :</strong>
           <span>{{ userInformationData.district.name }}</span>
         </div>
 
         <div class="col-sm-6">
-          <strong>State:</strong>
+          <strong>State :</strong>
           <span>{{ userInformationData.state.name }}</span>
         </div>
       </div>

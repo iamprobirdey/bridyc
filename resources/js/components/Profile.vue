@@ -1,5 +1,5 @@
 <template>
-  <div class="profile mx-auto px-lg-5">
+  <div class="profile mx-auto">
     <avatar :user="userData"></avatar>
     <div class="mt-5">
       <username :username="userData.username" :id="userData.id"></username>
@@ -40,16 +40,16 @@
       
           <!-- mt-lg-5 pt-3 mx-auto container-fluid -->
       <div class="row mt-5 mx-auto">
-        <div class="col-sm-6 text-right">
+        <div class="text-right">
           <channel
             :userinstitute="userinstituteData"
             :user="userData"
             :channel="channelsData"
           ></channel>
         </div>
-        <div class="col-sm-6 text-right">
+        <!--div class="col-sm-6 text-right">
           <phone :user="userData"></phone>
-        </div>
+        </div-->
       </div>
     <br>
   </div>

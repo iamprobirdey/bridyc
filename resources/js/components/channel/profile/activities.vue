@@ -5,7 +5,7 @@
          Other Activities  
          <button class="btn btnadd p-1" @click="addActivity()">+</button>
        </h4>
-    <div v-if="activities != null">
+    <div v-if="activities != null" class="mx-0">
       <ul
         class="nav flex-column"
         v-for="(activity, index) in activities"

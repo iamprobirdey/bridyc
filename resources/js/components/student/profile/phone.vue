@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div> 
     <div v-if="phoneVerificationChecker">
       <p>
         {{ userData.phone }}
@@ -20,7 +20,7 @@
       <div v-if="!phoneVerificationChecker">
         <form @submit.prevent="phoneVerificationForm()">
           <div
-            class="form-group row mx-5"
+            class="form-group row mx-auto"
             :class="{
               'has-error':
                 errors.has('serverError.phone') || serverError.phone != '',
@@ -28,7 +28,7 @@
           >
             <label col="col-sm-3 col-form-label">Phone: </label>
             <input
-              class="col-sm-9 ml-4"
+              class="col-sm-9 mx-md-2"
               v-model="phoneData.phone"
               v-validate="'required|numeric|max:10|min:10'"
               data-vv-delay="20"
@@ -51,7 +51,7 @@
               >{{ serverError.phone }}</span
             >
           </div>
-          <div class="ml-5">
+          <div class="ml-md-5">
             <button type="submit" class="btn btnsubmit mt-n2">Submit</button>
           </div>
         </form>
@@ -59,7 +59,7 @@
       <div v-if="otpVerificationCheck">
         <form @submit.prevent="otpVerificationForm()">
           <div
-            class="form-group row mx-5"
+            class="form-group row mx-auto"
             :class="{
               'has-error':
                 errors.has('serverOtpError.otp') || serverOtpError.otp != '',
@@ -67,7 +67,7 @@
           >
             <label col="col-sm-3 col-form-label">Phone: </label>
             <input
-              class="col-sm-9 ml-4"
+              class="col-sm-9 mx-md-2"
               v-model="otpData.otp"
               v-validate="'required|numeric|min:6|max:6'"
               data-vv-delay="20"
@@ -88,7 +88,7 @@
               >{{ serverOtpError.otp }}</span
             >
           </div>
-          <div class="ml-5">
+          <div class="ml-md-5">
             <button type="submit" class="btn btnsubmit mt-n2">Submit</button>
           </div>
         </form>

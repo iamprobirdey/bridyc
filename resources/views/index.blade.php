@@ -1,25 +1,25 @@
 @extends('student.layouts.master')
 
-@section('title', 'BUY.SELL.RENT Preowned Items Online in the UAE|YallaBargain')
-@section('desc', 'An online marketplace to buy, sell, rent used/pre-owned and unique products for both individuals and
-businesses in the UAE. Listings are completely free. The main categories include Used Electronics, Pre-owned Furniture,
-Preloved Fashion & Accessories, Unique Home Decor & Garden Items, Select Music & Books, Sports & Fitness Equipment,
-Collectibles, Baby & Toy Rentals, free motor & property classifieds & more. YallaBargain.com - BUY.SELL.RENT.Pre-owned -
-DO IT ALL')
-@section('keywords', 'Buy Used Items in the UAE, Buy Pre-owned Products in the UAE, Sell used items online, sell used
-items dubai, rent products online in dubai, hire products in the UAE, sell used electronics online in dubai, sell used
-furniture in the uae, buy luxury pre-owned products in UAE, Used Electronics dubai, Pre-owned Furniture sharjah,
-Preloved Fashion & Accessories uae, Unique Home Decor & Garden Items dubai,Music & used Books buy online, Sports &
-Fitness Equipment rentals dubai, Collectibles, Baby & Toy Rentals, free motor & property classifieds in UAE')
+@section('title', 'Bridyc – Explore career possibilities|Learn from Achiever’s|Find Institute')
+@section('desc', 'BRIDYC is dedicated to empower young minds with the real life exposure and 
+activities and provide access to students and parents in particular, who are looking for 
+cross-training their minds before choosing an institute or a career. The platform will allow 
+students to share their learnings, learn from their peers and from the people who have already 
+crossed those paths')
+@section('keywords', 'Best school in Assam, Junior college in Karbi Anglong, best school in diphu, Online career guidance in Assam, 
+Schools in Guwahati, Career guidance in Assam, Online admission in junior college, career guidance in assam school, career guidance in assam website online zoology,
+career guidance in Assam website details, career guidance in assam website Guwahati, career guidance in Assam website link,
+career guidance in Assam website online youtube, career counselling Assam website, best educational podcasts for students, Collectibles,
+best educational podcasts for college students, best career coaching podcast, best career advice videos, biology career video')
 
 @section('s_url', url('/'))
 @section('s_type', '')
-@section('s_title', 'BUY.SELL.RENT Preowned Items Online in the UAE|YallaBargain')
-@section('s_desc', 'An online marketplace to buy, sell, rent used/pre-owned and unique products for both individuals and
-businesses in the UAE. Listings are completely free. The main categories include Used Electronics, Pre-owned Furniture,
-Preloved Fashion & Accessories, Unique Home Decor & Garden Items, Select Music & Books, Sports & Fitness Equipment,
-Collectibles, Baby & Toy Rentals, free motor & property classifieds & more. YallaBargain.com - BUY.SELL.RENT.Pre-owned -
-DO IT ALL')
+@section('s_title', 'Bridyc – Explore career possibilities|Learn from Achiever’s|Find Institute')
+@section('s_desc', 'BRIDYC is dedicated to empower young minds with the real life exposure and 
+activities and provide access to students and parents in particular, who are looking for 
+cross-training their minds before choosing an institute or a career. The platform will allow 
+students to share their learnings, learn from their peers and from the people who have already 
+crossed those paths')
 @section('s_img', url('/storage/menu-banners/May2018/0CP0rMbxhKP915c7z6Fp.jpg'))
 
 @section('css_code')

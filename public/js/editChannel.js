@@ -409,6 +409,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -1722,13 +1724,13 @@ __webpack_require__.r(__webpack_exports__);
       formData: {
         facebook: "",
         instagram: "",
-        linkedIn: "",
+        linkedin: "",
         youtube: ""
       },
       serverErrors: {
         facebook: "",
         instagram: "",
-        linkedIn: "",
+        linkedin: "",
         youtube: ""
       }
     };
@@ -1782,7 +1784,7 @@ __webpack_require__.r(__webpack_exports__);
       this.getTheModel = !this.getTheModel;
       if (this.socialData.facebook != null) this.formData.facebook = this.socialData.facebook;
       if (this.socialData.instagram != null) this.formData.instagram = this.socialData.instagram;
-      if (this.socialData.linkedIn != null) this.formData.linkedIn = this.socialData.linkedIn;
+      if (this.socialData.linkedin != null) this.formData.linkedin = this.socialData.linkedin;
       if (this.socialData.youtube != null) this.formData.youtube = this.socialData.youtube;
     }
   }
@@ -14969,7 +14971,7 @@ var render = function() {
     _vm._v(" "),
     _c(
       "div",
-      { staticClass: "container mt-5 ml-0 w-50" },
+      { staticClass: "mt-5 ml-n5" },
       [_c("phone", { attrs: { user: _vm.userData } })],
       1
     )
@@ -15141,13 +15143,17 @@ var render = function() {
                   }
                 }
               },
-              [_vm._v("\n          Delete college image\n        ")]
+              [_vm._v("\n            Delete college image\n          ")]
             )
           ])
         }),
         0
       )
     ]),
+    _vm._v(" "),
+    _c("br"),
+    _vm._v(" "),
+    _c("h4", [_vm._v("Images of your Institute")]),
     _vm._v(" "),
     !_vm.collegeImageEntry
       ? _c(
@@ -15160,7 +15166,7 @@ var render = function() {
               }
             }
           },
-          [_vm._v("\n    Insert images\n  ")]
+          [_vm._v("\n      Insert images\n    ")]
         )
       : _vm._e(),
     _vm._v(" "),
@@ -15199,7 +15205,7 @@ var render = function() {
                         }
                       }
                     },
-                    [_vm._v("\n        Submit\n      ")]
+                    [_vm._v("\n          Submit\n        ")]
                   )
                 : _vm._e(),
               _vm._v(" "),
@@ -15219,7 +15225,7 @@ var render = function() {
                         staticClass: "fa fa-times",
                         attrs: { "aria-hidden": "true" }
                       }),
-                      _vm._v(" Cancel\n      ")
+                      _vm._v(" Cancel\n        ")
                     ]
                   )
                 : _vm._e()
@@ -16158,7 +16164,7 @@ var render = function() {
                 },
                 [
                   _c("label", { staticClass: "col-sm-3 col-form-label" }, [
-                    _vm._v("Computer Learning")
+                    _vm._v("Computer Learning:")
                   ]),
                   _vm._v(" "),
                   _c(
@@ -16615,7 +16621,7 @@ var render = function() {
                 },
                 [
                   _c("label", { staticClass: "col-sm-3 col-form-label" }, [
-                    _vm._v("Library Availability")
+                    _vm._v("Library Availability:")
                   ]),
                   _vm._v(" "),
                   _c(
@@ -16836,7 +16842,7 @@ var render = function() {
                 },
                 [
                   _c("label", { staticClass: "col-sm-2 col-form-label" }, [
-                    _vm._v("Playground")
+                    _vm._v("Playground:")
                   ]),
                   _vm._v(" "),
                   _c(
@@ -16949,7 +16955,7 @@ var render = function() {
                 },
                 [
                   _c("label", { staticClass: "col-sm-2 col-form-label" }, [
-                    _vm._v("Bus Services")
+                    _vm._v("Bus Services:")
                   ]),
                   _vm._v(" "),
                   _c(
@@ -17186,7 +17192,7 @@ var render = function() {
                           expression: "'required|numeric|max:10|min:10'"
                         }
                       ],
-                      staticClass: "col-sm-9 ml-4",
+                      staticClass: "col-sm-9 ml-md-4",
                       class: {
                         "form-control": true,
                         "is-invalid": _vm.errors.has("phone")
@@ -17409,7 +17415,7 @@ var render = function() {
     _c("h4", [_vm._v("Social Media handles")]),
     _vm._v(" "),
     _vm.getTheModel === false
-      ? _c("ul", [
+      ? _c("ul", { staticClass: "edit-social" }, [
           _vm.socialData.facebook != null
             ? _c("li", [
                 _c(
@@ -17434,12 +17440,12 @@ var render = function() {
               ])
             : _vm._e(),
           _vm._v(" "),
-          _vm.socialData.linkedIn != null
+          _vm.socialData.linkedin != null
             ? _c("li", [
                 _c(
                   "a",
                   {
-                    attrs: { href: _vm.socialData.linkedIn, target: "_blank" }
+                    attrs: { href: _vm.socialData.linkedin, target: "_blank" }
                   },
                   [_c("span", [_vm._v("LinkedIn")])]
                 )
@@ -17705,8 +17711,8 @@ var render = function() {
                         {
                           name: "model",
                           rawName: "v-model",
-                          value: _vm.formData.linkedIn,
-                          expression: "formData.linkedIn"
+                          value: _vm.formData.linkedin,
+                          expression: "formData.linkedin"
                         }
                       ],
                       class: {
@@ -17720,10 +17726,10 @@ var render = function() {
                         type: "text",
                         placeholder: "linkedIn (optional)"
                       },
-                      domProps: { value: _vm.formData.linkedIn },
+                      domProps: { value: _vm.formData.linkedin },
                       on: {
                         focus: function($event) {
-                          _vm.serverErrors.linkedIn = ""
+                          _vm.serverErrors.linkedin = ""
                         },
                         input: function($event) {
                           if ($event.target.composing) {
@@ -17731,7 +17737,7 @@ var render = function() {
                           }
                           _vm.$set(
                             _vm.formData,
-                            "linkedIn",
+                            "linkedin",
                             $event.target.value
                           )
                         }
@@ -17773,13 +17779,13 @@ var render = function() {
                           {
                             name: "show",
                             rawName: "v-show",
-                            value: _vm.serverErrors.linkedIn != "",
-                            expression: "serverErrors.linkedIn != ''"
+                            value: _vm.serverErrors.linkedin != "",
+                            expression: "serverErrors.linkedin != ''"
                           }
                         ],
                         staticClass: "text-danger"
                       },
-                      [_vm._v(_vm._s(_vm.serverErrors.linkedIn))]
+                      [_vm._v(_vm._s(_vm.serverErrors.linkedin))]
                     )
                   ]
                 ),

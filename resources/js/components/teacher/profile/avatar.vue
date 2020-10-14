@@ -1,13 +1,17 @@
 <template>
   <div>
-    <div class="text-center" v-if="userImageStatus">
+    <div class="text-center mt-5 pt-4" v-if="userImageStatus">
       <img
         class="profile-picture rounded-circle shadow"
-        :src="domainUrl + '/media/users/profile/' + userId + '/s-' + userImage"
+        :src="
+          userImage === 'default.webp'
+            ? '/images/' + userImage
+            : domainUrl + '/media/teacher/' + userId + '/profile/' + userImage
+        "
         alt="teacher profile pictures"
       />
       <a
-        class="profile-edit p-2 rounded"
+        class="profile-edit p-2 rounded teacher-edit"
         @click="editTheIcon()"
         data-toggle="tooltip"
         title="Change Picture"
@@ -15,7 +19,7 @@
       ></a>
     </div>
 
-    <div class="upload-profile-pic" v-if="!userImageStatus">
+    <div class="upload-profile-pic mt-5 pt-4" v-if="!userImageStatus">
       <picture-input
         ref="pictureInput"
         width="152"
@@ -53,6 +57,45 @@
         imageError
       }}</span>
     </div>
+
+    <!-- <div class="upload-profile-pic" v-if="!userImageStatus">
+      <picture-input
+        ref="pictureInput"
+        width="152"
+        height="150"
+        margin="16"
+        accept="image/jpeg, image/png"
+        size="10"
+        button-class="btn"
+        :custom-strings="{
+          upload: '<h1>Bummer!</h1>',
+          drag: 'Upload your profile picture',
+        }"
+        @change="onChange"
+        name="image"
+      ></picture-input>
+
+      <div class="text-center mt-2">
+        <button
+          v-if="imageData != ''"
+          type="button"
+          class="btn btnsubmit mt-n2"
+          @click="onImageSubmit()"
+        >
+          Submit
+        </button>
+        <button
+          v-if="userImage != ''"
+          @click="canTheEdit()"
+          class="btn btn-warning"
+        >
+          Cancel
+        </button>
+      </div>
+      <span v-show="imageError" class="text-danger text-center">{{
+        imageError
+      }}</span>
+    </div> -->
   </div>
 </template>
 

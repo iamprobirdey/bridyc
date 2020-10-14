@@ -23,8 +23,8 @@
               alt="college logo"
               class="inslogo"
             />
-            <h4 class="card-title mt-n5 text-center">{{ channel.title }}</h4>
-            <p class="card-text mt-n2 district-name">
+            <h4 class="card-title mt-n5 text-center text-capitalize">{{ channel.title }}</h4>
+            <p class="card-text mt-n2 district-name text-capitalize">
               Dist: {{ channel.district.name }}
             </p>
             <p

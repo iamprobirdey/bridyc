@@ -134,9 +134,6 @@ nav ul li .accounticon {
 
 #sidebarcollapse .left-sidebar ul .active {
   background-color: #990066;
-}
-
-#sidebarcollapse .left-sidebar ul .active a {
   color: white;
 }
 
@@ -155,22 +152,6 @@ nav ul li .accounticon {
 main {
   padding-top: 70px;
   margin-bottom: 40px;
-  /* .profile-edit{
-            position:relative;
-            left:-12%;
-            top:-113px;
-            z-index: inherit;
-            cursor: pointer;
-            background-color:gainsboro;
-            @include screensize(tablet){
-             left:-8%;
-            }
-         
-            @include screensize(laptop){
-             left:-7%;
-             top:-105px;
-             }
-         }*/
 }
 
 main .inscover {
@@ -195,7 +176,7 @@ main .blankdiv {
   width: 100%;
   position: relative;
   top: -70px;
-  background-color: white;
+  background-color: #f5f9ff;
   padding-top: 55px;
   padding-left: 10px;
 }
@@ -344,12 +325,18 @@ main .inssocial img {
 }
 
 main .inspills {
-  margin-top: -170px;
+  margin-top: -112px;
 }
 
 @media only screen and (min-width: 481px) {
   main .inspills {
-    margin-top: -200px;
+    margin-top: -130px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  main .inspills {
+    margin-top: -140px;
   }
 }
 
@@ -364,20 +351,7 @@ main .inspills .nav-pills .active {
 
 main .inspills .inscarou {
   width: 100%;
-  height: 180px;
-  margin-bottom: 80px;
-}
-
-@media only screen and (min-width: 481px) {
-  main .inspills .inscarou {
-    margin-bottom: -190px;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  main .inspills .inscarou {
-    margin-bottom: 390px;
-  }
+  height: auto;
 }
 
 main .inspills .inscarou li {
@@ -389,46 +363,50 @@ main .inspills .inscarou li {
   background-color: black;
 }
 
+@media only screen and (min-width: 768px) {
+  main .inspills .inscarou li {
+    top: 10px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  main .inspills .inscarou {
+    margin-bottom: 180px;
+  }
+}
+
 main .inspills .inscarou img {
   width: 100%;
-  height: 100%;
+  height: 200px;
+}
+
+@media only screen and (min-width: 768px) {
+  main .inspills .inscarou img {
+    height: 400px;
+  }
 }
 
 main .inspills .notice {
-  background-color: white;
+  background-color: #f5f9ff;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 13px;
-  border: 1px;
   height: auto;
-  margin-left: auto;
-  margin-right: auto;
   width: 100%;
 }
 
 main .inspills .notice h5 {
   font-weight: 400;
-  color: #011737;
+  color: #003585;
 }
 
-@media only screen and (min-width: 481px) {
-  main .inspills .notice {
-    font-size: x-large;
-  }
+main .inspills .notice hr {
+  border-bottom: 2px solid #db3737;
 }
 
-@media only screen and (min-width: 768px) {
-  main .inspills .notice {
-    font-size: large;
-  }
-}
-
-main .inspills .facultyachieve h3 {
-  background-color: #011737;
-  color: white;
-  padding: 7px;
-  text-align: center;
+main .inspills .notice p {
+  color: black;
 }
 
 main .inspills .facultyachieve .facultyachievecard {
@@ -442,33 +420,27 @@ main .inspills .facultyachieve .facultyachievecard img {
 }
 
 main .inspills .description {
-  background-color: white;
   padding: 1rem;
   margin-left: auto;
   margin-right: auto;
   width: 100%;
 }
 
-main .inspills .description h4 {
-  text-align: center;
-  color: #011737;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
 main .inspills .description p {
-  border-left: 10px solid #ffbcb091;
+  border-left: 10px solid #96e0b7;
+  color: #011737;
   padding-left: 10px;
 }
 
-@media only screen and (min-width: 481px) {
-  main .inspills .description {
-    font-size: x-large;
-  }
+main .inspills h2 {
+  color: #003585;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 18px;
 }
 
-@media only screen and (min-width: 768px) {
-  main .inspills .description {
-    font-size: large;
+@media only screen and (min-width: 481px) {
+  main .inspills h2 {
+    font-size: 32px;
   }
 }
 
@@ -476,9 +448,27 @@ main .inspills .princidiv {
   margin-top: 50px;
 }
 
+main .inspills .princidiv h3 {
+  color: #003585;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 18px;
+}
+
+@media only screen and (min-width: 481px) {
+  main .inspills .princidiv h3 {
+    font-size: 24px;
+  }
+}
+
 main .inspills .princidiv img {
-  width: 50px;
-  height: 50px;
+  width: 24px;
+  height: 24px;
+}
+
+@media only screen and (min-width: 481px) {
+  main .inspills .princidiv img {
+    height: 30px;
+  }
 }
 
 main .inspills .princidiv .principalcard {
@@ -496,93 +486,29 @@ main .inspills .princidiv .principalcard img {
   height: 250px;
 }
 
-main .inspills .princidiv .principalcard .card-body {
-  background-color: #f9fcff;
+main .inspills .princidiv h6 {
+  color: #003585;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-main .inspills .additionalinfo h3 {
-  color: #011737;
-}
-
-main .inspills .additionalinfo .insadditionalinfo ul {
-  list-style: none;
-  line-height: 38px;
+main .inspills .insadditionalinfo p {
   font-size: 18px;
-  text-align: center;
 }
 
-main .inspills .facilitydiv {
-  background-color: white;
+main .inspills .insadditionalinfo img {
+  width: 18px;
+  height: 18px;
 }
 
-main .inspills .facilitydiv div {
+main .inspills .facilitydiv p {
   font-size: 16px;
   color: #011737;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
-main .inspills .facilitydiv div img {
-  width: 30px;
-  height: 30px;
-}
-
-main .insaddress h4 {
-  text-align: center;
-  padding-top: .5rem;
-  padding-bottom: .5rem;
-}
-
-main .insaddress .addbody {
-  margin-top: -8px;
-  padding: 2rem;
-  font-size: large;
-  font-weight: 500;
-  border-left: 2px solid gainsboro;
-  border-right: 2px solid gainsboro;
-  border-bottom: 2px solid gainsboro;
-}
-
-@media only screen and (min-width: 481px) {
-  main .insaddress .addbody {
-    font-size: x-large;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  main .insaddress .addbody {
-    font-size: large;
-  }
-}
-
-main .insaddress .addbody ul {
-  line-height: 2rem;
-}
-
-@media only screen and (min-width: 375px) {
-  main .insaddress {
-    margin-top: 40px;
-  }
-}
-
-@media only screen and (min-width: 411px) {
-  main .insaddress {
-    margin-top: 60px;
-  }
-}
-
-@media only screen and (min-width: 481px) {
-  main .insaddress {
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 350px;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  main .insaddress {
-    margin-top: 0px;
-  }
+main .inspills .facilitydiv p img {
+  width: 16px;
+  height: 16px;
 }
 
 main .btnveri {
@@ -753,7 +679,6 @@ main .editachieve:focus {
 }
 
 main .body-channelprofile {
-  background-color: white;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
@@ -773,12 +698,20 @@ main .body-channelprofile::placeholder {
   color: gainsboro;
 }
 
+main .body-channelprofile h4 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 main .profile {
   max-width: 100%;
 }
 
+main .profile .princi-name {
+  background-color: #cce0fd;
+  color: black;
+}
+
 main .profile .princi-profile-picture {
-  position: relative;
   border: 2px solid gainsboro;
 }
 
@@ -796,6 +729,8 @@ main .profile img {
 
 main .profile .princi-profile-edit {
   position: relative;
+  left: -16%;
+  top: 53px;
   z-index: inherit;
   cursor: pointer;
   background-color: gainsboro;
@@ -803,14 +738,21 @@ main .profile .princi-profile-edit {
 
 @media only screen and (min-width: 481px) {
   main .profile .princi-profile-edit {
-    left: -8%;
+    left: -11%;
+    top: 55px;
   }
 }
 
 @media only screen and (min-width: 768px) {
   main .profile .princi-profile-edit {
-    left: -4%;
-    top: 78px;
+    left: -7%;
+    top: 70px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  main .profile .princi-profile-edit {
+    left: -6%;
   }
 }
 
@@ -821,11 +763,6 @@ main .profile .upload-profile-pic {
 
 main .profile .edit-btn {
   color: #6fb604;
-}
-
-main .profile .username {
-  margin-top: -160px;
-  font-size: 18px;
 }
 
 main .profile .btnsubmit {
@@ -844,54 +781,76 @@ main .profile .btnsubmit:hover {
   color: white;
 }
 
-main .profile .address .address-display {
-  font-size: 18px;
+main .profile .pricipal-modal h5 {
+  color: #003585;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-@media only screen and (min-width: 768px) {
-  main .profile .address .address-display {
-    font-size: 16px;
-  }
+main .profile .pricipal-modal h6 {
+  color: #003585;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-main .profile .btnsubjects {
-  background-color: #5B2C6F;
+main .profile .princi-profile-display .mission-message-display {
+  background-color: #f9fafa;
+}
+
+main .teacher-section {
+  color: #003585;
+}
+
+main .teacher-section h3 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+main .teacher-section h5 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+main .notification-section {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+main .notification-section h3 {
+  color: #003585;
+}
+
+main .notification-section .add-notifications {
+  background-color: #003585;
   color: white;
 }
 
-main .profile .channelname select {
-  background-color: #f9fafa;
-  width: 100%;
+main .notification-section label {
+  color: #003585;
 }
 
-main .profile .channelname select:focus {
-  -webkit-box-shadow: none !important;
-          box-shadow: none !important;
+main .notification-section .btn-publish {
+  background-color: #990066;
+  color: white;
 }
 
-main .profile .channelname input {
-  border: 0;
-  border-bottom: 1px solid gainsboro;
-  width: 100%;
+main .notification-section input::-webkit-input-placeholder {
+  color: #8b8b8b;
 }
 
-main .profile .channelname input:focus {
-  -webkit-box-shadow: none !important;
-          box-shadow: none !important;
+main .notification-section input:-ms-input-placeholder {
+  color: #8b8b8b;
 }
 
-main .profile .channelname input::-webkit-input-placeholder {
-  color: #a5a5a5;
+main .notification-section input::-ms-input-placeholder {
+  color: #8b8b8b;
 }
 
-main .profile .channelname input:-ms-input-placeholder {
-  color: #a5a5a5;
+main .notification-section input::placeholder {
+  color: #8b8b8b;
 }
 
-main .profile .channelname input::-ms-input-placeholder {
-  color: #a5a5a5;
+main .notification-section ul {
+  list-style: none;
 }
 
-main .profile .channelname input::placeholder {
-  color: #a5a5a5;
+main .notification-section ul li::before {
+  content: "\2B9A";
+  font-size: larger;
+  color: #003585;
 }
