@@ -25,6 +25,7 @@ main .blankdiv {
   width: 100%;
   position: relative;
   top: -77px;
+  bottom: -120px;
   background-color: #f5f9ff;
   padding-top: 55px;
   padding-left: 10px;
@@ -100,21 +101,22 @@ main .blankdiv .phemdiv {
 
 main .logo-title {
   position: relative;
-  top: -250px;
+  top: -170px;
+  left: -5px;
   margin-bottom: -120px;
 }
 
 @media only screen and (min-width: 481px) {
   main .logo-title {
-    top: -255px;
-    left: 10px;
+    top: -184px;
+    left: -5px;
   }
 }
 
 @media only screen and (min-width: 768px) {
   main .logo-title {
-    top: -300px;
-    left: -70px;
+    top: -195px;
+    left: -164px;
   }
 }
 
@@ -142,37 +144,26 @@ main .logo-title .logoinstitute {
 }
 
 main .logo-title .institle {
-  font-size: 20px;
+  font-size: 17px;
   margin-top: 47px;
   -webkit-transition: all ease .5s;
   transition: all ease .5s;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-@media only screen and (min-width: 411px) {
-  main .logo-title .institle {
-    font-size: 25px;
-  }
-}
-
-@media only screen and (min-width: 481px) {
-  main .logo-title .institle {
-    font-size: 30px;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  main .logo-title .institle {
-    font-size: 35px;
-    margin-top: 70px;
-  }
-}
-
-@media only screen and (min-width: 1280px) {
-  main .logo-title .institle {
-    font-size: 38px;
-    margin-top: 70px;
-  }
+  /*@include screensize(forcards){
+                 font-size: 25px;
+                }
+                 @include screensize(tablet){
+                     font-size: 30px;
+                 }
+                 
+                    @include screensize(laptop){
+                     font-size: 35px;
+                     margin-top: 70px;
+                    }
+                    @include screensize(desktop){
+                      font-size: 38px;
+                      margin-top: 70px;
+                     }*/
 }
 
 main .inssocial {

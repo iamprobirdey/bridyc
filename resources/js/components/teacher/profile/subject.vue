@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <div class="container">
     <div v-if="subjectsEntryChecker">
-      You school sujects are:
+      Subjects you teach :
       <button class="btn mt-n2 edit-btn" @click="editTheSubject()">
         <i class="fa fa-pencil" aria-hidden="true"></i>
       </button>
@@ -19,7 +19,9 @@
     </div>
     </div>
     <div v-if="!subjectsEntryChecker">
+      Add subjects :
       <multiselect
+        class="mt-3 mx-auto add-subject-teacher"
         v-model="value"
         :options="subjectsData"
         track-by="name"
@@ -30,8 +32,8 @@
       ></multiselect>
       <span v-show="serverError != ''" class="text-danger text-center">{{ serverError }}</span>
       <br />
-      <button class="btn btn-danger" @click="cancelTheForm()">Cancel</button>
-      <button type="submit" class="btn btnsubmit" @click="submitSubjectsData()">Submit</button>
+      <button class="btn btn-warning" @click="cancelTheForm()">Cancel</button>
+      <button type="submit" class="btn btnsubmit mt-n2" @click="submitSubjectsData()">Submit</button>
     </div>
   </div>
 </template>

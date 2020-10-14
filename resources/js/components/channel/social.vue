@@ -1,7 +1,7 @@
 <template>
   <div>
     <h4>Social Media handles</h4>
-    <ul v-if="getTheModel === false">
+    <ul v-if="getTheModel === false" class="edit-social">
       <li v-if="socialData.facebook != null">
         <a :href="socialData.facebook" target="_blank"><span>Facebook</span></a>
       </li>
@@ -237,4 +237,5 @@ export default {
 </script>
 
 <style>
+
 </style>

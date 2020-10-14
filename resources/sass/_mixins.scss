@@ -1,4 +1,9 @@
 @mixin screensize($device) {
+    @if $device==iphone5above {
+        @media only screen and (min-width:360px){
+            @content;
+        }
+    }
 
     @if $device==tablet {
         @media only screen and (min-width:481px) {
@@ -17,6 +22,7 @@
             @content;
         }
     }
+    
     @else if $device==forbutton {
         @media only screen and (min-width:1000px) {
             @content;

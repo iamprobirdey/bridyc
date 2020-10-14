@@ -26,17 +26,18 @@
               channelData.cover_avatar
             : '/images/banner2.png'
         "
-        class="inscover"
+        class="inscover mt-n3"
       />
 
       <div class="blankdiv shadow">
-        <div class="d-flex">
-          <div class="d-flex flex-column">
-            <p class="m-1">
-              {{ channelData.title }}
-            </p>
+        <div class="row mx-0">
+          <div class="col-md-6 d-flex flex-column">
+            <div class="insweb text-center" v-if="channelData.website_link === null">
+              Website: NA
+            </div>
+            <div v-else>
             <a
-              class="m-1 insweb"
+              class="ml-n4 insweb insweb-available px-2 py-1 mt-n1 mt-md-3"
               :target="channelData.website_link === null ? '_self' : '_blank'"
               :href="
                 channelData.website_link === null
@@ -44,21 +45,22 @@
                   : channelData.website_link
               "
               >Visit Website
-              <i class="fa fa-external-link-square" aria-hidden="true"></i
-            ></a>
+               <img src="/images/external-link-symbol.svg" class="mt-n1" alt="external link symbol">
+               </a>
+            </div>
           </div>
 
-          <div class="ml-auto phemdiv">
+          <div class="col-md-6 phemdiv text-md-right ml-n4">
             <p class="m-1 mr-2">
               <i
-                class="fa fa-phone mr-1 d-none d-sm-inline"
+                class="fa fa-phone mr-1"
                 aria-hidden="true"
               ></i>
-              Call us at: {{ phoneNo }}
+                {{ phoneNo }}
             </p>
             <p class="m-1 mr-2">
               <i
-                class="fa fa-envelope mr-1 d-none d-sm-inline"
+                class="fa fa-envelope mr-1"
                 aria-hidden="true"
               ></i>
               {{ userData.email }}
@@ -81,14 +83,14 @@
                 : '/images/college logo.jpg'
             "
             alt="Institute logo"
-            class="img-fluid logoinstitute"
+            class="logoinstitute"
           />
           <h1 class="ml-1 ml-sm-4 institle text-capitalize">{{ channelData.title }}</h1>
         </div>
       </div>
 
       <div class="inssocial">
-        <div class="d-flex flex-column flex-lg-row" v-if="socialCount === 0">
+        <div class="d-flex flex-lg-row justify-content-center" v-if="socialCount === 0">
           <a
             class="mr-1"
             v-if="channelData.extra_attributes.social.facebook != null"
@@ -151,7 +153,7 @@
             <a class="nav-link" data-toggle="pill" href="#faculty">Faculty</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" data-toggle="pill" href="#facility">Facilities</a>
+            <a class="nav-link" data-toggle="pill" href="#facility">Facility</a>
           </li>
         </ul>
 
@@ -171,7 +173,7 @@
 
             <div class="row mb-5 mx-0 px-0">
               <div class="card notice shadow-sm border-0 col-md-5 col-lg-4 px-0">
-                <div class="card-body">
+                <div class="card-body px-0">
                   <div class="card-title my-n2">
                     <h5 class="text-uppercase text-center">News and Notifications</h5>
                   </div>
@@ -182,10 +184,6 @@
                         index) in channelData.notification"
                         :key="index"
                       >
-                        <i
-                          class="fa fa-long-arrow-right"
-                          aria-hidden="true"
-                        ></i>
                         {{ notification.notify }}
                         <span class="badge badge-info" v-if="index === 0"
                           >New</span
@@ -355,7 +353,7 @@
           </div>
           <div id="facility" class="container-fluid tab-pane fade">
             <br />
-            <h2 class="text-uppercase">Our Facilities</h2>
+            <h2 class="text-uppercase">Infrastructure</h2>
             <hr class="mt-n2" />
             
             <div class="row facilitydiv mt-5 py-3">

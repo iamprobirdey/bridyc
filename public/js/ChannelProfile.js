@@ -2402,10 +2402,7 @@ var render = function() {
       _vm._v(" "),
       _c(
         "h4",
-        {
-          staticClass:
-            "text-center text-capitalized princi-name w-25 mx-auto shadow p-2"
-        },
+        { staticClass: "text-center text-capitalized princi-name mx-auto p-2" },
         [_vm._v("Name: " + _vm._s(_vm.channelProfileData.name))]
       ),
       _vm._v(" "),
@@ -2547,7 +2544,7 @@ var render = function() {
             _vm._v(" "),
             _c(
               "div",
-              { staticClass: "col-sm-6 pr-0" },
+              { staticClass: "col-sm-6" },
               [
                 _c("activities", {
                   attrs: { profiledata: _vm.channelProfileData }
@@ -3001,6 +2998,7 @@ var render = function() {
     _vm.activities != null
       ? _c(
           "div",
+          { staticClass: "mx-0" },
           _vm._l(_vm.activities, function(activity, index) {
             return _c("ul", { key: index, staticClass: "nav flex-column" }, [
               _c("li", [
@@ -3388,7 +3386,7 @@ var render = function() {
           _c(
             "button",
             {
-              staticClass: "btn princi-profile-edit edit-btn p-2",
+              staticClass: "btn princi-profile-edit p-2",
               on: {
                 click: function($event) {
                   return _vm.editTheIcon()

@@ -2,17 +2,19 @@
   <div>
     <div v-if="hobbiesEntryChecker">
       Field of Interest:
+      <button class="btn mt-n2 edit-btn" @click="editThehobbie()" data-toggle="tooltip" title="Edit">
+        <i class="fa fa-pencil" aria-hidden="true"></i>
+      </button>
+      <div>
       <button
-        class="btn btn-primary m-1"
+        class="btn btn-sm btnsubjects m-1"
         v-for="(hobbie, index) in studentshobbiesData"
         :key="index"
       >
         {{ hobbie.name }}
       </button>
-
-      <button class="btn mt-n2 edit-btn" @click="editThehobbie()" data-toggle="tooltip" title="Edit">
-        <i class="fa fa-pencil" aria-hidden="true"></i>
-      </button>
+      </div>
+      
     </div>
     <div v-if="!hobbiesEntryChecker">
       <multiselect

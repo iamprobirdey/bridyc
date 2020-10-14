@@ -1,7 +1,16 @@
 @import "mixins";
 
 .imgbanabout{
-    background-image: linear-gradient(to top,rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/aboutus.png");
+    background-image: linear-gradient(to top,rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/aboutus-header-m.webp");
+    @include screensize(tablet){
+        background-image: linear-gradient(to top,rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/aboutus-header-t.webp");
+    }
+    @include screensize(laptop){
+        background-image: linear-gradient(to top,rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/aboutus-header-l.webp");
+    }
+    @include screensize(desktop){
+        background-image: linear-gradient(to top,rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/aboutus-header-d.webp"); 
+    }
 }
 
 .about-story{
@@ -27,6 +36,10 @@
 }
 
 .about-how{
+    max-width: 100%;
+    @include screensize(iphone5above){
+        width:auto;
+    }
     .text-how{
         @include screensize(laptop){
             padding-right: 70px;

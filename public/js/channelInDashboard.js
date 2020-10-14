@@ -521,8 +521,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -1045,7 +1043,7 @@ var render = function() {
       { staticClass: "col-lg-10 ml-lg-auto", attrs: { role: "main" } },
       [
         _c("img", {
-          staticClass: "inscover",
+          staticClass: "inscover mt-n3",
           attrs: {
             src:
               _vm.channelData.cover_avatar != null
@@ -1059,57 +1057,57 @@ var render = function() {
         }),
         _vm._v(" "),
         _c("div", { staticClass: "blankdiv shadow" }, [
-          _c("div", { staticClass: "d-flex" }, [
-            _c("div", { staticClass: "d-flex flex-column" }, [
-              _c("p", { staticClass: "m-1" }, [
-                _vm._v(
-                  "\n            " +
-                    _vm._s(_vm.channelData.title) +
-                    "\n          "
-                )
-              ]),
-              _vm._v(" "),
-              _c(
-                "a",
-                {
-                  staticClass: "m-1 insweb",
-                  attrs: {
-                    target:
-                      _vm.channelData.website_link === null
-                        ? "_self"
-                        : "_blank",
-                    href:
-                      _vm.channelData.website_link === null
-                        ? "javascript:void(0)"
-                        : _vm.channelData.website_link
-                  }
-                },
-                [
-                  _vm._v("Visit Website\n            "),
-                  _c("i", {
-                    staticClass: "fa fa-external-link-square",
-                    attrs: { "aria-hidden": "true" }
-                  })
-                ]
-              )
+          _c("div", { staticClass: "row mx-0" }, [
+            _c("div", { staticClass: "col-md-6 d-flex flex-column" }, [
+              _vm.channelData.website_link === null
+                ? _c("div", { staticClass: "insweb text-center" }, [
+                    _vm._v("\n            Website: NA\n          ")
+                  ])
+                : _c("div", [
+                    _c(
+                      "a",
+                      {
+                        staticClass:
+                          "ml-n4 insweb insweb-available px-2 py-1 mt-n1 mt-md-3",
+                        attrs: {
+                          target:
+                            _vm.channelData.website_link === null
+                              ? "_self"
+                              : "_blank",
+                          href:
+                            _vm.channelData.website_link === null
+                              ? "javascript:void(0)"
+                              : _vm.channelData.website_link
+                        }
+                      },
+                      [
+                        _vm._v("Visit Website\n             "),
+                        _c("img", {
+                          staticClass: "mt-n1",
+                          attrs: {
+                            src: "/images/external-link-symbol.svg",
+                            alt: "external link symbol"
+                          }
+                        })
+                      ]
+                    )
+                  ])
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "ml-auto phemdiv" }, [
+            _c("div", { staticClass: "col-md-6 phemdiv text-md-right ml-n4" }, [
               _c("p", { staticClass: "m-1 mr-2" }, [
                 _c("i", {
-                  staticClass: "fa fa-phone mr-1 d-none d-sm-inline",
+                  staticClass: "fa fa-phone mr-1",
                   attrs: { "aria-hidden": "true" }
                 }),
                 _vm._v(
-                  "\n            Call us at: " +
-                    _vm._s(_vm.phoneNo) +
-                    "\n          "
+                  "\n              " + _vm._s(_vm.phoneNo) + "\n          "
                 )
               ]),
               _vm._v(" "),
               _c("p", { staticClass: "m-1 mr-2" }, [
                 _c("i", {
-                  staticClass: "fa fa-envelope mr-1 d-none d-sm-inline",
+                  staticClass: "fa fa-envelope mr-1",
                   attrs: { "aria-hidden": "true" }
                 }),
                 _vm._v(
@@ -1123,7 +1121,7 @@ var render = function() {
         _c("div", { staticClass: "container" }, [
           _c("div", { staticClass: "d-flex mt-5 logo-title" }, [
             _c("img", {
-              staticClass: "img-fluid logoinstitute",
+              staticClass: "logoinstitute",
               attrs: {
                 src:
                   _vm.channelData.icon_avatar != null
@@ -1145,95 +1143,111 @@ var render = function() {
         _vm._v(" "),
         _c("div", { staticClass: "inssocial" }, [
           _vm.socialCount === 0
-            ? _c("div", { staticClass: "d-flex flex-column flex-lg-row" }, [
-                _vm.channelData.extra_attributes.social.facebook != null
-                  ? _c(
-                      "a",
-                      {
-                        staticClass: "mr-1",
-                        attrs: {
-                          href:
-                            _vm.channelData.extra_attributes.social.facebook !=
-                            null
-                              ? _vm.channelData.extra_attributes.social.facebook
-                              : "javascript:void(0)"
-                        }
-                      },
-                      [
-                        _c("img", {
-                          attrs: { src: "/images/facebook.svg", alt: "fb icon" }
-                        })
-                      ]
-                    )
-                  : _vm._e(),
-                _vm._v(" "),
-                _vm.channelData.extra_attributes.social.linkedin != null
-                  ? _c(
-                      "a",
-                      {
-                        staticClass: "mr-1",
-                        attrs: {
-                          href:
-                            _vm.channelData.extra_attributes.social.linkedin !=
-                            null
-                              ? _vm.channelData.extra_attributes.social.linkedin
-                              : "javascript:void(0)"
-                        }
-                      },
-                      [
-                        _c("img", {
-                          attrs: { src: "/images/linkedin.svg", alt: "li icon" }
-                        })
-                      ]
-                    )
-                  : _vm._e(),
-                _vm._v(" "),
-                _vm.channelData.extra_attributes.social.instagram != null
-                  ? _c(
-                      "a",
-                      {
-                        staticClass: "mr-1",
-                        attrs: {
-                          href:
-                            _vm.channelData.extra_attributes.social.instagram !=
-                            null
-                              ? _vm.channelData.extra_attributes.social
-                                  .instagram
-                              : "javascript:void(0)"
-                        }
-                      },
-                      [
-                        _c("img", {
+            ? _c(
+                "div",
+                { staticClass: "d-flex flex-lg-row justify-content-center" },
+                [
+                  _vm.channelData.extra_attributes.social.facebook != null
+                    ? _c(
+                        "a",
+                        {
+                          staticClass: "mr-1",
                           attrs: {
-                            src: "/images/instagram.svg",
-                            alt: "ig icon"
+                            href:
+                              _vm.channelData.extra_attributes.social
+                                .facebook != null
+                                ? _vm.channelData.extra_attributes.social
+                                    .facebook
+                                : "javascript:void(0)"
                           }
-                        })
-                      ]
-                    )
-                  : _vm._e(),
-                _vm._v(" "),
-                _vm.channelData.extra_attributes.social.youtube != null
-                  ? _c(
-                      "a",
-                      {
-                        staticClass: "mr-1",
-                        attrs: {
-                          href:
-                            _vm.channelData.extra_attributes.social.youtube !=
-                            null
-                              ? _vm.channelData.extra_attributes.social.youtube
-                              : "javascript:void(0)"
-                        }
-                      },
-                      [
-                        _c("img", {
-                          attrs: { src: "/images/youtube.svg", alt: "yt icon" }
-                        })
-                      ]
-                    )
-                  : _vm._e()
-              ])
+                        },
+                        [
+                          _c("img", {
+                            attrs: {
+                              src: "/images/facebook.svg",
+                              alt: "fb icon"
+                            }
+                          })
+                        ]
+                      )
+                    : _vm._e(),
+                  _vm._v(" "),
+                  _vm.channelData.extra_attributes.social.linkedin != null
+                    ? _c(
+                        "a",
+                        {
+                          staticClass: "mr-1",
+                          attrs: {
+                            href:
+                              _vm.channelData.extra_attributes.social
+                                .linkedin != null
+                                ? _vm.channelData.extra_attributes.social
+                                    .linkedin
+                                : "javascript:void(0)"
+                          }
+                        },
+                        [
+                          _c("img", {
+                            attrs: {
+                              src: "/images/linkedin.svg",
+                              alt: "li icon"
+                            }
+                          })
+                        ]
+                      )
+                    : _vm._e(),
+                  _vm._v(" "),
+                  _vm.channelData.extra_attributes.social.instagram != null
+                    ? _c(
+                        "a",
+                        {
+                          staticClass: "mr-1",
+                          attrs: {
+                            href:
+                              _vm.channelData.extra_attributes.social
+                                .instagram != null
+                                ? _vm.channelData.extra_attributes.social
+                                    .instagram
+                                : "javascript:void(0)"
+                          }
+                        },
+                        [
+                          _c("img", {
+                            attrs: {
+                              src: "/images/instagram.svg",
+                              alt: "ig icon"
+                            }
+                          })
+                        ]
+                      )
+                    : _vm._e(),
+                  _vm._v(" "),
+                  _vm.channelData.extra_attributes.social.youtube != null
+                    ? _c(
+                        "a",
+                        {
+                          staticClass: "mr-1",
+                          attrs: {
+                            href:
+                              _vm.channelData.extra_attributes.social.youtube !=
+                              null
+                                ? _vm.channelData.extra_attributes.social
+                                    .youtube
+                                : "javascript:void(0)"
+                          }
+                        },
+                        [
+                          _c("img", {
+                            attrs: {
+                              src: "/images/youtube.svg",
+                              alt: "yt icon"
+                            }
+                          })
+                        ]
+                      )
+                    : _vm._e()
+                ]
+              )
             : _vm._e(),
           _vm._v(" "),
           _vm.socialCount === 1 ? _c("div", [_vm._v("Socials: NA")]) : _vm._e()
@@ -1278,7 +1292,7 @@ var render = function() {
                         "card notice shadow-sm border-0 col-md-5 col-lg-4 px-0"
                     },
                     [
-                      _c("div", { staticClass: "card-body" }, [
+                      _c("div", { staticClass: "card-body px-0" }, [
                         _vm._m(1),
                         _vm._v(" "),
                         _c("hr", { staticClass: "w-25" }),
@@ -1291,10 +1305,6 @@ var render = function() {
                             index
                           ) {
                             return _c("p", { key: index }, [
-                              _c("i", {
-                                staticClass: "fa fa-long-arrow-right",
-                                attrs: { "aria-hidden": "true" }
-                              }),
                               _vm._v(
                                 "\n                      " +
                                   _vm._s(notification.notify) +
@@ -1695,7 +1705,7 @@ var staticRenderFns = [
               staticClass: "nav-link",
               attrs: { "data-toggle": "pill", href: "#facility" }
             },
-            [_vm._v("Facilities")]
+            [_vm._v("Facility")]
           )
         ])
       ]
@@ -1769,7 +1779,7 @@ var staticRenderFns = [
       [
         _c("br"),
         _vm._v(" "),
-        _c("h2", { staticClass: "text-uppercase" }, [_vm._v("Our Facilities")]),
+        _c("h2", { staticClass: "text-uppercase" }, [_vm._v("Infrastructure")]),
         _vm._v(" "),
         _c("hr", { staticClass: "mt-n2" }),
         _vm._v(" "),

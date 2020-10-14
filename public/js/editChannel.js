@@ -409,6 +409,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -14932,7 +14934,7 @@ var render = function() {
     _vm._v(" "),
     _c(
       "div",
-      { staticClass: "container mt-5 ml-0 w-50" },
+      { staticClass: "mt-5 ml-n5" },
       [_c("phone", { attrs: { user: _vm.userData } })],
       1
     )
@@ -15104,13 +15106,17 @@ var render = function() {
                   }
                 }
               },
-              [_vm._v("\n          Delete college image\n        ")]
+              [_vm._v("\n            Delete college image\n          ")]
             )
           ])
         }),
         0
       )
     ]),
+    _vm._v(" "),
+    _c("br"),
+    _vm._v(" "),
+    _c("h4", [_vm._v("Images of your Institute")]),
     _vm._v(" "),
     !_vm.collegeImageEntry
       ? _c(
@@ -15123,7 +15129,7 @@ var render = function() {
               }
             }
           },
-          [_vm._v("\n    Insert images\n  ")]
+          [_vm._v("\n      Insert images\n    ")]
         )
       : _vm._e(),
     _vm._v(" "),
@@ -15162,7 +15168,7 @@ var render = function() {
                         }
                       }
                     },
-                    [_vm._v("\n        Submit\n      ")]
+                    [_vm._v("\n          Submit\n        ")]
                   )
                 : _vm._e(),
               _vm._v(" "),
@@ -15182,7 +15188,7 @@ var render = function() {
                         staticClass: "fa fa-times",
                         attrs: { "aria-hidden": "true" }
                       }),
-                      _vm._v(" Cancel\n      ")
+                      _vm._v(" Cancel\n        ")
                     ]
                   )
                 : _vm._e()
@@ -15792,7 +15798,7 @@ var render = function() {
                       staticClass: "col-sm-2 col-form-label",
                       attrs: { for: "exampleInputEmail1" }
                     },
-                    [_vm._v("Total Class Room")]
+                    [_vm._v("Total Class Room:")]
                   ),
                   _vm._v(" "),
                   _c("input", {
@@ -15895,7 +15901,7 @@ var render = function() {
                 },
                 [
                   _c("label", { staticClass: "col-sm-2 col-form-label" }, [
-                    _vm._v("Boys Toilet")
+                    _vm._v("Boys Toilet:")
                   ]),
                   _vm._v(" "),
                   _c(
@@ -16024,7 +16030,7 @@ var render = function() {
                 },
                 [
                   _c("label", { staticClass: "col-sm-2 col-form-label" }, [
-                    _vm._v("Girls Toilet")
+                    _vm._v("Girls Toilet:")
                   ]),
                   _vm._v(" "),
                   _c(
@@ -16153,7 +16159,7 @@ var render = function() {
                 },
                 [
                   _c("label", { staticClass: "col-sm-3 col-form-label" }, [
-                    _vm._v("Computer Learning")
+                    _vm._v("Computer Learning:")
                   ]),
                   _vm._v(" "),
                   _c(
@@ -16266,7 +16272,7 @@ var render = function() {
                 },
                 [
                   _c("label", { staticClass: "col-sm-2 col-form-label" }, [
-                    _vm._v("Electricity")
+                    _vm._v("Electricity:")
                   ]),
                   _vm._v(" "),
                   _c(
@@ -16378,7 +16384,7 @@ var render = function() {
                 },
                 [
                   _c("label", { staticClass: "col-sm-3 col-form-label" }, [
-                    _vm._v("Campus Boundary")
+                    _vm._v("Campus Boundary:")
                   ]),
                   _vm._v(" "),
                   _c(
@@ -16497,7 +16503,7 @@ var render = function() {
                 },
                 [
                   _c("label", { staticClass: "col-sm-3 col-form-label" }, [
-                    _vm._v("Library Availability")
+                    _vm._v("Library Availability:")
                   ]),
                   _vm._v(" "),
                   _c(
@@ -16615,7 +16621,7 @@ var render = function() {
                       staticClass: "col-sm-2 col-form-label",
                       attrs: { for: "exampleInputEmail1" }
                     },
-                    [_vm._v("Total Books")]
+                    [_vm._v("Total Books:")]
                   ),
                   _vm._v(" "),
                   _c("input", {
@@ -16718,7 +16724,7 @@ var render = function() {
                 },
                 [
                   _c("label", { staticClass: "col-sm-2 col-form-label" }, [
-                    _vm._v("Playground")
+                    _vm._v("Playground:")
                   ]),
                   _vm._v(" "),
                   _c(
@@ -16835,7 +16841,7 @@ var render = function() {
                       staticClass: "col-sm-2 col-form-label",
                       attrs: { for: "exampleInputEmail1" }
                     },
-                    [_vm._v("No.of Hostel")]
+                    [_vm._v("No.of Hostel:")]
                   ),
                   _vm._v(" "),
                   _c("input", {
@@ -16933,7 +16939,7 @@ var render = function() {
                 },
                 [
                   _c("label", { staticClass: "col-sm-2 col-form-label" }, [
-                    _vm._v("Bus Services")
+                    _vm._v("Bus Services:")
                   ]),
                   _vm._v(" "),
                   _c(
@@ -17170,7 +17176,7 @@ var render = function() {
                           expression: "'required|numeric|max:10|min:10'"
                         }
                       ],
-                      staticClass: "col-sm-9 ml-4",
+                      staticClass: "col-sm-9 ml-md-4",
                       class: {
                         "form-control": true,
                         "is-invalid": _vm.errors.has("phone")
@@ -17393,7 +17399,7 @@ var render = function() {
     _c("h4", [_vm._v("Social Media handles")]),
     _vm._v(" "),
     _vm.getTheModel === false
-      ? _c("ul", [
+      ? _c("ul", { staticClass: "edit-social" }, [
           _vm.socialData.facebook != null
             ? _c("li", [
                 _c(

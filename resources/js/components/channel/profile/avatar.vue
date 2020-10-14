@@ -16,7 +16,7 @@
                         :srcset="domainUrl+'/media/channel/'+userId+'/m-'+userImage+','+domainUrl+'/media/channel/'+userId+'/s-'+userImage"
                      -->
 
-      <button @click="editTheIcon()" class="btn princi-profile-edit edit-btn p-2">
+      <button @click="editTheIcon()" class="btn princi-profile-edit p-2">
         <i class="fa fa-camera" aria-hidden="true"></i>
       </button>
     </div>

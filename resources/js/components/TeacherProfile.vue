@@ -7,8 +7,8 @@
     <br>
     <br>
     <br>
-    <div class="shadow py-5 mt-n4">
-      <div class="container">
+    <div class="shadow py-5 mt-n4 mx-lg-5">
+      <div class="container mx-lg-5 px-md-5">
         <address-for-teacher
           :channels="channelsData"
           :states="statesData"
@@ -19,7 +19,7 @@
           :id="userData.id"
         ></address-for-teacher>
       </div>
-      <div class="mt-5 pt-3 mb-5 mx-auto text-center">
+      <div class="mt-5 pt-3 mb-5 mx-lg-5 text-center">
         
           <subject
             :subjects="subjectsData"
@@ -28,17 +28,18 @@
           ></subject>
         
       </div>
-      <div class="row mt-5 mx-auto">
-        <div class="col-sm-6">
+      <hr>
+      <div class="row mt-5 mx-0">
+        <div>
           <channel
             :userinstitute="userinstituteData"
             :user="userData"
             :channel="channelsData"
           ></channel>
         </div>
-        <div class="col-sm-6">
+        <!--div class="col-sm-6">
           <phone :user="userData"></phone>
-        </div>
+        </div-->
     </div>
   </div>
   </div>

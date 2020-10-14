@@ -31,7 +31,7 @@
     @include('layouts.sidebar')
     <br>
     <br>
-    <div id="channelInDashboard">
+    <div id="channelInDashboard" class="ins-channel">
         <channel-in-dashboard :user="{{json_encode($user)}}" :channel="{{json_encode($channel)}}">
         </channel-in-dashboard>
     </div>
@@ -43,4 +43,9 @@
 <script src="{{url('js/app.js')}}"></script>
 <script src="{{url('js/dashboardBlade.js')}}"></script>
 <script src="{{url('js/channelInDashboard.js')}}"></script>
+<style scoped>
+.ins-channel{
+background-color:white;
+}
+</style>
 @endsection

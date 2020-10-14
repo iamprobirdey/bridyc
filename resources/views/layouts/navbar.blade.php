@@ -4,7 +4,7 @@
         <i class="fa fa-bars" aria-hidden="true"></i>
       </button>
 
-      <a class="navbar-brand" href="/"><img class="imglogodash img-fluid" src="/images/circle-bridyc.png" alt="Bridyc logo" ></a>
+      <a class="navbar-brand" href="/"><img class="imglogodash img-fluid" src="/images/bridyc-logo-new.png" alt="Bridyc logo" ></a>
 
       <ul class="nav">
         {{-- <li class="nav-item">
@@ -13,7 +13,7 @@
           </a>
         </li> --}}
         @if (Auth::check())
-            <a class="btn btn-danger mr-3" href="{{ route('logout') }}"
+            <a class="btn btn-danger mr-3 d-none d-lg-block" href="{{ route('logout') }}"
             onclick="event.preventDefault();
                             document.getElementById('logout-form').submit();">
                 <i class="fa fa-sign-out" aria-hidden="true"></i> {{ __('Logout') }}

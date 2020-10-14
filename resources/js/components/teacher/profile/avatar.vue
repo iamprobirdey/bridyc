@@ -1,15 +1,15 @@
 <template>
     <div>
 
-        <div class="text-center" v-if="userImageStatus">
+        <div class="text-center mt-5 pt-4" v-if="userImageStatus">
             <img class="profile-picture rounded-circle shadow"
             :src="domainUrl+'/media/teacher/'+userId+'/profile/'+userImage"
             alt="teacher profile pictures">
-        <a class="profile-edit p-2 rounded" @click="editTheIcon()" data-toggle="tooltip" title="Change Picture"><i class="fa fa-camera" aria-hidden="true"></i></a>
-        </div>
+        <a class="profile-edit p-2 rounded teacher-edit" @click="editTheIcon()" data-toggle="tooltip" title="Change Picture"><i class="fa fa-camera" aria-hidden="true"></i></a>
+        </div> 
         
 
-        <div class="upload-profile-pic" v-if="!userImageStatus">
+        <div class="upload-profile-pic mt-5 pt-4" v-if="!userImageStatus">
             <picture-input
                 ref="pictureInput"
                 width="152"

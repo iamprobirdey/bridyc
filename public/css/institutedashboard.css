@@ -10,7 +10,7 @@ nav .navbar-toggler:focus {
 }
 
 nav .imglogodash {
-  width: 60px;
+  width: 110px;
   height: auto;
   margin-left: -12%;
   transition: all ease 0.5s;
@@ -18,14 +18,22 @@ nav .imglogodash {
 
 @media only screen and (min-width: 481px) {
   nav .imglogodash {
-    width: 70px;
+    width: 115px;
     height: auto;
   }
 }
 
 @media only screen and (min-width: 768px) {
   nav .imglogodash {
-    margin-left: 10px;
+    margin: 5px;
+    width: 150px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  nav .imglogodash {
+    margin: 7px;
+    width: 120px;
   }
 }
 
@@ -176,14 +184,13 @@ main .blankdiv {
   height: auto;
   width: 100%;
   position: relative;
-  top: -70px;
-  background-color: #f5f9ff;
+  background-color: #f9fafa;
   padding-top: 55px;
   padding-left: 10px;
 }
 
 main .blankdiv p {
-  font-size: 12px;
+  font-size: 15px;
 }
 
 @media only screen and (min-width: 481px) {
@@ -192,9 +199,16 @@ main .blankdiv p {
   }
 }
 
+@media only screen and (min-width: 768px) {
+  main .blankdiv p {
+    font-size: 18px;
+  }
+}
+
 @media only screen and (min-width: 481px) {
   main .blankdiv {
     height: 130px;
+    padding-bottom: 95px;
   }
 }
 
@@ -202,23 +216,52 @@ main .blankdiv p {
   main .blankdiv {
     height: 150px;
     padding-left: 60px;
-    padding-top: 75px;
+    padding-top: 110px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  main .blankdiv {
+    padding-top: 90px;
   }
 }
 
 main .blankdiv .insweb {
   background-color: #003585;
   color: white;
-  width: 138px;
-  padding-left: 15px;
-  padding-right: 12px;
+  font-size: 14px;
+  width: 110px;
+  margin-left: -20px;
 }
 
-main .blankdiv .insweb:hover {
-  background-color: white;
-  color: #011737;
+@media only screen and (min-width: 481px) {
+  main .blankdiv .insweb {
+    width: 130px;
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  main .blankdiv .insweb {
+    width: 157px;
+    font-size: 18px;
+    margin-left: -58px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  main .blankdiv .insweb {
+    margin-left: -25px;
+  }
+}
+
+main .blankdiv .insweb-available img {
+  width: 15px;
+  height: 15px;
+}
+
+main .blankdiv .insweb-available:hover {
   text-decoration: none;
-  border: 1px solid #011737;
 }
 
 @media only screen and (min-width: 768px) {
@@ -229,21 +272,34 @@ main .blankdiv .insweb:hover {
 
 main .logo-title {
   position: relative;
-  top: -280px;
+  top: -224px;
   margin-bottom: -120px;
+  left: -12px;
+}
+
+@media only screen and (min-width: 360px) {
+  main .logo-title {
+    top: -220px;
+  }
 }
 
 @media only screen and (min-width: 481px) {
   main .logo-title {
-    top: -290px;
-    left: 10px;
+    top: -245px;
   }
 }
 
 @media only screen and (min-width: 768px) {
   main .logo-title {
-    top: -330px;
-    left: -70px;
+    top: -318px;
+    left: -127px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  main .logo-title {
+    top: -299px;
+    left: -86px;
   }
 }
 
@@ -270,41 +326,45 @@ main .logo-title .logoinstitute {
 }
 
 main .logo-title .institle {
-  font-size: 18px;
+  font-size: 17px;
   margin-top: 45px;
   transition: all ease 0.5s;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-@media only screen and (min-width: 375px) {
+@media only screen and (min-width: 360px) {
   main .logo-title .institle {
     font-size: 20px;
-  }
-}
-
-@media only screen and (min-width: 411px) {
-  main .logo-title .institle {
-    font-size: 25px;
+    margin-top: 38px;
   }
 }
 
 @media only screen and (min-width: 481px) {
   main .logo-title .institle {
-    font-size: 30px;
+    font-size: 21px;
+    margin-top: 45px;
   }
 }
 
 @media only screen and (min-width: 768px) {
   main .logo-title .institle {
-    font-size: 40px;
-    margin-top: 70px;
+    font-size: 32px;
+    margin-top: 65px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  main .logo-title .institle {
+    font-size: 34px;
   }
 }
 
 main .inssocial {
   position: relative;
-  top: -175px;
-  left: 71%;
-  z-index: 1000;
+  top: -61px;
+  left: 68%;
+  width: 100px;
+  font-size: 15px;
 }
 
 main .inssocial img {
@@ -314,8 +374,8 @@ main .inssocial img {
 
 @media only screen and (min-width: 481px) {
   main .inssocial {
-    top: -240px;
-    left: 85%;
+    top: -88px;
+    left: 70%;
   }
 
   main .inssocial img {
@@ -324,19 +384,29 @@ main .inssocial img {
   }
 }
 
+@media only screen and (min-width: 768px) {
+  main .inssocial {
+    top: -179px;
+    left: 80%;
+    font-size: 18px;
+  }
+}
+
 main .inspills {
-  margin-top: -112px;
+  margin-top: -20px;
+  margin-left: -0.7rem;
+  margin-right: -0.7rem;
 }
 
 @media only screen and (min-width: 481px) {
   main .inspills {
-    margin-top: -130px;
+    margin-top: -25px;
   }
 }
 
 @media only screen and (min-width: 768px) {
   main .inspills {
-    margin-top: -140px;
+    margin-top: -70px;
   }
 }
 
@@ -405,6 +475,12 @@ main .inspills .notice hr {
 
 main .inspills .notice p {
   color: black;
+}
+
+main .inspills .notice p::before {
+  content: "\2B9A";
+  font-size: larger;
+  color: #003585;
 }
 
 main .inspills .facultyachieve .facultyachievecard {
@@ -573,6 +649,22 @@ main .infrabtn:hover {
   }
 }
 
+main .edit-social {
+  list-style: none;
+  margin-left: -40px;
+  margin-bottom: 20px;
+}
+
+main .edit-social li {
+  color: black;
+}
+
+main .edit-social li::before {
+  content: "\2B9A";
+  font-size: larger;
+  color: #003585;
+}
+
 main .btnsubmit {
   background-color: #011737;
   color: white;
@@ -703,8 +795,8 @@ main .profile {
 }
 
 main .profile .princi-name {
-  background-color: #cce0fd;
-  color: black;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #003585;
 }
 
 main .profile .princi-profile-picture {
@@ -723,45 +815,45 @@ main .profile img {
   }
 }
 
-main .profile .princi-profile-edit {
+main .princi-profile-edit {
   position: relative;
   left: -16%;
   top: 53px;
   z-index: inherit;
   cursor: pointer;
-  background-color: gainsboro;
+  background-color: #f1f0f0;
 }
 
 @media only screen and (min-width: 481px) {
-  main .profile .princi-profile-edit {
+  main .princi-profile-edit {
     left: -11%;
     top: 55px;
   }
 }
 
 @media only screen and (min-width: 768px) {
-  main .profile .princi-profile-edit {
+  main .princi-profile-edit {
     left: -7%;
     top: 70px;
   }
 }
 
 @media only screen and (min-width: 1280px) {
-  main .profile .princi-profile-edit {
+  main .princi-profile-edit {
     left: -6%;
   }
 }
 
-main .profile .upload-profile-pic {
+main .upload-profile-pic {
   position: relative;
   top: -153px;
 }
 
-main .profile .edit-btn {
+main .edit-btn {
   color: #6fb604;
 }
 
-main .profile .btnsubmit {
+main .btnsubmit {
   background-color: #003585;
   color: white;
   position: relative;
@@ -772,22 +864,22 @@ main .profile .btnsubmit {
   padding-right: 20px;
 }
 
-main .profile .btnsubmit:hover {
+main .btnsubmit:hover {
   background-color: #011737;
   color: white;
 }
 
-main .profile .pricipal-modal h5 {
+main .pricipal-modal h5 {
   color: #003585;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-main .profile .pricipal-modal h6 {
+main .pricipal-modal h6 {
   color: #003585;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-main .profile .princi-profile-display .mission-message-display {
+main .princi-profile-display .mission-message-display {
   background-color: #f9fafa;
 }
 

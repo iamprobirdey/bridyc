@@ -2,7 +2,7 @@
     <div class="profile">
        
         <profile-avatar :user="channelProfileData"></profile-avatar>
-       <h4 class="text-center text-capitalized princi-name w-25 mx-auto shadow p-2">Name: {{ channelProfileData.name }}</h4>
+       <h4 class="text-center text-capitalized princi-name mx-auto p-2">Name: {{ channelProfileData.name }}</h4>
     <div class="body-channelprofile py-5">
         <profile-gender :user="channelProfileData"></profile-gender>
 
@@ -42,7 +42,7 @@
             </div>
             </div>
           </div>
-           <div class="col-sm-6 pr-0">
+           <div class="col-sm-6">
             <activities :profiledata="channelProfileData"></activities>
             </div>
       </div>

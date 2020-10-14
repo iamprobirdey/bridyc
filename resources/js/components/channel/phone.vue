@@ -29,7 +29,7 @@
           >
             <label col="col-sm-3 col-form-label">Phone: </label>
             <input
-              class="col-sm-9 ml-4"
+              class="col-sm-9 ml-md-4"
               v-model="phoneData.phone"
               v-validate="'required|numeric|max:10|min:10'"
               data-vv-delay="20"

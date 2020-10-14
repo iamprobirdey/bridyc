@@ -2,7 +2,7 @@
   <div class="mx-lg-5 mx-0">
     <main class="container-fluid px-1">
       <!--coverpic addition-->
-      <div class="mx-lg-5 mt-lg-5 pt-lg-3">
+      <div class="mt-lg-5 pt-lg-3">
         <!-- :srcset="
             channelData.cover_avatar != null
               ? domainUrl +
@@ -33,11 +33,16 @@
       </div>
       <div class="blankdiv shadow">
         <!--i class="fa fa-share-alt btnshare" aria-hidden="true"></i-->
-        <div class="row mt-lg-n2 mx-0">
+        <div class="row mx-0">
           <div class="col-md-6 d-flex flex-column">
             <!--p class="ml-n2 mb-1">A unit of abc society askjfhj kkhh fdbdf</p-->
+            <div class="insweb text-center" v-if="channelData.website_link === null">
+              Website: NA
+            </div>
+
+            <div v-else>
             <a
-              class="ml-n4 insweb px-1 mt-n1 mt-md-3"
+              class="ml-n4 insweb insweb-available px-2 py-1 mt-n1 mt-md-3"
               :target="channelData.website_link === null ? '_self' : '_blank'"
               :href="
                 channelData.website_link === null
@@ -45,54 +50,29 @@
                   : channelData.website_link
               "
             >
-              {{
+              <!--{{
                 channelData.website_link === null
-                  ? "Website link not-provided"
+                  ? "No Website"
                   : "Visit Website"
-              }}
-              <i class="fa fa-external-link" aria-hidden="true"></i
-            ></a>
+              }}-->
+            Visit website
+            <img src="/images/external-link-symbol.svg" class="mt-n1" alt="external link symbol">
+              </a>
+            </div>
+
           </div>
 
-          <div class="col-md-6 phemdiv text-md-right ml-n4">
+          <div class="col-md-6 phemdiv text-md-right ml-n4 mb-n5">
             <p class="m-1 mr-2">
               <i class="fa fa-phone mr-1" aria-hidden="true"></i>
-              Call us at: {{ phoneNo }}
+              {{ phoneNo }}
             </p>
             <p class="m-1 mr-2">
               <i class="fa fa-envelope mr-1" aria-hidden="true"></i
               >{{ userData.email }}
             </p>
-            <div v-if="isTeacher">
-              <button
-                class="btn btn-primary"
-                v-if="channelRequestDecider === 'can-request'"
-                @click="requestForChannel()"
-              >
-                Send Request
-              </button>
-              <button
-                class="btn btn-success"
-                v-if="channelRequestDecider === 'in-progress'"
-              >
-                Request Successfull
-              </button>
-              <button
-                class="btn btn-danger"
-                v-if="channelRequestDecider === 'rejected'"
-              >
-                Request Rejected
-              </button>
-              <button
-                class="btn btn-primary"
-                v-if="channelRequestDecider === 'accepted'"
-              >
-                Your School
-              </button>
-            </div>
           </div>
         </div>
-
         <div class="d-flex logo-title">
           <img
             :src="
@@ -110,11 +90,13 @@
           <h1 class="ml-1 ml-sm-3 institle text-capitalize">{{ channelData.title }}</h1>
         </div>
       </div>
-      <!-- social links-->
+
+            <!-- social links-->
       <div class="inssocial">
-        <div class="d-flex flex-column flex-lg-row" v-if="socialCount === 0">
+        <div class="d-flex flex-lg-row justify-content-center" v-if="socialCount === 0">
           <a
             class="mr-1"
+            target="_blank"
             v-if="channelData.extra_attributes.social.facebook != null"
             :href="
               channelData.extra_attributes.social.facebook != null
@@ -126,6 +108,7 @@
           </a>
           <a
             class="mr-1"
+            target="_blank"
             v-if="channelData.extra_attributes.social.linkedin != null"
             :href="
               channelData.extra_attributes.social.linkedin != null
@@ -137,6 +120,7 @@
           </a>
           <a
             class="mr-1"
+            target="_blank"
             v-if="channelData.extra_attributes.social.instagram != null"
             :href="
               channelData.extra_attributes.social.instagram != null
@@ -148,6 +132,7 @@
           </a>
           <a
             class="mr-1"
+            target="_blank"
             v-if="channelData.extra_attributes.social.youtube != null"
             :href="
               channelData.extra_attributes.social.youtube != null
@@ -158,8 +143,37 @@
             <img src="/images/youtube.svg" alt="yt icon" />
           </a>
         </div>
-        <div v-if="socialCount === 1">Socials: NA</div>
+        <div v-if="socialCount === 1">Social Links: NA</div>
       </div>
+
+<div class="faculty-request" v-if="isTeacher">
+              <button
+                class="btn btn-warning"
+                v-if="channelRequestDecider === 'can-request'"
+                @click="requestForChannel()"
+              >
+                Send Faculty Request
+              </button>
+              <button
+                class="btn btn-secondary"
+                v-if="channelRequestDecider === 'in-progress'"
+              >
+                Request Sent
+              </button>
+              <button
+                class="btn btn-danger"
+                v-if="channelRequestDecider === 'rejected'"
+              >
+                Request Rejected
+              </button>
+              <button
+                class="btn btn-sm btn-success"
+                v-if="channelRequestDecider === 'accepted'"
+              >
+              <img src="/images/check-mark.svg" alt="correct symbol">
+                Your School
+              </button>
+</div>
       <br />
       <br />
       <br />
@@ -177,7 +191,7 @@
             <a class="nav-link" data-toggle="pill" href="#faculty">Faculty</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" data-toggle="pill" href="#facility">Facilities</a>
+            <a class="nav-link" data-toggle="pill" href="#facility">Facility</a>
           </li>
         </ul>
 
@@ -200,7 +214,7 @@
               <div
                 class="card notice shadow-sm border-0 mx-0 col-md-5 col-lg-4 px-0"
               >
-                <div class="card-body">
+                <div class="card-body px-0">
                   <div class="card-title my-n2">
                     <h5 class="text-uppercase text-center">
                       News and Notifications
@@ -212,7 +226,6 @@
                       v-for="(notification, index) in channelData.notification"
                       :key="index"
                     >
-                      <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
                       {{ notification.notify }}
                       <span class="badge badge-info" v-if="index === 0"
                         >New</span

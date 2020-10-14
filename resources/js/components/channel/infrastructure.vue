@@ -43,7 +43,7 @@
           class="form-group row mx-lg-5"
           :class="{'has-error': errors.has('class') || serverErrors.no_of_class != '' }"
         >
-          <label for="exampleInputEmail1" class="col-sm-2 col-form-label">Total Class Room</label>
+          <label for="exampleInputEmail1" class="col-sm-2 col-form-label">Total Class Room:</label>
           <input
             class="col-sm-10"
             id="class"
@@ -64,7 +64,7 @@
           class="form-group row mx-lg-5"
           :class="{'has-error': errors.has('boys_toilet') || serverErrors.boys_toilet != '' }"
         >
-          <label class="col-sm-2 col-form-label">Boys Toilet</label>
+          <label class="col-sm-2 col-form-label">Boys Toilet:</label>
           <select
             v-model="formData.boys_toilet"
             class="col-sm-10 form-control"
@@ -94,7 +94,7 @@
           class="form-group row mx-lg-5"
           :class="{'has-error': errors.has('girls_toilet') || serverErrors.girls_toilet != '' }"
         >
-          <label  class="col-sm-2 col-form-label">Girls Toilet</label>
+          <label  class="col-sm-2 col-form-label">Girls Toilet:</label>
           <select
             v-model="formData.girls_toilet"
             class="col-sm-10 form-control"
@@ -124,7 +124,7 @@
           class="form-group row mx-lg-5"
           :class="{'has-error': errors.has('computer_learning') || serverErrors.computer_learning != '' }"
         >
-          <label class="col-sm-3 col-form-label">Computer Learning</label>
+          <label class="col-sm-3 col-form-label">Computer Learning:</label>
           <select
             v-model="formData.computer_learning"
             class="col-sm-9 form-control"
@@ -150,7 +150,7 @@
           class="form-group row mx-lg-5"
           :class="{'has-error': errors.has('electricity') || serverErrors.electricity != '' }"
         >
-          <label class="col-sm-2 col-form-label">Electricity</label>
+          <label class="col-sm-2 col-form-label">Electricity:</label>
           <select
             v-model="formData.electricity"
             class="col-sm-10 form-control"
@@ -176,7 +176,7 @@
           class="form-group row mx-lg-5"
           :class="{'has-error': errors.has('wall') || serverErrors.wall != '' }"
         >
-          <label class="col-sm-3 col-form-label">Campus Boundary</label>
+          <label class="col-sm-3 col-form-label">Campus Boundary:</label>
           <select v-model="formData.wall" class="col-sm-9 form-control" name="wall" v-validate="'required'">
             <option value>Select your choice</option>
             <option value="no_wall">No wall</option>
@@ -192,7 +192,7 @@
           class="form-group row mx-lg-5"
           :class="{'has-error': errors.has('library') || serverErrors.library != '' }"
         >
-          <label class="col-sm-3 col-form-label">Library Availability</label>
+          <label class="col-sm-3 col-form-label">Library Availability:</label>
           <select
             v-model="formData.library"
             class="col-sm-9 form-control"
@@ -213,7 +213,7 @@
           class="form-group row mx-lg-5"
           :class="{'has-error': errors.has('books') || serverErrors.no_of_books != '' }"
         >
-          <label for="exampleInputEmail1" class="col-sm-2 col-form-label">Total Books</label>
+          <label for="exampleInputEmail1" class="col-sm-2 col-form-label">Total Books:</label>
           <input
           class="col-sm-10"
             id="books"
@@ -238,7 +238,7 @@
           class="form-group row mx-lg-5"
           :class="{'has-error': errors.has('playground') || serverErrors.playground != '' }"
         >
-          <label class="col-sm-2 col-form-label">Playground</label>
+          <label class="col-sm-2 col-form-label">Playground:</label>
           <select
             v-model="formData.playground"
             class="col-sm-10 form-control"
@@ -265,7 +265,7 @@
           class="form-group row mx-lg-5"
           :class="{'has-error': errors.has('hostel') || serverErrors.hostel != '' }"
         >
-          <label for="exampleInputEmail1" class="col-sm-2 col-form-label">No.of Hostel</label>
+          <label for="exampleInputEmail1" class="col-sm-2 col-form-label">No.of Hostel:</label>
           <input
           class="col-sm-10"
             v-model="formData.hostel"
@@ -289,7 +289,7 @@
           class="form-group row mx-lg-5"
           :class="{'has-error': errors.has('bus_services') || serverErrors.bus_services != '' }"
         >
-          <label class="col-sm-2 col-form-label">Bus Services</label>
+          <label class="col-sm-2 col-form-label">Bus Services:</label>
           <select
             v-model="formData.bus_services"
             class="col-sm-10 form-control"

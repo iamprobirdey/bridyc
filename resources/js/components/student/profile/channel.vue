@@ -1,12 +1,12 @@
 <template>
   <div class="channelname">
-    <div v-if="channelChecker" class="mt-n4">
-      <h4>Institute:</h4>
-      <span v-if="userInstituteData.channel_id != null">{{userInstituteData.channel.title}}</span>
-      <span>{{userInstituteData.school_name}}</span>
-      <button class="btn btn-primary" @click="editAddress()">Edit</button>
+    <div v-if="channelChecker" class="mt-n4 mb-3 container text-center">
+      <h4>Your Institute Name:</h4>
+      <span v-if="userInstituteData.channel_id != null" class="text-capitalize">{{userInstituteData.channel.title}}</span>
+      <span class="text-capitalize text-center">{{userInstituteData.school_name}}</span>
+      <button class="btn edit-btn" @click="editAddress()" data-toggle="tooltip" title="Edit"><i class="fa fa-pencil" aria-hidden="true"></i></button>
     </div>
-    <div v-if="!channelChecker">
+    <div v-if="!channelChecker" class="container-fluid">
       <form @submit.prevent="channelForm()">
         <div
           class="form-group row  mx-2"
@@ -16,11 +16,11 @@
     
           <select
             v-model="userFormData.channel_id"
-            class="form-control col-sm-9 mx-lg-2"
+            class="form-control col-sm-9 mx-md-2"
             name="channel"
             v-validate="'numeric'"
           >
-            <option value>Select your institute (optional)</option>
+            <option value>Select your institute</option>
 
             <option
               v-for="channel in channelsData"
@@ -48,7 +48,7 @@
           <label col="col-sm-4 col-form-label" class="mt-2">Institute Name : </label>
           <input
             v-model="userFormData.school_name"
-            class="form-control col-sm-8 mx-lg-2"
+            class="form-control col-sm-8 mx-md-2"
             data-vv-delay="20"
             name="school_name"
             type="text"

@@ -20,7 +20,7 @@
             @csrf
 
             <div class="form-group row mb-4 mx-lg-5">
-                <label for="email" class="col-md-3 col-form-label text-center">{{ __('E-mail id') }}:</label>
+                <label for="email" class="col-md-3 col-form-label text-lg-center">{{ __('E-mail id') }}:</label>
 
                 <div class="col-md-9">
                     <input id="email" type="email" class="form-control @error('email') is-invalid @enderror"
@@ -36,7 +36,7 @@
 
 
             <div class="form-group row mx-lg-5 mb-4">
-                <label for="password" class="col-md-3 col-form-label text-center">{{ __('Password') }}:</label>
+                <label for="password" class="col-md-3 col-form-label text-lg-center">{{ __('Password') }}:</label>
 
                 <div class="col-md-9">
                     <input id="password" type="password" class="form-control @error('password') is-invalid @enderror"
@@ -63,7 +63,7 @@
                 </div>
                 <div class="col-6  text-md-center">
                 <a href="{{ route('password.request') }}">
-                        {{ __('Forgot your Password?') }}
+                        {{ __('Forgot Password?') }}
                     </a>
                 </div>
             </div>

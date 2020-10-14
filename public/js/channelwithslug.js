@@ -549,6 +549,19 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -1133,7 +1146,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "mx-lg-5 mx-0" }, [
     _c("main", { staticClass: "container-fluid px-1" }, [
-      _c("div", { staticClass: "mx-lg-5 mt-lg-5 pt-lg-3" }, [
+      _c("div", { staticClass: "mt-lg-5 pt-lg-3" }, [
         _c("img", {
           staticClass: "inscover mt-n3",
           attrs: {
@@ -1150,99 +1163,66 @@ var render = function() {
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "blankdiv shadow" }, [
-        _c("div", { staticClass: "row mt-lg-n2 mx-0" }, [
+        _c("div", { staticClass: "row mx-0" }, [
           _c("div", { staticClass: "col-md-6 d-flex flex-column" }, [
-            _c(
-              "a",
-              {
-                staticClass: "ml-n4 insweb px-1 mt-n1 mt-md-3",
-                attrs: {
-                  target:
-                    _vm.channelData.website_link === null ? "_self" : "_blank",
-                  href:
-                    _vm.channelData.website_link === null
-                      ? "javascript:void(0)"
-                      : _vm.channelData.website_link
-                }
-              },
-              [
-                _vm._v(
-                  "\n            " +
-                    _vm._s(
-                      _vm.channelData.website_link === null
-                        ? "Website link not-provided"
-                        : "Visit Website"
-                    ) +
-                    "\n            "
-                ),
-                _c("i", {
-                  staticClass: "fa fa-external-link",
-                  attrs: { "aria-hidden": "true" }
-                })
-              ]
-            )
+            _vm.channelData.website_link === null
+              ? _c("div", { staticClass: "insweb text-center" }, [
+                  _vm._v("\n              Website: NA\n            ")
+                ])
+              : _c("div", [
+                  _c(
+                    "a",
+                    {
+                      staticClass:
+                        "ml-n4 insweb insweb-available px-2 py-1 mt-n1 mt-md-3",
+                      attrs: {
+                        target:
+                          _vm.channelData.website_link === null
+                            ? "_self"
+                            : "_blank",
+                        href:
+                          _vm.channelData.website_link === null
+                            ? "javascript:void(0)"
+                            : _vm.channelData.website_link
+                      }
+                    },
+                    [
+                      _vm._v("\n            Visit website\n            "),
+                      _c("img", {
+                        staticClass: "mt-n1",
+                        attrs: {
+                          src: "/images/external-link-symbol.svg",
+                          alt: "external link symbol"
+                        }
+                      })
+                    ]
+                  )
+                ])
           ]),
           _vm._v(" "),
-          _c("div", { staticClass: "col-md-6 phemdiv text-md-right ml-n4" }, [
-            _c("p", { staticClass: "m-1 mr-2" }, [
-              _c("i", {
-                staticClass: "fa fa-phone mr-1",
-                attrs: { "aria-hidden": "true" }
-              }),
-              _vm._v(
-                "\n            Call us at: " +
-                  _vm._s(_vm.phoneNo) +
-                  "\n          "
-              )
-            ]),
-            _vm._v(" "),
-            _c("p", { staticClass: "m-1 mr-2" }, [
-              _c("i", {
-                staticClass: "fa fa-envelope mr-1",
-                attrs: { "aria-hidden": "true" }
-              }),
-              _vm._v(_vm._s(_vm.userData.email) + "\n          ")
-            ]),
-            _vm._v(" "),
-            _vm.isTeacher
-              ? _c("div", [
-                  _vm.channelRequestDecider === "can-request"
-                    ? _c(
-                        "button",
-                        {
-                          staticClass: "btn btn-primary",
-                          on: {
-                            click: function($event) {
-                              return _vm.requestForChannel()
-                            }
-                          }
-                        },
-                        [_vm._v("\n              Send Request\n            ")]
-                      )
-                    : _vm._e(),
-                  _vm._v(" "),
-                  _vm.channelRequestDecider === "in-progress"
-                    ? _c("button", { staticClass: "btn btn-success" }, [
-                        _vm._v(
-                          "\n              Request Successfull\n            "
-                        )
-                      ])
-                    : _vm._e(),
-                  _vm._v(" "),
-                  _vm.channelRequestDecider === "rejected"
-                    ? _c("button", { staticClass: "btn btn-danger" }, [
-                        _vm._v("\n              Request Rejected\n            ")
-                      ])
-                    : _vm._e(),
-                  _vm._v(" "),
-                  _vm.channelRequestDecider === "accepted"
-                    ? _c("button", { staticClass: "btn btn-primary" }, [
-                        _vm._v("\n              Your School\n            ")
-                      ])
-                    : _vm._e()
-                ])
-              : _vm._e()
-          ])
+          _c(
+            "div",
+            { staticClass: "col-md-6 phemdiv text-md-right ml-n4 mb-n5" },
+            [
+              _c("p", { staticClass: "m-1 mr-2" }, [
+                _c("i", {
+                  staticClass: "fa fa-phone mr-1",
+                  attrs: { "aria-hidden": "true" }
+                }),
+                _vm._v(
+                  "\n              " + _vm._s(_vm.phoneNo) + "\n            "
+                )
+              ]),
+              _vm._v(" "),
+              _c("p", { staticClass: "m-1 mr-2" }, [
+                _c("i", {
+                  staticClass: "fa fa-envelope mr-1",
+                  attrs: { "aria-hidden": "true" }
+                }),
+                _vm._v(_vm._s(_vm.userData.email) + "\n            ")
+              ])
+            ]
+          )
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "d-flex logo-title" }, [
@@ -1269,95 +1249,156 @@ var render = function() {
       _vm._v(" "),
       _c("div", { staticClass: "inssocial" }, [
         _vm.socialCount === 0
-          ? _c("div", { staticClass: "d-flex flex-column flex-lg-row" }, [
-              _vm.channelData.extra_attributes.social.facebook != null
-                ? _c(
-                    "a",
-                    {
-                      staticClass: "mr-1",
-                      attrs: {
-                        href:
-                          _vm.channelData.extra_attributes.social.facebook !=
-                          null
-                            ? _vm.channelData.extra_attributes.social.facebook
-                            : "javascript:void(0)"
-                      }
-                    },
-                    [
-                      _c("img", {
-                        attrs: { src: "/images/facebook.svg", alt: "fb icon" }
-                      })
-                    ]
-                  )
-                : _vm._e(),
-              _vm._v(" "),
-              _vm.channelData.extra_attributes.social.linkedin != null
-                ? _c(
-                    "a",
-                    {
-                      staticClass: "mr-1",
-                      attrs: {
-                        href:
-                          _vm.channelData.extra_attributes.social.linkedin !=
-                          null
-                            ? _vm.channelData.extra_attributes.social.linkedin
-                            : "javascript:void(0)"
-                      }
-                    },
-                    [
-                      _c("img", {
-                        attrs: { src: "/images/linkedin.svg", alt: "li icon" }
-                      })
-                    ]
-                  )
-                : _vm._e(),
-              _vm._v(" "),
-              _vm.channelData.extra_attributes.social.instagram != null
-                ? _c(
-                    "a",
-                    {
-                      staticClass: "mr-1",
-                      attrs: {
-                        href:
-                          _vm.channelData.extra_attributes.social.instagram !=
-                          null
-                            ? _vm.channelData.extra_attributes.social.instagram
-                            : "javascript:void(0)"
-                      }
-                    },
-                    [
-                      _c("img", {
-                        attrs: { src: "/images/instagram.svg", alt: "ig icon" }
-                      })
-                    ]
-                  )
-                : _vm._e(),
-              _vm._v(" "),
-              _vm.channelData.extra_attributes.social.youtube != null
-                ? _c(
-                    "a",
-                    {
-                      staticClass: "mr-1",
-                      attrs: {
-                        href:
-                          _vm.channelData.extra_attributes.social.youtube !=
-                          null
-                            ? _vm.channelData.extra_attributes.social.youtube
-                            : "javascript:void(0)"
-                      }
-                    },
-                    [
-                      _c("img", {
-                        attrs: { src: "/images/youtube.svg", alt: "yt icon" }
-                      })
-                    ]
-                  )
-                : _vm._e()
-            ])
+          ? _c(
+              "div",
+              { staticClass: "d-flex flex-lg-row justify-content-center" },
+              [
+                _vm.channelData.extra_attributes.social.facebook != null
+                  ? _c(
+                      "a",
+                      {
+                        staticClass: "mr-1",
+                        attrs: {
+                          target: "_blank",
+                          href:
+                            _vm.channelData.extra_attributes.social.facebook !=
+                            null
+                              ? _vm.channelData.extra_attributes.social.facebook
+                              : "javascript:void(0)"
+                        }
+                      },
+                      [
+                        _c("img", {
+                          attrs: { src: "/images/facebook.svg", alt: "fb icon" }
+                        })
+                      ]
+                    )
+                  : _vm._e(),
+                _vm._v(" "),
+                _vm.channelData.extra_attributes.social.linkedin != null
+                  ? _c(
+                      "a",
+                      {
+                        staticClass: "mr-1",
+                        attrs: {
+                          target: "_blank",
+                          href:
+                            _vm.channelData.extra_attributes.social.linkedin !=
+                            null
+                              ? _vm.channelData.extra_attributes.social.linkedin
+                              : "javascript:void(0)"
+                        }
+                      },
+                      [
+                        _c("img", {
+                          attrs: { src: "/images/linkedin.svg", alt: "li icon" }
+                        })
+                      ]
+                    )
+                  : _vm._e(),
+                _vm._v(" "),
+                _vm.channelData.extra_attributes.social.instagram != null
+                  ? _c(
+                      "a",
+                      {
+                        staticClass: "mr-1",
+                        attrs: {
+                          target: "_blank",
+                          href:
+                            _vm.channelData.extra_attributes.social.instagram !=
+                            null
+                              ? _vm.channelData.extra_attributes.social
+                                  .instagram
+                              : "javascript:void(0)"
+                        }
+                      },
+                      [
+                        _c("img", {
+                          attrs: {
+                            src: "/images/instagram.svg",
+                            alt: "ig icon"
+                          }
+                        })
+                      ]
+                    )
+                  : _vm._e(),
+                _vm._v(" "),
+                _vm.channelData.extra_attributes.social.youtube != null
+                  ? _c(
+                      "a",
+                      {
+                        staticClass: "mr-1",
+                        attrs: {
+                          target: "_blank",
+                          href:
+                            _vm.channelData.extra_attributes.social.youtube !=
+                            null
+                              ? _vm.channelData.extra_attributes.social.youtube
+                              : "javascript:void(0)"
+                        }
+                      },
+                      [
+                        _c("img", {
+                          attrs: { src: "/images/youtube.svg", alt: "yt icon" }
+                        })
+                      ]
+                    )
+                  : _vm._e()
+              ]
+            )
           : _vm._e(),
         _vm._v(" "),
-        _vm.socialCount === 1 ? _c("div", [_vm._v("Socials: NA")]) : _vm._e()
+        _vm.socialCount === 1
+          ? _c("div", [_vm._v("Social Links: NA")])
+          : _vm._e()
       ]),
+      _vm._v(" "),
+      _vm.isTeacher
+        ? _c("div", { staticClass: "faculty-request" }, [
+            _vm.channelRequestDecider === "can-request"
+              ? _c(
+                  "button",
+                  {
+                    staticClass: "btn btn-warning",
+                    on: {
+                      click: function($event) {
+                        return _vm.requestForChannel()
+                      }
+                    }
+                  },
+                  [
+                    _vm._v(
+                      "\n                Send Faculty Request\n              "
+                    )
+                  ]
+                )
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.channelRequestDecider === "in-progress"
+              ? _c("button", { staticClass: "btn btn-secondary" }, [
+                  _vm._v("\n                Request Sent\n              ")
+                ])
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.channelRequestDecider === "rejected"
+              ? _c("button", { staticClass: "btn btn-danger" }, [
+                  _vm._v("\n                Request Rejected\n              ")
+                ])
+              : _vm._e(),
+            _vm._v(" "),
+            _vm.channelRequestDecider === "accepted"
+              ? _c("button", { staticClass: "btn btn-sm btn-success" }, [
+                  _c("img", {
+                    attrs: {
+                      src: "/images/check-mark.svg",
+                      alt: "correct symbol"
+                    }
+                  }),
+                  _vm._v("\n                Your School\n              ")
+                ])
+              : _vm._e()
+          ])
+        : _vm._e(),
       _vm._v(" "),
       _c("br"),
       _vm._v(" "),
@@ -1381,21 +1422,21 @@ var render = function() {
               _c("div", { staticClass: "description mb-5 px-0" }, [
                 _c("h2", { staticClass: "mb-4 text-uppercase" }, [
                   _vm._v(
-                    "\n              Welcome to " +
+                    "\n                Welcome to " +
                       _vm._s(_vm.channelData.title) +
-                      "\n            "
+                      "\n              "
                   )
                 ]),
                 _vm._v(" "),
                 _c("p", [
                   _vm._v(
-                    "\n              " +
+                    "\n                " +
                       _vm._s(
                         _vm.channelData.description != null
                           ? _vm.channelData.description
                           : ""
                       ) +
-                      "\n            "
+                      "\n              "
                   )
                 ])
               ]),
@@ -1408,7 +1449,7 @@ var render = function() {
                       "card notice shadow-sm border-0 mx-0 col-md-5 col-lg-4 px-0"
                   },
                   [
-                    _c("div", { staticClass: "card-body" }, [
+                    _c("div", { staticClass: "card-body px-0" }, [
                       _vm._m(1),
                       _vm._v(" "),
                       _c("hr", { staticClass: "w-25" }),
@@ -1421,14 +1462,10 @@ var render = function() {
                           index
                         ) {
                           return _c("p", { key: index }, [
-                            _c("i", {
-                              staticClass: "fa fa-long-arrow-right",
-                              attrs: { "aria-hidden": "true" }
-                            }),
                             _vm._v(
-                              "\n                    " +
+                              "\n                      " +
                                 _vm._s(notification.notify) +
-                                "\n                    "
+                                "\n                      "
                             ),
                             index === 0
                               ? _c(
@@ -1557,13 +1594,13 @@ var render = function() {
                   _c("div", { staticClass: "col-md-6" }, [
                     _c("p", { staticClass: "principal-message" }, [
                       _vm._v(
-                        "\n                  " +
+                        "\n                    " +
                           _vm._s(
                             _vm.userData.message != null
                               ? _vm.userData.message
                               : "Message from Institute not provided"
                           ) +
-                          "\n                "
+                          "\n                  "
                       )
                     ])
                   ]),
@@ -1582,9 +1619,9 @@ var render = function() {
                           { staticClass: "card-title my-n1 text-capitalize" },
                           [
                             _vm._v(
-                              "\n                      " +
+                              "\n                        " +
                                 _vm._s(_vm.userData.name) +
-                                "\n                    "
+                                "\n                      "
                             )
                           ]
                         ),
@@ -1604,13 +1641,13 @@ var render = function() {
                   _vm._v(" "),
                   _c("p", [
                     _vm._v(
-                      "\n                " +
+                      "\n                  " +
                         _vm._s(
                           _vm.userData.vission != null
                             ? _vm.userData.vission
                             : "Vission from Institute not provided"
                         ) +
-                        "\n              "
+                        "\n                "
                     )
                   ])
                 ])
@@ -1629,11 +1666,11 @@ var render = function() {
                       attrs: { src: "/images/address.svg", alt: "address icon" }
                     }),
                     _vm._v(
-                      " Address:\n                " +
+                      " Address:\n                  " +
                         _vm._s(_vm.channelData.district.name) +
-                        ",\n                " +
+                        ",\n                  " +
                         _vm._s(_vm.channelData.state.name) +
-                        "\n              "
+                        "\n                "
                     )
                   ]),
                   _vm._v(" "),
@@ -1645,9 +1682,9 @@ var render = function() {
                       }
                     }),
                     _vm._v(
-                      " Pin\n                Code: " +
+                      " Pin\n                  Code: " +
                         _vm._s(_vm.userData.verification.pin) +
-                        "\n              "
+                        "\n                "
                     )
                   ]),
                   _vm._v(" "),
@@ -1659,9 +1696,9 @@ var render = function() {
                       }
                     }),
                     _vm._v(
-                      "\n                Medium: " +
+                      "\n                  Medium: " +
                         _vm._s(_vm.channelData.village.name) +
-                        "\n              "
+                        "\n                "
                     )
                   ]),
                   _vm._v(" "),
@@ -1672,9 +1709,9 @@ var render = function() {
                       attrs: { src: "/images/deed.svg", alt: "ownership icon" }
                     }),
                     _vm._v(
-                      " Ownership:\n                " +
+                      " Ownership:\n                  " +
                         _vm._s(_vm.userData.verification.ownership) +
-                        "\n              "
+                        "\n                "
                     )
                   ]),
                   _vm._v(" "),
@@ -1686,9 +1723,9 @@ var render = function() {
                       }
                     }),
                     _vm._v(
-                      "\n                Founded: " +
+                      "\n                  Founded: " +
                         _vm._s(_vm.userData.verification.founded) +
-                        "\n              "
+                        "\n                "
                     )
                   ])
                 ])
@@ -1811,7 +1848,7 @@ var staticRenderFns = [
               staticClass: "nav-link",
               attrs: { "data-toggle": "pill", href: "#facility" }
             },
-            [_vm._v("Facilities")]
+            [_vm._v("Facility")]
           )
         ])
       ]
@@ -1824,7 +1861,7 @@ var staticRenderFns = [
     return _c("div", { staticClass: "card-title my-n2" }, [
       _c("h5", { staticClass: "text-uppercase text-center" }, [
         _vm._v(
-          "\n                    News and Notifications\n                  "
+          "\n                      News and Notifications\n                    "
         )
       ])
     ])
@@ -1871,7 +1908,7 @@ var staticRenderFns = [
       _c("img", {
         attrs: { src: "/images/grade.svg", alt: "Exam board icon" }
       }),
-      _vm._v(" Board:\n                xxxx\n              ")
+      _vm._v(" Board:\n                  xxxx\n                ")
     ])
   },
   function() {
@@ -1901,7 +1938,7 @@ var staticRenderFns = [
                   alt: "Electricity Image"
                 }
               }),
-              _vm._v("\n                Electricity:"),
+              _vm._v("\n                  Electricity:"),
               _c("strong", { staticClass: "ml-1" }, [_vm._v("Yes")])
             ]),
             _vm._v(" "),
@@ -1910,7 +1947,7 @@ var staticRenderFns = [
                 staticClass: "mr-2",
                 attrs: { src: "/images/computer.svg", alt: "computer Image" }
               }),
-              _vm._v("\n                Computer:"),
+              _vm._v("\n                  Computer:"),
               _c("strong", { staticClass: "ml-1" }, [_vm._v("Yes")])
             ]),
             _vm._v(" "),
@@ -1919,7 +1956,7 @@ var staticRenderFns = [
                 staticClass: "mr-2",
                 attrs: { src: "/images/fence.svg", alt: "fence Image" }
               }),
-              _vm._v("\n                Boundary:"),
+              _vm._v("\n                  Boundary:"),
               _c("strong", { staticClass: "ml-1" }, [_vm._v("Yes")])
             ])
           ]),
@@ -1933,7 +1970,7 @@ var staticRenderFns = [
                   alt: "playground Image"
                 }
               }),
-              _vm._v("\n                Playground:"),
+              _vm._v("\n                  Playground:"),
               _c("strong", { staticClass: "ml-1" }, [_vm._v("Yes")])
             ]),
             _vm._v(" "),
@@ -1942,7 +1979,7 @@ var staticRenderFns = [
                 staticClass: "mr-2",
                 attrs: { src: "/images/library.svg", alt: "Library Image" }
               }),
-              _vm._v("\n                Library:"),
+              _vm._v("\n                  Library:"),
               _c("strong", { staticClass: "ml-1" }, [_vm._v("Yes")])
             ]),
             _vm._v(" "),
@@ -1951,7 +1988,7 @@ var staticRenderFns = [
                 staticClass: "mr-2",
                 attrs: { src: "/images/book.svg", alt: "Books Image" }
               }),
-              _vm._v("\n                No of Books:"),
+              _vm._v("\n                  No of Books:"),
               _c("strong", { staticClass: "ml-1" }, [_vm._v("300")])
             ])
           ]),
@@ -1962,7 +1999,7 @@ var staticRenderFns = [
                 staticClass: "mr-2",
                 attrs: { src: "/images/hostel.svg", alt: "Hostel Image" }
               }),
-              _vm._v("\n                Hostel:"),
+              _vm._v("\n                  Hostel:"),
               _c("strong", { staticClass: "ml-1" }, [_vm._v("Yes")])
             ]),
             _vm._v(" "),
@@ -1971,7 +2008,7 @@ var staticRenderFns = [
                 staticClass: "mr-2",
                 attrs: { src: "/images/bus.svg", alt: "Bus Image" }
               }),
-              _vm._v(" Bus\n                Services:"),
+              _vm._v(" Bus\n                  Services:"),
               _c("strong", { staticClass: "ml-1" }, [_vm._v("Yes")])
             ])
           ])

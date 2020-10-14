@@ -11,10 +11,10 @@
 
 .profile{
     max-width: 100%;
-    
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     .profile-picture{
         position:relative;
-        top:-180px;
+        top:-150px;
         left: 17px;
         border: 2px solid gainsboro;
     }
@@ -30,17 +30,25 @@
 .profile-edit{
    position:relative;
    left:-12%;
-   top:-113px;
+   top:-88px;
    z-index: inherit;
    cursor: pointer;
-   background-color:gainsboro;
+   background-color:rgb(241, 240, 240);
    @include screensize(tablet){
     left:-8%;
    }
 
    @include screensize(laptop){
     left:-7%;
-    top:-105px;
+    top:-75px;
+    }
+}
+.teacher-edit{
+    @include screensize(laptop){
+        margin-left:6px;
+    }
+    @include screensize(desktop){
+        margin-left:23px;
     }
 }
 
@@ -85,9 +93,10 @@
   }
 
   .btnsubjects{
-      background-color: #5B2C6F;
+      background-color: #011737;
       color: white;
   }
+
   .channelname{
     
       select{
@@ -107,6 +116,12 @@
         &::placeholder{
             color: rgb(165, 165, 165);
         }
+      }
+  }
+  .add-subject-teacher{
+      width: 100%;
+      @include screensize(tablet){
+          width: 60%;
       }
   }
 } 

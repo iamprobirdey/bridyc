@@ -15,15 +15,18 @@ main{
      height: auto;
      width: 100%;
      position: relative;
-     top: -77px;
-     background-color: #f5f9ff;
+     background-color: #f9fafa;
      padding-top: 55px;
      padding-left: 10px;
+     padding-bottom: 95px;
      p{
-       font-size: 14px;
+       font-size: 15px;
        @include screensize(tablet){
          font-size: 16px;
        }
+       @include screensize(laptop){
+        font-size: 18px;
+      }
      }
      @include screensize(tablet){
          height: 130px;
@@ -31,22 +34,39 @@ main{
      @include screensize(laptop){
          height: 150px;
          padding-left: 60px;
-         padding-top: 75px;
+         padding-top: 140px;
        }
-     .insweb{
-         background-color: #003585;
-         color: white;
-         font-size: 14px;
-         width: 110px;
+       @include screensize(desktop){
+        padding-top: 90px;
+      }
+       .insweb{
+        background-color: #003585;
+        color: white;
+        font-size: 14px;
+        width: 110px;
+        margin-left: -20px;
+        
          @include screensize(tablet){
           width: 130px;
           font-size: 16px;
          }
+         @include screensize(laptop){
+          width: 157px;
+          font-size: 18px;
+          margin-left:-58px;
+         }
+         @include screensize(desktop){
+          margin-left:-25px;
+         }
+       }
+     .insweb-available{
+       img{
+         width: 15px;
+         height: 15px;
+       }
          &:hover{
-             background-color: white;
-             color: #011737;
-             text-decoration: none;
-             border: 1px solid #011737;
+           text-decoration: none;
+           
          }
      }
      .phemdiv{
@@ -71,19 +91,27 @@ main{
  }
  .logo-title{
      position: relative;
-     top: -250px;
+     top: -134px;
+     left: -5px;
      margin-bottom: -120px;
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+     @include screensize(iphone5above){
+       top: -129px;
+     }
      @include screensize(tablet){
-         top: -255px;
-         left: 10px;
+         top: -139px;
       }
      @include screensize(laptop){
-         top: -300px;
-         left: -70px;
+         top: -248px;
+         left: -164px;
       }
+      @include screensize(desktop){
+        top:-194px;
+        left: -131px;
+     }
      .logoinstitute{
-         width: 70px;
-         height: 80px;
+         width: 85px;
+         height: 90px;
          border: 1px solid gainsboro;
          transition: all ease .5s;
               @include screensize(tablet){
@@ -92,46 +120,50 @@ main{
               }
               
               @include screensize(laptop){
-                 width: 130px;
-                 height: 130px;
+                 width: 140px;
+                 height: 140px;
                  margin-left: 120px !important;
               }
            }
            .institle{
-             font-size: 20px;
-             margin-top: 47px;
+             font-size: 17px;
+             margin-top: 50px;
              transition: all ease .5s;
              font-family: Verdana, Geneva, Tahoma, sans-serif;
-             @include screensize(forcards){
-                 font-size: 25px;
-                }
-                 @include screensize(tablet){
-                     font-size: 30px;
-                 }
-                 
-                    @include screensize(laptop){
-                     font-size: 35px;
-                     margin-top: 70px;
-                    }
-                    @include screensize(desktop){
-                      font-size: 38px;
-                      margin-top: 70px;
-                     }
+             @include screensize(iphone5above){
+              font-size: 20px;
+              margin-top: 45px;
+             }
+             @include screensize(tablet){
+              font-size: 21px;
+          }
+            @include screensize(laptop){
+            font-size: 32px;
+            margin-top: 73px;
+           }
+           @include screensize(desktop){
+            font-size: 34px;
+           }
+             
             }
  }
 
  .inssocial{
    position: relative;
-   top:-90px;
+   top:-70px;
    left:63%;
-   width:100px !important;
+   font-size: 15px;
+   width:115px;
    overflow-x: hidden;
    img{
      width:20px;
      height:20px;
    }
+   @include screensize(iphone5above){
+     left: 65%;
+   }
    @include screensize(tablet){
-     top:-105px;
+     top:-66px;
      left:75%;
      img{
        width:25px;
@@ -139,23 +171,51 @@ main{
      }
    }
    @include screensize(laptop){
-    top:-194px;
-    left:77%;
+    top:-133px;
+    left:74%;
+    font-size: 18px;
+    width: 160px;
   }
   @include screensize(desktop){
-    top:-224px;
+    top:-127px;
     left:82%;
   }
  }
  
+.faculty-request{
+  position: relative;
+  top:-123px;
+  padding-left: 61%;
+  @include screensize(iphone5above){
+    padding-left: 65%;
+  }
+  @include screensize(tablet){
+    padding-left: 74%;
+  }
+ @include screensize(laptop){
+  top:-167px;
+  padding-left: 2%;
+}
+@include screensize(desktop){
+  top:-83px;
+  padding-left: 4%;
+}
+
+  img{
+    width: 16px;
+    height: 16px;
+  }
+}
+
+
 
  .inspills{
-           margin-top:-112px;
+           margin-top:-75px;
         @include screensize(tablet){
-           margin-top:-130px;
+           margin-top:-80px;
          }
          @include screensize(laptop){
-          margin-top:-160px;
+          margin-top:-85px;
         }
            .nav-pills{
 
@@ -172,7 +232,7 @@ main{
          .inscarou{
                  width: 100%;
                  height: auto;
-                 
+                 margin-top:30px;
                 li{
                  position: relative;
                  top: 10px;
@@ -211,6 +271,11 @@ main{
            }
            p{
              color: black;
+             &::before{
+              content: "\2B9A";
+              font-size: larger;
+              color: #003585;
+            }
            }
          }
 
