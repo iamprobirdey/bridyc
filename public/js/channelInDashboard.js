@@ -620,6 +620,25 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -642,7 +661,7 @@ __webpack_require__.r(__webpack_exports__);
   created: function created() {
     this.userData = this.user;
     this.channelData = this.channel;
-    console.log(this.channelData);
+    console.log(this.userData);
     this.phoneNo = this.userData.phone ? this.userData.phone : "Not provided";
 
     if (this.channelData.extra_attributes.social.facebook === null && this.channelData.extra_attributes.social.linkedin === null && this.channelData.extra_attributes.social.youtube === null && this.channelData.extra_attributes.social.instagram === null) {
@@ -1504,6 +1523,9 @@ var render = function() {
                                     src:
                                       _vm.domainUrl +
                                       "/" +
+                                      "media/channel/" +
+                                      _vm.channelData.user_id +
+                                      "/achievement/" +
                                       achievement.image_path
                                   }
                                 }),
@@ -1568,7 +1590,13 @@ var render = function() {
                         _c("img", {
                           attrs: {
                             src:
-                              _vm.domainUrl + "/images/" + _vm.userData.avatar
+                              _vm.userData.avatar === "default.webp"
+                                ? "/images/" + _vm.userData.avatar
+                                : _vm.domainUrl +
+                                  "/media/channel/" +
+                                  _vm.userData.id +
+                                  "/profile/" +
+                                  _vm.userData.avatar
                           }
                         }),
                         _vm._v(" "),

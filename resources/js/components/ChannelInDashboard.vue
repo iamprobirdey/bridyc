@@ -247,7 +247,16 @@
                   v-for="(achievement, index) in channelData.achievement"
                   :key="index"
                 >
-                  <img :src="domainUrl + '/' + achievement.image_path" />
+                  <img
+                    :src="
+                      domainUrl +
+                      '/' +
+                      'media/channel/' +
+                      channelData.user_id +
+                      '/achievement/' +
+                      achievement.image_path
+                    "
+                  />
                   <div class="card-body mt-n1">
                     <h6 class="card-title my-n1">{{ achievement.title }}</h6>
                     <p class="card-text">
@@ -279,7 +288,17 @@
                 </div>
                 <div class="col-md-6">
                   <div class="card principalcard">
-                    <img :src="domainUrl + '/images/' + userData.avatar" />
+                    <img
+                      :src="
+                        userData.avatar === 'default.webp'
+                          ? '/images/' + userData.avatar
+                          : domainUrl +
+                            '/media/channel/' +
+                            userData.id +
+                            '/profile/' +
+                            userData.avatar
+                      "
+                    />
                     <!-- <img src="/image/default.jpg" /> -->
                     <div class="card-body mt-n1">
                       <h4 class="card-title my-n1 text-capitalize">
@@ -546,7 +565,7 @@ export default {
   created() {
     this.userData = this.user;
     this.channelData = this.channel;
-    console.log(this.channelData);
+    console.log(this.userData);
     this.phoneNo = this.userData.phone ? this.userData.phone : "Not provided";
     if (
       this.channelData.extra_attributes.social.facebook === null &&
