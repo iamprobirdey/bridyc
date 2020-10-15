@@ -3,6 +3,7 @@
 namespace App\Http\Requests\User;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class StoreUserGenderValidation extends FormRequest
 {
@@ -24,7 +25,7 @@ class StoreUserGenderValidation extends FormRequest
     public function rules()
     {
         return [
-            'gender' => 'required',
+            'gender' => ["required", Rule::in(['male', 'female'])],
             'vission' => 'required',
             'message' => 'required'
         ];

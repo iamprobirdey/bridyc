@@ -8,7 +8,15 @@
     </button>
     <div v-for="(achievement, index) in achievementData" :key="index">
       <div class="card shadow mx-auto sidebar-facard">
-        <img :src="baseUrl + achievement.image_path" />
+        <img
+          :src="
+            baseUrl +
+            'media/channel/' +
+            userId +
+            '/achievement/' +
+            achievement.image_path
+          "
+        />
         <div class="card-body mt-n1">
           <h6 class="card-title my-n1">{{ achievement.title }}</h6>
           <p class="card-text">
@@ -190,6 +198,7 @@ export default {
       achievementId: "",
       achievementIndex: "",
       authValue: "",
+      userId: "",
     };
   },
   props: {
@@ -197,12 +206,16 @@ export default {
       type: Array,
       default: null,
     },
+    userid: {
+      type: Number,
+      default: null,
+    },
   },
   created() {
+    this.userId = this.userid;
     this.achievementData = this.achievement[0].achievement;
     this.channelId = this.achievement[0].id;
     this.authValue = this.authId;
-    console.log(this.authId);
   },
   mounted() {},
   methods: {

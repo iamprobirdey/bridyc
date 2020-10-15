@@ -396,9 +396,7 @@ export default {
         .get("/api/getUserData")
         .then((response) => {
           if (response.status === 200) {
-            this.infrastructure = response.data.user[0];
-            console.log("infra");
-            console.log(response.data);
+            this.infrastructure = response.data.user;
             if (this.infrastructure.canteen != null)
               this.infrastructureStatus = false;
           }

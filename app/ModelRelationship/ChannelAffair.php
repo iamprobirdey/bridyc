@@ -65,12 +65,12 @@ trait ChannelAffair
 
     public function standard()
     {
-        return $this->belongsToMany(Standard::class, 'channel_standards', 'channel_id', 'standard_id');
+        return $this->belongsToMany(Standard::class, 'channel_standards', 'channel_id', 'standard_id')->withTimestamps();
     }
 
     public function board()
     {
-        return $this->belongsToMany(Board::class, 'channel_boards', 'channel_id', 'board_id');
+        return $this->belongsToMany(Board::class, 'channel_boards', 'channel_id', 'board_id')->withTimestamps();
     }
 
     public function collegeImage()

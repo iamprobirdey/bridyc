@@ -4,7 +4,11 @@
       <img
         height="150"
         width="250"
-        :src="domainUrl + '/media/channel/' + userId + '/cover/' + userImage"
+        :src="
+          userImage === 'institute-cover-default.webp'
+            ? '/images/' + userImage
+            : '/media/channel/' + userId + '/cover/' + userImage
+        "
         alt="icon image"
       />
       <!--
@@ -80,7 +84,7 @@ export default {
         .then((response) => {
           this.userImage = response.data.image;
           this.userId = response.data.userId;
-          if (this.userImage != null) this.userImageStatus = true;
+          this.userImageStatus = true;
         })
         .catch((errors) => {
           Vue.toasted.error("Something went wrong", {
@@ -96,9 +100,6 @@ export default {
         axios
           .post(this.url, formData)
           .then((response) => {
-            onUploadProgress: (progressEvent) => {
-              console.log(progressEvent.loaded / progressEvent.total);
-            };
             this.userImage = response.data.image;
             this.userImageStatus = true;
           })

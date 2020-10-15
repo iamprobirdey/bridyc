@@ -3,12 +3,16 @@
     <button class="btn add-notifications mb-5" @click="addNewNotification()">
       Add New Notification
     </button>
-    
+
     <h3 class="text-uppercase mb-n2">News and Notifications</h3>
-    <hr>
-    
+    <hr />
+
     <ul>
-      <li  class="mb-1" v-for="(notification, index) in notificationData" :key="index">
+      <li
+        class="mb-1"
+        v-for="(notification, index) in notificationData"
+        :key="index"
+      >
         {{ notification.notify }}
         <button
           class="btn btn-danger"
@@ -29,10 +33,14 @@
     >
       <div class="modal-dialog" role="document">
         <div class="modal-content">
-
-          <button type="button" class="close ml-auto mr-2" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-                </button>
+          <button
+            type="button"
+            class="close ml-auto mr-2"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
 
           <div class="modal-body">
             <form @submit.prevent="submitForm()">
@@ -58,9 +66,11 @@
                   }"
                   placeholder="Notify anything to your student"
                 />
-                <span v-show="errors.has('notify')" class="text-danger text-center">{{
-                  errors.first("notify")
-                }}</span>
+                <span
+                  v-show="errors.has('notify')"
+                  class="text-danger text-center"
+                  >{{ errors.first("notify") }}</span
+                >
                 <span
                   v-show="serverError.notify != ''"
                   class="help is-danger"
@@ -122,6 +132,7 @@ export default {
             )
             .then((response) => {
               if (response.data.message === true) {
+                this.notificationForm.notify = "";
                 Vue.toasted.success("New Notification is been added", {
                   position: "top-center",
                   duration: 5000,

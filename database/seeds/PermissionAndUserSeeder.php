@@ -71,26 +71,30 @@ class PermissionAndUserSeeder extends Seeder
 
         // ]);
 
-        $user5 = User::create([
-            'name' => Str::random(10),
-            'email' => 'institute1@gmail.com',
-            'password' => '$2y$10$A5qfm/Ssy2JOTLf5PQKOxeIFrLTOUaK5nwONeWstGu07wQDAEciwK',
-            'username' => 'institute2',
-            'user_type' => 'institute',
+        for ($i = 0; $i < 10; $i++) {
 
-        ]);
+            $user = User::create([
+                'name' => Str::random(10),
+                'email' => 'institute' . $i . '@gmail.com',
+                'password' => '$2y$10$A5qfm/Ssy2JOTLf5PQKOxeIFrLTOUaK5nwONeWstGu07wQDAEciwK',
+                'username' => 'institute' . $i,
+                'user_type' => 'institute',
+
+            ]);
+            $user->update(['email_verified_at' => Carbon::now()]);
+            $user->assignRole('institute');
+        }
+
 
         $user1->update(['email_verified_at' => Carbon::now()]);
         // $user2->update(['email_verified_at' => Carbon::now()]);
         // $user3->update(['email_verified_at' => Carbon::now()]);
         // $user4->update(['email_verified_at' => Carbon::now()]);
-        $user5->update(['email_verified_at' => Carbon::now()]);
 
         $user1->assignRole('admin');
         // $user2->assignRole('admin');
         // $user3->assignRole('admin');
         // $user4->assignRole('admin');
-        $user5->assignRole('institute');
 
         Country::create([
             'name' => 'India',

@@ -91,9 +91,6 @@ class ProfileController extends Controller
                 //FacadesImageOptimizer::optimize($path.'m-',$imageName);
                 $imageS->resize(390, 270);
                 $imageS->save(public_path($path) . 's-' . $imageName);
-
-                $imageS->resize(390, 270);
-                $imageS->save(public_path($path) . 'xs-' . $imageName);
                 //FacadesImageOptimizer::optimize($path.'s-',$imageName);
             }
         } else {
@@ -105,9 +102,6 @@ class ProfileController extends Controller
             //FacadesImageOptimizer::optimize($path.'m-',$imageName);
             $imageS->resize(390, 270);
             $imageS->save(public_path($path) . 's-' . $imageName);
-
-            $imageS->resize(390, 270);
-            $imageS->save(public_path($path) . 'xs-' . $imageName);
             //FacadesImageOptimizer::optimize($path.'s-',$imageName);
         }
         $user = User::find(current_user_id());

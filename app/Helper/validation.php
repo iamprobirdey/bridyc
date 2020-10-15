@@ -48,3 +48,11 @@
 //1. UserInformation
 //2. UserInstitute
 //3.
+
+//Institute
+//1.ChannelBoard many to many => board
+//2. ChannelStandard many to many => standard
+//3. ChannelCollegeImages has many
+//4. UserEducation hasMany
+//5. UserActivity hasMany
+//6. Acheivement hasMany

@@ -34,7 +34,7 @@ class InfrastructureController extends Controller
             ]
         )
             ->where('user_id', auth()->id())
-            ->get();
+            ->first();
         return response()->json([
             'user' => $user
         ]);

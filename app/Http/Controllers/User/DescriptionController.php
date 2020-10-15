@@ -16,48 +16,51 @@ class DescriptionController extends Controller
         $this->middleware('auth');
     }
 
-    public function getDescriptionData(){
-        $this->authorize('viewforchannel',auth()->user());
-        $this->authorize('checkChannelForUser',auth()->user()->channel);
+    public function getDescriptionData()
+    {
+        $this->authorize('viewforchannel', auth()->user());
+        $this->authorize('checkChannelForUser', auth()->user()->channel);
         $userId = auth()->id();
-        $channel =  Channel::select('id','description')->where('user_id',$userId)->get();
+        $channel =  Channel::select('id', 'description')->where('user_id', $userId)->first();
         return response()->json([
             'data' => $channel
         ]);
     }
 
-    public function editDescriptionData(EditDescriptionValidation $request){
-        $this->authorize('viewforchannel',auth()->user());
-        $this->authorize('checkChannelForUser',auth()->user()->channel);
+    public function editDescriptionData(EditDescriptionValidation $request)
+    {
+        $this->authorize('viewforchannel', auth()->user());
+        $this->authorize('checkChannelForUser', auth()->user()->channel);
         $userId = auth()->id();
         DB::table('channels')
-            ->where('user_id',$userId)
+            ->where('user_id', $userId)
             ->update([
                 'description' => $request->validated()['description']
             ]);
         $channel = DB::table('channels')
-        ->where('user_id',$userId)
-        ->select('description')
-        ->get();
+            ->where('user_id', $userId)
+            ->select('description')
+            ->first();
         return response()->json([
             'message' => true,
             'data' => $channel
         ]);
     }
 
-    public function storeDescriptionData(StoreDescriptionValidation $request){
-        $this->authorize('viewforchannel',auth()->user());
-        $this->authorize('checkChannelForUser',auth()->user()->channel);
+    public function storeDescriptionData(StoreDescriptionValidation $request)
+    {
+        $this->authorize('viewforchannel', auth()->user());
+        $this->authorize('checkChannelForUser', auth()->user()->channel);
         $userId = auth()->id();
         DB::table('channels')
-            ->where('user_id',$userId)
+            ->where('user_id', $userId)
             ->update([
                 'description' => $request->validated()['description']
             ]);
         $channel = DB::table('channels')
-        ->where('user_id',$userId)
-        ->select('description')
-        ->get();
+            ->where('user_id', $userId)
+            ->select('description')
+            ->first();
         return response()->json([
             'message' => true,
             'data' => $channel

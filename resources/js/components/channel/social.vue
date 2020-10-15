@@ -182,7 +182,6 @@ export default {
         .get("/api/social")
         .then((response) => {
           this.socialData = response.data.channel.extra_attributes.social;
-          console.log(this.socialData);
         })
         .catch((errors) => {
           Vue.toasted.error("Something went wrong", {

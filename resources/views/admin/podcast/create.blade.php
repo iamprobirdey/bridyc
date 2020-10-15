@@ -135,13 +135,6 @@ video')
         </form>
     </div>
 </div>
-{{-- <div id="podcast">
-    <podcast-for-admin></podcast-for-admin>
-</div> --}}
 
-@endsection
 
-@section('js_code')
-<script src="{{url('js/app.js')}}"></script>
-<script src="{{url('js/podcast.js')}}"></script>
 @endsection

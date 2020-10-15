@@ -50,7 +50,7 @@ class AchievementController extends Controller
 
         $acheivement = Acheivement::create([
             'channel_id' => current_user()->channel->id,
-            'image_path' => $path . $imageName,
+            'image_path' => $imageName,
             'title' => $request->input('title'),
             'description' => $request->input('description'),
             'date' => $request->input('date')
@@ -81,8 +81,8 @@ class AchievementController extends Controller
         if (is_dir($path)) {
             if ($acheivement->image_path != null) {
                 @unlink($path . $acheivement->image_path);
-                @unlink($path . 'm-' . $acheivement->image_path);
-                @unlink($path . 's-' . $acheivement->image_path);
+                //@unlink($path . 'm-' . $acheivement->image_path);
+                //@unlink($path . 's-' . $acheivement->image_path);
             }
         }
 
@@ -99,7 +99,7 @@ class AchievementController extends Controller
             //FacadesImageOptimizer::optimize($path.$imageName);
         }
 
-        $acheivement->image_path = $path . $imageName;
+        $acheivement->image_path = $imageName;
         $acheivement->title = $request->input('title');
         $acheivement->description = $request->input('description');
         $acheivement->date = $request->input('date');

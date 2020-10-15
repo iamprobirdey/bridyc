@@ -4,7 +4,11 @@
       <img
         height="150"
         width="152"
-        :src="domainUrl + '/media/channel/' + userId + '/avatar/' + userImage"
+        :src="
+          userImage === 'institute-logo-default.webp'
+            ? '/images/' + userImage
+            : '/media/channel/' + userId + '/avatar/' + userImage
+        "
         alt="icon image"
       />
       <!--
@@ -79,7 +83,7 @@ export default {
         .then((response) => {
           this.userImage = response.data.image;
           this.userId = response.data.userId;
-          if (this.userImage != null) this.userImageStatus = true;
+          this.userImageStatus = true;
         })
         .catch((errors) => {
           Vue.toasted.error("Something went wrong", {

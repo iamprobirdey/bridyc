@@ -16,59 +16,56 @@ class WebsiteController extends Controller
         $this->middleware('auth');
     }
 
-    public function getWebsiteData(){
+    public function getWebsiteData()
+    {
 
-        $this->authorize('viewforchannel',current_user());
-        $this->authorize('checkChannelForUser',current_user()->channel);
+        $this->authorize('viewforchannel', current_user());
+        $this->authorize('checkChannelForUser', current_user()->channel);
         return response()->json([
-            'data' => Channel::select('id','website_link')->where('user_id',current_user_id())->get()
+            'data' => Channel::select('id', 'website_link')->where('user_id', current_user_id())->first()
         ]);
     }
 
-    public function editWebsiteData(EditWebsiteValidation $request){
+    public function editWebsiteData(EditWebsiteValidation $request)
+    {
         activity('institute')
-        ->performedOn(current_user()->channel)
-        ->causedBy(current_user())
-        ->withProperties(['website ' => 'website is updated'])
-        ->log('Channel name :subject.title, by :causer.name and :properties.website');
+            ->performedOn(current_user()->channel)
+            ->causedBy(current_user())
+            ->withProperties(['website ' => 'website is updated'])
+            ->log('Channel name :subject.title, by :causer.name and :properties.website');
 
 
-        $this->authorize('viewforchannel',current_user());
-        $this->authorize('checkChannelForUser',current_user()->channel);
+        $this->authorize('viewforchannel', current_user());
+        $this->authorize('checkChannelForUser', current_user()->channel);
         DB::table('channels')
-            ->where('user_id',current_user_id())
+            ->where('user_id', current_user_id())
             ->update([
                 'website_link' => $request->validated()['website']
             ]);
         return response()->json([
             'message' => true,
             'data' => DB::table('channels')
-                    ->where('user_id',current_user_id())
-                    ->select('website_link')
-                    ->get()
+                ->where('user_id', current_user_id())
+                ->select('website_link')
+                ->first()
         ]);
     }
 
-    public function storeWebsiteData(StoreWebsiteValidation $request){
-        activity('institute')
-        ->performedOn(current_user()->channel)
-        ->causedBy(current_user())
-        ->withProperties(['website ' => 'website is created'])
-        ->log('Channel name :subject.title, by :causer.name and :properties.website');
-
-        $this->authorize('viewforchannel',current_user());
-        $this->authorize('checkChannelForUser',current_user()->channel);
+    public function storeWebsiteData(StoreWebsiteValidation $request)
+    {
+        $this->authorize('viewforchannel', current_user());
+        $this->authorize('checkChannelForUser', current_user()->channel);
         DB::table('channels')
-            ->where('user_id',current_user_id())
+            ->where('user_id', current_user_id())
             ->update([
                 'website_link' => $request->validated()['website']
             ]);
         return response()->json([
             'message' => true,
             'data' => DB::table('channels')
-                        ->where('user_id',current_user_id())
-                        ->select('website_link')
-                        ->get()
+                ->where('user_id', current_user_id())
+                ->select('website_link')
+                ->first()
         ]);
     }
 }
