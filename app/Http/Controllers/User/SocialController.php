@@ -27,10 +27,10 @@ class SocialController extends Controller
     public function store(SocialMediaLinkValidation $request)
     {
         $channel = Channel::where('user_id', Auth::id())->first();
-        if ($request->validated()['facebook'] != '') $channel->extra_attributes->set('social.facebook', $request->validated()['facebook']);
-        if ($request->validated()['instagram'] != '') $channel->extra_attributes->set('social.instagram', $request->validated()['instagram']);
-        if ($request->validated()['linkedIn'] != '') $channel->extra_attributes->set('social.linkedin', $request->validated()['linkedIn']);
-        if ($request->validated()['youtube'] != '') $channel->extra_attributes->set('social.youtube', $request->validated()['youtube']);
+        $channel->extra_attributes->set('social.facebook', $request->validated()['facebook']);
+        $channel->extra_attributes->set('social.instagram', $request->validated()['instagram']);
+        $channel->extra_attributes->set('social.linkedin', $request->validated()['linkedin']);
+        $channel->extra_attributes->set('social.youtube', $request->validated()['youtube']);
         $channel->save();
 
         return response()->json([

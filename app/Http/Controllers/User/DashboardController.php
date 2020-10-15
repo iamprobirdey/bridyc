@@ -59,8 +59,7 @@ class DashboardController extends Controller
     public function editChannel(Channel $channel)
     {
         $this->authorize('checkChannelForUser', $channel);
-
-        $channel = Channel::with('collegeImage')->get();
+        $channel = Channel::where('id', $channel->id)->with('collegeImage')->get();
         return view('institute.edit_channel', [
             'channel' => $channel,
             'user' => current_user()

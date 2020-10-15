@@ -196,10 +196,6 @@
                       <span class="badge badge-info" v-if="index === 0"
                         >New</span
                       >
-                      {{ notification.notify }}
-                      <span class="badge badge-info" v-if="index === 0"
-                        >New</span
-                      >
                     </p>
                   </div>
                 </div>
@@ -254,7 +250,9 @@
                   <img :src="domainUrl + '/' + achievement.image_path" />
                   <div class="card-body mt-n1">
                     <h6 class="card-title my-n1">{{ achievement.title }}</h6>
-                    <p class="card-text">{{ achievement.description }}</p>
+                    <p class="card-text">
+                      {{ achievement.description.substr(1, 20) }}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -325,7 +323,7 @@
                 </p>
                 <p>
                   <img src="/images/translation.svg" alt="language icon" />
-                  Medium: {{ channelData.village.name }}
+                  Medium: {{ channelData.language.name }}
                 </p>
                 <p>
                   <img src="/images/grade.svg" alt="Exam board icon" /> Board:

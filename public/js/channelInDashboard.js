@@ -615,8 +615,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -1418,18 +1416,6 @@ var render = function() {
                                     { staticClass: "badge badge-info" },
                                     [_vm._v("New")]
                                   )
-                                : _vm._e(),
-                              _vm._v(
-                                "\n                    " +
-                                  _vm._s(notification.notify) +
-                                  "\n                    "
-                              ),
-                              index === 0
-                                ? _c(
-                                    "span",
-                                    { staticClass: "badge badge-info" },
-                                    [_vm._v("New")]
-                                  )
                                 : _vm._e()
                             ])
                           }),
@@ -1525,7 +1511,13 @@ var render = function() {
                                   ),
                                   _vm._v(" "),
                                   _c("p", { staticClass: "card-text" }, [
-                                    _vm._v(_vm._s(achievement.description))
+                                    _vm._v(
+                                      "\n                    " +
+                                        _vm._s(
+                                          achievement.description.substr(1, 20)
+                                        ) +
+                                        "\n                  "
+                                    )
                                   ])
                                 ])
                               ]
@@ -1676,7 +1668,7 @@ var render = function() {
                       }),
                       _vm._v(
                         "\n                Medium: " +
-                          _vm._s(_vm.channelData.village.name) +
+                          _vm._s(_vm.channelData.language.name) +
                           "\n              "
                       )
                     ]),

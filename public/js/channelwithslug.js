@@ -710,9 +710,9 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     requestChannelSatisfier: function requestChannelSatisfier() {
       if (this.isTeacher && this.currentuserData != null) {
-        if (this.currentuserData.request === "in-progress" && this.currentuserData.channel_id == this.channelData.id) this.channelRequestDecider = "in-progress";
-        if (this.currentuserData.request === "accepted" && this.currentuserData.channel_id == this.channelData.id) this.channelRequestDecider = "accepted";
-        if (this.currentuserData.request === "rejected" && this.currentuserData.channel_id == this.channelData.id) this.channelRequestDecider = "rejected";
+        if (this.currentuserData.request === "in-progress" && this.currentuserData.channel_id === this.channelData.id) this.channelRequestDecider = "in-progress";
+        if (this.currentuserData.request === "accepted" && this.currentuserData.channel_id === this.channelData.id) this.channelRequestDecider = "accepted";
+        if (this.currentuserData.request === "rejected" && this.currentuserData.channel_id === this.channelData.id) this.channelRequestDecider = "rejected";
         if (this.currentuserData.request === "rejected" && this.currentuserData.channel_id != this.channelData.id) this.channelRequestDecider = "can-request";
       }
 
@@ -1790,7 +1790,7 @@ var render = function() {
                     }),
                     _vm._v(
                       "\n                Medium: " +
-                        _vm._s(_vm.channelData.village.name) +
+                        _vm._s(_vm.channelData.language.name) +
                         "\n              "
                     )
                   ]),

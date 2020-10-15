@@ -35,9 +35,8 @@ class ChannelController extends Controller
     public function getChannelBySlug(Channel $channel)
     {
 
-        $this->fireTheLog($channel);
-
-        $channel = $channel
+        //$this->fireTheLog($channel);
+        $channeldata = Channel::where('id', $channel->id)
             ->with(['state', 'district', 'village', 'language', 'achievement', 'collegeImage'])
             ->with(['teacher' => function ($query) {
                 $query->with(['user']);
@@ -45,7 +44,8 @@ class ChannelController extends Controller
             ->with(['notification' => function ($query) {
                 $query->orderBy('created_at', 'desc');
             }])
-            ->first();
+            ->get();
+
         $user = User::where('id', $channel->user_id)
             ->select('id', 'email', 'vission', 'message', 'name', 'avatar')
             ->with('verification')
@@ -62,7 +62,7 @@ class ChannelController extends Controller
         $userId = current_user_id();
 
 
-        return view('channel_with_slug', compact(['channel', 'user', 'currentUser', 'userId', 'isTeacher']));
+        return view('channel_with_slug', compact(['channeldata', 'user', 'currentUser', 'userId', 'isTeacher']));
     }
 
     private function fireTheLog($channel)

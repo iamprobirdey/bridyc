@@ -42,9 +42,9 @@ Route::get('/home', 'HomeController@test');
 Route::get('hobby', function () {
     $user4 = User::create([
         'name' => Str::random(10),
-        'email' => 'institute3@gmail.com',
+        'email' => 'institute@gmail.com',
         'password' => '$2y$10$A5qfm/Ssy2JOTLf5PQKOxeIFrLTOUaK5nwONeWstGu07wQDAEciwK',
-        'username' => 'institute3',
+        'username' => 'institute',
         'user_type' => 'institute',
 
     ]);

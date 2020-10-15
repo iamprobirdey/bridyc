@@ -163,7 +163,7 @@ class ProfileController extends Controller
         $realImage = Image::make($request->input('image'));
         $realImage->fit(600, 600, null, 'center');
         $image = $imageS = $imageM = Image::canvas(600, 600, '#ffffff')->insert($realImage);
-        $path = "media/users/profile/" . current_user_id() . "/";
+        $path = "media/teacher/" . current_user_id() . "/" . "profile/";
 
         if (is_dir($path)) {
             if ($user->avatar != null) {
