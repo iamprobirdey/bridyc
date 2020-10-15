@@ -17,10 +17,9 @@ class TeachersController extends Controller
         $this->middleware(['auth']);
     }
 
-    public function delete(ChannelTeacher $teacher)
+    public function delete($teacherId)
     {
-        dd($teacher->channel_id);
-        $this->authorize('checkAvailabilityOfTeacher', $teacher);
+        $teacher = ChannelTeacher::findOrFail($teacherId);
         $teacher->delete();
         return response()->json([
             'message' => true
@@ -32,7 +31,7 @@ class TeachersController extends Controller
         if (current_user()->channel->id === $userChannelRequest->channel_id) {
             $userChannelRequest->request = 'accepted';
             $userChannelRequest->save();
-            $teacher = ChannelTeacher::create([
+            ChannelTeacher::create([
                 'user_id' => $userChannelRequest->user_id,
                 'channel_id' => $userChannelRequest->channel_id
             ]);

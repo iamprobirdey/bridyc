@@ -164,6 +164,16 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -186,14 +196,14 @@ __webpack_require__.r(__webpack_exports__);
   },
   props: {
     teacher: {
-      type: Array,
+      type: Object,
       "default": null
     }
   },
   created: function created() {
-    this.teachersData = this.teacher[0].teacher;
-    this.teachersRequestData = this.teacher[0].userchannelrequest;
-    this.channelId = this.teacher[0].id;
+    this.teachersData = this.teacher.teacher;
+    this.teachersRequestData = this.teacher.userchannelrequest;
+    this.channelId = this.teacher.id;
     console.log(this.teachersRequestData);
   },
   mounted: function mounted() {},
@@ -348,7 +358,16 @@ var render = function() {
           { key: index, staticClass: "card shadow mx-auto sidebar-facard" },
           [
             _c("img", {
-              attrs: { src: "/images/teacher.jpg", alt: "faculty member image" }
+              attrs: {
+                src:
+                  teacher.user.avatar === "default.webp"
+                    ? "/images/" + teacher.user.avatar
+                    : "/media/teacher/" +
+                      teacher.user.id +
+                      "/profile/s-" +
+                      teacher.user.avatar,
+                alt: "faculty member image"
+              }
             }),
             _vm._v(" "),
             _c("div", { staticClass: "card-body mt-n1" }, [

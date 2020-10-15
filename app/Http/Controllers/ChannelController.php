@@ -37,7 +37,7 @@ class ChannelController extends Controller
 
         //$this->fireTheLog($channel);
         $channeldata = Channel::where('id', $channel->id)
-            ->with(['state', 'district', 'village', 'language', 'achievement', 'collegeImage'])
+            ->with(['state', 'district', 'village', 'language', 'achievement', 'collegeImage', 'board'])
             ->with(['teacher' => function ($query) {
                 $query->with(['user']);
             }])

@@ -1913,7 +1913,7 @@ var render = function() {
               _c("p", { staticClass: "card-text" }, [
                 _vm._v(
                   "\n          " +
-                    _vm._s(achievement.description) +
+                    _vm._s(achievement.description.substr(1, 20)) +
                     "\n        "
                 )
               ]),

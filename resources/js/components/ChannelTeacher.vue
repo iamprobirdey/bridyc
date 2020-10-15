@@ -47,7 +47,17 @@
         v-for="(teacher, index) in teachersData"
         :key="index"
       >
-        <img src="/images/teacher.jpg" alt="faculty member image" />
+        <img
+          :src="
+            teacher.user.avatar === 'default.webp'
+              ? '/images/' + teacher.user.avatar
+              : '/media/teacher/' +
+                teacher.user.id +
+                '/profile/s-' +
+                teacher.user.avatar
+          "
+          alt="faculty member image"
+        />
         <div class="card-body mt-n1">
           <h6 class="card-title my-n1 text-capitalized text-center">
             {{ teacher.user.name }}
@@ -90,14 +100,14 @@ export default {
   },
   props: {
     teacher: {
-      type: Array,
+      type: Object,
       default: null,
     },
   },
   created() {
-    this.teachersData = this.teacher[0].teacher;
-    this.teachersRequestData = this.teacher[0].userchannelrequest;
-    this.channelId = this.teacher[0].id;
+    this.teachersData = this.teacher.teacher;
+    this.teachersRequestData = this.teacher.userchannelrequest;
+    this.channelId = this.teacher.id;
     console.log(this.teachersRequestData);
   },
   mounted() {},
