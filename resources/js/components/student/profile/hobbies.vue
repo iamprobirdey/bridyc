@@ -47,6 +47,7 @@
       </button>
     </div>
   </div>
+  </div>
 </template>
 <script>
 import Multiselect from "vue-multiselect";

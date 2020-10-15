@@ -638,6 +638,34 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -3625,9 +3653,9 @@ var render = function() {
             attrs: {
               src:
                 _vm.domainUrl +
-                "/media/users/profile/" +
+                "/media/teacher/" +
                 _vm.userId +
-                "/s-" +
+                "/profile/" +
                 _vm.userImage,
               alt: "teacher profile pictures"
             }
@@ -3658,6 +3686,82 @@ var render = function() {
       ? _c(
           "div",
           { staticClass: "upload-profile-pic mt-5 pt-4" },
+          [
+            _c("picture-input", {
+              ref: "pictureInput",
+              attrs: {
+                width: "152",
+                height: "150",
+                margin: "16",
+                accept: "image/jpeg, image/png",
+                size: "10",
+                "button-class": "btn",
+                "custom-strings": {
+                  upload: "<h1>Bummer!</h1>",
+                  drag: "Upload your profile picture"
+                },
+                name: "image"
+              },
+              on: { change: _vm.onChange }
+            }),
+            _vm._v(" "),
+            _c("div", { staticClass: "text-center mt-2" }, [
+              _vm.imageData != ""
+                ? _c(
+                    "button",
+                    {
+                      staticClass: "btn btnsubmit mt-n2",
+                      attrs: { type: "button" },
+                      on: {
+                        click: function($event) {
+                          return _vm.onImageSubmit()
+                        }
+                      }
+                    },
+                    [_vm._v("Submit")]
+                  )
+                : _vm._e(),
+              _vm._v(" "),
+              _vm.userImage != ""
+                ? _c(
+                    "button",
+                    {
+                      staticClass: "btn btn-warning",
+                      on: {
+                        click: function($event) {
+                          return _vm.canTheEdit()
+                        }
+                      }
+                    },
+                    [_vm._v("\n              Cancel\n          ")]
+                  )
+                : _vm._e()
+            ]),
+            _vm._v(" "),
+            _c(
+              "span",
+              {
+                directives: [
+                  {
+                    name: "show",
+                    rawName: "v-show",
+                    value: _vm.imageError,
+                    expression: "imageError "
+                  }
+                ],
+                staticClass: "text-danger text-center"
+              },
+              [_vm._v(_vm._s(_vm.imageError))]
+            )
+          ],
+          1
+        )
+      : _vm._e(),
+    _vm._v(" "),
+    !_vm.userImageStatus
+      ? _c(
+          "div",
+          { staticClass: "upload-profile-pic" },
           [
             _c("picture-input", {
               ref: "pictureInput",

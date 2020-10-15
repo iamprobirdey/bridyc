@@ -15941,7 +15941,7 @@ var render = function() {
                 },
                 [
                   _c("label", { staticClass: "col-sm-2 col-form-label" }, [
-                    _vm._v("Canteen")
+                    _vm._v("Canteen:")
                   ]),
                   _vm._v(" "),
                   _c(
@@ -16054,7 +16054,7 @@ var render = function() {
                 },
                 [
                   _c("label", { staticClass: "col-sm-2 col-form-label" }, [
-                    _vm._v("Stationary")
+                    _vm._v("Stationary:")
                   ]),
                   _vm._v(" "),
                   _c(
@@ -16280,7 +16280,7 @@ var render = function() {
                 },
                 [
                   _c("label", { staticClass: "col-sm-2 col-form-label" }, [
-                    _vm._v("Boys Hostel")
+                    _vm._v("Boys Hostel:")
                   ]),
                   _vm._v(" "),
                   _c(

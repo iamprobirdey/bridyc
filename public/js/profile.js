@@ -866,8 +866,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -972,6 +970,11 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue_multiselect__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-multiselect */ "./node_modules/vue-multiselect/dist/vue-multiselect.min.js");
 /* harmony import */ var vue_multiselect__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue_multiselect__WEBPACK_IMPORTED_MODULE_0__);
+//
+//
+//
+//
+//
 //
 //
 //
@@ -4431,91 +4434,131 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", [
     _vm.hobbiesEntryChecker
-      ? _c(
-          "div",
-          [
-            _vm._v("\n    Field of Interest:\n    "),
-            _vm._l(_vm.studentshobbiesData, function(hobbie, index) {
-              return _c(
-                "button",
-                { key: index, staticClass: "btn btn-primary m-1" },
-                [_vm._v("\n      " + _vm._s(hobbie.name) + "\n    ")]
-              )
-            }),
-            0
-          
-        ])
-      : _vm._e(),
-    _vm._v(" "),
-    !_vm.hobbiesEntryChecker
-      ? _c(
-          "div",
-          [
-            _c("multiselect", {
-              attrs: {
-                options: _vm.hobbiesData,
-                "track-by": "name",
-                "custom-label": _vm.standardNameOnly,
-                multiple: true,
-                "tag-placeholder": "Select classes of your hobbies",
-                "option-height": 104
-              },
-              model: {
-                value: _vm.value,
-                callback: function($$v) {
-                  _vm.value = $$v
-                },
-                expression: "value"
+      ? _c("div", [
+          _vm._v("\n    Field of Interest:\n    "),
+          _c(
+            "button",
+            {
+              staticClass: "btn mt-n2 edit-btn",
+              attrs: { "data-toggle": "tooltip", title: "Edit" },
+              on: {
+                click: function($event) {
+                  return _vm.editThehobbie()
+                }
               }
-            }),
-            _vm._v(" "),
-            _c(
-              "span",
-              {
-                directives: [
-                  {
-                    name: "show",
-                    rawName: "v-show",
-                    value: _vm.serverError != "",
-                    expression: "serverError != ''"
+            },
+            [
+              _c("i", {
+                staticClass: "fa fa-pencil",
+                attrs: { "aria-hidden": "true" }
+              })
+            ]
+          ),
+          _vm._v(" "),
+          _c(
+            "div",
+            [
+              _vm._l(_vm.studentshobbiesData, function(hobbie, index) {
+                return _c(
+                  "button",
+                  { key: index, staticClass: "btn btn-sm btnsubjects m-1" },
+                  [_vm._v("\n      " + _vm._s(hobbie.name) + "\n    ")]
+                )
+              }),
+              _vm._v(" "),
+              _c(
+                "button",
+                {
+                  staticClass: "btn mt-n2 edit-btn",
+                  attrs: { "data-toggle": "tooltip", title: "Edit" },
+                  on: {
+                    click: function($event) {
+                      return _vm.editThehobbie()
+                    }
                   }
+                },
+                [
+                  _c("i", {
+                    staticClass: "fa fa-pencil",
+                    attrs: { "aria-hidden": "true" }
+                  })
+                ]
+              )
+            ],
+            2
+          ),
+          _vm._v(" "),
+          !_vm.hobbiesEntryChecker
+            ? _c(
+                "div",
+                [
+                  _c("multiselect", {
+                    attrs: {
+                      options: _vm.hobbiesData,
+                      "track-by": "name",
+                      "custom-label": _vm.standardNameOnly,
+                      multiple: true,
+                      "tag-placeholder": "Select classes of your hobbies",
+                      "option-height": 104
+                    },
+                    model: {
+                      value: _vm.value,
+                      callback: function($$v) {
+                        _vm.value = $$v
+                      },
+                      expression: "value"
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "span",
+                    {
+                      directives: [
+                        {
+                          name: "show",
+                          rawName: "v-show",
+                          value: _vm.serverError != "",
+                          expression: "serverError != ''"
+                        }
+                      ],
+                      staticClass: "text-danger text-center"
+                    },
+                    [_vm._v(_vm._s(_vm.serverError))]
+                  ),
+                  _vm._v(" "),
+                  _c("br"),
+                  _vm._v(" "),
+                  _c(
+                    "button",
+                    {
+                      staticClass: "btn btn-warning",
+                      on: {
+                        click: function($event) {
+                          return _vm.cancelTheForm()
+                        }
+                      }
+                    },
+                    [_vm._v("Cancel")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "button",
+                    {
+                      staticClass: "btn btnsubmit mt-n2",
+                      attrs: { type: "submit" },
+                      on: {
+                        click: function($event) {
+                          return _vm.submitSubjectsData()
+                        }
+                      }
+                    },
+                    [_vm._v("\n      Submit\n    ")]
+                  )
                 ],
-                staticClass: "text-danger text-center"
-              },
-              [_vm._v(_vm._s(_vm.serverError))]
-            ),
-            _vm._v(" "),
-            _c("br"),
-            _vm._v(" "),
-            _c(
-              "button",
-              {
-                staticClass: "btn btn-warning",
-                on: {
-                  click: function($event) {
-                    return _vm.cancelTheForm()
-                  }
-                }
-              },
-              [_vm._v("Cancel")]
-            ),
-            _vm._v(" "),
-            _c(
-              "button",
-              {
-                staticClass: "btn btnsubmit mt-n2",
-                attrs: { type: "submit" },
-                on: {
-                  click: function($event) {
-                    return _vm.submitSubjectsData()
-                  }
-                }
-              },
-              [_vm._v("\n      Submit\n    ")]
-            )
-          ],
-          1
-        )
+                1
+              )
+            : _vm._e()
+        ])
       : _vm._e()
   ])
 }
