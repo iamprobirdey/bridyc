@@ -85,7 +85,7 @@ class PodcastController extends Controller
             ]);
             return redirect()->back()->with('status', 'Podcast Created succefully');
         } catch (\Throwable $th) {
-            report($th);
+            dd($th);
         }
     }
 
