@@ -21,7 +21,9 @@ use Illuminate\Support\Str;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::get('500',function(){
+    return view('errors.500');
+});
 Route::get('/pass1', function () {
     return view('auth.passwords.confirm');
 });
@@ -40,17 +42,18 @@ Route::get('/home', 'HomeController@test');
 Route::get('hobby', function () {
     $user4 = User::create([
         'name' => Str::random(10),
-        'email' => 'institute2@gmail.com',
+        'email' => 'institute3@gmail.com',
         'password' => '$2y$10$A5qfm/Ssy2JOTLf5PQKOxeIFrLTOUaK5nwONeWstGu07wQDAEciwK',
-        'username' => 'institute2',
+        'username' => 'institute3',
         'user_type' => 'institute',
 
     ]);
+    //user_type => institute/student/teacher/admin
 
 
     $user4->update(['email_verified_at' => Carbon::now()]);
 
-    $user4->assignRole('institute');
+    $user4->assignRole('institute'); //institute/student/teacher
 });
 
 Auth::routes(['verify' => true]);

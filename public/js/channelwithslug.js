@@ -2082,16 +2082,16 @@ var render = function() {
                       staticClass: "mr-2",
                       attrs: { src: "/images/hostel.svg", alt: "Hostel Image" }
                     }),
-                    _vm._v("\n                  Boys Hostel:"),
+                    _vm._v("\n                Boys Hostel:"),
                     _c("strong", { staticClass: "ml-1" }, [
                       _vm._v(
-                        "\n                    " +
+                        "\n                  " +
                           _vm._s(
                             _vm.channelData.boys_hostel != null
                               ? _vm.channelData.boys_hostel
                               : "Not Provided"
                           ) +
-                          "\n                  "
+                          "\n                "
                       )
                     ])
                   ]),
@@ -2101,16 +2101,16 @@ var render = function() {
                       staticClass: "mr-2",
                       attrs: { src: "/images/bus.svg", alt: "Bus Image" }
                     }),
-                    _vm._v(" Bus\n                  Girls Hostel:"),
+                    _vm._v(" Bus\n                Girls Hostel:"),
                     _c("strong", { staticClass: "ml-1" }, [
                       _vm._v(
-                        "\n                    " +
+                        "\n                  " +
                           _vm._s(
                             _vm.channelData.girls_hostel != null
                               ? _vm.channelData.girls_hostel
                               : "Not Provided"
                           ) +
-                          "\n                  "
+                          "\n                "
                       )
                     ])
                   ])
@@ -14468,7 +14468,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/js/channelwithslug.js */"./resources/js/channelwithslug.js");
+module.exports = __webpack_require__(/*! C:\laragon\www\bridyc\resources\js\channelwithslug.js */"./resources/js/channelwithslug.js");
 
 
 /***/ })

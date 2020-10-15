@@ -16,9 +16,14 @@
 @section('s_type', "Insitute .{{$channel->village->name}} .' '.{{$channel->state->name}}")
 @section('s_title', $channel->title)
 @section('s_desc', strip_tags($channel->description))
-@if($channel->icon_avatar != null)
-@section('s_img', url('/media/channel/'.$channel->user_id.'/s-'.$channel->icon_avatar))
-@endif
+
+@section('s_img', url(
+    @if($channel->icon_avatar === 'institute-logo-default.webp')
+    '/images/'.$channel->icon_avatar
+    @else
+    '/media/channel/'.$channel->user_id.'/s-'.$channel->icon_avatar
+    @endIf
+    ))
 
 
 @section('css_code')
