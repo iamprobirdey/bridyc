@@ -30,7 +30,8 @@ class InfrastructureController extends Controller
                 'wall',
                 'library',
                 'no_of_books',
-                'playground'
+                'playground',
+                'bus_services'
             ]
         )
             ->where('user_id', auth()->id())
