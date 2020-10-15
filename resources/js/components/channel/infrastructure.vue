@@ -74,7 +74,7 @@
             'has-error': errors.has('canteen') || serverErrors.canteen != '',
           }"
         >
-          <label class="col-sm-2 col-form-label">Canteen:</label>
+          <label class="col-sm-2 col-form-label">Canteen</label>
           <select
             v-model="formData.canteen"
             class="col-sm-10 form-control"
@@ -101,7 +101,7 @@
               errors.has('stationary') || serverErrors.stationary != '',
           }"
         >
-          <label class="col-sm-2 col-form-label">Stationary:</label>
+          <label class="col-sm-2 col-form-label">Stationary</label>
           <select
             v-model="formData.stationary"
             class="col-sm-10 form-control"
@@ -158,7 +158,7 @@
               errors.has('boys_hostel') || serverErrors.boys_hostel != '',
           }"
         >
-          <label class="col-sm-2 col-form-label">Boys Hostel:</label>
+          <label class="col-sm-2 col-form-label">Boys Hostel</label>
           <select
             v-model="formData.boys_hostel"
             class="col-sm-10 form-control"
@@ -211,7 +211,7 @@
             'has-error': errors.has('wall') || serverErrors.wall != '',
           }"
         >
-          <label class="col-sm-3 col-form-label">Campus Boundary:</label>
+          <label class="col-sm-3 col-form-label">Campus Boundary</label>
           <select
             v-model="formData.wall"
             class="col-sm-9 form-control"

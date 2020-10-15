@@ -25,8 +25,8 @@ class CreateChannelsTable extends Migration
             $table->text('description')->nullable();
             $table->string('meta_keywords')->nullable();
             $table->string('meta_descriptions')->nullable();
-            $table->string('icon_avatar')->default('Institute-logo-default.webp');
-            $table->string('cover_avatar')->default('Institute-cover-default.webp');
+            $table->string('icon_avatar')->default('institute-logo-default.webp');
+            $table->string('cover_avatar')->default('institute-cover-default.webp');
             $table->string('website_link')->nullable();
             $table->string('no_of_class')->nullable();
             $table->string('canteen')->nullable();

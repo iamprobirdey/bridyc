@@ -636,6 +636,21 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -1229,13 +1244,13 @@ var render = function() {
           staticClass: "inscover mt-n3",
           attrs: {
             src:
-              _vm.channelData.cover_avatar != null
-                ? _vm.domainUrl +
+              _vm.channelData.cover_avatar === "institute-cover-default.webp"
+                ? "/images/" + _vm.channelData.cover_avatar
+                : _vm.domainUrl +
                   "/media/channel/" +
-                  _vm.channel.user_id +
+                  _vm.channelData.user_id +
                   "/cover/" +
                   _vm.channelData.cover_avatar
-                : "/images/banner2.png"
           }
         })
       ]),
@@ -1245,7 +1260,7 @@ var render = function() {
           _c("div", { staticClass: "col-md-6 d-flex flex-column" }, [
             _vm.channelData.website_link === null
               ? _c("div", { staticClass: "insweb text-center" }, [
-                  _vm._v("\n              Website: NA\n            ")
+                  _vm._v("\n            Website: NA\n          ")
                 ])
               : _c("div", [
                   _c(
@@ -1265,7 +1280,7 @@ var render = function() {
                       }
                     },
                     [
-                      _vm._v("\n            Visit website\n            "),
+                      _vm._v("\n              Visit website\n              "),
                       _c("img", {
                         staticClass: "mt-n1",
                         attrs: {
@@ -1287,9 +1302,7 @@ var render = function() {
                   staticClass: "fa fa-phone mr-1",
                   attrs: { "aria-hidden": "true" }
                 }),
-                _vm._v(
-                  "\n              " + _vm._s(_vm.phoneNo) + "\n            "
-                )
+                _vm._v("\n            " + _vm._s(_vm.phoneNo) + "\n          ")
               ]),
               _vm._v(" "),
               _c("p", { staticClass: "m-1 mr-2" }, [
@@ -1297,7 +1310,7 @@ var render = function() {
                   staticClass: "fa fa-envelope mr-1",
                   attrs: { "aria-hidden": "true" }
                 }),
-                _vm._v(_vm._s(_vm.userData.email) + "\n            ")
+                _vm._v(_vm._s(_vm.userData.email) + "\n          ")
               ])
             ]
           )
@@ -1308,20 +1321,20 @@ var render = function() {
             staticClass: "img-fluid logoinstitute",
             attrs: {
               src:
-                _vm.channelData.icon_avatar != null
-                  ? _vm.domainUrl +
+                _vm.channelData.icon_avatar === "institute-logo-default.webp"
+                  ? "/images/" + _vm.channelData.icon_avatar
+                  : _vm.domainUrl +
                     "/media/channel/" +
                     _vm.channel.user_id +
                     "/avatar/" +
-                    _vm.channelData.icon_avatar
-                  : "/images/college logo.jpg",
+                    _vm.channelData.icon_avatar,
               alt: "Institute logo"
             }
           }),
           _vm._v(" "),
           _c("h1", { staticClass: "ml-1 ml-sm-3 institle text-capitalize" }, [
             _vm._v(
-              "\n            " + _vm._s(_vm.channelData.title) + "\n          "
+              "\n          " + _vm._s(_vm.channelData.title) + "\n        "
             )
           ])
         ])
@@ -1446,23 +1459,19 @@ var render = function() {
                       }
                     }
                   },
-                  [
-                    _vm._v(
-                      "\n                Send Faculty Request\n              "
-                    )
-                  ]
+                  [_vm._v("\n        Send Faculty Request\n      ")]
                 )
               : _vm._e(),
             _vm._v(" "),
             _vm.channelRequestDecider === "in-progress"
               ? _c("button", { staticClass: "btn btn-secondary" }, [
-                  _vm._v("\n                Request Sent\n              ")
+                  _vm._v("\n        Request Sent\n      ")
                 ])
               : _vm._e(),
             _vm._v(" "),
             _vm.channelRequestDecider === "rejected"
               ? _c("button", { staticClass: "btn btn-danger" }, [
-                  _vm._v("\n                Request Rejected\n              ")
+                  _vm._v("\n        Request Rejected\n      ")
                 ])
               : _vm._e(),
             _vm._v(" "),
@@ -1474,7 +1483,7 @@ var render = function() {
                       alt: "correct symbol"
                     }
                   }),
-                  _vm._v("\n                Your School\n              ")
+                  _vm._v("\n        Your School\n      ")
                 ])
               : _vm._e()
           ])
@@ -1502,21 +1511,21 @@ var render = function() {
               _c("div", { staticClass: "description mb-5 px-0" }, [
                 _c("h2", { staticClass: "mb-4 text-uppercase" }, [
                   _vm._v(
-                    "\n                Welcome to " +
+                    "\n              Welcome to " +
                       _vm._s(_vm.channelData.title) +
-                      "\n              "
+                      "\n            "
                   )
                 ]),
                 _vm._v(" "),
                 _c("p", [
                   _vm._v(
-                    "\n                " +
+                    "\n              " +
                       _vm._s(
                         _vm.channelData.description != null
                           ? _vm.channelData.description
                           : ""
                       ) +
-                      "\n              "
+                      "\n            "
                   )
                 ])
               ]),
@@ -1543,9 +1552,9 @@ var render = function() {
                         ) {
                           return _c("p", { key: index }, [
                             _vm._v(
-                              "\n                      " +
+                              "\n                    " +
                                 _vm._s(notification.notify) +
-                                "\n                      "
+                                "\n                    "
                             ),
                             index === 0
                               ? _c(
@@ -1674,13 +1683,13 @@ var render = function() {
                   _c("div", { staticClass: "col-md-6" }, [
                     _c("p", { staticClass: "principal-message" }, [
                       _vm._v(
-                        "\n                    " +
+                        "\n                  " +
                           _vm._s(
                             _vm.userData.message != null
                               ? _vm.userData.message
                               : "Message from Institute not provided"
                           ) +
-                          "\n                  "
+                          "\n                "
                       )
                     ])
                   ]),
@@ -1699,18 +1708,18 @@ var render = function() {
                           { staticClass: "card-title my-n1 text-capitalize" },
                           [
                             _vm._v(
-                              "\n                        " +
+                              "\n                      " +
                                 _vm._s(_vm.userData.name) +
-                                "\n                      "
+                                "\n                    "
                             )
                           ]
                         ),
                         _vm._v(" "),
                         _c("p", { staticClass: "card-text text-capitalize" }, [
                           _vm._v(
-                            "\n                        Principal, " +
+                            "\n                      Principal, " +
                               _vm._s(_vm.channel.title) +
-                              "\n                      "
+                              "\n                    "
                           )
                         ])
                       ])
@@ -1725,13 +1734,13 @@ var render = function() {
                   _vm._v(" "),
                   _c("p", [
                     _vm._v(
-                      "\n                  " +
+                      "\n                " +
                         _vm._s(
                           _vm.userData.vission != null
                             ? _vm.userData.vission
                             : "Vission from Institute not provided"
                         ) +
-                        "\n                "
+                        "\n              "
                     )
                   ])
                 ])
@@ -1750,11 +1759,11 @@ var render = function() {
                       attrs: { src: "/images/address.svg", alt: "address icon" }
                     }),
                     _vm._v(
-                      " Address:\n                  " +
+                      " Address:\n                " +
                         _vm._s(_vm.channelData.district.name) +
-                        ",\n                  " +
+                        ",\n                " +
                         _vm._s(_vm.channelData.state.name) +
-                        "\n                "
+                        "\n              "
                     )
                   ]),
                   _vm._v(" "),
@@ -1766,9 +1775,9 @@ var render = function() {
                       }
                     }),
                     _vm._v(
-                      " Pin\n                  Code: " +
+                      " Pin\n                Code: " +
                         _vm._s(_vm.userData.verification.pin) +
-                        "\n                "
+                        "\n              "
                     )
                   ]),
                   _vm._v(" "),
@@ -1780,9 +1789,9 @@ var render = function() {
                       }
                     }),
                     _vm._v(
-                      "\n                  Medium: " +
+                      "\n                Medium: " +
                         _vm._s(_vm.channelData.village.name) +
-                        "\n                "
+                        "\n              "
                     )
                   ]),
                   _vm._v(" "),
@@ -1793,9 +1802,9 @@ var render = function() {
                       attrs: { src: "/images/deed.svg", alt: "ownership icon" }
                     }),
                     _vm._v(
-                      " Ownership:\n                  " +
+                      " Ownership:\n                " +
                         _vm._s(_vm.userData.verification.ownership) +
-                        "\n                "
+                        "\n              "
                     )
                   ]),
                   _vm._v(" "),
@@ -1807,9 +1816,9 @@ var render = function() {
                       }
                     }),
                     _vm._v(
-                      "\n                  Founded: " +
+                      "\n                Founded: " +
                         _vm._s(_vm.userData.verification.founded) +
-                        "\n                "
+                        "\n              "
                     )
                   ])
                 ])
@@ -1859,9 +1868,9 @@ var render = function() {
                             { staticClass: "card-title my-n1 text-center" },
                             [
                               _vm._v(
-                                "\n                      " +
+                                "\n                    " +
                                   _vm._s(teacher.user.name) +
-                                  "\n                    "
+                                  "\n                  "
                               )
                             ]
                           ),
@@ -1906,16 +1915,16 @@ var render = function() {
                         alt: "Electricity Image"
                       }
                     }),
-                    _vm._v("\n                  Stationary:"),
+                    _vm._v("\n                Stationary:"),
                     _c("strong", { staticClass: "ml-1" }, [
                       _vm._v(
-                        "\n                    " +
+                        "\n                  " +
                           _vm._s(
                             _vm.channelData.stationary != null
                               ? _vm.channelData.stationary
-                              : "N/A"
+                              : "Not Provided"
                           ) +
-                          "\n                  "
+                          "\n                "
                       )
                     ])
                   ]),
@@ -1928,16 +1937,16 @@ var render = function() {
                         alt: "computer Image"
                       }
                     }),
-                    _vm._v("\n                  Computer:"),
+                    _vm._v("\n                Computer:"),
                     _c("strong", { staticClass: "ml-1" }, [
                       _vm._v(
-                        "Y\n\n                    " +
+                        "\n                  " +
                           _vm._s(
                             _vm.channelData.computer_learning != null
                               ? _vm.channelData.computer_learning
-                              : "N/A"
+                              : "Not Provided"
                           ) +
-                          "\n                  "
+                          "\n                "
                       )
                     ])
                   ]),
@@ -1947,16 +1956,16 @@ var render = function() {
                       staticClass: "mr-2",
                       attrs: { src: "/images/fence.svg", alt: "fence Image" }
                     }),
-                    _vm._v("\n                  Boundary:"),
+                    _vm._v("\n                Boundary:"),
                     _c("strong", { staticClass: "ml-1" }, [
                       _vm._v(
-                        "\n                    " +
+                        "\n                  " +
                           _vm._s(
                             _vm.channelData.wall != null
                               ? _vm.channelData.wall
-                              : "N/A"
+                              : "Not Provided"
                           ) +
-                          "\n                  "
+                          "\n                "
                       )
                     ])
                   ])
@@ -1971,16 +1980,16 @@ var render = function() {
                         alt: "playground Image"
                       }
                     }),
-                    _vm._v("\n                  Playground:"),
+                    _vm._v("\n                Playground:"),
                     _c("strong", { staticClass: "ml-1" }, [
                       _vm._v(
-                        "\n                    " +
+                        "\n                  " +
                           _vm._s(
                             _vm.channelData.playground != null
                               ? _vm.channelData.playground
-                              : "N/A"
+                              : "Not Provided"
                           ) +
-                          "\n                  "
+                          "\n                "
                       )
                     ])
                   ]),
@@ -1993,16 +2002,16 @@ var render = function() {
                         alt: "Library Image"
                       }
                     }),
-                    _vm._v("\n                  Library:"),
+                    _vm._v("\n                Library:"),
                     _c("strong", { staticClass: "ml-1" }, [
                       _vm._v(
-                        "\n                    " +
+                        "\n                  " +
                           _vm._s(
                             _vm.channelData.library != null
                               ? _vm.channelData.library
-                              : "N/A"
+                              : "Not Provided"
                           ) +
-                          "\n                  "
+                          "\n                "
                       )
                     ])
                   ]),
@@ -2012,16 +2021,16 @@ var render = function() {
                       staticClass: "mr-2",
                       attrs: { src: "/images/book.svg", alt: "Books Image" }
                     }),
-                    _vm._v("\n                  No of Books:"),
+                    _vm._v("\n                No of Books:"),
                     _c("strong", { staticClass: "ml-1" }, [
                       _vm._v(
-                        "\n                    " +
+                        "\n                  " +
                           _vm._s(
                             _vm.channelData.no_of_books != null
                               ? _vm.channelData.no_of_books
-                              : "N/A"
+                              : "Not Provided"
                           ) +
-                          "\n                  "
+                          "\n                "
                       )
                     ])
                   ])
@@ -2033,16 +2042,16 @@ var render = function() {
                       staticClass: "mr-2",
                       attrs: { src: "/images/hostel.svg", alt: "Hostel Image" }
                     }),
-                    _vm._v("\n                  Canteen:"),
+                    _vm._v("\n                Canteen:"),
                     _c("strong", { staticClass: "ml-1" }, [
                       _vm._v(
-                        "\n                    " +
+                        "\n                  " +
                           _vm._s(
                             _vm.channelData.canteen != null
                               ? _vm.channelData.canteen
-                              : "N/A"
+                              : "Not Provided"
                           ) +
-                          "\n                  "
+                          "\n                "
                       )
                     ])
                   ]),
@@ -2052,16 +2061,16 @@ var render = function() {
                       staticClass: "mr-2",
                       attrs: { src: "/images/bus.svg", alt: "Bus Image" }
                     }),
-                    _vm._v(" Bus\n                  Services:"),
+                    _vm._v(" Bus\n                Services:"),
                     _c("strong", { staticClass: "ml-1" }, [
                       _vm._v(
-                        "\n                    " +
+                        "\n                  " +
                           _vm._s(
                             _vm.channelData.bus_services != null
                               ? _vm.channelData.bus_services
-                              : "N/A"
+                              : "Not Provided"
                           ) +
-                          "\n                  "
+                          "\n                "
                       )
                     ])
                   ])
@@ -2080,7 +2089,7 @@ var render = function() {
                           _vm._s(
                             _vm.channelData.boys_hostel != null
                               ? _vm.channelData.boys_hostel
-                              : "N/A"
+                              : "Not Provided"
                           ) +
                           "\n                  "
                       )
@@ -2099,7 +2108,7 @@ var render = function() {
                           _vm._s(
                             _vm.channelData.girls_hostel != null
                               ? _vm.channelData.girls_hostel
-                              : "N/A"
+                              : "Not Provided"
                           ) +
                           "\n                  "
                       )
@@ -2178,7 +2187,7 @@ var staticRenderFns = [
     return _c("div", { staticClass: "card-title my-n2" }, [
       _c("h5", { staticClass: "text-uppercase text-center" }, [
         _vm._v(
-          "\n                      News and Notifications\n                    "
+          "\n                    News and Notifications\n                  "
         )
       ])
     ])
@@ -2225,7 +2234,7 @@ var staticRenderFns = [
       _c("img", {
         attrs: { src: "/images/grade.svg", alt: "Exam board icon" }
       }),
-      _vm._v(" Board:\n                  xxxx\n                ")
+      _vm._v(" Board:\n                xxxx\n              ")
     ])
   }
 ]
@@ -14459,7 +14468,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\laragon\www\bridyc\resources\js\channelwithslug.js */"./resources/js/channelwithslug.js");
+module.exports = __webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/js/channelwithslug.js */"./resources/js/channelwithslug.js");
 
 
 /***/ })

@@ -2,9 +2,22 @@
   <div class="channelname">
     <div v-if="channelChecker" class="mt-n4 mb-3 container text-center">
       <h4>Your Institute Name:</h4>
-      <span v-if="userInstituteData.channel_id != null" class="text-capitalize">{{userInstituteData.channel.title}}</span>
-      <span class="text-capitalize text-center">{{userInstituteData.school_name}}</span>
-      <button class="btn edit-btn" @click="editAddress()" data-toggle="tooltip" title="Edit"><i class="fa fa-pencil" aria-hidden="true"></i></button>
+      <span
+        v-if="userInstituteData.channel_id != null"
+        class="text-capitalize"
+        >{{ userInstituteData.channel.title }}</span
+      >
+      <span class="text-capitalize text-center">{{
+        userInstituteData.school_name
+      }}</span>
+      <button
+        class="btn edit-btn"
+        @click="editAddress()"
+        data-toggle="tooltip"
+        title="Edit"
+      >
+        <i class="fa fa-pencil" aria-hidden="true"></i>
+      </button>
     </div>
     <div v-if="!channelChecker" class="container-fluid">
       <form @submit.prevent="channelForm()">

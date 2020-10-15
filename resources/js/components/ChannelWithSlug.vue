@@ -20,13 +20,13 @@
           " -->
         <img
           :src="
-            channelData.cover_avatar != null
-              ? domainUrl +
+            channelData.cover_avatar === 'institute-cover-default.webp'
+              ? '/images/' + channelData.cover_avatar
+              : domainUrl +
                 '/media/channel/' +
-                channel.user_id +
+                channelData.user_id +
                 '/cover/' +
                 channelData.cover_avatar
-              : '/images/banner2.png'
           "
           class="inscover mt-n3"
         />
@@ -36,30 +36,36 @@
         <div class="row mx-0">
           <div class="col-md-6 d-flex flex-column">
             <!--p class="ml-n2 mb-1">A unit of abc society askjfhj kkhh fdbdf</p-->
-            <div class="insweb text-center" v-if="channelData.website_link === null">
+            <div
+              class="insweb text-center"
+              v-if="channelData.website_link === null"
+            >
               Website: NA
             </div>
 
             <div v-else>
-            <a
-              class="ml-n4 insweb insweb-available px-2 py-1 mt-n1 mt-md-3"
-              :target="channelData.website_link === null ? '_self' : '_blank'"
-              :href="
-                channelData.website_link === null
-                  ? 'javascript:void(0)'
-                  : channelData.website_link
-              "
-            >
-              <!--{{
+              <a
+                class="ml-n4 insweb insweb-available px-2 py-1 mt-n1 mt-md-3"
+                :target="channelData.website_link === null ? '_self' : '_blank'"
+                :href="
+                  channelData.website_link === null
+                    ? 'javascript:void(0)'
+                    : channelData.website_link
+                "
+              >
+                <!--{{
                 channelData.website_link === null
                   ? "No Website"
                   : "Visit Website"
               }}-->
-            Visit website
-            <img src="/images/external-link-symbol.svg" class="mt-n1" alt="external link symbol">
+                Visit website
+                <img
+                  src="/images/external-link-symbol.svg"
+                  class="mt-n1"
+                  alt="external link symbol"
+                />
               </a>
             </div>
-
           </div>
 
           <div class="col-md-6 phemdiv text-md-right ml-n4 mb-n5">
@@ -76,13 +82,13 @@
         <div class="d-flex logo-title">
           <img
             :src="
-              channelData.icon_avatar != null
-                ? domainUrl +
+              channelData.icon_avatar === 'institute-logo-default.webp'
+                ? '/images/' + channelData.icon_avatar
+                : domainUrl +
                   '/media/channel/' +
                   channel.user_id +
                   '/avatar/' +
                   channelData.icon_avatar
-                : '/images/college logo.jpg'
             "
             alt="Institute logo"
             class="img-fluid logoinstitute"
@@ -93,9 +99,12 @@
         </div>
       </div>
 
-            <!-- social links-->
+      <!-- social links-->
       <div class="inssocial">
-        <div class="d-flex flex-lg-row justify-content-center" v-if="socialCount === 0">
+        <div
+          class="d-flex flex-lg-row justify-content-center"
+          v-if="socialCount === 0"
+        >
           <a
             class="mr-1"
             target="_blank"
@@ -148,34 +157,34 @@
         <div v-if="socialCount === 1">Social Links: NA</div>
       </div>
 
-<div class="faculty-request" v-if="isTeacher">
-              <button
-                class="btn btn-warning"
-                v-if="channelRequestDecider === 'can-request'"
-                @click="requestForChannel()"
-              >
-                Send Faculty Request
-              </button>
-              <button
-                class="btn btn-secondary"
-                v-if="channelRequestDecider === 'in-progress'"
-              >
-                Request Sent
-              </button>
-              <button
-                class="btn btn-danger"
-                v-if="channelRequestDecider === 'rejected'"
-              >
-                Request Rejected
-              </button>
-              <button
-                class="btn btn-sm btn-success"
-                v-if="channelRequestDecider === 'accepted'"
-              >
-              <img src="/images/check-mark.svg" alt="correct symbol">
-                Your School
-              </button>
-</div>
+      <div class="faculty-request" v-if="isTeacher">
+        <button
+          class="btn btn-warning"
+          v-if="channelRequestDecider === 'can-request'"
+          @click="requestForChannel()"
+        >
+          Send Faculty Request
+        </button>
+        <button
+          class="btn btn-secondary"
+          v-if="channelRequestDecider === 'in-progress'"
+        >
+          Request Sent
+        </button>
+        <button
+          class="btn btn-danger"
+          v-if="channelRequestDecider === 'rejected'"
+        >
+          Request Rejected
+        </button>
+        <button
+          class="btn btn-sm btn-success"
+          v-if="channelRequestDecider === 'accepted'"
+        >
+          <img src="/images/check-mark.svg" alt="correct symbol" />
+          Your School
+        </button>
+      </div>
       <br />
       <br />
       <br />
@@ -415,7 +424,7 @@
                     {{
                       channelData.stationary != null
                         ? channelData.stationary
-                        : "N/A"
+                        : "Not Provided"
                     }}
                   </strong>
                 </p>
@@ -425,20 +434,22 @@
                     src="/images/computer.svg"
                     alt="computer Image"
                   />
-                  Computer:<strong class="ml-1"
-                    >Y
-
+                  Computer:<strong class="ml-1">
                     {{
                       channelData.computer_learning != null
                         ? channelData.computer_learning
-                        : "N/A"
+                        : "Not Provided"
                     }}
                   </strong>
                 </p>
                 <p>
                   <img class="mr-2" src="/images/fence.svg" alt="fence Image" />
                   Boundary:<strong class="ml-1">
-                    {{ channelData.wall != null ? channelData.wall : "N/A" }}
+                    {{
+                      channelData.wall != null
+                        ? channelData.wall
+                        : "Not Provided"
+                    }}
                   </strong>
                 </p>
               </div>
@@ -453,7 +464,7 @@
                     {{
                       channelData.playground != null
                         ? channelData.playground
-                        : "N/A"
+                        : "Not Provided"
                     }}
                   </strong>
                 </p>
@@ -465,7 +476,9 @@
                   />
                   Library:<strong class="ml-1">
                     {{
-                      channelData.library != null ? channelData.library : "N/A"
+                      channelData.library != null
+                        ? channelData.library
+                        : "Not Provided"
                     }}
                   </strong>
                 </p>
@@ -475,7 +488,7 @@
                     {{
                       channelData.no_of_books != null
                         ? channelData.no_of_books
-                        : "N/A"
+                        : "Not Provided"
                     }}
                   </strong>
                 </p>
@@ -489,7 +502,9 @@
                   />
                   Canteen:<strong class="ml-1">
                     {{
-                      channelData.canteen != null ? channelData.canteen : "N/A"
+                      channelData.canteen != null
+                        ? channelData.canteen
+                        : "Not Provided"
                     }}
                   </strong>
                 </p>
@@ -499,7 +514,7 @@
                     {{
                       channelData.bus_services != null
                         ? channelData.bus_services
-                        : "N/A"
+                        : "Not Provided"
                     }}
                   </strong>
                 </p>
@@ -515,7 +530,7 @@
                     {{
                       channelData.boys_hostel != null
                         ? channelData.boys_hostel
-                        : "N/A"
+                        : "Not Provided"
                     }}
                   </strong>
                 </p>
@@ -525,7 +540,7 @@
                     {{
                       channelData.girls_hostel != null
                         ? channelData.girls_hostel
-                        : "N/A"
+                        : "Not Provided"
                     }}
                   </strong>
                 </p>

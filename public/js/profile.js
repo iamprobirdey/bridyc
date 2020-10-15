@@ -695,6 +695,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -772,6 +776,19 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -970,6 +987,11 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue_multiselect__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-multiselect */ "./node_modules/vue-multiselect/dist/vue-multiselect.min.js");
 /* harmony import */ var vue_multiselect__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue_multiselect__WEBPACK_IMPORTED_MODULE_0__);
+//
+//
+//
+//
+//
 //
 //
 //
@@ -3981,11 +4003,13 @@ var render = function() {
             staticClass: "profile-picture rounded-circle shadow",
             attrs: {
               src:
-                _vm.domainUrl +
-                "/media/users/profile/" +
-                _vm.userId +
-                "/s-" +
-                _vm.userImage,
+                _vm.userImage === "default.webp"
+                  ? "/images/" + _vm.userImage
+                  : _vm.domainUrl +
+                    "/media/users/profile/" +
+                    _vm.userId +
+                    "/s-" +
+                    _vm.userImage,
               alt: "student profile pictures"
             }
           }),
@@ -4462,7 +4486,7 @@ var render = function() {
                 return _c(
                   "button",
                   { key: index, staticClass: "btn btn-sm btnsubjects m-1" },
-                  [_vm._v("\n      " + _vm._s(hobbie.name) + "\n    ")]
+                  [_vm._v("\n        " + _vm._s(hobbie.name) + "\n      ")]
                 )
               }),
               _vm._v(" "),
@@ -4475,6 +4499,52 @@ var render = function() {
                     click: function($event) {
                       return _vm.editThehobbie()
                     }
+                  }
+                },
+                [
+                  _c("i", {
+                    staticClass: "fa fa-pencil",
+                    attrs: { "aria-hidden": "true" }
+                  })
+                ]
+              )
+            ],
+            2
+          )
+        ])
+      : _vm._e(),
+    _vm._v(" "),
+    !_vm.hobbiesEntryChecker
+      ? _c(
+          "div",
+          [
+            _c("multiselect", {
+              attrs: {
+                options: _vm.hobbiesData,
+                "track-by": "name",
+                "custom-label": _vm.standardNameOnly,
+                multiple: true,
+                "tag-placeholder": "Select classes of your hobbies",
+                "option-height": 104
+              },
+              model: {
+                value: _vm.value,
+                callback: function($$v) {
+                  _vm.value = $$v
+                },
+                expression: "value"
+              }
+            }),
+            _vm._v(" "),
+            _c(
+              "span",
+              {
+                directives: [
+                  {
+                    name: "show",
+                    rawName: "v-show",
+                    value: _vm.serverError != "",
+                    expression: "serverError != ''"
                   }
                 },
                 [

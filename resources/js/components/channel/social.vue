@@ -10,8 +10,8 @@
           ><span>Instagram</span></a
         >
       </li>
-      <li v-if="socialData.linkedIn != null">
-        <a :href="socialData.linkedIn" target="_blank"><span>LinkedIn</span></a>
+      <li v-if="socialData.linkedin != null">
+        <a :href="socialData.linkedin" target="_blank"><span>LinkedIn</span></a>
       </li>
       <li v-if="socialData.youtube != null">
         <a :href="socialData.youtube" target="_blank"><span> Youtube</span></a>
@@ -95,8 +95,8 @@
             <label for="exampleInputEmail1">LinkedIn</label>
             <input
               id="linkedIn"
-              v-on:focus="serverErrors.linkedIn = ''"
-              v-model="formData.linkedIn"
+              v-on:focus="serverErrors.linkedin = ''"
+              v-model="formData.linkedin"
               data-vv-delay="20"
               name="linkedIn"
               type="text"
@@ -111,8 +111,8 @@
             <span v-show="errors.has('linkedIn')" class="text-danger">{{
               errors.first("linkedIn")
             }}</span>
-            <span v-show="serverErrors.linkedIn != ''" class="text-danger">{{
-              serverErrors.linkedIn
+            <span v-show="serverErrors.linkedin != ''" class="text-danger">{{
+              serverErrors.linkedin
             }}</span>
           </div>
 
@@ -162,13 +162,13 @@ export default {
       formData: {
         facebook: "",
         instagram: "",
-        linkedIn: "",
+        linkedin: "",
         youtube: "",
       },
       serverErrors: {
         facebook: "",
         instagram: "",
-        linkedIn: "",
+        linkedin: "",
         youtube: "",
       },
     };
@@ -227,8 +227,8 @@ export default {
         this.formData.facebook = this.socialData.facebook;
       if (this.socialData.instagram != null)
         this.formData.instagram = this.socialData.instagram;
-      if (this.socialData.linkedIn != null)
-        this.formData.linkedIn = this.socialData.linkedIn;
+      if (this.socialData.linkedin != null)
+        this.formData.linkedin = this.socialData.linkedin;
       if (this.socialData.youtube != null)
         this.formData.youtube = this.socialData.youtube;
     },
@@ -237,5 +237,4 @@ export default {
 </script>
 
 <style>
-
 </style>

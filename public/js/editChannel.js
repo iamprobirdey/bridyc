@@ -1724,13 +1724,13 @@ __webpack_require__.r(__webpack_exports__);
       formData: {
         facebook: "",
         instagram: "",
-        linkedIn: "",
+        linkedin: "",
         youtube: ""
       },
       serverErrors: {
         facebook: "",
         instagram: "",
-        linkedIn: "",
+        linkedin: "",
         youtube: ""
       }
     };
@@ -1784,7 +1784,7 @@ __webpack_require__.r(__webpack_exports__);
       this.getTheModel = !this.getTheModel;
       if (this.socialData.facebook != null) this.formData.facebook = this.socialData.facebook;
       if (this.socialData.instagram != null) this.formData.instagram = this.socialData.instagram;
-      if (this.socialData.linkedIn != null) this.formData.linkedIn = this.socialData.linkedIn;
+      if (this.socialData.linkedin != null) this.formData.linkedin = this.socialData.linkedin;
       if (this.socialData.youtube != null) this.formData.youtube = this.socialData.youtube;
     }
   }
@@ -15838,7 +15838,7 @@ var render = function() {
                       staticClass: "col-sm-2 col-form-label",
                       attrs: { for: "exampleInputEmail1" }
                     },
-                    [_vm._v("Total Class Room:")]
+                    [_vm._v("Total Class Room")]
                   ),
                   _vm._v(" "),
                   _c("input", {
@@ -15941,7 +15941,7 @@ var render = function() {
                 },
                 [
                   _c("label", { staticClass: "col-sm-2 col-form-label" }, [
-                    _vm._v("Canteen:")
+                    _vm._v("Canteen")
                   ]),
                   _vm._v(" "),
                   _c(
@@ -16054,7 +16054,7 @@ var render = function() {
                 },
                 [
                   _c("label", { staticClass: "col-sm-2 col-form-label" }, [
-                    _vm._v("Stationary:")
+                    _vm._v("Stationary")
                   ]),
                   _vm._v(" "),
                   _c(
@@ -16280,7 +16280,7 @@ var render = function() {
                 },
                 [
                   _c("label", { staticClass: "col-sm-2 col-form-label" }, [
-                    _vm._v("Boys Hostel:")
+                    _vm._v("Boys Hostel")
                   ]),
                   _vm._v(" "),
                   _c(
@@ -16505,7 +16505,7 @@ var render = function() {
                 },
                 [
                   _c("label", { staticClass: "col-sm-3 col-form-label" }, [
-                    _vm._v("Campus Boundary:")
+                    _vm._v("Campus Boundary")
                   ]),
                   _vm._v(" "),
                   _c(
@@ -16742,7 +16742,7 @@ var render = function() {
                       staticClass: "col-sm-2 col-form-label",
                       attrs: { for: "exampleInputEmail1" }
                     },
-                    [_vm._v("Total Books:")]
+                    [_vm._v("Total Books")]
                   ),
                   _vm._v(" "),
                   _c("input", {
@@ -17443,12 +17443,12 @@ var render = function() {
               ])
             : _vm._e(),
           _vm._v(" "),
-          _vm.socialData.linkedIn != null
+          _vm.socialData.linkedin != null
             ? _c("li", [
                 _c(
                   "a",
                   {
-                    attrs: { href: _vm.socialData.linkedIn, target: "_blank" }
+                    attrs: { href: _vm.socialData.linkedin, target: "_blank" }
                   },
                   [_c("span", [_vm._v("LinkedIn")])]
                 )
@@ -17714,8 +17714,8 @@ var render = function() {
                         {
                           name: "model",
                           rawName: "v-model",
-                          value: _vm.formData.linkedIn,
-                          expression: "formData.linkedIn"
+                          value: _vm.formData.linkedin,
+                          expression: "formData.linkedin"
                         }
                       ],
                       class: {
@@ -17729,10 +17729,10 @@ var render = function() {
                         type: "text",
                         placeholder: "linkedIn (optional)"
                       },
-                      domProps: { value: _vm.formData.linkedIn },
+                      domProps: { value: _vm.formData.linkedin },
                       on: {
                         focus: function($event) {
-                          _vm.serverErrors.linkedIn = ""
+                          _vm.serverErrors.linkedin = ""
                         },
                         input: function($event) {
                           if ($event.target.composing) {
@@ -17740,7 +17740,7 @@ var render = function() {
                           }
                           _vm.$set(
                             _vm.formData,
-                            "linkedIn",
+                            "linkedin",
                             $event.target.value
                           )
                         }
@@ -17782,13 +17782,13 @@ var render = function() {
                           {
                             name: "show",
                             rawName: "v-show",
-                            value: _vm.serverErrors.linkedIn != "",
-                            expression: "serverErrors.linkedIn != ''"
+                            value: _vm.serverErrors.linkedin != "",
+                            expression: "serverErrors.linkedin != ''"
                           }
                         ],
                         staticClass: "text-danger"
                       },
-                      [_vm._v(_vm._s(_vm.serverErrors.linkedIn))]
+                      [_vm._v(_vm._s(_vm.serverErrors.linkedin))]
                     )
                   ]
                 ),

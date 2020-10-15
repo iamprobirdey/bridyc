@@ -7,11 +7,12 @@
 
 .profile {
   max-width: 100%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .profile .profile-picture {
   position: relative;
-  top: -180px;
+  top: -150px;
   left: 17px;
   border: 2px solid gainsboro;
 }
@@ -31,10 +32,10 @@
 .profile .profile-edit {
   position: relative;
   left: -12%;
-  top: -113px;
+  top: -88px;
   z-index: inherit;
   cursor: pointer;
-  background-color: gainsboro;
+  background-color: #f1f0f0;
 }
 
 @media only screen and (min-width: 481px) {
@@ -46,7 +47,19 @@
 @media only screen and (min-width: 768px) {
   .profile .profile-edit {
     left: -7%;
-    top: -105px;
+    top: -75px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .profile .teacher-edit {
+    margin-left: 6px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .profile .teacher-edit {
+    margin-left: 23px;
   }
 }
 
@@ -91,7 +104,7 @@
 }
 
 .profile .btnsubjects {
-  background-color: #5B2C6F;
+  background-color: #011737;
   color: white;
 }
 
@@ -130,4 +143,14 @@
 
 .profile .channelname input::placeholder {
   color: #a5a5a5;
+}
+
+.profile .add-subject-teacher {
+  width: 100%;
+}
+
+@media only screen and (min-width: 481px) {
+  .profile .add-subject-teacher {
+    width: 60%;
+  }
 }

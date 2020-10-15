@@ -666,6 +666,24 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+<<<<<<< HEAD
+=======
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+>>>>>>> 0173238c73257fa1424d6db5f305fc4cba0baf4a
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -3652,11 +3670,21 @@ var render = function() {
             staticClass: "profile-picture rounded-circle shadow",
             attrs: {
               src:
+<<<<<<< HEAD
                 _vm.domainUrl +
                 "/media/teacher/" +
                 _vm.userId +
                 "/profile/" +
                 _vm.userImage,
+=======
+                _vm.userImage === "default.webp"
+                  ? "/images/" + _vm.userImage
+                  : _vm.domainUrl +
+                    "/media/teacher/" +
+                    _vm.userId +
+                    "/profile/" +
+                    _vm.userImage,
+>>>>>>> 0173238c73257fa1424d6db5f305fc4cba0baf4a
               alt: "teacher profile pictures"
             }
           }),

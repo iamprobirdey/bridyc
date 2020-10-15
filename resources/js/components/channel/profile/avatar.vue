@@ -6,8 +6,8 @@
         height="150"
         width="152"
         :src="
-          userImage === 'default.jpg'
-            ? '/images/default.jpg'
+          userImage === 'default.webp'
+            ? '/images/default.webp'
             : domainUrl + '/media/channel/' + userId + '/profile/' + userImage
         "
         alt="principal profile picture"
@@ -126,3 +126,9 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+.picture-preview {
+  position: static;
+}
+</style>
