@@ -175,19 +175,16 @@ class ProfileController extends Controller
 
     public function storeAvatar(User $user, Request $request)
     {
-        dd($request->input('image'));
-        dd(explode(',', $request->input('image'))[0]);
         $this->authorize('updatingstudent', $user);
         $request->validate([
-            'image' => 'required|mimes:jpeg,bmp,png,jpg'
+            'image' => 'required'
         ]);
-        dd('pro');
         $time = Carbon::now('Asia/Kolkata');
         $imageName = $time->year . $time->month . $time->day . ($time->micro + mt_rand(11111, 99999)) . '.webp';
         $realImage = Image::make($request->input('image'));
         $realImage->fit(600, 600, null, 'center');
         $image = $imageS = $imageM = Image::canvas(600, 600, '#ffffff')->insert($realImage);
-        $path = "media/users/profile/" . current_user_id() . '/';
+        $path = "media/student/" . current_user_id() . '/profile/';
         if (is_dir($path)) {
             if ($user->avatar != null) {
                 //@unlink('/media/users/profile/' . current_user_id() . '/' . $user->avatar);

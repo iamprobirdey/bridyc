@@ -4003,9 +4003,9 @@ var render = function() {
                 _vm.userImage === "default.webp"
                   ? "/images/" + _vm.userImage
                   : _vm.domainUrl +
-                    "/media/users/profile/" +
+                    "/media/student/" +
                     _vm.userId +
-                    "/s-" +
+                    "/profile/s-" +
                     _vm.userImage,
               alt: "student profile pictures"
             }

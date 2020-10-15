@@ -40,17 +40,17 @@ Route::get('/home', 'HomeController@test');
 Route::get('hobby', function () {
     $user4 = User::create([
         'name' => Str::random(10),
-        'email' => 'teacher2@gmail.com',
+        'email' => 'student1@gmail.com',
         'password' => '$2y$10$A5qfm/Ssy2JOTLf5PQKOxeIFrLTOUaK5nwONeWstGu07wQDAEciwK',
-        'username' => 'teacher2',
-        'user_type' => 'teacher',
+        'username' => 'student1',
+        'user_type' => 'student',
 
     ]);
 
 
     $user4->update(['email_verified_at' => Carbon::now()]);
 
-    $user4->assignRole('teacher');
+    $user4->assignRole('student');
 });
 
 Auth::routes(['verify' => true]);
