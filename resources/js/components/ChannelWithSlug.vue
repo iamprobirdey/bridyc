@@ -362,7 +362,7 @@
                 </p>
                 <p>
                   <img src="/images/translation.svg" alt="language icon" />
-                  Medium: {{ channelData.village.name }}
+                  Medium: {{ channelData.language.name }}
                 </p>
                 <p>
                   <img src="/images/grade.svg" alt="Exam board icon" /> Board:
@@ -619,19 +619,19 @@ export default {
       if (this.isTeacher && this.currentuserData != null) {
         if (
           this.currentuserData.request === "in-progress" &&
-          this.currentuserData.channel_id == this.channelData.id
+          this.currentuserData.channel_id === this.channelData.id
         )
           this.channelRequestDecider = "in-progress";
 
         if (
           this.currentuserData.request === "accepted" &&
-          this.currentuserData.channel_id == this.channelData.id
+          this.currentuserData.channel_id === this.channelData.id
         )
           this.channelRequestDecider = "accepted";
 
         if (
           this.currentuserData.request === "rejected" &&
-          this.currentuserData.channel_id == this.channelData.id
+          this.currentuserData.channel_id === this.channelData.id
         )
           this.channelRequestDecider = "rejected";
 

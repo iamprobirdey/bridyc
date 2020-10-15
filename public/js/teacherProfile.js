@@ -3666,10 +3666,9 @@ var render = function() {
               src:
                 _vm.userImage === "default.webp"
                   ? "/images/" + _vm.userImage
-                  : _vm.domainUrl +
-                    "/media/teacher/" +
+                  : "/media/teacher/" +
                     _vm.userId +
-                    "/profile/" +
+                    "/profile/s-" +
                     _vm.userImage,
               alt: "teacher profile pictures"
             }

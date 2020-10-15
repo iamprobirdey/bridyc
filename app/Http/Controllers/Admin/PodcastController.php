@@ -57,8 +57,8 @@ class PodcastController extends Controller
                     ///app(Spatie\ImageOptimizer\OptimizerChain::class)->optimize($path.$imageName);
                     $imageM->resize(400, 360);
                     $imageM->save(public_path($path) . 'm-' . $imageName);
-                    $imageM->resize(350, 280);
-                    $imageM->save(public_path($path) . 's-' . $imageName);
+                    $imageS->resize(350, 280);
+                    $imageS->save(public_path($path) . 's-' . $imageName);
                     //FacadesImageOptimizer::optimize($path.'m-',$imageName);
                 }
             } else {
@@ -69,8 +69,8 @@ class PodcastController extends Controller
                 $imageM->resize(400, 360);
                 $imageM->save(public_path($path) . 'm-' . $imageName);
 
-                $imageM->resize(350, 280);
-                $imageM->save(public_path($path) . 's-' . $imageName);
+                $imageS->resize(350, 280);
+                $imageS->save(public_path($path) . 's-' . $imageName);
                 //FacadesImageOptimizer::optimize($path.'m-',$imageName);
                 //FacadesImageOptimizer::optimize($path.'s-',$imageName);
             }
@@ -146,8 +146,8 @@ class PodcastController extends Controller
                     $imageM->resize(390, 360);
                     $imageM->save(public_path($path) . 'm-' . $imageName);
 
-                    $imageM->resize(350, 280);
-                    $imageM->save(public_path($path) . 's-' . $imageName);
+                    $imageS->resize(350, 280);
+                    $imageS->save(public_path($path) . 's-' . $imageName);
                     //FacadesImageOptimizer::optimize($path.'m-',$imageName);
                 }
             } else {
@@ -157,8 +157,8 @@ class PodcastController extends Controller
                 $imageM->resize(390, 360);
                 $imageM->save(public_path($path) . 'm-' . $imageName);
 
-                $imageM->resize(350, 280);
-                $imageM->save(public_path($path) . 's-' . $imageName);
+                $imageS->resize(350, 280);
+                $imageS->save(public_path($path) . 's-' . $imageName);
                 //FacadesImageOptimizer::optimize($path.'m-',$imageName);
             }
 

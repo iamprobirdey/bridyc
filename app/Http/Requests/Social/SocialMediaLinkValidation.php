@@ -26,7 +26,7 @@ class SocialMediaLinkValidation extends FormRequest
         return [
             'facebook' => 'url|nullable',
             'instagram' => 'url|nullable',
-            'linkedIn' => 'url|nullable',
+            'linkedin' => 'url|nullable',
             'youtube' => 'url|nullable',
         ];
     }
