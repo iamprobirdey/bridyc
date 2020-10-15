@@ -295,7 +295,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -381,10 +380,25 @@ __webpack_require__.r(__webpack_exports__);
       });
     },
     slugGenetor: function slugGenetor(title, name, userId, index) {
-      var slug = title + "-" + name;
+      var _this4 = this;
+
       this.slugUserId = userId;
-      this.slugData.slug = this.slugify(slug);
-      this.slugIndex = index;
+      axios.get("verification/api/get-slug-of-channel/" + userId).then(function (response) {
+        if (response.data.message === true) {
+          if (response.data.channel_slug === null) {
+            var slug = title + "-" + name;
+            _this4.slugData.slug = _this4.slugify(slug);
+          } else {
+            _this4.slugData.slug = response.data.channel_slug;
+          }
+        }
+      })["catch"](function (errors) {
+        Vue.toasted.error("Something went wrong.Try again", {
+          position: "top-center",
+          duration: 5000
+        });
+        $("#slugGenerator").modal("hide");
+      });
       $("#slugGenerator").modal("show");
     },
     slugify: function slugify(string) {
@@ -402,11 +416,11 @@ __webpack_require__.r(__webpack_exports__);
       .replace(/-+$/, ""); // Trim - from end of text
     },
     slugGenerated: function slugGenerated() {
-      var _this4 = this;
+      var _this5 = this;
 
       this.$validator.validate().then(function (result) {
         if (result) {
-          axios.post("verification/api/channel-slug/" + _this4.slugUserId, _this4.slugData).then(function (response) {
+          axios.post("verification/api/channel-slug/" + _this5.slugUserId, _this5.slugData).then(function (response) {
             if (response.data.msg === true) {
               Vue.toasted.success("Slug is created", {
                 position: "top-center",
@@ -421,19 +435,19 @@ __webpack_require__.r(__webpack_exports__);
             });
 
             if (errors.response.data.errors.slug) {
-              _this4.slugError.slug = errors.response.data.errors.slug[0];
+              _this5.slugError.slug = errors.response.data.errors.slug[0];
             }
           });
         }
       });
     },
     deleteTheUser: function deleteTheUser(userId, index) {
-      var _this5 = this;
+      var _this6 = this;
 
       if (confirm("Are you sure?")) {
         axios.get("verification/api/delete/user/" + userId).then(function (response) {
           if (response.status === 200 && response.data.msg === true) {
-            _this5.usersData.splice(index, 1);
+            _this6.usersData.splice(index, 1);
           }
         })["catch"](function (errors) {
           Vue.toasted.error("Something went wrong", {
@@ -462,12 +476,12 @@ __webpack_require__.r(__webpack_exports__);
       $("#showChannelHistory").modal("show");
     },
     metaGenerationForm: function metaGenerationForm() {
-      var _this6 = this;
+      var _this7 = this;
 
       this.$validator.validate().then(function (result) {
         if (result) {
           console.log("called");
-          axios.post("verification/api/keywords/description/" + _this6.metaKeywordsDescriptionsId, _this6.metaData).then(function (response) {
+          axios.post("verification/api/keywords/description/" + _this7.metaKeywordsDescriptionsId, _this7.metaData).then(function (response) {
             if (response.data.msg === true) {
               Vue.toasted.success("Meta data is created", {
                 position: "top-center",
@@ -482,11 +496,11 @@ __webpack_require__.r(__webpack_exports__);
             });
 
             if (errors.response.data.errors.meta_keywords) {
-              _this6.metaDataError.meta_keywords = errors.response.data.errors.meta_keywords[0];
+              _this7.metaDataError.meta_keywords = errors.response.data.errors.meta_keywords[0];
             }
 
             if (errors.response.data.errors.meta_descriptions) {
-              _this6.metaDataError.meta_descriptions = errors.response.data.errors.meta_descriptions[0];
+              _this7.metaDataError.meta_descriptions = errors.response.data.errors.meta_descriptions[0];
             }
           });
         }
@@ -566,18 +580,57 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
       metaData: {
-        meta_keywords: '',
-        meta_descriptions: ''
+        meta_keywords: "",
+        meta_descriptions: ""
       },
       metaDataError: {
-        meta_keywords: '',
-        meta_descriptions: ''
+        meta_keywords: "",
+        meta_descriptions: ""
       },
-      metaKeywordsDescriptionsId: '',
+      metaKeywordsDescriptionsId: "",
       verificationData: []
     };
   },
@@ -589,35 +642,33 @@ __webpack_require__.r(__webpack_exports__);
   },
   created: function created() {
     this.verificationData = this.verification;
+    console.log(this.verificationData);
   },
   mounted: function mounted() {},
   methods: {
+    getTheSubmitId: function getTheSubmitId(data) {
+      //this.metaKeywordsDescriptionsId = id;
+      console.log(this.verificationData.id); //this.metaGenerationForm();
+    },
     getMetaModel: function getMetaModel() {
-      this.metaKeywordsDescriptionsId = '';
-      this.metaKeywordsDescriptionsId = this.verificationData.id;
-
-      if (this.verificationData.meta_keywords != undefined) {
-        this.metaData.meta_keywords = this.verificationData.meta_keywords;
-      }
-
-      if (this.verificationData.meta_descriptions != undefined) {
-        this.metaData.meta_descriptions = this.verificationData.meta_descriptions;
-      }
-
-      $('#metaGenerator').modal('show');
+      $("#metaGenerator").modal("show");
     },
     metaGenerationForm: function metaGenerationForm() {
       var _this = this;
 
       this.$validator.validate().then(function (result) {
+        console.log("Inside validation:- " + _this.metaKeywordsDescriptionsId);
+
         if (result) {
-          axios.post('verification/api/keywords/description/' + _this.metaKeywordsDescriptionsId, _this.metaData).then(function (response) {
+          axios.post("verification/api/keywords/description/" + _this.verificationData.id, _this.metaData).then(function (response) {
             if (response.data.message === true) {
               Vue.toasted.success("Meta data is created", {
                 position: "top-center",
                 duration: 5000
               });
-              $('#metaGenerator').modal('hide');
+              _this.metaData.meta_descriptions = "";
+              _this.metaData.meta_keywords = "";
+              $("#metaGenerator").modal("hide");
             }
           })["catch"](function (errors) {
             Vue.toasted.error("Something went wrong", {
@@ -664,6 +715,8 @@ var render = function() {
         "tbody",
         _vm._l(_vm.usersData, function(verification, index) {
           return _c("tr", { key: verification.id }, [
+            _c("td", [_vm._v(_vm._s(verification.id))]),
+            _vm._v(" "),
             _c("td", [
               verification.status === 1 || verification.status === 2
                 ? _c(
@@ -755,10 +808,6 @@ var render = function() {
                 "button",
                 {
                   staticClass: "btn btn-info",
-                  attrs: {
-                    disabled:
-                      verification.slug_creation === "created" ? true : false
-                  },
                   on: {
                     click: function($event) {
                       return _vm.slugGenetor(
@@ -1055,6 +1104,8 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("thead", [
       _c("tr", [
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Serial Number")]),
+        _vm._v(" "),
         _c("th", { attrs: { scope: "col" } }, [_vm._v("Block")]),
         _vm._v(" "),
         _c("th", { attrs: { scope: "col" } }, [_vm._v("Status")]),
@@ -1102,7 +1153,7 @@ var render = function() {
           }
         }
       },
-      [_vm._v("\n            Meta\n    ")]
+      [_vm._v("Meta")]
     ),
     _vm._v(" "),
     _c(
@@ -1319,9 +1370,14 @@ var render = function() {
                       "button",
                       {
                         staticClass: "btn btn-primary",
-                        attrs: { type: "submit" }
+                        attrs: { type: "button" },
+                        on: {
+                          click: function($event) {
+                            return _vm.getTheSubmitId(_vm.verificationData)
+                          }
+                        }
                       },
-                      [_vm._v("Submit")]
+                      [_vm._v("\n              Submit\n            ")]
                     )
                   ]
                 )

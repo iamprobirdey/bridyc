@@ -28,7 +28,6 @@ best educational podcasts for college students, best career coaching podcast, be
             <th scope="col">Id</th>
             <th scope="col">Name</th>
             <th scope="col">Code</th>
-            <th scope="col">Slug</th>
         </tr>
     </thead>
     <tbody>
@@ -37,7 +36,6 @@ best educational podcasts for college students, best career coaching podcast, be
             <td>{{$state->id}}</td>
             <td>{{$state->name}}</td>
             <td>{{$state->code}}</td>
-            <td>{{$state->slug}}</td>
             <td>
                 <a href="{{url('admin/state/updating/'.$state->id)}}" class="btn btn-success">Update</a>
             </td>

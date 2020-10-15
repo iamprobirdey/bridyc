@@ -25,6 +25,7 @@ class StoreStandardValidation extends FormRequest
     {
         return [
             'standard' => 'required|string|unique:standards,standard_name',
+            'code' => 'required|string|unique:standards,code',
         ];
     }
 }

@@ -581,6 +581,35 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -1772,13 +1801,13 @@ var render = function() {
                           alt: "Electricity Image"
                         }
                       }),
-                      _vm._v("\n                Electricity:"),
+                      _vm._v("\n                Stationary:"),
                       _c("strong", { staticClass: "ml-1" }, [
                         _vm._v(
                           "\n                  " +
                             _vm._s(
-                              _vm.channelData.electricity != null
-                                ? _vm.channelData.electricity
+                              _vm.channelData.stationary != null
+                                ? _vm.channelData.stationary
                                 : "N/A"
                             ) +
                             "\n                "
@@ -1902,13 +1931,13 @@ var render = function() {
                           alt: "Hostel Image"
                         }
                       }),
-                      _vm._v("\n                Hostel:"),
+                      _vm._v("\n                Canteen:"),
                       _c("strong", { staticClass: "ml-1" }, [
                         _vm._v(
                           "\n                  " +
                             _vm._s(
-                              _vm.channelData.hostel != null
-                                ? _vm.channelData.hostel
+                              _vm.channelData.canteen != null
+                                ? _vm.channelData.canteen
                                 : "N/A"
                             ) +
                             "\n                "
@@ -1928,6 +1957,49 @@ var render = function() {
                             _vm._s(
                               _vm.channelData.bus_services != null
                                 ? _vm.channelData.bus_services
+                                : "N/A"
+                            ) +
+                            "\n                "
+                        )
+                      ])
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col-sm-4" }, [
+                    _c("p", [
+                      _c("img", {
+                        staticClass: "mr-2",
+                        attrs: {
+                          src: "/images/hostel.svg",
+                          alt: "Hostel Image"
+                        }
+                      }),
+                      _vm._v("\n                Boys hostel:"),
+                      _c("strong", { staticClass: "ml-1" }, [
+                        _vm._v(
+                          "\n                  " +
+                            _vm._s(
+                              _vm.channelData.boys_hostel != null
+                                ? _vm.channelData.boys_hostel
+                                : "N/A"
+                            ) +
+                            "\n                "
+                        )
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("p", [
+                      _c("img", {
+                        staticClass: "mr-2",
+                        attrs: { src: "/images/bus.svg", alt: "Bus Image" }
+                      }),
+                      _vm._v(" Bus\n                Girls Hostel:"),
+                      _c("strong", { staticClass: "ml-1" }, [
+                        _vm._v(
+                          "\n                  " +
+                            _vm._s(
+                              _vm.channelData.girls_hostel != null
+                                ? _vm.channelData.girls_hostel
                                 : "N/A"
                             ) +
                             "\n                "

@@ -411,10 +411,10 @@
                     src="/images/electricity.svg"
                     alt="Electricity Image"
                   />
-                  Electricity:<strong class="ml-1">
+                  Stationary:<strong class="ml-1">
                     {{
-                      channelData.electricity != null
-                        ? channelData.electricity
+                      channelData.stationary != null
+                        ? channelData.stationary
                         : "N/A"
                     }}
                   </strong>
@@ -487,9 +487,9 @@
                     src="/images/hostel.svg"
                     alt="Hostel Image"
                   />
-                  Hostel:<strong class="ml-1">
+                  Canteen:<strong class="ml-1">
                     {{
-                      channelData.hostel != null ? channelData.hostel : "N/A"
+                      channelData.canteen != null ? channelData.canteen : "N/A"
                     }}
                   </strong>
                 </p>
@@ -499,6 +499,32 @@
                     {{
                       channelData.bus_services != null
                         ? channelData.bus_services
+                        : "N/A"
+                    }}
+                  </strong>
+                </p>
+              </div>
+              <div class="col-sm-4">
+                <p>
+                  <img
+                    class="mr-2"
+                    src="/images/hostel.svg"
+                    alt="Hostel Image"
+                  />
+                  Boys Hostel:<strong class="ml-1">
+                    {{
+                      channelData.boys_hostel != null
+                        ? channelData.boys_hostel
+                        : "N/A"
+                    }}
+                  </strong>
+                </p>
+                <p>
+                  <img class="mr-2" src="/images/bus.svg" alt="Bus Image" /> Bus
+                  Girls Hostel:<strong class="ml-1">
+                    {{
+                      channelData.girls_hostel != null
+                        ? channelData.girls_hostel
                         : "N/A"
                     }}
                   </strong>

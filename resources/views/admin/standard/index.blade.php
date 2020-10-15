@@ -25,8 +25,8 @@ best educational podcasts for college students, best career coaching podcast, be
     <thead>
         <tr>
             <th scope="col">Id</th>
-            <th scope="col">Standard Name
-            <th>
+            <th scope="col">Standard Name</th>
+            <th scope="col">Code</th>
             <th scope="col">Update</th>
         </tr>
     </thead>
@@ -35,6 +35,7 @@ best educational podcasts for college students, best career coaching podcast, be
         <tr>
             <td>{{$item->id}}</td>
             <td>{{$item->standard_name}}</td>
+            <td>{{$item->code}}</td>
             <td>
                 <a href="{{url('admin/standard/updating/'.$item->id)}}" class="btn btn-success">Update</a>
             </td>

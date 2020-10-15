@@ -629,17 +629,26 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
       imageError: "",
-      userImage: '',
+      userImage: "",
       userImageStatus: false,
-      userId: '',
-      url: '/api/profile/teacher/image/upload/',
+      userId: "",
+      url: "/api/profile/teacher/image/upload/",
       domainUrl: location.origin,
-      imageData: ''
+      imageData: ""
     };
   },
   props: {
@@ -652,7 +661,7 @@ __webpack_require__.r(__webpack_exports__);
     PictureInput: vue_picture_input__WEBPACK_IMPORTED_MODULE_0__["default"]
   },
   created: function created() {
-    console.log('avatar');
+    console.log("avatar");
 
     if (this.user.avatar) {
       this.userImage = this.user.avatar;
@@ -669,7 +678,7 @@ __webpack_require__.r(__webpack_exports__);
     onImageSubmit: function onImageSubmit() {
       var _this = this;
 
-      if (this.imageData != '') {
+      if (this.imageData != "") {
         var formData = new FormData();
         formData.append("image", this.imageData);
         axios.post(this.url + this.userId, formData).then(function (response) {
@@ -3616,9 +3625,9 @@ var render = function() {
             attrs: {
               src:
                 _vm.domainUrl +
-                "/media/teacher/" +
+                "/media/users/profile/" +
                 _vm.userId +
-                "/profile/" +
+                "/s-" +
                 _vm.userImage,
               alt: "teacher profile pictures"
             }
@@ -3681,7 +3690,7 @@ var render = function() {
                         }
                       }
                     },
-                    [_vm._v("Submit")]
+                    [_vm._v("\n        Submit\n      ")]
                   )
                 : _vm._e(),
               _vm._v(" "),
@@ -3696,7 +3705,7 @@ var render = function() {
                         }
                       }
                     },
-                    [_vm._v("\n            Cancel\n        ")]
+                    [_vm._v("\n        Cancel\n      ")]
                   )
                 : _vm._e()
             ]),
@@ -3709,7 +3718,7 @@ var render = function() {
                     name: "show",
                     rawName: "v-show",
                     value: _vm.imageError,
-                    expression: "imageError "
+                    expression: "imageError"
                   }
                 ],
                 staticClass: "text-danger text-center"

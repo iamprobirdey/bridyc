@@ -209,6 +209,58 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -216,25 +268,25 @@ __webpack_require__.r(__webpack_exports__);
       achievementData: [],
       openAchievementForm: false,
       formData: {
-        image_path: '',
-        title: '',
-        description: '',
-        date: ''
+        image_path: "",
+        title: "",
+        description: "",
+        date: ""
       },
       serverErrors: {
-        image_path: '',
-        title: '',
-        description: '',
-        date: ''
+        image_path: "",
+        title: "",
+        description: "",
+        date: ""
       },
-      channelId: '',
-      additionUrl: '',
-      url: location.origin + '/api/achievement/',
-      baseUrl: location.origin + '/',
+      channelId: "",
+      additionUrl: "",
+      url: location.origin + "/api/achievement/",
+      baseUrl: location.origin + "/",
       editingUrlChecker: false,
-      achievementId: '',
-      achievementIndex: '',
-      authValue: ''
+      achievementId: "",
+      achievementIndex: "",
+      authValue: ""
     };
   },
   props: {
@@ -253,28 +305,29 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     addAchievement: function addAchievement() {
       this.openAchievementForm = true;
-      this.formData.title = '';
-      this.formData.description = '';
+      this.formData.title = "";
+      this.formData.description = "";
+      this.formData.date = "";
     },
     achievementSubmit: function achievementSubmit() {
       var _this = this;
 
       this.$validator.validate().then(function (result) {
         if (result) {
-          if (_this.formData.image_path === '') _this.serverErrors.image_path = 'Image is required';
-          var formUrl = '';
+          if (_this.formData.image_path === "") _this.serverErrors.image_path = "Image is required";
+          var formUrl = "";
 
           if (_this.editingUrlChecker) {
-            _this.additionUrl = 'edit/';
+            _this.additionUrl = "edit/";
             formUrl = _this.url + _this.additionUrl + _this.achievementId;
           } else {
-            _this.additionUrl = 'add/';
+            _this.additionUrl = "add/";
             formUrl = _this.url + _this.additionUrl;
           }
 
           axios.post(formUrl, _this.formData).then(function (response) {
             if (response.data.message === true) {
-              Vue.toasted.success("Meta data is created", {
+              Vue.toasted.success("Achievement data is created", {
                 position: "top-center",
                 duration: 5000
               });
@@ -304,6 +357,7 @@ __webpack_require__.r(__webpack_exports__);
       this.editingUrlChecker = true;
       this.formData.title = data.title;
       this.formData.description = data.description;
+      this.formData.date = data.date;
       this.achievementId = data.id;
       this.openAchievementForm = true;
       this.achievementIndex = index;
@@ -335,7 +389,7 @@ exports = module.exports = __webpack_require__(/*! ../css-loader/lib/css-base.js
 
 
 // module
-exports.push([module.i, "\n.picture-input[data-v-431cb064] {\n  width: 100%;\n  margin: 0 auto;\n  text-align: center;\n}\n.preview-container[data-v-431cb064] {\n  width: 100%;\n  box-sizing: border-box;\n  margin: 0 auto;\n  cursor: pointer;\n  overflow: hidden;\n}\n.picture-preview[data-v-431cb064] {\n  width: 100%;\n  height: 100%;\n  position: relative;\n  z-index: 10001;\n  box-sizing: border-box;\n  background-color: rgba(200,200,200,.25);\n}\n.picture-preview.dragging-over[data-v-431cb064] {\n  -webkit-filter: brightness(0.5);\n          filter: brightness(0.5);\n}\n.picture-inner[data-v-431cb064] {\n  position: relative;\n  z-index: 10002;\n  pointer-events: none;\n  box-sizing: border-box;\n  margin: 1em auto;\n  padding: 0.5em;\n  /*border: .3em dashed rgba(66,66,66,.15); commented because of cover and icon in indtitute edit channel*/\n  border: 4px dashed rgba(66,66,66,.15);\n  border-radius: 8px;\n  width: calc(100% - 2.5em);\n  height: calc(100% - 2.5em);\n  display: table;\n}\n.picture-inner .picture-inner-text[data-v-431cb064] {\n  display: table-cell;\n  vertical-align: middle;\n  text-align: center;\n  /*font-size: 2em; commented because of cover and icon in institute edit channel*/\n  font-size: 18px;\n  line-height: 1.5;\n}\nbutton[data-v-431cb064] {\n  margin: 1em .25em;\n  cursor: pointer;\n}\ninput[type=file][data-v-431cb064] {\n  display: none;\n}\n", ""]);
+exports.push([module.i, "\n.picture-input[data-v-431cb064] {\n  width: 100%;\n  margin: 0 auto;\n  text-align: center;\n}\n.preview-container[data-v-431cb064] {\n  width: 100%;\n  box-sizing: border-box;\n  margin: 0 auto;\n  cursor: pointer;\n  overflow: hidden;\n}\n.picture-preview[data-v-431cb064] {\n  width: 100%;\n  height: 100%;\n  position: relative;\n  z-index: 10001;\n  box-sizing: border-box;\n  background-color: rgba(200,200,200,.25);\n}\n.picture-preview.dragging-over[data-v-431cb064] {\n  -webkit-filter: brightness(0.5);\n          filter: brightness(0.5);\n}\n.picture-inner[data-v-431cb064] {\n  position: relative;\n  z-index: 10002;\n  pointer-events: none;\n  box-sizing: border-box;\n  margin: 1em auto;\n  padding: 0.5em;\n  border: .3em dashed rgba(66,66,66,.15);\n  border-radius: 8px;\n  width: calc(100% - 2.5em);\n  height: calc(100% - 2.5em);\n  display: table;\n}\n.picture-inner .picture-inner-text[data-v-431cb064] {\n  display: table-cell;\n  vertical-align: middle;\n  text-align: center;\n  font-size: 2em;\n  line-height: 1.5;\n}\nbutton[data-v-431cb064] {\n  margin: 1em .25em;\n  cursor: pointer;\n}\ninput[type=file][data-v-431cb064] {\n  display: none;\n}\n", ""]);
 
 // exports
 
@@ -1087,9 +1141,7 @@ __webpack_require__.r(__webpack_exports__);
     },
     hideChangeButton: {
       type: Boolean,
-      /*default: false changed due to icon and cover in institute edit channel*/
-      default: true
-
+      default: false
     },
     autoToggleAspectRatio: {
       type: Boolean,
@@ -1109,8 +1161,7 @@ __webpack_require__.r(__webpack_exports__);
     },
     zIndex: {
       type: Number,
-      /*default: 10000  commented because of cover and icon in institute edit channel*/
-      default: 1
+      default: 10000
     },
     alertOnError: {
       type: Boolean,
@@ -1144,7 +1195,7 @@ __webpack_require__.r(__webpack_exports__);
         upload: '<p>Your device does not support file uploading.</p>',
         drag: 'Drag an image or <br>click here to select a file',
         tap: 'Tap here to select a photo <br>from your gallery',
-       /* change: 'Change Photo', commented because of cover and icon in edit channel*/
+        change: 'Change Photo',
         aspect: 'Landscape/Portrait',
         remove: 'Remove Photo',
         select: 'Select a Photo',
@@ -1839,18 +1890,14 @@ var render = function() {
               _vm._v(" "),
               _c("p", { staticClass: "card-text" }, [
                 _vm._v(
-                  "\n              " +
+                  "\n          " +
                     _vm._s(achievement.description) +
-                    "\n            "
+                    "\n        "
                 )
               ]),
               _vm._v(" "),
               _c("p", { staticClass: "card-text" }, [
-                _vm._v(
-                  "\n              " +
-                    _vm._s(achievement.date) +
-                    "\n            "
-                )
+                _vm._v("\n          " + _vm._s(achievement.date) + "\n        ")
               ])
             ])
           ]),
@@ -2035,7 +2082,7 @@ var render = function() {
                     _c(
                       "label",
                       { staticClass: "col-sm-3 col-form-label text-right" },
-                      [_vm._v(" Achievement Description :")]
+                      [_vm._v("\n          Achievement Description :")]
                     ),
                     _vm._v(" "),
                     _c("input", {
@@ -2126,7 +2173,7 @@ var render = function() {
                     _c(
                       "label",
                       { staticClass: "col-sm-3 col-form-label text-right" },
-                      [_vm._v(" Achievement Event Date :")]
+                      [_vm._v("\n          Achievement Event Date :")]
                     ),
                     _vm._v(" "),
                     _c("input", {
@@ -2228,7 +2275,7 @@ var render = function() {
                         }
                       }
                     },
-                    [_vm._v("Cancel")]
+                    [_vm._v("\n          Cancel\n        ")]
                   ),
                   _vm._v(" "),
                   _c(
@@ -2549,7 +2596,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\laragon\www\bridyc\resources\js\achievement.js */"./resources/js/achievement.js");
+module.exports = __webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/js/achievement.js */"./resources/js/achievement.js");
 
 
 /***/ })

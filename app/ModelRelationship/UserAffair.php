@@ -10,6 +10,7 @@ use App\UserActivity;
 use App\UserChannelRequest;
 use App\UserEducation;
 use App\UserInformation;
+use App\UserInstitute;
 use App\Verification;
 
 trait UserAffair
@@ -45,12 +46,12 @@ trait UserAffair
 
     public function studentSubject()
     {
-        return $this->belongsToMany(Subject::class, 'student_subjects', 'user_id', 'subject_id');
+        return $this->belongsToMany(Subject::class, 'student_subjects', 'user_id', 'subject_id')->withTimestamps();
     }
 
     public function studentHobby()
     {
-        return $this->belongsToMany(Hobby::class, 'student_hobbies', 'user_id', 'hobby_id');
+        return $this->belongsToMany(Hobby::class, 'student_hobbies', 'user_id', 'hobby_id')->withTimestamps();
     }
 
     public function acheivement()

@@ -8,7 +8,7 @@
         :src="
           userImage === 'default.jpg'
             ? '/images/default.jpg'
-            : domainUrl + '/media/channel/' + userId + '/avatar/' + userImage
+            : domainUrl + '/media/channel/' + userId + '/profile/' + userImage
         "
         alt="principal profile picture"
       />
@@ -54,7 +54,9 @@
           <i class="fa fa-times" aria-hidden="true"></i>Cancel
         </button>
       </div>
-      <span v-show="imageError" class="text-danger text-center">{{ imageError }}</span>
+      <span v-show="imageError" class="text-danger text-center">{{
+        imageError
+      }}</span>
     </div>
   </div>
 </template>

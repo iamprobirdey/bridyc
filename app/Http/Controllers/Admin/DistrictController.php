@@ -7,6 +7,7 @@ use App\Http\Requests\District\StoreDistrictValidation;
 use App\Http\Requests\District\UpdateDistrictValidation;
 use App\Services\ModelHelperServices;
 use App\District;
+use Illuminate\Http\Request;
 
 class DistrictController extends Controller
 {
@@ -35,7 +36,6 @@ class DistrictController extends Controller
     public function store(StoreDistrictValidation $request)
     {
         $this->authorize('superadmin', auth()->user());
-
         District::create([
             'state_id' => $request->validated()['state'],
             'name' => $request->validated()['name'],
@@ -44,32 +44,25 @@ class DistrictController extends Controller
         return redirect()->back()->with('status', 'Succefully created the District');
     }
 
-    public function delete($id)
-    {
-        $this->authorize('superadmin', auth()->user());
-
-        $district = District::findorFail($id);
-        $district->delete();
-        return redirect()->back()->with('status', 'Deleted succefully');
-    }
-
     public function updating($id)
     {
         $this->authorize('superadmin', auth()->user());
-
         $district = District::findOrFail($id);
         $states = $this->modelHelperServices::getStates();
         return view('admin.district.updating', compact('district', $district), compact('states', $states));
     }
 
-    public function update(UpdateDistrictValidation $request, $id)
+    public function update(Request $request, $id)
     {
         $this->authorize('superadmin', auth()->user());
-
+        $request->validate([
+            'name' => 'required|string|unique:states,name,' . $id,
+            'code' => 'required|string|unique:states,code,' . $id
+        ]);
         $district = District::findOrFail($id);
-        $district->state_id = $request->validated()['state'];
-        $district->name = $request->validated()['name'];
-        $district->code = $request->validated()['code'];
+        $district->state_id = $request->input('state');
+        $district->name = $request->input('name');
+        $district->code = $request->input('code');
         $district->update();
         return redirect('/admin/district/updating/' . $id)->with('status', 'Succefully updated the District');
     }

@@ -25,10 +25,8 @@ best educational podcasts for college students, best career coaching podcast, be
     <thead>
         <tr>
             <th scope="col">Id</th>
-            <th scope="col">Language Name
-            <th>
-            <th scope="col">Code
-            <th>
+            <th scope="col">Language Name</th>
+            <th scope="col">Code</th>
             <th scope="col">Update</th>
         </tr>
     </thead>

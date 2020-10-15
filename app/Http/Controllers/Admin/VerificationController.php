@@ -10,6 +10,8 @@ use App\User;
 use App\Http\Requests\Slug\StoreSlugValidation;
 use App\Verification;
 use Carbon\Carbon;
+use Illuminate\Support\Str;
+use DB;
 
 class VerificationController extends Controller
 {
@@ -32,10 +34,19 @@ class VerificationController extends Controller
         return view('admin.verification.verification', compact('users'));
     }
 
+    public function getSlugOfChannel($userId)
+    {
+        $channel = Channel::where('user_id', $userId)->select('slug')->first();
+        return response()->json([
+            'message' => true,
+            'channel_slug' => $channel->slug
+        ]);
+    }
+
     public function updatingforon(User $user, $verification)
     {
         $this->authorize('superadmin', auth()->user());
-
+        DB::beginTransaction();
         try {
             $channel = Channel::where('user_id', $user->id)->first();
             if ($channel->slug == null) {
@@ -54,11 +65,12 @@ class VerificationController extends Controller
             $user->status = 1;
             $user->verified_at = Carbon::now();
             $user->update();
-
+            DB::commit();
             return response()->json([
                 'msg' => true
             ]);
         } catch (\Throwable $th) {
+            DB::rollBack();
             throw $th;
         }
     }
@@ -66,7 +78,7 @@ class VerificationController extends Controller
     public function updatingforoff(User $user, $verification)
     {
         $this->authorize('superadmin', auth()->user());
-
+        DB::beginTransaction();
         try {
             $verification = Verification::findOrfail($verification);
             $verification->status = 1;
@@ -78,19 +90,21 @@ class VerificationController extends Controller
             $channel->update();
 
             $user->status = 0;
+            $user->blocked_at = null;
             $user->update();
-
+            DB::commit();
             return response()->json([
                 'msg' => true
             ]);
         } catch (\Throwable $th) {
+            DB::rollBack();
             throw $th;
         }
     }
     public function updatingforblock(User $user, $Id)
     {
         $this->authorize('superadmin', auth()->user());
-
+        DB::beginTransaction();
         try {
             $verification = Verification::findOrfail($Id);
             $verification->status = 3;
@@ -103,11 +117,12 @@ class VerificationController extends Controller
             $user->status = 2;
             $user->blocked_at = Carbon::now();
             $user->update();
-
+            DB::commit();
             return response()->json([
                 'msg' => true
             ]);
         } catch (\Throwable $th) {
+            DB::rollBack();
             throw $th;
         }
     }
@@ -118,11 +133,8 @@ class VerificationController extends Controller
 
         try {
             $channel = Channel::where('user_id', $userId)->first();
-            $channel->slug = $request->validated()['slug'];
-            $channel->save();
-            $verification = Verification::where('user_id', $userId)->first();
-            $verification->slug_creation = 'created';
-            $verification->save();
+            $channel->slug = Str::slug($request->validated()['slug']);
+            $channel->update();
             return response()->json([
                 'msg' => true
             ]);
@@ -134,7 +146,6 @@ class VerificationController extends Controller
     public function deleteUser(User $user)
     {
         $this->authorize('superadmin', auth()->user());
-
         $user->delete();
         return response()->json([
             'msg' => true

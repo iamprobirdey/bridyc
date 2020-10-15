@@ -7,6 +7,7 @@ use App\Http\Requests\Village\StoreVillageValidation;
 use App\Http\Requests\Village\UpdateVillageValidation;
 use App\Services\ModelHelperServices;
 use App\Village;
+use Illuminate\Http\Request;
 
 class VillageController extends Controller
 {
@@ -20,7 +21,6 @@ class VillageController extends Controller
     public function index()
     {
         $this->authorize('superadmin', auth()->user());
-
         $villages = $this->modelHelperServices::getPlacesInformation();
         return view('admin.village.index', compact('villages', $villages));
     }
@@ -45,15 +45,6 @@ class VillageController extends Controller
         return redirect()->back()->with('status', 'Succefully created the Village');
     }
 
-    public function delete($id)
-    {
-        $this->authorize('superadmin', auth()->user());
-
-        $village = Village::findorFail($id);
-        $village->delete();
-        return redirect()->back()->with('status', 'Deleted succefully');
-    }
-
     public function updating($id)
     {
         $this->authorize('superadmin', auth()->user());
@@ -63,14 +54,18 @@ class VillageController extends Controller
         return view('admin.village.updating', compact('village', $village), compact('districts', $districts));
     }
 
-    public function update(UpdateVillageValidation $request, $id)
+    public function update(Request $request, $id)
     {
         $this->authorize('superadmin', auth()->user());
-
+        $request->validate([
+            'district' => 'required|integer|exists:App\District,id',
+            'name' => 'required|string|unique:villages,name,' . $id,
+            'code' => 'required|string|unique:villages,code,' . $id
+        ]);
         $village = Village::findOrFail($id);
-        $village->district_id = $request->validated()['district'];
-        $village->name = $request->validated()['name'];
-        $village->code = $request->validated()['code'];
+        $village->district_id = $request->input('district');
+        $village->name = $request->input('name');
+        $village->code = $request->input('code');
         $village->update();
         return redirect('/admin/village/updating/' . $id)->with('status', 'Succefully updated the Village');
     }

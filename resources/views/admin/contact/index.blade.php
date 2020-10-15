@@ -18,8 +18,7 @@ best educational podcasts for college students, best career coaching podcast, be
 <table class="table">
     <thead>
         <tr>
-            <th scope="col">Name
-            <th>
+            <th scope="col">Name</th>
             <th scope="col">Email</th>
             <th scope="col">Phone</th>
             <th scope="col">Message</th>

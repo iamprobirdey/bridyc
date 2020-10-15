@@ -9,11 +9,13 @@
     <div v-if="!channelChecker" class="container-fluid">
       <form @submit.prevent="channelForm()">
         <div
-          class="form-group row  mx-2"
-          :class="{'has-error': errors.has('channel') || serverErrors.channel_id != '' }"
+          class="form-group row mx-2"
+          :class="{
+            'has-error': errors.has('channel') || serverErrors.channel_id != '',
+          }"
         >
           <label col="col-sm-3 col-form-label" class="mt-2">Institute : </label>
-    
+
           <select
             v-model="userFormData.channel_id"
             class="form-control col-sm-9 mx-md-2"
@@ -26,49 +28,66 @@
               v-for="channel in channelsData"
               :key="channel.id"
               :value="channel.id"
-            >{{channel.title}}</option>
+            >
+              {{ channel.title }}
+            </option>
           </select>
-          <p class="text-danger mx-auto" style="font-size:14px;">*If your institute is not listed here, you can always type it below.</p>
+          <p class="text-danger mx-auto" style="font-size: 14px">
+            *If your institute is not listed here, you can always type it below.
+          </p>
           <i v-show="errors.has('channel')" class="is-invalid"></i>
 
           <span
             v-show="errors.has('channel')"
             class="text-danger text-center"
-          >{{ errors.first('channel') }}</span>
+            >{{ errors.first("channel") }}</span
+          >
           <span
             v-show="serverErrors.channel_id != ''"
             class="text-danger text-center"
-          >{{ serverErrors.channel_id }}</span>
+            >{{ serverErrors.channel_id }}</span
+          >
         </div>
 
         <div
           class="form-group row mx-2"
-          :class="{'has-error' :errors.has('serverErrors.school_name') || serverErrors.school_name != ''}"
+          :class="{
+            'has-error':
+              errors.has('serverErrors.school_name') ||
+              serverErrors.school_name != '',
+          }"
         >
-          <label col="col-sm-4 col-form-label" class="mt-2">Institute Name : </label>
+          <label col="col-sm-4 col-form-label" class="mt-2"
+            >Institute Name :
+          </label>
           <input
             v-model="userFormData.school_name"
             class="form-control col-sm-8 mx-md-2"
             data-vv-delay="20"
             name="school_name"
             type="text"
-            :class="{'form-control': true,'is-invalid': errors.has('school_name')}"
+            :class="{
+              'form-control': true,
+              'is-invalid': errors.has('school_name'),
+            }"
             placeholder="Type your institute name (optional)"
           />
           <span
             v-show="errors.has('school_name')"
             class="text-danger text-center"
-          >{{errors.first("school_name")}}</span>
+            >{{ errors.first("school_name") }}</span
+          >
           <span
             v-show="serverErrors.school_name != ''"
-            class="help is-danger text-center"
-          >{{serverErrors.school_name}}</span>
+            class="text-danger text-center"
+            >{{ serverErrors.school_name }}</span
+          >
         </div>
         <div class="container text-center">
-        <button type="submit" class="btn btnsubmit">Submit</button>
+          <button type="submit" class="btn btnsubmit">Submit</button>
         </div>
       </form>
-      <br>
+      <br />
     </div>
   </div>
 </template>
@@ -138,8 +157,6 @@ export default {
           result = false;
         }
         if (result) {
-          console.log("Called");
-          console.log(this.userFormData);
           axios
             .post(
               "/api/profile/edit/address/channel/" + this.userData.id,
@@ -153,7 +170,6 @@ export default {
                 });
                 this.userInstituteData = {};
                 this.userInstituteData = response.data.data;
-                console.log(this.userInstituteData);
                 this.channelChecker = true;
               }
             })
