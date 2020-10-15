@@ -129,6 +129,7 @@ class RegisterController extends Controller
         if ($data['user_type'] === 'teacher') {
             $user->assignRole('teacher');
         }
+        return $user;
     }
 
     protected function getUserName(array $data)
