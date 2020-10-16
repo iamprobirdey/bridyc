@@ -62,20 +62,20 @@ class ImageController extends Controller
             if (File::makeDirectory(public_path($path), 0777, true)) {
                 $image->resize(130, 130);
                 $image->save(public_path($path) . $imageName);
-                $image->resize(120, 120);
-                $image->save(public_path($path) . 'm-' . $imageName);
-                $image->resize(90, 90);
-                $image->save(public_path($path) . 's-' . $imageName);
+                $imageM->resize(120, 120);
+                $imageM->save(public_path($path) . 'm-' . $imageName);
+                $imageS->resize(90, 90);
+                $imageS->save(public_path($path) . 's-' . $imageName);
                 ///app(Spatie\ImageOptimizer\OptimizerChain::class)->optimize($path.$imageName);
                 //FacadesImageOptimizer::optimize($path.'s-',$imageName);
             }
         } else {
             $image->resize(130, 130);
             $image->save(public_path($path) . $imageName);
-            $image->resize(120, 120);
-            $image->save(public_path($path) . 'm-' . $imageName);
-            $image->resize(90, 90);
-            $image->save(public_path($path) . 's-' . $imageName);
+            $imageM->resize(120, 120);
+            $imageM->save(public_path($path) . 'm-' . $imageName);
+            $imageS->resize(90, 90);
+            $imageS->save(public_path($path) . 's-' . $imageName);
         }
         $channel = Channel::where('user_id', $currentUserId)
             ->first();
@@ -91,12 +91,13 @@ class ImageController extends Controller
     {
         $this->authorize('viewforchannel', auth()->user());
         $this->authorize('checkChannelForUser', auth()->user()->channel);
+        $userId = current_user_id();
         $channel = Channel::select('cover_avatar')
-            ->where('user_id', Auth::id())
+            ->where('user_id', $userId)
             ->first();
         return response()->json([
             'image' => $channel->cover_avatar,
-            'userId' => Auth::id()
+            'userId' => $userId
         ]);
     }
 

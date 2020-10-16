@@ -275,7 +275,7 @@ __webpack_require__.r(__webpack_exports__);
 
         _this.theBoardDecider();
       })["catch"](function (errors) {
-        console.log('i am error' + errors);
+        console.log("i am error" + errors);
         Vue.toasted.error("Something went wrong", {
           position: "top-center",
           duration: 5000
@@ -306,18 +306,33 @@ __webpack_require__.r(__webpack_exports__);
     submitStandardData: function submitStandardData() {
       var _this3 = this;
 
-      if (this.userData.length != this.value.length) axios.post('/api/board', this.value).then(function (response) {
-        _this3.userData = [];
-        _this3.userData = response.data.data[0].board;
-        _this3.streamDataStatus = true;
+      if (this.value.length) {
+        var formData = {
+          board: []
+        };
+        this.value.map(function (item) {
+          formData.board.push(item.id);
+        });
+        axios.post("/api/board", formData).then(function (response) {
+          _this3.userData = [];
+          _this3.userData = response.data.data;
+          console.log(_this3.userData);
+          _this3.streamDataStatus = true;
 
-        _this3.theBoardDecider();
-      })["catch"](function (errors) {
-        Vue.toasted.error("Something went wrong", {
+          _this3.theBoardDecider();
+        })["catch"](function (errors) {
+          Vue.toasted.error("Something went wrong", {
+            position: "top-center",
+            duration: 5000
+          });
+        });
+      } else {
+        Vue.toasted.error("Field is empty", {
           position: "top-center",
           duration: 5000
         });
-      });
+      }
+
       this.boardDataStatus = true;
     }
   },
@@ -338,6 +353,7 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue_picture_input__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-picture-input */ "./node_modules/vue-picture-input/PictureInput.vue");
+//
 //
 //
 //
@@ -554,6 +570,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -581,7 +601,7 @@ __webpack_require__.r(__webpack_exports__);
       axios.get("/api/cover").then(function (response) {
         _this.userImage = response.data.image;
         _this.userId = response.data.userId;
-        if (_this.userImage != null) _this.userImageStatus = true;
+        _this.userImageStatus = true;
       })["catch"](function (errors) {
         Vue.toasted.error("Something went wrong", {
           position: "top-center",
@@ -596,10 +616,6 @@ __webpack_require__.r(__webpack_exports__);
         var formData = new FormData();
         formData.append("image", this.imageData);
         axios.post(this.url, formData).then(function (response) {
-          onUploadProgress: (function (progressEvent) {
-            console.log(progressEvent.loaded / progressEvent.total);
-          });
-
           _this2.userImage = response.data.image;
           _this2.userImageStatus = true;
         })["catch"](function (errors) {
@@ -708,8 +724,8 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       axios.get(this.url).then(function (response) {
-        if (response.data.data[0]["description"] != null) {
-          _this.descriptionFromServer = response.data.data[0]["description"];
+        if (response.data.data.description != null) {
+          _this.descriptionFromServer = response.data.data.description;
           _this.descriptionStatus = true;
         }
       })["catch"](function (errors) {
@@ -721,15 +737,14 @@ __webpack_require__.r(__webpack_exports__);
 
       this.$validator.validate().then(function (result) {
         if (result) {
-          if (_this2.websiteLinkFromServer != "") _this2.url = "/api/description/edit";
-          console.log(_this2.url);
+          if (_this2.descriptionFromServer != "") _this2.url = "/api/description/edit";
           axios.post(_this2.url, _this2.formData).then(function (response) {
             if (response.data.message === true) {
-              Vue.toasted.success("Website is updated", {
+              Vue.toasted.success("Description is updated", {
                 position: "top-center",
                 duration: 5000
               });
-              _this2.descriptionFromServer = response.data.data[0]["description"];
+              _this2.descriptionFromServer = response.data.data.description;
               _this2.descriptionStatus = true;
             }
           })["catch"](function (errors) {
@@ -818,6 +833,10 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -842,7 +861,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       axios.get("/api/icon").then(function (response) {
         _this.userImage = response.data.image;
         _this.userId = response.data.userId;
-        if (_this.userImage != null) _this.userImageStatus = true;
+        _this.userImageStatus = true;
       })["catch"](function (errors) {
         Vue.toasted.error("Something went wrong", {
           position: "top-center",
@@ -1294,9 +1313,7 @@ __webpack_require__.r(__webpack_exports__);
 
       axios.get("/api/getUserData").then(function (response) {
         if (response.status === 200) {
-          _this.infrastructure = response.data.user[0];
-          console.log("infra");
-          console.log(response.data);
+          _this.infrastructure = response.data.user;
           if (_this.infrastructure.canteen != null) _this.infrastructureStatus = false;
         }
       })["catch"](function (errors) {
@@ -1744,7 +1761,6 @@ __webpack_require__.r(__webpack_exports__);
 
       axios.get("/api/social").then(function (response) {
         _this.socialData = response.data.channel.extra_attributes.social;
-        console.log(_this.socialData);
       })["catch"](function (errors) {
         Vue.toasted.error("Something went wrong", {
           position: "top-center",
@@ -1869,7 +1885,6 @@ __webpack_require__.r(__webpack_exports__);
 
         _this.theStandardDecider();
       })["catch"](function (errors) {
-        console.log('i am error' + errors);
         Vue.toasted.error("Something went wrong", {
           position: "top-center",
           duration: 5000
@@ -1897,20 +1912,31 @@ __webpack_require__.r(__webpack_exports__);
     submitStandardData: function submitStandardData() {
       var _this3 = this;
 
-      if (this.userDataLength != this.value.length) axios.post('/api/standard', this.value).then(function (response) {
-        _this3.userData = [];
-        _this3.userData = response.data.data[0].standard;
-        console.log(_this3.userData);
-        _this3.standardDataStatus = true;
+      if (this.value.length > 0) {
+        var formData = {
+          standard: []
+        };
+        this.value.map(function (item) {
+          formData.standard.push(item.id);
+        });
+        axios.post("/api/standard", formData).then(function (response) {
+          _this3.userData = [];
+          _this3.userData = response.data.data;
+          _this3.standardDataStatus = true;
 
-        _this3.theStandardDecider();
-      })["catch"](function (errors) {
-        Vue.toasted.error("Something went wrong", {
+          _this3.theStandardDecider();
+        })["catch"](function (errors) {
+          Vue.toasted.error("Something went wrong", {
+            position: "top-center",
+            duration: 5000
+          });
+        });
+      } else {
+        Vue.toasted.error("Field is empty", {
           position: "top-center",
           duration: 5000
         });
-      });
-      this.standardDataStatus = true;
+      }
     },
     standardNameOnly: function standardNameOnly(standard) {
       return "".concat(standard.standard_name);
@@ -1929,17 +1955,6 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -2024,7 +2039,7 @@ __webpack_require__.r(__webpack_exports__);
                 position: "top-center",
                 duration: 5000
               });
-              _this.websiteLinkFromServer = response.data.data[0]["website_link"];
+              _this.websiteLinkFromServer = response.data.data.website_link;
               _this.websiteOnPresent = true;
             }
           })["catch"](function (errors) {
@@ -2038,8 +2053,8 @@ __webpack_require__.r(__webpack_exports__);
 
       axios.get("/api/website").then(function (response) {
         if (response.status === 200) {
-          if (response.data.data[0]["website_link"] != null) {
-            _this2.websiteLinkFromServer = response.data.data[0]["website_link"];
+          if (response.data.data.website_link != null) {
+            _this2.websiteLinkFromServer = response.data.data.website_link;
             _this2.websiteOnPresent = true;
           }
         }
@@ -2090,7 +2105,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.btn-success{\r\n    border-radius: 0;\r\n    padding:5px\n}\r\n", ""]);
+exports.push([module.i, "\n.btn-success {\r\n  border-radius: 0;\r\n  padding: 5px;\n}\r\n", ""]);
 
 // exports
 
@@ -2128,7 +2143,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.slide-fade-enter-active[data-v-4ad50216] {\r\n  transition: all 0.5s ease;\n}\n.slide-fade-leave-active[data-v-4ad50216] {\r\n  transition: all 0.5s cubic-bezier(1, 0.5, 0.8, 1);\n}\n.slide-fade-enter[data-v-4ad50216],\r\n.slide-fade-leave-to[data-v-4ad50216] {\r\n  transform: translateX(10px);\r\n  opacity: 0;\n}\n.desctext[data-v-4ad50216]{\r\n  background-color: white;\r\n  color: black;\n}\r\n", ""]);
+exports.push([module.i, "\n.desctext[data-v-4ad50216] {\r\n  background-color: white;\r\n  color: black;\n}\r\n", ""]);
 
 // exports
 
@@ -2166,7 +2181,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.slide-fade-enter-active[data-v-ed4e66d8] {\r\n    transition: all 0.5s ease;\n}\n.slide-fade-leave-active[data-v-ed4e66d8] {\r\n    transition: all 0.5s cubic-bezier(1, 0.5, 0.8, 1);\n}\n.slide-fade-enter[data-v-ed4e66d8],\r\n.slide-fade-leave-to[data-v-ed4e66d8] {\r\n    transform: translateX(10px);\r\n    opacity: 0;\n}\r\n", ""]);
+exports.push([module.i, "\n.slide-fade-enter-active[data-v-ed4e66d8] {\r\n  transition: all 0.5s ease;\n}\n.slide-fade-leave-active[data-v-ed4e66d8] {\r\n  transition: all 0.5s cubic-bezier(1, 0.5, 0.8, 1);\n}\n.slide-fade-enter[data-v-ed4e66d8],\r\n.slide-fade-leave-to[data-v-ed4e66d8] {\r\n  transform: translateX(10px);\r\n  opacity: 0;\n}\r\n", ""]);
 
 // exports
 
@@ -15017,11 +15032,7 @@ var render = function() {
               return _c(
                 "button",
                 { key: index, staticClass: "btn btn-success" },
-                [
-                  _vm._v(
-                    "\n              " + _vm._s(board.name) + "\n          "
-                  )
-                ]
+                [_vm._v("\n      " + _vm._s(board.name) + "\n    ")]
               )
             }),
             _vm._v(" "),
@@ -15080,7 +15091,7 @@ var render = function() {
                   }
                 }
               },
-              [_vm._v("\n              Submit\n          ")]
+              [_vm._v("\n      Submit\n    ")]
             )
           ],
           1
@@ -15146,7 +15157,7 @@ var render = function() {
                   }
                 }
               },
-              [_vm._v("\n            Delete college image\n          ")]
+              [_vm._v("\n          Delete college image\n        ")]
             )
           ])
         }),
@@ -15169,7 +15180,7 @@ var render = function() {
               }
             }
           },
-          [_vm._v("\n      Insert images\n    ")]
+          [_vm._v("\n    Insert images\n  ")]
         )
       : _vm._e(),
     _vm._v(" "),
@@ -15208,7 +15219,7 @@ var render = function() {
                         }
                       }
                     },
-                    [_vm._v("\n          Submit\n        ")]
+                    [_vm._v("\n        Submit\n      ")]
                   )
                 : _vm._e(),
               _vm._v(" "),
@@ -15228,7 +15239,7 @@ var render = function() {
                         staticClass: "fa fa-times",
                         attrs: { "aria-hidden": "true" }
                       }),
-                      _vm._v(" Cancel\n        ")
+                      _vm._v(" Cancel\n      ")
                     ]
                   )
                 : _vm._e()
@@ -15285,11 +15296,9 @@ var render = function() {
               height: "150",
               width: "250",
               src:
-                _vm.domainUrl +
-                "/media/channel/" +
-                _vm.userId +
-                "/cover/" +
-                _vm.userImage,
+                _vm.userImage === "institute-cover-default.webp"
+                  ? "/images/" + _vm.userImage
+                  : "/media/channel/" + _vm.userId + "/cover/" + _vm.userImage,
               alt: "icon image"
             }
           }),
@@ -15418,192 +15427,177 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    [
-      _c("transition", { attrs: { name: "slide-fade" } }, [
-        _vm.descriptionStatus
-          ? _c("div", { staticClass: "desctext shadow" }, [
-              _c("h4", { staticClass: "pl-2" }, [
-                _vm._v("Institute Description:")
-              ]),
-              _vm._v(" "),
-              _c("p", { staticClass: "pl-2" }, [
-                _vm._v(_vm._s(_vm.descriptionFromServer))
-              ]),
-              _vm._v(" "),
-              _c(
-                "button",
-                {
-                  staticClass: "btn btnwebdes rounded-0",
-                  attrs: { type: "button" },
-                  on: {
-                    click: function($event) {
-                      return _vm.editDescription()
-                    }
-                  }
-                },
-                [
-                  _c("i", {
-                    staticClass: "fa fa-pencil",
-                    attrs: { "aria-hidden": "true" }
-                  }),
-                  _vm._v(" Edit Description")
-                ]
-              )
-            ])
-          : _vm._e()
-      ]),
-      _vm._v(" "),
-      _vm.descriptionStatus === false
-        ? _c(
-            "form",
+  return _c("div", [
+    _vm.descriptionStatus
+      ? _c("div", { staticClass: "desctext shadow" }, [
+          _c("h4", { staticClass: "pl-2" }, [_vm._v("Institute Description:")]),
+          _vm._v(" "),
+          _c("p", { staticClass: "pl-2" }, [
+            _vm._v(_vm._s(_vm.descriptionFromServer))
+          ]),
+          _vm._v(" "),
+          _c(
+            "button",
             {
+              staticClass: "btn btnwebdes rounded-0",
+              attrs: { type: "button" },
               on: {
-                submit: function($event) {
-                  $event.preventDefault()
-                  return _vm.getFormData()
+                click: function($event) {
+                  return _vm.editDescription()
                 }
               }
             },
             [
-              _c(
-                "div",
-                {
-                  staticClass: "form-group",
-                  class: {
-                    "has-error":
-                      _vm.errors.has("descriptionError") ||
-                      _vm.descriptionError != ""
-                  }
-                },
-                [
-                  _c("label", { attrs: { for: "exampleInputEmail1" } }, [
-                    _vm._v("Describe Your Institute")
-                  ]),
-                  _vm._v(" "),
-                  _c("textarea", {
-                    directives: [
-                      {
-                        name: "model",
-                        rawName: "v-model",
-                        value: _vm.formData.description,
-                        expression: "formData.description"
-                      },
-                      {
-                        name: "validate",
-                        rawName: "v-validate",
-                        value: "required",
-                        expression: "'required'"
-                      }
-                    ],
-                    class: {
-                      "form-control": true,
-                      "is-invalid": _vm.errors.has("description")
-                    },
-                    attrs: {
-                      rows: "5",
-                      id: "description",
-                      "data-vv-delay": "20",
-                      name: "description",
-                      type: "text",
-                      placeholder: "Briefly describe your institute"
-                    },
-                    domProps: { value: _vm.formData.description },
-                    on: {
-                      input: function($event) {
-                        if ($event.target.composing) {
-                          return
-                        }
-                        _vm.$set(
-                          _vm.formData,
-                          "description",
-                          $event.target.value
-                        )
-                      }
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c(
-                    "span",
-                    {
-                      directives: [
-                        {
-                          name: "show",
-                          rawName: "v-show",
-                          value: _vm.errors.has("description"),
-                          expression: "errors.has('description')"
-                        }
-                      ],
-                      staticClass: "text-danger"
-                    },
-                    [
-                      _vm._v(
-                        "\n        " +
-                          _vm._s(_vm.errors.first("description")) +
-                          "\n      "
-                      )
-                    ]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "span",
-                    {
-                      directives: [
-                        {
-                          name: "show",
-                          rawName: "v-show",
-                          value: _vm.descriptionError != "",
-                          expression: "descriptionError != ''"
-                        }
-                      ],
-                      staticClass: "help is-danger"
-                    },
-                    [
-                      _vm._v(
-                        "\n        " + _vm._s(_vm.descriptionError) + "\n      "
-                      )
-                    ]
-                  )
-                ]
-              ),
-              _vm._v(" "),
-              _vm.descriptionFromServer != ""
-                ? _c(
-                    "button",
-                    {
-                      staticClass: "btn btn-success",
-                      attrs: { type: "button" },
-                      on: {
-                        click: function($event) {
-                          return _vm.goBack()
-                        }
-                      }
-                    },
-                    [
-                      _c("i", {
-                        staticClass: "fa fa-long-arrow-left mt-n2 p-1",
-                        attrs: { "aria-hidden": "true" }
-                      }),
-                      _vm._v("Back")
-                    ]
-                  )
-                : _vm._e(),
-              _vm._v(" "),
-              _c(
-                "button",
-                {
-                  staticClass: "btn btnsubmit mt-n3",
-                  attrs: { type: "submit" }
-                },
-                [_vm._v("Submit")]
-              )
+              _c("i", {
+                staticClass: "fa fa-pencil",
+                attrs: { "aria-hidden": "true" }
+              }),
+              _vm._v(" Edit Description\n    ")
             ]
           )
-        : _vm._e()
-    ],
-    1
-  )
+        ])
+      : _vm._e(),
+    _vm._v(" "),
+    _vm.descriptionStatus === false
+      ? _c(
+          "form",
+          {
+            on: {
+              submit: function($event) {
+                $event.preventDefault()
+                return _vm.getFormData()
+              }
+            }
+          },
+          [
+            _c(
+              "div",
+              {
+                staticClass: "form-group",
+                class: {
+                  "has-error":
+                    _vm.errors.has("descriptionError") ||
+                    _vm.descriptionError != ""
+                }
+              },
+              [
+                _c("label", { attrs: { for: "exampleInputEmail1" } }, [
+                  _vm._v("Describe Your Institute")
+                ]),
+                _vm._v(" "),
+                _c("textarea", {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.formData.description,
+                      expression: "formData.description"
+                    },
+                    {
+                      name: "validate",
+                      rawName: "v-validate",
+                      value: "required",
+                      expression: "'required'"
+                    }
+                  ],
+                  class: {
+                    "form-control": true,
+                    "is-invalid": _vm.errors.has("description")
+                  },
+                  attrs: {
+                    rows: "5",
+                    id: "description",
+                    "data-vv-delay": "20",
+                    name: "description",
+                    type: "text",
+                    placeholder: "Briefly describe your institute"
+                  },
+                  domProps: { value: _vm.formData.description },
+                  on: {
+                    input: function($event) {
+                      if ($event.target.composing) {
+                        return
+                      }
+                      _vm.$set(_vm.formData, "description", $event.target.value)
+                    }
+                  }
+                }),
+                _vm._v(" "),
+                _c(
+                  "span",
+                  {
+                    directives: [
+                      {
+                        name: "show",
+                        rawName: "v-show",
+                        value: _vm.errors.has("description"),
+                        expression: "errors.has('description')"
+                      }
+                    ],
+                    staticClass: "text-danger"
+                  },
+                  [
+                    _vm._v(
+                      "\n        " +
+                        _vm._s(_vm.errors.first("description")) +
+                        "\n      "
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "span",
+                  {
+                    directives: [
+                      {
+                        name: "show",
+                        rawName: "v-show",
+                        value: _vm.descriptionError != "",
+                        expression: "descriptionError != ''"
+                      }
+                    ],
+                    staticClass: "help is-danger"
+                  },
+                  [
+                    _vm._v(
+                      "\n        " + _vm._s(_vm.descriptionError) + "\n      "
+                    )
+                  ]
+                )
+              ]
+            ),
+            _vm._v(" "),
+            _vm.descriptionFromServer != ""
+              ? _c(
+                  "button",
+                  {
+                    staticClass: "btn btn-success",
+                    attrs: { type: "button" },
+                    on: {
+                      click: function($event) {
+                        return _vm.goBack()
+                      }
+                    }
+                  },
+                  [
+                    _c("i", {
+                      staticClass: "fa fa-long-arrow-left mt-n2 p-1",
+                      attrs: { "aria-hidden": "true" }
+                    }),
+                    _vm._v("Back\n    ")
+                  ]
+                )
+              : _vm._e(),
+            _vm._v(" "),
+            _c(
+              "button",
+              { staticClass: "btn btnsubmit mt-n3", attrs: { type: "submit" } },
+              [_vm._v("Submit")]
+            )
+          ]
+        )
+      : _vm._e()
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -15635,11 +15629,9 @@ var render = function() {
               height: "150",
               width: "152",
               src:
-                _vm.domainUrl +
-                "/media/channel/" +
-                _vm.userId +
-                "/avatar/" +
-                _vm.userImage,
+                _vm.userImage === "institute-logo-default.webp"
+                  ? "/images/" + _vm.userImage
+                  : "/media/channel/" + _vm.userId + "/avatar/" + _vm.userImage,
               alt: "icon image"
             }
           }),
@@ -17925,7 +17917,7 @@ var render = function() {
   return _c("div", [
     _c("h4", [_vm._v("School Standard")]),
     _vm._v(" "),
-    _vm.userData != null && _vm.standardDataStatus === true
+    _vm.userData != null && _vm.standardDataStatus
       ? _c(
           "div",
           [
@@ -17937,13 +17929,7 @@ var render = function() {
               return _c(
                 "button",
                 { key: index, staticClass: "btn btn-success" },
-                [
-                  _vm._v(
-                    "\n            " +
-                      _vm._s(standard.standard_name) +
-                      "\n        "
-                  )
-                ]
+                [_vm._v("\n      " + _vm._s(standard.standard_name) + "\n    ")]
               )
             }),
             _vm._v(" "),
@@ -17969,7 +17955,7 @@ var render = function() {
         )
       : _vm._e(),
     _vm._v(" "),
-    _vm.standardDataStatus === false
+    !_vm.standardDataStatus
       ? _c(
           "div",
           [
@@ -18002,7 +17988,7 @@ var render = function() {
                   }
                 }
               },
-              [_vm._v("\n            Submit\n        ")]
+              [_vm._v("\n      Submit\n    ")]
             )
           ],
           1
@@ -18046,9 +18032,7 @@ var render = function() {
               _vm._v(" "),
               _c("p", { staticStyle: { color: "blue" } }, [
                 _vm._v(
-                  "\n                    " +
-                    _vm._s(_vm.websiteLinkFromServer) +
-                    "\n                "
+                  "\n        " + _vm._s(_vm.websiteLinkFromServer) + "\n      "
                 )
               ]),
               _vm._v(" "),
@@ -18067,14 +18051,14 @@ var render = function() {
                     staticClass: "fa fa-pencil",
                     attrs: { "aria-hidden": "true" }
                   }),
-                  _vm._v(" Change website url\n                    ")
+                  _vm._v(" Change website url\n      ")
                 ]
               )
             ])
           : _vm._e()
       ]),
       _vm._v(" "),
-      _vm.websiteOnPresent === false
+      !_vm.websiteOnPresent
         ? _c(
             "form",
             {
@@ -18121,7 +18105,6 @@ var render = function() {
                       "is-invalid": _vm.errors.has("website")
                     },
                     attrs: {
-                      id: "website",
                       "data-vv-delay": "20",
                       name: "website",
                       type: "text",
@@ -18153,9 +18136,9 @@ var render = function() {
                     },
                     [
                       _vm._v(
-                        "\n                    " +
+                        "\n        " +
                           _vm._s(_vm.errors.first("website")) +
-                          "\n                "
+                          "\n      "
                       )
                     ]
                   ),
@@ -18175,9 +18158,7 @@ var render = function() {
                     },
                     [
                       _vm._v(
-                        "\n                    " +
-                          _vm._s(_vm.websiteLinkError) +
-                          "\n                "
+                        "\n        " + _vm._s(_vm.websiteLinkError) + "\n      "
                       )
                     ]
                   )
@@ -18201,7 +18182,7 @@ var render = function() {
                         staticClass: "fa fa-long-arrow-left",
                         attrs: { "aria-hidden": "true" }
                       }),
-                      _vm._v(" Back\n            ")
+                      _vm._v(" Back\n    ")
                     ]
                   )
                 : _vm._e(),

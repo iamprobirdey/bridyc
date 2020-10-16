@@ -615,6 +615,11 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -637,7 +642,7 @@ __webpack_require__.r(__webpack_exports__);
   created: function created() {
     this.userData = this.user;
     this.channelData = this.channel;
-    console.log(this.channelData.extra_attributes.social);
+    console.log(this.channelData);
     this.phoneNo = this.userData.phone ? this.userData.phone : "Not provided";
 
     if (this.channelData.extra_attributes.social.facebook === null && this.channelData.extra_attributes.social.linkedin === null && this.channelData.extra_attributes.social.youtube === null && this.channelData.extra_attributes.social.instagram === null) {
@@ -1673,7 +1678,28 @@ var render = function() {
                       )
                     ]),
                     _vm._v(" "),
-                    _vm._m(4),
+                    _c(
+                      "p",
+                      [
+                        _c("img", {
+                          attrs: {
+                            src: "/images/grade.svg",
+                            alt: "Exam board icon"
+                          }
+                        }),
+                        _vm._v(" Board:\n                "),
+                        _vm._l(_vm.channelData.board, function(board, index) {
+                          return _c("button", { key: index }, [
+                            _vm._v(
+                              "\n                  " +
+                                _vm._s(board.name) +
+                                "\n                "
+                            )
+                          ])
+                        })
+                      ],
+                      2
+                    ),
                     _vm._v(" "),
                     _c("p", [
                       _c("img", {
@@ -1969,7 +1995,7 @@ var render = function() {
                           alt: "Hostel Image"
                         }
                       }),
-                      _vm._v("\n                Boys hostel:"),
+                      _vm._v("\n                Boys Hostel:"),
                       _c("strong", { staticClass: "ml-1" }, [
                         _vm._v(
                           "\n                  " +
@@ -1988,7 +2014,7 @@ var render = function() {
                         staticClass: "mr-2",
                         attrs: { src: "/images/bus.svg", alt: "Bus Image" }
                       }),
-                      _vm._v(" Bus\n                Girls Hostel:"),
+                      _vm._v("\n                Girls Hostel:"),
                       _c("strong", { staticClass: "ml-1" }, [
                         _vm._v(
                           "\n                  " +
@@ -2110,17 +2136,6 @@ var staticRenderFns = [
       _c("h3", { staticClass: "mt-2 text-uppercase" }, [
         _vm._v("Message From The Principal")
       ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("p", [
-      _c("img", {
-        attrs: { src: "/images/grade.svg", alt: "Exam board icon" }
-      }),
-      _vm._v(" Board:\n                xxxx\n              ")
     ])
   }
 ]

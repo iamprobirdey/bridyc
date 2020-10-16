@@ -22,7 +22,7 @@
         </li>
       </ul>
     </div>
-<br>
+    <br />
     <h4>Images of your Institute</h4>
     <button
       v-if="!collegeImageEntry"
@@ -34,7 +34,6 @@
 
     <div v-if="collegeImageEntry">
       <picture-input
-      
         ref="pictureInput"
         width="152"
         height="150"
@@ -66,7 +65,9 @@
           <i class="fa fa-times" aria-hidden="true"></i> Cancel
         </button>
       </div>
-      <span v-show="imageError" class="text-danger text-center">{{ imageError }}</span>
+      <span v-show="imageError" class="text-danger text-center">{{
+        imageError
+      }}</span>
     </div>
   </div>
 </template>

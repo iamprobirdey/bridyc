@@ -189,6 +189,7 @@ export default {
     editGenderAndVission() {
       this.profileData.gender = this.channelProfileData.gender;
       this.profileData.vission = this.channelProfileData.vission;
+      this.profileData.message = this.channelProfileData.message;
       this.genderVissionChecker = false;
     },
   },

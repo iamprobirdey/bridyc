@@ -327,7 +327,12 @@
                 </p>
                 <p>
                   <img src="/images/grade.svg" alt="Exam board icon" /> Board:
-                  xxxx
+                  <button
+                    v-for="(board, index) in channelData.board"
+                    :key="index"
+                  >
+                    {{ board.name }}
+                  </button>
                 </p>
 
                 <p>
@@ -490,7 +495,7 @@
                     src="/images/hostel.svg"
                     alt="Hostel Image"
                   />
-                  Boys hostel:<strong class="ml-1">
+                  Boys Hostel:<strong class="ml-1">
                     {{
                       channelData.boys_hostel != null
                         ? channelData.boys_hostel
@@ -499,7 +504,7 @@
                   </strong>
                 </p>
                 <p>
-                  <img class="mr-2" src="/images/bus.svg" alt="Bus Image" /> Bus
+                  <img class="mr-2" src="/images/bus.svg" alt="Bus Image" />
                   Girls Hostel:<strong class="ml-1">
                     {{
                       channelData.girls_hostel != null
@@ -541,7 +546,7 @@ export default {
   created() {
     this.userData = this.user;
     this.channelData = this.channel;
-    console.log(this.channelData.extra_attributes.social);
+    console.log(this.channelData);
     this.phoneNo = this.userData.phone ? this.userData.phone : "Not provided";
     if (
       this.channelData.extra_attributes.social.facebook === null &&

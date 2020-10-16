@@ -44,12 +44,13 @@ class PodcastController extends Controller
             $time = Carbon::now('Asia/Kolkata');
             $imageName = $time->year . $time->month . $time->day . ($time->micro + mt_rand(11111, 99999)) . '.webp';
             $realImage = Image::make($request->file('image_path'));
+
             //->getRealPath()
             $realImage->fit(600, 600, null, 'center');
             $image = $imageS = $imageM = Image::canvas(600, 600, '#ffffff')->insert($realImage);
             $path = "podcast/";
             if (!is_dir($path)) {
-                if (File::makeDirectory(public_path($path), 0777, true)) {
+                if (File::makeDirectory(public_path($path), 0775, true)) {
 
                     $image->resize(710, 650);
                     $image->save(public_path($path) . $imageName);

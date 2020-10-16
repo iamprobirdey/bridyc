@@ -261,6 +261,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -286,20 +294,25 @@ __webpack_require__.r(__webpack_exports__);
       editingUrlChecker: false,
       achievementId: "",
       achievementIndex: "",
-      authValue: ""
+      authValue: "",
+      userId: ""
     };
   },
   props: {
     achievement: {
       type: Array,
       "default": null
+    },
+    userid: {
+      type: Number,
+      "default": null
     }
   },
   created: function created() {
+    this.userId = this.userid;
     this.achievementData = this.achievement[0].achievement;
     this.channelId = this.achievement[0].id;
     this.authValue = this.authId;
-    console.log(this.authId);
   },
   mounted: function mounted() {},
   methods: {
@@ -1884,7 +1897,16 @@ var render = function() {
       _vm._l(_vm.achievementData, function(achievement, index) {
         return _c("div", { key: index }, [
           _c("div", { staticClass: "card shadow mx-auto sidebar-facard" }, [
-            _c("img", { attrs: { src: _vm.baseUrl + achievement.image_path } }),
+            _c("img", {
+              attrs: {
+                src:
+                  _vm.baseUrl +
+                  "media/channel/" +
+                  _vm.userId +
+                  "/achievement/" +
+                  achievement.image_path
+              }
+            }),
             _vm._v(" "),
             _c("div", { staticClass: "card-body mt-n1" }, [
               _c("h6", { staticClass: "card-title my-n1" }, [

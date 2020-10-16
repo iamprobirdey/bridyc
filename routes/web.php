@@ -40,6 +40,10 @@ Route::get('/pass3', function () {
 Route::get('/home', 'HomeController@test');
 
 Route::get('hobby', function () {
+    $channelStandard = Channel::select('id')->where('user_id', current_user_id())
+        ->with('standard')
+        ->get();
+    dd($channelStandard);
     $user4 = User::create([
         'name' => Str::random(10),
         'email' => 'institute@gmail.com',
@@ -317,9 +321,14 @@ Route::group([
         //Social
         Route::get('social', 'User\SocialController@getSocialData');
         Route::post('social', 'User\SocialController@store');
-        //Profile
-        Route::post('gender/vission', 'User\ProfileController@storeGender');
+        //Infructure Image Upload
+        Route::post('college/image/upload/{channel:id}', 'User\ChannelCollegeImagesController@store');
+        //Infructure Image delete
+        Route::post('delete/college/image/{channel_college_image:id}', 'User\ChannelCollegeImagesController@delete');
+
+        //Profile Section
         Route::post('profile/avatar', 'User\ProfileController@storeAvatar');
+        Route::post('gender/vission', 'User\ProfileController@storeGender');
         //Add Education
         Route::post('add/education', 'User\ProfileController@storeEducation');
         Route::post('add/education/edit/{user_education:id}', 'User\ProfileController@storeEditEducation');
@@ -336,10 +345,6 @@ Route::group([
 
         //Teacher Deletion
         Route::post('delete/teacher/{channel_teacher:id}', 'User\TeachersController@delete');
-        //Infructure Image Upload
-        Route::post('college/image/upload/{channel:id}', 'User\ChannelCollegeImagesController@store');
-        //Infructure Image delete
-        Route::post('delete/college/image/{channel_college_image:id}', 'User\ChannelCollegeImagesController@delete');
         //Phone Store
         Route::post('edit/channel/phone/number/{user:id}', 'User\ProfileController@phoneNumberstore');
         //Store Channel Notifiation

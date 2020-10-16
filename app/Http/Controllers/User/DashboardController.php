@@ -41,11 +41,12 @@ class DashboardController extends Controller
             ->with('authUser', $authUser)
             ->with('date', Carbon::now('Asia/Kolkata')->toDateString());
     }
+
     public function channel(Channel $channel)
     {
         $this->authorize('checkChannelForUser', $channel);
         $channel = Channel::where('user_id', auth()->id())
-            ->with(['state', 'district', 'village', 'language', 'achievement', 'collegeImage'])
+            ->with(['state', 'district', 'village', 'language', 'achievement', 'collegeImage', 'board'])
             ->with(['teacher' => function ($query) {
                 $query->with(['user']);
             }])
@@ -56,6 +57,7 @@ class DashboardController extends Controller
         $user = User::where('id', auth()->id())->with('verification')->first();
         return view('institute.channel', compact(['user', 'channel']));
     }
+
     public function editChannel(Channel $channel)
     {
         $this->authorize('checkChannelForUser', $channel);
@@ -79,9 +81,10 @@ class DashboardController extends Controller
     public function acheivement(Channel $channel)
     {
         $this->authorize('checkChannelForUser', $channel);
-        $achievement = $channel->select('id')->with('achievement')->get();
+        $achievement = Channel::where('id', $channel->id)->with('achievement')->get();
         return view('institute.acheivement', [
             'achievement' => $achievement,
+            'userid' => current_user_id()
         ]);
     }
 
@@ -102,7 +105,6 @@ class DashboardController extends Controller
 
     public function notification(Channel $channel)
     {
-
         return view('institute.notification', [
             'notification' => $channel->notification,
             'channelId' => $channel->id
