@@ -36,11 +36,11 @@
         <college :channel="channelData"></college>
       </div>
     </div>
-    <div class="mt-5 ml-n5">
+    <!--div class="mt-5 ml-n5">
       
         <phone :user="userData"></phone>
       
-    </div>
+    </div-->
   </div>
 </template>
 

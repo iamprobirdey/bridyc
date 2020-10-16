@@ -1,35 +1,19 @@
 @import "mixins";
 
 .errorbody{
-    margin-top: 40%;
-    text-align: center;
-    @include screensize(foriphone6x){
-        margin-top: 235px;
-    }
-    @include screensize(forcards){
-        margin-top: 230px;
-    }
-    @include screensize(tablet){
-        margin-top: 100px;
-    }
-    @include screensize(laptop){
-        margin-top: 390px;
-    }
-    @include screensize(desktop){
-        margin-top: 120px;
-    }
-    
+    margin-top: 114px;
+ 
     p{
-        font-size: 90px;
-        font-family: 'Montserrat';
-        font-weight: 300;
+        font-size: 60px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-weight: lighter;
         margin-left: auto;
         margin-right: auto;
         @include screensize(tablet){
             font-size: 140px;
         }
         @include screensize(laptop){
-            font-size: 240px;
+            font-size: 222px;
         }
         
     }
@@ -56,7 +40,7 @@
         
     }
     .homepagelink{
-        background-color: #96511f;
+        background-color: #003585;
         color: white;
         padding: 15px;
         position: relative;
@@ -66,15 +50,11 @@
         }
         &:hover{
                 background-color: white;
-                color: #96511f;
+                color: #003585;
                 text-decoration: none;
-                font-size: 20px;
-                border: 2px solid #96511f;
+                
+                border: 1px solid #003585;
                 padding: 10px;
-                border-bottom-left-radius: 15px;
-                border-bottom-right-radius: 15px;
-                border-top-left-radius: 15px;
-                border-top-right-radius: 15px;
         }
     }
 }

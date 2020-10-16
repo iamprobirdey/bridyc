@@ -547,6 +547,8 @@ export default {
                   errors.response.data.errors.gender[0];
               }
             });
+        } else {
+          this.wait = false;
         }
       });
     },

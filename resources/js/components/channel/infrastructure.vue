@@ -3,39 +3,99 @@
     <div id="infrastrucuter" class="infraheader mb-3 p-1">
       <h3>Let's talk about Infrastructure</h3>
     </div>
-    <div>
-      <table class="table-responsive" v-if="!infrastructureStatus">
-        <thead class="thead-dark">
-          <tr>
-            <th scope="col-sm-4">No of Class</th>
-            <th scope="col">Boys Hostel</th>
-            <th scope="col">Girls Hostel</th>
-            <th scope="col">Canteen</th>
-            <th scope="col">Stationary</th>
-            <th scope="col">Computer Learning</th>
-            <th scope="col">Wall</th>
-            <th scope="col">Library</th>
-            <th scope="col">No. of books</th>
-            <th scope="col">Playground</th>
-            <th scope="col">Bus Services</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th>{{ infrastructure.no_of_class }}</th>
-            <th>{{ infrastructure.boys_hostel }}</th>
-            <th>{{ infrastructure.girls_hostel }}</th>
-            <th>{{ infrastructure.canteen }}</th>
-            <th>{{ infrastructure.stationary }}</th>
-            <th>{{ infrastructure.computer_learning }}</th>
-            <th>{{ infrastructure.wall }}</th>
-            <th>{{ infrastructure.library }}</th>
-            <th>{{ infrastructure.no_of_books }}</th>
-            <th>{{ infrastructure.playground }}</th>
-            <th>{{ infrastructure.bus_services }}</th>
-          </tr>
-        </tbody>
-      </table>
+    <div v-if="!infrastructureStatus">
+         <div class="row infrastructure-display mt-5 py-3">
+              <div class="col-sm-4">
+                <p>
+                  <img
+                    class="mr-2"
+                    src="/images/stationery.svg"
+                    alt="Stationery Image"
+                  />
+                  Stationery : <strong class="ml-1 text-capitalize">
+                    {{ infrastructure.stationary }}
+                  </strong>
+                </p>
+                <p>
+                  <img
+                    class="mr-2"
+                    src="/images/computer.svg"
+                    alt="computer Image"
+                  />
+                  Computer : <strong class="ml-1 text-capitalize">
+                    {{ infrastructure.computer_learning }}
+                  </strong>
+                </p>
+ <p>
+                  <img
+                    class="mr-2"
+                    src="/images/hostel.svg"
+                    alt="Hostel Image"
+                  />
+                  Boys Hostel : <strong class="ml-1 text-capitalize">
+                    {{ infrastructure.boys_hostel }}
+                  </strong>
+                </p>
+                <p>
+                  <img class="mr-2" src="/images/bus.svg" alt="Bus Image" />
+                  Girls Hostel : <strong class="ml-1 text-capitalize">
+                    {{ infrastructure.girls_hostel }}
+                  </strong>
+                </p>
+              </div>
+              <div class="col-sm-4">
+                <p>
+                  <img
+                    class="mr-2"
+                    src="/images/playground.svg"
+                    alt="playground Image"
+                  />
+                  Playground : <strong class="ml-1 text-capitalize">
+                    {{ infrastructure.playground }}
+                  </strong>
+                </p>
+                <p>
+                  <img
+                    class="mr-2"
+                    src="/images/library.svg"
+                    alt="Library Image"
+                  />
+                  Library : <strong class="ml-1 text-capitalize">
+                    {{ infrastructure.library }}
+                  </strong>
+                </p>
+                <p>
+                  <img class="mr-2" src="/images/book.svg" alt="Books Image" />
+                  No of Books : <strong class="ml-1 text-capitalize">
+                    {{ infrastructure.no_of_books }}
+                  </strong>
+                </p>
+              </div>
+              <div class="col-sm-4">
+                <p>
+                  <img
+                    class="mr-2"
+                    src="/images/canteen.svg"
+                    alt="Canteen Image"
+                  />
+                  Canteen : <strong class="ml-1 text-capitalize">
+                    {{ infrastructure.canteen }}
+                  </strong>
+                </p>
+                <p>
+                  <img class="mr-2" src="/images/bus.svg" alt="Bus Image" /> Bus
+                  Services : <strong class="ml-1 text-capitalize">
+                    {{ infrastructure.bus_services }}
+                  </strong>
+                </p>
+                <p>
+                  <img class="mr-2" src="/images/fence.svg" alt="fence Image" />
+                  Boundary : <strong class="ml-1 text-capitalize">
+                   {{ infrastructure.wall }}
+                  </strong>
+                </p>
+              </div>
+            </div>
     </div>
     <div v-if="infrastructureStatus">
       <form @submit.prevent="validateForm()">
@@ -46,7 +106,7 @@
           }"
         >
           <label for="exampleInputEmail1" class="col-sm-2 col-form-label"
-            >Total Class Room</label
+            >Total Class Room:</label
           >
           <input
             class="col-sm-10"
@@ -266,7 +326,7 @@
           }"
         >
           <label for="exampleInputEmail1" class="col-sm-2 col-form-label"
-            >Total Books</label
+            >Total Books:</label
           >
           <input
             class="col-sm-10"

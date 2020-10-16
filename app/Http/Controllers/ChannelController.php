@@ -54,7 +54,7 @@ class ChannelController extends Controller
         $isTeacher = false;
         if (auth()->check()) {
             if (current_user()->isTeacher()) {
-                $currentUser = UserChannelRequest::where('user_id', current_user_id())->first();
+                $currentUser = UserChannelRequest::where('user_id', current_user_id())->where('channel_id', $channel->id)->first();
             }
             $isTeacher = current_user()->isTeacher();
         }

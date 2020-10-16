@@ -651,6 +651,8 @@ __webpack_require__.r(__webpack_exports__);
               _this3.serverErrors.gender = errors.response.data.errors.gender[0];
             }
           });
+        } else {
+          _this3.wait = false;
         }
       });
     }

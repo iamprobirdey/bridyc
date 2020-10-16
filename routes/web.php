@@ -21,7 +21,9 @@ use Illuminate\Support\Str;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+Route::get('500',function(){
+    return view('errors.500');
+});
 Route::get('/pass1', function () {
     return view('auth.passwords.confirm');
 });
@@ -46,6 +48,7 @@ Route::get('hobby', function () {
         'user_type' => 'student',
 
     ]);
+    //user_type => institute/student/teacher/admin
 
 
     $user4->update(['email_verified_at' => Carbon::now()]);

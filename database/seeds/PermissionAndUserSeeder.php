@@ -37,14 +37,7 @@ class PermissionAndUserSeeder extends Seeder
         $role3->givePermissionTo($permission3);
         $role4->givePermissionTo($permission4);
 
-        $user1 = User::create([
-            'name' => Str::random(10),
-            'email' => 'admin@gmail.com',
-            'password' => '$2y$10$A5qfm/Ssy2JOTLf5PQKOxeIFrLTOUaK5nwONeWstGu07wQDAEciwK',
-            'username' => 'admin',
-            'user_type' => 'admin',
 
-        ]);
         // $user2 = User::create([
         //     'name' => Str::random(10),
         //     'email' => 'borahsurajit17@gmail.com',
@@ -71,7 +64,7 @@ class PermissionAndUserSeeder extends Seeder
 
         // ]);
 
-        for ($i = 0; $i < 10; $i++) {
+        for ($i = 1; $i <= 30; $i++) {
 
             $user = User::create([
                 'name' => Str::random(10),
@@ -85,7 +78,7 @@ class PermissionAndUserSeeder extends Seeder
             $user->assignRole('institute');
         }
 
-        for ($i = 0; $i < 10; $i++) {
+        for ($i = 1; $i <= 20; $i++) {
 
             $user = User::create([
                 'name' => Str::random(10),
@@ -99,7 +92,7 @@ class PermissionAndUserSeeder extends Seeder
             $user->assignRole('student');
         }
 
-        for ($i = 0; $i < 10; $i++) {
+        for ($i = 1; $i <= 30; $i++) {
 
             $user = User::create([
                 'name' => Str::random(10),
@@ -112,6 +105,15 @@ class PermissionAndUserSeeder extends Seeder
             $user->update(['email_verified_at' => Carbon::now()]);
             $user->assignRole('teacher');
         }
+
+        $user1 = User::create([
+            'name' => Str::random(10),
+            'email' => 'admin@gmail.com',
+            'password' => '$2y$10$A5qfm/Ssy2JOTLf5PQKOxeIFrLTOUaK5nwONeWstGu07wQDAEciwK',
+            'username' => 'admin',
+            'user_type' => 'admin',
+
+        ]);
 
 
         $user1->update(['email_verified_at' => Carbon::now()]);

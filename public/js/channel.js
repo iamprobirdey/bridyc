@@ -160,6 +160,7 @@ __webpack_require__.r(__webpack_exports__);
   },
   mounted: function mounted() {
     if (this.channel.length > 0) this.channelData = this.channel;
+    console.log(this.channelData);
   },
   methods: {}
 });
@@ -239,7 +240,8 @@ var render = function() {
                   ? _c(
                       "p",
                       {
-                        staticClass: "card-text destext d-none d-md-block mt-3"
+                        staticClass:
+                          "card-text destext d-none d-md-block mt-3 mx-1"
                       },
                       [
                         _vm._v(

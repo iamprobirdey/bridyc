@@ -221,6 +221,14 @@ __webpack_require__.r(__webpack_exports__);
           }
 
           _this.teachersData.splice(index, 1);
+        }).then(function (response) {
+          if (response.data.error === true) {
+            Vue.toasted.error("Something went wrong", {
+              position: "top-center",
+              duration: 5000
+            });
+            window.location.reload();
+          }
         })["catch"](function (errors) {
           Vue.toasted.error("Something went wrong", {
             position: "top-center",
@@ -242,6 +250,15 @@ __webpack_require__.r(__webpack_exports__);
 
             _this2.teachersRequestData.splice(index, 1);
 
+            window.location.reload();
+          }
+        });
+        then(function (response) {
+          if (response.data.error === true) {
+            Vue.toasted.error("Something went wrong", {
+              position: "top-center",
+              duration: 5000
+            });
             window.location.reload();
           }
         })["catch"](function (errors) {
@@ -351,11 +368,14 @@ var render = function() {
     _vm._v(" "),
     _c(
       "div",
-      { staticClass: "row mx-0 mt-5" },
+      { staticClass: "row mx-0 my-5" },
       _vm._l(_vm.teachersData, function(teacher, index) {
         return _c(
           "div",
-          { key: index, staticClass: "card shadow mx-auto sidebar-facard" },
+          {
+            key: index,
+            staticClass: "card shadow mx-auto sidebar-facard mb-4"
+          },
           [
             _c("img", {
               attrs: {

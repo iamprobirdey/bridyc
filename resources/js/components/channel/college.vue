@@ -1,7 +1,9 @@
 <template>
   <div>
     <div>
+      <h4>Your Gallery</h4>
       <ul class="nav">
+        
         <li v-for="(image, index) in channelData.college_image" :key="index">
           <img
             :src="
@@ -23,7 +25,7 @@
       </ul>
     </div>
     <br />
-    <h4>Images of your Institute</h4>
+    
     <button
       v-if="!collegeImageEntry"
       class="btn btnsubmit rounded-0"

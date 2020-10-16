@@ -19,25 +19,45 @@ class TeachersController extends Controller
 
     public function delete($teacherId)
     {
-        $teacher = ChannelTeacher::findOrFail($teacherId);
-        $teacher->delete();
-        return response()->json([
-            'message' => true
-        ]);
+        DB::beginTransaction();
+        try {
+            $teacher = ChannelTeacher::findOrFail($teacherId);
+            $channelRequest = UserChannelRequest::where('user_id', $teacher->user_id)->first();
+            $channelRequest->request = 'farewell';
+            $channelRequest->update();
+            $teacher->delete();
+            DB::commit();
+            return response()->json([
+                'message' => true
+            ]);
+        } catch (\Throwable $th) {
+            DB::rollBack();
+            return response()->json([
+                'error' => true
+            ]);
+        }
     }
 
     public function acceptRequest(UserChannelRequest $userChannelRequest)
     {
-        if (current_user()->channel->id === $userChannelRequest->channel_id) {
-            $userChannelRequest->request = 'accepted';
-            $userChannelRequest->save();
-            ChannelTeacher::create([
-                'user_id' => $userChannelRequest->user_id,
-                'channel_id' => $userChannelRequest->channel_id
-            ]);
-
+        DB::beginTransaction();
+        try {
+            if (current_user()->channel->id === $userChannelRequest->channel_id) {
+                $userChannelRequest->request = 'accepted';
+                $userChannelRequest->save();
+                ChannelTeacher::create([
+                    'user_id' => $userChannelRequest->user_id,
+                    'channel_id' => $userChannelRequest->channel_id
+                ]);
+                DB::commit();
+                return response()->json([
+                    'message' => true
+                ]);
+            }
+        } catch (\Throwable $th) {
+            DB::rollBack();
             return response()->json([
-                'message' => true
+                'error' => true
             ]);
         }
     }

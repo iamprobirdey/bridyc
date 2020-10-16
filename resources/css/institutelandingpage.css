@@ -24,11 +24,10 @@ main .blankdiv {
   height: auto;
   width: 100%;
   position: relative;
-  top: -77px;
-  bottom: -120px;
-  background-color: #f5f9ff;
+  background-color: #f9fafa;
   padding-top: 55px;
   padding-left: 10px;
+  padding-bottom: 95px;
   /* .btnshare{
       position: relative;
       top: 30px;
@@ -45,12 +44,18 @@ main .blankdiv {
 }
 
 main .blankdiv p {
-  font-size: 14px;
+  font-size: 15px;
 }
 
 @media only screen and (min-width: 481px) {
   main .blankdiv p {
     font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  main .blankdiv p {
+    font-size: 18px;
   }
 }
 
@@ -64,7 +69,13 @@ main .blankdiv p {
   main .blankdiv {
     height: 150px;
     padding-left: 60px;
-    padding-top: 75px;
+    padding-top: 140px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  main .blankdiv {
+    padding-top: 90px;
   }
 }
 
@@ -73,6 +84,7 @@ main .blankdiv .insweb {
   color: white;
   font-size: 14px;
   width: 110px;
+  margin-left: -20px;
 }
 
 @media only screen and (min-width: 481px) {
@@ -82,11 +94,27 @@ main .blankdiv .insweb {
   }
 }
 
-main .blankdiv .insweb:hover {
-  background-color: white;
-  color: #011737;
+@media only screen and (min-width: 768px) {
+  main .blankdiv .insweb {
+    width: 157px;
+    font-size: 18px;
+    margin-left: -58px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  main .blankdiv .insweb {
+    margin-left: -25px;
+  }
+}
+
+main .blankdiv .insweb-available img {
+  width: 15px;
+  height: 15px;
+}
+
+main .blankdiv .insweb-available:hover {
   text-decoration: none;
-  border: 1px solid #011737;
 }
 
 main .blankdiv .phemdiv {
@@ -101,28 +129,41 @@ main .blankdiv .phemdiv {
 
 main .logo-title {
   position: relative;
-  top: -170px;
+  top: -134px;
   left: -5px;
   margin-bottom: -120px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+@media only screen and (min-width: 360px) {
+  main .logo-title {
+    top: -129px;
+  }
 }
 
 @media only screen and (min-width: 481px) {
   main .logo-title {
-    top: -184px;
-    left: -5px;
+    top: -139px;
   }
 }
 
 @media only screen and (min-width: 768px) {
   main .logo-title {
-    top: -195px;
+    top: -248px;
     left: -164px;
   }
 }
 
+@media only screen and (min-width: 1280px) {
+  main .logo-title {
+    top: -194px;
+    left: -131px;
+  }
+}
+
 main .logo-title .logoinstitute {
-  width: 70px;
-  height: 80px;
+  width: 85px;
+  height: 90px;
   border: 1px solid gainsboro;
   -webkit-transition: all ease .5s;
   transition: all ease .5s;
@@ -137,40 +178,52 @@ main .logo-title .logoinstitute {
 
 @media only screen and (min-width: 768px) {
   main .logo-title .logoinstitute {
-    width: 130px;
-    height: 130px;
+    width: 140px;
+    height: 140px;
     margin-left: 120px !important;
   }
 }
 
 main .logo-title .institle {
   font-size: 17px;
-  margin-top: 47px;
+  margin-top: 50px;
   -webkit-transition: all ease .5s;
   transition: all ease .5s;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  /*@include screensize(forcards){
-                 font-size: 25px;
-                }
-                 @include screensize(tablet){
-                     font-size: 30px;
-                 }
-                 
-                    @include screensize(laptop){
-                     font-size: 35px;
-                     margin-top: 70px;
-                    }
-                    @include screensize(desktop){
-                      font-size: 38px;
-                      margin-top: 70px;
-                     }*/
+}
+
+@media only screen and (min-width: 360px) {
+  main .logo-title .institle {
+    font-size: 20px;
+    margin-top: 45px;
+  }
+}
+
+@media only screen and (min-width: 481px) {
+  main .logo-title .institle {
+    font-size: 21px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  main .logo-title .institle {
+    font-size: 32px;
+    margin-top: 73px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  main .logo-title .institle {
+    font-size: 34px;
+  }
 }
 
 main .inssocial {
   position: relative;
-  top: -90px;
+  top: -70px;
   left: 63%;
-  width: 100px !important;
+  font-size: 15px;
+  width: 115px;
   overflow-x: hidden;
 }
 
@@ -179,9 +232,15 @@ main .inssocial img {
   height: 20px;
 }
 
+@media only screen and (min-width: 360px) {
+  main .inssocial {
+    left: 65%;
+  }
+}
+
 @media only screen and (min-width: 481px) {
   main .inssocial {
-    top: -105px;
+    top: -66px;
     left: 75%;
   }
   main .inssocial img {
@@ -192,31 +251,70 @@ main .inssocial img {
 
 @media only screen and (min-width: 768px) {
   main .inssocial {
-    top: -194px;
-    left: 77%;
+    top: -133px;
+    left: 74%;
+    font-size: 18px;
+    width: 160px;
   }
 }
 
 @media only screen and (min-width: 1280px) {
   main .inssocial {
-    top: -224px;
+    top: -127px;
     left: 82%;
   }
 }
 
+main .faculty-request {
+  position: relative;
+  top: -123px;
+  padding-left: 61%;
+}
+
+@media only screen and (min-width: 360px) {
+  main .faculty-request {
+    padding-left: 65%;
+  }
+}
+
+@media only screen and (min-width: 481px) {
+  main .faculty-request {
+    padding-left: 74%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  main .faculty-request {
+    top: -167px;
+    padding-left: 2%;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  main .faculty-request {
+    top: -83px;
+    padding-left: 4%;
+  }
+}
+
+main .faculty-request img {
+  width: 16px;
+  height: 16px;
+}
+
 main .inspills {
-  margin-top: -112px;
+  margin-top: -75px;
 }
 
 @media only screen and (min-width: 481px) {
   main .inspills {
-    margin-top: -130px;
+    margin-top: -80px;
   }
 }
 
 @media only screen and (min-width: 768px) {
   main .inspills {
-    margin-top: -160px;
+    margin-top: -85px;
   }
 }
 
@@ -232,6 +330,7 @@ main .inspills .nav-pills .active {
 main .inspills .inscarou {
   width: 100%;
   height: auto;
+  margin-top: 30px;
 }
 
 main .inspills .inscarou li {
@@ -287,6 +386,12 @@ main .inspills .notice hr {
 
 main .inspills .notice p {
   color: black;
+}
+
+main .inspills .notice p::before {
+  content: "\2B9A";
+  font-size: larger;
+  color: #003585;
 }
 
 main .inspills .facultyachieve .facultyachievecard {

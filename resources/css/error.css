@@ -1,42 +1,11 @@
 .errorbody {
-  margin-top: 40%;
-  text-align: center;
-}
-
-@media only screen and (min-width: 375px) {
-  .errorbody {
-    margin-top: 235px;
-  }
-}
-
-@media only screen and (min-width: 411px) {
-  .errorbody {
-    margin-top: 230px;
-  }
-}
-
-@media only screen and (min-width: 481px) {
-  .errorbody {
-    margin-top: 100px;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  .errorbody {
-    margin-top: 390px;
-  }
-}
-
-@media only screen and (min-width: 1280px) {
-  .errorbody {
-    margin-top: 120px;
-  }
+  margin-top: 114px;
 }
 
 .errorbody p {
-  font-size: 90px;
-  font-family: 'Montserrat';
-  font-weight: 300;
+  font-size: 60px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: lighter;
   margin-left: auto;
   margin-right: auto;
 }
@@ -49,7 +18,7 @@
 
 @media only screen and (min-width: 768px) {
   .errorbody p {
-    font-size: 240px;
+    font-size: 222px;
   }
 }
 
@@ -81,7 +50,7 @@
 }
 
 .errorbody .homepagelink {
-  background-color: #96511f;
+  background-color: #003585;
   color: white;
   padding: 15px;
   position: relative;
@@ -96,13 +65,8 @@
 
 .errorbody .homepagelink:hover {
   background-color: white;
-  color: #96511f;
+  color: #003585;
   text-decoration: none;
-  font-size: 20px;
-  border: 2px solid #96511f;
+  border: 1px solid #003585;
   padding: 10px;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
 }

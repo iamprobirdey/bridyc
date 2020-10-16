@@ -3,16 +3,14 @@
 namespace App\Http\Controllers\User;
 
 use App\Channel;
-use App\District;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\User\ChannelVerificationValidation;
 use App\Jobs\ChannelCreatingProcessor;
-use App\State;
 use App\Verification;
 use Auth;
 use Exception;
 use DB;
-use Illuminate\Support\Str;
+//use Illuminate\Support\Str;
 
 class VerificationController extends Controller
 {
@@ -45,9 +43,6 @@ class VerificationController extends Controller
                 ]);
 
             //ChannelCreatingProcessor::dispatchNow($verification);
-            $state = State::findOrFail($verification->state_id);
-            $district = District::findOrFail($verification->district_id);
-            $village = District::findOrFail($verification->village_id);
             $channel = Channel::create([
                 'user_id' => Auth::id(),
                 'state_id' => $verification->state_id,

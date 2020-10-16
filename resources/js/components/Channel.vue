@@ -30,7 +30,7 @@
               Dist: {{ channel.district.name }}
             </p>
             <p
-              class="card-text destext d-none d-md-block mt-3"
+              class="card-text destext d-none d-md-block mt-3 mx-1"
               v-if="channel.description != null"
             >
               {{ channel.description.substr(1, 100) }}
@@ -64,6 +64,7 @@ export default {
   },
   mounted() {
     if (this.channel.length > 0) this.channelData = this.channel;
+    console.log(this.channelData);
   },
   methods: {},
 };

@@ -4,7 +4,7 @@
     <div v-if="userData != null && standardDataStatus">
       <h5>Here, is your list of standard available in your school</h5>
       <button
-        class="btn btn-success"
+        class="btn btn-success m-1"
         v-for="(standard, index) in userData"
         :key="index"
       >
