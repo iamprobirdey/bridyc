@@ -18,15 +18,6 @@
         >
           {{ hobbie.name }}
         </button>
-
-        <button
-          class="btn mt-n2 edit-btn"
-          @click="editThehobbie()"
-          data-toggle="tooltip"
-          title="Edit"
-        >
-          <i class="fa fa-pencil" aria-hidden="true"></i>
-        </button>
       </div>
     </div>
     <div v-if="!hobbiesEntryChecker">

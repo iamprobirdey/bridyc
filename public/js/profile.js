@@ -1034,15 +1034,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -4481,35 +4472,14 @@ var render = function() {
           _vm._v(" "),
           _c(
             "div",
-            [
-              _vm._l(_vm.studentshobbiesData, function(hobbie, index) {
-                return _c(
-                  "button",
-                  { key: index, staticClass: "btn btn-sm btnsubjects m-1" },
-                  [_vm._v("\n        " + _vm._s(hobbie.name) + "\n      ")]
-                )
-              }),
-              _vm._v(" "),
-              _c(
+            _vm._l(_vm.studentshobbiesData, function(hobbie, index) {
+              return _c(
                 "button",
-                {
-                  staticClass: "btn mt-n2 edit-btn",
-                  attrs: { "data-toggle": "tooltip", title: "Edit" },
-                  on: {
-                    click: function($event) {
-                      return _vm.editThehobbie()
-                    }
-                  }
-                },
-                [
-                  _c("i", {
-                    staticClass: "fa fa-pencil",
-                    attrs: { "aria-hidden": "true" }
-                  })
-                ]
+                { key: index, staticClass: "btn btn-sm btnsubjects m-1" },
+                [_vm._v("\n        " + _vm._s(hobbie.name) + "\n      ")]
               )
-            ],
-            2
+            }),
+            0
           )
         ])
       : _vm._e(),
