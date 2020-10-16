@@ -9,6 +9,7 @@ use App\User;
 use App\UserChannelRequest;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
+use DB;
 
 class TeachersController extends Controller
 {

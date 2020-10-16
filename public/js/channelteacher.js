@@ -218,16 +218,15 @@ __webpack_require__.r(__webpack_exports__);
               position: "top-center",
               duration: 5000
             });
+
+            _this.teachersData.splice(index, 1);
           }
 
-          _this.teachersData.splice(index, 1);
-        }).then(function (response) {
           if (response.data.error === true) {
             Vue.toasted.error("Something went wrong", {
               position: "top-center",
               duration: 5000
             });
-            window.location.reload();
           }
         })["catch"](function (errors) {
           Vue.toasted.error("Something went wrong", {
@@ -252,14 +251,12 @@ __webpack_require__.r(__webpack_exports__);
 
             window.location.reload();
           }
-        });
-        then(function (response) {
+
           if (response.data.error === true) {
             Vue.toasted.error("Something went wrong", {
               position: "top-center",
               duration: 5000
             });
-            window.location.reload();
           }
         })["catch"](function (errors) {
           Vue.toasted.error("Something went wrong", {
