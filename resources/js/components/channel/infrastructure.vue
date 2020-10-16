@@ -12,7 +12,7 @@
                     src="/images/stationery.svg"
                     alt="Stationery Image"
                   />
-                  Stationery : <strong class="ml-1">
+                  Stationery : <strong class="ml-1 text-capitalize">
                     {{ infrastructure.stationary }}
                   </strong>
                 </p>
@@ -22,7 +22,7 @@
                     src="/images/computer.svg"
                     alt="computer Image"
                   />
-                  Computer : <strong class="ml-1">
+                  Computer : <strong class="ml-1 text-capitalize">
                     {{ infrastructure.computer_learning }}
                   </strong>
                 </p>
@@ -32,13 +32,13 @@
                     src="/images/hostel.svg"
                     alt="Hostel Image"
                   />
-                  Boys Hostel : <strong class="ml-1">
+                  Boys Hostel : <strong class="ml-1 text-capitalize">
                     {{ infrastructure.boys_hostel }}
                   </strong>
                 </p>
                 <p>
                   <img class="mr-2" src="/images/bus.svg" alt="Bus Image" />
-                  Girls Hostel : <strong class="ml-1">
+                  Girls Hostel : <strong class="ml-1 text-capitalize">
                     {{ infrastructure.girls_hostel }}
                   </strong>
                 </p>
@@ -50,7 +50,7 @@
                     src="/images/playground.svg"
                     alt="playground Image"
                   />
-                  Playground : <strong class="ml-1">
+                  Playground : <strong class="ml-1 text-capitalize">
                     {{ infrastructure.playground }}
                   </strong>
                 </p>
@@ -60,13 +60,13 @@
                     src="/images/library.svg"
                     alt="Library Image"
                   />
-                  Library : <strong class="ml-1">
+                  Library : <strong class="ml-1 text-capitalize">
                     {{ infrastructure.library }}
                   </strong>
                 </p>
                 <p>
                   <img class="mr-2" src="/images/book.svg" alt="Books Image" />
-                  No of Books : <strong class="ml-1">
+                  No of Books : <strong class="ml-1 text-capitalize">
                     {{ infrastructure.no_of_books }}
                   </strong>
                 </p>
@@ -78,61 +78,24 @@
                     src="/images/canteen.svg"
                     alt="Canteen Image"
                   />
-                  Canteen : <strong class="ml-1">
+                  Canteen : <strong class="ml-1 text-capitalize">
                     {{ infrastructure.canteen }}
                   </strong>
                 </p>
                 <p>
                   <img class="mr-2" src="/images/bus.svg" alt="Bus Image" /> Bus
-                  Services : <strong class="ml-1">
+                  Services : <strong class="ml-1 text-capitalize">
                     {{ infrastructure.bus_services }}
                   </strong>
                 </p>
                 <p>
                   <img class="mr-2" src="/images/fence.svg" alt="fence Image" />
-                  Boundary : <strong class="ml-1">
+                  Boundary : <strong class="ml-1 text-capitalize">
                    {{ infrastructure.wall }}
                   </strong>
                 </p>
               </div>
             </div>
-
-
-
-
-
-      <table class="table-responsive" >
-        <thead class="thead-dark">
-          <tr>
-            <th scope="col-sm-4">No of Class</th>
-            <th scope="col">Boys Hostel</th>
-            <th scope="col">Girls Hostel</th>
-            <th scope="col">Canteen</th>
-            <th scope="col">Stationary</th>
-            <th scope="col">Computer Learning</th>
-            <th scope="col">Wall</th>
-            <th scope="col">Library</th>
-            <th scope="col">No. of books</th>
-            <th scope="col">Playground</th>
-            <th scope="col">Bus Services</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th>{{ infrastructure.no_of_class }}</th>
-            <th>{{ infrastructure.boys_hostel }}</th>
-            <th>{{ infrastructure.girls_hostel }}</th>
-            <th>{{ infrastructure.canteen }}</th>
-            <th>{{ infrastructure.stationary }}</th>
-            <th>{{ infrastructure.computer_learning }}</th>
-            <th>{{ infrastructure.wall }}</th>
-            <th>{{ infrastructure.library }}</th>
-            <th>{{ infrastructure.no_of_books }}</th>
-            <th>{{ infrastructure.playground }}</th>
-            <th>{{ infrastructure.bus_services }}</th>
-          </tr>
-        </tbody>
-      </table>
     </div>
     <div v-if="infrastructureStatus">
       <form @submit.prevent="validateForm()">

@@ -240,7 +240,8 @@ var render = function() {
                   ? _c(
                       "p",
                       {
-                        staticClass: "card-text destext d-none d-md-block mt-3"
+                        staticClass:
+                          "card-text destext d-none d-md-block mt-3 mx-1"
                       },
                       [
                         _vm._v(

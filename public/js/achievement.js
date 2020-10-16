@@ -269,6 +269,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -1863,40 +1866,41 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    [
-      _c("h4", { staticClass: "text-center" }, [
-        _vm._v("INSTITUTE'S ACHIEVEMENTS")
-      ]),
-      _vm._v(" "),
-      _c("br"),
-      _vm._v(" "),
-      _c("h6", { staticClass: "d-inline" }, [
-        _vm._v("Add your institute's achievements here")
-      ]),
-      _vm._v(" "),
-      _c(
-        "button",
-        {
-          staticClass: "btn btnadd p-1 ml-1 rounded-0",
-          on: {
-            click: function($event) {
-              return _vm.addAchievement()
-            }
+  return _c("div", [
+    _c("h4", { staticClass: "text-center" }, [
+      _vm._v("INSTITUTE'S ACHIEVEMENTS")
+    ]),
+    _vm._v(" "),
+    _c("br"),
+    _vm._v(" "),
+    _c("h6", { staticClass: "d-inline" }, [
+      _vm._v("Add your institute's achievements here")
+    ]),
+    _vm._v(" "),
+    _c(
+      "button",
+      {
+        staticClass: "btn btnadd p-1 ml-1 rounded-0",
+        on: {
+          click: function($event) {
+            return _vm.addAchievement()
           }
-        },
-        [
-          _c("i", {
-            staticClass: "fa fa-plus",
-            attrs: { "aria-hidden": "true" }
-          })
-        ]
-      ),
-      _vm._v(" "),
+        }
+      },
+      [_c("i", { staticClass: "fa fa-plus", attrs: { "aria-hidden": "true" } })]
+    ),
+    _vm._v(" "),
+    _c(
+      "div",
+      { staticClass: "row my-5" },
       _vm._l(_vm.achievementData, function(achievement, index) {
-        return _c("div", { key: index }, [
-          _c("div", { staticClass: "card shadow mx-auto sidebar-facard" }, [
+        return _c(
+          "div",
+          {
+            key: index,
+            staticClass: "card shadow mx-auto sidebar-facard mb-4"
+          },
+          [
             _c("img", {
               attrs: {
                 src:
@@ -1924,325 +1928,341 @@ var render = function() {
               _c("p", { staticClass: "card-text" }, [
                 _vm._v("\n          " + _vm._s(achievement.date) + "\n        ")
               ])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "text-center" }, [
-            _c(
-              "button",
-              {
-                staticClass: "btn mb-5 editachieve",
-                attrs: {
-                  "data-toggle": "tooltip",
-                  "data-placement": "right",
-                  title: "Edit"
-                },
-                on: {
-                  click: function($event) {
-                    return _vm.editTheForm(achievement, index)
-                  }
-                }
-              },
-              [
-                _c("i", {
-                  staticClass: "fa fa-pencil",
-                  attrs: { "aria-hidden": "true" }
-                })
-              ]
-            )
-          ])
-        ])
-      }),
-      _vm._v(" "),
-      _c("br"),
-      _vm._v(" "),
-      _vm.openAchievementForm
-        ? _c("div", { staticClass: "mt-5" }, [
-            _c(
-              "form",
-              {
-                on: {
-                  submit: function($event) {
-                    $event.preventDefault()
-                    return _vm.achievementSubmit()
-                  }
-                }
-              },
-              [
-                _c("picture-input", {
-                  ref: "pictureInput",
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "text-center" }, [
+              _c(
+                "button",
+                {
+                  staticClass: "btn mb-5 editachieve",
                   attrs: {
-                    width: "200",
-                    height: "200",
-                    margin: "16",
-                    accept: "image/jpeg, image/png",
-                    size: "10",
-                    "button-class": "btn",
-                    "custom-strings": {
-                      upload: "<h1>Bummer!</h1>",
-                      drag: "Drag a 😺 GIF or GTFO"
-                    }
+                    "data-toggle": "tooltip",
+                    "data-placement": "right",
+                    title: "Edit"
                   },
-                  on: { change: _vm.onChange }
-                }),
-                _vm._v(" "),
-                _c(
-                  "span",
-                  {
+                  on: {
+                    click: function($event) {
+                      return _vm.editTheForm(achievement, index)
+                    }
+                  }
+                },
+                [
+                  _c("i", {
+                    staticClass: "fa fa-pencil",
+                    attrs: { "aria-hidden": "true" }
+                  })
+                ]
+              )
+            ])
+          ]
+        )
+      }),
+      0
+    ),
+    _vm._v(" "),
+    _c("br"),
+    _vm._v(" "),
+    _vm.openAchievementForm
+      ? _c("div", { staticClass: "mt-5" }, [
+          _c(
+            "form",
+            {
+              on: {
+                submit: function($event) {
+                  $event.preventDefault()
+                  return _vm.achievementSubmit()
+                }
+              }
+            },
+            [
+              _c("picture-input", {
+                ref: "pictureInput",
+                attrs: {
+                  width: "200",
+                  height: "200",
+                  margin: "16",
+                  accept: "image/jpeg, image/png",
+                  size: "10",
+                  "button-class": "btn",
+                  "custom-strings": {
+                    upload: "<h1>Bummer!</h1>",
+                    drag: "Drag a 😺 GIF or GTFO"
+                  }
+                },
+                on: { change: _vm.onChange }
+              }),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  directives: [
+                    {
+                      name: "show",
+                      rawName: "v-show",
+                      value: _vm.serverErrors.image_path != "",
+                      expression: "serverErrors.image_path != ''"
+                    }
+                  ],
+                  staticClass: "text-danger"
+                },
+                [_vm._v(_vm._s(_vm.serverErrors.image_path))]
+              ),
+              _vm._v(" "),
+              _c("br"),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass: "form-group row mx-lg-5",
+                  class: {
+                    "has-error":
+                      _vm.errors.has("serverErrors.title") ||
+                      _vm.serverErrors.title != ""
+                  }
+                },
+                [
+                  _c(
+                    "label",
+                    { staticClass: "col-sm-3 col-form-label text-right" },
+                    [_vm._v("Achievement Title :")]
+                  ),
+                  _vm._v(" "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.formData.title,
+                        expression: "formData.title"
+                      },
+                      {
+                        name: "validate",
+                        rawName: "v-validate",
+                        value: "required",
+                        expression: "'required'"
+                      }
+                    ],
+                    staticClass: "col-sm-9",
+                    class: {
+                      "form-control": true,
+                      "is-invalid": _vm.errors.has("title")
+                    },
+                    attrs: {
+                      "data-vv-delay": "20",
+                      name: "title",
+                      type: "text",
+                      placeholder:
+                        "Example: Student name, Institute's team achievement"
+                    },
+                    domProps: { value: _vm.formData.title },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(_vm.formData, "title", $event.target.value)
+                      }
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "span",
+                    {
+                      directives: [
+                        {
+                          name: "show",
+                          rawName: "v-show",
+                          value: _vm.errors.has("title"),
+                          expression: "errors.has('title')"
+                        }
+                      ],
+                      staticClass: "text-danger mx-auto"
+                    },
+                    [_vm._v(_vm._s(_vm.errors.first("title")))]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "span",
+                    {
+                      directives: [
+                        {
+                          name: "show",
+                          rawName: "v-show",
+                          value: _vm.serverErrors.title != "",
+                          expression: "serverErrors.title != ''"
+                        }
+                      ],
+                      staticClass: "help is-danger mx-auto"
+                    },
+                    [_vm._v(_vm._s(_vm.serverErrors.title))]
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass: "form-group row mx-lg-5",
+                  class: {
+                    "has-error":
+                      _vm.errors.has("serverErrors.descriptions") ||
+                      _vm.serverErrors.descriptions != ""
+                  }
+                },
+                [
+                  _c(
+                    "label",
+                    { staticClass: "col-sm-3 col-form-label text-right" },
+                    [_vm._v("\n          Achievement Description :")]
+                  ),
+                  _vm._v(" "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.formData.description,
+                        expression: "formData.description"
+                      },
+                      {
+                        name: "validate",
+                        rawName: "v-validate",
+                        value: "required",
+                        expression: "'required'"
+                      }
+                    ],
+                    staticClass: "col-sm-9",
+                    class: {
+                      "form-control": true,
+                      "is-invalid": _vm.errors.has("descriptions")
+                    },
+                    attrs: {
+                      "data-vv-delay": "20",
+                      name: "descriptions",
+                      type: "text",
+                      placeholder: "Describe achievement in seven words"
+                    },
+                    domProps: { value: _vm.formData.description },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(
+                          _vm.formData,
+                          "description",
+                          $event.target.value
+                        )
+                      }
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "span",
+                    {
+                      directives: [
+                        {
+                          name: "show",
+                          rawName: "v-show",
+                          value: _vm.errors.has("descriptions"),
+                          expression: "errors.has('descriptions')"
+                        }
+                      ],
+                      staticClass: "text-danger mx-auto"
+                    },
+                    [_vm._v(_vm._s(_vm.errors.first("descriptions")))]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "span",
+                    {
+                      directives: [
+                        {
+                          name: "show",
+                          rawName: "v-show",
+                          value: _vm.serverErrors.descriptions != "",
+                          expression: "serverErrors.descriptions != ''"
+                        }
+                      ],
+                      staticClass: "help is-danger mx-auto"
+                    },
+                    [_vm._v(_vm._s(_vm.serverErrors.descriptions))]
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "div",
+                {
+                  staticClass: "form-group row mx-lg-5",
+                  class: {
+                    "has-error":
+                      _vm.errors.has("date") || _vm.serverErrors.date != ""
+                  }
+                },
+                [
+                  _c(
+                    "label",
+                    { staticClass: "col-sm-3 col-form-label text-right" },
+                    [_vm._v("\n          Achievement Event Date :")]
+                  ),
+                  _vm._v(" "),
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.formData.date,
+                        expression: "formData.date"
+                      },
+                      {
+                        name: "validate",
+                        rawName: "v-validate",
+                        value: "required",
+                        expression: "'required'"
+                      }
+                    ],
+                    staticClass: "col-sm-9",
+                    class: {
+                      "form-control": true,
+                      "is-invalid": _vm.errors.has("date")
+                    },
+                    attrs: {
+                      "data-vv-delay": "20",
+                      name: "date",
+                      type: "date",
+                      max: _vm.todaysDate,
+                      placeholder: "date"
+                    },
+                    domProps: { value: _vm.formData.date },
+                    on: {
+                      focus: function($event) {
+                        _vm.serverErrors.date = ""
+                      },
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(_vm.formData, "date", $event.target.value)
+                      }
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c("i", {
                     directives: [
                       {
                         name: "show",
                         rawName: "v-show",
-                        value: _vm.serverErrors.image_path != "",
-                        expression: "serverErrors.image_path != ''"
+                        value: _vm.errors.has("date"),
+                        expression: "errors.has('date')"
                       }
                     ],
-                    staticClass: "text-danger"
-                  },
-                  [_vm._v(_vm._s(_vm.serverErrors.image_path))]
-                ),
-                _vm._v(" "),
-                _c("br"),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticClass: "form-group row mx-lg-5",
-                    class: {
-                      "has-error":
-                        _vm.errors.has("serverErrors.title") ||
-                        _vm.serverErrors.title != ""
-                    }
-                  },
-                  [
-                    _c(
-                      "label",
-                      { staticClass: "col-sm-3 col-form-label text-right" },
-                      [_vm._v("Achievement Title :")]
-                    ),
-                    _vm._v(" "),
-                    _c("input", {
-                      directives: [
-                        {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.formData.title,
-                          expression: "formData.title"
-                        },
-                        {
-                          name: "validate",
-                          rawName: "v-validate",
-                          value: "required",
-                          expression: "'required'"
-                        }
-                      ],
-                      staticClass: "col-sm-9",
-                      class: {
-                        "form-control": true,
-                        "is-invalid": _vm.errors.has("title")
-                      },
-                      attrs: {
-                        "data-vv-delay": "20",
-                        name: "title",
-                        type: "text",
-                        placeholder:
-                          "Example: Student name, Institute's team achievement"
-                      },
-                      domProps: { value: _vm.formData.title },
-                      on: {
-                        input: function($event) {
-                          if ($event.target.composing) {
-                            return
-                          }
-                          _vm.$set(_vm.formData, "title", $event.target.value)
-                        }
-                      }
-                    }),
-                    _vm._v(" "),
-                    _c(
-                      "span",
-                      {
-                        directives: [
-                          {
-                            name: "show",
-                            rawName: "v-show",
-                            value: _vm.errors.has("title"),
-                            expression: "errors.has('title')"
-                          }
-                        ],
-                        staticClass: "text-danger mx-auto"
-                      },
-                      [_vm._v(_vm._s(_vm.errors.first("title")))]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "span",
-                      {
-                        directives: [
-                          {
-                            name: "show",
-                            rawName: "v-show",
-                            value: _vm.serverErrors.title != "",
-                            expression: "serverErrors.title != ''"
-                          }
-                        ],
-                        staticClass: "help is-danger mx-auto"
-                      },
-                      [_vm._v(_vm._s(_vm.serverErrors.title))]
-                    )
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticClass: "form-group row mx-lg-5",
-                    class: {
-                      "has-error":
-                        _vm.errors.has("serverErrors.descriptions") ||
-                        _vm.serverErrors.descriptions != ""
-                    }
-                  },
-                  [
-                    _c(
-                      "label",
-                      { staticClass: "col-sm-3 col-form-label text-right" },
-                      [_vm._v("\n          Achievement Description :")]
-                    ),
-                    _vm._v(" "),
-                    _c("input", {
-                      directives: [
-                        {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.formData.description,
-                          expression: "formData.description"
-                        },
-                        {
-                          name: "validate",
-                          rawName: "v-validate",
-                          value: "required",
-                          expression: "'required'"
-                        }
-                      ],
-                      staticClass: "col-sm-9",
-                      class: {
-                        "form-control": true,
-                        "is-invalid": _vm.errors.has("descriptions")
-                      },
-                      attrs: {
-                        "data-vv-delay": "20",
-                        name: "descriptions",
-                        type: "text",
-                        placeholder: "Describe achievement in seven words"
-                      },
-                      domProps: { value: _vm.formData.description },
-                      on: {
-                        input: function($event) {
-                          if ($event.target.composing) {
-                            return
-                          }
-                          _vm.$set(
-                            _vm.formData,
-                            "description",
-                            $event.target.value
-                          )
-                        }
-                      }
-                    }),
-                    _vm._v(" "),
-                    _c(
-                      "span",
-                      {
-                        directives: [
-                          {
-                            name: "show",
-                            rawName: "v-show",
-                            value: _vm.errors.has("descriptions"),
-                            expression: "errors.has('descriptions')"
-                          }
-                        ],
-                        staticClass: "text-danger mx-auto"
-                      },
-                      [_vm._v(_vm._s(_vm.errors.first("descriptions")))]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "span",
-                      {
-                        directives: [
-                          {
-                            name: "show",
-                            rawName: "v-show",
-                            value: _vm.serverErrors.descriptions != "",
-                            expression: "serverErrors.descriptions != ''"
-                          }
-                        ],
-                        staticClass: "help is-danger mx-auto"
-                      },
-                      [_vm._v(_vm._s(_vm.serverErrors.descriptions))]
-                    )
-                  ]
-                ),
-                _vm._v(" "),
-                _c(
-                  "div",
-                  {
-                    staticClass: "form-group row mx-lg-5",
-                    class: {
-                      "has-error":
-                        _vm.errors.has("date") || _vm.serverErrors.date != ""
-                    }
-                  },
-                  [
-                    _c(
-                      "label",
-                      { staticClass: "col-sm-3 col-form-label text-right" },
-                      [_vm._v("\n          Achievement Event Date :")]
-                    ),
-                    _vm._v(" "),
-                    _c("input", {
-                      directives: [
-                        {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.formData.date,
-                          expression: "formData.date"
-                        },
-                        {
-                          name: "validate",
-                          rawName: "v-validate",
-                          value: "required",
-                          expression: "'required'"
-                        }
-                      ],
-                      staticClass: "col-sm-9",
-                      class: {
-                        "form-control": true,
-                        "is-invalid": _vm.errors.has("date")
-                      },
-                      attrs: {
-                        "data-vv-delay": "20",
-                        name: "date",
-                        type: "date",
-                        max: _vm.todaysDate,
-                        placeholder: "date"
-                      },
-                      domProps: { value: _vm.formData.date },
-                      on: {
-                        focus: function($event) {
-                          _vm.serverErrors.date = ""
-                        },
-                        input: function($event) {
-                          if ($event.target.composing) {
-                            return
-                          }
-                          _vm.$set(_vm.formData, "date", $event.target.value)
-                        }
-                      }
-                    }),
-                    _vm._v(" "),
-                    _c("i", {
+                    staticClass: "is-invalid"
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "span",
+                    {
                       directives: [
                         {
                           name: "show",
@@ -2251,75 +2271,59 @@ var render = function() {
                           expression: "errors.has('date')"
                         }
                       ],
-                      staticClass: "is-invalid"
-                    }),
-                    _vm._v(" "),
-                    _c(
-                      "span",
-                      {
-                        directives: [
-                          {
-                            name: "show",
-                            rawName: "v-show",
-                            value: _vm.errors.has("date"),
-                            expression: "errors.has('date')"
-                          }
-                        ],
-                        staticClass: "text-danger"
-                      },
-                      [_vm._v(_vm._s(_vm.errors.first("date")))]
-                    ),
-                    _vm._v(" "),
-                    _c(
-                      "span",
-                      {
-                        directives: [
-                          {
-                            name: "show",
-                            rawName: "v-show",
-                            value: _vm.serverErrors.date != "",
-                            expression: "serverErrors.date != ''"
-                          }
-                        ],
-                        staticClass: "text-danger"
-                      },
-                      [_vm._v(_vm._s(_vm.serverErrors.date))]
-                    )
-                  ]
-                ),
-                _vm._v(" "),
-                _c("div", { staticClass: "text-center" }, [
-                  _c(
-                    "button",
-                    {
-                      staticClass: "btn btn-success rounded-0",
-                      attrs: { type: "btn" },
-                      on: {
-                        click: function($event) {
-                          return _vm.canCleSubmittion()
-                        }
-                      }
+                      staticClass: "text-danger"
                     },
-                    [_vm._v("\n          Cancel\n        ")]
+                    [_vm._v(_vm._s(_vm.errors.first("date")))]
                   ),
                   _vm._v(" "),
                   _c(
-                    "button",
+                    "span",
                     {
-                      staticClass: "btn btnsubmit mt-n2",
-                      attrs: { type: "submit" }
+                      directives: [
+                        {
+                          name: "show",
+                          rawName: "v-show",
+                          value: _vm.serverErrors.date != "",
+                          expression: "serverErrors.date != ''"
+                        }
+                      ],
+                      staticClass: "text-danger"
                     },
-                    [_vm._v("Submit")]
+                    [_vm._v(_vm._s(_vm.serverErrors.date))]
                   )
-                ])
-              ],
-              1
-            )
-          ])
-        : _vm._e()
-    ],
-    2
-  )
+                ]
+              ),
+              _vm._v(" "),
+              _c("div", { staticClass: "text-center" }, [
+                _c(
+                  "button",
+                  {
+                    staticClass: "btn btn-success rounded-0",
+                    attrs: { type: "btn" },
+                    on: {
+                      click: function($event) {
+                        return _vm.canCleSubmittion()
+                      }
+                    }
+                  },
+                  [_vm._v("\n          Cancel\n        ")]
+                ),
+                _vm._v(" "),
+                _c(
+                  "button",
+                  {
+                    staticClass: "btn btnsubmit mt-n2",
+                    attrs: { type: "submit" }
+                  },
+                  [_vm._v("Submit")]
+                )
+              ])
+            ],
+            1
+          )
+        ])
+      : _vm._e()
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true

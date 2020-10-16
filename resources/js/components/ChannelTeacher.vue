@@ -41,9 +41,9 @@
         Delete
       </button>
     </div-->
-    <div class="row mx-0 mt-5">
+    <div class="row mx-0 my-5">
       <div
-        class="card shadow mx-auto sidebar-facard"
+        class="card shadow mx-auto sidebar-facard mb-4"
         v-for="(teacher, index) in teachersData"
         :key="index"
       >

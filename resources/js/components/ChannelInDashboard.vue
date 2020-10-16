@@ -191,7 +191,6 @@
                       v-for="(notification, index) in channelData.notification"
                       :key="index"
                     >
-                      <i class="fa fa-long-arrow-right" aria-hidden="true"></i>
                       {{ notification.notify }}
                       <span class="badge badge-info" v-if="index === 0"
                         >New</span
@@ -243,11 +242,20 @@
               <hr class="mt-n2" />
               <div class="row my-5" v-if="channelData.achievement != null">
                 <div
-                  class="card shadow mx-auto facultyachievecard"
+                  class="card shadow mx-auto facultyachievecard mb-4"
                   v-for="(achievement, index) in channelData.achievement"
                   :key="index"
                 >
-                  <img :src="domainUrl + '/' + achievement.image_path" />
+                  <img
+                    :src="
+                      domainUrl +
+                      '/' +
+                      'media/channel/' +
+                      channelData.user_id +
+                      '/achievement/' +
+                      achievement.image_path
+                    "
+                  />
                   <div class="card-body mt-n1">
                     <h6 class="card-title my-n1">{{ achievement.title }}</h6>
                     <p class="card-text">
@@ -279,7 +287,17 @@
                 </div>
                 <div class="col-md-6">
                   <div class="card principalcard">
-                    <img :src="domainUrl + '/images/' + userData.avatar" />
+                    <img
+                      :src="
+                        userData.avatar === 'default.webp'
+                          ? '/images/' + userData.avatar
+                          : domainUrl +
+                            '/media/channel/' +
+                            userData.id +
+                            '/profile/' +
+                            userData.avatar
+                      "
+                    />
                     <!-- <img src="/image/default.jpg" /> -->
                     <div class="card-body mt-n1">
                       <h4 class="card-title my-n1 text-capitalize">
@@ -328,6 +346,7 @@
                 <p>
                   <img src="/images/grade.svg" alt="Exam board icon" /> Board:
                   <button
+                    class="btn btn-info m-1"
                     v-for="(board, index) in channelData.board"
                     :key="index"
                   >
@@ -355,7 +374,7 @@
               <hr class="mt-n2" />
               <div class="row my-5">
                 <div
-                  class="card shadow mx-auto facultyachievecard"
+                  class="card shadow mx-auto facultyachievecard mb-4"
                   v-for="(teacher, index) in channelData.teacher"
                   :key="index"
                 >
@@ -387,9 +406,9 @@
                   <img
                     class="mr-2"
                     src="/images/stationery.svg"
-                    alt="Electricity Image"
+                    alt="stationery Image"
                   />
-                  Stationary:<strong class="ml-1">
+                  Stationary:<strong class="ml-1 text-capitalize">
                     {{
                       channelData.stationary != null
                         ? channelData.stationary
@@ -403,7 +422,7 @@
                     src="/images/computer.svg"
                     alt="computer Image"
                   />
-                  Computer : <strong class="ml-1">
+                  Computer : <strong class="ml-1 text-capitalize">
                     {{
                       channelData.computer_learning != null
                         ? channelData.computer_learning
@@ -417,7 +436,7 @@
                     src="/images/hostel.svg"
                     alt="Hostel Image"
                   />
-                  Boys Hostel : <strong class="ml-1">
+                  Boys Hostel : <strong class="ml-1 text-capitalize">
                     {{
                       channelData.boys_hostel != null
                         ? channelData.boys_hostel
@@ -427,7 +446,7 @@
                 </p>
                 <p>
                   <img class="mr-2" src="/images/bus.svg" alt="Bus Image" />
-                  Girls Hostel : <strong class="ml-1">
+                  Girls Hostel : <strong class="ml-1 text-capitalize">
                     {{
                       channelData.girls_hostel != null
                         ? channelData.girls_hostel
@@ -443,7 +462,7 @@
                     src="/images/playground.svg"
                     alt="playground Image"
                   />
-                  Playground : <strong class="ml-1">
+                  Playground : <strong class="ml-1 text-capitalize">
                     {{
                       channelData.playground != null
                         ? channelData.playground
@@ -457,7 +476,7 @@
                     src="/images/library.svg"
                     alt="Library Image"
                   />
-                  Library : <strong class="ml-1">
+                  Library : <strong class="ml-1 text-capitalize">
                     {{
                       channelData.library != null
                         ? channelData.library
@@ -467,7 +486,7 @@
                 </p>
                 <p>
                   <img class="mr-2" src="/images/book.svg" alt="Books Image" />
-                  No of Books : <strong class="ml-1">
+                  No of Books : <strong class="ml-1 text-capitalize">
                     {{
                       channelData.no_of_books != null
                         ? channelData.no_of_books
@@ -481,9 +500,9 @@
                   <img
                     class="mr-2"
                     src="/images/canteen.svg"
-                    alt="Hostel Image"
+                    alt="canteen Image"
                   />
-                  Canteen : <strong class="ml-1">
+                  Canteen : <strong class="ml-1 text-capitalize">
                     {{
                       channelData.canteen != null
                         ? channelData.canteen
@@ -493,7 +512,7 @@
                 </p>
                 <p>
                   <img class="mr-2" src="/images/bus.svg" alt="Bus Image" /> Bus
-                  Services : <strong class="ml-1">
+                  Services : <strong class="ml-1 text-capitalize">
                     {{
                       channelData.bus_services != null
                         ? channelData.bus_services
@@ -503,7 +522,7 @@
                 </p>
                 <p>
                   <img class="mr-2" src="/images/fence.svg" alt="fence Image" />
-                  Boundary : <strong class="ml-1">
+                  Boundary : <strong class="ml-1 text-capitalize">
                     {{
                       channelData.wall != null
                         ? channelData.wall
@@ -544,7 +563,7 @@ export default {
   created() {
     this.userData = this.user;
     this.channelData = this.channel;
-    console.log(this.channelData);
+    console.log(this.userData);
     this.phoneNo = this.userData.phone ? this.userData.phone : "Not provided";
     if (
       this.channelData.extra_attributes.social.facebook === null &&

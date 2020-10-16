@@ -232,7 +232,7 @@
                     </h5>
                   </div>
                   <hr class="w-25" />
-                  <div class="mt-5">
+                  <div class="mt-5 mx-1">
                     <p
                       v-for="(notification, index) in channelData.notification"
                       :key="index"
@@ -288,7 +288,7 @@
               <hr class="mt-n2" />
               <div class="row my-5" v-if="channelData.achievement != null">
                 <div
-                  class="card shadow mx-auto facultyachievecard"
+                  class="card shadow mx-auto facultyachievecard mb-5"
                   v-for="(achievement, index) in channelData.achievement"
                   :key="index"
                 >
@@ -386,7 +386,7 @@
               <hr class="mt-n2" />
               <div class="row my-5">
                 <div
-                  class="card shadow mx-auto facultyachievecard"
+                  class="card shadow mx-auto facultyachievecard mb-5"
                   v-for="(teacher, index) in channelData.teacher"
                   :key="index"
                 >
@@ -417,10 +417,10 @@
                 <p>
                   <img
                     class="mr-2"
-                    src="/images/electricity.svg"
-                    alt="Electricity Image"
+                    src="/images/stationery.svg"
+                    alt="stationery Image"
                   />
-                  Stationary:<strong class="ml-1">
+                  Stationary:<strong class="ml-1 text-capitalize">
                     {{
                       channelData.stationary != null
                         ? channelData.stationary
@@ -434,7 +434,7 @@
                     src="/images/computer.svg"
                     alt="computer Image"
                   />
-                  Computer:<strong class="ml-1">
+                  Computer:<strong class="ml-1 text-capitalize">
                     {{
                       channelData.computer_learning != null
                         ? channelData.computer_learning
@@ -442,12 +442,26 @@
                     }}
                   </strong>
                 </p>
-                <p>
-                  <img class="mr-2" src="/images/fence.svg" alt="fence Image" />
-                  Boundary:<strong class="ml-1">
+                 <p>
+                  <img
+                    class="mr-2"
+                    src="/images/hostel.svg"
+                    alt="Hostel Image"
+                  />
+                  Boys Hostel:<strong class="ml-1 text-capitalize">
                     {{
-                      channelData.wall != null
-                        ? channelData.wall
+                      channelData.boys_hostel != null
+                        ? channelData.boys_hostel
+                        : "Not Provided"
+                    }}
+                  </strong>
+                </p>
+                <p>
+                  <img class="mr-2" src="/images/hostel.svg" alt="hostel Image" />
+                  Girls Hostel:<strong class="ml-1 text-capitalize">
+                    {{
+                      channelData.girls_hostel != null
+                        ? channelData.girls_hostel
                         : "Not Provided"
                     }}
                   </strong>
@@ -460,7 +474,7 @@
                     src="/images/playground.svg"
                     alt="playground Image"
                   />
-                  Playground:<strong class="ml-1">
+                  Playground:<strong class="ml-1 text-capitalize">
                     {{
                       channelData.playground != null
                         ? channelData.playground
@@ -474,7 +488,7 @@
                     src="/images/library.svg"
                     alt="Library Image"
                   />
-                  Library:<strong class="ml-1">
+                  Library:<strong class="ml-1 text-capitalize">
                     {{
                       channelData.library != null
                         ? channelData.library
@@ -484,7 +498,7 @@
                 </p>
                 <p>
                   <img class="mr-2" src="/images/book.svg" alt="Books Image" />
-                  No of Books:<strong class="ml-1">
+                  No of Books:<strong class="ml-1 text-capitalize">
                     {{
                       channelData.no_of_books != null
                         ? channelData.no_of_books
@@ -497,10 +511,10 @@
                 <p>
                   <img
                     class="mr-2"
-                    src="/images/hostel.svg"
-                    alt="Hostel Image"
+                    src="/images/canteen.svg"
+                    alt="canteen Image"
                   />
-                  Canteen:<strong class="ml-1">
+                  Canteen:<strong class="ml-1 text-capitalize">
                     {{
                       channelData.canteen != null
                         ? channelData.canteen
@@ -510,7 +524,7 @@
                 </p>
                 <p>
                   <img class="mr-2" src="/images/bus.svg" alt="Bus Image" /> Bus
-                  Services:<strong class="ml-1">
+                  Services:<strong class="ml-1 text-capitalize">
                     {{
                       channelData.bus_services != null
                         ? channelData.bus_services
@@ -518,28 +532,12 @@
                     }}
                   </strong>
                 </p>
-              </div>
-              <div class="col-sm-4">
                 <p>
-                  <img
-                    class="mr-2"
-                    src="/images/hostel.svg"
-                    alt="Hostel Image"
-                  />
-                  Boys Hostel:<strong class="ml-1">
+                  <img class="mr-2" src="/images/fence.svg" alt="fence Image" />
+                  Boundary:<strong class="ml-1 text-capitalize">
                     {{
-                      channelData.boys_hostel != null
-                        ? channelData.boys_hostel
-                        : "Not Provided"
-                    }}
-                  </strong>
-                </p>
-                <p>
-                  <img class="mr-2" src="/images/bus.svg" alt="Bus Image" /> Bus
-                  Girls Hostel:<strong class="ml-1">
-                    {{
-                      channelData.girls_hostel != null
-                        ? channelData.girls_hostel
+                      channelData.wall != null
+                        ? channelData.wall
                         : "Not Provided"
                     }}
                   </strong>

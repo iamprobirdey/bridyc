@@ -649,8 +649,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -1545,7 +1543,7 @@ var render = function() {
                       _vm._v(" "),
                       _c(
                         "div",
-                        { staticClass: "mt-5" },
+                        { staticClass: "mt-5 mx-1" },
                         _vm._l(_vm.channelData.notification, function(
                           notification,
                           index
@@ -1637,7 +1635,7 @@ var render = function() {
                             {
                               key: index,
                               staticClass:
-                                "card shadow mx-auto facultyachievecard"
+                                "card shadow mx-auto facultyachievecard mb-5"
                             },
                             [
                               _c("img", {
@@ -1850,7 +1848,8 @@ var render = function() {
                       "div",
                       {
                         key: index,
-                        staticClass: "card shadow mx-auto facultyachievecard"
+                        staticClass:
+                          "card shadow mx-auto facultyachievecard mb-5"
                       },
                       [
                         _c("img", {
@@ -1911,12 +1910,12 @@ var render = function() {
                     _c("img", {
                       staticClass: "mr-2",
                       attrs: {
-                        src: "/images/electricity.svg",
-                        alt: "Electricity Image"
+                        src: "/images/stationery.svg",
+                        alt: "stationery Image"
                       }
                     }),
                     _vm._v("\n                Stationary:"),
-                    _c("strong", { staticClass: "ml-1" }, [
+                    _c("strong", { staticClass: "ml-1 text-capitalize" }, [
                       _vm._v(
                         "\n                  " +
                           _vm._s(
@@ -1938,7 +1937,7 @@ var render = function() {
                       }
                     }),
                     _vm._v("\n                Computer:"),
-                    _c("strong", { staticClass: "ml-1" }, [
+                    _c("strong", { staticClass: "ml-1 text-capitalize" }, [
                       _vm._v(
                         "\n                  " +
                           _vm._s(
@@ -1954,15 +1953,34 @@ var render = function() {
                   _c("p", [
                     _c("img", {
                       staticClass: "mr-2",
-                      attrs: { src: "/images/fence.svg", alt: "fence Image" }
+                      attrs: { src: "/images/hostel.svg", alt: "Hostel Image" }
                     }),
-                    _vm._v("\n                Boundary:"),
-                    _c("strong", { staticClass: "ml-1" }, [
+                    _vm._v("\n                Boys Hostel:"),
+                    _c("strong", { staticClass: "ml-1 text-capitalize" }, [
                       _vm._v(
                         "\n                  " +
                           _vm._s(
-                            _vm.channelData.wall != null
-                              ? _vm.channelData.wall
+                            _vm.channelData.boys_hostel != null
+                              ? _vm.channelData.boys_hostel
+                              : "Not Provided"
+                          ) +
+                          "\n                "
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("p", [
+                    _c("img", {
+                      staticClass: "mr-2",
+                      attrs: { src: "/images/hostel.svg", alt: "hostel Image" }
+                    }),
+                    _vm._v("\n                Girls Hostel:"),
+                    _c("strong", { staticClass: "ml-1 text-capitalize" }, [
+                      _vm._v(
+                        "\n                  " +
+                          _vm._s(
+                            _vm.channelData.girls_hostel != null
+                              ? _vm.channelData.girls_hostel
                               : "Not Provided"
                           ) +
                           "\n                "
@@ -1981,7 +1999,7 @@ var render = function() {
                       }
                     }),
                     _vm._v("\n                Playground:"),
-                    _c("strong", { staticClass: "ml-1" }, [
+                    _c("strong", { staticClass: "ml-1 text-capitalize" }, [
                       _vm._v(
                         "\n                  " +
                           _vm._s(
@@ -2003,7 +2021,7 @@ var render = function() {
                       }
                     }),
                     _vm._v("\n                Library:"),
-                    _c("strong", { staticClass: "ml-1" }, [
+                    _c("strong", { staticClass: "ml-1 text-capitalize" }, [
                       _vm._v(
                         "\n                  " +
                           _vm._s(
@@ -2022,7 +2040,7 @@ var render = function() {
                       attrs: { src: "/images/book.svg", alt: "Books Image" }
                     }),
                     _vm._v("\n                No of Books:"),
-                    _c("strong", { staticClass: "ml-1" }, [
+                    _c("strong", { staticClass: "ml-1 text-capitalize" }, [
                       _vm._v(
                         "\n                  " +
                           _vm._s(
@@ -2040,10 +2058,13 @@ var render = function() {
                   _c("p", [
                     _c("img", {
                       staticClass: "mr-2",
-                      attrs: { src: "/images/hostel.svg", alt: "Hostel Image" }
+                      attrs: {
+                        src: "/images/canteen.svg",
+                        alt: "canteen Image"
+                      }
                     }),
                     _vm._v("\n                Canteen:"),
-                    _c("strong", { staticClass: "ml-1" }, [
+                    _c("strong", { staticClass: "ml-1 text-capitalize" }, [
                       _vm._v(
                         "\n                  " +
                           _vm._s(
@@ -2062,7 +2083,7 @@ var render = function() {
                       attrs: { src: "/images/bus.svg", alt: "Bus Image" }
                     }),
                     _vm._v(" Bus\n                Services:"),
-                    _c("strong", { staticClass: "ml-1" }, [
+                    _c("strong", { staticClass: "ml-1 text-capitalize" }, [
                       _vm._v(
                         "\n                  " +
                           _vm._s(
@@ -2073,41 +2094,20 @@ var render = function() {
                           "\n                "
                       )
                     ])
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "col-sm-4" }, [
-                  _c("p", [
-                    _c("img", {
-                      staticClass: "mr-2",
-                      attrs: { src: "/images/hostel.svg", alt: "Hostel Image" }
-                    }),
-                    _vm._v("\n                Boys Hostel:"),
-                    _c("strong", { staticClass: "ml-1" }, [
-                      _vm._v(
-                        "\n                  " +
-                          _vm._s(
-                            _vm.channelData.boys_hostel != null
-                              ? _vm.channelData.boys_hostel
-                              : "Not Provided"
-                          ) +
-                          "\n                "
-                      )
-                    ])
                   ]),
                   _vm._v(" "),
                   _c("p", [
                     _c("img", {
                       staticClass: "mr-2",
-                      attrs: { src: "/images/bus.svg", alt: "Bus Image" }
+                      attrs: { src: "/images/fence.svg", alt: "fence Image" }
                     }),
-                    _vm._v(" Bus\n                Girls Hostel:"),
-                    _c("strong", { staticClass: "ml-1" }, [
+                    _vm._v("\n                Boundary:"),
+                    _c("strong", { staticClass: "ml-1 text-capitalize" }, [
                       _vm._v(
                         "\n                  " +
                           _vm._s(
-                            _vm.channelData.girls_hostel != null
-                              ? _vm.channelData.girls_hostel
+                            _vm.channelData.wall != null
+                              ? _vm.channelData.wall
                               : "Not Provided"
                           ) +
                           "\n                "

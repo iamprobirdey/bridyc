@@ -618,6 +618,25 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -640,7 +659,7 @@ __webpack_require__.r(__webpack_exports__);
   created: function created() {
     this.userData = this.user;
     this.channelData = this.channel;
-    console.log(this.channelData);
+    console.log(this.userData);
     this.phoneNo = this.userData.phone ? this.userData.phone : "Not provided";
 
     if (this.channelData.extra_attributes.social.facebook === null && this.channelData.extra_attributes.social.linkedin === null && this.channelData.extra_attributes.social.youtube === null && this.channelData.extra_attributes.social.instagram === null) {
@@ -1404,10 +1423,6 @@ var render = function() {
                             index
                           ) {
                             return _c("p", { key: index }, [
-                              _c("i", {
-                                staticClass: "fa fa-long-arrow-right",
-                                attrs: { "aria-hidden": "true" }
-                              }),
                               _vm._v(
                                 "\n                    " +
                                   _vm._s(notification.notify) +
@@ -1494,7 +1509,7 @@ var render = function() {
                               {
                                 key: index,
                                 staticClass:
-                                  "card shadow mx-auto facultyachievecard"
+                                  "card shadow mx-auto facultyachievecard mb-4"
                               },
                               [
                                 _c("img", {
@@ -1502,6 +1517,9 @@ var render = function() {
                                     src:
                                       _vm.domainUrl +
                                       "/" +
+                                      "media/channel/" +
+                                      _vm.channelData.user_id +
+                                      "/achievement/" +
                                       achievement.image_path
                                   }
                                 }),
@@ -1566,7 +1584,13 @@ var render = function() {
                         _c("img", {
                           attrs: {
                             src:
-                              _vm.domainUrl + "/images/" + _vm.userData.avatar
+                              _vm.userData.avatar === "default.webp"
+                                ? "/images/" + _vm.userData.avatar
+                                : _vm.domainUrl +
+                                  "/media/channel/" +
+                                  _vm.userData.id +
+                                  "/profile/" +
+                                  _vm.userData.avatar
                           }
                         }),
                         _vm._v(" "),
@@ -1687,13 +1711,17 @@ var render = function() {
                         }),
                         _vm._v(" Board:\n                "),
                         _vm._l(_vm.channelData.board, function(board, index) {
-                          return _c("button", { key: index }, [
-                            _vm._v(
-                              "\n                  " +
-                                _vm._s(board.name) +
-                                "\n                "
-                            )
-                          ])
+                          return _c(
+                            "button",
+                            { key: index, staticClass: "btn btn-info m-1" },
+                            [
+                              _vm._v(
+                                "\n                  " +
+                                  _vm._s(board.name) +
+                                  "\n                "
+                              )
+                            ]
+                          )
                         })
                       ],
                       2
@@ -1755,7 +1783,8 @@ var render = function() {
                         "div",
                         {
                           key: index,
-                          staticClass: "card shadow mx-auto facultyachievecard"
+                          staticClass:
+                            "card shadow mx-auto facultyachievecard mb-4"
                         },
                         [
                           _c("img", {
@@ -1820,11 +1849,11 @@ var render = function() {
                           staticClass: "mr-2",
                           attrs: {
                             src: "/images/stationery.svg",
-                            alt: "Electricity Image"
+                            alt: "stationery Image"
                           }
                         }),
                         _vm._v("\n                Stationary:"),
-                        _c("strong", { staticClass: "ml-1" }, [
+                        _c("strong", { staticClass: "ml-1 text-capitalize" }, [
                           _vm._v(
                             "\n                  " +
                               _vm._s(
@@ -1846,7 +1875,7 @@ var render = function() {
                           }
                         }),
                         _vm._v("\n                Computer : "),
-                        _c("strong", { staticClass: "ml-1" }, [
+                        _c("strong", { staticClass: "ml-1 text-capitalize" }, [
                           _vm._v(
                             "\n                  " +
                               _vm._s(
@@ -1868,7 +1897,7 @@ var render = function() {
                           }
                         }),
                         _vm._v("\n                Boys Hostel : "),
-                        _c("strong", { staticClass: "ml-1" }, [
+                        _c("strong", { staticClass: "ml-1 text-capitalize" }, [
                           _vm._v(
                             "\n                  " +
                               _vm._s(
@@ -1887,7 +1916,7 @@ var render = function() {
                           attrs: { src: "/images/bus.svg", alt: "Bus Image" }
                         }),
                         _vm._v("\n                Girls Hostel : "),
-                        _c("strong", { staticClass: "ml-1" }, [
+                        _c("strong", { staticClass: "ml-1 text-capitalize" }, [
                           _vm._v(
                             "\n                  " +
                               _vm._s(
@@ -1911,7 +1940,7 @@ var render = function() {
                           }
                         }),
                         _vm._v("\n                Playground : "),
-                        _c("strong", { staticClass: "ml-1" }, [
+                        _c("strong", { staticClass: "ml-1 text-capitalize" }, [
                           _vm._v(
                             "\n                  " +
                               _vm._s(
@@ -1933,7 +1962,7 @@ var render = function() {
                           }
                         }),
                         _vm._v("\n                Library : "),
-                        _c("strong", { staticClass: "ml-1" }, [
+                        _c("strong", { staticClass: "ml-1 text-capitalize" }, [
                           _vm._v(
                             "\n                  " +
                               _vm._s(
@@ -1952,7 +1981,7 @@ var render = function() {
                           attrs: { src: "/images/book.svg", alt: "Books Image" }
                         }),
                         _vm._v("\n                No of Books : "),
-                        _c("strong", { staticClass: "ml-1" }, [
+                        _c("strong", { staticClass: "ml-1 text-capitalize" }, [
                           _vm._v(
                             "\n                  " +
                               _vm._s(
@@ -1972,11 +2001,11 @@ var render = function() {
                           staticClass: "mr-2",
                           attrs: {
                             src: "/images/canteen.svg",
-                            alt: "Hostel Image"
+                            alt: "canteen Image"
                           }
                         }),
                         _vm._v("\n                Canteen : "),
-                        _c("strong", { staticClass: "ml-1" }, [
+                        _c("strong", { staticClass: "ml-1 text-capitalize" }, [
                           _vm._v(
                             "\n                  " +
                               _vm._s(
@@ -1995,7 +2024,7 @@ var render = function() {
                           attrs: { src: "/images/bus.svg", alt: "Bus Image" }
                         }),
                         _vm._v(" Bus\n                Services : "),
-                        _c("strong", { staticClass: "ml-1" }, [
+                        _c("strong", { staticClass: "ml-1 text-capitalize" }, [
                           _vm._v(
                             "\n                  " +
                               _vm._s(
@@ -2017,7 +2046,7 @@ var render = function() {
                           }
                         }),
                         _vm._v("\n                Boundary : "),
-                        _c("strong", { staticClass: "ml-1" }, [
+                        _c("strong", { staticClass: "ml-1 text-capitalize" }, [
                           _vm._v(
                             "\n                  " +
                               _vm._s(

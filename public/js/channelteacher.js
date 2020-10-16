@@ -341,11 +341,14 @@ var render = function() {
     _vm._v(" "),
     _c(
       "div",
-      { staticClass: "row mx-0 mt-5" },
+      { staticClass: "row mx-0 my-5" },
       _vm._l(_vm.teachersData, function(teacher, index) {
         return _c(
           "div",
-          { key: index, staticClass: "card shadow mx-auto sidebar-facard" },
+          {
+            key: index,
+            staticClass: "card shadow mx-auto sidebar-facard mb-4"
+          },
           [
             _c("img", {
               attrs: { src: "/images/teacher.jpg", alt: "faculty member image" }

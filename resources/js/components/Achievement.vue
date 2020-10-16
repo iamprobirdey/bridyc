@@ -6,8 +6,10 @@
     <button class="btn btnadd p-1 ml-1 rounded-0" @click="addAchievement()">
       <i class="fa fa-plus" aria-hidden="true"></i>
     </button>
-    <div v-for="(achievement, index) in achievementData" :key="index">
-      <div class="card shadow mx-auto sidebar-facard">
+    <div class="row my-5" >
+      <div class="card shadow mx-auto sidebar-facard mb-4" 
+      v-for="(achievement, index) in achievementData" 
+      :key="index">
         <img
           :src="
             baseUrl +
@@ -26,8 +28,7 @@
             {{ achievement.date }}
           </p>
         </div>
-      </div>
-      <div class="text-center">
+        <div class="text-center">
         <button
           class="btn mb-5 editachieve"
           data-toggle="tooltip"
@@ -38,6 +39,8 @@
           <i class="fa fa-pencil" aria-hidden="true"></i>
         </button>
       </div>
+      </div>
+      
     </div>
     <br />
     <div class="mt-5" v-if="openAchievementForm">

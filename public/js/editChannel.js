@@ -427,6 +427,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -916,43 +918,6 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -15082,14 +15047,7 @@ var render = function() {
         [_c("college", { attrs: { channel: _vm.channelData } })],
         1
       )
-    ]),
-    _vm._v(" "),
-    _c(
-      "div",
-      { staticClass: "mt-5 ml-n5" },
-      [_c("phone", { attrs: { user: _vm.userData } })],
-      1
-    )
+    ])
   ])
 }
 var staticRenderFns = []
@@ -15128,7 +15086,7 @@ var render = function() {
             _vm._l(_vm.userData, function(board, index) {
               return _c(
                 "button",
-                { key: index, staticClass: "btn btn-success" },
+                { key: index, staticClass: "btn btn-success m-1" },
                 [_vm._v("\n      " + _vm._s(board.name) + "\n    ")]
               )
             }),
@@ -15224,6 +15182,8 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", [
     _c("div", [
+      _c("h4", [_vm._v("Your Gallery")]),
+      _vm._v(" "),
       _c(
         "ul",
         { staticClass: "nav" },
@@ -15263,8 +15223,6 @@ var render = function() {
     ]),
     _vm._v(" "),
     _c("br"),
-    _vm._v(" "),
-    _c("h4", [_vm._v("Images of your Institute")]),
     _vm._v(" "),
     !_vm.collegeImageEntry
       ? _c(
@@ -15874,7 +15832,7 @@ var render = function() {
                   }
                 }),
                 _vm._v("\n                 Stationery : "),
-                _c("strong", { staticClass: "ml-1" }, [
+                _c("strong", { staticClass: "ml-1 text-capitalize" }, [
                   _vm._v(
                     "\n                   " +
                       _vm._s(_vm.infrastructure.stationary) +
@@ -15889,7 +15847,7 @@ var render = function() {
                   attrs: { src: "/images/computer.svg", alt: "computer Image" }
                 }),
                 _vm._v("\n                 Computer : "),
-                _c("strong", { staticClass: "ml-1" }, [
+                _c("strong", { staticClass: "ml-1 text-capitalize" }, [
                   _vm._v(
                     "\n                   " +
                       _vm._s(_vm.infrastructure.computer_learning) +
@@ -15904,7 +15862,7 @@ var render = function() {
                   attrs: { src: "/images/hostel.svg", alt: "Hostel Image" }
                 }),
                 _vm._v("\n                 Boys Hostel : "),
-                _c("strong", { staticClass: "ml-1" }, [
+                _c("strong", { staticClass: "ml-1 text-capitalize" }, [
                   _vm._v(
                     "\n                   " +
                       _vm._s(_vm.infrastructure.boys_hostel) +
@@ -15919,7 +15877,7 @@ var render = function() {
                   attrs: { src: "/images/bus.svg", alt: "Bus Image" }
                 }),
                 _vm._v("\n                 Girls Hostel : "),
-                _c("strong", { staticClass: "ml-1" }, [
+                _c("strong", { staticClass: "ml-1 text-capitalize" }, [
                   _vm._v(
                     "\n                   " +
                       _vm._s(_vm.infrastructure.girls_hostel) +
@@ -15939,7 +15897,7 @@ var render = function() {
                   }
                 }),
                 _vm._v("\n                 Playground : "),
-                _c("strong", { staticClass: "ml-1" }, [
+                _c("strong", { staticClass: "ml-1 text-capitalize" }, [
                   _vm._v(
                     "\n                   " +
                       _vm._s(_vm.infrastructure.playground) +
@@ -15954,7 +15912,7 @@ var render = function() {
                   attrs: { src: "/images/library.svg", alt: "Library Image" }
                 }),
                 _vm._v("\n                 Library : "),
-                _c("strong", { staticClass: "ml-1" }, [
+                _c("strong", { staticClass: "ml-1 text-capitalize" }, [
                   _vm._v(
                     "\n                   " +
                       _vm._s(_vm.infrastructure.library) +
@@ -15969,7 +15927,7 @@ var render = function() {
                   attrs: { src: "/images/book.svg", alt: "Books Image" }
                 }),
                 _vm._v("\n                 No of Books : "),
-                _c("strong", { staticClass: "ml-1" }, [
+                _c("strong", { staticClass: "ml-1 text-capitalize" }, [
                   _vm._v(
                     "\n                   " +
                       _vm._s(_vm.infrastructure.no_of_books) +
@@ -15986,7 +15944,7 @@ var render = function() {
                   attrs: { src: "/images/canteen.svg", alt: "Canteen Image" }
                 }),
                 _vm._v("\n                 Canteen : "),
-                _c("strong", { staticClass: "ml-1" }, [
+                _c("strong", { staticClass: "ml-1 text-capitalize" }, [
                   _vm._v(
                     "\n                   " +
                       _vm._s(_vm.infrastructure.canteen) +
@@ -16001,7 +15959,7 @@ var render = function() {
                   attrs: { src: "/images/bus.svg", alt: "Bus Image" }
                 }),
                 _vm._v(" Bus\n                 Services : "),
-                _c("strong", { staticClass: "ml-1" }, [
+                _c("strong", { staticClass: "ml-1 text-capitalize" }, [
                   _vm._v(
                     "\n                   " +
                       _vm._s(_vm.infrastructure.bus_services) +
@@ -16016,45 +15974,13 @@ var render = function() {
                   attrs: { src: "/images/fence.svg", alt: "fence Image" }
                 }),
                 _vm._v("\n                 Boundary : "),
-                _c("strong", { staticClass: "ml-1" }, [
+                _c("strong", { staticClass: "ml-1 text-capitalize" }, [
                   _vm._v(
                     "\n                  " +
                       _vm._s(_vm.infrastructure.wall) +
                       "\n                 "
                   )
                 ])
-              ])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("table", { staticClass: "table-responsive" }, [
-            _vm._m(1),
-            _vm._v(" "),
-            _c("tbody", [
-              _c("tr", [
-                _c("th", [_vm._v(_vm._s(_vm.infrastructure.no_of_class))]),
-                _vm._v(" "),
-                _c("th", [_vm._v(_vm._s(_vm.infrastructure.boys_hostel))]),
-                _vm._v(" "),
-                _c("th", [_vm._v(_vm._s(_vm.infrastructure.girls_hostel))]),
-                _vm._v(" "),
-                _c("th", [_vm._v(_vm._s(_vm.infrastructure.canteen))]),
-                _vm._v(" "),
-                _c("th", [_vm._v(_vm._s(_vm.infrastructure.stationary))]),
-                _vm._v(" "),
-                _c("th", [
-                  _vm._v(_vm._s(_vm.infrastructure.computer_learning))
-                ]),
-                _vm._v(" "),
-                _c("th", [_vm._v(_vm._s(_vm.infrastructure.wall))]),
-                _vm._v(" "),
-                _c("th", [_vm._v(_vm._s(_vm.infrastructure.library))]),
-                _vm._v(" "),
-                _c("th", [_vm._v(_vm._s(_vm.infrastructure.no_of_books))]),
-                _vm._v(" "),
-                _c("th", [_vm._v(_vm._s(_vm.infrastructure.playground))]),
-                _vm._v(" "),
-                _c("th", [_vm._v(_vm._s(_vm.infrastructure.bus_services))])
               ])
             ])
           ])
@@ -17333,36 +17259,6 @@ var staticRenderFns = [
       { staticClass: "infraheader mb-3 p-1", attrs: { id: "infrastrucuter" } },
       [_c("h3", [_vm._v("Let's talk about Infrastructure")])]
     )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("thead", { staticClass: "thead-dark" }, [
-      _c("tr", [
-        _c("th", { attrs: { scope: "col-sm-4" } }, [_vm._v("No of Class")]),
-        _vm._v(" "),
-        _c("th", { attrs: { scope: "col" } }, [_vm._v("Boys Hostel")]),
-        _vm._v(" "),
-        _c("th", { attrs: { scope: "col" } }, [_vm._v("Girls Hostel")]),
-        _vm._v(" "),
-        _c("th", { attrs: { scope: "col" } }, [_vm._v("Canteen")]),
-        _vm._v(" "),
-        _c("th", { attrs: { scope: "col" } }, [_vm._v("Stationary")]),
-        _vm._v(" "),
-        _c("th", { attrs: { scope: "col" } }, [_vm._v("Computer Learning")]),
-        _vm._v(" "),
-        _c("th", { attrs: { scope: "col" } }, [_vm._v("Wall")]),
-        _vm._v(" "),
-        _c("th", { attrs: { scope: "col" } }, [_vm._v("Library")]),
-        _vm._v(" "),
-        _c("th", { attrs: { scope: "col" } }, [_vm._v("No. of books")]),
-        _vm._v(" "),
-        _c("th", { attrs: { scope: "col" } }, [_vm._v("Playground")]),
-        _vm._v(" "),
-        _c("th", { attrs: { scope: "col" } }, [_vm._v("Bus Services")])
-      ])
-    ])
   }
 ]
 render._withStripped = true
@@ -18189,7 +18085,7 @@ var render = function() {
             _vm._l(_vm.userData, function(standard, index) {
               return _c(
                 "button",
-                { key: index, staticClass: "btn btn-success" },
+                { key: index, staticClass: "btn btn-success m-1" },
                 [_vm._v("\n      " + _vm._s(standard.standard_name) + "\n    ")]
               )
             }),

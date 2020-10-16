@@ -85,6 +85,34 @@ class PermissionAndUserSeeder extends Seeder
             $user->assignRole('institute');
         }
 
+        for ($i = 0; $i < 10; $i++) {
+
+            $user = User::create([
+                'name' => Str::random(10),
+                'email' => 'student' . $i . '@gmail.com',
+                'password' => '$2y$10$A5qfm/Ssy2JOTLf5PQKOxeIFrLTOUaK5nwONeWstGu07wQDAEciwK',
+                'username' => 'student' . $i,
+                'user_type' => 'student',
+
+            ]);
+            $user->update(['email_verified_at' => Carbon::now()]);
+            $user->assignRole('student');
+        }
+
+        for ($i = 0; $i < 10; $i++) {
+
+            $user = User::create([
+                'name' => Str::random(10),
+                'email' => 'teacher' . $i . '@gmail.com',
+                'password' => '$2y$10$A5qfm/Ssy2JOTLf5PQKOxeIFrLTOUaK5nwONeWstGu07wQDAEciwK',
+                'username' => 'teacher' . $i,
+                'user_type' => 'teacher',
+
+            ]);
+            $user->update(['email_verified_at' => Carbon::now()]);
+            $user->assignRole('teacher');
+        }
+
 
         $user1->update(['email_verified_at' => Carbon::now()]);
         // $user2->update(['email_verified_at' => Carbon::now()]);
