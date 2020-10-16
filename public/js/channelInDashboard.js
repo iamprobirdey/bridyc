@@ -618,8 +618,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -1812,223 +1810,228 @@ var render = function() {
                 _vm._v(" "),
                 _c("hr", { staticClass: "mt-n2" }),
                 _vm._v(" "),
-                _c("div", { staticClass: "row facilitydiv mt-5 py-3" }, [
-                  _c("div", { staticClass: "col-sm-4" }, [
-                    _c("p", [
-                      _c("img", {
-                        staticClass: "mr-2",
-                        attrs: {
-                          src: "/images/electricity.svg",
-                          alt: "Electricity Image"
-                        }
-                      }),
-                      _vm._v("\n                Stationary:"),
-                      _c("strong", { staticClass: "ml-1" }, [
-                        _vm._v(
-                          "\n                  " +
-                            _vm._s(
-                              _vm.channelData.stationary != null
-                                ? _vm.channelData.stationary
-                                : "Not Provided"
-                            ) +
-                            "\n                "
-                        )
+                _c(
+                  "div",
+                  { staticClass: "row infrastructure-display mt-5 py-3" },
+                  [
+                    _c("div", { staticClass: "col-sm-4" }, [
+                      _c("p", [
+                        _c("img", {
+                          staticClass: "mr-2",
+                          attrs: {
+                            src: "/images/stationery.svg",
+                            alt: "Electricity Image"
+                          }
+                        }),
+                        _vm._v("\n                Stationary:"),
+                        _c("strong", { staticClass: "ml-1" }, [
+                          _vm._v(
+                            "\n                  " +
+                              _vm._s(
+                                _vm.channelData.stationary != null
+                                  ? _vm.channelData.stationary
+                                  : "Not Provided"
+                              ) +
+                              "\n                "
+                          )
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("p", [
+                        _c("img", {
+                          staticClass: "mr-2",
+                          attrs: {
+                            src: "/images/computer.svg",
+                            alt: "computer Image"
+                          }
+                        }),
+                        _vm._v("\n                Computer : "),
+                        _c("strong", { staticClass: "ml-1" }, [
+                          _vm._v(
+                            "\n                  " +
+                              _vm._s(
+                                _vm.channelData.computer_learning != null
+                                  ? _vm.channelData.computer_learning
+                                  : "Not Provided"
+                              ) +
+                              "\n                "
+                          )
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("p", [
+                        _c("img", {
+                          staticClass: "mr-2",
+                          attrs: {
+                            src: "/images/hostel.svg",
+                            alt: "Hostel Image"
+                          }
+                        }),
+                        _vm._v("\n                Boys Hostel : "),
+                        _c("strong", { staticClass: "ml-1" }, [
+                          _vm._v(
+                            "\n                  " +
+                              _vm._s(
+                                _vm.channelData.boys_hostel != null
+                                  ? _vm.channelData.boys_hostel
+                                  : "Not Provided"
+                              ) +
+                              "\n                "
+                          )
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("p", [
+                        _c("img", {
+                          staticClass: "mr-2",
+                          attrs: { src: "/images/bus.svg", alt: "Bus Image" }
+                        }),
+                        _vm._v("\n                Girls Hostel : "),
+                        _c("strong", { staticClass: "ml-1" }, [
+                          _vm._v(
+                            "\n                  " +
+                              _vm._s(
+                                _vm.channelData.girls_hostel != null
+                                  ? _vm.channelData.girls_hostel
+                                  : "Not Provided"
+                              ) +
+                              "\n                "
+                          )
+                        ])
                       ])
                     ]),
                     _vm._v(" "),
-                    _c("p", [
-                      _c("img", {
-                        staticClass: "mr-2",
-                        attrs: {
-                          src: "/images/computer.svg",
-                          alt: "computer Image"
-                        }
-                      }),
-                      _vm._v("\n                Computer:"),
-                      _c("strong", { staticClass: "ml-1" }, [
-                        _vm._v(
-                          "\n                  " +
-                            _vm._s(
-                              _vm.channelData.computer_learning != null
-                                ? _vm.channelData.computer_learning
-                                : "Not Provided"
-                            ) +
-                            "\n                "
-                        )
+                    _c("div", { staticClass: "col-sm-4" }, [
+                      _c("p", [
+                        _c("img", {
+                          staticClass: "mr-2",
+                          attrs: {
+                            src: "/images/playground.svg",
+                            alt: "playground Image"
+                          }
+                        }),
+                        _vm._v("\n                Playground : "),
+                        _c("strong", { staticClass: "ml-1" }, [
+                          _vm._v(
+                            "\n                  " +
+                              _vm._s(
+                                _vm.channelData.playground != null
+                                  ? _vm.channelData.playground
+                                  : "Not Provided"
+                              ) +
+                              "\n                "
+                          )
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("p", [
+                        _c("img", {
+                          staticClass: "mr-2",
+                          attrs: {
+                            src: "/images/library.svg",
+                            alt: "Library Image"
+                          }
+                        }),
+                        _vm._v("\n                Library : "),
+                        _c("strong", { staticClass: "ml-1" }, [
+                          _vm._v(
+                            "\n                  " +
+                              _vm._s(
+                                _vm.channelData.library != null
+                                  ? _vm.channelData.library
+                                  : "Not Provided"
+                              ) +
+                              "\n                "
+                          )
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("p", [
+                        _c("img", {
+                          staticClass: "mr-2",
+                          attrs: { src: "/images/book.svg", alt: "Books Image" }
+                        }),
+                        _vm._v("\n                No of Books : "),
+                        _c("strong", { staticClass: "ml-1" }, [
+                          _vm._v(
+                            "\n                  " +
+                              _vm._s(
+                                _vm.channelData.no_of_books != null
+                                  ? _vm.channelData.no_of_books
+                                  : "Not Provided"
+                              ) +
+                              "\n                "
+                          )
+                        ])
                       ])
                     ]),
                     _vm._v(" "),
-                    _c("p", [
-                      _c("img", {
-                        staticClass: "mr-2",
-                        attrs: { src: "/images/fence.svg", alt: "fence Image" }
-                      }),
-                      _vm._v("\n                Boundary:"),
-                      _c("strong", { staticClass: "ml-1" }, [
-                        _vm._v(
-                          "\n                  " +
-                            _vm._s(
-                              _vm.channelData.wall != null
-                                ? _vm.channelData.wall
-                                : "Not Provided"
-                            ) +
-                            "\n                "
-                        )
+                    _c("div", { staticClass: "col-sm-4" }, [
+                      _c("p", [
+                        _c("img", {
+                          staticClass: "mr-2",
+                          attrs: {
+                            src: "/images/canteen.svg",
+                            alt: "Hostel Image"
+                          }
+                        }),
+                        _vm._v("\n                Canteen : "),
+                        _c("strong", { staticClass: "ml-1" }, [
+                          _vm._v(
+                            "\n                  " +
+                              _vm._s(
+                                _vm.channelData.canteen != null
+                                  ? _vm.channelData.canteen
+                                  : "Not Provided"
+                              ) +
+                              "\n                "
+                          )
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("p", [
+                        _c("img", {
+                          staticClass: "mr-2",
+                          attrs: { src: "/images/bus.svg", alt: "Bus Image" }
+                        }),
+                        _vm._v(" Bus\n                Services : "),
+                        _c("strong", { staticClass: "ml-1" }, [
+                          _vm._v(
+                            "\n                  " +
+                              _vm._s(
+                                _vm.channelData.bus_services != null
+                                  ? _vm.channelData.bus_services
+                                  : "Not Provided"
+                              ) +
+                              "\n                "
+                          )
+                        ])
+                      ]),
+                      _vm._v(" "),
+                      _c("p", [
+                        _c("img", {
+                          staticClass: "mr-2",
+                          attrs: {
+                            src: "/images/fence.svg",
+                            alt: "fence Image"
+                          }
+                        }),
+                        _vm._v("\n                Boundary : "),
+                        _c("strong", { staticClass: "ml-1" }, [
+                          _vm._v(
+                            "\n                  " +
+                              _vm._s(
+                                _vm.channelData.wall != null
+                                  ? _vm.channelData.wall
+                                  : "Not Provided"
+                              ) +
+                              "\n                "
+                          )
+                        ])
                       ])
                     ])
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "col-sm-4" }, [
-                    _c("p", [
-                      _c("img", {
-                        staticClass: "mr-2",
-                        attrs: {
-                          src: "/images/playground.svg",
-                          alt: "playground Image"
-                        }
-                      }),
-                      _vm._v("\n                Playground:"),
-                      _c("strong", { staticClass: "ml-1" }, [
-                        _vm._v(
-                          "\n                  " +
-                            _vm._s(
-                              _vm.channelData.playground != null
-                                ? _vm.channelData.playground
-                                : "Not Provided"
-                            ) +
-                            "\n                "
-                        )
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("p", [
-                      _c("img", {
-                        staticClass: "mr-2",
-                        attrs: {
-                          src: "/images/library.svg",
-                          alt: "Library Image"
-                        }
-                      }),
-                      _vm._v("\n                Library:"),
-                      _c("strong", { staticClass: "ml-1" }, [
-                        _vm._v(
-                          "\n                  " +
-                            _vm._s(
-                              _vm.channelData.library != null
-                                ? _vm.channelData.library
-                                : "Not Provided"
-                            ) +
-                            "\n                "
-                        )
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("p", [
-                      _c("img", {
-                        staticClass: "mr-2",
-                        attrs: { src: "/images/book.svg", alt: "Books Image" }
-                      }),
-                      _vm._v("\n                No of Books:"),
-                      _c("strong", { staticClass: "ml-1" }, [
-                        _vm._v(
-                          "\n                  " +
-                            _vm._s(
-                              _vm.channelData.no_of_books != null
-                                ? _vm.channelData.no_of_books
-                                : "Not Provided"
-                            ) +
-                            "\n                "
-                        )
-                      ])
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "col-sm-4" }, [
-                    _c("p", [
-                      _c("img", {
-                        staticClass: "mr-2",
-                        attrs: {
-                          src: "/images/hostel.svg",
-                          alt: "Hostel Image"
-                        }
-                      }),
-                      _vm._v("\n                Canteen:"),
-                      _c("strong", { staticClass: "ml-1" }, [
-                        _vm._v(
-                          "\n                  " +
-                            _vm._s(
-                              _vm.channelData.canteen != null
-                                ? _vm.channelData.canteen
-                                : "Not Provided"
-                            ) +
-                            "\n                "
-                        )
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("p", [
-                      _c("img", {
-                        staticClass: "mr-2",
-                        attrs: { src: "/images/bus.svg", alt: "Bus Image" }
-                      }),
-                      _vm._v(" Bus\n                Services:"),
-                      _c("strong", { staticClass: "ml-1" }, [
-                        _vm._v(
-                          "\n                  " +
-                            _vm._s(
-                              _vm.channelData.bus_services != null
-                                ? _vm.channelData.bus_services
-                                : "Not Provided"
-                            ) +
-                            "\n                "
-                        )
-                      ])
-                    ])
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "col-sm-4" }, [
-                    _c("p", [
-                      _c("img", {
-                        staticClass: "mr-2",
-                        attrs: {
-                          src: "/images/hostel.svg",
-                          alt: "Hostel Image"
-                        }
-                      }),
-                      _vm._v("\n                Boys Hostel:"),
-                      _c("strong", { staticClass: "ml-1" }, [
-                        _vm._v(
-                          "\n                  " +
-                            _vm._s(
-                              _vm.channelData.boys_hostel != null
-                                ? _vm.channelData.boys_hostel
-                                : "Not Provided"
-                            ) +
-                            "\n                "
-                        )
-                      ])
-                    ]),
-                    _vm._v(" "),
-                    _c("p", [
-                      _c("img", {
-                        staticClass: "mr-2",
-                        attrs: { src: "/images/bus.svg", alt: "Bus Image" }
-                      }),
-                      _vm._v("\n                Girls Hostel:"),
-                      _c("strong", { staticClass: "ml-1" }, [
-                        _vm._v(
-                          "\n                  " +
-                            _vm._s(
-                              _vm.channelData.girls_hostel != null
-                                ? _vm.channelData.girls_hostel
-                                : "Not Provided"
-                            ) +
-                            "\n                "
-                        )
-                      ])
-                    ])
-                  ])
-                ])
+                  ]
+                )
               ]
             )
           ])

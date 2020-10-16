@@ -320,7 +320,7 @@ main {
                 }
       
 
-              .facilitydiv{
+              /*.facilitydiv{
                 p{
                   font-size: 16px;
                   color: #011737;
@@ -332,7 +332,7 @@ main {
                 }
                   
                 
-              }
+              }*/
 
   }
           
@@ -389,6 +389,19 @@ main {
               margin-left:60px;
             }
           }
+     
+        .infrastructure-display{
+          p{
+            font-size: 16px;
+            color: #011737;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+           img{
+             width: 16px;
+             height: 16px;           
+           }
+          }
+        }
+
           .edit-social{
             list-style: none;
             margin-left: -40px;

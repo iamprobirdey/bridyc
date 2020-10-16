@@ -3,8 +3,105 @@
     <div id="infrastrucuter" class="infraheader mb-3 p-1">
       <h3>Let's talk about Infrastructure</h3>
     </div>
-    <div>
-      <table class="table-responsive" v-if="!infrastructureStatus">
+    <div v-if="!infrastructureStatus">
+         <div class="row infrastructure-display mt-5 py-3">
+              <div class="col-sm-4">
+                <p>
+                  <img
+                    class="mr-2"
+                    src="/images/stationery.svg"
+                    alt="Stationery Image"
+                  />
+                  Stationery : <strong class="ml-1">
+                    {{ infrastructure.stationary }}
+                  </strong>
+                </p>
+                <p>
+                  <img
+                    class="mr-2"
+                    src="/images/computer.svg"
+                    alt="computer Image"
+                  />
+                  Computer : <strong class="ml-1">
+                    {{ infrastructure.computer_learning }}
+                  </strong>
+                </p>
+ <p>
+                  <img
+                    class="mr-2"
+                    src="/images/hostel.svg"
+                    alt="Hostel Image"
+                  />
+                  Boys Hostel : <strong class="ml-1">
+                    {{ infrastructure.boys_hostel }}
+                  </strong>
+                </p>
+                <p>
+                  <img class="mr-2" src="/images/bus.svg" alt="Bus Image" />
+                  Girls Hostel : <strong class="ml-1">
+                    {{ infrastructure.girls_hostel }}
+                  </strong>
+                </p>
+              </div>
+              <div class="col-sm-4">
+                <p>
+                  <img
+                    class="mr-2"
+                    src="/images/playground.svg"
+                    alt="playground Image"
+                  />
+                  Playground : <strong class="ml-1">
+                    {{ infrastructure.playground }}
+                  </strong>
+                </p>
+                <p>
+                  <img
+                    class="mr-2"
+                    src="/images/library.svg"
+                    alt="Library Image"
+                  />
+                  Library : <strong class="ml-1">
+                    {{ infrastructure.library }}
+                  </strong>
+                </p>
+                <p>
+                  <img class="mr-2" src="/images/book.svg" alt="Books Image" />
+                  No of Books : <strong class="ml-1">
+                    {{ infrastructure.no_of_books }}
+                  </strong>
+                </p>
+              </div>
+              <div class="col-sm-4">
+                <p>
+                  <img
+                    class="mr-2"
+                    src="/images/canteen.svg"
+                    alt="Canteen Image"
+                  />
+                  Canteen : <strong class="ml-1">
+                    {{ infrastructure.canteen }}
+                  </strong>
+                </p>
+                <p>
+                  <img class="mr-2" src="/images/bus.svg" alt="Bus Image" /> Bus
+                  Services : <strong class="ml-1">
+                    {{ infrastructure.bus_services }}
+                  </strong>
+                </p>
+                <p>
+                  <img class="mr-2" src="/images/fence.svg" alt="fence Image" />
+                  Boundary : <strong class="ml-1">
+                   {{ infrastructure.wall }}
+                  </strong>
+                </p>
+              </div>
+            </div>
+
+
+
+
+
+      <table class="table-responsive" >
         <thead class="thead-dark">
           <tr>
             <th scope="col-sm-4">No of Class</th>
