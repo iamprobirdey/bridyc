@@ -380,9 +380,12 @@
                 >
                   <img
                     :src="
-                      teacher.user.avatar === 'default.jpg'
-                        ? '/images/teacher.jpg'
-                        : '/images/' + teacher.user.avatar
+                      teacher.user.avatar === 'default.webp'
+                        ? '/images/default.webp'
+                        : '/media/teacher/' +
+                          teacher.user.id +
+                          '/profile/s-' +
+                          teacher.user.avatar
                     "
                   />
                   <div class="card-body mt-n1">

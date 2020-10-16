@@ -40,16 +40,12 @@ Route::get('/pass3', function () {
 Route::get('/home', 'HomeController@test');
 
 Route::get('hobby', function () {
-    $channelStandard = Channel::select('id')->where('user_id', current_user_id())
-        ->with('standard')
-        ->get();
-    dd($channelStandard);
     $user4 = User::create([
         'name' => Str::random(10),
-        'email' => 'institute@gmail.com',
+        'email' => 'teacher2@gmail.com',
         'password' => '$2y$10$A5qfm/Ssy2JOTLf5PQKOxeIFrLTOUaK5nwONeWstGu07wQDAEciwK',
-        'username' => 'institute',
-        'user_type' => 'institute',
+        'username' => 'teacher2',
+        'user_type' => 'teacher',
 
     ]);
     //user_type => institute/student/teacher/admin
@@ -57,7 +53,7 @@ Route::get('hobby', function () {
 
     $user4->update(['email_verified_at' => Carbon::now()]);
 
-    $user4->assignRole('institute'); //institute/student/teacher
+    $user4->assignRole('teacher');
 });
 
 Auth::routes(['verify' => true]);
@@ -344,7 +340,7 @@ Route::group([
         Route::post('delete/request/of/teacher/{user_channel_request:id}', 'User\TeachersController@deleteRequest');
 
         //Teacher Deletion
-        Route::post('delete/teacher/{channel_teacher:id}', 'User\TeachersController@delete');
+        Route::post('delete/teacher/{id}', 'User\TeachersController@delete');
         //Phone Store
         Route::post('edit/channel/phone/number/{user:id}', 'User\ProfileController@phoneNumberstore');
         //Store Channel Notifiation

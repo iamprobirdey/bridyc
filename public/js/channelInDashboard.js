@@ -637,6 +637,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -1790,9 +1793,12 @@ var render = function() {
                           _c("img", {
                             attrs: {
                               src:
-                                teacher.user.avatar === "default.jpg"
-                                  ? "/images/teacher.jpg"
-                                  : "/images/" + teacher.user.avatar
+                                teacher.user.avatar === "default.webp"
+                                  ? "/images/default.webp"
+                                  : "/media/teacher/" +
+                                    teacher.user.id +
+                                    "/profile/s-" +
+                                    teacher.user.avatar
                             }
                           }),
                           _vm._v(" "),

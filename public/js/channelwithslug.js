@@ -649,6 +649,35 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -690,9 +719,8 @@ __webpack_require__.r(__webpack_exports__);
   created: function created() {
     this.userData = this.user;
     this.channelData = this.channel;
-    console.log(this.userData);
-    console.log(this.channelData);
     this.currentuserData = this.currentuser;
+    console.log(this.currentuserData);
     this.phoneNo = this.userData.phone ? this.userData.phone : "Not provided";
     this.userID = this.userid;
     this.isTeacher = this.isteacher;
@@ -1641,7 +1669,12 @@ var render = function() {
                               _c("img", {
                                 attrs: {
                                   src:
-                                    _vm.domainUrl + "/" + achievement.image_path
+                                    _vm.domainUrl +
+                                    "/" +
+                                    "media/channel/" +
+                                    _vm.channelData.user_id +
+                                    "/achievement/" +
+                                    achievement.image_path
                                 }
                               }),
                               _vm._v(" "),
@@ -1651,7 +1684,13 @@ var render = function() {
                                 ]),
                                 _vm._v(" "),
                                 _c("p", { staticClass: "card-text" }, [
-                                  _vm._v(_vm._s(achievement.description))
+                                  _vm._v(
+                                    "\n                    " +
+                                      _vm._s(
+                                        achievement.description.substr(1, 20)
+                                      ) +
+                                      "\n                  "
+                                  )
                                 ])
                               ])
                             ]
@@ -1696,7 +1735,14 @@ var render = function() {
                     _c("div", { staticClass: "card principalcard" }, [
                       _c("img", {
                         attrs: {
-                          src: _vm.domainUrl + "/images/" + _vm.userData.avatar
+                          src:
+                            _vm.userData.avatar === "default.webp"
+                              ? "/images/" + _vm.userData.avatar
+                              : _vm.domainUrl +
+                                "/media/channel/" +
+                                _vm.userData.id +
+                                "/profile/" +
+                                _vm.userData.avatar
                         }
                       }),
                       _vm._v(" "),
@@ -1793,7 +1839,28 @@ var render = function() {
                     )
                   ]),
                   _vm._v(" "),
-                  _vm._m(4),
+                  _c(
+                    "p",
+                    [
+                      _c("img", {
+                        attrs: {
+                          src: "/images/grade.svg",
+                          alt: "Exam board icon"
+                        }
+                      }),
+                      _vm._v(" Board:\n                "),
+                      _vm._l(_vm.channelData.board, function(board, index) {
+                        return _c("button", { key: index }, [
+                          _vm._v(
+                            "\n                  " +
+                              _vm._s(board.name) +
+                              "\n                "
+                          )
+                        ])
+                      })
+                    ],
+                    2
+                  ),
                   _vm._v(" "),
                   _c("p", [
                     _c("img", {
@@ -1855,9 +1922,12 @@ var render = function() {
                         _c("img", {
                           attrs: {
                             src:
-                              teacher.user.avatar === "default.jpg"
-                                ? "/images/teacher.jpg"
-                                : "/images/" + teacher.user.avatar
+                              teacher.user.avatar === "default.webp"
+                                ? "/images/default.webp"
+                                : "/media/teacher/" +
+                                  teacher.user.id +
+                                  "/profile/s-" +
+                                  teacher.user.avatar
                           }
                         }),
                         _vm._v(" "),
@@ -2224,17 +2294,6 @@ var staticRenderFns = [
       _c("h3", { staticClass: "mt-2 text-uppercase" }, [
         _vm._v("Message From The Principal")
       ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("p", [
-      _c("img", {
-        attrs: { src: "/images/grade.svg", alt: "Exam board icon" }
-      }),
-      _vm._v(" Board:\n                xxxx\n              ")
     ])
   }
 ]

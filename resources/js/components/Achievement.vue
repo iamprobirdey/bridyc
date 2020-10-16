@@ -22,7 +22,7 @@
         <div class="card-body mt-n1">
           <h6 class="card-title my-n1">{{ achievement.title }}</h6>
           <p class="card-text">
-            {{ achievement.description }}
+            {{ achievement.description.substr(1, 20) }}
           </p>
           <p class="card-text">
             {{ achievement.date }}

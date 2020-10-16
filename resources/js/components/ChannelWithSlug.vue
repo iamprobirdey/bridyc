@@ -292,10 +292,21 @@
                   v-for="(achievement, index) in channelData.achievement"
                   :key="index"
                 >
-                  <img :src="domainUrl + '/' + achievement.image_path" />
+                  <img
+                    :src="
+                      domainUrl +
+                      '/' +
+                      'media/channel/' +
+                      channelData.user_id +
+                      '/achievement/' +
+                      achievement.image_path
+                    "
+                  />
                   <div class="card-body mt-n1">
                     <h6 class="card-title my-n1">{{ achievement.title }}</h6>
-                    <p class="card-text">{{ achievement.description }}</p>
+                    <p class="card-text">
+                      {{ achievement.description.substr(1, 20) }}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -322,7 +333,17 @@
                 </div>
                 <div class="col-md-6">
                   <div class="card principalcard">
-                    <img :src="domainUrl + '/images/' + userData.avatar" />
+                    <img
+                      :src="
+                        userData.avatar === 'default.webp'
+                          ? '/images/' + userData.avatar
+                          : domainUrl +
+                            '/media/channel/' +
+                            userData.id +
+                            '/profile/' +
+                            userData.avatar
+                      "
+                    />
                     <!-- <img src="/image/default.jpg" /> -->
                     <div class="card-body mt-n1">
                       <h4 class="card-title my-n1 text-capitalize">
@@ -366,7 +387,12 @@
                 </p>
                 <p>
                   <img src="/images/grade.svg" alt="Exam board icon" /> Board:
-                  xxxx
+                  <button
+                    v-for="(board, index) in channelData.board"
+                    :key="index"
+                  >
+                    {{ board.name }}
+                  </button>
                 </p>
                 <p>
                   <img src="/images/deed.svg" alt="ownership icon" /> Ownership:
@@ -392,9 +418,12 @@
                 >
                   <img
                     :src="
-                      teacher.user.avatar === 'default.jpg'
-                        ? '/images/teacher.jpg'
-                        : '/images/' + teacher.user.avatar
+                      teacher.user.avatar === 'default.webp'
+                        ? '/images/default.webp'
+                        : '/media/teacher/' +
+                          teacher.user.id +
+                          '/profile/s-' +
+                          teacher.user.avatar
                     "
                   />
                   <div class="card-body mt-n1">
@@ -594,9 +623,8 @@ export default {
   created() {
     this.userData = this.user;
     this.channelData = this.channel;
-    console.log(this.userData);
-    console.log(this.channelData);
     this.currentuserData = this.currentuser;
+    console.log(this.currentuserData);
     this.phoneNo = this.userData.phone ? this.userData.phone : "Not provided";
     this.userID = this.userid;
     this.isTeacher = this.isteacher;

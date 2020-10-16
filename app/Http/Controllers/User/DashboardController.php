@@ -8,6 +8,7 @@ use Carbon\Carbon;
 use App\Services\ModelHelperServices;
 use App\User;
 use App\Channel;
+use App\ChannelBoard;
 use Auth;
 
 class DashboardController extends Controller
@@ -91,10 +92,9 @@ class DashboardController extends Controller
     public function teacher(Channel $channel)
     {
         $this->authorize('checkChannelForUser', $channel);
+        $channel = Channel::where('id', $channel->id)->with('userchannelrequest.user')->with('teacher.user')->get();
         return view('institute.teacher', [
-            'teacher' => $channel->select('id')
-                ->with('userchannelrequest.user')
-                ->with('teacher.user')->get(),
+            'teacher' => $channel[0]
         ]);
     }
 
