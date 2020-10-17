@@ -1658,106 +1658,110 @@ var render = function() {
                   _vm._v(" "),
                   _c("hr", { staticClass: "mt-n2" }),
                   _vm._v(" "),
-                  _c("div", { staticClass: "insadditionalinfo mt-4" }, [
-                    _c("p", [
-                      _c("img", {
-                        attrs: {
-                          src: "/images/address.svg",
-                          alt: "address icon"
-                        }
-                      }),
-                      _vm._v(
-                        " Address:\n                " +
-                          _vm._s(_vm.channelData.district.name) +
-                          ",\n                " +
-                          _vm._s(_vm.channelData.state.name) +
-                          "\n              "
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("p", [
-                      _c("img", {
-                        attrs: {
-                          src: "/images/mailbox.svg",
-                          alt: "pin code icon"
-                        }
-                      }),
-                      _vm._v(
-                        " Pin\n                Code:\n                " +
-                          _vm._s(_vm.userData.verification.pin) +
-                          "\n              "
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("p", [
-                      _c("img", {
-                        attrs: {
-                          src: "/images/translation.svg",
-                          alt: "language icon"
-                        }
-                      }),
-                      _vm._v(
-                        "\n                Medium: " +
-                          _vm._s(_vm.channelData.language.name) +
-                          "\n              "
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c(
-                      "p",
-                      [
+                  _c(
+                    "div",
+                    { staticClass: "insadditionalinfo mt-4 text-capitalize" },
+                    [
+                      _c("p", [
                         _c("img", {
                           attrs: {
-                            src: "/images/grade.svg",
-                            alt: "Exam board icon"
+                            src: "/images/address.svg",
+                            alt: "address icon"
                           }
                         }),
-                        _vm._v(" Board:\n                "),
-                        _vm._l(_vm.channelData.board, function(board, index) {
-                          return _c(
-                            "button",
-                            { key: index, staticClass: "btn btn-info m-1" },
-                            [
-                              _vm._v(
-                                "\n                  " +
-                                  _vm._s(board.name) +
-                                  "\n                "
-                              )
-                            ]
-                          )
-                        })
-                      ],
-                      2
-                    ),
-                    _vm._v(" "),
-                    _c("p", [
-                      _c("img", {
-                        attrs: {
-                          src: "/images/deed.svg",
-                          alt: "ownership icon"
-                        }
-                      }),
-                      _vm._v(
-                        " Ownership:\n                " +
-                          _vm._s(_vm.userData.verification.ownership) +
-                          "\n              "
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("p", [
-                      _c("img", {
-                        attrs: {
-                          src: "/images/calendar.svg",
-                          alt: "calender icon"
-                        }
-                      }),
-                      _vm._v(
-                        "\n                Founded:\n                " +
-                          _vm._s(_vm.userData.verification.founded) +
-                          "\n              "
-                      )
-                    ])
-                  ])
+                        _vm._v(
+                          " Address:\n                " +
+                            _vm._s(_vm.channelData.district.name) +
+                            ",\n                " +
+                            _vm._s(_vm.channelData.state.name) +
+                            "\n              "
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("p", [
+                        _c("img", {
+                          attrs: {
+                            src: "/images/mailbox.svg",
+                            alt: "pin code icon"
+                          }
+                        }),
+                        _vm._v(
+                          " Pin\n                Code:\n                " +
+                            _vm._s(_vm.userData.verification.pin) +
+                            "\n              "
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("p", [
+                        _c("img", {
+                          attrs: {
+                            src: "/images/translation.svg",
+                            alt: "language icon"
+                          }
+                        }),
+                        _vm._v(
+                          "\n                Medium: " +
+                            _vm._s(_vm.channelData.language.name) +
+                            "\n              "
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c(
+                        "p",
+                        [
+                          _c("img", {
+                            attrs: {
+                              src: "/images/grade.svg",
+                              alt: "Exam board icon"
+                            }
+                          }),
+                          _vm._v(" Board:\n                "),
+                          _vm._l(_vm.channelData.board, function(board, index) {
+                            return _c(
+                              "button",
+                              { key: index, staticClass: "btn btn-info m-1" },
+                              [
+                                _vm._v(
+                                  "\n                  " +
+                                    _vm._s(board.name) +
+                                    "\n                "
+                                )
+                              ]
+                            )
+                          })
+                        ],
+                        2
+                      ),
+                      _vm._v(" "),
+                      _c("p", [
+                        _c("img", {
+                          attrs: {
+                            src: "/images/deed.svg",
+                            alt: "ownership icon"
+                          }
+                        }),
+                        _vm._v(
+                          " Ownership:\n                " +
+                            _vm._s(_vm.userData.verification.ownership) +
+                            "\n              "
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("p", [
+                        _c("img", {
+                          attrs: {
+                            src: "/images/calendar.svg",
+                            alt: "calender icon"
+                          }
+                        }),
+                        _vm._v(
+                          "\n                Founded:\n                " +
+                            _vm._s(_vm.userData.verification.founded) +
+                            "\n              "
+                        )
+                      ])
+                    ]
+                  )
                 ])
               ]
             ),

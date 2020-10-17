@@ -250,7 +250,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -15073,20 +15072,16 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c("h4", [_vm._v("School Board")]),
+    _c("h4", [_vm._v("School Boards")]),
     _vm._v(" "),
     _vm.userData != null && _vm.boardDataStatus === true
       ? _c(
           "div",
           [
-            _c("h5", [
-              _vm._v("Here, is your list of board available in your school")
-            ]),
-            _vm._v(" "),
             _vm._l(_vm.userData, function(board, index) {
               return _c(
                 "button",
-                { key: index, staticClass: "btn btn-success m-1" },
+                { key: index, staticClass: "btn btn-info m-1" },
                 [_vm._v("\n      " + _vm._s(board.name) + "\n    ")]
               )
             }),
@@ -18072,15 +18067,13 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c("h4", [_vm._v("School Standard")]),
+    _c("h4", [_vm._v("School Standards")]),
     _vm._v(" "),
     _vm.userData != null && _vm.standardDataStatus
       ? _c(
           "div",
           [
-            _c("h5", [
-              _vm._v("Here, is your list of standard available in your school")
-            ]),
+            _c("h5", [_vm._v("List of standard available :")]),
             _vm._v(" "),
             _vm._l(_vm.userData, function(standard, index) {
               return _c(

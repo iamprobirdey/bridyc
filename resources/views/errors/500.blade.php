@@ -10,6 +10,6 @@
 <div class="container-fluid errorbody text-center">
               <p>OOPS!</p>
               <p class="desc">500-Internal Server Error</p>
-              <a class="homepagelink" href="#">Go to Homepage <i class="fa fa-external-link" aria-hidden="true"></i></a>
+              <a class="homepagelink" href="{{url('/')}}">Go to Homepage <i class="fa fa-external-link" aria-hidden="true"></i></a>
      </div>
 @endsection

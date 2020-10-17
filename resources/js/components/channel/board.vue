@@ -1,10 +1,9 @@
 <template>
   <div>
-    <h4>School Board</h4>
+    <h4>School Boards</h4>
     <div v-if="userData != null && boardDataStatus === true">
-      <h5>Here, is your list of board available in your school</h5>
       <button
-        class="btn btn-success m-1"
+        class="btn btn-info m-1"
         v-for="(board, index) in userData"
         :key="index"
       >

@@ -327,7 +327,7 @@
             <div class="container-fluid mt-5">
               <h2 class="text-uppercase">Additional Information</h2>
               <hr class="mt-n2" />
-              <div class="insadditionalinfo mt-4">
+              <div class="insadditionalinfo mt-4 text-capitalize">
                 <p>
                   <img src="/images/address.svg" alt="address icon" /> Address:
                   {{ channelData.district.name }},
