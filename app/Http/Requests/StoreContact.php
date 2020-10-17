@@ -25,7 +25,7 @@ class StoreContact extends FormRequest
     {
         return [
             'name' => 'required',
-            'email' => 'required|email',
+            'email' => 'required|email:rfc,dns',
             'phone' => 'required',
             'message' => 'required'
         ];

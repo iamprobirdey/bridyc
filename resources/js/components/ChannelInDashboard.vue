@@ -454,7 +454,7 @@
                   </strong>
                 </p>
                 <p>
-                  <img class="mr-2" src="/images/bus.svg" alt="Bus Image" />
+                  <img class="mr-2" src="/images/hostel.svg" alt="hostel Image" />
                   Girls Hostel :
                   <strong class="ml-1 text-capitalize">
                     {{

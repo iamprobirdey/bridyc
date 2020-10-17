@@ -1944,7 +1944,10 @@ var render = function() {
                       _c("p", [
                         _c("img", {
                           staticClass: "mr-2",
-                          attrs: { src: "/images/bus.svg", alt: "Bus Image" }
+                          attrs: {
+                            src: "/images/hostel.svg",
+                            alt: "hostel Image"
+                          }
                         }),
                         _vm._v(
                           "\n                Girls Hostel :\n                "
