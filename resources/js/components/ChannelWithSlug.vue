@@ -391,7 +391,7 @@
                   <img src="/images/translation.svg" alt="language icon" />
                   Medium: {{ channelData.language.name }}
                 </p>
-                <p>
+                <p class="row">
                   <img src="/images/grade.svg" alt="Exam board icon" /> Board:
                   <button
                     class="btn btn-info m-1"
@@ -448,7 +448,7 @@
             <h2 class="text-uppercase">Infrastructure</h2>
             <hr class="mt-n2" />
 
-            <div class="row facilitydiv py-3 mt-5">
+            <div class="row facilitydiv py-3 mt-md-5">
               <div class="col-sm-4">
                 <p>
                   <img

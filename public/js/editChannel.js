@@ -15038,7 +15038,7 @@ var render = function() {
     ]),
     _vm._v(" "),
     _c("div", { staticClass: "row mt-5" }, [
-      _c("div", { staticClass: "col-sm-6" }, [_c("social")], 1),
+      _c("div", { staticClass: "col-sm-6 mb-5" }, [_c("social")], 1),
       _vm._v(" "),
       _c(
         "div",
@@ -15183,7 +15183,7 @@ var render = function() {
         "ul",
         { staticClass: "nav" },
         _vm._l(_vm.channelData.college_image, function(image, index) {
-          return _c("li", { key: index }, [
+          return _c("li", { key: index, staticClass: "m-2" }, [
             _c("img", {
               staticClass: "border border-light m-1",
               attrs: {
@@ -15209,7 +15209,7 @@ var render = function() {
                   }
                 }
               },
-              [_vm._v("\n          Delete college image\n        ")]
+              [_vm._v("\n          Delete\n        ")]
             )
           ])
         }),
@@ -17570,7 +17570,7 @@ var render = function() {
                   {
                     attrs: { href: _vm.socialData.facebook, target: "_blank" }
                   },
-                  [_c("span", [_vm._v("Facebook")])]
+                  [_c("span", [_vm._v(" Facebook")])]
                 )
               ])
             : _vm._e(),
@@ -17582,7 +17582,7 @@ var render = function() {
                   {
                     attrs: { href: _vm.socialData.instagram, target: "_blank" }
                   },
-                  [_c("span", [_vm._v("Instagram")])]
+                  [_c("span", [_vm._v(" Instagram")])]
                 )
               ])
             : _vm._e(),
@@ -17594,7 +17594,7 @@ var render = function() {
                   {
                     attrs: { href: _vm.socialData.linkedin, target: "_blank" }
                   },
-                  [_c("span", [_vm._v("LinkedIn")])]
+                  [_c("span", [_vm._v(" LinkedIn")])]
                 )
               ])
             : _vm._e(),

@@ -72,11 +72,11 @@
               errors.has('serverErrors.title') || serverErrors.title != '',
           }"
         >
-          <label class="col-sm-3 col-form-label text-right"
+          <label class="col-sm-3 col-form-label text-md-right"
             >Achievement Title :</label
           >
           <input
-            class="col-sm-9"
+            class="col-sm-9 mx-1 mx-md-auto"
             v-model="formData.title"
             v-validate="'required'"
             data-vv-delay="20"
@@ -103,11 +103,11 @@
               serverErrors.descriptions != '',
           }"
         >
-          <label class="col-sm-3 col-form-label text-right">
+          <label class="col-sm-3 col-form-label text-md-right">
             Achievement Description :</label
           >
           <input
-            class="col-sm-9"
+            class="col-sm-9 mx-1 mx-md-auto"
             v-model="formData.description"
             v-validate="'required'"
             data-vv-delay="20"
@@ -136,11 +136,11 @@
             'has-error': errors.has('date') || serverErrors.date != '',
           }"
         >
-          <label class="col-sm-3 col-form-label text-right">
+          <label class="col-sm-3 col-form-label text-md-right">
             Achievement Event Date :</label
           >
           <input
-            class="col-sm-9"
+            class="col-sm-9 mx-1 mx-md-auto"
             v-on:focus="serverErrors.date = ''"
             v-model="formData.date"
             v-validate="'required'"

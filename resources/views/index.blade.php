@@ -51,7 +51,7 @@ crossed those paths')
             <div class="col-lg-4">
                 <img class="imgguest shadow-lg" src="{{asset('podcast/'.$podcast->image_path)}}" alt="guest photo">
             </div>
-            <div class="col-md-8">
+            <div class="col-lg-8">
                 <div class="videosection">
                     <h2>"{{$podcast->thumbnail}}"</h2>
                     <div class="guest mx-auto mt-3">
@@ -91,34 +91,6 @@ crossed those paths')
         </div>
     </div>
 </div>
-
-
-
-<!--div id="channel">
-    <channel :channel="{{json_encode($channel)}}"></channel>
-</div>
-
-<br>
-<section>
-    <div class="container-fluid">
-        <div class="row aboutdiv mx-auto">
-            <div class="col-lg-3">
-                <img src="images/aboutimg.png" alt="girl sitting home" class="imgdes">
-            </div>
-            <div class="col-lg-9 aboutdesc">
-                <h4>Find your institute here!</h4>
-                <hr>
-                <p>
-                    Bridyc helps students get admission in the school of their
-                    choice, we provide information to students and parents regarding the best
-                    courses, Graduation, Post-graduation and other education programmes available.
-                    We arrange meetings with the concerned college
-                    officials to ease up the college admission process.
-                </p>
-            </div>
-        </div>
-    </div>
-</section-->
 
 <br>
 <section>

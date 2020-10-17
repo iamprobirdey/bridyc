@@ -28,24 +28,24 @@
             </ul>
 
             @if (auth()->check() && auth()->user()->isStudent())
-            <a class="btn btndashboard mr-2" href="{{url('/edit/student/profile/'.auth()->user()->username)}}"><i
+            <a class="btn btndashboard m-2" href="{{url('/edit/student/profile/'.auth()->user()->username)}}"><i
                     class="fa fa-user-circle-o" aria-hidden="true"></i> Profile</a>
             @endif
 
             @if (auth()->check() && auth()->user()->isTeacher())
-            <a class="btn btndashboard mr-2" href="{{url('/edit/teacher/profile/'.auth()->user()->username)}}"><i
+            <a class="btn btndashboard m-2" href="{{url('/edit/teacher/profile/'.auth()->user()->username)}}"><i
                     class="fa fa-user-circle-o" aria-hidden="true"></i> Profile</a>
             @endif
 
 
             @if (auth()->check() && auth()->user()->isInstitute())
             @if (current_user()->channel != null)
-            <a class="btn btndashboard mr-2" data-trigger="focus" data-toggle="popover" data-placement="bottom"
+            <a class="btn btndashboard m-2" data-trigger="focus" data-toggle="popover" data-placement="bottom"
                 href="{{route('channel.index',current_user()->channel->title)}}">
                 <i class="fa fa-th-large" aria-hidden="true"></i> My Dashboard
             </a>
             @else
-            <a class="btn btndashboard mr-2" data-trigger="focus" data-toggle="popover" data-placement="bottom"
+            <a class="btn btndashboard m-2" data-trigger="focus" data-toggle="popover" data-placement="bottom"
                 href="{{route('verification')}}">
                 <i class="fa fa-th-large" aria-hidden="true"></i> Verification
             </a>
@@ -58,7 +58,7 @@
             </a>
             @endif
             @if (Auth::check())
-            <a class="btn btn-danger" href="{{ route('logout') }}" onclick="event.preventDefault();
+            <a class="btn btn-danger m-2" href="{{ route('logout') }}" onclick="event.preventDefault();
                                 document.getElementById('logout-form').submit();">
                 <i class="fa fa-sign-out" aria-hidden="true"></i> {{ __('Logout') }}
             </a>

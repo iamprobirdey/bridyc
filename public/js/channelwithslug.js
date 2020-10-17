@@ -1865,6 +1865,7 @@ var render = function() {
                     _vm._v(" "),
                     _c(
                       "p",
+                      { staticClass: "row" },
                       [
                         _c("img", {
                           attrs: {
@@ -2006,7 +2007,7 @@ var render = function() {
               _vm._v(" "),
               _c("hr", { staticClass: "mt-n2" }),
               _vm._v(" "),
-              _c("div", { staticClass: "row facilitydiv py-3 mt-5" }, [
+              _c("div", { staticClass: "row facilitydiv py-3 mt-md-5" }, [
                 _c("div", { staticClass: "col-sm-4" }, [
                   _c("p", [
                     _c("img", {

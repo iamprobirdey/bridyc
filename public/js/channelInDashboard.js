@@ -653,6 +653,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -1723,16 +1725,16 @@ var render = function() {
                         )
                       ]),
                       _vm._v(" "),
-                      _c(
-                        "p",
-                        [
-                          _c("img", {
-                            attrs: {
-                              src: "/images/grade.svg",
-                              alt: "Exam board icon"
-                            }
-                          }),
-                          _vm._v(" Board:\n                "),
+                      _c("p", [
+                        _c("img", {
+                          attrs: {
+                            src: "/images/grade.svg",
+                            alt: "Exam board icon"
+                          }
+                        }),
+                        _vm._v(" Board:\n                "),
+                        _c(
+                          "span",
                           _vm._l(_vm.channelData.board, function(board, index) {
                             return _c(
                               "button",
@@ -1745,10 +1747,10 @@ var render = function() {
                                 )
                               ]
                             )
-                          })
-                        ],
-                        2
-                      ),
+                          }),
+                          0
+                        )
+                      ]),
                       _vm._v(" "),
                       _c("p", [
                         _c("img", {

@@ -1,5 +1,3 @@
-@charset "UTF-8";
-
 main {
   padding-top: 70px;
   margin-bottom: 40px;
@@ -152,7 +150,7 @@ main .logo-title {
 @media only screen and (min-width: 768px) {
   main .logo-title {
     top: -248px;
-    left: -164px;
+    left: -130px;
   }
 }
 
@@ -391,9 +389,12 @@ main .inspills .notice p {
 }
 
 main .inspills .notice p::before {
-  content: "\2B9A";
-  font-size: larger;
-  color: #003585;
+  background-image: url("/images/arrow.svg");
+  background-size: 10px 20px;
+  display: inline-block;
+  width: 10px;
+  height: 15px;
+  content: "";
 }
 
 main .inspills .facultyachieve .facultyachievecard {

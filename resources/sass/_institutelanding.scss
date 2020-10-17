@@ -103,7 +103,7 @@ main{
       }
      @include screensize(laptop){
          top: -248px;
-         left: -164px;
+         left: -130px;
       }
       @include screensize(desktop){
         top:-194px;
@@ -274,9 +274,12 @@ main{
            p{
              color: black;
              &::before{
-              content: "\2B9A";
-              font-size: larger;
-              color: #003585;
+              background-image: url('/images/arrow.svg');
+              background-size: 10px 20px;
+              display: inline-block;
+              width: 10px; 
+              height: 15px;
+              content:"";
             }
            }
          }

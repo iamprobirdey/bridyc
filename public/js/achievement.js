@@ -2024,7 +2024,7 @@ var render = function() {
                 [
                   _c(
                     "label",
-                    { staticClass: "col-sm-3 col-form-label text-right" },
+                    { staticClass: "col-sm-3 col-form-label text-md-right" },
                     [_vm._v("Achievement Title :")]
                   ),
                   _vm._v(" "),
@@ -2043,7 +2043,7 @@ var render = function() {
                         expression: "'required'"
                       }
                     ],
-                    staticClass: "col-sm-9",
+                    staticClass: "col-sm-9 mx-1 mx-md-auto",
                     class: {
                       "form-control": true,
                       "is-invalid": _vm.errors.has("title")
@@ -2113,7 +2113,7 @@ var render = function() {
                 [
                   _c(
                     "label",
-                    { staticClass: "col-sm-3 col-form-label text-right" },
+                    { staticClass: "col-sm-3 col-form-label text-md-right" },
                     [_vm._v("\n          Achievement Description :")]
                   ),
                   _vm._v(" "),
@@ -2132,7 +2132,7 @@ var render = function() {
                         expression: "'required'"
                       }
                     ],
-                    staticClass: "col-sm-9",
+                    staticClass: "col-sm-9 mx-1 mx-md-auto",
                     class: {
                       "form-control": true,
                       "is-invalid": _vm.errors.has("descriptions")
@@ -2204,7 +2204,7 @@ var render = function() {
                 [
                   _c(
                     "label",
-                    { staticClass: "col-sm-3 col-form-label text-right" },
+                    { staticClass: "col-sm-3 col-form-label text-md-right" },
                     [_vm._v("\n          Achievement Event Date :")]
                   ),
                   _vm._v(" "),
@@ -2223,7 +2223,7 @@ var render = function() {
                         expression: "'required'"
                       }
                     ],
-                    staticClass: "col-sm-9",
+                    staticClass: "col-sm-9 mx-1 mx-md-auto",
                     class: {
                       "form-control": true,
                       "is-invalid": _vm.errors.has("date")

@@ -1,5 +1,5 @@
 <template>
-  <div class="notification-section">
+  <div class="notification-section mx-n4 mx-lg-0">
     <button class="btn add-notifications mb-5" @click="addNewNotification()">
       Add New Notification
     </button>
