@@ -272,6 +272,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -1920,7 +1921,7 @@ var render = function() {
               _c("p", { staticClass: "card-text" }, [
                 _vm._v(
                   "\n          " +
-                    _vm._s(achievement.description.substr(1, 20)) +
+                    _vm._s(achievement.description.substr(0, 20)) +
                     "\n        "
                 )
               ]),

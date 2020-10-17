@@ -100,6 +100,7 @@
           <a
             class="mr-1"
             v-if="channelData.extra_attributes.social.facebook != null"
+            target="_blank"
             :href="
               channelData.extra_attributes.social.facebook != null
                 ? channelData.extra_attributes.social.facebook
@@ -111,6 +112,7 @@
           <a
             class="mr-1"
             v-if="channelData.extra_attributes.social.linkedin != null"
+            target="_blank"
             :href="channelData.extra_attributes.social.linkedin"
           >
             <img src="/images/linkedin.svg" alt="li icon" />
@@ -118,6 +120,7 @@
           <a
             class="mr-1"
             v-if="channelData.extra_attributes.social.instagram != null"
+            target="_blank"
             :href="
               channelData.extra_attributes.social.instagram != null
                 ? channelData.extra_attributes.social.instagram
@@ -129,6 +132,7 @@
           <a
             class="mr-1"
             v-if="channelData.extra_attributes.social.youtube != null"
+            target="_blank"
             :href="
               channelData.extra_attributes.social.youtube != null
                 ? channelData.extra_attributes.social.youtube
@@ -259,7 +263,7 @@
                   <div class="card-body mt-n1">
                     <h6 class="card-title my-n1">{{ achievement.title }}</h6>
                     <p class="card-text">
-                      {{ achievement.description.substr(1, 20) }}
+                      {{ achievement.description.substr(0, 20) }}
                     </p>
                   </div>
                 </div>
@@ -425,7 +429,8 @@
                     src="/images/computer.svg"
                     alt="computer Image"
                   />
-                  Computer : <strong class="ml-1 text-capitalize">
+                  Computer :
+                  <strong class="ml-1 text-capitalize">
                     {{
                       channelData.computer_learning != null
                         ? channelData.computer_learning
@@ -439,7 +444,8 @@
                     src="/images/hostel.svg"
                     alt="Hostel Image"
                   />
-                  Boys Hostel : <strong class="ml-1 text-capitalize">
+                  Boys Hostel :
+                  <strong class="ml-1 text-capitalize">
                     {{
                       channelData.boys_hostel != null
                         ? channelData.boys_hostel
@@ -449,14 +455,15 @@
                 </p>
                 <p>
                   <img class="mr-2" src="/images/bus.svg" alt="Bus Image" />
-                  Girls Hostel : <strong class="ml-1 text-capitalize">
+                  Girls Hostel :
+                  <strong class="ml-1 text-capitalize">
                     {{
                       channelData.girls_hostel != null
                         ? channelData.girls_hostel
                         : "Not Provided"
                     }}
                   </strong>
-                </p> 
+                </p>
               </div>
               <div class="col-sm-4">
                 <p>
@@ -465,7 +472,8 @@
                     src="/images/playground.svg"
                     alt="playground Image"
                   />
-                  Playground : <strong class="ml-1 text-capitalize">
+                  Playground :
+                  <strong class="ml-1 text-capitalize">
                     {{
                       channelData.playground != null
                         ? channelData.playground
@@ -479,7 +487,8 @@
                     src="/images/library.svg"
                     alt="Library Image"
                   />
-                  Library : <strong class="ml-1 text-capitalize">
+                  Library :
+                  <strong class="ml-1 text-capitalize">
                     {{
                       channelData.library != null
                         ? channelData.library
@@ -489,7 +498,8 @@
                 </p>
                 <p>
                   <img class="mr-2" src="/images/book.svg" alt="Books Image" />
-                  No of Books : <strong class="ml-1 text-capitalize">
+                  No of Books :
+                  <strong class="ml-1 text-capitalize">
                     {{
                       channelData.no_of_books != null
                         ? channelData.no_of_books
@@ -505,7 +515,8 @@
                     src="/images/canteen.svg"
                     alt="canteen Image"
                   />
-                  Canteen : <strong class="ml-1 text-capitalize">
+                  Canteen :
+                  <strong class="ml-1 text-capitalize">
                     {{
                       channelData.canteen != null
                         ? channelData.canteen
@@ -515,7 +526,8 @@
                 </p>
                 <p>
                   <img class="mr-2" src="/images/bus.svg" alt="Bus Image" /> Bus
-                  Services : <strong class="ml-1 text-capitalize">
+                  Services :
+                  <strong class="ml-1 text-capitalize">
                     {{
                       channelData.bus_services != null
                         ? channelData.bus_services
@@ -525,7 +537,8 @@
                 </p>
                 <p>
                   <img class="mr-2" src="/images/fence.svg" alt="fence Image" />
-                  Boundary : <strong class="ml-1 text-capitalize">
+                  Boundary :
+                  <strong class="ml-1 text-capitalize">
                     {{
                       channelData.wall != null
                         ? channelData.wall

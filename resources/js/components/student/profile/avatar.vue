@@ -6,7 +6,7 @@
         :src="
           userImage === 'default.webp'
             ? '/images/' + userImage
-            : domainUrl + '/media/users/profile/' + userId + '/s-' + userImage
+            : domainUrl + '/media/student/' + userId + '/profile/s-' + userImage
         "
         alt="student profile pictures"
       />

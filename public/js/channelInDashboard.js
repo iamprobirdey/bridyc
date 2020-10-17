@@ -640,6 +640,19 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -1274,6 +1287,7 @@ var render = function() {
                         {
                           staticClass: "mr-1",
                           attrs: {
+                            target: "_blank",
                             href:
                               _vm.channelData.extra_attributes.social
                                 .facebook != null
@@ -1299,6 +1313,7 @@ var render = function() {
                         {
                           staticClass: "mr-1",
                           attrs: {
+                            target: "_blank",
                             href:
                               _vm.channelData.extra_attributes.social.linkedin
                           }
@@ -1320,6 +1335,7 @@ var render = function() {
                         {
                           staticClass: "mr-1",
                           attrs: {
+                            target: "_blank",
                             href:
                               _vm.channelData.extra_attributes.social
                                 .instagram != null
@@ -1345,6 +1361,7 @@ var render = function() {
                         {
                           staticClass: "mr-1",
                           attrs: {
+                            target: "_blank",
                             href:
                               _vm.channelData.extra_attributes.social.youtube !=
                               null
@@ -1538,7 +1555,7 @@ var render = function() {
                                     _vm._v(
                                       "\n                    " +
                                         _vm._s(
-                                          achievement.description.substr(1, 20)
+                                          achievement.description.substr(0, 20)
                                         ) +
                                         "\n                  "
                                     )
@@ -1884,7 +1901,9 @@ var render = function() {
                             alt: "computer Image"
                           }
                         }),
-                        _vm._v("\n                Computer : "),
+                        _vm._v(
+                          "\n                Computer :\n                "
+                        ),
                         _c("strong", { staticClass: "ml-1 text-capitalize" }, [
                           _vm._v(
                             "\n                  " +
@@ -1906,7 +1925,9 @@ var render = function() {
                             alt: "Hostel Image"
                           }
                         }),
-                        _vm._v("\n                Boys Hostel : "),
+                        _vm._v(
+                          "\n                Boys Hostel :\n                "
+                        ),
                         _c("strong", { staticClass: "ml-1 text-capitalize" }, [
                           _vm._v(
                             "\n                  " +
@@ -1925,7 +1946,9 @@ var render = function() {
                           staticClass: "mr-2",
                           attrs: { src: "/images/bus.svg", alt: "Bus Image" }
                         }),
-                        _vm._v("\n                Girls Hostel : "),
+                        _vm._v(
+                          "\n                Girls Hostel :\n                "
+                        ),
                         _c("strong", { staticClass: "ml-1 text-capitalize" }, [
                           _vm._v(
                             "\n                  " +
@@ -1949,7 +1972,9 @@ var render = function() {
                             alt: "playground Image"
                           }
                         }),
-                        _vm._v("\n                Playground : "),
+                        _vm._v(
+                          "\n                Playground :\n                "
+                        ),
                         _c("strong", { staticClass: "ml-1 text-capitalize" }, [
                           _vm._v(
                             "\n                  " +
@@ -1971,7 +1996,7 @@ var render = function() {
                             alt: "Library Image"
                           }
                         }),
-                        _vm._v("\n                Library : "),
+                        _vm._v("\n                Library :\n                "),
                         _c("strong", { staticClass: "ml-1 text-capitalize" }, [
                           _vm._v(
                             "\n                  " +
@@ -1990,7 +2015,9 @@ var render = function() {
                           staticClass: "mr-2",
                           attrs: { src: "/images/book.svg", alt: "Books Image" }
                         }),
-                        _vm._v("\n                No of Books : "),
+                        _vm._v(
+                          "\n                No of Books :\n                "
+                        ),
                         _c("strong", { staticClass: "ml-1 text-capitalize" }, [
                           _vm._v(
                             "\n                  " +
@@ -2014,7 +2041,7 @@ var render = function() {
                             alt: "canteen Image"
                           }
                         }),
-                        _vm._v("\n                Canteen : "),
+                        _vm._v("\n                Canteen :\n                "),
                         _c("strong", { staticClass: "ml-1 text-capitalize" }, [
                           _vm._v(
                             "\n                  " +
@@ -2033,7 +2060,9 @@ var render = function() {
                           staticClass: "mr-2",
                           attrs: { src: "/images/bus.svg", alt: "Bus Image" }
                         }),
-                        _vm._v(" Bus\n                Services : "),
+                        _vm._v(
+                          " Bus\n                Services :\n                "
+                        ),
                         _c("strong", { staticClass: "ml-1 text-capitalize" }, [
                           _vm._v(
                             "\n                  " +
@@ -2055,7 +2084,9 @@ var render = function() {
                             alt: "fence Image"
                           }
                         }),
-                        _vm._v("\n                Boundary : "),
+                        _vm._v(
+                          "\n                Boundary :\n                "
+                        ),
                         _c("strong", { staticClass: "ml-1 text-capitalize" }, [
                           _vm._v(
                             "\n                  " +

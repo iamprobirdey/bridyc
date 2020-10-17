@@ -15177,7 +15177,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", [
     _c("div", [
-      _c("h4", [_vm._v("Your Gallery")]),
+      _c("h4", [_vm._v("Your Gallery (First five photos will be displayed)")]),
       _vm._v(" "),
       _c(
         "ul",

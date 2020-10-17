@@ -178,6 +178,12 @@
           Request Rejected
         </button>
         <button
+          class="btn btn-success"
+          v-if="channelRequestDecider === 'farewell'"
+        >
+          Farewell
+        </button>
+        <button
           class="btn btn-sm btn-success"
           v-if="channelRequestDecider === 'accepted'"
         >
@@ -305,7 +311,7 @@
                   <div class="card-body mt-n1">
                     <h6 class="card-title my-n1">{{ achievement.title }}</h6>
                     <p class="card-text">
-                      {{ achievement.description.substr(1, 20) }}
+                      {{ achievement.description.substr(0, 20) }}
                     </p>
                   </div>
                 </div>
@@ -472,7 +478,7 @@
                     }}
                   </strong>
                 </p>
-                 <p>
+                <p>
                   <img
                     class="mr-2"
                     src="/images/hostel.svg"
@@ -487,7 +493,11 @@
                   </strong>
                 </p>
                 <p>
-                  <img class="mr-2" src="/images/hostel.svg" alt="hostel Image" />
+                  <img
+                    class="mr-2"
+                    src="/images/hostel.svg"
+                    alt="hostel Image"
+                  />
                   Girls Hostel:<strong class="ml-1 text-capitalize">
                     {{
                       channelData.girls_hostel != null
@@ -644,23 +654,17 @@ export default {
   methods: {
     requestChannelSatisfier() {
       if (this.isTeacher && this.currentuserData != null) {
-        if (
-          this.currentuserData.request === "in-progress" &&
-          this.currentuserData.channel_id === this.channelData.id
-        )
+        if (this.currentuserData.request === "in-progress")
           this.channelRequestDecider = "in-progress";
 
-        if (
-          this.currentuserData.request === "accepted" &&
-          this.currentuserData.channel_id === this.channelData.id
-        )
+        if (this.currentuserData.request === "accepted")
           this.channelRequestDecider = "accepted";
 
-        if (
-          this.currentuserData.request === "rejected" &&
-          this.currentuserData.channel_id === this.channelData.id
-        )
+        if (this.currentuserData.request === "rejected")
           this.channelRequestDecider = "rejected";
+
+        if (this.currentuserData.request === "farewell")
+          this.channelRequestDecider = "farewell";
 
         if (
           this.currentuserData.request === "rejected" &&

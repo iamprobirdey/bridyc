@@ -128,6 +128,15 @@ export default {
             }
             this.teachersData.splice(index, 1);
           })
+          .then((response) => {
+            if (response.data.error === true) {
+              Vue.toasted.error("Something went wrong", {
+                position: "top-center",
+                duration: 5000,
+              });
+              window.location.reload();
+            }
+          })
           .catch((errors) => {
             Vue.toasted.error("Something went wrong", {
               position: "top-center",
@@ -152,13 +161,21 @@ export default {
               this.teachersRequestData.splice(index, 1);
               window.location.reload();
             }
-          })
-          .catch((errors) => {
+          });
+        then((response) => {
+          if (response.data.error === true) {
             Vue.toasted.error("Something went wrong", {
               position: "top-center",
               duration: 5000,
             });
+            window.location.reload();
+          }
+        }).catch((errors) => {
+          Vue.toasted.error("Something went wrong", {
+            position: "top-center",
+            duration: 5000,
           });
+        });
       }
     },
     deleteTheTeacher(teacher, index) {

@@ -233,9 +233,10 @@ main{
                  width: 100%;
                  height: auto;
                  margin-top:30px;
+                 ul{
+                  position: relative;
+                  top:400px;
                 li{
-                 position: relative;
-                 top: 10px;
                  width: 8px;
                  height: 8px;
                  border-radius: 100%;
@@ -244,6 +245,7 @@ main{
                      top: 10px;
                   }
              }
+            }
              @include screensize(laptop){
               margin-bottom: 180px;
            }

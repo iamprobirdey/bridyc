@@ -679,6 +679,16 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -737,9 +747,10 @@ __webpack_require__.r(__webpack_exports__);
   methods: {
     requestChannelSatisfier: function requestChannelSatisfier() {
       if (this.isTeacher && this.currentuserData != null) {
-        if (this.currentuserData.request === "in-progress" && this.currentuserData.channel_id === this.channelData.id) this.channelRequestDecider = "in-progress";
-        if (this.currentuserData.request === "accepted" && this.currentuserData.channel_id === this.channelData.id) this.channelRequestDecider = "accepted";
-        if (this.currentuserData.request === "rejected" && this.currentuserData.channel_id === this.channelData.id) this.channelRequestDecider = "rejected";
+        if (this.currentuserData.request === "in-progress") this.channelRequestDecider = "in-progress";
+        if (this.currentuserData.request === "accepted") this.channelRequestDecider = "accepted";
+        if (this.currentuserData.request === "rejected") this.channelRequestDecider = "rejected";
+        if (this.currentuserData.request === "farewell") this.channelRequestDecider = "farewell";
         if (this.currentuserData.request === "rejected" && this.currentuserData.channel_id != this.channelData.id) this.channelRequestDecider = "can-request";
       }
 
@@ -1502,6 +1513,12 @@ var render = function() {
                 ])
               : _vm._e(),
             _vm._v(" "),
+            _vm.channelRequestDecider === "farewell"
+              ? _c("button", { staticClass: "btn btn-success" }, [
+                  _vm._v("\n        Farewell\n      ")
+                ])
+              : _vm._e(),
+            _vm._v(" "),
             _vm.channelRequestDecider === "accepted"
               ? _c("button", { staticClass: "btn btn-sm btn-success" }, [
                   _c("img", {
@@ -1688,7 +1705,7 @@ var render = function() {
                                   _vm._v(
                                     "\n                    " +
                                       _vm._s(
-                                        achievement.description.substr(1, 20)
+                                        achievement.description.substr(0, 20)
                                       ) +
                                       "\n                  "
                                   )

@@ -18,6 +18,7 @@ class RequestForChannelController extends Controller
     public function requestForChannel(User $user, $channelId)
     {
         $this->authorize('updatingteahcer', $user);
+
         UserChannelRequest::create([
             'user_id' => $user->id,
             'channel_id' => $channelId

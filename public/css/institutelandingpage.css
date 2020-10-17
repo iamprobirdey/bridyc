@@ -334,9 +334,12 @@ main .inspills .inscarou {
   margin-top: 30px;
 }
 
-main .inspills .inscarou li {
+main .inspills .inscarou ul {
   position: relative;
-  top: 10px;
+  top: 400px;
+}
+
+main .inspills .inscarou ul li {
   width: 8px;
   height: 8px;
   border-radius: 100%;
@@ -344,7 +347,7 @@ main .inspills .inscarou li {
 }
 
 @media only screen and (min-width: 768px) {
-  main .inspills .inscarou li {
+  main .inspills .inscarou ul li {
     top: 10px;
   }
 }

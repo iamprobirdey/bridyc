@@ -437,17 +437,20 @@ main .inspills .inscarou {
   height: auto;
 }
 
-main .inspills .inscarou li {
+main .inspills .inscarou ul {
   position: relative;
+  top: 400px;
+}
+
+main .inspills .inscarou ul li {
   width: 8px;
   height: 8px;
-  top: 30px;
   border-radius: 100%;
   background-color: black;
 }
 
 @media only screen and (min-width: 768px) {
-  main .inspills .inscarou li {
+  main .inspills .inscarou ul li {
     top: 10px;
   }
 }

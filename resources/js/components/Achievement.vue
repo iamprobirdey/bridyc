@@ -6,10 +6,12 @@
     <button class="btn btnadd p-1 ml-1 rounded-0" @click="addAchievement()">
       <i class="fa fa-plus" aria-hidden="true"></i>
     </button>
-    <div class="row my-5" >
-      <div class="card shadow mx-auto sidebar-facard mb-4" 
-      v-for="(achievement, index) in achievementData" 
-      :key="index">
+    <div class="row my-5">
+      <div
+        class="card shadow mx-auto sidebar-facard mb-4"
+        v-for="(achievement, index) in achievementData"
+        :key="index"
+      >
         <img
           :src="
             baseUrl +
@@ -22,25 +24,24 @@
         <div class="card-body mt-n1">
           <h6 class="card-title my-n1">{{ achievement.title }}</h6>
           <p class="card-text">
-            {{ achievement.description.substr(1, 20) }}
+            {{ achievement.description.substr(0, 20) }}
           </p>
           <p class="card-text">
             {{ achievement.date }}
           </p>
         </div>
         <div class="text-center">
-        <button
-          class="btn mb-5 editachieve"
-          data-toggle="tooltip"
-          data-placement="right"
-          title="Edit"
-          @click="editTheForm(achievement, index)"
-        >
-          <i class="fa fa-pencil" aria-hidden="true"></i>
-        </button>
+          <button
+            class="btn mb-5 editachieve"
+            data-toggle="tooltip"
+            data-placement="right"
+            title="Edit"
+            @click="editTheForm(achievement, index)"
+          >
+            <i class="fa fa-pencil" aria-hidden="true"></i>
+          </button>
+        </div>
       </div>
-      </div>
-      
     </div>
     <br />
     <div class="mt-5" v-if="openAchievementForm">

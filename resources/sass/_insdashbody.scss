@@ -188,18 +188,21 @@ main {
     .inscarou{
                     width: 100%;
                     height: auto;
-                    
-                li{
-                    position: relative;
-                    width: 8px;
-                    height: 8px;
-                    top: 30px;
-                    border-radius: 100%;
-                    background-color: black;
-                     @include screensize(laptop){
-                        top: 10px;
-                     }
-                }
+                  
+                    ul{
+                      position: relative;
+                      top:400px;
+                      li{
+                        width: 8px;
+                        height: 8px;
+                        border-radius: 100%;
+                        background-color: black;
+                         @include screensize(laptop){
+                            top: 10px;
+                         }
+                    }
+                    }
+                
                 @include screensize(laptop){
                   margin-bottom: 180px;
                }
