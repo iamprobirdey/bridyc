@@ -247,7 +247,7 @@ var render = function() {
                         _vm._v(
                           "\n            " +
                             _vm._s(channel.description.substr(0, 100)) +
-                            "\n          "
+                            "...\n          "
                         )
                       ]
                     )

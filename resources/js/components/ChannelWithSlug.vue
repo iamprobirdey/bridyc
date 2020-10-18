@@ -172,18 +172,6 @@
           Request Sent
         </button>
         <button
-          class="btn btn-danger"
-          v-if="channelRequestDecider === 'rejected'"
-        >
-          Request Rejected
-        </button>
-        <button
-          class="btn btn-success"
-          v-if="channelRequestDecider === 'farewell'"
-        >
-          Farewell
-        </button>
-        <button
           class="btn btn-sm btn-success"
           v-if="channelRequestDecider === 'accepted'"
         >
@@ -658,12 +646,6 @@ export default {
 
         if (this.currentuserData.request === "accepted")
           this.channelRequestDecider = "accepted";
-
-        if (this.currentuserData.request === "rejected")
-          this.channelRequestDecider = "rejected";
-
-        if (this.currentuserData.request === "farewell")
-          this.channelRequestDecider = "farewell";
 
         if (
           this.currentuserData.request === "rejected" &&

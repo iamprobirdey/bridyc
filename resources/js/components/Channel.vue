@@ -33,7 +33,7 @@
               class="card-text destext d-none d-md-block mt-3 mx-1"
               v-if="channel.description != null"
             >
-              {{ channel.description.substr(0, 100) }}
+              {{ channel.description.substr(0, 100) }}...
             </p>
           </div>
           <a
