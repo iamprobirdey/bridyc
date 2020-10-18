@@ -93,7 +93,7 @@ main {
          }
         @include screensize(laptop){
             top: -318px;
-            left: -127px;
+            left: -132px;
          }
          @include screensize(desktop){
            top:-299px;
@@ -188,18 +188,21 @@ main {
     .inscarou{
                     width: 100%;
                     height: auto;
-                    
-                li{
-                    position: relative;
-                    width: 8px;
-                    height: 8px;
-                    top: 30px;
-                    border-radius: 100%;
-                    background-color: black;
-                     @include screensize(laptop){
-                        top: 10px;
-                     }
-                }
+                  
+                    ul{
+                      position: relative;
+                      top:400px;
+                      li{
+                        width: 8px;
+                        height: 8px;
+                        border-radius: 100%;
+                        background-color: black;
+                         @include screensize(laptop){
+                            top: 10px;
+                         }
+                    }
+                    }
+                
                 @include screensize(laptop){
                   margin-bottom: 180px;
                }
@@ -229,9 +232,12 @@ main {
               p{
                 color: black;
                 &::before{
-                 content: "\2B9A";
-                 font-size: larger;
-                 color: #003585;
+                  background-image: url('/images/arrow.svg');
+                  background-size: 10px 20px;
+                  display: inline-block;
+                  width: 10px; 
+                  height: 15px;
+                  content:"";
                }
               }
             }
@@ -318,21 +324,6 @@ main {
                     height: 18px;
                   }
                 }
-      
-
-              /*.facilitydiv{
-                p{
-                  font-size: 16px;
-                  color: #011737;
-                  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-                 img{
-                   width: 16px;
-                   height: 16px;           
-                 }
-                }
-                  
-                
-              }*/
 
   }
           
@@ -409,9 +400,12 @@ main {
             li{
               color: black;
              &::before{
-              content: "\2B9A";
-              font-size: larger;
-              color: #003585;
+                  background-image: url('/images/arrow.svg');
+                  background-size: 10px 20px;
+                  display: inline-block;
+                  width: 10px; 
+                  height: 15px;
+                  content:"";
             }
             }
           }
@@ -493,11 +487,11 @@ main {
           //css for achievement and teacher in sidebar starts here
           .sidebar-facard{
             width: 200px;
-            height: 250px;
+            height: 280px;
             .card-text{
               margin-top: 5px;
               line-height: .9rem;
-            }
+              }
          img{
             width: 100%;
             height: 170px;
@@ -650,9 +644,12 @@ main {
             list-style: none;
             li{
               &::before{
-                content: "\2B9A";
-                font-size: larger;
-                color: #003585;
+                background-image: url('/images/arrow.svg');
+                  background-size: 10px 20px;
+                  display: inline-block;
+                  width: 10px; 
+                  height: 15px;
+                  content:"";
               }
             }
           }

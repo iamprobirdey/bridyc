@@ -1,10 +1,10 @@
 <template>
   <div>
     <div>
-      <h4>Your Gallery</h4>
+      <h4>Your Gallery (First five photos will be displayed)</h4>
       <ul class="nav">
         
-        <li v-for="(image, index) in channelData.college_image" :key="index">
+        <li v-for="(image, index) in channelData.college_image" :key="index" class="m-2">
           <img
             :src="
               domainUrl +
@@ -19,7 +19,7 @@
             class="border border-light m-1"
           />
           <button class="btn btn-danger" @click="deleteCollege(image, index)">
-            Delete college image
+            Delete
           </button>
         </li>
       </ul>

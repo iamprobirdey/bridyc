@@ -286,7 +286,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "notification-section" }, [
+  return _c("div", { staticClass: "notification-section mx-n4 mx-lg-0" }, [
     _c(
       "button",
       {
@@ -697,7 +697,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/js/ChannelNotification.js */"./resources/js/ChannelNotification.js");
+module.exports = __webpack_require__(/*! C:\laragon\www\bridyc\resources\js\ChannelNotification.js */"./resources/js/ChannelNotification.js");
 
 
 /***/ })

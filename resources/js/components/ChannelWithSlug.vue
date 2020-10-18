@@ -365,7 +365,7 @@
             <div class="container-fluid mt-5">
               <h2 class="text-uppercase">Additional Information</h2>
               <hr class="mt-n2" />
-              <div class="insadditionalinfo mt-4">
+              <div class="insadditionalinfo mt-4 text-capitalize">
                 <p>
                   <img src="/images/address.svg" alt="address icon" /> Address:
                   {{ channelData.district.name }},
@@ -379,9 +379,10 @@
                   <img src="/images/translation.svg" alt="language icon" />
                   Medium: {{ channelData.language.name }}
                 </p>
-                <p>
+                <p class="row">
                   <img src="/images/grade.svg" alt="Exam board icon" /> Board:
                   <button
+                    class="btn btn-info m-1"
                     v-for="(board, index) in channelData.board"
                     :key="index"
                   >
@@ -435,7 +436,7 @@
             <h2 class="text-uppercase">Infrastructure</h2>
             <hr class="mt-n2" />
 
-            <div class="row facilitydiv py-3 mt-5">
+            <div class="row facilitydiv py-3 mt-md-5">
               <div class="col-sm-4">
                 <p>
                   <img

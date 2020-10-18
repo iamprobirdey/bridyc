@@ -649,6 +649,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -1283,6 +1289,7 @@ var render = function() {
                         {
                           staticClass: "mr-1",
                           attrs: {
+                            target: "_blank",
                             href:
                               _vm.channelData.extra_attributes.social
                                 .facebook != null
@@ -1308,6 +1315,7 @@ var render = function() {
                         {
                           staticClass: "mr-1",
                           attrs: {
+                            target: "_blank",
                             href:
                               _vm.channelData.extra_attributes.social.linkedin
                           }
@@ -1329,6 +1337,7 @@ var render = function() {
                         {
                           staticClass: "mr-1",
                           attrs: {
+                            target: "_blank",
                             href:
                               _vm.channelData.extra_attributes.social
                                 .instagram != null
@@ -1354,6 +1363,7 @@ var render = function() {
                         {
                           staticClass: "mr-1",
                           attrs: {
+                            target: "_blank",
                             href:
                               _vm.channelData.extra_attributes.social.youtube !=
                               null
@@ -1667,54 +1677,55 @@ var render = function() {
                   _vm._v(" "),
                   _c("hr", { staticClass: "mt-n2" }),
                   _vm._v(" "),
-                  _c("div", { staticClass: "insadditionalinfo mt-4" }, [
-                    _c("p", [
-                      _c("img", {
-                        attrs: {
-                          src: "/images/address.svg",
-                          alt: "address icon"
-                        }
-                      }),
-                      _vm._v(
-                        " Address:\n                " +
-                          _vm._s(_vm.channelData.district.name) +
-                          ",\n                " +
-                          _vm._s(_vm.channelData.state.name) +
-                          "\n              "
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("p", [
-                      _c("img", {
-                        attrs: {
-                          src: "/images/mailbox.svg",
-                          alt: "pin code icon"
-                        }
-                      }),
-                      _vm._v(
-                        " Pin\n                Code:\n                " +
-                          _vm._s(_vm.userData.verification.pin) +
-                          "\n              "
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("p", [
-                      _c("img", {
-                        attrs: {
-                          src: "/images/translation.svg",
-                          alt: "language icon"
-                        }
-                      }),
-                      _vm._v(
-                        "\n                Medium: " +
-                          _vm._s(_vm.channelData.language.name) +
-                          "\n              "
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c(
-                      "p",
-                      [
+                  _c(
+                    "div",
+                    { staticClass: "insadditionalinfo mt-4 text-capitalize" },
+                    [
+                      _c("p", [
+                        _c("img", {
+                          attrs: {
+                            src: "/images/address.svg",
+                            alt: "address icon"
+                          }
+                        }),
+                        _vm._v(
+                          " Address:\n                " +
+                            _vm._s(_vm.channelData.district.name) +
+                            ",\n                " +
+                            _vm._s(_vm.channelData.state.name) +
+                            "\n              "
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("p", [
+                        _c("img", {
+                          attrs: {
+                            src: "/images/mailbox.svg",
+                            alt: "pin code icon"
+                          }
+                        }),
+                        _vm._v(
+                          " Pin\n                Code:\n                " +
+                            _vm._s(_vm.userData.verification.pin) +
+                            "\n              "
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("p", [
+                        _c("img", {
+                          attrs: {
+                            src: "/images/translation.svg",
+                            alt: "language icon"
+                          }
+                        }),
+                        _vm._v(
+                          "\n                Medium: " +
+                            _vm._s(_vm.channelData.language.name) +
+                            "\n              "
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("p", [
                         _c("img", {
                           attrs: {
                             src: "/images/grade.svg",
@@ -1722,51 +1733,54 @@ var render = function() {
                           }
                         }),
                         _vm._v(" Board:\n                "),
-                        _vm._l(_vm.channelData.board, function(board, index) {
-                          return _c(
-                            "button",
-                            { key: index, staticClass: "btn btn-info m-1" },
-                            [
-                              _vm._v(
-                                "\n                  " +
-                                  _vm._s(board.name) +
-                                  "\n                "
-                              )
-                            ]
-                          )
-                        })
-                      ],
-                      2
-                    ),
-                    _vm._v(" "),
-                    _c("p", [
-                      _c("img", {
-                        attrs: {
-                          src: "/images/deed.svg",
-                          alt: "ownership icon"
-                        }
-                      }),
-                      _vm._v(
-                        " Ownership:\n                " +
-                          _vm._s(_vm.userData.verification.ownership) +
-                          "\n              "
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("p", [
-                      _c("img", {
-                        attrs: {
-                          src: "/images/calendar.svg",
-                          alt: "calender icon"
-                        }
-                      }),
-                      _vm._v(
-                        "\n                Founded:\n                " +
-                          _vm._s(_vm.userData.verification.founded) +
-                          "\n              "
-                      )
-                    ])
-                  ])
+                        _c(
+                          "span",
+                          _vm._l(_vm.channelData.board, function(board, index) {
+                            return _c(
+                              "button",
+                              { key: index, staticClass: "btn btn-info m-1" },
+                              [
+                                _vm._v(
+                                  "\n                  " +
+                                    _vm._s(board.name) +
+                                    "\n                "
+                                )
+                              ]
+                            )
+                          }),
+                          0
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("p", [
+                        _c("img", {
+                          attrs: {
+                            src: "/images/deed.svg",
+                            alt: "ownership icon"
+                          }
+                        }),
+                        _vm._v(
+                          " Ownership:\n                " +
+                            _vm._s(_vm.userData.verification.ownership) +
+                            "\n              "
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("p", [
+                        _c("img", {
+                          attrs: {
+                            src: "/images/calendar.svg",
+                            alt: "calender icon"
+                          }
+                        }),
+                        _vm._v(
+                          "\n                Founded:\n                " +
+                            _vm._s(_vm.userData.verification.founded) +
+                            "\n              "
+                        )
+                      ])
+                    ]
+                  )
                 ])
               ]
             ),
@@ -1932,7 +1946,10 @@ var render = function() {
                       _c("p", [
                         _c("img", {
                           staticClass: "mr-2",
-                          attrs: { src: "/images/bus.svg", alt: "Bus Image" }
+                          attrs: {
+                            src: "/images/hostel.svg",
+                            alt: "hostel Image"
+                          }
                         }),
                         _vm._v(
                           "\n                Girls Hostel :\n                "
@@ -14430,7 +14447,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/js/channelInDashboard.js */"./resources/js/channelInDashboard.js");
+module.exports = __webpack_require__(/*! C:\laragon\www\bridyc\resources\js\channelInDashboard.js */"./resources/js/channelInDashboard.js");
 
 
 /***/ })

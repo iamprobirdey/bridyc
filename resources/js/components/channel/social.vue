@@ -3,15 +3,15 @@
     <h4>Social Media handles</h4>
     <ul v-if="getTheModel === false" class="edit-social">
       <li v-if="socialData.facebook != null">
-        <a :href="socialData.facebook" target="_blank"><span>Facebook</span></a>
+        <a :href="socialData.facebook" target="_blank"><span> Facebook</span></a>
       </li>
       <li v-if="socialData.instagram != null">
         <a :href="socialData.instagram" target="_blank"
-          ><span>Instagram</span></a
+          ><span> Instagram</span></a
         >
       </li>
       <li v-if="socialData.linkedin != null">
-        <a :href="socialData.linkedin" target="_blank"><span>LinkedIn</span></a>
+        <a :href="socialData.linkedin" target="_blank"><span> LinkedIn</span></a>
       </li>
       <li v-if="socialData.youtube != null">
         <a :href="socialData.youtube" target="_blank"><span> Youtube</span></a>

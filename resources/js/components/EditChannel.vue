@@ -29,7 +29,7 @@
       </div>
     </div>
     <div class="row mt-5">
-      <div class="col-sm-6">
+      <div class="col-sm-6 mb-5">
         <social></social>
       </div>
       <div class="col-sm-6">

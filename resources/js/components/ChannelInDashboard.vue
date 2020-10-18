@@ -100,6 +100,7 @@
           <a
             class="mr-1"
             v-if="channelData.extra_attributes.social.facebook != null"
+            target="_blank"
             :href="
               channelData.extra_attributes.social.facebook != null
                 ? channelData.extra_attributes.social.facebook
@@ -111,6 +112,7 @@
           <a
             class="mr-1"
             v-if="channelData.extra_attributes.social.linkedin != null"
+            target="_blank"
             :href="channelData.extra_attributes.social.linkedin"
           >
             <img src="/images/linkedin.svg" alt="li icon" />
@@ -118,6 +120,7 @@
           <a
             class="mr-1"
             v-if="channelData.extra_attributes.social.instagram != null"
+            target="_blank"
             :href="
               channelData.extra_attributes.social.instagram != null
                 ? channelData.extra_attributes.social.instagram
@@ -129,6 +132,7 @@
           <a
             class="mr-1"
             v-if="channelData.extra_attributes.social.youtube != null"
+            target="_blank"
             :href="
               channelData.extra_attributes.social.youtube != null
                 ? channelData.extra_attributes.social.youtube
@@ -327,7 +331,7 @@
             <div class="container-fluid mt-5">
               <h2 class="text-uppercase">Additional Information</h2>
               <hr class="mt-n2" />
-              <div class="insadditionalinfo mt-4">
+              <div class="insadditionalinfo mt-4 text-capitalize">
                 <p>
                   <img src="/images/address.svg" alt="address icon" /> Address:
                   {{ channelData.district.name }},
@@ -345,6 +349,7 @@
                 </p>
                 <p>
                   <img src="/images/grade.svg" alt="Exam board icon" /> Board:
+                  <span>
                   <button
                     class="btn btn-info m-1"
                     v-for="(board, index) in channelData.board"
@@ -352,6 +357,7 @@
                   >
                     {{ board.name }}
                   </button>
+                  </span>
                 </p>
 
                 <p>
@@ -450,7 +456,7 @@
                   </strong>
                 </p>
                 <p>
-                  <img class="mr-2" src="/images/bus.svg" alt="Bus Image" />
+                  <img class="mr-2" src="/images/hostel.svg" alt="hostel Image" />
                   Girls Hostel :
                   <strong class="ml-1 text-capitalize">
                     {{
