@@ -428,6 +428,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -460,7 +463,7 @@ __webpack_require__.r(__webpack_exports__);
     onChange: function onChange(image) {
       if (this.$refs.pictureInput.image) this.imageData = this.$refs.pictureInput.image;
     },
-    onImageSubmit: function onImageSubmit() {
+    onImageSubmit: _.debounce(function () {
       var _this = this;
 
       if (this.imageData != "") {
@@ -476,7 +479,7 @@ __webpack_require__.r(__webpack_exports__);
           }
         });
       }
-    },
+    }, 1200),
     deleteCollege: function deleteCollege(image, index) {
       var _this2 = this;
 

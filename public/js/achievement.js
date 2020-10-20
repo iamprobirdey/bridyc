@@ -326,7 +326,7 @@ __webpack_require__.r(__webpack_exports__);
       this.formData.description = "";
       this.formData.date = "";
     },
-    achievementSubmit: function achievementSubmit() {
+    achievementSubmit: _.debounce(function () {
       var _this = this;
 
       this.$validator.validate().then(function (result) {
@@ -366,7 +366,7 @@ __webpack_require__.r(__webpack_exports__);
           });
         }
       });
-    },
+    }, 1200),
     onChange: function onChange(image) {
       if (this.$refs.pictureInput.image) this.formData.image_path = this.$refs.pictureInput.image;
     },

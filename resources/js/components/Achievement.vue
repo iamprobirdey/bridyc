@@ -229,7 +229,7 @@ export default {
       this.formData.description = "";
       this.formData.date = "";
     },
-    achievementSubmit() {
+    achievementSubmit: _.debounce(function () {
       this.$validator.validate().then((result) => {
         if (result) {
           if (this.formData.image_path === "")
@@ -266,7 +266,7 @@ export default {
             });
         }
       });
-    },
+    }, 1200),
     onChange(image) {
       if (this.$refs.pictureInput.image)
         this.formData.image_path = this.$refs.pictureInput.image;

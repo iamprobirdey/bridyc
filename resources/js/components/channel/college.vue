@@ -3,8 +3,11 @@
     <div>
       <h4>Your Gallery (First five photos will be displayed)</h4>
       <ul class="nav">
-        
-        <li v-for="(image, index) in channelData.college_image" :key="index" class="m-2">
+        <li
+          v-for="(image, index) in channelData.college_image"
+          :key="index"
+          class="m-2"
+        >
           <img
             :src="
               domainUrl +
@@ -25,7 +28,7 @@
       </ul>
     </div>
     <br />
-    
+
     <button
       v-if="!collegeImageEntry"
       class="btn btnsubmit rounded-0"
@@ -108,7 +111,7 @@ export default {
       if (this.$refs.pictureInput.image)
         this.imageData = this.$refs.pictureInput.image;
     },
-    onImageSubmit() {
+    onImageSubmit: _.debounce(function () {
       if (this.imageData != "") {
         const formData = new FormData();
         formData.append("image", this.imageData);
@@ -125,7 +128,7 @@ export default {
             }
           });
       }
-    },
+    }, 1200),
     deleteCollege(image, index) {
       axios
         .post("/api/delete/college/image/" + image.id)
