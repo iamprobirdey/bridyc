@@ -273,11 +273,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
       achievementData: [],
+      disable: false,
+      showAchievement: true,
       openAchievementForm: false,
       formData: {
         image_path: "",
@@ -325,12 +328,14 @@ __webpack_require__.r(__webpack_exports__);
       this.formData.title = "";
       this.formData.description = "";
       this.formData.date = "";
+      this.showAchievement = false;
     },
     achievementSubmit: _.debounce(function () {
       var _this = this;
 
       this.$validator.validate().then(function (result) {
         if (result) {
+          _this.disable = true;
           if (_this.formData.image_path === "") _this.serverErrors.image_path = "Image is required";
           var formUrl = "";
 
@@ -344,6 +349,8 @@ __webpack_require__.r(__webpack_exports__);
 
           axios.post(formUrl, _this.formData).then(function (response) {
             if (response.data.message === true) {
+              _this.disable = false;
+              _this.showAchievement = true;
               Vue.toasted.success("Achievement data is created", {
                 position: "top-center",
                 duration: 5000
@@ -378,10 +385,12 @@ __webpack_require__.r(__webpack_exports__);
       this.achievementId = data.id;
       this.openAchievementForm = true;
       this.achievementIndex = index;
+      this.showAchievement = false;
     },
     canCleSubmittion: function canCleSubmittion() {
       this.editingUrlChecker = false;
       this.openAchievementForm = false;
+      this.showAchievement = true;
     }
   },
   components: {
@@ -1888,75 +1897,79 @@ var render = function() {
       [_c("i", { staticClass: "fa fa-plus", attrs: { "aria-hidden": "true" } })]
     ),
     _vm._v(" "),
-    _c(
-      "div",
-      { staticClass: "row my-5" },
-      _vm._l(_vm.achievementData, function(achievement, index) {
-        return _c(
+    _vm.showAchievement
+      ? _c(
           "div",
-          {
-            key: index,
-            staticClass: "card shadow mx-auto sidebar-facard mb-4"
-          },
-          [
-            _c("img", {
-              attrs: {
-                src:
-                  _vm.baseUrl +
-                  "media/channel/" +
-                  _vm.userId +
-                  "/achievement/" +
-                  achievement.image_path
-              }
-            }),
-            _vm._v(" "),
-            _c("div", { staticClass: "card-body mt-n1" }, [
-              _c("h6", { staticClass: "card-title my-n1" }, [
-                _vm._v(_vm._s(achievement.title))
-              ]),
-              _vm._v(" "),
-              _c("p", { staticClass: "card-text" }, [
-                _vm._v(
-                  "\n          " +
-                    _vm._s(achievement.description.substr(0, 20)) +
-                    "\n        "
-                )
-              ]),
-              _vm._v(" "),
-              _c("p", { staticClass: "card-text" }, [
-                _vm._v("\n          " + _vm._s(achievement.date) + "\n        ")
-              ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "text-center" }, [
-              _c(
-                "button",
-                {
-                  staticClass: "btn mb-5 editachieve",
+          { staticClass: "row my-5" },
+          _vm._l(_vm.achievementData, function(achievement, index) {
+            return _c(
+              "div",
+              {
+                key: index,
+                staticClass: "card shadow mx-auto sidebar-facard mb-4"
+              },
+              [
+                _c("img", {
                   attrs: {
-                    "data-toggle": "tooltip",
-                    "data-placement": "right",
-                    title: "Edit"
-                  },
-                  on: {
-                    click: function($event) {
-                      return _vm.editTheForm(achievement, index)
-                    }
+                    src:
+                      _vm.baseUrl +
+                      "media/channel/" +
+                      _vm.userId +
+                      "/achievement/" +
+                      achievement.image_path
                   }
-                },
-                [
-                  _c("i", {
-                    staticClass: "fa fa-pencil",
-                    attrs: { "aria-hidden": "true" }
-                  })
-                ]
-              )
-            ])
-          ]
+                }),
+                _vm._v(" "),
+                _c("div", { staticClass: "card-body mt-n1" }, [
+                  _c("h6", { staticClass: "card-title my-n1" }, [
+                    _vm._v(_vm._s(achievement.title))
+                  ]),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "card-text" }, [
+                    _vm._v(
+                      "\n          " +
+                        _vm._s(achievement.description.substr(0, 20)) +
+                        "\n        "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "card-text" }, [
+                    _vm._v(
+                      "\n          " + _vm._s(achievement.date) + "\n        "
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "text-center" }, [
+                  _c(
+                    "button",
+                    {
+                      staticClass: "btn mb-5 editachieve",
+                      attrs: {
+                        "data-toggle": "tooltip",
+                        "data-placement": "right",
+                        title: "Edit"
+                      },
+                      on: {
+                        click: function($event) {
+                          return _vm.editTheForm(achievement, index)
+                        }
+                      }
+                    },
+                    [
+                      _c("i", {
+                        staticClass: "fa fa-pencil",
+                        attrs: { "aria-hidden": "true" }
+                      })
+                    ]
+                  )
+                ])
+              ]
+            )
+          }),
+          0
         )
-      }),
-      0
-    ),
+      : _vm._e(),
     _vm._v(" "),
     _c("br"),
     _vm._v(" "),
@@ -2229,7 +2242,6 @@ var render = function() {
                       "data-vv-delay": "20",
                       name: "date",
                       type: "date",
-                      max: _vm.todaysDate,
                       placeholder: "date"
                     },
                     domProps: { value: _vm.formData.date },
@@ -2311,9 +2323,9 @@ var render = function() {
                   "button",
                   {
                     staticClass: "btn btnsubmit mt-n2",
-                    attrs: { type: "submit" }
+                    attrs: { type: "submit", disabled: _vm.disable }
                   },
-                  [_vm._v("Submit")]
+                  [_vm._v("\n          Submit\n        ")]
                 )
               ])
             ],
