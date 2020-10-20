@@ -2,33 +2,29 @@
   <div class="profile mx-auto px-lg-5">
     <avatar :user="userData"></avatar>
     <div class="mt-5">
-    <username :username="userData.username" :id="userData.id"></username>
+      <username :username="userData.username" :id="userData.id"></username>
     </div>
-    <br>
-    <br>
-    <br>
+    <br />
+    <br />
+    <br />
     <div class="shadow py-5 mt-n4 mx-lg-5">
       <div class="container mx-lg-5 px-md-5">
         <address-for-teacher
-          :channels="channelsData"
           :states="statesData"
           :districts="districtsData"
           :villages="villagesData"
-          :standards="standardsData"
           :userinformation="userInformationData"
           :id="userData.id"
         ></address-for-teacher>
       </div>
       <div class="mt-5 pt-3 mb-5 mx-lg-5 text-center">
-        
-          <subject
-            :subjects="subjectsData"
-            :studentssubject="studentsubjectsData"
-            :id="userData.id"
-          ></subject>
-        
+        <subject
+          :subjects="subjectsData"
+          :studentssubject="studentsubjectsData"
+          :id="userData.id"
+        ></subject>
       </div>
-      <hr>
+      <hr />
       <div class="row mt-5 mx-0">
         <div>
           <channel
@@ -40,8 +36,8 @@
         <!--div class="col-sm-6">
           <phone :user="userData"></phone>
         </div-->
+      </div>
     </div>
-  </div>
   </div>
 </template>
 
@@ -60,7 +56,6 @@ export default {
       statesData: [],
       districtsData: [],
       villagesData: [],
-      standardsData: [],
       subjectsData: [],
       studentsubjectsData: [],
       userInformationData: {},
@@ -88,10 +83,6 @@ export default {
       type: Array,
       default: null,
     },
-    standards: {
-      type: Array,
-      default: null,
-    },
     subjects: {
       type: Array,
       default: null,
@@ -115,7 +106,7 @@ export default {
     this.statesData = this.states;
     this.districtsData = this.districts;
     this.villagesData = this.villages;
-    this.standardsData = this.standards;
+    //this.standardsData = this.standards;
     this.subjectsData = this.subjects;
     this.studentsubjectsData = this.studentsubjects;
     this.userInformationData = this.userinformation;

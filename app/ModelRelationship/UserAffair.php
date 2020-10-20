@@ -11,6 +11,7 @@ use App\UserChannelRequest;
 use App\UserEducation;
 use App\UserInformation;
 use App\UserInstitute;
+use App\UserTeacherInformation;
 use App\Verification;
 
 trait UserAffair
@@ -62,6 +63,11 @@ trait UserAffair
     public function userinformation()
     {
         return $this->hasOne(UserInformation::class, 'user_id', 'id');
+    }
+
+    public function userteacherinformation()
+    {
+        return $this->hasOne(UserTeacherInformation::class, 'user_id', 'id');
     }
 
     public function  userchannelrequest()

@@ -144,10 +144,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
 
 
 
@@ -162,7 +158,6 @@ __webpack_require__.r(__webpack_exports__);
       statesData: [],
       districtsData: [],
       villagesData: [],
-      standardsData: [],
       subjectsData: [],
       studentsubjectsData: [],
       userInformationData: {},
@@ -190,10 +185,6 @@ __webpack_require__.r(__webpack_exports__);
       type: Array,
       "default": null
     },
-    standards: {
-      type: Array,
-      "default": null
-    },
     subjects: {
       type: Array,
       "default": null
@@ -216,8 +207,8 @@ __webpack_require__.r(__webpack_exports__);
     this.channelsData = this.channels;
     this.statesData = this.states;
     this.districtsData = this.districts;
-    this.villagesData = this.villages;
-    this.standardsData = this.standards;
+    this.villagesData = this.villages; //this.standardsData = this.standards;
+
     this.subjectsData = this.subjects;
     this.studentsubjectsData = this.studentsubjects;
     this.userInformationData = this.userinformation;
@@ -441,36 +432,31 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      channelsData: [],
       statesData: [],
       districtsData: [],
       villagesData: [],
-      standardsData: [],
       userInformationData: {},
       userFormData: {
         state_id: "",
         district_id: "",
-        village_id: "",
-        standard_id: ""
+        village_id: ""
       },
       serverErrors: {
         state_id: "",
         district_id: "",
-        village_id: "",
-        standard_id: ""
+        village_id: ""
       },
       addressDataChecker: true,
       userId: ""
     };
   },
   props: {
-    channels: {
-      type: Array,
-      "default": null
-    },
     states: {
       type: Array,
       "default": null
@@ -480,10 +466,6 @@ __webpack_require__.r(__webpack_exports__);
       "default": null
     },
     villages: {
-      type: Array,
-      "default": null
-    },
-    standards: {
       type: Array,
       "default": null
     },
@@ -498,11 +480,9 @@ __webpack_require__.r(__webpack_exports__);
   },
   created: function created() {
     this.userId = this.id;
-    this.channelsData = this.channels;
     this.statesData = this.states;
     this.districtsData = this.districts;
     this.villagesData = this.villages;
-    this.standardsData = this.standards;
     this.userInformationData = this.userinformation;
     if (this.userInformationData === null) this.addressDataChecker = false;
     console.log(this.channelsData);
@@ -521,7 +501,6 @@ __webpack_require__.r(__webpack_exports__);
               });
               _this.userInformationData = {};
               _this.userInformationData = response.data.userData;
-              console.log(_this.userInformationData);
               _this.addressDataChecker = true;
             }
           })["catch"](function (errors) {
@@ -545,21 +524,16 @@ __webpack_require__.r(__webpack_exports__);
             if (errors.response.data.errors.village_id) {
               _this.serverErrors.village_id = errors.response.data.errors.village_id[0];
             }
-
-            if (errors.response.data.errors.standard_id) {
-              _this.serverErrors.standard_id = errors.response.data.errors.standard_id[0];
-            }
           });
         }
       });
     },
     editAddress: function editAddress() {
-      this.addressDataChecker = false;
-      this.userFormData.channel_id = this.userInformationData.channel.id;
+      this.addressDataChecker = false; //this.userFormData.channel_id = this.userInformationData.channel.id;
+
       this.userFormData.state_id = this.userInformationData.state.id;
       this.userFormData.district_id = this.userInformationData.district.id;
       this.userFormData.village_id = this.userInformationData.village.id;
-      this.userFormData.standard_id = this.userInformationData.standard.id;
     },
     cancelForm: function cancelForm() {
       this.addressDataChecker = true;
@@ -1423,7 +1397,7 @@ exports = module.exports = __webpack_require__(/*! ../css-loader/lib/css-base.js
 
 
 // module
-exports.push([module.i, "\n.picture-input[data-v-431cb064] {\n  width: 100%;\n  margin: 0 auto;\n  text-align: center;\n}\n.preview-container[data-v-431cb064] {\n  width: 100%;\n  box-sizing: border-box;\n  margin: 0 auto;\n  cursor: pointer;\n  overflow: hidden;\n}\n.picture-preview[data-v-431cb064] {\n  width: 100%;\n  height: 100%;\n  position: relative;\n  z-index: 10001;\n  box-sizing: border-box;\n  background-color: rgba(200,200,200,.25);\n}\n.picture-preview.dragging-over[data-v-431cb064] {\n  -webkit-filter: brightness(0.5);\n          filter: brightness(0.5);\n}\n.picture-inner[data-v-431cb064] {\n  position: relative;\n  z-index: 10002;\n  pointer-events: none;\n  box-sizing: border-box;\n  margin: 1em auto;\n  padding: 0.5em;\n  /*border: .3em dashed rgba(66,66,66,.15); commented because of cover and icon in indtitute edit channel*/\n  border: 4px dashed rgba(66,66,66,.15);\n  border-radius: 8px;\n  width: calc(100% - 2.5em);\n  height: calc(100% - 2.5em);\n  display: table;\n}\n.picture-inner .picture-inner-text[data-v-431cb064] {\n  display: table-cell;\n  vertical-align: middle;\n  text-align: center;\n  /*font-size: 2em; commented because of cover and icon in institute edit channel*/\n  font-size: 18px;\n  line-height: 1.5;\n}\nbutton[data-v-431cb064] {\n  margin: 1em .25em;\n  cursor: pointer;\n}\ninput[type=file][data-v-431cb064] {\n  display: none;\n}\n", ""]);
+exports.push([module.i, "\n.picture-input[data-v-431cb064] {\n  width: 100%;\n  margin: 0 auto;\n  text-align: center;\n}\n.preview-container[data-v-431cb064] {\n  width: 100%;\n  box-sizing: border-box;\n  margin: 0 auto;\n  cursor: pointer;\n  overflow: hidden;\n}\n.picture-preview[data-v-431cb064] {\n  width: 100%;\n  height: 100%;\n  position: relative;\n  z-index: 10001;\n  box-sizing: border-box;\n  background-color: rgba(200,200,200,.25);\n}\n.picture-preview.dragging-over[data-v-431cb064] {\n  -webkit-filter: brightness(0.5);\n          filter: brightness(0.5);\n}\n.picture-inner[data-v-431cb064] {\n  position: relative;\n  z-index: 10002;\n  pointer-events: none;\n  box-sizing: border-box;\n  margin: 1em auto;\n  padding: 0.5em;\n  border: .3em dashed rgba(66,66,66,.15);\n  border-radius: 8px;\n  width: calc(100% - 2.5em);\n  height: calc(100% - 2.5em);\n  display: table;\n}\n.picture-inner .picture-inner-text[data-v-431cb064] {\n  display: table-cell;\n  vertical-align: middle;\n  text-align: center;\n  font-size: 2em;\n  line-height: 1.5;\n}\nbutton[data-v-431cb064] {\n  margin: 1em .25em;\n  cursor: pointer;\n}\ninput[type=file][data-v-431cb064] {\n  display: none;\n}\n", ""]);
 
 // exports
 
@@ -2224,9 +2198,7 @@ __webpack_require__.r(__webpack_exports__);
     },
     hideChangeButton: {
       type: Boolean,
-      /*default: false changed due to icon and cover in institute edit channel*/
-      default: true
-
+      default: false
     },
     autoToggleAspectRatio: {
       type: Boolean,
@@ -2246,8 +2218,7 @@ __webpack_require__.r(__webpack_exports__);
     },
     zIndex: {
       type: Number,
-      /*default: 10000  commented because of cover and icon in institute edit channel*/
-      default: 1
+      default: 10000
     },
     alertOnError: {
       type: Boolean,
@@ -2281,7 +2252,7 @@ __webpack_require__.r(__webpack_exports__);
         upload: '<p>Your device does not support file uploading.</p>',
         drag: 'Drag an image or <br>click here to select a file',
         tap: 'Tap here to select a photo <br>from your gallery',
-       /* change: 'Change Photo', commented because of cover and icon in edit channel*/
+        change: 'Change Photo',
         aspect: 'Landscape/Portrait',
         remove: 'Remove Photo',
         select: 'Select a Photo',
@@ -2963,11 +2934,9 @@ var render = function() {
           [
             _c("address-for-teacher", {
               attrs: {
-                channels: _vm.channelsData,
                 states: _vm.statesData,
                 districts: _vm.districtsData,
                 villages: _vm.villagesData,
-                standards: _vm.standardsData,
                 userinformation: _vm.userInformationData,
                 id: _vm.userData.id
               }
@@ -3040,14 +3009,6 @@ var render = function() {
       ? _c("div", { staticClass: "address-display" }, [
           _c("div", [
             _c("div", { staticClass: "row mx-0" }, [
-              _c("div", { staticClass: "col-sm-6" }, [
-                _c("strong", [_vm._v("Qualification :")]),
-                _vm._v(" "),
-                _c("span", [
-                  _vm._v(_vm._s(_vm.userInformationData.standard.standard_name))
-                ])
-              ]),
-              _vm._v(" "),
               _c("div", { staticClass: "col-sm-6" }, [
                 _c("strong", [_vm._v("Locality/Village :")]),
                 _vm._v(" "),
@@ -3472,131 +3433,6 @@ var render = function() {
                       staticClass: "text-danger text-center"
                     },
                     [_vm._v(_vm._s(_vm.serverErrors.village_id))]
-                  )
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "div",
-                {
-                  staticClass: "form-group row mx-0 mx-lg-5",
-                  class: {
-                    "has-error":
-                      _vm.errors.has("standard") ||
-                      _vm.serverErrors.standard_id != ""
-                  }
-                },
-                [
-                  _c("label", { attrs: { col: "col-sm-3 col-form-label" } }, [
-                    _vm._v("QUALIFICATION:")
-                  ]),
-                  _vm._v(" "),
-                  _c(
-                    "select",
-                    {
-                      directives: [
-                        {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.userFormData.standard_id,
-                          expression: "userFormData.standard_id"
-                        },
-                        {
-                          name: "validate",
-                          rawName: "v-validate",
-                          value: "required",
-                          expression: "'required'"
-                        }
-                      ],
-                      staticClass: "form-control col-sm-9 ml-auto",
-                      attrs: { name: "standard" },
-                      on: {
-                        change: function($event) {
-                          var $$selectedVal = Array.prototype.filter
-                            .call($event.target.options, function(o) {
-                              return o.selected
-                            })
-                            .map(function(o) {
-                              var val = "_value" in o ? o._value : o.value
-                              return val
-                            })
-                          _vm.$set(
-                            _vm.userFormData,
-                            "standard_id",
-                            $event.target.multiple
-                              ? $$selectedVal
-                              : $$selectedVal[0]
-                          )
-                        }
-                      }
-                    },
-                    [
-                      _c("option", { attrs: { value: "" } }, [
-                        _vm._v("Select Qualification")
-                      ]),
-                      _vm._v(" "),
-                      _vm._l(_vm.standardsData, function(standard) {
-                        return _c(
-                          "option",
-                          {
-                            key: standard.id,
-                            domProps: { value: standard.id }
-                          },
-                          [
-                            _vm._v(
-                              "\n            " +
-                                _vm._s(standard.standard_name) +
-                                "\n          "
-                            )
-                          ]
-                        )
-                      })
-                    ],
-                    2
-                  ),
-                  _vm._v(" "),
-                  _c("i", {
-                    directives: [
-                      {
-                        name: "show",
-                        rawName: "v-show",
-                        value: _vm.errors.has("standard"),
-                        expression: "errors.has('standard')"
-                      }
-                    ],
-                    staticClass: "is-invalid"
-                  }),
-                  _vm._v(" "),
-                  _c(
-                    "span",
-                    {
-                      directives: [
-                        {
-                          name: "show",
-                          rawName: "v-show",
-                          value: _vm.errors.has("standard"),
-                          expression: "errors.has('standard')"
-                        }
-                      ],
-                      staticClass: "text-danger text-center"
-                    },
-                    [_vm._v(_vm._s(_vm.errors.first("standard")))]
-                  ),
-                  _vm._v(" "),
-                  _c(
-                    "span",
-                    {
-                      directives: [
-                        {
-                          name: "show",
-                          rawName: "v-show",
-                          value: _vm.serverErrors.standard_id != "",
-                          expression: "serverErrors.standard_id != ''"
-                        }
-                      ],
-                      staticClass: "text-danger text-center"
-                    },
-                    [_vm._v(_vm._s(_vm.serverErrors.standard_id))]
                   )
                 ]
               ),
@@ -5423,7 +5259,7 @@ if (typeof element != "undefined" && element != null) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\laragon\www\bridyc\resources\js\teacherProfile.js */"./resources/js/teacherProfile.js");
+module.exports = __webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/js/teacherProfile.js */"./resources/js/teacherProfile.js");
 
 
 /***/ })

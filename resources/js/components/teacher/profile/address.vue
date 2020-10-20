@@ -1,31 +1,34 @@
 <template>
   <div class="address">
     <div v-if="addressDataChecker" class="address-display">
-       <div>
-       <div class="row mx-0">
-         <div class="col-sm-6">
-            <strong>Qualification :</strong>
-            <span>{{ userInformationData.standard.standard_name }}</span>
-         </div>
-         <div class="col-sm-6">
-           <strong>Locality/Village :</strong>
-           <span>{{ userInformationData.village.name }}</span>
-         </div>
-      </div>
-      <div class="row mx-0">
-           <div class="col-sm-6">
-               <strong>District :</strong>
-              <span>{{ userInformationData.district.name }}</span>
-            </div>
-      
-           <div class="col-sm-6">
-                <strong>State :</strong>
-                <span>{{ userInformationData.state.name }}</span> 
-           </div>
-      </div>
+      <div>
+        <div class="row mx-0">
+          <div class="col-sm-6">
+            <strong>Locality/Village :</strong>
+            <span>{{ userInformationData.village.name }}</span>
+          </div>
+        </div>
+        <div class="row mx-0">
+          <div class="col-sm-6">
+            <strong>District :</strong>
+            <span>{{ userInformationData.district.name }}</span>
+          </div>
 
-      <button class="btn edit-btn" @click="editAddress()" data-toggle="tooltip" title="Edit"><i class="fa fa-pencil" aria-hidden="true"></i></button>
-    </div>
+          <div class="col-sm-6">
+            <strong>State :</strong>
+            <span>{{ userInformationData.state.name }}</span>
+          </div>
+        </div>
+
+        <button
+          class="btn edit-btn"
+          @click="editAddress()"
+          data-toggle="tooltip"
+          title="Edit"
+        >
+          <i class="fa fa-pencil" aria-hidden="true"></i>
+        </button>
+      </div>
     </div>
     <div v-if="!addressDataChecker">
       <form @submit.prevent="addressForm()">
@@ -138,7 +141,7 @@
             >{{ serverErrors.village_id }}</span
           >
         </div>
-
+        <!--
         <div
           class="form-group row mx-0 mx-lg-5"
           :class="{
@@ -175,7 +178,7 @@
             class="text-danger text-center"
             >{{ serverErrors.standard_id }}</span
           >
-        </div>
+        </div> -->
         <div class="ml-5">
           <button
             v-show="userInformationData != null"
@@ -196,33 +199,25 @@
 export default {
   data() {
     return {
-      channelsData: [],
       statesData: [],
       districtsData: [],
       villagesData: [],
-      standardsData: [],
       userInformationData: {},
       userFormData: {
         state_id: "",
         district_id: "",
         village_id: "",
-        standard_id: "",
       },
       serverErrors: {
         state_id: "",
         district_id: "",
         village_id: "",
-        standard_id: "",
       },
       addressDataChecker: true,
       userId: "",
     };
   },
   props: {
-    channels: {
-      type: Array,
-      default: null,
-    },
     states: {
       type: Array,
       default: null,
@@ -232,10 +227,6 @@ export default {
       default: null,
     },
     villages: {
-      type: Array,
-      default: null,
-    },
-    standards: {
       type: Array,
       default: null,
     },
@@ -250,11 +241,9 @@ export default {
   },
   created() {
     this.userId = this.id;
-    this.channelsData = this.channels;
     this.statesData = this.states;
     this.districtsData = this.districts;
     this.villagesData = this.villages;
-    this.standardsData = this.standards;
     this.userInformationData = this.userinformation;
     if (this.userInformationData === null) this.addressDataChecker = false;
     console.log(this.channelsData);
@@ -276,7 +265,6 @@ export default {
                 });
                 this.userInformationData = {};
                 this.userInformationData = response.data.userData;
-                console.log(this.userInformationData);
                 this.addressDataChecker = true;
               }
             })
@@ -301,21 +289,16 @@ export default {
                 this.serverErrors.village_id =
                   errors.response.data.errors.village_id[0];
               }
-              if (errors.response.data.errors.standard_id) {
-                this.serverErrors.standard_id =
-                  errors.response.data.errors.standard_id[0];
-              }
             });
         }
       });
     },
     editAddress() {
       this.addressDataChecker = false;
-      this.userFormData.channel_id = this.userInformationData.channel.id;
+      //this.userFormData.channel_id = this.userInformationData.channel.id;
       this.userFormData.state_id = this.userInformationData.state.id;
       this.userFormData.district_id = this.userInformationData.district.id;
       this.userFormData.village_id = this.userInformationData.village.id;
-      this.userFormData.standard_id = this.userInformationData.standard.id;
     },
     cancelForm() {
       this.addressDataChecker = true;
