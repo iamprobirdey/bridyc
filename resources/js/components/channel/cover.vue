@@ -5,7 +5,7 @@
         height="150"
         width="250"
         :src="
-          userImage === 'institute-cover-default.webp'
+          userImage === 'institute-cover-default.jpg'
             ? '/images/' + userImage
             : '/media/channel/' + userId + '/cover/' + userImage
         "

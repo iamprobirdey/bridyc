@@ -152,11 +152,11 @@ class ProfileController extends Controller
     {
         $this->authorize('updatingteahcer', $user);
         $request->validate([
-            'image' => 'required'
+            'image' => 'required|base64image'
         ]);
 
         $time = Carbon::now('Asia/Kolkata');
-        $imageName = $time->year . $time->month . $time->day . ($time->micro + mt_rand(11111, 99999)) . '.webp';
+        $imageName = $time->year . $time->month . $time->day . ($time->micro + mt_rand(11111, 99999)) . '.jpeg';
         $realImage = Image::make($request->input('image'));
         $realImage->fit(600, 600, null, 'center');
         $image = $imageS = $imageM = Image::canvas(600, 600, '#ffffff')->insert($realImage);

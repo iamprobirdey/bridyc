@@ -1268,7 +1268,7 @@ var render = function() {
           staticClass: "inscover mt-n3",
           attrs: {
             src:
-              _vm.channelData.cover_avatar === "institute-cover-default.webp"
+              _vm.channelData.cover_avatar === "institute-cover-default.jpg"
                 ? "/images/" + _vm.channelData.cover_avatar
                 : _vm.domainUrl +
                   "/media/channel/" +
@@ -1345,7 +1345,7 @@ var render = function() {
             staticClass: "img-fluid logoinstitute",
             attrs: {
               src:
-                _vm.channelData.icon_avatar === "institute-logo-default.webp"
+                _vm.channelData.icon_avatar === "institute-logo-default.jpg"
                   ? "/images/" + _vm.channelData.icon_avatar
                   : _vm.domainUrl +
                     "/media/channel/" +
@@ -1728,7 +1728,7 @@ var render = function() {
                       _c("img", {
                         attrs: {
                           src:
-                            _vm.userData.avatar === "default.webp"
+                            _vm.userData.avatar === "default.jpg"
                               ? "/images/" + _vm.userData.avatar
                               : _vm.domainUrl +
                                 "/media/channel/" +
@@ -1929,8 +1929,8 @@ var render = function() {
                         _c("img", {
                           attrs: {
                             src:
-                              teacher.user.avatar === "default.webp"
-                                ? "/images/default.webp"
+                              teacher.user.avatar === "default.jpg"
+                                ? "/images/default.jpg"
                                 : "/media/teacher/" +
                                   teacher.user.id +
                                   "/profile/s-" +

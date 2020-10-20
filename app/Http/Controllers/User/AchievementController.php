@@ -23,13 +23,13 @@ class AchievementController extends Controller
         $this->authorize('view', current_user());
         $this->authorize('viewforchannel', current_user());
         $request->validate([
-            'image_path' => 'required',
+            'image_path' => 'required|base64image',
             'title' => 'required|string',
             'description' => 'required|string'
         ]);
 
         $time = Carbon::now('Asia/Kolkata');
-        $imageName = $time->year . $time->month . $time->day . ($time->micro + mt_rand(11111, 99999)) . '.webp';
+        $imageName = $time->year . $time->month . $time->day . ($time->micro + mt_rand(11111, 99999)) . '.jpeg';
 
         $realImage = Image::make($request->input('image_path'));
         $realImage->fit(600, 600, null, 'center');
@@ -66,13 +66,13 @@ class AchievementController extends Controller
     {
         $this->authorize('updatingAchivementByUser', $acheivement);
         $request->validate([
-            'image_path' => 'required',
+            'image_path' => 'required|base64image',
             'title' => 'required|string',
             'description' => 'required|string'
         ]);
 
         $time = Carbon::now('Asia/Kolkata');
-        $imageName = $time->year . $time->month . $time->day . ($time->micro + mt_rand(11111, 99999)) . '.webp';
+        $imageName = $time->year . $time->month . $time->day . ($time->micro + mt_rand(11111, 99999)) . '.jpeg';
 
         $realImage = Image::make($request->input('image_path'));
         $realImage->fit(600, 600, null, 'center');

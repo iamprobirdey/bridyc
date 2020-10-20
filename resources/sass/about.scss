@@ -1,15 +1,15 @@
 @import "mixins";
 
 .imgbanabout{
-    background-image: linear-gradient(to top,rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/aboutus-header-m.webp");
+    background-image: linear-gradient(to top,rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/aboutus-header-m.jpg");
     @include screensize(tablet){
-        background-image: linear-gradient(to top,rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/aboutus-header-t.webp");
+        background-image: linear-gradient(to top,rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/aboutus-header-t.jpg");
     }
     @include screensize(laptop){
-        background-image: linear-gradient(to top,rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/aboutus-header-l.webp");
+        background-image: linear-gradient(to top,rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/aboutus-header-l.jpg");
     }
     @include screensize(desktop){
-        background-image: linear-gradient(to top,rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/aboutus-header-d.webp"); 
+        background-image: linear-gradient(to top,rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/aboutus-header-d.jpg");
     }
 }
 
@@ -24,7 +24,7 @@
     .text-mission{
         @include screensize(laptop){
             padding-left: 70px;
-        } 
+        }
         @include screensize(desktop){
             padding-left: 118px;
         }
@@ -48,6 +48,6 @@
         @include screensize(desktop){
             padding-right: 140px;
             text-align: right;
-        } 
+        }
     }
 }

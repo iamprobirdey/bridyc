@@ -3451,8 +3451,8 @@ var render = function() {
               height: "150",
               width: "152",
               src:
-                _vm.userImage === "default.webp"
-                  ? "/images/default.webp"
+                _vm.userImage === "default.jpg"
+                  ? "/images/default.jpg"
                   : _vm.domainUrl +
                     "/media/channel/" +
                     _vm.userId +

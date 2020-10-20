@@ -3982,7 +3982,7 @@ var render = function() {
             staticClass: "profile-picture rounded-circle shadow",
             attrs: {
               src:
-                _vm.userImage === "default.webp"
+                _vm.userImage === "default.jpg"
                   ? "/images/" + _vm.userImage
                   : _vm.domainUrl +
                     "/media/student/" +

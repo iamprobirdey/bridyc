@@ -3,15 +3,15 @@
 
 .imglogin-register{
     border-radius: 15px;
-    background-image: linear-gradient(to top,rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/login-register-m.webp");
+    background-image: linear-gradient(to top,rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/login-register-m.jpg");
     @include screensize(tablet){
-        background-image: linear-gradient(to top,rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/login-register-t.webp");
+        background-image: linear-gradient(to top,rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/login-register-t.jpg");
     }
     @include screensize(laptop){
-        background-image: linear-gradient(to top,rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/login-register-l.webp");
+        background-image: linear-gradient(to top,rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/login-register-l.jpg");
     }
     @include screensize(desktop){
-        background-image: linear-gradient(to top,rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/login-register-d.webp");
+        background-image: linear-gradient(to top,rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/login-register-d.jpg");
     }
 }
 
@@ -61,7 +61,7 @@
             color: white;
             border-radius: 25px;
             font-weight: 700;
-            
+
             &:hover{
                 background-color: #6c757d;
             }
@@ -73,7 +73,7 @@
             color: white;
             border-radius: 25px;
             font-weight: 700;
-            
+
             &:hover{
                 background-color: #6c757d;
             }

@@ -15343,7 +15343,7 @@ var render = function() {
               height: "150",
               width: "250",
               src:
-                _vm.userImage === "institute-cover-default.webp"
+                _vm.userImage === "institute-cover-default.jpg"
                   ? "/images/" + _vm.userImage
                   : "/media/channel/" + _vm.userId + "/cover/" + _vm.userImage,
               alt: "icon image"
@@ -15676,7 +15676,7 @@ var render = function() {
               height: "150",
               width: "152",
               src:
-                _vm.userImage === "institute-logo-default.webp"
+                _vm.userImage === "institute-logo-default.jpg"
                   ? "/images/" + _vm.userImage
                   : "/media/channel/" + _vm.userId + "/avatar/" + _vm.userImage,
               alt: "icon image"

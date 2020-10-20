@@ -1,15 +1,15 @@
 
 .imgbancontact{
-    background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/contact-header-m.webp");
-    
+    background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/contact-header-m.jpg");
+
     @include screensize(tablet){
-    background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/contact-header-t.webp");
+    background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/contact-header-t.jpg");
     }
     @include screensize(laptop){
-        background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/contact-header-l.webp");    
+        background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/contact-header-l.jpg");
     }
     @include screensize(desktop){
-        background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/contact-header-d.webp");
+        background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/contact-header-d.jpg");
     }
 }
 
@@ -17,13 +17,13 @@
 
 .contactheader{
     margin-top: 50px;
-    color: #3659a2; 
+    color: #3659a2;
     background-color:#f9fafa ;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .contactform{
-    
+
     .contactadd{
         text-align: center;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -50,11 +50,11 @@
         font-size: 25px;
     }
 
-    
+
     .contact-query{
         clip-path: polygon(0 0, 100% 0, 100% 100%, 8% 100%);
         background-image: linear-gradient(to right top, #990066, #831874, #67267f, #442f85, #003585);
-        
+
         @include screensize(desktop){
             clip-path: polygon(0 0, 100% 0%, 100% 100%, 20% 100%);
             padding-left: 100px !important;

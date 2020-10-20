@@ -42,7 +42,7 @@ class PodcastController extends Controller
         ]);
         try {
             $time = Carbon::now('Asia/Kolkata');
-            $imageName = $time->year . $time->month . $time->day . ($time->micro + mt_rand(11111, 99999)) . '.webp';
+            $imageName = $time->year . $time->month . $time->day . ($time->micro + mt_rand(11111, 99999)) . '.jpeg';
             $realImage = Image::make($request->file('image_path'));
 
             //->getRealPath()
@@ -128,7 +128,7 @@ class PodcastController extends Controller
                 'youtube_link' => 'required|string|url'
             ]);
             $time = Carbon::now('Asia/Kolkata');
-            $imageName = $time->year . $time->month . $time->day . ($time->micro + mt_rand(11111, 99999)) . '.webp';
+            $imageName = $time->year . $time->month . $time->day . ($time->micro + mt_rand(11111, 99999)) . '.jpeg';
             $realImage = Image::make($request->file('image_path'));
             //->getRealPath()
             $realImage->fit(600, 600, null, 'center');

@@ -12,8 +12,8 @@
           <div class="card-body">
             <img
               :src="
-                channel.icon_avatar === 'institute-logo-default.webp'
-                  ? '/images/institute-logo-default.webp'
+                channel.icon_avatar === 'institute-logo-default.jpg'
+                  ? '/images/institute-logo-default.jpg'
                   : domainUrl +
                     '/media/channel/' +
                     channel.user_id +
