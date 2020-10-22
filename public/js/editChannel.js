@@ -479,7 +479,7 @@ __webpack_require__.r(__webpack_exports__);
           }
         });
       }
-    }, 1200),
+    }, 500),
     deleteCollege: function deleteCollege(image, index) {
       var _this2 = this;
 

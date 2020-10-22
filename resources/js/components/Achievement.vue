@@ -273,7 +273,7 @@ export default {
             });
         }
       });
-    }, 1200),
+    }, 500),
     onChange(image) {
       if (this.$refs.pictureInput.image)
         this.formData.image_path = this.$refs.pictureInput.image;

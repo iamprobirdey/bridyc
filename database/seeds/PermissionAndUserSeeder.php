@@ -40,125 +40,47 @@ class PermissionAndUserSeeder extends Seeder
 
         $user1 = User::create([
             'name' => Str::random(10),
-            'email' => 'admin@gmail.com',
-            'password' => '$2y$10$A5qfm/Ssy2JOTLf5PQKOxeIFrLTOUaK5nwONeWstGu07wQDAEciwK',
+            'email' => 'deyprobir73@gmail.com',
+            'password' => '$2y$10$/JFLmAPpSFs4QXSSyYnDb.q8mbQacaLIz4sKAr1qtlGmeXgjeASqC',
             'username' => 'admin',
             'user_type' => 'admin',
 
         ]);
 
+        $user2 = User::create([
+            'name' => Str::random(10),
+            'email' => 'borahsurajit17@gmail.com',
+            'password' => '$2y$10$/JFLmAPpSFs4QXSSyYnDb.q8mbQacaLIz4sKAr1qtlGmeXgjeASqC',
+            'username' => 'borahsurajit17',
+            'user_type' => 'admin',
 
-        // $user2 = User::create([
-        //     'name' => Str::random(10),
-        //     'email' => 'borahsurajit17@gmail.com',
-        //     'password' => '$2y$10$A5qfm/Ssy2JOTLf5PQKOxeIFrLTOUaK5nwONeWstGu07wQDAEciwK',
-        //     'username' => 'borahsurajit17',
-        //     'user_type' => 'admin',
+        ]);
 
-        // ]);
+        $user3 = User::create([
+            'name' => Str::random(10),
+            'email' => 'terang.shatkiri8@gmail.com',
+            'password' => '$2y$10$/JFLmAPpSFs4QXSSyYnDb.q8mbQacaLIz4sKAr1qtlGmeXgjeASqC',
+            'username' => 'terang',
+            'user_type' => 'admin',
 
-        // $user3 = User::create([
-        //     'name' => Str::random(10),
-        //     'email' => 'terang.shatkiri8@gmail.com',
-        //     'password' => '$2y$10$A5qfm/Ssy2JOTLf5PQKOxeIFrLTOUaK5nwONeWstGu07wQDAEciwK',
-        //     'username' => 'terang',
-        //     'user_type' => 'admin',
+        ]);
+        $user4 = User::create([
+            'name' => Str::random(10),
+            'email' => 'medhipranjal1993@gmail.com',
+            'password' => '$2y$10$/JFLmAPpSFs4QXSSyYnDb.q8mbQacaLIz4sKAr1qtlGmeXgjeASqC',
+            'username' => 'medhipranjal1993',
+            'user_type' => 'admin',
 
-        // ]);
-        // $user4 = User::create([
-        //     'name' => Str::random(10),
-        //     'email' => 'medhipranjal1993@gmail.com',
-        //     'password' => '$2y$10$A5qfm/Ssy2JOTLf5PQKOxeIFrLTOUaK5nwONeWstGu07wQDAEciwK',
-        //     'username' => 'medhipranjal1993',
-        //     'user_type' => 'admin',
-
-        // ]);
-
-        for ($i = 1; $i <= 30; $i++) {
-
-            $user = User::create([
-                'name' => Str::random(10),
-                'email' => 'institute' . $i . '@gmail.com',
-                'password' => '$2y$10$A5qfm/Ssy2JOTLf5PQKOxeIFrLTOUaK5nwONeWstGu07wQDAEciwK',
-                'username' => 'institute' . $i,
-                'user_type' => 'institute',
-
-            ]);
-            $user->update(['email_verified_at' => Carbon::now()]);
-            $user->assignRole('institute');
-        }
-
-        for ($i = 1; $i <= 20; $i++) {
-
-            $user = User::create([
-                'name' => Str::random(10),
-                'email' => 'student' . $i . '@gmail.com',
-                'password' => '$2y$10$A5qfm/Ssy2JOTLf5PQKOxeIFrLTOUaK5nwONeWstGu07wQDAEciwK',
-                'username' => 'student' . $i,
-                'user_type' => 'student',
-
-            ]);
-            $user->update(['email_verified_at' => Carbon::now()]);
-            $user->assignRole('student');
-        }
-
-        for ($i = 1; $i <= 30; $i++) {
-
-            $user = User::create([
-                'name' => Str::random(10),
-                'email' => 'teacher' . $i . '@gmail.com',
-                'password' => '$2y$10$A5qfm/Ssy2JOTLf5PQKOxeIFrLTOUaK5nwONeWstGu07wQDAEciwK',
-                'username' => 'teacher' . $i,
-                'user_type' => 'teacher',
-
-            ]);
-            $user->update(['email_verified_at' => Carbon::now()]);
-            $user->assignRole('teacher');
-        }
-
-
+        ]);
 
         $user1->update(['email_verified_at' => Carbon::now()]);
-        // $user2->update(['email_verified_at' => Carbon::now()]);
-        // $user3->update(['email_verified_at' => Carbon::now()]);
-        // $user4->update(['email_verified_at' => Carbon::now()]);
+        $user2->update(['email_verified_at' => Carbon::now()]);
+        $user3->update(['email_verified_at' => Carbon::now()]);
+        $user4->update(['email_verified_at' => Carbon::now()]);
 
         $user1->assignRole('admin');
-        // $user2->assignRole('admin');
-        // $user3->assignRole('admin');
-        // $user4->assignRole('admin');
-
-        Country::create([
-            'name' => 'India',
-            'code' => 'in'
-        ]);
-
-        State::create([
-            'country_id' => 1,
-            'name' => 'Assam',
-            'code' => 'as'
-        ]);
-
-        District::create([
-            'state_id' => 1,
-            'name' => 'Karbi Anglong',
-            'code' => 'ka'
-        ]);
-
-        Village::create([
-            'district_id' => 1,
-            'name' => 'baihtalangso',
-            'code' => 'blo'
-        ]);
-
-        Language::create([
-            'name' => 'Assamese',
-            'code' => 'ass'
-        ]);
-
-        Standard::create([
-            'standard_name' => 'Class 1',
-            'code' => 'class1'
-        ]);
+        $user2->assignRole('admin');
+        $user3->assignRole('admin');
+        $user4->assignRole('admin');
     }
 }

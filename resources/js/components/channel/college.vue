@@ -128,7 +128,7 @@ export default {
             }
           });
       }
-    }, 1200),
+    }, 500),
     deleteCollege(image, index) {
       axios
         .post("/api/delete/college/image/" + image.id)

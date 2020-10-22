@@ -373,7 +373,7 @@ __webpack_require__.r(__webpack_exports__);
           });
         }
       });
-    }, 1200),
+    }, 500),
     onChange: function onChange(image) {
       if (this.$refs.pictureInput.image) this.formData.image_path = this.$refs.pictureInput.image;
     },
