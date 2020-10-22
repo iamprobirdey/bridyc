@@ -1,72 +1,20 @@
 <?php
 
-use App\Channel;
-use App\User;
-use App\UserEducation;
-use App\UserInstitute;
-use Carbon\Carbon;
 use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Str;
 
-
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
-Route::get('500',function(){
-    return view('errors.500');
-});
-Route::get('/pass1', function () {
-    return view('auth.passwords.confirm');
-});
-
-Route::get('/pass2', function () {
-    return view('auth.passwords.email');
-});
-Route::get('/pass3', function () {
-    return view('auth.passwords.reset');
-});
-
-
-
-Route::get('/home', 'HomeController@test');
-
-Route::get('hobby', function () {
-    $user4 = User::create([
-        'name' => Str::random(10),
-        'email' => 'student1@gmail.com',
-        'password' => '$2y$10$A5qfm/Ssy2JOTLf5PQKOxeIFrLTOUaK5nwONeWstGu07wQDAEciwK',
-        'username' => 'student1',
-        'user_type' => 'student',
-
-    ]);
-    //user_type => institute/student/teacher/admin
-
-
-    $user4->update(['email_verified_at' => Carbon::now()]);
-
-    $user4->assignRole('student');
-});
 
 Auth::routes(['verify' => true]);
 
-Route::get('test', 'Teacher\PhoneNumberVerificationController@phoneVerification');
+// Route::get('test', 'Teacher\PhoneNumberVerificationController@phoneVerification');
 
-Route::get('google/login', 'Auth\GoogleLoginController@getGoogleLogIn')->middleware('guest');
-Route::get('google/response', 'Auth\GoogleLoginController@getBackGoogleValiationStore')->middleware('guest');
+// Route::get('google/login', 'Auth\GoogleLoginController@getGoogleLogIn')->middleware('guest');
+// Route::get('google/response', 'Auth\GoogleLoginController@getBackGoogleValiationStore')->middleware('guest');
 
-Route::get('facebook-login', 'Auth\FacebookLoginController@getFacebookLogIn');
-Route::get('facebook/response', 'Auth\FacebookLoginController@getBackFacebookValiationStore');
+// Route::get('facebook-login', 'Auth\FacebookLoginController@getFacebookLogIn');
+// Route::get('facebook/response', 'Auth\FacebookLoginController@getBackFacebookValiationStore');
 
-Route::get('validation/user/role/{user:email}', 'Auth\ValidateUserRoleController@validateRole')->name('validate.user.role');
+//Route::get('validation/user/role/{user:email}', 'Auth\ValidateUserRoleController@validateRole')->name('validate.user.role');
 //http://localhost:3000/facebook/response
 
 
