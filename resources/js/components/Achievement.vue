@@ -266,6 +266,7 @@ export default {
               }
             })
             .catch((errors) => {
+              this.disable = false;
               Vue.toasted.error("Something went wrong", {
                 position: "top-center",
                 duration: 5000,
