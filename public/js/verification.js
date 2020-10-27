@@ -1715,7 +1715,7 @@ var render = function() {
                   },
                   [
                     _c("label", { attrs: { for: "exampleInputEmail1" } }, [
-                      _vm._v("Institute Gender")
+                      _vm._v("Gender")
                     ]),
                     _vm._v(" "),
                     _c(
@@ -1763,15 +1763,15 @@ var render = function() {
                         ]),
                         _vm._v(" "),
                         _c("option", { attrs: { value: "only_boys" } }, [
-                          _vm._v("Only Boys Institute?")
+                          _vm._v("Only Boys")
                         ]),
                         _vm._v(" "),
                         _c("option", { attrs: { value: "only_girls" } }, [
-                          _vm._v("Only Girls Institute?")
+                          _vm._v("Only Girls")
                         ]),
                         _vm._v(" "),
                         _c("option", { attrs: { value: "both" } }, [
-                          _vm._v("Both Girls and boys Institute?")
+                          _vm._v("Both Girls and boys")
                         ])
                       ]
                     ),

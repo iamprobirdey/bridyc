@@ -150,7 +150,7 @@ main .logo-title {
 @media only screen and (min-width: 768px) {
   main .logo-title {
     top: -248px;
-    left: -130px;
+    left: -164px;
   }
 }
 
@@ -266,8 +266,8 @@ main .inssocial img {
 
 main .faculty-request {
   position: relative;
-  top: -123px;
-  padding-left: 61%;
+  top: -124px;
+  padding-left: 67%;
 }
 
 @media only screen and (min-width: 360px) {
@@ -334,7 +334,13 @@ main .inspills .inscarou {
 
 main .inspills .inscarou ul {
   position: relative;
-  top: 400px;
+  top: 60px;
+}
+
+@media only screen and (min-width: 768px) {
+  main .inspills .inscarou ul {
+    top: 180px;
+  }
 }
 
 main .inspills .inscarou ul li {

@@ -159,14 +159,14 @@
 
       <div class="faculty-request" v-if="isTeacher">
         <button
-          class="btn btn-warning"
+          class="btn btn-sm btn-warning"
           v-if="channelRequestDecider === 'can-request'"
           @click="requestForChannel()"
         >
-          Send Faculty Request
+          Add Institute
         </button>
         <button
-          class="btn btn-secondary"
+          class="btn btn-sm btn-secondary"
           v-if="channelRequestDecider === 'in-progress'"
         >
           Request Sent
@@ -176,7 +176,7 @@
           v-if="channelRequestDecider === 'accepted'"
         >
           <img src="/images/check-mark.svg" alt="correct symbol" />
-          Your School
+          Your Institute
         </button>
       </div>
       <br />
@@ -245,7 +245,7 @@
                 class="carousel slide inscarou col-md-7 col-lg-8"
                 data-ride="carousel"
               >
-                <ul class="carousel-indicators">
+                <!--ul class="carousel-indicators">
                   <li
                     data-target="#carouid"
                     data-slide-to="0"
@@ -255,7 +255,7 @@
                   <li data-target="#carouid" data-slide-to="2"></li>
                   <li data-target="#carouid" data-slide-to="3"></li>
                   <li data-target="#carouid" data-slide-to="4"></li>
-                </ul>
+                </ul-->
                 <div class="carousel-inner">
                   <div
                     class="carousel-item"
@@ -421,11 +421,11 @@
                           teacher.user.avatar
                     "
                   />
-                  <div class="card-body mt-n1">
-                    <h6 class="card-title my-n1 text-center">
+                  <div class="card-body">
+                    <h6 class="card-title mt-3 text-center">
                       {{ teacher.user.name }}
                     </h6>
-                    <p class="card-text mx-n2 text-center">Qualification</p>
+                    <!--p class="card-text mx-n2 text-center">Qualification</p-->
                   </div>
                 </div>
               </div>

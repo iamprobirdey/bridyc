@@ -1476,19 +1476,19 @@ var render = function() {
               ? _c(
                   "button",
                   {
-                    staticClass: "btn btn-warning",
+                    staticClass: "btn btn-sm btn-warning",
                     on: {
                       click: function($event) {
                         return _vm.requestForChannel()
                       }
                     }
                   },
-                  [_vm._v("\n        Send Faculty Request\n      ")]
+                  [_vm._v("\n        Add Institute\n      ")]
                 )
               : _vm._e(),
             _vm._v(" "),
             _vm.channelRequestDecider === "in-progress"
-              ? _c("button", { staticClass: "btn btn-secondary" }, [
+              ? _c("button", { staticClass: "btn btn-sm btn-secondary" }, [
                   _vm._v("\n        Request Sent\n      ")
                 ])
               : _vm._e(),
@@ -1501,7 +1501,7 @@ var render = function() {
                       alt: "correct symbol"
                     }
                   }),
-                  _vm._v("\n        Your School\n      ")
+                  _vm._v("\n        Your Institute\n      ")
                 ])
               : _vm._e()
           ])
@@ -1596,8 +1596,6 @@ var render = function() {
                     attrs: { id: "carouid", "data-ride": "carousel" }
                   },
                   [
-                    _vm._m(2),
-                    _vm._v(" "),
                     _c(
                       "div",
                       { staticClass: "carousel-inner" },
@@ -1706,7 +1704,7 @@ var render = function() {
             },
             [
               _c("div", { staticClass: "princidiv mb-5" }, [
-                _vm._m(3),
+                _vm._m(2),
                 _vm._v(" "),
                 _c("div", { staticClass: "row mt-3" }, [
                   _c("div", { staticClass: "col-md-6" }, [
@@ -1938,10 +1936,10 @@ var render = function() {
                           }
                         }),
                         _vm._v(" "),
-                        _c("div", { staticClass: "card-body mt-n1" }, [
+                        _c("div", { staticClass: "card-body" }, [
                           _c(
                             "h6",
-                            { staticClass: "card-title my-n1 text-center" },
+                            { staticClass: "card-title mt-3 text-center" },
                             [
                               _vm._v(
                                 "\n                    " +
@@ -1949,12 +1947,6 @@ var render = function() {
                                   "\n                  "
                               )
                             ]
-                          ),
-                          _vm._v(" "),
-                          _c(
-                            "p",
-                            { staticClass: "card-text mx-n2 text-center" },
-                            [_vm._v("Qualification")]
                           )
                         ])
                       ]
@@ -2267,25 +2259,6 @@ var staticRenderFns = [
           "\n                    News and Notifications\n                  "
         )
       ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("ul", { staticClass: "carousel-indicators" }, [
-      _c("li", {
-        staticClass: "active",
-        attrs: { "data-target": "#carouid", "data-slide-to": "0" }
-      }),
-      _vm._v(" "),
-      _c("li", { attrs: { "data-target": "#carouid", "data-slide-to": "1" } }),
-      _vm._v(" "),
-      _c("li", { attrs: { "data-target": "#carouid", "data-slide-to": "2" } }),
-      _vm._v(" "),
-      _c("li", { attrs: { "data-target": "#carouid", "data-slide-to": "3" } }),
-      _vm._v(" "),
-      _c("li", { attrs: { "data-target": "#carouid", "data-slide-to": "4" } })
     ])
   },
   function() {

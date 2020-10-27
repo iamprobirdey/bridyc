@@ -4402,7 +4402,7 @@ var render = function() {
               _c(
                 "div",
                 {
-                  staticClass: "form-group row mx-5",
+                  staticClass: "form-group row mx-md-5",
                   class: {
                     "has-error":
                       _vm.errors.has("userNameError.username") ||
@@ -4429,7 +4429,7 @@ var render = function() {
                         expression: "'required'"
                       }
                     ],
-                    staticClass: "col-sm-9 ml-4",
+                    staticClass: "col-sm-9 ml-md-4",
                     class: {
                       "form-control": true,
                       "is-invalid": _vm.errors.has("username")

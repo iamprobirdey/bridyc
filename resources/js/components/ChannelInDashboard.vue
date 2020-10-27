@@ -209,7 +209,7 @@
                 class="carousel slide inscarou col-md-7 col-lg-8"
                 data-ride="carousel"
               >
-                <ul class="carousel-indicators">
+                <!--ul class="carousel-indicators"> this is for carousal indicatos
                   <li
                     data-target="#carouid"
                     data-slide-to="0"
@@ -219,7 +219,7 @@
                   <li data-target="#carouid" data-slide-to="2"></li>
                   <li data-target="#carouid" data-slide-to="3"></li>
                   <li data-target="#carouid" data-slide-to="4"></li>
-                </ul>
+                </ul-->
                 <div class="carousel-inner">
                   <div
                     class="carousel-item"
@@ -394,11 +394,11 @@
                           teacher.user.avatar
                     "
                   />
-                  <div class="card-body mt-n1">
-                    <h6 class="card-title my-n1 text-center">
+                  <div class="card-body"> <!-- add mt-n1-->
+                    <h6 class="card-title mt-3 text-center"> <!--add my-n1-->
                       {{ teacher.user.name }}
                     </h6>
-                    <p class="card-text mx-n2 text-center">Qualification</p>
+                    <!--p class="card-text mx-n2 text-center">Qualification</p-->
                   </div>
                 </div>
               </div>
@@ -409,7 +409,7 @@
             <h2 class="text-uppercase">Infrastructure</h2>
             <hr class="mt-n2" />
 
-            <div class="row infrastructure-display mt-5 py-3">
+            <div class="row infrastructure-display mt-md-5 py-3">
               <div class="col-sm-4">
                 <p>
                   <img

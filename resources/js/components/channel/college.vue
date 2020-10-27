@@ -59,6 +59,7 @@
           type="button"
           class="btn btnsubmit mt-n2"
           @click="onImageSubmit()"
+          :disabled="imageButtonDisable"
         >
           Submit
         </button>
@@ -89,6 +90,7 @@ export default {
       channelData: [],
       userId: "",
       domainUrl: location.origin,
+      imageButtonDisable: false,
     };
   },
   props: {
@@ -115,14 +117,17 @@ export default {
       if (this.imageData != "") {
         const formData = new FormData();
         formData.append("image", this.imageData);
+        this.imageButtonDisable = true;
         axios
           .post("/api/college/image/upload/" + this.channelData.id, formData)
           .then((response) => {
             this.channelData.college_image = response.data.image;
             this.collegeImageEntry = false;
             this.imageData = "";
+            this.imageButtonDisable = false;
           })
           .catch((errors) => {
+            this.imageButtonDisable = false;
             if (errors.response.data.errors.image) {
               this.imageError = errors.response.data.errors.image[0];
             }

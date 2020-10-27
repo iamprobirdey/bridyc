@@ -191,7 +191,10 @@ main {
                   
                     ul{
                       position: relative;
-                      top:400px;
+                      top:60px;
+                      @include screensize(laptop){
+                        top:180px;
+                      }
                       li{
                         width: 8px;
                         height: 8px;
