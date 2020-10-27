@@ -304,7 +304,7 @@
               'has-error': errors.has('gender') || serverErrors.gender != '',
             }"
           >
-            <label for="exampleInputEmail1">Institute Gender</label>
+            <label for="exampleInputEmail1">Gender</label>
             <select
               v-model="formData.gender"
               class="form-control"
@@ -312,9 +312,9 @@
               v-validate="'required'"
             >
               <option value>Select Gender</option>
-              <option value="only_boys">Only Boys Institute?</option>
-              <option value="only_girls">Only Girls Institute?</option>
-              <option value="both">Both Girls and boys Institute?</option>
+              <option value="only_boys">Only Boys</option>
+              <option value="only_girls">Only Girls</option>
+              <option value="both">Both Girls and boys</option>
             </select>
             <i v-show="errors.has('gender')" class="is-invalid"></i>
 
