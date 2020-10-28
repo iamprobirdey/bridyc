@@ -428,6 +428,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -460,7 +463,7 @@ __webpack_require__.r(__webpack_exports__);
     onChange: function onChange(image) {
       if (this.$refs.pictureInput.image) this.imageData = this.$refs.pictureInput.image;
     },
-    onImageSubmit: function onImageSubmit() {
+    onImageSubmit: _.debounce(function () {
       var _this = this;
 
       if (this.imageData != "") {
@@ -476,7 +479,7 @@ __webpack_require__.r(__webpack_exports__);
           }
         });
       }
-    },
+    }, 500),
     deleteCollege: function deleteCollege(image, index) {
       var _this2 = this;
 
@@ -15346,7 +15349,7 @@ var render = function() {
               height: "150",
               width: "250",
               src:
-                _vm.userImage === "institute-cover-default.webp"
+                _vm.userImage === "institute-cover-default.jpg"
                   ? "/images/" + _vm.userImage
                   : "/media/channel/" + _vm.userId + "/cover/" + _vm.userImage,
               alt: "icon image"
@@ -15679,7 +15682,7 @@ var render = function() {
               height: "150",
               width: "152",
               src:
-                _vm.userImage === "institute-logo-default.webp"
+                _vm.userImage === "institute-logo-default.jpg"
                   ? "/images/" + _vm.userImage
                   : "/media/channel/" + _vm.userId + "/avatar/" + _vm.userImage,
               alt: "icon image"

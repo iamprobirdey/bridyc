@@ -232,7 +232,6 @@
 export default {
   data() {
     return {
-      channelsData: [],
       statesData: [],
       districtsData: [],
       villagesData: [],
@@ -255,10 +254,6 @@ export default {
     };
   },
   props: {
-    channels: {
-      type: Array,
-      default: null,
-    },
     states: {
       type: Array,
       default: null,
@@ -286,7 +281,6 @@ export default {
   },
   created() {
     this.userId = this.id;
-    this.channelsData = this.channels;
     this.statesData = this.states;
     this.districtsData = this.districts;
     this.villagesData = this.villages;
@@ -342,7 +336,6 @@ export default {
     },
     editAddress() {
       this.addressDataChecker = false;
-      this.userFormData.channel_id = this.userInformationData.channel.id;
       this.userFormData.state_id = this.userInformationData.state.id;
       this.userFormData.district_id = this.userInformationData.district.id;
       this.userFormData.village_id = this.userInformationData.village.id;

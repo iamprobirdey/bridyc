@@ -159,7 +159,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 
 
 
@@ -504,7 +503,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      channelsData: [],
       statesData: [],
       districtsData: [],
       villagesData: [],
@@ -527,10 +525,6 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   props: {
-    channels: {
-      type: Array,
-      "default": null
-    },
     states: {
       type: Array,
       "default": null
@@ -558,7 +552,6 @@ __webpack_require__.r(__webpack_exports__);
   },
   created: function created() {
     this.userId = this.id;
-    this.channelsData = this.channels;
     this.statesData = this.states;
     this.districtsData = this.districts;
     this.villagesData = this.villages;
@@ -613,7 +606,6 @@ __webpack_require__.r(__webpack_exports__);
     },
     editAddress: function editAddress() {
       this.addressDataChecker = false;
-      this.userFormData.channel_id = this.userInformationData.channel.id;
       this.userFormData.state_id = this.userInformationData.state.id;
       this.userFormData.district_id = this.userInformationData.district.id;
       this.userFormData.village_id = this.userInformationData.village.id;
@@ -3274,7 +3266,6 @@ var render = function() {
           [
             _c("address-for-student", {
               attrs: {
-                channels: _vm.channelsData,
                 states: _vm.statesData,
                 districts: _vm.districtsData,
                 villages: _vm.villagesData,
@@ -3994,7 +3985,7 @@ var render = function() {
             staticClass: "profile-picture rounded-circle shadow",
             attrs: {
               src:
-                _vm.userImage === "default.webp"
+                _vm.userImage === "default.jpg"
                   ? "/images/" + _vm.userImage
                   : _vm.domainUrl +
                     "/media/student/" +

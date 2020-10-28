@@ -1,15 +1,15 @@
 
 
 .imgbanfaq{
-    background-image: linear-gradient(to top,rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/faq-header-m.webp");
+    background-image: linear-gradient(to top,rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/faq-header-m.jpg");
     @include screensize(tablet){
-        background-image: linear-gradient(to top,rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/faq-header-t.webp");
+        background-image: linear-gradient(to top,rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/faq-header-t.jpg");
     }
     @include screensize(laptop){
-        background-image: linear-gradient(to top,rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/faq-header-l.webp");
+        background-image: linear-gradient(to top,rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/faq-header-l.jpg");
     }
     @include screensize(desktop){
-        background-image: linear-gradient(to top,rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/faq-header-d.webp");
+        background-image: linear-gradient(to top,rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/faq-header-d.jpg");
     }
   }
 
@@ -23,7 +23,7 @@
         color:white;
         font-weight: 500;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
-        
+
         background-image: linear-gradient(to bottom, #3659a2, #3259ae, #3058b9, #3157c4, #3456cf);
         @include screensize(laptop){
             left:25px;
@@ -43,7 +43,7 @@
         border-top-right-radius: 6px;
         margin-bottom:5px;
         transition:0.8s;
-        
+
         &:focus{
             outline: none !important;
         }

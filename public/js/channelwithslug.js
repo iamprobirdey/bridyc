@@ -677,18 +677,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -749,8 +737,6 @@ __webpack_require__.r(__webpack_exports__);
       if (this.isTeacher && this.currentuserData != null) {
         if (this.currentuserData.request === "in-progress") this.channelRequestDecider = "in-progress";
         if (this.currentuserData.request === "accepted") this.channelRequestDecider = "accepted";
-        if (this.currentuserData.request === "rejected") this.channelRequestDecider = "rejected";
-        if (this.currentuserData.request === "farewell") this.channelRequestDecider = "farewell";
         if (this.currentuserData.request === "rejected" && this.currentuserData.channel_id != this.channelData.id) this.channelRequestDecider = "can-request";
       }
 
@@ -1282,7 +1268,7 @@ var render = function() {
           staticClass: "inscover mt-n3",
           attrs: {
             src:
-              _vm.channelData.cover_avatar === "institute-cover-default.webp"
+              _vm.channelData.cover_avatar === "institute-cover-default.jpg"
                 ? "/images/" + _vm.channelData.cover_avatar
                 : _vm.domainUrl +
                   "/media/channel/" +
@@ -1359,7 +1345,7 @@ var render = function() {
             staticClass: "img-fluid logoinstitute",
             attrs: {
               src:
-                _vm.channelData.icon_avatar === "institute-logo-default.webp"
+                _vm.channelData.icon_avatar === "institute-logo-default.jpg"
                   ? "/images/" + _vm.channelData.icon_avatar
                   : _vm.domainUrl +
                     "/media/channel/" +
@@ -1504,18 +1490,6 @@ var render = function() {
             _vm.channelRequestDecider === "in-progress"
               ? _c("button", { staticClass: "btn btn-secondary" }, [
                   _vm._v("\n        Request Sent\n      ")
-                ])
-              : _vm._e(),
-            _vm._v(" "),
-            _vm.channelRequestDecider === "rejected"
-              ? _c("button", { staticClass: "btn btn-danger" }, [
-                  _vm._v("\n        Request Rejected\n      ")
-                ])
-              : _vm._e(),
-            _vm._v(" "),
-            _vm.channelRequestDecider === "farewell"
-              ? _c("button", { staticClass: "btn btn-success" }, [
-                  _vm._v("\n        Farewell\n      ")
                 ])
               : _vm._e(),
             _vm._v(" "),
@@ -1754,7 +1728,7 @@ var render = function() {
                       _c("img", {
                         attrs: {
                           src:
-                            _vm.userData.avatar === "default.webp"
+                            _vm.userData.avatar === "default.jpg"
                               ? "/images/" + _vm.userData.avatar
                               : _vm.domainUrl +
                                 "/media/channel/" +
@@ -1955,8 +1929,8 @@ var render = function() {
                         _c("img", {
                           attrs: {
                             src:
-                              teacher.user.avatar === "default.webp"
-                                ? "/images/default.webp"
+                              teacher.user.avatar === "default.jpg"
+                                ? "/images/default.jpg"
                                 : "/media/teacher/" +
                                   teacher.user.id +
                                   "/profile/s-" +

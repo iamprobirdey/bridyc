@@ -1,26 +1,26 @@
 .imgbanabout {
-  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url("/images/aboutus-header-m.webp");
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/aboutus-header-m.webp");
+  background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url("/images/aboutus-header-m.jpg");
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/aboutus-header-m.jpg");
 }
 
 @media only screen and (min-width: 481px) {
   .imgbanabout {
-    background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url("/images/aboutus-header-t.webp");
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/aboutus-header-t.webp");
+    background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url("/images/aboutus-header-t.jpg");
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/aboutus-header-t.jpg");
   }
 }
 
 @media only screen and (min-width: 768px) {
   .imgbanabout {
-    background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url("/images/aboutus-header-l.webp");
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/aboutus-header-l.webp");
+    background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url("/images/aboutus-header-l.jpg");
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/aboutus-header-l.jpg");
   }
 }
 
 @media only screen and (min-width: 1280px) {
   .imgbanabout {
-    background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url("/images/aboutus-header-d.webp");
-    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/aboutus-header-d.webp");
+    background-image: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.6))), url("/images/aboutus-header-d.jpg");
+    background-image: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/aboutus-header-d.jpg");
   }
 }
 

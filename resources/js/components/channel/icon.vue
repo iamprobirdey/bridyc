@@ -5,7 +5,7 @@
         height="150"
         width="152"
         :src="
-          userImage === 'institute-logo-default.webp'
+          userImage === 'institute-logo-default.jpg'
             ? '/images/' + userImage
             : '/media/channel/' + userId + '/avatar/' + userImage
         "

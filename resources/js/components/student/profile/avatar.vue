@@ -4,7 +4,7 @@
       <img
         class="profile-picture rounded-circle shadow"
         :src="
-          userImage === 'default.webp'
+          userImage === 'default.jpg'
             ? '/images/' + userImage
             : domainUrl + '/media/student/' + userId + '/profile/s-' + userImage
         "

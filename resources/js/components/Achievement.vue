@@ -6,7 +6,7 @@
     <button class="btn btnadd p-1 ml-1 rounded-0" @click="addAchievement()">
       <i class="fa fa-plus" aria-hidden="true"></i>
     </button>
-    <div class="row my-5">
+    <div class="row my-5" v-if="showAchievement">
       <div
         class="card shadow mx-auto sidebar-facard mb-4"
         v-for="(achievement, index) in achievementData"
@@ -147,7 +147,6 @@
             data-vv-delay="20"
             name="date"
             type="date"
-            :max="todaysDate"
             :class="{ 'form-control': true, 'is-invalid': errors.has('date') }"
             placeholder="date"
           />
@@ -168,7 +167,9 @@
           >
             Cancel
           </button>
-          <button type="submit" class="btn btnsubmit mt-n2">Submit</button>
+          <button type="submit" :disabled="disable" class="btn btnsubmit mt-n2">
+            Submit
+          </button>
         </div>
       </form>
     </div>
@@ -181,6 +182,8 @@ export default {
   data() {
     return {
       achievementData: [],
+      disable: false,
+      showAchievement: true,
       openAchievementForm: false,
       formData: {
         image_path: "",
@@ -228,10 +231,12 @@ export default {
       this.formData.title = "";
       this.formData.description = "";
       this.formData.date = "";
+      this.showAchievement = false;
     },
-    achievementSubmit() {
+    achievementSubmit: _.debounce(function () {
       this.$validator.validate().then((result) => {
         if (result) {
+          this.disable = true;
           if (this.formData.image_path === "")
             this.serverErrors.image_path = "Image is required";
           let formUrl = "";
@@ -246,6 +251,8 @@ export default {
             .post(formUrl, this.formData)
             .then((response) => {
               if (response.data.message === true) {
+                this.disable = false;
+                this.showAchievement = true;
                 Vue.toasted.success("Achievement data is created", {
                   position: "top-center",
                   duration: 5000,
@@ -266,7 +273,7 @@ export default {
             });
         }
       });
-    },
+    }, 500),
     onChange(image) {
       if (this.$refs.pictureInput.image)
         this.formData.image_path = this.$refs.pictureInput.image;
@@ -279,10 +286,12 @@ export default {
       this.achievementId = data.id;
       this.openAchievementForm = true;
       this.achievementIndex = index;
+      this.showAchievement = false;
     },
     canCleSubmittion() {
       this.editingUrlChecker = false;
       this.openAchievementForm = false;
+      this.showAchievement = true;
     },
   },
   components: {

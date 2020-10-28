@@ -655,6 +655,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -1182,7 +1186,7 @@ var render = function() {
           staticClass: "inscover mt-n3",
           attrs: {
             src:
-              _vm.channelData.cover_avatar === "institute-cover-default.webp"
+              _vm.channelData.cover_avatar === "institute-cover-default.jpg"
                 ? "/images/" + _vm.channelData.cover_avatar
                 : _vm.domainUrl +
                   "/media/channel/" +
@@ -1258,7 +1262,7 @@ var render = function() {
               staticClass: "logoinstitute",
               attrs: {
                 src:
-                  _vm.channelData.icon_avatar === "institute-logo-default.webp"
+                  _vm.channelData.icon_avatar === "institute-logo-default.jpg"
                     ? "/images/" + _vm.channelData.icon_avatar
                     : _vm.domainUrl +
                       "/media/channel/" +
@@ -1606,7 +1610,7 @@ var render = function() {
                         _c("img", {
                           attrs: {
                             src:
-                              _vm.userData.avatar === "default.webp"
+                              _vm.userData.avatar === "default.jpg"
                                 ? "/images/" + _vm.userData.avatar
                                 : _vm.domainUrl +
                                   "/media/channel/" +
@@ -1741,9 +1745,9 @@ var render = function() {
                               { key: index, staticClass: "btn btn-info m-1" },
                               [
                                 _vm._v(
-                                  "\n                  " +
+                                  "\n                    " +
                                     _vm._s(board.name) +
-                                    "\n                "
+                                    "\n                  "
                                 )
                               ]
                             )
@@ -1816,8 +1820,8 @@ var render = function() {
                           _c("img", {
                             attrs: {
                               src:
-                                teacher.user.avatar === "default.webp"
-                                  ? "/images/default.webp"
+                                teacher.user.avatar === "default.jpg"
+                                  ? "/images/default.jpg"
                                   : "/media/teacher/" +
                                     teacher.user.id +
                                     "/profile/s-" +
@@ -1870,7 +1874,7 @@ var render = function() {
                 _vm._v(" "),
                 _c(
                   "div",
-                  { staticClass: "row infrastructure-display mt-5 py-3" },
+                  { staticClass: "row infrastructure-display mt-md-5 py-3" },
                   [
                     _c("div", { staticClass: "col-sm-4" }, [
                       _c("p", [

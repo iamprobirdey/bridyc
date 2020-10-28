@@ -12,8 +12,8 @@
           <div class="card-body">
             <img
               :src="
-                channel.icon_avatar === 'institute-logo-default.webp'
-                  ? '/images/institute-logo-default.webp'
+                channel.icon_avatar === 'institute-logo-default.jpg'
+                  ? '/images/institute-logo-default.jpg'
                   : domainUrl +
                     '/media/channel/' +
                     channel.user_id +
@@ -33,7 +33,7 @@
               class="card-text destext d-none d-md-block mt-3 mx-1"
               v-if="channel.description != null"
             >
-              {{ channel.description.substr(0, 100) }}
+              {{ channel.description.substr(0, 100) }}...
             </p>
           </div>
           <a

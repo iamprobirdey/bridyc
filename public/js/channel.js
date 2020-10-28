@@ -199,8 +199,8 @@ var render = function() {
                   staticClass: "inslogo",
                   attrs: {
                     src:
-                      channel.icon_avatar === "institute-logo-default.webp"
-                        ? "/images/institute-logo-default.webp"
+                      channel.icon_avatar === "institute-logo-default.jpg"
+                        ? "/images/institute-logo-default.jpg"
                         : _vm.domainUrl +
                           "/media/channel/" +
                           channel.user_id +
@@ -247,7 +247,7 @@ var render = function() {
                         _vm._v(
                           "\n            " +
                             _vm._s(channel.description.substr(0, 100)) +
-                            "\n          "
+                            "...\n          "
                         )
                       ]
                     )

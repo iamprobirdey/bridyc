@@ -377,7 +377,7 @@ var render = function() {
             _c("img", {
               attrs: {
                 src:
-                  teacher.user.avatar === "default.webp"
+                  teacher.user.avatar === "default.jpg"
                     ? "/images/" + teacher.user.avatar
                     : "/media/teacher/" +
                       teacher.user.id +

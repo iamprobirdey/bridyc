@@ -1,16 +1,16 @@
 
 
 .applbody{
-    background-image:linear-gradient(to right,rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1)), url("/images/coming-soon-m.webp");
+    background-image:linear-gradient(to right,rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1)), url("/images/coming-soon-m.jpg");
     height: 100%;
     @include screensize(tablet){
-      background-image:linear-gradient(to right,rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1)), url("/images/coming-soon-t.webp");
+      background-image:linear-gradient(to right,rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1)), url("/images/coming-soon-t.jpg");
     }
     @include screensize(laptop){
-      background-image:linear-gradient(to right,rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1)), url("/images/coming-soon-l.webp");
+      background-image:linear-gradient(to right,rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1)), url("/images/coming-soon-l.jpg");
     }
     @include screensize(desktop){
-      background-image:linear-gradient(to right,rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1)), url("/images/coming-soon-d.webp");
+      background-image:linear-gradient(to right,rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1)), url("/images/coming-soon-d.jpg");
     }
     .blocks {
         height: 529px;

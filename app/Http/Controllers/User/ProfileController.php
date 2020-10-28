@@ -61,10 +61,10 @@ class ProfileController extends Controller
         $this->authorize('view', current_user());
         $this->authorize('viewforchannel', current_user());
         $request->validate([
-            'image' => 'required'
+            'image' => 'required|base64image'
         ]);
         $time = Carbon::now('Asia/Kolkata');
-        $imageName = $time->year . $time->month . $time->day . ($time->micro + mt_rand(11111, 99999)) . '.webp';
+        $imageName = $time->year . $time->month . $time->day . ($time->micro + mt_rand(11111, 99999)) . '.jpeg';
 
 
 

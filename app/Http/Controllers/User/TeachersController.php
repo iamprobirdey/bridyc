@@ -23,9 +23,8 @@ class TeachersController extends Controller
         DB::beginTransaction();
         try {
             $teacher = ChannelTeacher::findOrFail($teacherId);
-            $channelRequest = UserChannelRequest::where('user_id', $teacher->user_id)->first();
-            $channelRequest->request = 'farewell';
-            $channelRequest->update();
+            $channelRequest = UserChannelRequest::where('user_id', $teacher->user_id)->where('channel_id', $teacher->channel_id)->first();
+            $channelRequest->delete();
             $teacher->delete();
             DB::commit();
             return response()->json([
@@ -65,13 +64,10 @@ class TeachersController extends Controller
 
     public function deleteRequest(UserChannelRequest $userChannelRequest)
     {
-        if (current_user()->channel->id === $userChannelRequest->channel_id) {
-            $userChannelRequest->request = 'rejected';
-            $userChannelRequest->save();
+        $userChannelRequest->delete();
 
-            return response()->json([
-                'message' => true
-            ]);
-        }
+        return response()->json([
+            'message' => true
+        ]);
     }
 }

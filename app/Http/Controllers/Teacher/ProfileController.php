@@ -13,6 +13,7 @@ use App\Subject;
 use App\User;
 use App\UserInformation;
 use App\UserInstitute;
+use App\UserTeacherInformation;
 use App\Village;
 use Illuminate\Http\Request;
 use Carbon\Carbon;
@@ -33,16 +34,15 @@ class ProfileController extends Controller
         $states = State::select('id', 'name')->get();
         $districts = District::select('id', 'name')->get();
         $villages = Village::select('id', 'name')->get();
-        $standards = Standard::select('id', 'standard_name')->get();
+        //$standards = Standard::select('id', 'standard_name')->get();
         $subjects = Subject::select('id', 'name')->get();
         $studentSubjects = StudentSubject::where('user_id', $userId)->with('subject')->get();
         $hobbies = Hobby::select('id', 'name')->get();
-        $userInformation = UserInformation::where('user_id', $userId)
+        $userInformation = UserTeacherInformation::where('user_id', $userId)
             ->with([
                 'state',
                 'district',
                 'village',
-                'standard'
             ])
             ->first();
         $userInstitute = UserInstitute::where('user_id', $userId)->with('user')->with('channel')->first();
@@ -52,7 +52,6 @@ class ProfileController extends Controller
             'states' => $states,
             'districts' => $districts,
             'villages' => $villages,
-            'standards' => $standards,
             'userInformation' => $userInformation,
             'subjects' => $subjects,
             'studentSubjects' => $studentSubjects,
@@ -81,22 +80,20 @@ class ProfileController extends Controller
             'state_id' => 'required|exists:states,id',
             'district_id' => 'required|exists:districts,id',
             'village_id' => 'required|exists:villages,id',
-            'standard_id' => 'required|exists:standards,id',
         ]);
 
         $validated['user_id'] = $user->id;
 
-        if (UserInformation::where('user_id', $user->id)->exists()) {
-            UserInformation::where('user_id', $user->id)->delete();
+        if (UserTeacherInformation::where('user_id', $user->id)->exists()) {
+            UserTeacherInformation::where('user_id', $user->id)->delete();
         }
-        UserInformation::create($validated);
+        UserTeacherInformation::create($validated);
 
-        $userInformation = UserInformation::where('user_id', $user->id)
+        $userInformation = UserTeacherInformation::where('user_id', $user->id)
             ->with([
                 'state',
                 'district',
-                'village',
-                'standard'
+                'village'
             ])
             ->first();
         return response()->json([
@@ -155,11 +152,11 @@ class ProfileController extends Controller
     {
         $this->authorize('updatingteahcer', $user);
         $request->validate([
-            'image' => 'required'
+            'image' => 'required|base64image'
         ]);
 
         $time = Carbon::now('Asia/Kolkata');
-        $imageName = $time->year . $time->month . $time->day . ($time->micro + mt_rand(11111, 99999)) . '.webp';
+        $imageName = $time->year . $time->month . $time->day . ($time->micro + mt_rand(11111, 99999)) . '.jpeg';
         $realImage = Image::make($request->input('image'));
         $realImage->fit(600, 600, null, 'center');
         $image = $imageS = $imageM = Image::canvas(600, 600, '#ffffff')->insert($realImage);

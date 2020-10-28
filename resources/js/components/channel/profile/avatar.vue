@@ -6,8 +6,8 @@
         height="150"
         width="152"
         :src="
-          userImage === 'default.webp'
-            ? '/images/default.webp'
+          userImage === 'default.jpg'
+            ? '/images/default.jpg'
             : domainUrl + '/media/channel/' + userId + '/profile/' + userImage
         "
         alt="principal profile picture"

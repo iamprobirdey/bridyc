@@ -18,7 +18,7 @@
         " -->
       <img
         :src="
-          channelData.cover_avatar === 'institute-cover-default.webp'
+          channelData.cover_avatar === 'institute-cover-default.jpg'
             ? '/images/' + channelData.cover_avatar
             : domainUrl +
               '/media/channel/' +
@@ -75,7 +75,7 @@
         <div class="d-flex mt-5 logo-title">
           <img
             :src="
-              channelData.icon_avatar === 'institute-logo-default.webp'
+              channelData.icon_avatar === 'institute-logo-default.jpg'
                 ? '/images/' + channelData.icon_avatar
                 : domainUrl +
                   '/media/channel/' +
@@ -293,7 +293,7 @@
                   <div class="card principalcard">
                     <img
                       :src="
-                        userData.avatar === 'default.webp'
+                        userData.avatar === 'default.jpg'
                           ? '/images/' + userData.avatar
                           : domainUrl +
                             '/media/channel/' +
@@ -350,13 +350,13 @@
                 <p>
                   <img src="/images/grade.svg" alt="Exam board icon" /> Board:
                   <span>
-                  <button
-                    class="btn btn-info m-1"
-                    v-for="(board, index) in channelData.board"
-                    :key="index"
-                  >
-                    {{ board.name }}
-                  </button>
+                    <button
+                      class="btn btn-info m-1"
+                      v-for="(board, index) in channelData.board"
+                      :key="index"
+                    >
+                      {{ board.name }}
+                    </button>
                   </span>
                 </p>
 
@@ -386,8 +386,8 @@
                 >
                   <img
                     :src="
-                      teacher.user.avatar === 'default.webp'
-                        ? '/images/default.webp'
+                      teacher.user.avatar === 'default.jpg'
+                        ? '/images/default.jpg'
                         : '/media/teacher/' +
                           teacher.user.id +
                           '/profile/s-' +
@@ -409,7 +409,7 @@
             <h2 class="text-uppercase">Infrastructure</h2>
             <hr class="mt-n2" />
 
-            <div class="row infrastructure-display mt-5 py-3">
+            <div class="row infrastructure-display mt-md-5 py-3">
               <div class="col-sm-4">
                 <p>
                   <img
@@ -456,7 +456,11 @@
                   </strong>
                 </p>
                 <p>
-                  <img class="mr-2" src="/images/hostel.svg" alt="hostel Image" />
+                  <img
+                    class="mr-2"
+                    src="/images/hostel.svg"
+                    alt="hostel Image"
+                  />
                   Girls Hostel :
                   <strong class="ml-1 text-capitalize">
                     {{

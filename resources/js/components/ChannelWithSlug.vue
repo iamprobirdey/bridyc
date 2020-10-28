@@ -20,7 +20,7 @@
           " -->
         <img
           :src="
-            channelData.cover_avatar === 'institute-cover-default.webp'
+            channelData.cover_avatar === 'institute-cover-default.jpg'
               ? '/images/' + channelData.cover_avatar
               : domainUrl +
                 '/media/channel/' +
@@ -82,7 +82,7 @@
         <div class="d-flex logo-title">
           <img
             :src="
-              channelData.icon_avatar === 'institute-logo-default.webp'
+              channelData.icon_avatar === 'institute-logo-default.jpg'
                 ? '/images/' + channelData.icon_avatar
                 : domainUrl +
                   '/media/channel/' +
@@ -170,18 +170,6 @@
           v-if="channelRequestDecider === 'in-progress'"
         >
           Request Sent
-        </button>
-        <button
-          class="btn btn-danger"
-          v-if="channelRequestDecider === 'rejected'"
-        >
-          Request Rejected
-        </button>
-        <button
-          class="btn btn-success"
-          v-if="channelRequestDecider === 'farewell'"
-        >
-          Farewell
         </button>
         <button
           class="btn btn-sm btn-success"
@@ -341,7 +329,7 @@
                   <div class="card principalcard">
                     <img
                       :src="
-                        userData.avatar === 'default.webp'
+                        userData.avatar === 'default.jpg'
                           ? '/images/' + userData.avatar
                           : domainUrl +
                             '/media/channel/' +
@@ -425,8 +413,8 @@
                 >
                   <img
                     :src="
-                      teacher.user.avatar === 'default.webp'
-                        ? '/images/default.webp'
+                      teacher.user.avatar === 'default.jpg'
+                        ? '/images/default.jpg'
                         : '/media/teacher/' +
                           teacher.user.id +
                           '/profile/s-' +
@@ -659,12 +647,6 @@ export default {
 
         if (this.currentuserData.request === "accepted")
           this.channelRequestDecider = "accepted";
-
-        if (this.currentuserData.request === "rejected")
-          this.channelRequestDecider = "rejected";
-
-        if (this.currentuserData.request === "farewell")
-          this.channelRequestDecider = "farewell";
 
         if (
           this.currentuserData.request === "rejected" &&
