@@ -9,12 +9,12 @@
         <div v-if="userNameEditing" class="container mx-auto">
             <form @submit.prevent="userNameForm()">
             <div
-                class="form-group row mx-5"
+                class="form-group row mx-md-5"
                 :class="{'has-error':errors.has('userNameError.username') || userNameError.username != ''}"
             >
                 <label col="col-sm-3 col-form-label">Username: </label>
                     <input
-                    class="col-sm-9 ml-4"
+                    class="col-sm-9 ml-md-4"
                     id="username"
                     v-model="userName.username"
                     v-validate="'required'"

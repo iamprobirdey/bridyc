@@ -103,7 +103,7 @@ main{
       }
      @include screensize(laptop){
          top: -248px;
-         left: -130px;
+         left: -164px;
       }
       @include screensize(desktop){
         top:-194px;
@@ -184,8 +184,8 @@ main{
  
 .faculty-request{
   position: relative;
-  top:-123px;
-  padding-left: 61%;
+  top:-124px;
+  padding-left: 67%;
   @include screensize(iphone5above){
     padding-left: 65%;
   }

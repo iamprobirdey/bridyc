@@ -394,11 +394,11 @@
                           teacher.user.avatar
                     "
                   />
-                  <div class="card-body mt-n1">
-                    <h6 class="card-title my-n1 text-center">
+                  <div class="card-body"> <!-- add mt-n1-->
+                    <h6 class="card-title mt-3 text-center"> <!--add my-n1-->
                       {{ teacher.user.name }}
                     </h6>
-                    <p class="card-text mx-n2 text-center">Qualification</p>
+                    <!--p class="card-text mx-n2 text-center">Qualification</p-->
                   </div>
                 </div>
               </div>
