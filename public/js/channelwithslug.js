@@ -1291,7 +1291,7 @@ var render = function() {
                     "a",
                     {
                       staticClass:
-                        "ml-n4 insweb insweb-available px-2 py-1 mt-n1 mt-md-3",
+                        "insweb insweb-available px-2 py-1 mt-n1 mt-md-3",
                       attrs: {
                         target:
                           _vm.channelData.website_link === null

@@ -40,7 +40,7 @@
             </div>
             <div v-else>
               <a
-                class="ml-n4 insweb insweb-available px-2 py-1 mt-n1 mt-md-3"
+                class="insweb insweb-available px-2 py-1 mt-n1 mt-md-3"
                 :target="channelData.website_link === null ? '_self' : '_blank'"
                 :href="
                   channelData.website_link === null

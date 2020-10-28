@@ -59,7 +59,7 @@ crossed those paths')
                         <h6>{{$podcast->designation}}</h6>
                     </div>
                     <div class="d-flex justify-content-center mt-2">
-                        {{$podcast->created_at->diffForHumans()}} | 16 min | Season 1
+                        {{$podcast->created_at->diffForHumans()}} | Season 1
                     </div>
                     <br>
                     <p>
