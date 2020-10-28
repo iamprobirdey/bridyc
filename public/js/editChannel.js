@@ -431,6 +431,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -441,7 +442,8 @@ __webpack_require__.r(__webpack_exports__);
       collegeImageEntry: false,
       channelData: [],
       userId: "",
-      domainUrl: location.origin
+      domainUrl: location.origin,
+      imageButtonDisable: false
     };
   },
   props: {
@@ -469,11 +471,15 @@ __webpack_require__.r(__webpack_exports__);
       if (this.imageData != "") {
         var formData = new FormData();
         formData.append("image", this.imageData);
+        this.imageButtonDisable = true;
         axios.post("/api/college/image/upload/" + this.channelData.id, formData).then(function (response) {
           _this.channelData.college_image = response.data.image;
           _this.collegeImageEntry = false;
           _this.imageData = "";
+          _this.imageButtonDisable = false;
         })["catch"](function (errors) {
+          _this.imageButtonDisable = false;
+
           if (errors.response.data.errors.image) {
             _this.imageError = errors.response.data.errors.image[0];
           }
@@ -15265,7 +15271,10 @@ var render = function() {
                     "button",
                     {
                       staticClass: "btn btnsubmit mt-n2",
-                      attrs: { type: "button" },
+                      attrs: {
+                        type: "button",
+                        disabled: _vm.imageButtonDisable
+                      },
                       on: {
                         click: function($event) {
                           return _vm.onImageSubmit()

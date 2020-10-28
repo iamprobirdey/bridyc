@@ -366,6 +366,7 @@ __webpack_require__.r(__webpack_exports__);
               _this.editingUrlChecker = false;
             }
           })["catch"](function (errors) {
+            _this.disable = false;
             Vue.toasted.error("Something went wrong", {
               position: "top-center",
               duration: 5000

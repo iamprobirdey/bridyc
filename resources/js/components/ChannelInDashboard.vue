@@ -209,7 +209,7 @@
                 class="carousel slide inscarou col-md-7 col-lg-8"
                 data-ride="carousel"
               >
-                <ul class="carousel-indicators">
+                <!--ul class="carousel-indicators"> this is for carousal indicatos
                   <li
                     data-target="#carouid"
                     data-slide-to="0"
@@ -219,7 +219,7 @@
                   <li data-target="#carouid" data-slide-to="2"></li>
                   <li data-target="#carouid" data-slide-to="3"></li>
                   <li data-target="#carouid" data-slide-to="4"></li>
-                </ul>
+                </ul-->
                 <div class="carousel-inner">
                   <div
                     class="carousel-item"
