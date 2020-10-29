@@ -4508,7 +4508,8 @@ var render = function() {
               ? _c(
                   "div",
                   {
-                    staticClass: "spinner-border text-primary",
+                    staticClass:
+                      "spinner-border text-warning spin-icon spin-princi-icon",
                     attrs: { role: "status" }
                   },
                   [

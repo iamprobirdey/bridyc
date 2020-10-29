@@ -159,7 +159,7 @@
             serverErrors.date
           }}</span>
         </div>
-        <div v-if="wait" class="spinner-border text-primary" role="status">
+        <div v-if="wait" class="spinner-border text-warning spin-icon spin-achieve" role="status">
           <span class="sr-only">Loading...</span>
         </div>
         <div class="text-center" v-if="!wait">

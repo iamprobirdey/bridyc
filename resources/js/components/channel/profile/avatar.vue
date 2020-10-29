@@ -37,7 +37,7 @@
         @change="onChange"
         name="image"
       ></picture-input>
-      <div v-if="wait" class="spinner-border text-primary" role="status">
+      <div v-if="wait" class="spinner-border text-warning spin-icon spin-princi-icon" role="status">
         <span class="sr-only">Loading...</span>
       </div>
 
