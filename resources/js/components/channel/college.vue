@@ -53,7 +53,10 @@
         @change="onChange"
         name="image"
       ></picture-input>
-      <div class="btnsuca mt-2 text-center">
+      <div v-if="wait" class="spinner-border text-primary" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+      <div class="btnsuca mt-2 text-center" v-if="!wait">
         <button
           v-if="imageData != ''"
           type="button"
@@ -91,6 +94,7 @@ export default {
       userId: "",
       domainUrl: location.origin,
       imageButtonDisable: false,
+      wait: false,
     };
   },
   props: {
@@ -115,6 +119,7 @@ export default {
     },
     onImageSubmit: _.debounce(function () {
       if (this.imageData != "") {
+        this.wait = true;
         const formData = new FormData();
         formData.append("image", this.imageData);
         this.imageButtonDisable = true;
@@ -125,9 +130,11 @@ export default {
             this.collegeImageEntry = false;
             this.imageData = "";
             this.imageButtonDisable = false;
+            this.wait = false;
           })
           .catch((errors) => {
             this.imageButtonDisable = false;
+            this.wait = false;
             if (errors.response.data.errors.image) {
               this.imageError = errors.response.data.errors.image[0];
             }
@@ -155,9 +162,11 @@ export default {
     },
     insertImage() {
       this.collegeImageEntry = true;
+      this.wait = false;
     },
     canTheEdit() {
       this.collegeImageEntry = false;
+      this.wait = false;
     },
   },
 };

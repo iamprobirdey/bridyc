@@ -29,7 +29,7 @@ class AchievementController extends Controller
         ]);
 
         $time = Carbon::now('Asia/Kolkata');
-        $imageName = $time->year . $time->month . $time->day . ($time->micro + mt_rand(11111, 99999)) . '.jpeg';
+        $imageName = $time->year . $time->month . $time->day . ($time->micro + mt_rand(11111, 99999)) . '.jpg';
 
         $realImage = Image::make($request->input('image_path'));
         $realImage->fit(600, 600, null, 'center');
@@ -72,7 +72,7 @@ class AchievementController extends Controller
         ]);
 
         $time = Carbon::now('Asia/Kolkata');
-        $imageName = $time->year . $time->month . $time->day . ($time->micro + mt_rand(11111, 99999)) . '.jpeg';
+        $imageName = $time->year . $time->month . $time->day . ($time->micro + mt_rand(11111, 99999)) . '.jpg';
 
         $realImage = Image::make($request->input('image_path'));
         $realImage->fit(600, 600, null, 'center');

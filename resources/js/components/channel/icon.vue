@@ -36,7 +36,10 @@
         @change="onChange"
         name="image"
       ></picture-input>
-      <div class="btnsuca mt-2">
+      <div v-if="wait" class="spinner-border text-primary" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+      <div class="btnsuca mt-2" v-if="!wait">
         <button
           v-if="imageData != ''"
           type="button"
@@ -71,6 +74,7 @@ export default {
       userId: null,
       url: "/api/icon/upload",
       domainUrl: location.origin,
+      wait: false,
     };
   },
   mounted() {
@@ -99,6 +103,7 @@ export default {
     onImageSubmit() {
       if (this.imageData != "") {
         const formData = new FormData();
+        this.wait = true;
         formData.append("image", this.imageData);
         axios
           .post(this.url, formData)
@@ -108,8 +113,10 @@ export default {
             };
             this.userImage = response.data.image;
             this.userImageStatus = true;
+            this.wait = false;
           })
           .catch((errors) => {
+            this.wait = false;
             if (errors.response.data.errors.image) {
               this.imageError = errors.response.data.errors.image[0];
             }
@@ -119,8 +126,10 @@ export default {
     editTheIcon() {
       this.userImageStatus = false;
       this.imageData = this.userImage;
+      this.wait = false;
     },
     canTheEdit() {
+      this.wait = false;
       this.userImageStatus = true;
     },
   },

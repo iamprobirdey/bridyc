@@ -432,6 +432,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -443,7 +446,8 @@ __webpack_require__.r(__webpack_exports__);
       channelData: [],
       userId: "",
       domainUrl: location.origin,
-      imageButtonDisable: false
+      imageButtonDisable: false,
+      wait: false
     };
   },
   props: {
@@ -469,6 +473,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       if (this.imageData != "") {
+        this.wait = true;
         var formData = new FormData();
         formData.append("image", this.imageData);
         this.imageButtonDisable = true;
@@ -477,8 +482,10 @@ __webpack_require__.r(__webpack_exports__);
           _this.collegeImageEntry = false;
           _this.imageData = "";
           _this.imageButtonDisable = false;
+          _this.wait = false;
         })["catch"](function (errors) {
           _this.imageButtonDisable = false;
+          _this.wait = false;
 
           if (errors.response.data.errors.image) {
             _this.imageError = errors.response.data.errors.image[0];
@@ -507,9 +514,11 @@ __webpack_require__.r(__webpack_exports__);
     },
     insertImage: function insertImage() {
       this.collegeImageEntry = true;
+      this.wait = false;
     },
     canTheEdit: function canTheEdit() {
       this.collegeImageEntry = false;
+      this.wait = false;
     }
   }
 });
@@ -584,6 +593,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -595,7 +607,8 @@ __webpack_require__.r(__webpack_exports__);
       selectedImagefile: null,
       imageError: "",
       url: "/api/cover/upload",
-      domainUrl: location.origin
+      domainUrl: location.origin,
+      wait: false
     };
   },
   components: {
@@ -623,12 +636,16 @@ __webpack_require__.r(__webpack_exports__);
       var _this2 = this;
 
       if (this.imageData != "") {
+        this.wait = true;
         var formData = new FormData();
         formData.append("image", this.imageData);
         axios.post(this.url, formData).then(function (response) {
           _this2.userImage = response.data.image;
           _this2.userImageStatus = true;
+          _this2.wait = false;
         })["catch"](function (errors) {
+          _this2.wait = false;
+
           if (errors.response.data.errors.image) {
             _this2.imageError = errors.response.data.errors.image[0];
           }
@@ -640,9 +657,11 @@ __webpack_require__.r(__webpack_exports__);
     },
     editTheIcon: function editTheIcon() {
       this.userImageStatus = false;
+      this.wait = false;
     },
     canTheEdit: function canTheEdit() {
       this.userImageStatus = true;
+      this.wait = false;
     }
   }
 });
@@ -847,6 +866,9 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -859,7 +881,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       userImage: "",
       userImageStatus: false,
       userId: null
-    }, _defineProperty(_ref, "url", "/api/icon/upload"), _defineProperty(_ref, "domainUrl", location.origin), _ref;
+    }, _defineProperty(_ref, "url", "/api/icon/upload"), _defineProperty(_ref, "domainUrl", location.origin), _defineProperty(_ref, "wait", false), _ref;
   },
   mounted: function mounted() {
     this.getImageData();
@@ -887,6 +909,7 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
       if (this.imageData != "") {
         var formData = new FormData();
+        this.wait = true;
         formData.append("image", this.imageData);
         axios.post(this.url, formData).then(function (response) {
           onUploadProgress: (function (progressEvent) {
@@ -895,7 +918,10 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
           _this2.userImage = response.data.image;
           _this2.userImageStatus = true;
+          _this2.wait = false;
         })["catch"](function (errors) {
+          _this2.wait = false;
+
           if (errors.response.data.errors.image) {
             _this2.imageError = errors.response.data.errors.image[0];
           }
@@ -905,8 +931,10 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
     editTheIcon: function editTheIcon() {
       this.userImageStatus = false;
       this.imageData = this.userImage;
+      this.wait = false;
     },
     canTheEdit: function canTheEdit() {
+      this.wait = false;
       this.userImageStatus = true;
     }
   },
@@ -15262,47 +15290,64 @@ var render = function() {
               on: { change: _vm.onChange }
             }),
             _vm._v(" "),
-            _c("div", { staticClass: "btnsuca mt-2 text-center" }, [
-              _vm.imageData != ""
-                ? _c(
-                    "button",
-                    {
-                      staticClass: "btn btnsubmit mt-n2",
-                      attrs: {
-                        type: "button",
-                        disabled: _vm.imageButtonDisable
-                      },
-                      on: {
-                        click: function($event) {
-                          return _vm.onImageSubmit()
-                        }
-                      }
-                    },
-                    [_vm._v("\n        Submit\n      ")]
-                  )
-                : _vm._e(),
-              _vm._v(" "),
-              _vm.collegeImageEntry
-                ? _c(
-                    "button",
-                    {
-                      staticClass: "btn btn-success",
-                      on: {
-                        click: function($event) {
-                          return _vm.canTheEdit()
-                        }
-                      }
-                    },
-                    [
-                      _c("i", {
-                        staticClass: "fa fa-times",
-                        attrs: { "aria-hidden": "true" }
-                      }),
-                      _vm._v(" Cancel\n      ")
-                    ]
-                  )
-                : _vm._e()
-            ]),
+            _vm.wait
+              ? _c(
+                  "div",
+                  {
+                    staticClass: "spinner-border text-primary",
+                    attrs: { role: "status" }
+                  },
+                  [
+                    _c("span", { staticClass: "sr-only" }, [
+                      _vm._v("Loading...")
+                    ])
+                  ]
+                )
+              : _vm._e(),
+            _vm._v(" "),
+            !_vm.wait
+              ? _c("div", { staticClass: "btnsuca mt-2 text-center" }, [
+                  _vm.imageData != ""
+                    ? _c(
+                        "button",
+                        {
+                          staticClass: "btn btnsubmit mt-n2",
+                          attrs: {
+                            type: "button",
+                            disabled: _vm.imageButtonDisable
+                          },
+                          on: {
+                            click: function($event) {
+                              return _vm.onImageSubmit()
+                            }
+                          }
+                        },
+                        [_vm._v("\n        Submit\n      ")]
+                      )
+                    : _vm._e(),
+                  _vm._v(" "),
+                  _vm.collegeImageEntry
+                    ? _c(
+                        "button",
+                        {
+                          staticClass: "btn btn-success",
+                          on: {
+                            click: function($event) {
+                              return _vm.canTheEdit()
+                            }
+                          }
+                        },
+                        [
+                          _c("i", {
+                            staticClass: "fa fa-times",
+                            attrs: { "aria-hidden": "true" }
+                          }),
+                          _vm._v(" Cancel\n      ")
+                        ]
+                      )
+                    : _vm._e()
+                ])
+              : _vm._e(),
             _vm._v(" "),
             _c(
               "span",
@@ -15404,44 +15449,61 @@ var render = function() {
               on: { change: _vm.onChange }
             }),
             _vm._v(" "),
-            _c("div", { staticClass: "btnsuca mt-2" }, [
-              _vm.imageData != ""
-                ? _c(
-                    "button",
-                    {
-                      staticClass: "btn btnsubmitcover rounded-0",
-                      attrs: { type: "button" },
-                      on: {
-                        click: function($event) {
-                          return _vm.onImageSubmit()
-                        }
-                      }
-                    },
-                    [_vm._v("\n        Submit\n      ")]
-                  )
-                : _vm._e(),
-              _vm._v(" "),
-              _vm.userImage != null
-                ? _c(
-                    "button",
-                    {
-                      staticClass: "btn btn-success",
-                      on: {
-                        click: function($event) {
-                          return _vm.canTheEdit()
-                        }
-                      }
-                    },
-                    [
-                      _c("i", {
-                        staticClass: "fa fa-times",
-                        attrs: { "aria-hidden": "true" }
-                      }),
-                      _vm._v("Cancel\n      ")
-                    ]
-                  )
-                : _vm._e()
-            ]),
+            _vm.wait
+              ? _c(
+                  "div",
+                  {
+                    staticClass: "spinner-border text-primary",
+                    attrs: { role: "status" }
+                  },
+                  [
+                    _c("span", { staticClass: "sr-only" }, [
+                      _vm._v("Loading...")
+                    ])
+                  ]
+                )
+              : _vm._e(),
+            _vm._v(" "),
+            !_vm.wait
+              ? _c("div", { staticClass: "btnsuca mt-2" }, [
+                  _vm.imageData != ""
+                    ? _c(
+                        "button",
+                        {
+                          staticClass: "btn btnsubmitcover rounded-0",
+                          attrs: { type: "button" },
+                          on: {
+                            click: function($event) {
+                              return _vm.onImageSubmit()
+                            }
+                          }
+                        },
+                        [_vm._v("\n        Submit\n      ")]
+                      )
+                    : _vm._e(),
+                  _vm._v(" "),
+                  _vm.userImage != null
+                    ? _c(
+                        "button",
+                        {
+                          staticClass: "btn btn-success",
+                          on: {
+                            click: function($event) {
+                              return _vm.canTheEdit()
+                            }
+                          }
+                        },
+                        [
+                          _c("i", {
+                            staticClass: "fa fa-times",
+                            attrs: { "aria-hidden": "true" }
+                          }),
+                          _vm._v("Cancel\n      ")
+                        ]
+                      )
+                    : _vm._e()
+                ])
+              : _vm._e(),
             _vm._v(" "),
             _c(
               "span",
@@ -15738,44 +15800,61 @@ var render = function() {
               on: { change: _vm.onChange }
             }),
             _vm._v(" "),
-            _c("div", { staticClass: "btnsuca mt-2" }, [
-              _vm.imageData != ""
-                ? _c(
-                    "button",
-                    {
-                      staticClass: "btn btnsubmiticon rounded-0",
-                      attrs: { type: "button" },
-                      on: {
-                        click: function($event) {
-                          return _vm.onImageSubmit()
-                        }
-                      }
-                    },
-                    [_vm._v("\n        Submit\n      ")]
-                  )
-                : _vm._e(),
-              _vm._v(" "),
-              _vm.userImage != null
-                ? _c(
-                    "button",
-                    {
-                      staticClass: "btn btn-success",
-                      on: {
-                        click: function($event) {
-                          return _vm.canTheEdit()
-                        }
-                      }
-                    },
-                    [
-                      _c("i", {
-                        staticClass: "fa fa-times",
-                        attrs: { "aria-hidden": "true" }
-                      }),
-                      _vm._v("Cancel\n      ")
-                    ]
-                  )
-                : _vm._e()
-            ]),
+            _vm.wait
+              ? _c(
+                  "div",
+                  {
+                    staticClass: "spinner-border text-primary",
+                    attrs: { role: "status" }
+                  },
+                  [
+                    _c("span", { staticClass: "sr-only" }, [
+                      _vm._v("Loading...")
+                    ])
+                  ]
+                )
+              : _vm._e(),
+            _vm._v(" "),
+            !_vm.wait
+              ? _c("div", { staticClass: "btnsuca mt-2" }, [
+                  _vm.imageData != ""
+                    ? _c(
+                        "button",
+                        {
+                          staticClass: "btn btnsubmiticon rounded-0",
+                          attrs: { type: "button" },
+                          on: {
+                            click: function($event) {
+                              return _vm.onImageSubmit()
+                            }
+                          }
+                        },
+                        [_vm._v("\n        Submit\n      ")]
+                      )
+                    : _vm._e(),
+                  _vm._v(" "),
+                  _vm.userImage != null
+                    ? _c(
+                        "button",
+                        {
+                          staticClass: "btn btn-success",
+                          on: {
+                            click: function($event) {
+                              return _vm.canTheEdit()
+                            }
+                          }
+                        },
+                        [
+                          _c("i", {
+                            staticClass: "fa fa-times",
+                            attrs: { "aria-hidden": "true" }
+                          }),
+                          _vm._v("Cancel\n      ")
+                        ]
+                      )
+                    : _vm._e()
+                ])
+              : _vm._e(),
             _vm._v(" "),
             _c(
               "span",

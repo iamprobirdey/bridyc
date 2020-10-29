@@ -274,6 +274,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -302,7 +305,8 @@ __webpack_require__.r(__webpack_exports__);
       achievementId: "",
       achievementIndex: "",
       authValue: "",
-      userId: ""
+      userId: "",
+      wait: false
     };
   },
   props: {
@@ -347,6 +351,7 @@ __webpack_require__.r(__webpack_exports__);
             formUrl = _this.url + _this.additionUrl;
           }
 
+          _this.wait = true;
           axios.post(formUrl, _this.formData).then(function (response) {
             if (response.data.message === true) {
               _this.disable = false;
@@ -364,9 +369,11 @@ __webpack_require__.r(__webpack_exports__);
 
               _this.openAchievementForm = false;
               _this.editingUrlChecker = false;
+              _this.wait = false;
             }
           })["catch"](function (errors) {
             _this.disable = false;
+            _this.wait = false;
             Vue.toasted.error("Something went wrong", {
               position: "top-center",
               duration: 5000
@@ -387,11 +394,13 @@ __webpack_require__.r(__webpack_exports__);
       this.openAchievementForm = true;
       this.achievementIndex = index;
       this.showAchievement = false;
+      this.wait = false;
     },
     canCleSubmittion: function canCleSubmittion() {
       this.editingUrlChecker = false;
       this.openAchievementForm = false;
       this.showAchievement = true;
+      this.wait = false;
     }
   },
   components: {
@@ -2305,30 +2314,47 @@ var render = function() {
                 ]
               ),
               _vm._v(" "),
-              _c("div", { staticClass: "text-center" }, [
-                _c(
-                  "button",
-                  {
-                    staticClass: "btn btn-success rounded-0",
-                    attrs: { type: "btn" },
-                    on: {
-                      click: function($event) {
-                        return _vm.canCleSubmittion()
-                      }
-                    }
-                  },
-                  [_vm._v("\n          Cancel\n        ")]
-                ),
-                _vm._v(" "),
-                _c(
-                  "button",
-                  {
-                    staticClass: "btn btnsubmit mt-n2",
-                    attrs: { type: "submit", disabled: _vm.disable }
-                  },
-                  [_vm._v("\n          Submit\n        ")]
-                )
-              ])
+              _vm.wait
+                ? _c(
+                    "div",
+                    {
+                      staticClass: "spinner-border text-primary",
+                      attrs: { role: "status" }
+                    },
+                    [
+                      _c("span", { staticClass: "sr-only" }, [
+                        _vm._v("Loading...")
+                      ])
+                    ]
+                  )
+                : _vm._e(),
+              _vm._v(" "),
+              !_vm.wait
+                ? _c("div", { staticClass: "text-center" }, [
+                    _c(
+                      "button",
+                      {
+                        staticClass: "btn btn-success rounded-0",
+                        attrs: { type: "btn" },
+                        on: {
+                          click: function($event) {
+                            return _vm.canCleSubmittion()
+                          }
+                        }
+                      },
+                      [_vm._v("\n          Cancel\n        ")]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "button",
+                      {
+                        staticClass: "btn btnsubmit mt-n2",
+                        attrs: { type: "submit", disabled: _vm.disable }
+                      },
+                      [_vm._v("\n          Submit\n        ")]
+                    )
+                  ])
+                : _vm._e()
             ],
             1
           )

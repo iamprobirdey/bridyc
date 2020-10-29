@@ -159,7 +159,10 @@
             serverErrors.date
           }}</span>
         </div>
-        <div class="text-center">
+        <div v-if="wait" class="spinner-border text-primary" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+        <div class="text-center" v-if="!wait">
           <button
             type="btn"
             class="btn btn-success rounded-0"
@@ -206,6 +209,7 @@ export default {
       achievementIndex: "",
       authValue: "",
       userId: "",
+      wait: false,
     };
   },
   props: {
@@ -247,6 +251,7 @@ export default {
             this.additionUrl = "add/";
             formUrl = this.url + this.additionUrl;
           }
+          this.wait = true;
           axios
             .post(formUrl, this.formData)
             .then((response) => {
@@ -263,10 +268,12 @@ export default {
                 this.achievementData.push(response.data.data);
                 this.openAchievementForm = false;
                 this.editingUrlChecker = false;
+                this.wait = false;
               }
             })
             .catch((errors) => {
               this.disable = false;
+              this.wait = false;
               Vue.toasted.error("Something went wrong", {
                 position: "top-center",
                 duration: 5000,
@@ -288,11 +295,13 @@ export default {
       this.openAchievementForm = true;
       this.achievementIndex = index;
       this.showAchievement = false;
+      this.wait = false;
     },
     canCleSubmittion() {
       this.editingUrlChecker = false;
       this.openAchievementForm = false;
       this.showAchievement = true;
+      this.wait = false;
     },
   },
   components: {
