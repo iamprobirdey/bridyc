@@ -152,12 +152,12 @@ class ProfileController extends Controller
     {
         $this->authorize('updatingteahcer', $user);
         $request->validate([
-            'image' => 'required|base64image'
+            'image' => 'mimes:jpeg,jpg,png|required|max:7000|file'
         ]);
 
         $time = Carbon::now('Asia/Kolkata');
         $imageName = $time->year . $time->month . $time->day . ($time->micro + mt_rand(11111, 99999)) . '.jpg';
-        $realImage = Image::make($request->input('image'));
+        $realImage = Image::make($request->file('image'));
         $realImage->fit(600, 600, null, 'center');
         $image = $imageS = $imageM = Image::canvas(600, 600, '#ffffff')->insert($realImage);
         $path = "media/teacher/" . current_user_id() . "/" . "profile/";

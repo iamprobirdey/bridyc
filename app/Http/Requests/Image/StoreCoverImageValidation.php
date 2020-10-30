@@ -24,7 +24,7 @@ class StoreCoverImageValidation extends FormRequest
     public function rules()
     {
         return [
-            'image' => 'required|base64image'
+            'image' => 'mimes:jpeg,jpg,png|required|max:7000|file'
         ];
     }
 }

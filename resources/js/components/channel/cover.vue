@@ -26,7 +26,7 @@
         height="150"
         margin="16"
         accept="image/jpeg, image/png"
-        size="10"
+        size="7"
         button-class="btn"
         :custom-strings="{
           upload: '<h1>Bummer!</h1>',
@@ -34,7 +34,11 @@
         }"
         @change="onChange"
       ></picture-input>
-      <div v-if="wait" class="spinner-border text-warning spin-icon spin-cover" role="status">
+      <div
+        v-if="wait"
+        class="spinner-border text-warning spin-icon spin-cover"
+        role="status"
+      >
         <span class="sr-only">Loading...</span>
       </div>
       <div class="btnsuca mt-2" v-if="!wait">
@@ -61,6 +65,7 @@
 
 <script>
 import PictureInput from "vue-picture-input";
+import Compressor from "compressorjs";
 export default {
   data() {
     return {
@@ -77,6 +82,7 @@ export default {
   },
   components: {
     PictureInput,
+    Compressor,
   },
   mounted() {
     this.getCoverData();
@@ -97,26 +103,49 @@ export default {
           });
         });
     },
+    b64toBlob(dataURI) {
+      var byteString = atob(dataURI.split(",")[1]);
+      var ab = new ArrayBuffer(byteString.length);
+      var ia = new Uint8Array(ab);
+
+      for (var i = 0; i < byteString.length; i++) {
+        ia[i] = byteString.charCodeAt(i);
+      }
+      return new Blob([ab], { type: "image/jpeg" });
+    },
     onImageSubmit() {
       if (this.imageData != "") {
         this.wait = true;
-        const formData = new FormData();
-        formData.append("image", this.imageData);
-        axios
-          .post(this.url, formData)
-          .then((response) => {
-            this.userImage = response.data.image;
-            this.userImageStatus = true;
-            this.wait = false;
-          })
-          .catch((errors) => {
-            this.wait = false;
-            if (errors.response.data.errors.image) {
-              this.imageError = errors.response.data.errors.image[0];
-            }
-          });
+        let vm = this;
+        new Compressor(this.b64toBlob(this.imageData), {
+          quality: 0.7,
+          success(result) {
+            const formData = new FormData();
+            formData.append("image", result, result.name);
+            axios
+              .post(vm.url, formData)
+              .then((response) => {
+                vm.userImage = response.data.image;
+                vm.userImageStatus = true;
+                vm.wait = false;
+              })
+              .catch((errors) => {
+                vm.wait = false;
+                if (errors.response.data.errors.image) {
+                  vm.imageError = errors.response.data.errors.image[0];
+                }
+              });
+          },
+          error(err) {
+            Vue.toasted.error("Something went wrong!! Try again.", {
+              position: "top-center",
+              duration: 5000,
+            });
+          },
+        });
       }
     },
+
     onChange(image) {
       if (this.$refs.pictureInput.image)
         this.imageData = this.$refs.pictureInput.image;

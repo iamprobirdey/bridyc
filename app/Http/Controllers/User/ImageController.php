@@ -46,7 +46,7 @@ class ImageController extends Controller
 
 
 
-        $realImage = Image::make($request->validated()['image']);
+        $realImage = Image::make($request->file('image'));
         $realImage->fit(600, 600, null, 'center');
         $image = $imageS = $imageM = Image::canvas(600, 600, '#ffffff')->insert($realImage);
         $path = "media/channel/" . $currentUserId . "/avatar/";
