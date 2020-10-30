@@ -1,9 +1,9 @@
 {
-    "/js/ChannelNotification.js": "/js/ChannelNotification.js?id=b1eb5517e05373cab7aa",
-    "/js/ChannelProfile.js": "/js/ChannelProfile.js?id=880281ec956b99ee3b10",
-    "/js/achievement.js": "/js/achievement.js?id=0bd09ea8b9a643bf6b92",
-    "/js/adminVerification.js": "/js/adminVerification.js?id=21910bf859c4c1100059",
-    "/js/app.js": "/js/app.js?id=9ff59bae485f25e63413",
+    "/js/ChannelNotification.js": "/js/ChannelNotification.js?id=4cacb4fe863c496735db",
+    "/js/ChannelProfile.js": "/js/ChannelProfile.js?id=e0aa9969d973979fcd7c",
+    "/js/achievement.js": "/js/achievement.js?id=d96ce0bff07eddd0e676",
+    "/js/adminVerification.js": "/js/adminVerification.js?id=7aef227a8942e16ab666",
+    "/js/app.js": "/js/app.js?id=b0fdb66a2dcf0bb6f454",
     "/css/app.css": "/css/app.css?id=45fe3922999cd85d19de",
     "/css/index.css": "/css/index.css?id=d7bbd6a911c2764d20e2",
     "/css/application.css": "/css/application.css?id=b674a09d3908f0ece087",
@@ -16,7 +16,6 @@
     "/css/about.css": "/css/about.css?id=7df775502e8fa7a56541",
     "/css/login-register.css": "/css/login-register.css?id=4efa347c53b485082019",
     "/css/error.css": "/css/error.css?id=4e7c37a1ba093bfff86e",
-<<<<<<< HEAD
     "/js/channel.js": "/js/channel.js?id=2529c2572ae3c777945a",
     "/js/channelInDashboard.js": "/js/channelInDashboard.js?id=3ba37642730093b608c7",
     "/js/channelteacher.js": "/js/channelteacher.js?id=aa86d430a779b7e0abf0",
@@ -30,19 +29,4 @@
     "/js/profile.js": "/js/profile.js?id=295984d051803648f871",
     "/js/teacherProfile.js": "/js/teacherProfile.js?id=ab63a70b83df51afbb1c",
     "/js/verification.js": "/js/verification.js?id=570e9c196ae36a2aef70"
-=======
-    "/js/channel.js": "/js/channel.js?id=833936ab009c8af2a342",
-    "/js/channelInDashboard.js": "/js/channelInDashboard.js?id=9321233ddafe7df15b81",
-    "/js/channelteacher.js": "/js/channelteacher.js?id=12504c60d9fce9e2c497",
-    "/js/channelwithslug.js": "/js/channelwithslug.js?id=9d0b94b4e8246dd232ab",
-    "/js/contactus.js": "/js/contactus.js?id=5c6dd142960c8f8f9618",
-    "/js/dashboard.js": "/js/dashboard.js?id=a2cff1d4ed089ce5711c",
-    "/js/dashboardBlade.js": "/js/dashboardBlade.js?id=75e4be9231e65c11b6eb",
-    "/js/editChannel.js": "/js/editChannel.js?id=c777ba76bf362d85f96a",
-    "/js/instituteRegister.js": "/js/instituteRegister.js?id=fbae3e95e284f62febbc",
-    "/js/loginSignupModal.js": "/js/loginSignupModal.js?id=0de2f14efc3af07dc942",
-    "/js/profile.js": "/js/profile.js?id=c65ffdea37fe742beacd",
-    "/js/teacherProfile.js": "/js/teacherProfile.js?id=20207d63093ff95dace9",
-    "/js/verification.js": "/js/verification.js?id=13490dc2f6a40e0fb2e0"
->>>>>>> c73095263cf34ee30e49f66a9efcf30571485193
 }
