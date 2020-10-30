@@ -35,7 +35,10 @@
         @change="onChange"
         name="image"
       ></picture-input>
-      <div class="text-center mt-2">
+      <div v-if="wait" class="spinner-border text-warning spin-align" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+      <div class="text-center mt-2" v-if="!wait">
         <button
           v-if="imageData != ''"
           type="button"
@@ -72,6 +75,7 @@ export default {
       url: "/api/profile/image/upload/",
       domainUrl: location.origin,
       imageData: "",
+      wait: false,
     };
   },
   props: {
@@ -99,6 +103,7 @@ export default {
     },
     onImageSubmit() {
       if (this.imageData != "") {
+        this.wait = true;
         const formData = new FormData();
         formData.append("image", this.imageData);
         axios
@@ -109,8 +114,10 @@ export default {
             };
             this.userImage = response.data.image;
             this.userImageStatus = true;
+            this.wait = false;
           })
           .catch((errors) => {
+            this.wait = false;
             if (errors.response.data.errors.image) {
               this.imageError = errors.response.data.errors.image[0];
             }
@@ -119,9 +126,11 @@ export default {
     },
     editTheIcon() {
       this.userImageStatus = false;
+      this.wait = false;
     },
     canTheEdit() {
       this.userImageStatus = true;
+      this.wait = false;
     },
   },
 };

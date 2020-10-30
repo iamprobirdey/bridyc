@@ -42,7 +42,7 @@ class ImageController extends Controller
         $this->authorize('checkChannelForUser', auth()->user()->channel);
         $time = Carbon::now('Asia/Kolkata');
         $currentUserId = current_user_id();
-        $imageName = $time->year . $time->month . $time->day . ($time->micro + mt_rand(11111, 99999)) . '.jpeg';
+        $imageName = $time->year . $time->month . $time->day . ($time->micro + mt_rand(11111, 99999)) . '.jpg';
 
 
 
@@ -56,6 +56,8 @@ class ImageController extends Controller
                 ->first();
             if ($avatar->icon_avatar != null) {
                 @unlink('media/channel/' . $currentUserId . '/avatar/' . $avatar->icon_avatar);
+                @unlink('media/channel/' . $currentUserId . '/avatar/m-' . $avatar->icon_avatar);
+                @unlink('media/channel/' . $currentUserId . '/avatar/s-' . $avatar->icon_avatar);
             }
         }
         if (!is_dir($path)) {
@@ -107,7 +109,7 @@ class ImageController extends Controller
         $this->authorize('checkChannelForUser', auth()->user()->channel);
         $time = Carbon::now('Asia/Kolkata');
         $currentUserId = current_user_id();
-        $imageName = $time->year . $time->month . $time->day . ($time->micro + mt_rand(11111, 99999)) . '.jpeg';
+        $imageName = $time->year . $time->month . $time->day . ($time->micro + mt_rand(11111, 99999)) . '.jpg';
 
         $realImage = Image::make($request->validated()['image']);
         $realImage->fit(600, 600, null, 'center');

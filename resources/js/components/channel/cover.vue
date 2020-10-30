@@ -34,7 +34,10 @@
         }"
         @change="onChange"
       ></picture-input>
-      <div class="btnsuca mt-2">
+      <div v-if="wait" class="spinner-border text-warning spin-icon spin-cover" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+      <div class="btnsuca mt-2" v-if="!wait">
         <button
           v-if="imageData != ''"
           type="button"
@@ -69,6 +72,7 @@ export default {
       imageError: "",
       url: "/api/cover/upload",
       domainUrl: location.origin,
+      wait: false,
     };
   },
   components: {
@@ -95,6 +99,7 @@ export default {
     },
     onImageSubmit() {
       if (this.imageData != "") {
+        this.wait = true;
         const formData = new FormData();
         formData.append("image", this.imageData);
         axios
@@ -102,8 +107,10 @@ export default {
           .then((response) => {
             this.userImage = response.data.image;
             this.userImageStatus = true;
+            this.wait = false;
           })
           .catch((errors) => {
+            this.wait = false;
             if (errors.response.data.errors.image) {
               this.imageError = errors.response.data.errors.image[0];
             }
@@ -116,9 +123,11 @@ export default {
     },
     editTheIcon() {
       this.userImageStatus = false;
+      this.wait = false;
     },
     canTheEdit() {
       this.userImageStatus = true;
+      this.wait = false;
     },
   },
 };

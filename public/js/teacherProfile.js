@@ -655,6 +655,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -665,7 +669,8 @@ __webpack_require__.r(__webpack_exports__);
       userId: "",
       url: "/api/profile/teacher/image/upload/",
       domainUrl: location.origin,
-      imageData: ""
+      imageData: "",
+      wait: false
     };
   },
   props: {
@@ -696,6 +701,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       if (this.imageData != "") {
+        this.wait = true;
         var formData = new FormData();
         formData.append("image", this.imageData);
         axios.post(this.url + this.userId, formData).then(function (response) {
@@ -705,7 +711,10 @@ __webpack_require__.r(__webpack_exports__);
 
           _this.userImage = response.data.image;
           _this.userImageStatus = true;
+          _this.wait = false;
         })["catch"](function (errors) {
+          _this.wait = false;
+
           if (errors.response.data.errors.image) {
             _this.imageError = errors.response.data.errors.image[0];
           }
@@ -714,9 +723,11 @@ __webpack_require__.r(__webpack_exports__);
     },
     editTheIcon: function editTheIcon() {
       this.userImageStatus = false;
+      this.wait = false;
     },
     canTheEdit: function canTheEdit() {
       this.userImageStatus = true;
+      this.wait = false;
     }
   }
 });
@@ -3560,38 +3571,55 @@ var render = function() {
               on: { change: _vm.onChange }
             }),
             _vm._v(" "),
-            _c("div", { staticClass: "text-center mt-2" }, [
-              _vm.imageData != ""
-                ? _c(
-                    "button",
-                    {
-                      staticClass: "btn btnsubmit mt-n2",
-                      attrs: { type: "button" },
-                      on: {
-                        click: function($event) {
-                          return _vm.onImageSubmit()
-                        }
-                      }
-                    },
-                    [_vm._v("\n        Submit\n      ")]
-                  )
-                : _vm._e(),
-              _vm._v(" "),
-              _vm.userImage != ""
-                ? _c(
-                    "button",
-                    {
-                      staticClass: "btn btn-warning",
-                      on: {
-                        click: function($event) {
-                          return _vm.canTheEdit()
-                        }
-                      }
-                    },
-                    [_vm._v("\n        Cancel\n      ")]
-                  )
-                : _vm._e()
-            ]),
+            _vm.wait
+              ? _c(
+                  "div",
+                  {
+                    staticClass: "spinner-border text-warning spin-align",
+                    attrs: { role: "status" }
+                  },
+                  [
+                    _c("span", { staticClass: "sr-only" }, [
+                      _vm._v("Loading...")
+                    ])
+                  ]
+                )
+              : _vm._e(),
+            _vm._v(" "),
+            !_vm.wait
+              ? _c("div", { staticClass: "text-center mt-2" }, [
+                  _vm.imageData != ""
+                    ? _c(
+                        "button",
+                        {
+                          staticClass: "btn btnsubmit mt-n2",
+                          attrs: { type: "button" },
+                          on: {
+                            click: function($event) {
+                              return _vm.onImageSubmit()
+                            }
+                          }
+                        },
+                        [_vm._v("\n        Submit\n      ")]
+                      )
+                    : _vm._e(),
+                  _vm._v(" "),
+                  _vm.userImage != ""
+                    ? _c(
+                        "button",
+                        {
+                          staticClass: "btn btn-warning",
+                          on: {
+                            click: function($event) {
+                              return _vm.canTheEdit()
+                            }
+                          }
+                        },
+                        [_vm._v("\n        Cancel\n      ")]
+                      )
+                    : _vm._e()
+                ])
+              : _vm._e(),
             _vm._v(" "),
             _c(
               "span",

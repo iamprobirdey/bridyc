@@ -64,7 +64,7 @@ class ProfileController extends Controller
             'image' => 'required|base64image'
         ]);
         $time = Carbon::now('Asia/Kolkata');
-        $imageName = $time->year . $time->month . $time->day . ($time->micro + mt_rand(11111, 99999)) . '.jpeg';
+        $imageName = $time->year . $time->month . $time->day . ($time->micro + mt_rand(11111, 99999)) . '.jpg';
 
 
 
