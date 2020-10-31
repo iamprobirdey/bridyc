@@ -750,7 +750,9 @@ __webpack_require__.r(__webpack_exports__);
           success: function success(result) {
             var formData = new FormData();
             formData.append("image", result, result.name);
-            axios.post("/api/profile/avatar", formData).then(function (response) {
+            axios.post("/api/profile/avatar", formData, {
+              emulateJSON: true
+            }).then(function (response) {
               vm.wait = false;
               vm.userImage = response.data.image;
               vm.userImageStatus = true;

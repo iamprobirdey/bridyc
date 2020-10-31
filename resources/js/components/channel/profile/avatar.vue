@@ -38,11 +38,11 @@
         name="image"
       ></picture-input>
       <div v-if="wait" class="text-center mt-2">
-      <div class="spinner-border text-warning" role="status">
-        <span class="sr-only">Loading...</span>
+        <div class="spinner-border text-warning" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
       </div>
-      </div>
-      
+
       <div class="btnsuca text-center mt-2" v-if="!wait">
         <button
           v-if="imageData != ''"
@@ -126,7 +126,7 @@ export default {
             const formData = new FormData();
             formData.append("image", result, result.name);
             axios
-              .post("/api/profile/avatar", formData)
+              .post("/api/profile/avatar", formData, { emulateJSON: true })
               .then((response) => {
                 vm.wait = false;
                 vm.userImage = response.data.image;
