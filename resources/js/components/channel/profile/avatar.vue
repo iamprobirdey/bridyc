@@ -37,10 +37,12 @@
         @change="onChange"
         name="image"
       ></picture-input>
-      <div v-if="wait" class="spinner-border text-warning spin-icon spin-princi-icon" role="status">
+      <div v-if="wait" class="text-center mt-2">
+      <div class="spinner-border text-warning" role="status">
         <span class="sr-only">Loading...</span>
       </div>
-
+      </div>
+      
       <div class="btnsuca text-center mt-2" v-if="!wait">
         <button
           v-if="imageData != ''"

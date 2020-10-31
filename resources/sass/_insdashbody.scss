@@ -190,11 +190,6 @@ main {
                     height: auto;
 
                     ul{
-                      position: relative;
-                      top:60px;
-                      @include screensize(laptop){
-                        top:180px;
-                      }
                       li{
                         width: 8px;
                         height: 8px;
@@ -222,7 +217,7 @@ main {
             .notice{
               background-color: #f5f9ff;
               align-items: center;
-              margin-bottom: 13px;
+              margin-bottom: 60px;
               height:auto;
               width: 100%;
               h5{
@@ -657,55 +652,5 @@ main {
             }
           }
         }
-
-        .spin-icon{
-          position: relative;
-          top:-90px;
-          left: 44%;
-          z-index: 1000;
-        }
-        .spin-logo{
-          @include screensize(tablet){
-            left: 46%;
-          }
-          @include screensize(laptop){
-            left: 40%;
-          }
-          @include screensize(desktop){
-            left: 44%;
-          }
-        }
-        .spin-cover{
-          @include screensize(laptop){
-            left: 47%;
-          }
-        }
-        .spin-multiple{
-          @include screensize(tablet){
-            left: 46%;
-          }
-        }
-        .spin-princi-icon{
-          @include screensize(tablet){
-            left: 47%;
-          }
-          @include screensize(laptop){
-            left: 48%;
-          }
-        }
-        .spin-achieve{
-          top:-400px;
-          @include screensize(tablet){
-            left: 45%;
-          }
-          @include screensize(laptop){
-            top:-340px;
-            left: 47%;
-          }
-          @include screensize(desktop){
-            top:-310px;
-            left: 48%;
-          }
-        }
-  }
+}
 

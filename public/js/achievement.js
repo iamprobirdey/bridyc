@@ -281,8 +281,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -3357,19 +3355,7 @@ var render = function() {
               ),
               _vm._v(" "),
               _vm.wait
-                ? _c(
-                    "div",
-                    {
-                      staticClass:
-                        "spinner-border text-warning spin-icon spin-achieve",
-                      attrs: { role: "status" }
-                    },
-                    [
-                      _c("span", { staticClass: "sr-only" }, [
-                        _vm._v("Loading...")
-                      ])
-                    ]
-                  )
+                ? _c("div", { staticClass: "text-center mt-2" }, [_vm._m(0)])
                 : _vm._e(),
               _vm._v(" "),
               !_vm.wait
@@ -3405,7 +3391,18 @@ var render = function() {
       : _vm._e()
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "spinner-border text-warning", attrs: { role: "status" } },
+      [_c("span", { staticClass: "sr-only" }, [_vm._v("Loading...")])]
+    )
+  }
+]
 render._withStripped = true
 
 

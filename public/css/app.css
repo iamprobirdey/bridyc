@@ -439,22 +439,3 @@ nav .navbtn:hover {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-.spin-align {
-  position: relative;
-  top: -90px;
-  left: 44%;
-  z-index: 1000;
-}
-
-@media only screen and (min-width: 481px) {
-  .spin-align {
-    left: 46%;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  .spin-align {
-    left: 48%;
-  }
-}
-

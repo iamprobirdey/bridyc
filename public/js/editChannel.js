@@ -441,6 +441,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -568,6 +569,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue_picture_input__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-picture-input */ "./node_modules/vue-picture-input/PictureInput.vue");
 /* harmony import */ var compressorjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! compressorjs */ "./node_modules/compressorjs/dist/compressor.js");
 /* harmony import */ var compressorjs__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(compressorjs__WEBPACK_IMPORTED_MODULE_1__);
+//
 //
 //
 //
@@ -870,6 +872,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var compressorjs__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(compressorjs__WEBPACK_IMPORTED_MODULE_1__);
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
+//
 //
 //
 //
@@ -16340,19 +16343,7 @@ var render = function() {
             }),
             _vm._v(" "),
             _vm.wait
-              ? _c(
-                  "div",
-                  {
-                    staticClass:
-                      "spinner-border text-warning spin-icon spin-multiple",
-                    attrs: { role: "status" }
-                  },
-                  [
-                    _c("span", { staticClass: "sr-only" }, [
-                      _vm._v("Loading...")
-                    ])
-                  ]
-                )
+              ? _c("div", { staticClass: "text-center mt-2" }, [_vm._m(0)])
               : _vm._e(),
             _vm._v(" "),
             !_vm.wait
@@ -16420,7 +16411,18 @@ var render = function() {
       : _vm._e()
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "spinner-border text-warning", attrs: { role: "status" } },
+      [_c("span", { staticClass: "sr-only" }, [_vm._v("Loading...")])]
+    )
+  }
+]
 render._withStripped = true
 
 
@@ -16500,19 +16502,7 @@ var render = function() {
             }),
             _vm._v(" "),
             _vm.wait
-              ? _c(
-                  "div",
-                  {
-                    staticClass:
-                      "spinner-border text-warning spin-icon spin-cover",
-                    attrs: { role: "status" }
-                  },
-                  [
-                    _c("span", { staticClass: "sr-only" }, [
-                      _vm._v("Loading...")
-                    ])
-                  ]
-                )
+              ? _c("div", { staticClass: "text-center mt-2" }, [_vm._m(0)])
               : _vm._e(),
             _vm._v(" "),
             !_vm.wait
@@ -16577,7 +16567,18 @@ var render = function() {
       : _vm._e()
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "spinner-border text-warning", attrs: { role: "status" } },
+      [_c("span", { staticClass: "sr-only" }, [_vm._v("Loading...")])]
+    )
+  }
+]
 render._withStripped = true
 
 
@@ -16852,19 +16853,7 @@ var render = function() {
             }),
             _vm._v(" "),
             _vm.wait
-              ? _c(
-                  "div",
-                  {
-                    staticClass:
-                      "spinner-border text-warning spin-logo spin-icon",
-                    attrs: { role: "status" }
-                  },
-                  [
-                    _c("span", { staticClass: "sr-only" }, [
-                      _vm._v("Loading...")
-                    ])
-                  ]
-                )
+              ? _c("div", { staticClass: "text-center mt-2" }, [_vm._m(0)])
               : _vm._e(),
             _vm._v(" "),
             !_vm.wait
@@ -16929,7 +16918,18 @@ var render = function() {
       : _vm._e()
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "spinner-border text-warning", attrs: { role: "status" } },
+      [_c("span", { staticClass: "sr-only" }, [_vm._v("Loading...")])]
+    )
+  }
+]
 render._withStripped = true
 
 
