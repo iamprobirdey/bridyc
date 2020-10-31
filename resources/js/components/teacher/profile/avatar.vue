@@ -36,11 +36,9 @@
         name="image"
       ></picture-input>
       <div v-if="wait" class="text-center mt-2">
-      <div class="spinner-border text-warning"
-        role="status"
-      >
-        <span class="sr-only">Loading...</span>
-      </div>
+        <div class="spinner-border text-warning" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
       </div>
       <div class="text-center mt-2" v-if="!wait">
         <button
@@ -166,7 +164,7 @@ export default {
             const formData = new FormData();
             formData.append("image", result, result.name);
             axios
-              .post(vm.url + vm.userId, formData)
+              .post(vm.url + vm.userId, formData, { emulateJSON: true })
               .then((response) => {
                 onUploadProgress: (progressEvent) => {
                   console.log(progressEvent.loaded / progressEvent.total);

@@ -54,11 +54,9 @@
         name="image"
       ></picture-input>
       <div v-if="wait" class="text-center mt-2">
-      <div class="spinner-border text-warning"
-        role="status"
-      >
-        <span class="sr-only">Loading...</span>
-      </div>
+        <div class="spinner-border text-warning" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
       </div>
 
       <div class="btnsuca mt-2 text-center" v-if="!wait">
@@ -145,7 +143,11 @@ export default {
             const formData = new FormData();
             formData.append("image", result, result.name);
             axios
-              .post("/api/college/image/upload/" + vm.channelData.id, formData)
+              .post(
+                "/api/college/image/upload/" + vm.channelData.id,
+                formData,
+                { emulateJSON: true }
+              )
               .then((response) => {
                 vm.channelData.college_image = response.data.image;
                 vm.collegeImageEntry = false;
