@@ -52,7 +52,7 @@
           height="200"
           margin="16"
           accept="image/jpeg, image/png"
-          size="10"
+          size="7"
           button-class="btn"
           :custom-strings="{
             upload: '<h1>Bummer!</h1>',
@@ -159,7 +159,12 @@
             serverErrors.date
           }}</span>
         </div>
-        <div class="text-center">
+        <div v-if="wait" class="text-center mt-2">
+          <div class="spinner-border text-warning" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+        </div>
+        <div class="text-center" v-if="!wait">
           <button
             type="btn"
             class="btn btn-success rounded-0"
@@ -178,6 +183,7 @@
 
 <script>
 import PictureInput from "vue-picture-input";
+import Compressor from "compressorjs";
 export default {
   data() {
     return {
@@ -206,6 +212,8 @@ export default {
       achievementIndex: "",
       authValue: "",
       userId: "",
+      wait: false,
+      blobData: {},
     };
   },
   props: {
@@ -228,15 +236,17 @@ export default {
   methods: {
     addAchievement() {
       this.openAchievementForm = true;
+      this.formData.image_path = "";
       this.formData.title = "";
       this.formData.description = "";
       this.formData.date = "";
       this.showAchievement = false;
+      this.wait = false;
     },
     achievementSubmit: _.debounce(function () {
       this.$validator.validate().then((result) => {
         if (result) {
-          this.disable = true;
+          console.log(this.formData);
           if (this.formData.image_path === "")
             this.serverErrors.image_path = "Image is required";
           let formUrl = "";
@@ -247,37 +257,106 @@ export default {
             this.additionUrl = "add/";
             formUrl = this.url + this.additionUrl;
           }
-          axios
-            .post(formUrl, this.formData)
-            .then((response) => {
-              if (response.data.message === true) {
-                this.disable = false;
-                this.showAchievement = true;
-                Vue.toasted.success("Achievement data is created", {
+          if (this.formData.image_path != "") {
+            this.disable = true;
+            this.wait = true;
+            let vm = this;
+            new Compressor(this.b64toBlob(this.formData.image_path), {
+              quality: 0.7,
+              success(result) {
+                let blob = new FormData();
+                blob.append("title", vm.formData.title);
+                blob.append("description", vm.formData.description);
+                blob.append("date", vm.formData.date);
+                blob.append("image_path", result, result.name);
+                axios
+                  .post(formUrl, blob, { emulateJSON: true })
+                  .then((response) => {
+                    if (response.data.message === true) {
+                      vm.disable = false;
+                      vm.showAchievement = true;
+                      Vue.toasted.success("Achievement data is created", {
+                        position: "top-center",
+                        duration: 5000,
+                      });
+                      if (vm.editingUrlChecker) {
+                        vm.achievementData.splice(vm.achievementIndex, 1);
+                      }
+                      vm.achievementData.push(response.data.data);
+                      vm.openAchievementForm = false;
+                      vm.editingUrlChecker = false;
+                      vm.wait = false;
+                    }
+                  })
+                  .catch((errors) => {
+                    vm.disable = false;
+                    vm.wait = false;
+                    Vue.toasted.error("Something went wrong", {
+                      position: "top-center",
+                      duration: 5000,
+                    });
+                  });
+              },
+              error(err) {
+                vm.addAchievement();
+                vm.disable = false;
+                vm.wait = false;
+                Vue.toasted.error("Something went wrong!! Try again.", {
                   position: "top-center",
                   duration: 5000,
                 });
-                if (this.editingUrlChecker) {
-                  this.achievementData.splice(this.achievementIndex, 1);
-                }
-                this.achievementData.push(response.data.data);
-                this.openAchievementForm = false;
-                this.editingUrlChecker = false;
-              }
-            })
-            .catch((errors) => {
-              this.disable = false;
-              Vue.toasted.error("Something went wrong", {
-                position: "top-center",
-                duration: 5000,
-              });
+              },
             });
+            // axios({
+            //   method: "post",
+            //   url: formUrl,
+            //   data: blob,
+            //   headers: {
+            //     "Content-Type": "multipart/form-data",
+            //   },
+            // })
+            //   .then((response) => {
+            //     if (response.data.message === true) {
+            //       this.disable = false;
+            //       this.showAchievement = true;
+            //       Vue.toasted.success("Achievement data is created", {
+            //         position: "top-center",
+            //         duration: 5000,
+            //       });
+            //       if (this.editingUrlChecker) {
+            //         this.achievementData.splice(this.achievementIndex, 1);
+            //       }
+            //       this.achievementData.push(response.data.data);
+            //       this.openAchievementForm = false;
+            //       this.editingUrlChecker = false;
+            //       this.wait = false;
+            //     }
+            //   })
+            //   .catch((error) => {
+            //     this.disable = false;
+            //     this.wait = false;
+            //     Vue.toasted.error("Something went wrong", {
+            //       position: "top-center",
+            //       duration: 5000,
+            //     });
+            //   });
+          }
         }
       });
     }, 500),
     onChange(image) {
-      if (this.$refs.pictureInput.image)
+      if (this.$refs.pictureInput.image) {
         this.formData.image_path = this.$refs.pictureInput.image;
+      }
+    },
+    b64toBlob(dataURI) {
+      var byteString = atob(dataURI.split(",")[1]);
+      var ab = new ArrayBuffer(byteString.length);
+      var ia = new Uint8Array(ab);
+      for (var i = 0; i < byteString.length; i++) {
+        ia[i] = byteString.charCodeAt(i);
+      }
+      return new Blob([ab], { type: "image/jpeg" });
     },
     editTheForm(data, index) {
       this.editingUrlChecker = true;
@@ -288,15 +367,18 @@ export default {
       this.openAchievementForm = true;
       this.achievementIndex = index;
       this.showAchievement = false;
+      this.wait = false;
     },
     canCleSubmittion() {
       this.editingUrlChecker = false;
       this.openAchievementForm = false;
       this.showAchievement = true;
+      this.wait = false;
     },
   },
   components: {
     PictureInput,
+    Compressor,
   },
 };
 

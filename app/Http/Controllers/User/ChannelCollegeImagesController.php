@@ -20,13 +20,13 @@ class ChannelCollegeImagesController extends Controller
     public function store(Channel $channel, Request $request)
     {
         $request->validate([
-            'image' => 'required|base64image'
+            'image' => 'mimes:jpeg,jpg,png|required|max:7000|file'
         ]);
         $this->authorize('viewforchannel', current_user());
         $this->authorize('checkChannelForUser', $channel);
         $time = Carbon::now('Asia/Kolkata');
-        $imageName = $time->year . $time->month . $time->day . ($time->micro + mt_rand(11111, 99999)) . '.jpeg';
-        $realImage = Image::make($request->input('image'));
+        $imageName = $time->year . $time->month . $time->day . ($time->micro + mt_rand(11111, 99999)) . '.jpg';
+        $realImage = Image::make($request->file('image'));
         $realImage->fit(600, 600, null, 'center');
         $image = $imageS = $imageM = Image::canvas(600, 600, '#ffffff')->insert($realImage);
         $path = "media/channel/" . current_user_id() . "/college/";

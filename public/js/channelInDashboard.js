@@ -659,6 +659,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -1208,7 +1209,7 @@ var render = function() {
                       "a",
                       {
                         staticClass:
-                          "ml-n4 insweb insweb-available px-2 py-1 mt-n1 mt-md-3",
+                          "insweb insweb-available px-2 py-1 mt-n1 mt-md-3",
                         attrs: {
                           target:
                             _vm.channelData.website_link === null
@@ -1505,7 +1506,9 @@ var render = function() {
                           )
                         }),
                         0
-                      )
+                      ),
+                      _vm._v(" "),
+                      _vm._m(2)
                     ]
                   )
                 ]),
@@ -1586,7 +1589,7 @@ var render = function() {
               },
               [
                 _c("div", { staticClass: "princidiv mb-5" }, [
-                  _vm._m(2),
+                  _vm._m(3),
                   _vm._v(" "),
                   _c("div", { staticClass: "row mt-3" }, [
                     _c("div", { staticClass: "col-md-6" }, [
@@ -2176,6 +2179,25 @@ var staticRenderFns = [
           "\n                    News and Notifications\n                  "
         )
       ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("ul", { staticClass: "carousel-indicators" }, [
+      _c("li", {
+        staticClass: "active",
+        attrs: { "data-target": "#carouid", "data-slide-to": "0" }
+      }),
+      _vm._v(" "),
+      _c("li", { attrs: { "data-target": "#carouid", "data-slide-to": "1" } }),
+      _vm._v(" "),
+      _c("li", { attrs: { "data-target": "#carouid", "data-slide-to": "2" } }),
+      _vm._v(" "),
+      _c("li", { attrs: { "data-target": "#carouid", "data-slide-to": "3" } }),
+      _vm._v(" "),
+      _c("li", { attrs: { "data-target": "#carouid", "data-slide-to": "4" } })
     ])
   },
   function() {

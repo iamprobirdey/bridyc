@@ -45,7 +45,7 @@
 
             <div v-else>
               <a
-                class="ml-n4 insweb insweb-available px-2 py-1 mt-n1 mt-md-3"
+                class="insweb insweb-available px-2 py-1 mt-n1 mt-md-3"
                 :target="channelData.website_link === null ? '_self' : '_blank'"
                 :href="
                   channelData.website_link === null
@@ -245,17 +245,7 @@
                 class="carousel slide inscarou col-md-7 col-lg-8"
                 data-ride="carousel"
               >
-                <!--ul class="carousel-indicators">
-                  <li
-                    data-target="#carouid"
-                    data-slide-to="0"
-                    class="active"
-                  ></li>
-                  <li data-target="#carouid" data-slide-to="1"></li>
-                  <li data-target="#carouid" data-slide-to="2"></li>
-                  <li data-target="#carouid" data-slide-to="3"></li>
-                  <li data-target="#carouid" data-slide-to="4"></li>
-                </ul-->
+                
                 <div class="carousel-inner">
                   <div
                     class="carousel-item"
@@ -274,6 +264,17 @@
                     />
                   </div>
                 </div>
+                <ul class="carousel-indicators">
+                  <li
+                    data-target="#carouid"
+                    data-slide-to="0"
+                    class="active"
+                  ></li>
+                  <li data-target="#carouid" data-slide-to="1"></li>
+                  <li data-target="#carouid" data-slide-to="2"></li>
+                  <li data-target="#carouid" data-slide-to="3"></li>
+                  <li data-target="#carouid" data-slide-to="4"></li>
+                </ul>
               </div>
             </div>
 

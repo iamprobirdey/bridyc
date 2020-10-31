@@ -44,7 +44,7 @@
         height="150"
         margin="16"
         accept="image/jpeg, image/png"
-        size="10"
+        size="7"
         button-class="btn"
         :custom-strings="{
           upload: '<h1>Bummer!</h1>',
@@ -53,7 +53,15 @@
         @change="onChange"
         name="image"
       ></picture-input>
-      <div class="btnsuca mt-2 text-center">
+      <div v-if="wait" class="text-center mt-2">
+      <div class="spinner-border text-warning"
+        role="status"
+      >
+        <span class="sr-only">Loading...</span>
+      </div>
+      </div>
+
+      <div class="btnsuca mt-2 text-center" v-if="!wait">
         <button
           v-if="imageData != ''"
           type="button"
@@ -80,6 +88,7 @@
 
 <script>
 import PictureInput from "vue-picture-input";
+import Compressor from "compressorjs";
 export default {
   data() {
     return {
@@ -91,6 +100,7 @@ export default {
       userId: "",
       domainUrl: location.origin,
       imageButtonDisable: false,
+      wait: false,
     };
   },
   props: {
@@ -107,31 +117,57 @@ export default {
   mounted() {},
   components: {
     PictureInput,
+    Compressor,
   },
   methods: {
     onChange(image) {
       if (this.$refs.pictureInput.image)
         this.imageData = this.$refs.pictureInput.image;
     },
+    b64toBlob(dataURI) {
+      var byteString = atob(dataURI.split(",")[1]);
+      var ab = new ArrayBuffer(byteString.length);
+      var ia = new Uint8Array(ab);
+
+      for (var i = 0; i < byteString.length; i++) {
+        ia[i] = byteString.charCodeAt(i);
+      }
+      return new Blob([ab], { type: "image/jpeg" });
+    },
     onImageSubmit: _.debounce(function () {
       if (this.imageData != "") {
-        const formData = new FormData();
-        formData.append("image", this.imageData);
+        this.wait = true;
         this.imageButtonDisable = true;
-        axios
-          .post("/api/college/image/upload/" + this.channelData.id, formData)
-          .then((response) => {
-            this.channelData.college_image = response.data.image;
-            this.collegeImageEntry = false;
-            this.imageData = "";
-            this.imageButtonDisable = false;
-          })
-          .catch((errors) => {
-            this.imageButtonDisable = false;
-            if (errors.response.data.errors.image) {
-              this.imageError = errors.response.data.errors.image[0];
-            }
-          });
+        let vm = this;
+        new Compressor(this.b64toBlob(this.imageData), {
+          quality: 0.7,
+          success(result) {
+            const formData = new FormData();
+            formData.append("image", result, result.name);
+            axios
+              .post("/api/college/image/upload/" + vm.channelData.id, formData)
+              .then((response) => {
+                vm.channelData.college_image = response.data.image;
+                vm.collegeImageEntry = false;
+                vm.imageData = "";
+                vm.imageButtonDisable = false;
+                vm.wait = false;
+              })
+              .catch((errors) => {
+                vm.imageButtonDisable = false;
+                vm.wait = false;
+                if (errors.response.data.errors.image) {
+                  vm.imageError = errors.response.data.errors.image[0];
+                }
+              });
+          },
+          error(err) {
+            Vue.toasted.error("Something went wrong!! Try again.", {
+              position: "top-center",
+              duration: 5000,
+            });
+          },
+        });
       }
     }, 500),
     deleteCollege(image, index) {
@@ -155,9 +191,11 @@ export default {
     },
     insertImage() {
       this.collegeImageEntry = true;
+      this.wait = false;
     },
     canTheEdit() {
       this.collegeImageEntry = false;
+      this.wait = false;
     },
   },
 };

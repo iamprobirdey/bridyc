@@ -384,7 +384,7 @@ main .inssocial img {
 
 @media only screen and (min-width: 768px) {
   main .inssocial {
-    top: -179px;
+    top: -198px;
     left: 80%;
     font-size: 18px;
   }
@@ -422,17 +422,6 @@ main .inspills .inscarou {
   height: auto;
 }
 
-main .inspills .inscarou ul {
-  position: relative;
-  top: 60px;
-}
-
-@media only screen and (min-width: 768px) {
-  main .inspills .inscarou ul {
-    top: 180px;
-  }
-}
-
 main .inspills .inscarou ul li {
   width: 8px;
   height: 8px;
@@ -466,7 +455,7 @@ main .inspills .inscarou img {
 main .inspills .notice {
   background-color: #f5f9ff;
   align-items: center;
-  margin-bottom: 13px;
+  margin-bottom: 60px;
   height: auto;
   width: 100%;
 }

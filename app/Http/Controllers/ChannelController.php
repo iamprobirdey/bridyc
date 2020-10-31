@@ -37,7 +37,10 @@ class ChannelController extends Controller
 
         //$this->fireTheLog($channel);
         $channeldata = Channel::where('id', $channel->id)
-            ->with(['state', 'district', 'village', 'language', 'achievement', 'collegeImage', 'board'])
+            ->with(['state', 'district', 'village', 'language', 'achievement', 'board'])
+            ->with(['collegeImage' => function ($query) {
+                $query->limit(5);
+            }])
             ->with(['teacher' => function ($query) {
                 $query->with(['user']);
             }])
@@ -45,6 +48,7 @@ class ChannelController extends Controller
                 $query->orderBy('created_at', 'desc');
             }])
             ->get();
+
 
         $user = User::where('id', $channel->user_id)
             ->select('id', 'email', 'vission', 'message', 'name', 'avatar')
