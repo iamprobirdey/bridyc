@@ -23,7 +23,7 @@ class AchievementController extends Controller
         $this->authorize('view', current_user());
         $this->authorize('viewforchannel', current_user());
         $request->validate([
-            'image_path' => 'required|base64image',
+            'image_path' => 'mimes:jpeg,jpg,png|required|max:7000|file',
             'title' => 'required|string',
             'description' => 'required|string'
         ]);
@@ -31,7 +31,7 @@ class AchievementController extends Controller
         $time = Carbon::now('Asia/Kolkata');
         $imageName = $time->year . $time->month . $time->day . ($time->micro + mt_rand(11111, 99999)) . '.jpg';
 
-        $realImage = Image::make($request->input('image_path'));
+        $realImage = Image::make($request->file('image_path'));
         $realImage->fit(600, 600, null, 'center');
         $image = $imageS = $imageM = Image::canvas(600, 600, '#ffffff')->insert($realImage);
         $path = "media/channel/" . auth()->id() . "/achievement/";
@@ -66,7 +66,7 @@ class AchievementController extends Controller
     {
         $this->authorize('updatingAchivementByUser', $acheivement);
         $request->validate([
-            'image_path' => 'required|base64image',
+            'image_path' => 'mimes:jpeg,jpg,png|required|max:7000|file',
             'title' => 'required|string',
             'description' => 'required|string'
         ]);
@@ -74,7 +74,7 @@ class AchievementController extends Controller
         $time = Carbon::now('Asia/Kolkata');
         $imageName = $time->year . $time->month . $time->day . ($time->micro + mt_rand(11111, 99999)) . '.jpg';
 
-        $realImage = Image::make($request->input('image_path'));
+        $realImage = Image::make($request->file('image_path'));
         $realImage->fit(600, 600, null, 'center');
         $image = $imageS = $imageM = Image::canvas(600, 600, '#ffffff')->insert($realImage);
         $path = "media/channel/" . auth()->id() . "/achievement/";

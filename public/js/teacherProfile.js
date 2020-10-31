@@ -4548,7 +4548,7 @@ var render = function() {
                 height: "150",
                 margin: "16",
                 accept: "image/jpeg, image/png",
-                size: "10",
+                size: "7",
                 "button-class": "btn",
                 "custom-strings": {
                   upload: "<h1>Bummer!</h1>",
