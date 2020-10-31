@@ -1,3 +1,5 @@
+
+
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -7,12 +9,14 @@
 require("./bootstrap");
 
 window.Vue = require("vue");
+//import Croppa from 'vue-croppa';
 import Toasted from "vue-toasted";
 import VeeValidate from "vee-validate";
 import _ from "lodash";
 
 Vue.use(Toasted);
 Vue.use(VeeValidate);
+//Vue.use(Croppa);
 
 /**
  * The following block of code may be used to automatically register your
