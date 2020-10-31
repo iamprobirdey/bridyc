@@ -332,17 +332,6 @@ main .inspills .inscarou {
   margin-top: 30px;
 }
 
-main .inspills .inscarou ul {
-  position: relative;
-  top: 60px;
-}
-
-@media only screen and (min-width: 768px) {
-  main .inspills .inscarou ul {
-    top: 180px;
-  }
-}
-
 main .inspills .inscarou ul li {
   width: 8px;
   height: 8px;

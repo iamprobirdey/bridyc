@@ -422,17 +422,6 @@ main .inspills .inscarou {
   height: auto;
 }
 
-main .inspills .inscarou ul {
-  position: relative;
-  top: 60px;
-}
-
-@media only screen and (min-width: 768px) {
-  main .inspills .inscarou ul {
-    top: 180px;
-  }
-}
-
 main .inspills .inscarou ul li {
   width: 8px;
   height: 8px;
@@ -957,78 +946,5 @@ main .notification-section ul li::before {
   width: 10px;
   height: 15px;
   content: "";
-}
-
-main .spin-icon {
-  position: relative;
-  top: -90px;
-  left: 44%;
-  z-index: 1000;
-}
-
-@media only screen and (min-width: 481px) {
-  main .spin-logo {
-    left: 46%;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  main .spin-logo {
-    left: 40%;
-  }
-}
-
-@media only screen and (min-width: 1280px) {
-  main .spin-logo {
-    left: 44%;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  main .spin-cover {
-    left: 47%;
-  }
-}
-
-@media only screen and (min-width: 481px) {
-  main .spin-multiple {
-    left: 46%;
-  }
-}
-
-@media only screen and (min-width: 481px) {
-  main .spin-princi-icon {
-    left: 47%;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  main .spin-princi-icon {
-    left: 48%;
-  }
-}
-
-main .spin-achieve {
-  top: -400px;
-}
-
-@media only screen and (min-width: 481px) {
-  main .spin-achieve {
-    left: 45%;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  main .spin-achieve {
-    top: -340px;
-    left: 47%;
-  }
-}
-
-@media only screen and (min-width: 1280px) {
-  main .spin-achieve {
-    top: -310px;
-    left: 48%;
-  }
 }
 
