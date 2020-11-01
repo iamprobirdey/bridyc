@@ -16,10 +16,9 @@ class CreateDistrictsTable extends Migration
         Schema::create('districts', function (Blueprint $table) {
             $table->id();
             $table->foreignId('state_id')->constrained()->onDelete('cascade');
-            $table->string('name')->unique();
-            $table->string('code')->unique()->index();
-            $table->timestamps();
-            ;
+            $table->string('name', 50)->unique();
+            $table->string('code', 50)->unique()->index();
+            $table->timestamps();;
         });
     }
 
@@ -31,6 +30,5 @@ class CreateDistrictsTable extends Migration
     public function down()
     {
         Schema::dropIfExists('districts');
-
     }
 }

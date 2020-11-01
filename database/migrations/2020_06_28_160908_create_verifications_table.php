@@ -21,12 +21,12 @@ class CreateVerificationsTable extends Migration
             $table->foreignId('village_id')->constrained()->onDelete('cascade');
             $table->foreignId('language_id')->constrained()->onDelete('cascade');
             $table->string('udise');
-            $table->string('title');
+            $table->string('title', 40);
             $table->string('location');
-            $table->string('ownership');
+            $table->char('ownership', 20);
             $table->string('founded');
-            $table->string('pin');
-            $table->string('gender');
+            $table->string('pin', 6);
+            $table->char('gender', 20);
             $table->tinyInteger('status')->default(1); //default = 1,verified = 2, block = 3
             $table->timestamps();
         });

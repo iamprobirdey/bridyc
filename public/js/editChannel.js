@@ -633,6 +633,7 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -16480,17 +16481,17 @@ var render = function() {
         ])
       : _vm._e(),
     _vm._v(" "),
-    _vm.userImageStatus === false
+    !_vm.userImageStatus
       ? _c(
           "div",
           [
             _c("picture-input", {
               ref: "pictureInput",
               attrs: {
-                width: "250",
-                height: "150",
-                margin: "16",
+                width: "300",
+                height: "200",
                 accept: "image/jpeg, image/png",
+                margin: "17",
                 size: "7",
                 "button-class": "btn",
                 "custom-strings": {

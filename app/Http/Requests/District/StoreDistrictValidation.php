@@ -25,8 +25,8 @@ class StoreDistrictValidation extends FormRequest
     {
         return [
             'state' => 'required|integer|exists:App\State,id',
-            'name' => 'required|string|unique:App\District,name',
-            'code' => 'required|string|unique:App\District,code'
+            'name' => 'required|string|max:50|unique:App\District,name',
+            'code' => 'required|string|max:50|unique:App\District,code'
         ];
     }
 }

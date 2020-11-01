@@ -209,7 +209,6 @@
                 class="carousel slide inscarou col-md-7 col-lg-8"
                 data-ride="carousel"
               >
-               
                 <div class="carousel-inner">
                   <div
                     class="carousel-item"
@@ -228,7 +227,7 @@
                     />
                   </div>
                 </div>
-                 <ul class="carousel-indicators">
+                <ul class="carousel-indicators">
                   <li
                     data-target="#carouid"
                     data-slide-to="0"
@@ -335,6 +334,7 @@
               <div class="insadditionalinfo mt-4 text-capitalize">
                 <p>
                   <img src="/images/address.svg" alt="address icon" /> Address:
+                  {{ channelData.village.name }}
                   {{ channelData.district.name }},
                   {{ channelData.state.name }}
                 </p>
@@ -395,8 +395,10 @@
                           teacher.user.avatar
                     "
                   />
-                  <div class="card-body"> <!-- add mt-n1-->
-                    <h6 class="card-title mt-3 text-center"> <!--add my-n1-->
+                  <div class="card-body">
+                    <!-- add mt-n1-->
+                    <h6 class="card-title mt-3 text-center">
+                      <!--add my-n1-->
                       {{ teacher.user.name }}
                     </h6>
                     <!--p class="card-text mx-n2 text-center">Qualification</p-->
@@ -586,7 +588,6 @@ export default {
   created() {
     this.userData = this.user;
     this.channelData = this.channel;
-    console.log(this.userData);
     this.phoneNo = this.userData.phone ? this.userData.phone : "Not provided";
     if (
       this.channelData.extra_attributes.social.facebook === null &&

@@ -53,8 +53,8 @@ class StandardController extends Controller
     {
         $this->authorize('superadmin', auth()->user());
         $request->validate([
-            'standard' => 'required|string|unique:standards,standard_name,' . $id,
-            'code' => 'required|string|unique:standards,code,' . $id,
+            'standard' => 'required|max:50|string|unique:standards,standard_name,' . $id,
+            'code' => 'required|max:50|string|unique:standards,code,' . $id,
         ]);
         $standard = Standard::findOrFail($id);
         $standard->standard_name = Str::ucfirst($request->input('standard'));

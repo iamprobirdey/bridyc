@@ -54,8 +54,8 @@ class StateController extends Controller
     {
         $this->authorize('superadmin', auth()->user());
         $request->validate([
-            'name' => 'required|string|unique:states,name,' . $id,
-            'code' => 'required|string|unique:states,code,' . $id
+            'name' => 'required|string|max:50|unique:states,name,' . $id,
+            'code' => 'required|string|max:50|unique:states,code,' . $id
         ]);
 
         $state = State::findOrFail($id);

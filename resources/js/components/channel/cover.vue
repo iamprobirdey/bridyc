@@ -19,13 +19,13 @@
       </button>
     </div>
 
-    <div v-if="userImageStatus === false">
+    <div v-if="!userImageStatus">
       <picture-input
         ref="pictureInput"
-        width="250"
-        height="150"
-        margin="16"
+        width="300"
+        height="200"
         accept="image/jpeg, image/png"
+        margin="17"
         size="7"
         button-class="btn"
         :custom-strings="{
@@ -34,6 +34,7 @@
         }"
         @change="onChange"
       ></picture-input>
+
       <div v-if="wait" class="text-center mt-2">
         <div class="spinner-border text-warning" role="status">
           <span class="sr-only">Loading...</span>
@@ -144,7 +145,6 @@ export default {
         });
       }
     },
-
     onChange(image) {
       if (this.$refs.pictureInput.image)
         this.imageData = this.$refs.pictureInput.image;

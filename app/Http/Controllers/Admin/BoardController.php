@@ -53,8 +53,8 @@ class BoardController extends Controller
     {
         $this->authorize('superadmin', auth()->user());
         $request->validate([
-            'board' => 'required|string|unique:boards,name,' . $id,
-            'code' => 'required|string|unique:boards,code,' . $id
+            'board' => 'required|max:50|string|unique:boards,name,' . $id,
+            'code' => 'required|max:50|string|unique:boards,code,' . $id
         ]);
         $board = Board::findOrFail($id);
         $board->name = Str::ucfirst($request->input('board'));

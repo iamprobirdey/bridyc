@@ -24,8 +24,8 @@ class StoreStateValidation extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required|string|unique:states,name',
-            'code' => 'required|string|unique:states,code'
+            'name' => 'required|string|unique:states,name|max:50',
+            'code' => 'required|string|unique:states,code|max:50'
         ];
     }
 }
