@@ -25,8 +25,8 @@ class StoreVillageValidation extends FormRequest
     {
         return [
             'district' => 'required|integer|exists:App\District,id',
-            'name' => 'required|string|unique:villages,name',
-            'code' => 'required|string|unique:villages,code'
+            'name' => 'required|max:60|string|unique:villages,name',
+            'code' => 'required|max:60|string|unique:villages,code'
         ];
     }
 }

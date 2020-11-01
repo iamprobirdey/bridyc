@@ -16,8 +16,8 @@ class CreateVillagesTable extends Migration
         Schema::create('villages', function (Blueprint $table) {
             $table->id();
             $table->foreignId('district_id')->constrained()->onDelete('cascade');
-            $table->string('name')->unique();
-            $table->string('code')->unique()->index();
+            $table->string('name', 60)->unique();
+            $table->string('code', 60)->unique()->index();
             $table->timestamps();
         });
     }

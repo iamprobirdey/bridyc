@@ -29,12 +29,12 @@ class CreateChannelsTable extends Migration
             $table->string('cover_avatar')->default('institute-cover-default.jpg');
             $table->string('website_link')->nullable();
             $table->string('no_of_class')->nullable();
-            $table->string('canteen')->nullable();
-            $table->string('stationary')->nullable();
+            $table->string('canteen', 10)->nullable();
+            $table->string('stationary', 10)->nullable();
             $table->string('boys_hostel', 10)->nullable();
             $table->string('girls_hostel', 10)->nullable();
             $table->string('computer_learning', 10)->nullable();
-            $table->string('wall', 10)->nullable();
+            $table->string('wall', 20)->nullable();
             $table->string('library', 10)->nullable();
             $table->string('no_of_books')->nullable();
             $table->string('playground', 10)->nullable();

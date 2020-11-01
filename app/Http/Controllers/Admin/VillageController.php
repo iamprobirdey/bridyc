@@ -59,8 +59,8 @@ class VillageController extends Controller
         $this->authorize('superadmin', auth()->user());
         $request->validate([
             'district' => 'required|integer|exists:App\District,id',
-            'name' => 'required|string|unique:villages,name,' . $id,
-            'code' => 'required|string|unique:villages,code,' . $id
+            'name' => 'required|max:60|string|unique:villages,name,' . $id,
+            'code' => 'required|max:60|string|unique:villages,code,' . $id
         ]);
         $village = Village::findOrFail($id);
         $village->district_id = $request->input('district');
