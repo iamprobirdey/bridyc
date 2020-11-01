@@ -20,7 +20,7 @@
     </div>
 
     <div v-if="!userImageStatus">
-      <!-- <picture-input
+      <picture-input
         ref="pictureInput"
         width="250"
         height="150"
@@ -34,39 +34,7 @@
         }"
         @change="onChange"
         :crop="true"
-      ></picture-input> -->
-      <croppa
-        v-model="croppa"
-        placeholder="Choose an image"
-        :placeholder-font-size="20"
-        :width="250"
-        :height="250"
-        :quality="4"
-        :zoom-speed="3"
-        :accept="'image/*'"
-        :file-size-limit="13865103"
-        @file-type-mismatch="onFileTypeMismatch"
-        @file-size-exceed="onFileSizeExceed"
-        :initial-image="initialImage"
-        :placeholder="'Choose an avatar'"
-      >
-      </croppa>
-
-      <button class="btn btn-default" @click="croppa.rotate()">
-        <i class="icons8-rotate-right"></i> 90deg
-      </button>
-      <button class="btn btn-default" @click="croppa.rotate(2)">
-        <i class="icons8-3d-rotate-3"></i> 180deg
-      </button>
-      <button class="btn btn-default" @click="croppa.rotate(-1)">
-        <i class="icons8-rotate-left-2"></i> -90deg
-      </button>
-      <button class="btn btn-default" @click="croppa.flipX()">
-        <i class="icons8-flip-vertical"></i> flip-X
-      </button>
-      <button class="btn btn-default" @click="croppa.flipY()">
-        <i class="icons8-flip-horizontal"></i> flip-Y
-      </button>
+      ></picture-input>
 
       <div v-if="wait" class="text-center mt-2">
         <div class="spinner-border text-warning" role="status">
@@ -75,18 +43,11 @@
       </div>
 
       <div class="btnsuca mt-2" v-if="!wait">
-        <!-- <button
+        <button
           v-if="imageData != ''"
           type="button"
           class="btn btnsubmitcover rounded-0"
           @click="onImageSubmit()"
-        >
-          Submit
-        </button> -->
-        <button
-          type="button"
-          class="btn btnsubmitcover rounded-0"
-          @click="onCroppaSubmit()"
         >
           Submit
         </button>
@@ -106,8 +67,6 @@
 <script>
 import PictureInput from "vue-picture-input";
 import Compressor from "compressorjs";
-import Croppa from "vue-croppa";
-import "vue-croppa/dist/vue-croppa.css";
 export default {
   data() {
     return {
@@ -120,38 +79,16 @@ export default {
       url: "/api/cover/upload",
       domainUrl: location.origin,
       wait: false,
-      initialImage: null,
-      croppa: {},
     };
   },
   components: {
     PictureInput,
     Compressor,
-    croppa: Croppa.component,
   },
   mounted() {
     this.getCoverData();
   },
   methods: {
-    onFileTypeMismatch(file) {
-      Vue.toasted.error(
-        "Invalid file type. Please choose a jpeg or png file.",
-        {
-          position: "top-center",
-          duration: 3000,
-        }
-      );
-    },
-    onFileSizeExceed(file) {
-      console.log(file);
-      Vue.toasted.error(
-        "File size exceeds. Please choose a file smaller than 10mb. " + file,
-        {
-          position: "top-center",
-          duration: 3000,
-        }
-      );
-    },
     getCoverData() {
       axios
         .get("/api/cover")
@@ -178,43 +115,37 @@ export default {
       return new Blob([ab], { type: "image/jpeg" });
     },
     onImageSubmit() {
-      //if (this.imageData != "") {
-      this.wait = true;
-      let vm = this;
-      new Compressor(this.b64toBlob(this.imageData), {
-        quality: 0.7,
-        success(result) {
-          const formData = new FormData();
-          formData.append("image", result, result.name);
-          axios
-            .post(vm.url, formData)
-            .then((response) => {
-              vm.userImage = response.data.image;
-              vm.userImageStatus = true;
-              vm.wait = false;
-            })
-            .catch((errors) => {
-              vm.wait = false;
-              if (errors.response.data.errors.image) {
-                vm.imageError = errors.response.data.errors.image[0];
-              }
+      if (this.imageData != "") {
+        this.wait = true;
+        let vm = this;
+        new Compressor(this.b64toBlob(this.imageData), {
+          quality: 0.7,
+          success(result) {
+            const formData = new FormData();
+            formData.append("image", result, result.name);
+            axios
+              .post(vm.url, formData)
+              .then((response) => {
+                vm.userImage = response.data.image;
+                vm.userImageStatus = true;
+                vm.wait = false;
+              })
+              .catch((errors) => {
+                vm.wait = false;
+                if (errors.response.data.errors.image) {
+                  vm.imageError = errors.response.data.errors.image[0];
+                }
+              });
+          },
+          error(err) {
+            Vue.toasted.error("Something went wrong!! Try again.", {
+              position: "top-center",
+              duration: 5000,
             });
-        },
-        error(err) {
-          Vue.toasted.error("Something went wrong!! Try again.", {
-            position: "top-center",
-            duration: 5000,
-          });
-        },
-      });
-      //}
+          },
+        });
+      }
     },
-
-    onCroppaSubmit() {
-      this.imageData = this.croppa.generateDataUrl();
-      this.onImageSubmit();
-    },
-
     onChange(image) {
       if (this.$refs.pictureInput.image)
         this.imageData = this.$refs.pictureInput.image;
