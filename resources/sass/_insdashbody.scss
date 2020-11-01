@@ -7,6 +7,7 @@ main {
     .inscover{
          width: 100%;
          height: 230px;
+         object-fit: cover;
          @include screensize(tablet){
             height: 280px;
           }
@@ -86,7 +87,7 @@ main {
         margin-bottom: -120px;
         left: -12px;
         @include screensize(iphone5above){
-          top: -220px;
+          top: -219px;
         }
         @include screensize(tablet){
             top: -245px;
@@ -110,18 +111,18 @@ main {
                  }
 
                  @include screensize(laptop){
-                    width: 130px;
-                    height: 130px;
+                    width: 145px;
+                    height: 145px;
                     margin-left: 120px !important;
                  }
               }
               .institle{
-                font-size: 17px;
+                font-size: 16px;
                 margin-top: 45px;
                 transition: all ease .5s;
                 font-family: Verdana, Geneva, Tahoma, sans-serif;
                 @include screensize(iphone5above){
-                  font-size: 20px;
+                  font-size: 18px;
                   margin-top: 38px;
                  }
                  @include screensize(tablet){
@@ -140,8 +141,8 @@ main {
 
     .inssocial{
       position: relative;
-      top:-61px;
-      left:68%;
+      top:-70px;
+      left:67%;
       width:100px;
       font-size: 15px;
       img{

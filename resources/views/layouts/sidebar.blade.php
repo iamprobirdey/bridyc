@@ -7,7 +7,7 @@
             $verificationStatus === 2
             )
             <li class="nav-item active">
-                <a class="nav-link " href="{{url('/user/dashboard/verification')}}">
+                <a class="nav-link " style="color:white;" href="{{url('/user/dashboard/verification')}}">
                     <i class="fa fa-check-square sidebaricons" aria-hidden="true"></i>
                     Verification
                 </a>

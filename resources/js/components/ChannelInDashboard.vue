@@ -1,6 +1,6 @@
 <template>
   <div class="mx-lg-5 mt-lg-4">
-    <main role="main" class="col-lg-10 ml-lg-auto">
+    <main role="main" class="col-lg-10 ml-lg-auto pt-5">
       <!-- :srcset="
           channelData.cover_avatar != null
             ? domainUrl +
@@ -350,7 +350,6 @@
                 </p>
                 <p>
                   <img src="/images/grade.svg" alt="Exam board icon" /> Board:
-                  <span>
                     <button
                       class="btn btn-info m-1"
                       v-for="(board, index) in channelData.board"
@@ -358,7 +357,6 @@
                     >
                       {{ board.name }}
                     </button>
-                  </span>
                 </p>
 
                 <p>

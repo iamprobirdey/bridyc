@@ -2,7 +2,7 @@
   <div class="mx-lg-5 mx-0">
     <main class="container-fluid px-1">
       <!--coverpic addition-->
-      <div class="mt-lg-5 pt-lg-3">
+      <div class="mt-lg-4">
         <!-- :srcset="
             channelData.cover_avatar != null
               ? domainUrl +
@@ -343,7 +343,7 @@
                       <h4 class="card-title my-n1 text-capitalize">
                         {{ userData.name }}
                       </h4>
-                      <p class="card-text text-capitalize">
+                      <p class="card-text text-capitalize mt-1">
                         Principal, {{ channel.title }}
                       </p>
                     </div>
@@ -380,7 +380,7 @@
                   <img src="/images/translation.svg" alt="language icon" />
                   Medium: {{ channelData.language.name }}
                 </p>
-                <p class="row">
+                <p>
                   <img src="/images/grade.svg" alt="Exam board icon" /> Board:
                   <button
                     class="btn btn-info m-1"
