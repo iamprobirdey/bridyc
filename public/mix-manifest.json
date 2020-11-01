@@ -17,9 +17,9 @@
     "/css/login-register.css": "/css/login-register.css?id=4efa347c53b485082019",
     "/css/error.css": "/css/error.css?id=4e7c37a1ba093bfff86e",
     "/js/channel.js": "/js/channel.js?id=8059bfd02de231bba72a",
-    "/js/channelInDashboard.js": "/js/channelInDashboard.js?id=fa2473a30aa9e441284b",
+    "/js/channelInDashboard.js": "/js/channelInDashboard.js?id=38d99ecc2536fcfdb02a",
     "/js/channelteacher.js": "/js/channelteacher.js?id=1c07dae5ae95a5fb52cf",
-    "/js/channelwithslug.js": "/js/channelwithslug.js?id=c406869cfec7fd0a04f2",
+    "/js/channelwithslug.js": "/js/channelwithslug.js?id=5a0f04dfaca3ad1b4bcf",
     "/js/contactus.js": "/js/contactus.js?id=c71a19dab4ede00ff95d",
     "/js/dashboard.js": "/js/dashboard.js?id=ec306af248240c6c299f",
     "/js/dashboardBlade.js": "/js/dashboardBlade.js?id=3d520cc588c489a64973",
@@ -28,5 +28,5 @@
     "/js/loginSignupModal.js": "/js/loginSignupModal.js?id=5bf44aa7b4ff1f40efd6",
     "/js/profile.js": "/js/profile.js?id=e532b35336b8db3e6b5d",
     "/js/teacherProfile.js": "/js/teacherProfile.js?id=c7a63fe1e5daf356ea9f",
-    "/js/verification.js": "/js/verification.js?id=0ee4f14d1d564cfcaa65"
+    "/js/verification.js": "/js/verification.js?id=13490dc2f6a40e0fb2e0"
 }
