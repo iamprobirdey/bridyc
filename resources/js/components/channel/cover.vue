@@ -22,8 +22,8 @@
     <div v-if="!userImageStatus">
       <picture-input
         ref="pictureInput"
-        width="250"
-        height="150"
+        width="300"
+        height="200"
         margin="16"
         accept="image/jpeg, image/png"
         size="7"

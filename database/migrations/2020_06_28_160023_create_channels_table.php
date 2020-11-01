@@ -31,14 +31,14 @@ class CreateChannelsTable extends Migration
             $table->string('no_of_class')->nullable();
             $table->string('canteen')->nullable();
             $table->string('stationary')->nullable();
-            $table->string('boys_hostel')->nullable();
-            $table->string('girls_hostel')->nullable();
-            $table->string('computer_learning')->nullable();
-            $table->string('wall')->nullable();
-            $table->string('library')->nullable();
+            $table->string('boys_hostel', 10)->nullable();
+            $table->string('girls_hostel', 10)->nullable();
+            $table->string('computer_learning', 10)->nullable();
+            $table->string('wall', 10)->nullable();
+            $table->string('library', 10)->nullable();
             $table->string('no_of_books')->nullable();
-            $table->string('playground')->nullable();
-            $table->string('bus_services')->nullable();
+            $table->string('playground', 10)->nullable();
+            $table->string('bus_services', 10)->nullable();
             $table->tinyInteger('status')->default(0); // 1 => verified , 2 => block
             $table->schemalessAttributes('extra_attributes');
             $table->timestamps();

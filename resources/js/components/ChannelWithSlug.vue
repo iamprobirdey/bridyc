@@ -245,7 +245,6 @@
                 class="carousel slide inscarou col-md-7 col-lg-8"
                 data-ride="carousel"
               >
-                
                 <div class="carousel-inner">
                   <div
                     class="carousel-item"
@@ -369,6 +368,7 @@
               <div class="insadditionalinfo mt-4 text-capitalize">
                 <p>
                   <img src="/images/address.svg" alt="address icon" /> Address:
+                  {{ channelData.village.name }},
                   {{ channelData.district.name }},
                   {{ channelData.state.name }}
                 </p>

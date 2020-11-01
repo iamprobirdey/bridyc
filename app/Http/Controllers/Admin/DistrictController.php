@@ -56,8 +56,8 @@ class DistrictController extends Controller
     {
         $this->authorize('superadmin', auth()->user());
         $request->validate([
-            'name' => 'required|string|unique:states,name,' . $id,
-            'code' => 'required|string|unique:states,code,' . $id
+            'name' => 'required|max:50|string|unique:states,name,' . $id,
+            'code' => 'required|max:50|string|unique:states,code,' . $id
         ]);
         $district = District::findOrFail($id);
         $district->state_id = $request->input('state');

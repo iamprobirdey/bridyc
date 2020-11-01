@@ -22,7 +22,7 @@ class CreateUsersTable extends Migration
             $table->string('avatar')->default('default.jpg');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('phone')->nullable();
-            $table->string('gender')->nullable();
+            $table->string('gender', 15)->nullable();
             $table->string('vission')->nullable();
             $table->text('message')->nullable();
             $table->string('password')->nullable();

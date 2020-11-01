@@ -24,8 +24,8 @@ class StoreSubjectValidation extends FormRequest
     public function rules()
     {
         return [
-            'subject' => 'required|string|unique:subjects,name',
-            'code' => 'required|string|unique:subjects,code',
+            'subject' => 'required|max:50|string|unique:subjects,name',
+            'code' => 'required|max:50|string|unique:subjects,code',
         ];
     }
 }

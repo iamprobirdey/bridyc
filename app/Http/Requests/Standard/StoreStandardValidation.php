@@ -24,8 +24,8 @@ class StoreStandardValidation extends FormRequest
     public function rules()
     {
         return [
-            'standard' => 'required|string|unique:standards,standard_name',
-            'code' => 'required|string|unique:standards,code',
+            'standard' => 'required|max:50|string|unique:standards,standard_name',
+            'code' => 'required|max:50|string|unique:standards,code',
         ];
     }
 }

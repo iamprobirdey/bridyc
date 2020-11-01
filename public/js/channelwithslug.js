@@ -1803,6 +1803,8 @@ var render = function() {
                       }),
                       _vm._v(
                         " Address:\n                " +
+                          _vm._s(_vm.channelData.village.name) +
+                          ",\n                " +
                           _vm._s(_vm.channelData.district.name) +
                           ",\n                " +
                           _vm._s(_vm.channelData.state.name) +
