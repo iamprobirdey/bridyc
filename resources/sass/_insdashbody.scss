@@ -116,12 +116,12 @@ main {
                  }
               }
               .institle{
-                font-size: 17px;
+                font-size: 16px;
                 margin-top: 45px;
                 transition: all ease .5s;
                 font-family: Verdana, Geneva, Tahoma, sans-serif;
                 @include screensize(iphone5above){
-                  font-size: 20px;
+                  font-size: 18px;
                   margin-top: 38px;
                  }
                  @include screensize(tablet){
@@ -140,8 +140,8 @@ main {
 
     .inssocial{
       position: relative;
-      top:-61px;
-      left:68%;
+      top:-70px;
+      left:67%;
       width:100px;
       font-size: 15px;
       img{

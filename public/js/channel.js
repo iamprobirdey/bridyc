@@ -194,7 +194,7 @@ var render = function() {
             "div",
             { key: index, staticClass: "card institutecard shadow mx-auto" },
             [
-              _c("div", { staticClass: "card-body" }, [
+              _c("div", { staticClass: "card-body w-100" }, [
                 _c("img", {
                   staticClass: "inslogo",
                   attrs: {
@@ -489,7 +489,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/js/channel.js */"./resources/js/channel.js");
+module.exports = __webpack_require__(/*! C:\laragon\www\bridyc\resources\js\channel.js */"./resources/js/channel.js");
 
 
 /***/ })

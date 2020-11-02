@@ -380,7 +380,7 @@
                   <img src="/images/translation.svg" alt="language icon" />
                   Medium: {{ channelData.language.name }}
                 </p>
-                <p class="row">
+                <p>
                   <img src="/images/grade.svg" alt="Exam board icon" /> Board:
                   <button
                     class="btn btn-info m-1"

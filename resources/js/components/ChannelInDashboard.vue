@@ -350,7 +350,6 @@
                 </p>
                 <p>
                   <img src="/images/grade.svg" alt="Exam board icon" /> Board:
-                  <span>
                     <button
                       class="btn btn-info m-1"
                       v-for="(board, index) in channelData.board"
@@ -358,7 +357,6 @@
                     >
                       {{ board.name }}
                     </button>
-                  </span>
                 </p>
 
                 <p>

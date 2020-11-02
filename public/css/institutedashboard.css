@@ -324,7 +324,7 @@ main .logo-title .logoinstitute {
 }
 
 main .logo-title .institle {
-  font-size: 17px;
+  font-size: 16px;
   margin-top: 45px;
   transition: all ease 0.5s;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -332,7 +332,7 @@ main .logo-title .institle {
 
 @media only screen and (min-width: 360px) {
   main .logo-title .institle {
-    font-size: 20px;
+    font-size: 18px;
     margin-top: 38px;
   }
 }
@@ -359,8 +359,8 @@ main .logo-title .institle {
 
 main .inssocial {
   position: relative;
-  top: -61px;
-  left: 68%;
+  top: -70px;
+  left: 67%;
   width: 100px;
   font-size: 15px;
 }

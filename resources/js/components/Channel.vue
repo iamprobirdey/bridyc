@@ -9,7 +9,7 @@
           v-for="(channel, index) in channelData"
           :key="index"
         >
-          <div class="card-body">
+          <div class="card-body w-100">
             <img
               :src="
                 channel.icon_avatar === 'institute-logo-default.jpg'
