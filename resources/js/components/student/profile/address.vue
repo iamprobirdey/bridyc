@@ -139,15 +139,15 @@
         </div>
 
         <div
-          class="form-group row mx-5 mx-2 mx-lg-5"
+          class="form-group row mx-2 mx-lg-5"
           :class="{
             'has-error': errors.has('village') || serverErrors.village_id != '',
           }"
         >
-          <label col="col-sm-3 col-form-label">VILLAGE:</label>
+          <label col="col-sm-4 col-form-label">LOCALITY/VILLAGE:</label>
           <select
             v-model="userFormData.village_id"
-            class="form-control col-sm-9 ml-auto"
+            class="form-control col-sm-8 ml-auto"
             name="village"
             v-validate="'required'"
           >

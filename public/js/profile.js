@@ -4677,7 +4677,7 @@ var render = function() {
               _c(
                 "div",
                 {
-                  staticClass: "form-group row mx-5 mx-2 mx-lg-5",
+                  staticClass: "form-group row mx-2 mx-lg-5",
                   class: {
                     "has-error":
                       _vm.errors.has("village") ||
@@ -4685,8 +4685,8 @@ var render = function() {
                   }
                 },
                 [
-                  _c("label", { attrs: { col: "col-sm-3 col-form-label" } }, [
-                    _vm._v("VILLAGE:")
+                  _c("label", { attrs: { col: "col-sm-4 col-form-label" } }, [
+                    _vm._v("LOCALITY/VILLAGE:")
                   ]),
                   _vm._v(" "),
                   _c(
@@ -4706,7 +4706,7 @@ var render = function() {
                           expression: "'required'"
                         }
                       ],
-                      staticClass: "form-control col-sm-9 ml-auto",
+                      staticClass: "form-control col-sm-8 ml-auto",
                       attrs: { name: "village" },
                       on: {
                         change: function($event) {
