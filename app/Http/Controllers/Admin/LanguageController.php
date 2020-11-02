@@ -56,8 +56,8 @@ class LanguageController extends Controller
         $this->authorize('superadmin', auth()->user());
 
         $request->validate([
-            'name' => 'required|string|unique:languages,name,' . $id,
-            'code' => 'required|string|unique:languages,name,' . $id
+            'name' => 'required|max:50|string|unique:languages,name,' . $id,
+            'code' => 'required|max:50|string|unique:languages,name,' . $id
         ]);
 
         $language = Language::findOrFail($id);

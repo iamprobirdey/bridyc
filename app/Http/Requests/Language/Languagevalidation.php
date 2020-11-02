@@ -24,8 +24,8 @@ class Languagevalidation extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required|string|unique:languages,name',
-            'code' => 'required|string|unique:languages,name'
+            'name' => 'required|max:50|string|unique:languages,name',
+            'code' => 'required|max:50|string|unique:languages,name'
         ];
     }
 }

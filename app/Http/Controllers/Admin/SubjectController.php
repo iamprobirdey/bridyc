@@ -56,8 +56,8 @@ class SubjectController extends Controller
     {
         $this->authorize('superadmin', auth()->user());
         $request->validate([
-            'subject' => 'required|string|unique:subjects,name,' . $id,
-            'code' => 'required|string|unique:subjects,code,' . $id,
+            'subject' => 'required|max:50|string|unique:subjects,name,' . $id,
+            'code' => 'required|max:50|string|unique:subjects,code,' . $id,
         ]);
         $subject = Subject::findOrFail($id);
         $subject->name = $request->input('subject');

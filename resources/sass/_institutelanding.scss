@@ -4,12 +4,15 @@ main{
     .inscover{
       width: 100%;
       height: 230px;
-      object-fit: cover;
+      object-fit: fill;
       @include screensize(tablet){
          height: 280px;
        }
       @include screensize(laptop){
          height: 310px;
+       }
+       @include screensize(desktop){
+         height: 347px;
        }
  }
  .blankdiv{

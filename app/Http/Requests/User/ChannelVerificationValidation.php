@@ -29,13 +29,13 @@ class ChannelVerificationValidation extends FormRequest
             'district_id' =>  "required|numeric|exists:districts,id",
             'village_id' =>  "required|numeric|exists:villages,id",
             'language_id' =>  "required|numeric|exists:languages,id",
-            'title' =>  "required|string",
+            'title' =>  "required|string|max:40",
             'udise' =>  "nullable|string",
             'location' =>  "required",
-            'ownership' =>  ["required", Rule::in(['private', 'government'])],
+            'ownership' =>  ["required", "max:20", Rule::in(['private', 'government'])],
             'founded' =>  "required|date",
-            'pin' =>  "required|digits:6",
-            'gender' =>  ["required", Rule::in(['only_boys', 'only_girls', 'both'])]
+            'pin' =>  "required|digits:6|max:6",
+            'gender' =>  ["required", "max:20", Rule::in(['only_boys', 'only_girls', 'both'])]
         ];
     }
 }

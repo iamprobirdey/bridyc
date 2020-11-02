@@ -24,8 +24,8 @@ class StoreHobbyValidation extends FormRequest
     public function rules()
     {
         return [
-            'hobby' => 'required|string|unique:hobbies,name',
-            'code' => 'required|string|unique:hobbies,code'
+            'hobby' => 'required|max:50|string|unique:hobbies,name',
+            'code' => 'required|max:50|string|unique:hobbies,code'
         ];
     }
 }

@@ -2,7 +2,7 @@
   <div class="mx-lg-5 mx-0">
     <main class="container-fluid px-1">
       <!--coverpic addition-->
-      <div class="mt-lg-5 pt-lg-3">
+      <div class="mt-lg-4">
         <!-- :srcset="
             channelData.cover_avatar != null
               ? domainUrl +
@@ -245,7 +245,6 @@
                 class="carousel slide inscarou col-md-7 col-lg-8"
                 data-ride="carousel"
               >
-                
                 <div class="carousel-inner">
                   <div
                     class="carousel-item"
@@ -344,7 +343,7 @@
                       <h4 class="card-title my-n1 text-capitalize">
                         {{ userData.name }}
                       </h4>
-                      <p class="card-text text-capitalize">
+                      <p class="card-text text-capitalize mt-1">
                         Principal, {{ channel.title }}
                       </p>
                     </div>
@@ -369,6 +368,7 @@
               <div class="insadditionalinfo mt-4 text-capitalize">
                 <p>
                   <img src="/images/address.svg" alt="address icon" /> Address:
+                  {{ channelData.village.name }},
                   {{ channelData.district.name }},
                   {{ channelData.state.name }}
                 </p>

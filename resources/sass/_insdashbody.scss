@@ -7,6 +7,7 @@ main {
     .inscover{
          width: 100%;
          height: 230px;
+         object-fit: cover;
          @include screensize(tablet){
             height: 280px;
           }
@@ -86,7 +87,7 @@ main {
         margin-bottom: -120px;
         left: -12px;
         @include screensize(iphone5above){
-          top: -220px;
+          top: -219px;
         }
         @include screensize(tablet){
             top: -245px;
@@ -110,8 +111,8 @@ main {
                  }
 
                  @include screensize(laptop){
-                    width: 130px;
-                    height: 130px;
+                    width: 145px;
+                    height: 145px;
                     margin-left: 120px !important;
                  }
               }

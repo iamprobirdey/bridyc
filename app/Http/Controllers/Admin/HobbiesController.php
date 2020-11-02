@@ -36,7 +36,6 @@ class HobbiesController extends Controller
     public function store(StoreHobbyValidation $request)
     {
         $this->authorize('superadmin', auth()->user());
-
         Hobby::create([
             'name' => Str::ucfirst($request->validated()['hobby']),
             'code' => strtolower($request->validated()['code'])
@@ -56,8 +55,8 @@ class HobbiesController extends Controller
     {
         $this->authorize('superadmin', auth()->user());
         $request->validate([
-            'hobby' => 'required|string|unique:hobbies,name,' . $id,
-            'code' => 'required|string|unique:hobbies,code,' . $id
+            'hobby' => 'required|max:50|string|unique:hobbies,name,' . $id,
+            'code' => 'required|max:50|string|unique:hobbies,code,' . $id
         ]);
         $hobby = Hobby::findOrFail($id);
         $hobby->name = Str::ucfirst($request->input(['hobby']));
