@@ -660,8 +660,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -1182,7 +1180,7 @@ var render = function() {
   return _c("div", { staticClass: "mx-lg-5 mt-lg-4" }, [
     _c(
       "main",
-      { staticClass: "col-lg-10 ml-lg-auto", attrs: { role: "main" } },
+      { staticClass: "col-lg-10 ml-lg-auto pt-5", attrs: { role: "main" } },
       [
         _c("img", {
           staticClass: "inscover mt-n3",
@@ -1733,16 +1731,16 @@ var render = function() {
                         )
                       ]),
                       _vm._v(" "),
-                      _c("p", [
-                        _c("img", {
-                          attrs: {
-                            src: "/images/grade.svg",
-                            alt: "Exam board icon"
-                          }
-                        }),
-                        _vm._v(" Board:\n                "),
-                        _c(
-                          "span",
+                      _c(
+                        "p",
+                        [
+                          _c("img", {
+                            attrs: {
+                              src: "/images/grade.svg",
+                              alt: "Exam board icon"
+                            }
+                          }),
+                          _vm._v(" Board:\n                  "),
                           _vm._l(_vm.channelData.board, function(board, index) {
                             return _c(
                               "button",
@@ -1755,10 +1753,10 @@ var render = function() {
                                 )
                               ]
                             )
-                          }),
-                          0
-                        )
-                      ]),
+                          })
+                        ],
+                        2
+                      ),
                       _vm._v(" "),
                       _c("p", [
                         _c("img", {

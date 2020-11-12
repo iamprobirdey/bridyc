@@ -1264,7 +1264,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "mx-lg-5 mx-0" }, [
     _c("main", { staticClass: "container-fluid px-1" }, [
-      _c("div", { staticClass: "mt-lg-5 pt-lg-3" }, [
+      _c("div", { staticClass: "mt-lg-4" }, [
         _c("img", {
           staticClass: "inscover mt-n3",
           attrs: {
@@ -1752,13 +1752,17 @@ var render = function() {
                           ]
                         ),
                         _vm._v(" "),
-                        _c("p", { staticClass: "card-text text-capitalize" }, [
-                          _vm._v(
-                            "\n                      Principal, " +
-                              _vm._s(_vm.channel.title) +
-                              "\n                    "
-                          )
-                        ])
+                        _c(
+                          "p",
+                          { staticClass: "card-text text-capitalize mt-1" },
+                          [
+                            _vm._v(
+                              "\n                      Principal, " +
+                                _vm._s(_vm.channel.title) +
+                                "\n                    "
+                            )
+                          ]
+                        )
                       ])
                     ])
                   ])
@@ -1842,7 +1846,6 @@ var render = function() {
                     _vm._v(" "),
                     _c(
                       "p",
-                      { staticClass: "row" },
                       [
                         _c("img", {
                           attrs: {

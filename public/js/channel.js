@@ -194,7 +194,7 @@ var render = function() {
             "div",
             { key: index, staticClass: "card institutecard shadow mx-auto" },
             [
-              _c("div", { staticClass: "card-body" }, [
+              _c("div", { staticClass: "card-body w-100" }, [
                 _c("img", {
                   staticClass: "inslogo",
                   attrs: {
