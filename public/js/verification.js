@@ -1114,8 +1114,8 @@ var render = function() {
                         {
                           name: "validate",
                           rawName: "v-validate",
-                          value: "required|alpha_spaces|max:40",
-                          expression: "'required|alpha_spaces|max:40'"
+                          value: "required|max:40",
+                          expression: "'required|max:40'"
                         }
                       ],
                       class: {
