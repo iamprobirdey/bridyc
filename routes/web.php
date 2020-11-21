@@ -22,6 +22,14 @@ Auth::routes(['verify' => true]);
 //Route::post('login', 'Auth\LoginController@login');
 //Route::post('logout', 'Auth\LoginController@logout')->name('logout');
 
+Route::get('blog1', function () {
+    return view('blog1');
+});
+
+Route::get('blog2', function () {
+    return view('blog2');
+});
+
 Route::group([
     'name' => 'admin.',
     'prefix' => 'admin',
