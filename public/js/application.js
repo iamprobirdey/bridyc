@@ -81,49 +81,30 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 18);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./resources/js/dashboardBlade.js":
-/*!****************************************!*\
-  !*** ./resources/js/dashboardBlade.js ***!
-  \****************************************/
+/***/ "./resources/js/application.js":
+/*!*************************************!*\
+  !*** ./resources/js/application.js ***!
+  \*************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-$(".custom-file-input").on("change", function () {
-  var fileName = $(this).val().split("\\").pop();
-  $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
-});
-$(document).ready(function () {
-  $("#carouid").carousel({
-    interval: false
-  });
-});
-$(".imgpreview").on("click", function () {
-  $("#imgmain").prop("src", this.src);
-});
-$(document).ready(function () {
-  $('[data-toggle="popover"]').popover({
-    html: true,
-    content: function content() {
-      return $("#popover-content").html();
-    }
-  });
-});
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nError: ENOENT: no such file or directory, open '/home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/js/application.js'");
 
 /***/ }),
 
-/***/ 3:
-/*!**********************************************!*\
-  !*** multi ./resources/js/dashboardBlade.js ***!
-  \**********************************************/
+/***/ 18:
+/*!*******************************************!*\
+  !*** multi ./resources/js/application.js ***!
+  \*******************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/js/dashboardBlade.js */"./resources/js/dashboardBlade.js");
+module.exports = __webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/js/application.js */"./resources/js/application.js");
 
 
 /***/ })

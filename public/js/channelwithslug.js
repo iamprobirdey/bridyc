@@ -684,6 +684,7 @@ __webpack_require__.r(__webpack_exports__);
       channelData: {},
       userData: {},
       currentuserData: {},
+      locationData: {},
       domainUrl: location.origin,
       phoneNo: "",
       socialCount: 0,
@@ -714,12 +715,17 @@ __webpack_require__.r(__webpack_exports__);
     isteacher: {
       type: Boolean,
       "default": null
+    },
+    location: {
+      type: Object,
+      "default": null
     }
   },
   created: function created() {
     this.userData = this.user;
     this.channelData = this.channel;
     this.currentuserData = this.currentuser;
+    this.locationData = this.location;
     console.log(this.currentuserData);
     this.phoneNo = this.userData.phone ? this.userData.phone : "Not provided";
     this.userID = this.userid;
@@ -1807,12 +1813,8 @@ var render = function() {
                       }),
                       _vm._v(
                         " Address:\n                " +
-                          _vm._s(_vm.channelData.village.name) +
-                          ",\n                " +
-                          _vm._s(_vm.channelData.district.name) +
-                          ",\n                " +
-                          _vm._s(_vm.channelData.state.name) +
-                          "\n              "
+                          _vm._s(_vm.locationData.location) +
+                          ",\n                "
                       )
                     ]),
                     _vm._v(" "),

@@ -658,15 +658,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
       userData: {},
       channelData: {},
       domainUrl: location.origin,
-      socialCount: 0
+      socialCount: 0,
+      locationData: {}
     };
   },
   props: {
@@ -1694,11 +1693,7 @@ var render = function() {
                         }),
                         _vm._v(
                           " Address:\n                " +
-                            _vm._s(_vm.channelData.village.name) +
-                            "\n                " +
-                            _vm._s(_vm.channelData.district.name) +
-                            ",\n                " +
-                            _vm._s(_vm.channelData.state.name) +
+                            _vm._s(_vm.userData.verification.location) +
                             "\n              "
                         )
                       ]),
@@ -1740,16 +1735,16 @@ var render = function() {
                               alt: "Exam board icon"
                             }
                           }),
-                          _vm._v(" Board:\n                  "),
+                          _vm._v(" Board:\n                "),
                           _vm._l(_vm.channelData.board, function(board, index) {
                             return _c(
                               "button",
                               { key: index, staticClass: "btn btn-info m-1" },
                               [
                                 _vm._v(
-                                  "\n                    " +
+                                  "\n                  " +
                                     _vm._s(board.name) +
-                                    "\n                  "
+                                    "\n                "
                                 )
                               ]
                             )

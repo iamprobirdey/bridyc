@@ -61148,19 +61148,19 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\laragon\www\bridyc\resources\js\app.js */"./resources/js/app.js");
-__webpack_require__(/*! C:\laragon\www\bridyc\resources\sass\app.scss */"./resources/sass/app.scss");
-__webpack_require__(/*! C:\laragon\www\bridyc\resources\sass\index.scss */"./resources/sass/index.scss");
-__webpack_require__(/*! C:\laragon\www\bridyc\resources\sass\application.scss */"./resources/sass/application.scss");
-__webpack_require__(/*! C:\laragon\www\bridyc\resources\sass\faq.scss */"./resources/sass/faq.scss");
-__webpack_require__(/*! C:\laragon\www\bridyc\resources\sass\contact.scss */"./resources/sass/contact.scss");
-__webpack_require__(/*! C:\laragon\www\bridyc\resources\sass\privacy.scss */"./resources/sass/privacy.scss");
-__webpack_require__(/*! C:\laragon\www\bridyc\resources\sass\institutedashboard.scss */"./resources/sass/institutedashboard.scss");
-__webpack_require__(/*! C:\laragon\www\bridyc\resources\sass\institutelandingpage.scss */"./resources/sass/institutelandingpage.scss");
-__webpack_require__(/*! C:\laragon\www\bridyc\resources\sass\profile.scss */"./resources/sass/profile.scss");
-__webpack_require__(/*! C:\laragon\www\bridyc\resources\sass\about.scss */"./resources/sass/about.scss");
-__webpack_require__(/*! C:\laragon\www\bridyc\resources\sass\login-register.scss */"./resources/sass/login-register.scss");
-module.exports = __webpack_require__(/*! C:\laragon\www\bridyc\resources\sass\error.scss */"./resources/sass/error.scss");
+__webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/js/app.js */"./resources/js/app.js");
+__webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/sass/app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/sass/index.scss */"./resources/sass/index.scss");
+__webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/sass/application.scss */"./resources/sass/application.scss");
+__webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/sass/faq.scss */"./resources/sass/faq.scss");
+__webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/sass/contact.scss */"./resources/sass/contact.scss");
+__webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/sass/privacy.scss */"./resources/sass/privacy.scss");
+__webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/sass/institutedashboard.scss */"./resources/sass/institutedashboard.scss");
+__webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/sass/institutelandingpage.scss */"./resources/sass/institutelandingpage.scss");
+__webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/sass/profile.scss */"./resources/sass/profile.scss");
+__webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/sass/about.scss */"./resources/sass/about.scss");
+__webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/sass/login-register.scss */"./resources/sass/login-register.scss");
+module.exports = __webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/sass/error.scss */"./resources/sass/error.scss");
 
 
 /***/ })

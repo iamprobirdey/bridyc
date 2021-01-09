@@ -368,9 +368,9 @@
               <div class="insadditionalinfo mt-4 text-capitalize">
                 <p>
                   <img src="/images/address.svg" alt="address icon" /> Address:
-                  {{ channelData.village.name }},
-                  {{ channelData.district.name }},
-                  {{ channelData.state.name }}
+                  {{ locationData.location }},
+                  <!-- {{ channelData.district.name }},
+                  {{ channelData.state.name }} -->
                 </p>
                 <p>
                   <img src="/images/mailbox.svg" alt="pin code icon" /> Pin
@@ -588,6 +588,7 @@ export default {
       channelData: {},
       userData: {},
       currentuserData: {},
+      locationData: {},
       domainUrl: location.origin,
       phoneNo: "",
       socialCount: 0,
@@ -619,11 +620,16 @@ export default {
       type: Boolean,
       default: null,
     },
+    location: {
+      type: Object,
+      default: null,
+    },
   },
   created() {
     this.userData = this.user;
     this.channelData = this.channel;
     this.currentuserData = this.currentuser;
+    this.locationData = this.location;
     console.log(this.currentuserData);
     this.phoneNo = this.userData.phone ? this.userData.phone : "Not provided";
     this.userID = this.userid;
