@@ -546,22 +546,19 @@ __webpack_require__.r(__webpack_exports__);
       }
 
       return false;
-    },
-    villageStatusComputed: function villageStatusComputed() {
-      var _this2 = this;
+    } // villageStatusComputed: function () {
+    //   if (this.formData.state_id != "" && this.formData.district_id != "") {
+    //     this.villageData = [];
+    //     this.districtData[0].filter((item) => {
+    //       if (item.id === this.formData.district_id) {
+    //         this.villageData.push(item.village);
+    //       }
+    //     });
+    //     return true;
+    //   }
+    //   return false;
+    // },
 
-      if (this.formData.state_id != "" && this.formData.district_id != "") {
-        this.villageData = [];
-        this.districtData[0].filter(function (item) {
-          if (item.id === _this2.formData.district_id) {
-            _this2.villageData.push(item.village);
-          }
-        });
-        return true;
-      }
-
-      return false;
-    }
   },
   created: function created() {
     this.placesData = this.places;
@@ -576,16 +573,16 @@ __webpack_require__.r(__webpack_exports__);
       this.todaysDate = this.date;
     },
     validateForm: function validateForm() {
-      var _this3 = this;
+      var _this2 = this;
 
       this.wait = true;
       this.$validator.validate().then(function (result) {
         if (result) {
-          axios.post("/api/verification", _this3.formData).then(function (response) {
+          axios.post("/api/verification", _this2.formData).then(function (response) {
             if (response.status === 200) {
               if (response.data.message === "Successful") {
-                _this3.verificationStatus = true;
-                _this3.userData = 1;
+                _this2.verificationStatus = true;
+                _this2.userData = 1;
                 Vue.toasted.success("Data is successfully submited", {
                   position: "top-center",
                   duration: 5000
@@ -593,7 +590,7 @@ __webpack_require__.r(__webpack_exports__);
               }
 
               if (response.data.message === "failed") {
-                _this3.wait = false;
+                _this2.wait = false;
                 Vue.toasted.error("Something went wrong", {
                   position: "top-center",
                   duration: 5000
@@ -601,58 +598,58 @@ __webpack_require__.r(__webpack_exports__);
               }
             }
           })["catch"](function (errors) {
-            _this3.wait = false;
+            _this2.wait = false;
             Vue.toasted.error("Something went wrong", {
               position: "top-center",
               duration: 5000
             });
 
             if (errors.response.data.errors.state_id) {
-              _this3.serverErrors.state_id = errors.response.data.errors.state_id[0];
+              _this2.serverErrors.state_id = errors.response.data.errors.state_id[0];
             }
 
             if (errors.response.data.errors.district_id) {
-              _this3.serverErrors.district_id = errors.response.data.errors.district_id[0];
+              _this2.serverErrors.district_id = errors.response.data.errors.district_id[0];
             }
 
             if (errors.response.data.errors.village) {
-              _this3.serverErrors.village = errors.response.data.errors.village[0];
+              _this2.serverErrors.village = errors.response.data.errors.village[0];
             }
 
             if (errors.response.data.errors.language_id) {
-              _this3.serverErrors.language_id = errors.response.data.errors.language_id[0];
+              _this2.serverErrors.language_id = errors.response.data.errors.language_id[0];
             }
 
             if (errors.response.data.errors.title) {
-              _this3.serverErrors.title = errors.response.data.errors.title[0];
+              _this2.serverErrors.title = errors.response.data.errors.title[0];
             }
 
             if (errors.response.data.errors.udies) {
-              _this3.serverErrors.udies = errors.response.data.errors.udies[0];
+              _this2.serverErrors.udies = errors.response.data.errors.udies[0];
             }
 
             if (errors.response.data.errors.location) {
-              _this3.serverErrors.location = errors.response.data.errors.location[0];
+              _this2.serverErrors.location = errors.response.data.errors.location[0];
             }
 
             if (errors.response.data.errors.ownership) {
-              _this3.serverErrors.ownership = errors.response.data.errors.ownership[0];
+              _this2.serverErrors.ownership = errors.response.data.errors.ownership[0];
             }
 
             if (errors.response.data.errors.founded) {
-              _this3.serverErrors.founded = errors.response.data.errors.founded[0];
+              _this2.serverErrors.founded = errors.response.data.errors.founded[0];
             }
 
             if (errors.response.data.errors.pin) {
-              _this3.serverErrors.pin = errors.response.data.errors.pin[0];
+              _this2.serverErrors.pin = errors.response.data.errors.pin[0];
             }
 
             if (errors.response.data.errors.gender) {
-              _this3.serverErrors.gender = errors.response.data.errors.gender[0];
+              _this2.serverErrors.gender = errors.response.data.errors.gender[0];
             }
           });
         } else {
-          _this3.wait = false;
+          _this2.wait = false;
         }
       });
     }
@@ -964,131 +961,6 @@ var render = function() {
                     )
                   : _vm._e(),
                 _vm._v(" "),
-                _vm.villageStatusComputed
-                  ? _c(
-                      "div",
-                      {
-                        staticClass: "form-group",
-                        class: {
-                          "has-error":
-                            _vm.errors.has("village") ||
-                            _vm.serverErrors.village_id != ""
-                        }
-                      },
-                      [
-                        _c("label", [_vm._v("Village")]),
-                        _vm._v(" "),
-                        _c(
-                          "select",
-                          {
-                            directives: [
-                              {
-                                name: "model",
-                                rawName: "v-model",
-                                value: _vm.formData.village_id,
-                                expression: "formData.village_id"
-                              },
-                              {
-                                name: "validate",
-                                rawName: "v-validate",
-                                value: "required",
-                                expression: "'required'"
-                              }
-                            ],
-                            staticClass: "form-control",
-                            attrs: { name: "village" },
-                            on: {
-                              change: function($event) {
-                                var $$selectedVal = Array.prototype.filter
-                                  .call($event.target.options, function(o) {
-                                    return o.selected
-                                  })
-                                  .map(function(o) {
-                                    var val = "_value" in o ? o._value : o.value
-                                    return val
-                                  })
-                                _vm.$set(
-                                  _vm.formData,
-                                  "village_id",
-                                  $event.target.multiple
-                                    ? $$selectedVal
-                                    : $$selectedVal[0]
-                                )
-                              }
-                            }
-                          },
-                          [
-                            _c("option", { attrs: { value: "" } }, [
-                              _vm._v("Select village")
-                            ]),
-                            _vm._v(" "),
-                            _vm._l(_vm.villageData[0], function(village) {
-                              return _c(
-                                "option",
-                                {
-                                  key: village.id,
-                                  domProps: { value: village.id }
-                                },
-                                [
-                                  _vm._v(
-                                    "\n              " +
-                                      _vm._s(village.name) +
-                                      "\n            "
-                                  )
-                                ]
-                              )
-                            })
-                          ],
-                          2
-                        ),
-                        _vm._v(" "),
-                        _c("i", {
-                          directives: [
-                            {
-                              name: "show",
-                              rawName: "v-show",
-                              value: _vm.errors.has("village"),
-                              expression: "errors.has('village')"
-                            }
-                          ],
-                          staticClass: "is-invalid"
-                        }),
-                        _vm._v(" "),
-                        _c(
-                          "span",
-                          {
-                            directives: [
-                              {
-                                name: "show",
-                                rawName: "v-show",
-                                value: _vm.errors.has("village"),
-                                expression: "errors.has('village')"
-                              }
-                            ],
-                            staticClass: "text-danger"
-                          },
-                          [_vm._v(_vm._s(_vm.errors.first("village")))]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "span",
-                          {
-                            directives: [
-                              {
-                                name: "show",
-                                rawName: "v-show",
-                                value: _vm.serverErrors.village_id != "",
-                                expression: "serverErrors.village_id != ''"
-                              }
-                            ],
-                            staticClass: "text-danger"
-                          },
-                          [_vm._v(_vm._s(_vm.serverErrors.village_id))]
-                        )
-                      ]
-                    )
-                  : _vm._e(),
-                _vm._v(" "),
                 _c(
                   "div",
                   {
@@ -1127,7 +999,7 @@ var render = function() {
                         "data-vv-delay": "20",
                         name: "title",
                         type: "text",
-                        placeholder: "Insert your institute name"
+                        placeholder: "Enter your institute name"
                       },
                       domProps: { value: _vm.formData.title },
                       on: {
@@ -1221,7 +1093,7 @@ var render = function() {
                         "data-vv-delay": "20",
                         name: "udise",
                         type: "text",
-                        placeholder: "Enter your institute udise code Optinal"
+                        placeholder: "Enter your institute udise code Optional"
                       },
                       domProps: { value: _vm.formData.udise },
                       on: {
@@ -1322,7 +1194,7 @@ var render = function() {
                         "data-vv-delay": "20",
                         name: "location",
                         type: "text",
-                        placeholder: "Insert your institute location"
+                        placeholder: "Enter your School/College Address"
                       },
                       domProps: { value: _vm.formData.location },
                       on: {
