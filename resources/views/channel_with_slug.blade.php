@@ -45,5 +45,6 @@
 
 <script src="{{url('js/app.js')}}"></script>
 <script src="{{url('js/channelwithslug.js')}}"></script>
+<script src="{{url('/dist/vue-social-sharing.js')}}"></script>
 
 @endsection

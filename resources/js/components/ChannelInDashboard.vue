@@ -89,6 +89,9 @@
           <h1 class="ml-1 ml-sm-4 institle text-capitalize">
             {{ channelData.title }}
           </h1>
+          <twitter-button class="share-button" btnText />
+          <facebook-button class="share-button" btnText />
+          <whatsapp-button class="share-button" btnText />
         </div>
       </div>
 
@@ -562,6 +565,9 @@
 </template>
 
 <script>
+import TwitterButton from "vue-share-buttons/src/components/TwitterButton";
+import FacebookButton from "vue-share-buttons/src/components/FacebookButton";
+import WhatsappButton from "vue-share-buttons/src/components/WhatsAppButton";
 export default {
   data() {
     return {
@@ -571,6 +577,11 @@ export default {
       socialCount: 0,
       locationData: {},
     };
+  },
+  components: {
+    TwitterButton,
+    FacebookButton,
+    WhatsappButton,
   },
   props: {
     user: {

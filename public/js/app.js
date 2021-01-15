@@ -60912,15 +60912,18 @@ var firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
-var messaging = firebase.messaging();
-messaging.requestPermission().then(function () {
-  console.log('Permission Granted');
-  return messaging.getToken();
-}).then(function (token) {
-  console.log(token);
-})["catch"](function (err) {
-  console.log(err);
-});
+var messaging = firebase.messaging(); // messaging.requestPermission()
+//     .then(function () {
+//         console.log('Permission Granted');
+//         return messaging.getToken();
+//     })
+//     .then(function (token) {
+//         console.log(token);
+//     })
+//     .catch(function (err) {
+//         console.log(err);
+//     });
+
 messaging.onMessage(function (payload) {
   console.log('On Message: ', payload);
 }); // messaging.getToken({ vapidKey: 'AIzaSyD1QOe8gYXL9bLBkxjfK9yhBOMnF80W7sg' }).then((currentToken) => {

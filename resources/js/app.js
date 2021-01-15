@@ -23,6 +23,7 @@ Vue.use(Toasted);
 Vue.use(VeeValidate);
 //Vue.use(Croppa);
 
+
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -66,17 +67,17 @@ firebase.analytics();
 
 const messaging = firebase.messaging();
 
-messaging.requestPermission()
-    .then(function () {
-        console.log('Permission Granted');
-        return messaging.getToken();
-    })
-    .then(function (token) {
-        console.log(token);
-    })
-    .catch(function (err) {
-        console.log(err);
-    });
+// messaging.requestPermission()
+//     .then(function () {
+//         console.log('Permission Granted');
+//         return messaging.getToken();
+//     })
+//     .then(function (token) {
+//         console.log(token);
+//     })
+//     .catch(function (err) {
+//         console.log(err);
+//     });
 
 messaging.onMessage(function (payload) {
     console.log('On Message: ', payload);
