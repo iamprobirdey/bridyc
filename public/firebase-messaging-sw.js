@@ -81,49 +81,50 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 18);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./resources/js/dashboardBlade.js":
-/*!****************************************!*\
-  !*** ./resources/js/dashboardBlade.js ***!
-  \****************************************/
+/***/ "./resources/js/firebase-messaging-sw.js":
+/*!***********************************************!*\
+  !*** ./resources/js/firebase-messaging-sw.js ***!
+  \***********************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-$(".custom-file-input").on("change", function () {
-  var fileName = $(this).val().split("\\").pop();
-  $(this).siblings(".custom-file-label").addClass("selected").html(fileName);
-});
-$(document).ready(function () {
-  $("#carouid").carousel({
-    interval: false
-  });
-});
-$(".imgpreview").on("click", function () {
-  $("#imgmain").prop("src", this.src);
-});
-$(document).ready(function () {
-  $('[data-toggle="popover"]').popover({
-    html: true,
-    content: function content() {
-      return $("#popover-content").html();
-    }
-  });
+importScripts('https://www.gstatic.com/firebasejs/8.2.2/firebase-app.js');
+importScripts('https://www.gstatic.com/firebasejs/8.2.2/firebase-messaging.js');
+var firebaseConfig = {
+  apiKey: "AIzaSyD1QOe8gYXL9bLBkxjfK9yhBOMnF80W7sg",
+  authDomain: "bridyc-89d72.firebaseapp.com",
+  projectId: "bridyc-89d72",
+  storageBucket: "bridyc-89d72.appspot.com",
+  messagingSenderId: "774509716299",
+  appId: "1:774509716299:web:4a4f7f5ac5f1185287bece",
+  measurementId: "G-QF5FY5Y9NT"
+}; // Initialize Firebase
+
+firebase.initializeApp(firebaseConfig);
+var messaging = firebase.messaging();
+messaging.setBackgroundMessageHandler(function (payload) {
+  var title = 'Hello World';
+  var options = {
+    body: payload.data.status
+  };
+  return self.registration.showNotification(title, options);
 });
 
 /***/ }),
 
-/***/ 3:
-/*!**********************************************!*\
-  !*** multi ./resources/js/dashboardBlade.js ***!
-  \**********************************************/
+/***/ 18:
+/*!*****************************************************!*\
+  !*** multi ./resources/js/firebase-messaging-sw.js ***!
+  \*****************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/js/dashboardBlade.js */"./resources/js/dashboardBlade.js");
+module.exports = __webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/js/firebase-messaging-sw.js */"./resources/js/firebase-messaging-sw.js");
 
 
 /***/ })

@@ -45,10 +45,12 @@ class TeachersController extends Controller
             if (current_user()->channel->id === $userChannelRequest->channel_id) {
                 $userChannelRequest->request = 'accepted';
                 $userChannelRequest->save();
-                ChannelTeacher::create([
-                    'user_id' => $userChannelRequest->user_id,
-                    'channel_id' => $userChannelRequest->channel_id
-                ]);
+                if (!ChannelTeacher::where('user_id', $userChannelRequest->user_id)->where('channel_id', $userChannelRequest->channel_id)->exists()) {
+                    ChannelTeacher::create([
+                        'user_id' => $userChannelRequest->user_id,
+                        'channel_id' => $userChannelRequest->channel_id
+                    ]);
+                }
                 DB::commit();
                 return response()->json([
                     'message' => true

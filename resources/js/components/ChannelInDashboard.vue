@@ -89,6 +89,9 @@
           <h1 class="ml-1 ml-sm-4 institle text-capitalize">
             {{ channelData.title }}
           </h1>
+          <twitter-button class="share-button" btnText />
+          <facebook-button class="share-button" btnText />
+          <whatsapp-button class="share-button" btnText />
         </div>
       </div>
 
@@ -334,9 +337,7 @@
               <div class="insadditionalinfo mt-4 text-capitalize">
                 <p>
                   <img src="/images/address.svg" alt="address icon" /> Address:
-                  {{ channelData.village.name }}
-                  {{ channelData.district.name }},
-                  {{ channelData.state.name }}
+                  {{ userData.verification.location }}
                 </p>
 
                 <p>
@@ -350,13 +351,13 @@
                 </p>
                 <p>
                   <img src="/images/grade.svg" alt="Exam board icon" /> Board:
-                    <button
-                      class="btn btn-info m-1"
-                      v-for="(board, index) in channelData.board"
-                      :key="index"
-                    >
-                      {{ board.name }}
-                    </button>
+                  <button
+                    class="btn btn-info m-1"
+                    v-for="(board, index) in channelData.board"
+                    :key="index"
+                  >
+                    {{ board.name }}
+                  </button>
                 </p>
 
                 <p>
@@ -564,6 +565,9 @@
 </template>
 
 <script>
+import TwitterButton from "vue-share-buttons/src/components/TwitterButton";
+import FacebookButton from "vue-share-buttons/src/components/FacebookButton";
+import WhatsappButton from "vue-share-buttons/src/components/WhatsAppButton";
 export default {
   data() {
     return {
@@ -571,7 +575,13 @@ export default {
       channelData: {},
       domainUrl: location.origin,
       socialCount: 0,
+      locationData: {},
     };
+  },
+  components: {
+    TwitterButton,
+    FacebookButton,
+    WhatsappButton,
   },
   props: {
     user: {
@@ -587,6 +597,7 @@ export default {
     this.userData = this.user;
     this.channelData = this.channel;
     this.phoneNo = this.userData.phone ? this.userData.phone : "Not provided";
+
     if (
       this.channelData.extra_attributes.social.facebook === null &&
       this.channelData.extra_attributes.social.linkedin === null &&

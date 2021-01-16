@@ -96,6 +96,9 @@
           <h1 class="ml-1 ml-sm-3 institle text-capitalize">
             {{ channelData.title }}
           </h1>
+          <twitter-button class="share-button" btnText />
+          <facebook-button class="share-button" btnText />
+          <whatsapp-button class="share-button" btnText />
         </div>
       </div>
 
@@ -368,9 +371,9 @@
               <div class="insadditionalinfo mt-4 text-capitalize">
                 <p>
                   <img src="/images/address.svg" alt="address icon" /> Address:
-                  {{ channelData.village.name }},
-                  {{ channelData.district.name }},
-                  {{ channelData.state.name }}
+                  {{ locationData.location }},
+                  <!-- {{ channelData.district.name }},
+                  {{ channelData.state.name }} -->
                 </p>
                 <p>
                   <img src="/images/mailbox.svg" alt="pin code icon" /> Pin
@@ -582,12 +585,16 @@
 </template>
 
 <script>
+import TwitterButton from "vue-share-buttons/src/components/TwitterButton";
+import FacebookButton from "vue-share-buttons/src/components/FacebookButton";
+import WhatsappButton from "vue-share-buttons/src/components/WhatsAppButton";
 export default {
   data() {
     return {
       channelData: {},
       userData: {},
       currentuserData: {},
+      locationData: {},
       domainUrl: location.origin,
       phoneNo: "",
       socialCount: 0,
@@ -597,6 +604,11 @@ export default {
       channelRequestDecider: "",
       channelFacker: false,
     };
+  },
+  components: {
+    TwitterButton,
+    FacebookButton,
+    WhatsappButton,
   },
   props: {
     user: {
@@ -619,11 +631,16 @@ export default {
       type: Boolean,
       default: null,
     },
+    location: {
+      type: Object,
+      default: null,
+    },
   },
   created() {
     this.userData = this.user;
     this.channelData = this.channel;
     this.currentuserData = this.currentuser;
+    this.locationData = this.location;
     console.log(this.currentuserData);
     this.phoneNo = this.userData.phone ? this.userData.phone : "Not provided";
     this.userID = this.userid;

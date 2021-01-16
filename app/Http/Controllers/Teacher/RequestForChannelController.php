@@ -18,13 +18,14 @@ class RequestForChannelController extends Controller
     public function requestForChannel(User $user, $channelId)
     {
         $this->authorize('updatingteahcer', $user);
-
-        UserChannelRequest::create([
-            'user_id' => $user->id,
-            'channel_id' => $channelId
-        ]);
-        return response()->json([
-            'message' => true
-        ]);
+        if (!UserChannelRequest::where('user_id', $user->id)->where('channel_id', $channelId)->exists()) {
+            UserChannelRequest::create([
+                'user_id' => $user->id,
+                'channel_id' => $channelId
+            ]);
+            return response()->json([
+                'message' => true
+            ]);
+        }
     }
 }

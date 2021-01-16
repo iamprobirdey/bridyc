@@ -27,7 +27,7 @@ class ChannelVerificationValidation extends FormRequest
         return [
             'state_id' =>  "required|numeric|exists:states,id",
             'district_id' =>  "required|numeric|exists:districts,id",
-            'village_id' =>  "required|numeric|exists:villages,id",
+            //'village_id' =>  "required|numeric|exists:villages,id",
             'language_id' =>  "required|numeric|exists:languages,id",
             'title' =>  "required|string|max:40",
             'udise' =>  "nullable|string",

@@ -18,22 +18,22 @@ class CheckVerification
      */
     public function handle($request, Closure $next)
     {
-        if(
-        current_user()->is_verified() &&
-        (
-        collect([
+        if (
+            current_user()->is_verified() &&
+            (collect([
                 'user/dashboard',
                 'user/dashboard/channel',
                 'user/dashboard/edit'
-                ])
+            ])
                 ->contains($request->path()))
-        ){
+        ) {
             return redirect('user/dashboard/verification');
         }
-        if(!current_user()->is_verified()
+        if (
+            !current_user()->is_verified()
             && $request->path() === 'user/dashboard/verification'
-        ){
-            return redirect('user/dashboard/'.current_user()->channel->title);
+        ) {
+            return redirect('user/dashboard/' . current_user()->channel->title);
         }
         return $next($request);
     }
