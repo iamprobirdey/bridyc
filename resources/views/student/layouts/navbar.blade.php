@@ -23,6 +23,9 @@
                     <a class="nav-link" href="{{url('/faq')}}"> FAQ</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="{{url('/blog1')}}"> Blog</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="{{url('/contact')}}"> Contact Us</a>
                 </li>
             </ul>

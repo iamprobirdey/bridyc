@@ -1,0 +1,309 @@
+.imgban {
+  -webkit-transition: all ease .5sec;
+  transition: all ease .5sec;
+  max-width: 100%;
+  height: 400px;
+  margin-bottom: 80px;
+  background-position: 70% 30%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  top: 40px;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.1))), url("/images/home-banner-m.jpg");
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1)), url("/images/home-banner-m.jpg");
+}
+
+@media only screen and (min-width: 481px) {
+  .imgban {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.1))), url("/images/home-banner-t.jpg");
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1)), url("/images/home-banner-t.jpg");
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .imgban {
+    height: 660px;
+    margin-top: 25px;
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.1))), url("/images/home-banner-l.jpg");
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1)), url("/images/home-banner-l.jpg");
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  .imgban {
+    background-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 0.8)), to(rgba(0, 0, 0, 0.1))), url("/images/home-banner-d.jpg");
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.1)), url("/images/home-banner-d.jpg");
+    margin-bottom: 160px;
+  }
+}
+
+.imgban .txtbanner {
+  width: 100%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-align: center;
+  position: absolute;
+  top: 60%;
+  left: 49%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: white;
+}
+
+.imgban .txtbanner h1 {
+  font-size: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+  .imgban .txtbanner h1 {
+    font-size: 34px;
+  }
+}
+
+.imgban .txtbanner p {
+  font-size: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+  .imgban .txtbanner p {
+    font-size: 30px;
+  }
+}
+
+.imgban .txtbanner .sitevalue {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  margin-bottom: 0;
+}
+
+.imgban .txtbanner a {
+  background-color: #011737;
+  color: white;
+  text-decoration: none;
+}
+
+.imgban .txtbanner a:hover {
+  background-color: #001f4d;
+}
+
+@media only screen and (min-width: 768px) {
+  .imgban .txtbanner {
+    text-align: left;
+    width: 50%;
+    left: 30%;
+  }
+}
+
+.focusplace {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 50px;
+  width: 100%;
+  height: auto;
+}
+
+.focusplace p {
+  font-size: 15px;
+  line-height: 1.1em;
+  margin-bottom: .7em;
+}
+
+.focusplace .imgguest {
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+
+.focusplace .videosection {
+  padding-top: 20px;
+  text-align: center;
+}
+
+.focusplace .videosection p {
+  color: #011737;
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.focusplace .videosection .guest {
+  background-color: #011737;
+  color: white;
+  width: 90%;
+  padding: 6px;
+}
+
+@media only screen and (min-width: 481px) {
+  .focusplace .videosection .guest {
+    width: 70%;
+  }
+}
+
+.focusplace .videosection .guest h2 {
+  color: white;
+  margin-bottom: 3px;
+}
+
+.focusplace .videosection h2 {
+  color: #011737;
+  font-size: 25px;
+}
+
+.focusplace .videosection .playbtn {
+  background-color: #011737;
+  color: white;
+}
+
+.focusplace .videosection .playbtn:hover {
+  background-color: white;
+  color: #011737;
+  border: 1px solid #011737;
+}
+
+.focusplace .videosection .playbtn img {
+  width: 20px;
+  height: 20px;
+}
+
+.modal .poddialog {
+  max-width: 800px;
+  margin: 30px auto;
+}
+
+.modal .poddialog .podbody {
+  position: relative;
+  padding: 0px;
+}
+
+.modal .poddialog .podbody .closevideo {
+  position: absolute;
+  right: -30px;
+  top: 0;
+  font-size: 2rem;
+  color: #fff;
+  opacity: 1;
+}
+
+.institute {
+  text-align: center;
+  background-color: #f9fafa;
+}
+
+@media only screen and (min-width: 768px) {
+  .institute {
+    margin-top: 30px;
+  }
+}
+
+.institute .institutecard {
+  width: 165px;
+  height: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 55px;
+  -webkit-transition: all ease .5s;
+  transition: all ease .5s;
+  border: 1px;
+}
+
+.institute .institutecard:hover {
+  -webkit-box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
+          box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19) !important;
+}
+
+@media only screen and (min-width: 768px) {
+  .institute .institutecard {
+    width: 260px;
+    height: auto;
+  }
+}
+
+.institute .institutecard .card-body {
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 10px;
+}
+
+.institute .institutecard .card-body .inslogo {
+  width: 60%;
+  height: auto;
+  border: 2px solid gainsboro;
+  position: relative;
+  top: -50px;
+}
+
+@media only screen and (min-width: 481px) {
+  .institute .institutecard .card-body .inslogo {
+    width: 45%;
+    height: auto;
+  }
+}
+
+.institute .institutecard .card-body h4 {
+  font-size: 16px;
+  color: #003585;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+@media only screen and (min-width: 481px) {
+  .institute .institutecard .card-body h4 {
+    font-size: 20px;
+  }
+}
+
+.institute .institutecard .card-body .district-name {
+  font-size: 13px;
+  margin-bottom: 2px;
+}
+
+@media only screen and (min-width: 481px) {
+  .institute .institutecard .card-body .district-name {
+    font-weight: 500;
+  }
+}
+
+.institute .institutecard .destext {
+  display: block;
+  height: 100px;
+  margin-bottom: 20px;
+  color: grey;
+  text-overflow: ellipsis;
+}
+
+.institute .btnvisit {
+  font-size: small;
+  margin-bottom: 15px;
+  font-weight: 700;
+  background-image: linear-gradient(45deg, #990066, #003585);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+
+.aboutdesc {
+  background-color: #f5f9ff;
+  padding-left: 7px;
+  padding-right: 7px;
+  padding-bottom: 1PX;
+  position: relative;
+  top: 0;
+  -webkit-transition: top ease 0.3s;
+  transition: top ease 0.3s;
+  margin-top: 0;
+}
+
+@media only screen and (min-width: 481px) {
+  .aboutdesc {
+    width: 90% !important;
+  }
+}
+
+.aboutdesc:hover {
+  top: -10px;
+}
+
+h4 {
+  text-align: left;
+  padding-top: 10PX;
+  color: #003585;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
