@@ -61092,17 +61092,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/sass/blogs.scss":
-/*!***********************************!*\
-  !*** ./resources/sass/blogs.scss ***!
-  \***********************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-throw new Error("Module build failed (from ./node_modules/css-loader/index.js):\nModuleBuildError: Module build failed (from ./node_modules/sass-loader/dist/cjs.js):\nError: ENOENT: no such file or directory, open 'C:\\laragon\\www\\bridyc\\resources\\sass\\blogs.scss'\n    at C:\\laragon\\www\\bridyc\\node_modules\\webpack\\lib\\NormalModule.js:316:20\n    at C:\\laragon\\www\\bridyc\\node_modules\\loader-runner\\lib\\LoaderRunner.js:367:11\n    at C:\\laragon\\www\\bridyc\\node_modules\\loader-runner\\lib\\LoaderRunner.js:203:19\n    at C:\\laragon\\www\\bridyc\\node_modules\\enhanced-resolve\\lib\\CachedInputFileSystem.js:85:15\n    at processTicksAndRejections (internal/process/task_queues.js:72:11)");
-
-/***/ }),
-
 /***/ "./resources/sass/contact.scss":
 /*!*************************************!*\
   !*** ./resources/sass/contact.scss ***!
@@ -61203,13 +61192,12 @@ throw new Error("Module build failed (from ./node_modules/css-loader/index.js):\
 /***/ }),
 
 /***/ 0:
-/*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/index.scss ./resources/sass/application.scss ./resources/sass/faq.scss ./resources/sass/contact.scss ./resources/sass/privacy.scss ./resources/sass/institutedashboard.scss ./resources/sass/institutelandingpage.scss ./resources/sass/profile.scss ./resources/sass/about.scss ./resources/sass/login-register.scss ./resources/sass/error.scss ./resources/sass/blogs.scss ***!
-  \************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/index.scss ./resources/sass/application.scss ./resources/sass/faq.scss ./resources/sass/contact.scss ./resources/sass/privacy.scss ./resources/sass/institutedashboard.scss ./resources/sass/institutelandingpage.scss ./resources/sass/profile.scss ./resources/sass/about.scss ./resources/sass/login-register.scss ./resources/sass/error.scss ***!
+  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-<<<<<<< HEAD
 __webpack_require__(/*! C:\laragon\www\bridyc\resources\js\app.js */"./resources/js/app.js");
 __webpack_require__(/*! C:\laragon\www\bridyc\resources\sass\app.scss */"./resources/sass/app.scss");
 __webpack_require__(/*! C:\laragon\www\bridyc\resources\sass\index.scss */"./resources/sass/index.scss");
@@ -61222,23 +61210,7 @@ __webpack_require__(/*! C:\laragon\www\bridyc\resources\sass\institutelandingpag
 __webpack_require__(/*! C:\laragon\www\bridyc\resources\sass\profile.scss */"./resources/sass/profile.scss");
 __webpack_require__(/*! C:\laragon\www\bridyc\resources\sass\about.scss */"./resources/sass/about.scss");
 __webpack_require__(/*! C:\laragon\www\bridyc\resources\sass\login-register.scss */"./resources/sass/login-register.scss");
-__webpack_require__(/*! C:\laragon\www\bridyc\resources\sass\error.scss */"./resources/sass/error.scss");
-module.exports = __webpack_require__(/*! C:\laragon\www\bridyc\resources\sass\blogs.scss */"./resources/sass/blogs.scss");
-=======
-__webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/js/app.js */"./resources/js/app.js");
-__webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/sass/app.scss */"./resources/sass/app.scss");
-__webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/sass/index.scss */"./resources/sass/index.scss");
-__webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/sass/application.scss */"./resources/sass/application.scss");
-__webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/sass/faq.scss */"./resources/sass/faq.scss");
-__webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/sass/contact.scss */"./resources/sass/contact.scss");
-__webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/sass/privacy.scss */"./resources/sass/privacy.scss");
-__webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/sass/institutedashboard.scss */"./resources/sass/institutedashboard.scss");
-__webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/sass/institutelandingpage.scss */"./resources/sass/institutelandingpage.scss");
-__webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/sass/profile.scss */"./resources/sass/profile.scss");
-__webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/sass/about.scss */"./resources/sass/about.scss");
-__webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/sass/login-register.scss */"./resources/sass/login-register.scss");
-module.exports = __webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/sass/error.scss */"./resources/sass/error.scss");
->>>>>>> 1eb194799b6d686dc52e969dde6785e284ee897e
+module.exports = __webpack_require__(/*! C:\laragon\www\bridyc\resources\sass\error.scss */"./resources/sass/error.scss");
 
 
 /***/ })

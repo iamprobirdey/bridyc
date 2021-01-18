@@ -96,9 +96,7 @@
           <h1 class="ml-1 ml-sm-3 institle text-capitalize">
             {{ channelData.title }}
           </h1>
-          <twitter-button class="share-button" btnText />
-          <facebook-button class="share-button" btnText />
-          <whatsapp-button class="share-button" btnText />
+
         </div>
       </div>
 
@@ -185,6 +183,16 @@
       <br />
       <br />
       <br />
+
+          <div class="dropdown share-button">
+                <span><img class="share-img" src="/images/share.svg" alt="share button"></span>
+                <div class="dropdown-content">
+                       <twitter-button class="share-button dropdown-item" btnText />
+                       <facebook-button class="share-button dropdown-item" btnText />
+                       <whatsapp-button class="share-button dropdown-item" btnText />
+                </div>
+          </div>
+
 
       <div class="inspills mx-lg-5">
         <!-- Nav pills -->
@@ -716,5 +724,20 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  z-index:1;
+  width: 45px;
+  }
+
+.dropdown:hover .dropdown-content {
+  display: block;
+ }
 </style>
