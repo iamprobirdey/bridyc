@@ -42,7 +42,8 @@
 
     </div-->
 
-    <croppie></croppie>
+    <croppertest></croppertest>
+    <!-- <croppie></croppie> -->
   </div>
 </template>
 
@@ -58,6 +59,8 @@ import social from "./channel/social.vue";
 import college from "./channel/college.vue";
 import phone from "./channel/phone.vue";
 import croppie from "./channel/croppie.vue";
+import croppertest from "./channel/croppertest.vue";
+
 export default {
   data() {
     return {
@@ -96,6 +99,7 @@ export default {
     college,
     phone,
     croppie,
+    croppertest,
   },
 };
 </script>
