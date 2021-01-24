@@ -986,8 +986,8 @@ var render = function() {
                         {
                           name: "validate",
                           rawName: "v-validate",
-                          value: "required|max:40",
-                          expression: "'required|max:40'"
+                          value: "required|max:100",
+                          expression: "'required|max:100'"
                         }
                       ],
                       class: {
@@ -2062,7 +2062,7 @@ if (typeof element != "undefined" && element != null) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\laragon\www\bridyc\resources\js\verification.js */"./resources/js/verification.js");
+module.exports = __webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/js/verification.js */"./resources/js/verification.js");
 
 
 /***/ })

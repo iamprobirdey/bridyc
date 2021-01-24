@@ -128,7 +128,7 @@
               id="title"
               v-on:focus="serverErrors.title = ''"
               v-model="formData.title"
-              v-validate="'required|max:40'"
+              v-validate="'required|max:100'"
               data-vv-delay="20"
               name="title"
               type="text"

@@ -6,13 +6,6 @@
 {{$channeldata[0]->state->name}}
 @endsection
 
-@section('desc')
-@if($channeldata[0]->description != null)
-{{$channeldata[0]->description}} {{$channeldata[0]->language->name}} {{$channeldata[0]->district->name}}
-{{$channeldata[0]->village->name}}
-{{$channeldata[0]->state->name}}
-@endif
-@endsection
 
 @section('s_url', (isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]")
 @section('s_type', "Insitute .{{$channeldata[0]->village->name}} .' '.{{$channeldata[0]->state->name}}")
@@ -27,12 +20,14 @@
 <link rel="stylesheet" type="text/css" href="{{url('css/app.css')}}">
 <link rel="stylesheet" type="text/css" href="{{url('css/institutelandingpage.css')}}">
 @endsection
+
+
+@section('keywords', $channeldata[0]->meta_keywords)
+
+@section('desc', $channeldata[0]->meta_descriptions)
+
+
 @section('content')
-
-<?php
-    //dd($location->location);
-?>
-
 <div id="channelwithslug" class="mb-n5 mt-2 mx-0" style="background-color:white;">
     <channel-with-slug :user="{{json_encode($user)}}" :channel="{{json_encode($channeldata[0])}}"
         :currentuser="{{json_encode($currentUser)}}" :isteacher="{{json_encode($isTeacher)}}"

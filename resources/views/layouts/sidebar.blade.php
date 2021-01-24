@@ -30,14 +30,14 @@
                 <a class="nav-link {{$router[$routerCount - 2] === 'channel' ? 'active' : '' }}"
                     href="{{url('/user/dashboard/channel/'.$channelTitle)}}">
                     <i class="fa fa-desktop sidebaricons" aria-hidden="true"></i>
-                    Channel
+                    Your Institute
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link {{$router[$routerCount - 2] === 'edit' ? 'active' : '' }}"
                     href="{{url('/user/dashboard/edit/'.$channelTitle)}}">
                     <i class="fa fa-pencil-square sidebaricons" aria-hidden="true"></i>
-                    Edit Channel
+                    Edit Institute
                 </a>
             </li>
             <li class="nav-item">

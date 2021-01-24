@@ -295,6 +295,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -640,25 +646,23 @@ __webpack_require__.r(__webpack_exports__);
       "default": null
     }
   },
-  created: function created() {
+  created: function created() {},
+  mounted: function mounted() {
     this.verificationData = this.verification;
-    console.log(this.verificationData);
+    console.log(this.verificationData.id);
   },
-  mounted: function mounted() {},
   methods: {
-    getTheSubmitId: function getTheSubmitId(data) {
-      //this.metaKeywordsDescriptionsId = id;
-      console.log(this.verificationData.id); //this.metaGenerationForm();
+    getTheSubmitId: function getTheSubmitId() {
+      this.metaKeywordsDescriptionsId = this.verificationData.id;
+      this.metaGenerationForm();
     },
     getMetaModel: function getMetaModel() {
-      $("#metaGenerator").modal("show");
+      $("#metaGenerator" + this.verificationData.id).modal("show");
     },
     metaGenerationForm: function metaGenerationForm() {
       var _this = this;
 
       this.$validator.validate().then(function (result) {
-        console.log("Inside validation:- " + _this.metaKeywordsDescriptionsId);
-
         if (result) {
           axios.post("verification/api/keywords/description/" + _this.verificationData.id, _this.metaData).then(function (response) {
             if (response.data.message === true) {
@@ -715,8 +719,6 @@ var render = function() {
         "tbody",
         _vm._l(_vm.usersData, function(verification, index) {
           return _c("tr", { key: verification.id }, [
-            _c("td", [_vm._v(_vm._s(verification.id))]),
-            _vm._v(" "),
             _c("td", [
               verification.status === 1 || verification.status === 2
                 ? _c(
@@ -1104,8 +1106,6 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("thead", [
       _c("tr", [
-        _c("th", { attrs: { scope: "col" } }, [_vm._v("Serial Number")]),
-        _vm._v(" "),
         _c("th", { attrs: { scope: "col" } }, [_vm._v("Block")]),
         _vm._v(" "),
         _c("th", { attrs: { scope: "col" } }, [_vm._v("Status")]),
@@ -1161,7 +1161,7 @@ var render = function() {
       {
         staticClass: "modal fade",
         attrs: {
-          id: "metaGenerator",
+          id: "metaGenerator" + _vm.verificationData.id,
           tabindex: "-1",
           role: "dialog",
           "aria-labelledby": "exampleModalLabel",
@@ -1373,7 +1373,7 @@ var render = function() {
                         attrs: { type: "button" },
                         on: {
                           click: function($event) {
-                            return _vm.getTheSubmitId(_vm.verificationData)
+                            return _vm.getTheSubmitId()
                           }
                         }
                       },
@@ -1671,7 +1671,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\laragon\www\bridyc\resources\js\adminVerification.js */"./resources/js/adminVerification.js");
+module.exports = __webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/js/adminVerification.js */"./resources/js/adminVerification.js");
 
 
 /***/ })

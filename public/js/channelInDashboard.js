@@ -95,9 +95,6 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-!(function webpackMissingModule() { var e = new Error("Cannot find module 'vue-share-buttons/src/components/TwitterButton'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
-!(function webpackMissingModule() { var e = new Error("Cannot find module 'vue-share-buttons/src/components/FacebookButton'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
-!(function webpackMissingModule() { var e = new Error("Cannot find module 'vue-share-buttons/src/components/WhatsAppButton'"); e.code = 'MODULE_NOT_FOUND'; throw e; }());
 //
 //
 //
@@ -661,12 +658,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-
-
-
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -677,11 +668,7 @@ __webpack_require__.r(__webpack_exports__);
       locationData: {}
     };
   },
-  components: {
-    TwitterButton: !(function webpackMissingModule() { var e = new Error("Cannot find module 'vue-share-buttons/src/components/TwitterButton'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()),
-    FacebookButton: !(function webpackMissingModule() { var e = new Error("Cannot find module 'vue-share-buttons/src/components/FacebookButton'"); e.code = 'MODULE_NOT_FOUND'; throw e; }()),
-    WhatsappButton: !(function webpackMissingModule() { var e = new Error("Cannot find module 'vue-share-buttons/src/components/WhatsAppButton'"); e.code = 'MODULE_NOT_FOUND'; throw e; }())
-  },
+  components: {},
   props: {
     user: {
       type: Object,
@@ -1270,54 +1257,28 @@ var render = function() {
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "container" }, [
-          _c(
-            "div",
-            { staticClass: "d-flex mt-5 logo-title" },
-            [
-              _c("img", {
-                staticClass: "logoinstitute",
-                attrs: {
-                  src:
-                    _vm.channelData.icon_avatar === "institute-logo-default.jpg"
-                      ? "/images/" + _vm.channelData.icon_avatar
-                      : _vm.domainUrl +
-                        "/media/channel/" +
-                        _vm.channel.user_id +
-                        "/avatar/" +
-                        _vm.channelData.icon_avatar,
-                  alt: "Institute logo"
-                }
-              }),
-              _vm._v(" "),
-              _c(
-                "h1",
-                { staticClass: "ml-1 ml-sm-4 institle text-capitalize" },
-                [
-                  _vm._v(
-                    "\n          " +
-                      _vm._s(_vm.channelData.title) +
-                      "\n        "
-                  )
-                ]
-              ),
-              _vm._v(" "),
-              _c("twitter-button", {
-                staticClass: "share-button",
-                attrs: { btnText: "" }
-              }),
-              _vm._v(" "),
-              _c("facebook-button", {
-                staticClass: "share-button",
-                attrs: { btnText: "" }
-              }),
-              _vm._v(" "),
-              _c("whatsapp-button", {
-                staticClass: "share-button",
-                attrs: { btnText: "" }
-              })
-            ],
-            1
-          )
+          _c("div", { staticClass: "d-flex mt-5 logo-title" }, [
+            _c("img", {
+              staticClass: "logoinstitute",
+              attrs: {
+                src:
+                  _vm.channelData.icon_avatar === "institute-logo-default.jpg"
+                    ? "/images/" + _vm.channelData.icon_avatar
+                    : _vm.domainUrl +
+                      "/media/channel/" +
+                      _vm.channel.user_id +
+                      "/avatar/" +
+                      _vm.channelData.icon_avatar,
+                alt: "Institute logo"
+              }
+            }),
+            _vm._v(" "),
+            _c("h1", { staticClass: "ml-1 ml-sm-4 institle text-capitalize" }, [
+              _vm._v(
+                "\n          " + _vm._s(_vm.channelData.title) + "\n        "
+              )
+            ])
+          ])
         ]),
         _vm._v(" "),
         _c("div", { staticClass: "inssocial" }, [
@@ -14482,7 +14443,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\laragon\www\bridyc\resources\js\channelInDashboard.js */"./resources/js/channelInDashboard.js");
+module.exports = __webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/js/channelInDashboard.js */"./resources/js/channelInDashboard.js");
 
 
 /***/ })
