@@ -124,7 +124,7 @@ messaging.setBackgroundMessageHandler(function (payload) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/js/firebase-messaging-sw.js */"./resources/js/firebase-messaging-sw.js");
+module.exports = __webpack_require__(/*! C:\laragon\www\bridyc\resources\js\firebase-messaging-sw.js */"./resources/js/firebase-messaging-sw.js");
 
 
 /***/ })

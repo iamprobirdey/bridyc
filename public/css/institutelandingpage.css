@@ -226,7 +226,7 @@ main .logo-title .institle {
 
 main .inssocial {
   position: relative;
-  top: -76px;
+  top: -70px;
   left: 63%;
   font-size: 15px;
   width: 115px;
@@ -307,6 +307,43 @@ main .faculty-request {
 main .faculty-request img {
   width: 16px;
   height: 16px;
+}
+
+main .share-button {
+  top: -190px;
+  left: 85%;
+}
+
+main .share-button .share-img {
+  width: 20px;
+  height: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+  main .share-button .share-img {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media only screen and (min-width: 481px) {
+  main .share-button {
+    left: 87%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  main .share-button {
+    top: -160px;
+    left: 18px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  main .share-button {
+    top: -160px;
+    left: 50px;
+  }
 }
 
 main .inspills {
