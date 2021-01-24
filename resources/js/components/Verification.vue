@@ -198,7 +198,7 @@
                 'form-control': true,
                 'is-invalid': errors.has('location'),
               }"
-              placeholder="Enter your School/College Address"
+              placeholder="Enter your School/College Full Address"
             />
             <i v-show="errors.has('location')" class="is-invalid"></i>
 

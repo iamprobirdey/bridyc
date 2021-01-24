@@ -1194,7 +1194,7 @@ var render = function() {
                         "data-vv-delay": "20",
                         name: "location",
                         type: "text",
-                        placeholder: "Enter your School/College Address"
+                        placeholder: "Enter your School/College Full Address"
                       },
                       domProps: { value: _vm.formData.location },
                       on: {
