@@ -35,7 +35,6 @@ class ChannelController extends Controller
 
     public function getChannelBySlug(Channel $channel)
     {
-
         //$this->fireTheLog($channel);
         $channeldata = Channel::where('id', $channel->id)
             ->with(['state', 'district', 'village', 'language', 'achievement', 'board'])
@@ -49,7 +48,6 @@ class ChannelController extends Controller
                 $query->orderBy('created_at', 'desc');
             }])
             ->get();
-
         $user = User::where('id', $channel->user_id)
             ->select('id', 'email', 'vission', 'message', 'name', 'avatar')
             ->with('verification')
@@ -67,7 +65,6 @@ class ChannelController extends Controller
 
         $location = Verification::where('user_id', $channel->user_id)
             ->select('location')->first();
-
 
         return view('channel_with_slug', compact(['channeldata', 'user', 'currentUser', 'userId', 'isTeacher', 'location']));
     }

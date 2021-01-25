@@ -4,7 +4,7 @@
 
     <div
       class="modal fade"
-      id="metaGenerator"
+      :id="'metaGenerator' + verificationData.id"
       tabindex="-1"
       role="dialog"
       aria-labelledby="exampleModalLabel"
@@ -82,7 +82,7 @@
 
               <button
                 type="button"
-                @click="getTheSubmitId(verificationData)"
+                @click="getTheSubmitId()"
                 class="btn btn-primary"
               >
                 Submit
@@ -116,23 +116,21 @@ export default {
       default: null,
     },
   },
-  created() {
+  created() {},
+  mounted() {
     this.verificationData = this.verification;
-    console.log(this.verificationData);
+    console.log(this.verificationData.id);
   },
-  mounted() {},
   methods: {
-    getTheSubmitId(data) {
-      //this.metaKeywordsDescriptionsId = id;
-      console.log(this.verificationData.id);
-      //this.metaGenerationForm();
+    getTheSubmitId() {
+      this.metaKeywordsDescriptionsId = this.verificationData.id;
+      this.metaGenerationForm();
     },
     getMetaModel() {
-      $("#metaGenerator").modal("show");
+      $("#metaGenerator" + this.verificationData.id).modal("show");
     },
     metaGenerationForm() {
       this.$validator.validate().then((result) => {
-        console.log("Inside validation:- " + this.metaKeywordsDescriptionsId);
         if (result) {
           axios
             .post(

@@ -29,6 +29,12 @@ Route::group([
 ], function () {
     Route::get('/', 'Admin\AdminController@index')->name('admin');
     Route::group([
+        'name' => 'blog.',
+        'prefix' => 'blog'
+    ], function () {
+        Route::get('/', 'Admin\BlogController@index')->name('admin.blog.index');
+    });
+    Route::group([
         'name' => 'contact.',
         'prefix' => 'contact'
     ], function () {

@@ -73,10 +73,6 @@
               <i class="fa fa-phone mr-1" aria-hidden="true"></i>
               {{ phoneNo }}
             </p>
-            <p class="m-1 mr-2">
-              <i class="fa fa-envelope mr-1" aria-hidden="true"></i
-              >{{ userData.email }}
-            </p>
           </div>
         </div>
         <div class="d-flex logo-title">
@@ -182,6 +178,17 @@
       <br />
       <br />
       <br />
+
+      <div class="dropdown share-button">
+        <span
+          ><img class="share-img" src="/images/share.svg" alt="share button"
+        /></span>
+        <div class="dropdown-content">
+          <twitter-button class="share-button dropdown-item" btnText />
+          <facebook-button class="share-button dropdown-item" btnText />
+          <whatsapp-button class="share-button dropdown-item" btnText />
+        </div>
+      </div>
 
       <div class="inspills mx-lg-5">
         <!-- Nav pills -->
@@ -582,6 +589,9 @@
 </template>
 
 <script>
+import TwitterButton from "vue-share-buttons/src/components/TwitterButton";
+import FacebookButton from "vue-share-buttons/src/components/FacebookButton";
+import WhatsappButton from "vue-share-buttons/src/components/WhatsAppButton";
 export default {
   data() {
     return {
@@ -598,6 +608,11 @@ export default {
       channelRequestDecider: "",
       channelFacker: false,
     };
+  },
+  components: {
+    TwitterButton,
+    FacebookButton,
+    WhatsappButton,
   },
   props: {
     user: {
@@ -705,5 +720,20 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  width: 45px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 </style>

@@ -115,7 +115,12 @@ crossed those paths')
 
 @section('js_code')
 
+<script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-messaging.js"></script>
+
 <script src="{{url('js/app.js')}}"></script>
+<script src="{{url('js/firebase-messaging-sw.js')}}"></script>
 <script src="{{url('js/channel.js')}}"></script>
 
 @endsection

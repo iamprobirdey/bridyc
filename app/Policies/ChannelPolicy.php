@@ -10,7 +10,8 @@ class ChannelPolicy
 {
     use HandlesAuthorization;
 
-    public function checkChannelForUser(User $user, Channel $channel){
-       return $user->id === $channel->user_id;
+    public function checkChannelForUser(User $user, Channel $channel)
+    {
+        return $user->id === $channel->user_id;
     }
 }

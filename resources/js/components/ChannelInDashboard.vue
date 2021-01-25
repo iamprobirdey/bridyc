@@ -572,6 +572,7 @@ export default {
       locationData: {},
     };
   },
+  components: {},
   props: {
     user: {
       type: Object,
