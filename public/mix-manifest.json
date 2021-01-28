@@ -1,5 +1,5 @@
 {
-    "/firebase-messaging-sw.js": "/firebase-messaging-sw.js?id=e9dcf206c320a293ce51",
+    "/firebase-messaging-sw.js": "/firebase-messaging-sw.js?id=44ad76b03b655c0c4fc7",
     "/js/ChannelNotification.js": "/js/ChannelNotification.js?id=b1eb5517e05373cab7aa",
     "/js/ChannelProfile.js": "/js/ChannelProfile.js?id=18dbcfd3fc115ba4f555",
     "/js/achievement.js": "/js/achievement.js?id=30a6a777cf45e97c2a59",
@@ -17,6 +17,7 @@
     "/css/about.css": "/css/about.css?id=7df775502e8fa7a56541",
     "/css/login-register.css": "/css/login-register.css?id=43bbc8ecd40cbb1c3bb9",
     "/css/error.css": "/css/error.css?id=84fa48729d8f3ecf7976",
+    "/js/blog.js": "/js/blog.js?id=a149be433b2d36d63ed7",
     "/js/channel.js": "/js/channel.js?id=cc39043d9a78220c4eb6",
     "/js/channelInDashboard.js": "/js/channelInDashboard.js?id=ccd370dd8e14ef15783d",
     "/js/channelteacher.js": "/js/channelteacher.js?id=12504c60d9fce9e2c497",

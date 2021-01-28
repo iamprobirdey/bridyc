@@ -33,6 +33,12 @@ Route::group([
         'prefix' => 'blog'
     ], function () {
         Route::get('/', 'Admin\BlogController@index')->name('admin.blog.index');
+        Route::get('/create', 'Admin\BlogController@create');
+        Route::post('/create', 'Admin\BlogController@store')->name('admin.blog.create');
+        //Category
+        Route::get('/category', 'Admin\BlogController@listCategory')->name('admin.blog.category.index');
+        Route::get('/category/create', 'Admin\BlogController@createCategory');
+        Route::post('/category/create', 'Admin\BlogController@storeCategory')->name('admin.blog.category.create');
     });
     Route::group([
         'name' => 'contact.',
@@ -174,6 +180,7 @@ Route::post('contact', 'ContactController@store');
 Route::get('/privacy', 'HomeController@privacy');
 Route::get('/terms', 'HomeController@terms');
 Route::get('/about', 'HomeController@about')->name('about');
+Route::get('/blogs', 'BlogController@index');
 
 Route::get('institute/register', 'Auth\InstituteController@instituteRegister');
 Route::post('institute/register', 'Auth\RegisterController@register');

@@ -30,7 +30,8 @@ class ChannelController extends Controller
             ->where('status', 1)
             ->with('district')
             ->get();
-        return view('index', compact('channel', 'podcast'));
+        $podcastCount = Podcast::count();
+        return view('index', compact('channel', 'podcast', 'podcastCount'));
     }
 
     public function getChannelBySlug(Channel $channel)
@@ -65,6 +66,7 @@ class ChannelController extends Controller
 
         $location = Verification::where('user_id', $channel->user_id)
             ->select('location')->first();
+
 
         return view('channel_with_slug', compact(['channeldata', 'user', 'currentUser', 'userId', 'isTeacher', 'location']));
     }
