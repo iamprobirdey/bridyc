@@ -180,6 +180,8 @@ Route::post('contact', 'ContactController@store');
 Route::get('/privacy', 'HomeController@privacy');
 Route::get('/terms', 'HomeController@terms');
 Route::get('/about', 'HomeController@about')->name('about');
+
+//Blog
 Route::get('/blogs', 'BlogController@index');
 Route::get('/blogs/{slug}', 'BlogController@slug');
 
@@ -204,6 +206,9 @@ Route::group([
     Route::get('teacher/{channel:title}', 'User\DashboardController@teacher')->name('channel.teacher');
     Route::get('new/feature/{channel:title}', 'User\DashboardController@newFeature')->name('channel.feature');
     Route::get('notification/{channel:title}', 'User\DashboardController@notification')->name('channel.notification');
+
+    //Accountant
+    Route::get('accoountant/{channel:title}', 'User\DashboardController@accountant')->name('channel.accountant');
 });
 
 Route::get('edit/student/profile/{user:username}', 'Student\ProfileController@index')->middleware(['can:student'])->middleware('verified');

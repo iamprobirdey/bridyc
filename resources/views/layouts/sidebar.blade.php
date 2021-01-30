@@ -75,6 +75,13 @@
                     New Feature
                 </a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link {{$router[$routerCount - 2] === 'accountant' ? 'active' : '' }}"
+                    href="{{route('channel.accountant',$channelTitle)}}">
+                    <i class="fa fa-plus sidebaricons" aria-hidden="true"></i>
+                    Accountant
+                </a>
+            </li>
             @endif
         </ul>
     </div>
