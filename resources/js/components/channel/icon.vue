@@ -15,7 +15,7 @@
                         :srcset="domainUrl+'/media/channel/'+userId+'/m-'+userImage+','+domainUrl+'/media/channel/'+userId+'/s-'+userImage"
                      -->
 
-      <button @click="editTheIcon()" class="btn">
+      <button @click="addImageFile()" class="btn">
         <i class="fa fa-pencil" aria-hidden="true"></i> Change Logo
       </button>
     </div>
@@ -61,12 +61,96 @@
       </div>
       <span v-show="imageError" class="text-danger">{{ imageError }}</span>
     </div>
+
+    <div
+      class="modal fade"
+      id="addImageFile"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <button
+            type="button"
+            class="close ml-auto mr-2"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+
+          <div class="modal-body">
+            <div class="button-wrapper">
+              <input
+                type="file"
+                ref="file"
+                class="btn btn-primary"
+                @change="loadCroppieImage($event)"
+                accept="image/*"
+              />
+              <!-- <span class="btn btn-success" @click="$refs.file.click()">
+                Load image
+              </span> -->
+              <p
+                v-html="croppieImageValidation"
+                v-if="croppieImageValidation != ''"
+                class="text-danger"
+              ></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="addImageCroppie"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <button
+            type="button"
+            class="close ml-auto mr-2"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+
+          <div class="modal-body">
+            <cropper
+              class="upload-example-cropper"
+              ref="cropper"
+              :src="coppieImageData"
+            />
+            <button class="btn btn-secondary mt-2" @click="uploadImage2">
+              Submit
+            </button>
+            <button class="btn btn-dark" @click="addImageFile">
+              change Image
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--  -->
   </div>
 </template>
 
 <script>
 import PictureInput from "vue-picture-input";
 import Compressor from "compressorjs";
+
+import { Cropper } from "vue-advanced-cropper";
+import "vue-advanced-cropper/dist/style.css";
+
 export default {
   data() {
     return {
@@ -79,12 +163,63 @@ export default {
       url: "/api/icon/upload",
       domainUrl: location.origin,
       wait: false,
+
+      coppieImageData: "",
+      croppieImageValidation: "",
     };
   },
   mounted() {
     this.getImageData();
   },
   methods: {
+    addImageFile() {
+      $("#addImageFile").modal("show");
+      $("#addImageCroppie").modal("hide");
+    },
+
+    loadCroppieImage(event) {
+      var input = event.target;
+      if (input.files && input.files[0]) {
+        const validImageTypes = ["image/jpeg", "image/png", "image/jpg"];
+        if (validImageTypes.includes(input.files[0]["type"])) {
+          var reader = new FileReader();
+          reader.onload = (e) => {
+            this.coppieImageData = e.target.result;
+          };
+          reader.readAsDataURL(input.files[0]);
+          $("#addImageFile").modal("hide");
+          $("#addImageCroppie").modal("show");
+        } else {
+          this.croppieImageValidation = "This is not valid image file";
+        }
+      }
+    },
+
+    uploadImage2() {
+      console.log("hit");
+      const { canvas } = this.$refs.cropper.getResult();
+      if (canvas) {
+        const form = new FormData();
+        canvas.toBlob((blob) => {
+          form.append("image", blob);
+          axios
+            .post(this.url, form, { emulateJSON: true })
+            .then((response) => {
+              this.userImage = response.data.image;
+              this.userImageStatus = true;
+              this.wait = false;
+              $("#addImageCroppie").modal("hide");
+            })
+            .catch((errors) => {
+              this.wait = false;
+              if (errors.response.data.errors.image) {
+                this.imageError = errors.response.data.errors.image[0];
+              }
+            });
+        }, "image/jpeg");
+      }
+    },
+
     b64toBlob(dataURI) {
       var byteString = atob(dataURI.split(",")[1]);
       var ab = new ArrayBuffer(byteString.length);
@@ -114,6 +249,7 @@ export default {
       if (this.$refs.pictureInput.image)
         this.imageData = this.$refs.pictureInput.image;
     },
+
     onImageSubmit() {
       if (this.imageData != "") {
         this.wait = true;
@@ -160,6 +296,7 @@ export default {
   components: {
     PictureInput,
     Compressor,
+    Cropper,
   },
 };
 </script>
