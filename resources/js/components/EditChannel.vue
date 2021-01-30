@@ -37,10 +37,13 @@
       </div>
     </div>
     <!--div class="mt-5 ml-n5">
-      
+
         <phone :user="userData"></phone>
-      
+
     </div-->
+
+    <croppertest></croppertest>
+    <!-- <croppie></croppie> -->
   </div>
 </template>
 
@@ -55,6 +58,9 @@ import board from "./channel/board.vue";
 import social from "./channel/social.vue";
 import college from "./channel/college.vue";
 import phone from "./channel/phone.vue";
+import croppie from "./channel/croppie.vue";
+import croppertest from "./channel/croppertest.vue";
+
 export default {
   data() {
     return {
@@ -92,6 +98,8 @@ export default {
     social,
     college,
     phone,
+    croppie,
+    croppertest,
   },
 };
 </script>

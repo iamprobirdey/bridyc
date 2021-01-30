@@ -10,6 +10,8 @@ require("./bootstrap");
 
 window.Vue = require("vue");
 //import Croppa from 'vue-croppa';
+import VueCroppie from "vue-croppie";
+import "croppie/croppie.css";
 import Toasted from "vue-toasted";
 import VeeValidate from "vee-validate";
 import _ from "lodash";
@@ -17,6 +19,9 @@ import _ from "lodash";
 Vue.use(Toasted);
 Vue.use(VeeValidate);
 //Vue.use(Croppa);
+Vue.use(VueCroppie);
+
+
 
 /**
  * The following block of code may be used to automatically register your

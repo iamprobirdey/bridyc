@@ -36,6 +36,7 @@ Route::group([
     'middleware' => ['can:admin']
 ], function () {
     Route::get('/', 'Admin\AdminController@index')->name('admin');
+
     Route::group([
         'name' => 'contact.',
         'prefix' => 'contact'
