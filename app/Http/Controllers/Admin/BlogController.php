@@ -45,7 +45,7 @@ class BlogController extends Controller
         $path = "blog/";
 
         $imageS->resize(350, 280);
-        $imageS->save(public_path($path) . 's-' . $image_path);
+        $imageS->save(public_path($path) . $image_path);
         $dom = new \DomDocument();
         $dom->loadHtml($request->input('content'), LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD);
         $images = $dom->getElementsByTagName('img');
@@ -66,22 +66,19 @@ class BlogController extends Controller
             $image->resize(710, 650);
             $image->save(public_path($path) . $imageName);
 
-            $imageM->resize(400, 360);
-            $imageM->save(public_path($path) . 'm-' . $imageName);
-
-            $imageS->resize(350, 280);
-            $imageS->save(public_path($path) . 's-' . $imageName);
-
             $img->removeAttribute('src');
-            $img->setAttribute('src', 'blog/' . $imageName);
+            $img->setAttribute('src', '/blog/' . $imageName);
         }
         $content = $dom->saveHTML();
+
+        $time = Carbon::now('Asia/Kolkata');
+        $time =  $time->year . $time->month . $time->day . ($time->micro + mt_rand(11111, 99999));
 
         Post::create([
             'user_id' => Auth::id(),
             'title' => $request->input('title'),
             'image_path' => $image_path,
-            'slug' => Str::slug($request->input('title')),
+            'slug' => Str::slug($request->input('title') . '-' . $time),
             'content' => $content,
             'keyword' => $request->input('keyword'),
             'description' => $request->input('description')

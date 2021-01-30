@@ -28,20 +28,8 @@ video')
 </br>
 </br>
 <div class="container">
-    <div class="row">
-        <div class="col-sm-4">
-            @foreach ($posts as $post)
-            <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="blog/{{$post->image_path}}" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">{{$post->title}}</h5>
-                    <p class="card-text">{{$post->description}}</p>
-                    <a href="blogs/{{$post->slug}}" class="btn btn-primary">Read More</a>
-                </div>
-            </div>
-            @endforeach
-        </div>
-    </div>
+    <h1>{{$post->title}}</h1>
+    {!!$post->content!!}
 </div>
 @endsection
 

@@ -181,6 +181,7 @@ Route::get('/privacy', 'HomeController@privacy');
 Route::get('/terms', 'HomeController@terms');
 Route::get('/about', 'HomeController@about')->name('about');
 Route::get('/blogs', 'BlogController@index');
+Route::get('/blogs/{slug}', 'BlogController@slug');
 
 Route::get('institute/register', 'Auth\InstituteController@instituteRegister');
 Route::post('institute/register', 'Auth\RegisterController@register');
