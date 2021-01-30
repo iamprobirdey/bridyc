@@ -128,6 +128,7 @@
               class="upload-example-cropper"
               ref="cropper"
               :src="coppieImageData"
+              @change="onChangeIconDimention"
             />
             <button class="btn btn-secondary mt-2" @click="uploadImage2">
               Submit
@@ -155,7 +156,6 @@ export default {
   data() {
     return {
       imageData: "",
-      url: "api/icon",
       imageError: "",
       userImage: "",
       userImageStatus: false,
@@ -166,10 +166,13 @@ export default {
 
       coppieImageData: "",
       croppieImageValidation: "",
+      coordinateHeight: "",
+      coordinateWidth: "",
     };
   },
   mounted() {
     this.getImageData();
+    const vueIns = this;
   },
   methods: {
     addImageFile() {
@@ -195,19 +198,30 @@ export default {
       }
     },
 
+    onChangeIconDimention({ coordinates, canvas }) {
+      let width = coordinates.width;
+      let height = coordinates.height;
+      this.coordinateWidth = width;
+      this.coordinateHeight = height;
+    },
+
     uploadImage2() {
-      console.log("hit");
       const { canvas } = this.$refs.cropper.getResult();
       if (canvas) {
         const form = new FormData();
+        const vm = this;
         canvas.toBlob((blob) => {
           form.append("image", blob);
+          form.append("height", this.coordinateHeight);
+          form.append("width", this.coordinateWidth);
           axios
             .post(this.url, form, { emulateJSON: true })
             .then((response) => {
               this.userImage = response.data.image;
               this.userImageStatus = true;
               this.wait = false;
+
+              this.coppieImageData = "";
               $("#addImageCroppie").modal("hide");
             })
             .catch((errors) => {

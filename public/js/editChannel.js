@@ -1071,8 +1071,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue_advanced_cropper__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue-advanced-cropper */ "./node_modules/vue-advanced-cropper/dist/index.es.js");
 /* harmony import */ var vue_advanced_cropper_dist_style_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vue-advanced-cropper/dist/style.css */ "./node_modules/vue-advanced-cropper/dist/style.css");
 /* harmony import */ var vue_advanced_cropper_dist_style_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(vue_advanced_cropper_dist_style_css__WEBPACK_IMPORTED_MODULE_3__);
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
+//
 //
 //
 //
@@ -1225,19 +1224,24 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
-    var _ref;
-
-    return _ref = {
+    return {
       imageData: "",
-      url: "api/icon",
       imageError: "",
       userImage: "",
       userImageStatus: false,
-      userId: null
-    }, _defineProperty(_ref, "url", "/api/icon/upload"), _defineProperty(_ref, "domainUrl", location.origin), _defineProperty(_ref, "wait", false), _defineProperty(_ref, "coppieImageData", ""), _defineProperty(_ref, "croppieImageValidation", ""), _ref;
+      userId: null,
+      url: "/api/icon/upload",
+      domainUrl: location.origin,
+      wait: false,
+      coppieImageData: "",
+      croppieImageValidation: "",
+      coordinateHeight: "",
+      coordinateWidth: ""
+    };
   },
   mounted: function mounted() {
     this.getImageData();
+    var vueIns = this;
   },
   methods: {
     addImageFile: function addImageFile() {
@@ -1267,24 +1271,34 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
         }
       }
     },
+    onChangeIconDimention: function onChangeIconDimention(_ref) {
+      var coordinates = _ref.coordinates,
+          canvas = _ref.canvas;
+      var width = coordinates.width;
+      var height = coordinates.height;
+      this.coordinateWidth = width;
+      this.coordinateHeight = height;
+    },
     uploadImage2: function uploadImage2() {
       var _this2 = this;
-
-      console.log("hit");
 
       var _this$$refs$cropper$g = this.$refs.cropper.getResult(),
           canvas = _this$$refs$cropper$g.canvas;
 
       if (canvas) {
         var form = new FormData();
+        var vm = this;
         canvas.toBlob(function (blob) {
           form.append("image", blob);
+          form.append("height", _this2.coordinateHeight);
+          form.append("width", _this2.coordinateWidth);
           axios.post(_this2.url, form, {
             emulateJSON: true
           }).then(function (response) {
             _this2.userImage = response.data.image;
             _this2.userImageStatus = true;
             _this2.wait = false;
+            _this2.coppieImageData = "";
             $("#addImageCroppie").modal("hide");
           })["catch"](function (errors) {
             _this2.wait = false;
@@ -18126,7 +18140,8 @@ var render = function() {
                   _c("cropper", {
                     ref: "cropper",
                     staticClass: "upload-example-cropper",
-                    attrs: { src: _vm.coppieImageData }
+                    attrs: { src: _vm.coppieImageData },
+                    on: { change: _vm.onChangeIconDimention }
                   }),
                   _vm._v(" "),
                   _c(
