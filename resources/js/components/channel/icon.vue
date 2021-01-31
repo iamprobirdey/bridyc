@@ -20,7 +20,7 @@
       </button>
     </div>
 
-    <div v-if="userImageStatus === false">
+    <!-- <div v-if="userImageStatus === false">
       <picture-input
         ref="pictureInput"
         width="152"
@@ -60,7 +60,7 @@
         </button>
       </div>
       <span v-show="imageError" class="text-danger">{{ imageError }}</span>
-    </div>
+    </div> -->
 
     <div
       class="modal fade"
@@ -70,29 +70,35 @@
       aria-labelledby="exampleModalLabel"
       aria-hidden="true"
     >
-      <div class="modal-dialog" role="document">
+      <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
-          <button
+          <!--button
             type="button"
             class="close ml-auto mr-2"
             data-dismiss="modal"
             aria-label="Close"
           >
             <span aria-hidden="true">&times;</span>
-          </button>
+          </button-->
 
-          <div class="modal-body">
-            <div class="button-wrapper">
+          <div class="modal-body my-n3">
+            <div>
               <input
+                id="file-button"
+                hidden
                 type="file"
                 ref="file"
-                class="btn btn-primary"
                 @change="loadCroppieImage($event)"
                 accept="image/*"
               />
+              <label for="file-button" class="label-btn py-2 px-3 mt-2"
+                >Select file</label
+              >
+              <span id="file-chosen">No file chosen</span>
               <!-- <span class="btn btn-success" @click="$refs.file.click()">
                 Load image
               </span> -->
+
               <p
                 v-html="croppieImageValidation"
                 v-if="croppieImageValidation != ''"
@@ -112,16 +118,16 @@
       aria-labelledby="exampleModalLabel"
       aria-hidden="true"
     >
-      <div class="modal-dialog" role="document">
+      <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
-          <button
+          <!--button
             type="button"
             class="close ml-auto mr-2"
             data-dismiss="modal"
             aria-label="Close"
           >
             <span aria-hidden="true">&times;</span>
-          </button>
+          </button-->
 
           <div class="modal-body">
             <cropper
@@ -130,25 +136,26 @@
               :src="coppieImageData"
               @change="onChangeIconDimention"
             />
-            <button class="btn btn-secondary mt-2" @click="uploadImage2">
+            <div v-if="wait" class="text-center mt-2">
+              <div class="spinner-border text-warning" role="status">
+                <span class="sr-only">Loading...</span>
+              </div>
+            </div>
+            <button class="btn btn-info mt-2" @click="uploadImage2">
               Submit
             </button>
-            <button class="btn btn-dark" @click="addImageFile">
-              change Image
+            <button class="btn btn-dark mt-2" @click="addImageFile">
+              Change Image
             </button>
           </div>
         </div>
       </div>
     </div>
-
     <!--  -->
   </div>
 </template>
 
 <script>
-import PictureInput from "vue-picture-input";
-import Compressor from "compressorjs";
-
 import { Cropper } from "vue-advanced-cropper";
 import "vue-advanced-cropper/dist/style.css";
 
@@ -181,6 +188,7 @@ export default {
     },
 
     loadCroppieImage(event) {
+      console.log("from icon");
       var input = event.target;
       if (input.files && input.files[0]) {
         const validImageTypes = ["image/jpeg", "image/png", "image/jpg"];
@@ -214,6 +222,7 @@ export default {
           form.append("image", blob);
           form.append("height", this.coordinateHeight);
           form.append("width", this.coordinateWidth);
+          this.wait = true;
           axios
             .post(this.url, form, { emulateJSON: true })
             .then((response) => {
@@ -234,16 +243,16 @@ export default {
       }
     },
 
-    b64toBlob(dataURI) {
-      var byteString = atob(dataURI.split(",")[1]);
-      var ab = new ArrayBuffer(byteString.length);
-      var ia = new Uint8Array(ab);
+    // b64toBlob(dataURI) {
+    //   var byteString = atob(dataURI.split(",")[1]);
+    //   var ab = new ArrayBuffer(byteString.length);
+    //   var ia = new Uint8Array(ab);
 
-      for (var i = 0; i < byteString.length; i++) {
-        ia[i] = byteString.charCodeAt(i);
-      }
-      return new Blob([ab], { type: "image/jpeg" });
-    },
+    //   for (var i = 0; i < byteString.length; i++) {
+    //     ia[i] = byteString.charCodeAt(i);
+    //   }
+    //   return new Blob([ab], { type: "image/jpeg" });
+    // },
     getImageData() {
       axios
         .get("/api/icon")
@@ -259,61 +268,60 @@ export default {
           });
         });
     },
-    onChange(image) {
-      if (this.$refs.pictureInput.image)
-        this.imageData = this.$refs.pictureInput.image;
-    },
+    // onChange(image) {
+    //   if (this.$refs.pictureInput.image)
+    //     this.imageData = this.$refs.pictureInput.image;
+    // },
 
-    onImageSubmit() {
-      if (this.imageData != "") {
-        this.wait = true;
-        let vm = this;
-        new Compressor(this.b64toBlob(this.imageData), {
-          quality: 0.7,
-          success(result) {
-            const formData = new FormData();
-            formData.append("image", result, result.name);
-            axios
-              .post(vm.url, formData, { emulateJSON: true })
-              .then((response) => {
-                vm.userImage = response.data.image;
-                vm.userImageStatus = true;
-                vm.wait = false;
-              })
-              .catch((errors) => {
-                vm.wait = false;
-                if (errors.response.data.errors.image) {
-                  vm.imageError = errors.response.data.errors.image[0];
-                }
-              });
-          },
-          error(err) {
-            Vue.toasted.error("Something went wrong!! Try again.", {
-              position: "top-center",
-              duration: 5000,
-            });
-          },
-        });
-      }
-    },
+    // onImageSubmit() {
+    //   if (this.imageData != "") {
+    //     this.wait = true;
+    //     let vm = this;
+    //     new Compressor(this.b64toBlob(this.imageData), {
+    //       quality: 0.7,
+    //       success(result) {
+    //         const formData = new FormData();
+    //         formData.append("image", result, result.name);
+    //         axios
+    //           .post(vm.url, formData, { emulateJSON: true })
+    //           .then((response) => {
+    //             vm.userImage = response.data.image;
+    //             vm.userImageStatus = true;
+    //             vm.wait = false;
+    //           })
+    //           .catch((errors) => {
+    //             vm.wait = false;
+    //             if (errors.response.data.errors.image) {
+    //               vm.imageError = errors.response.data.errors.image[0];
+    //             }
+    //           });
+    //       },
+    //       error(err) {
+    //         Vue.toasted.error("Something went wrong!! Try again.", {
+    //           position: "top-center",
+    //           duration: 5000,
+    //         });
+    //       },
+    //     });
+    //   }
+    // },
 
-    editTheIcon() {
-      this.userImageStatus = false;
-      this.imageData = this.userImage;
-      this.wait = false;
-    },
-    canTheEdit() {
-      this.wait = false;
-      this.userImageStatus = true;
-    },
+    // editTheIcon() {
+    //   this.userImageStatus = false;
+    //   this.imageData = this.userImage;
+    //   this.wait = false;
+    // },
+    // canTheEdit() {
+    //   this.wait = false;
+    //   this.userImageStatus = true;
+    // },
   },
   components: {
-    PictureInput,
-    Compressor,
     Cropper,
   },
 };
 </script>
+
 
 <style scoped>
 .btnsubmiticon {
@@ -330,5 +338,13 @@ export default {
 .btn-success {
   padding-top: 0.1rem !important;
   padding-bottom: 0.1rem !important;
+}
+
+.label-btn {
+  background-color: #003585;
+  color: white;
+  font-family: sans-serif;
+  border-radius: 0.3rem;
+  cursor: pointer;
 }
 </style>

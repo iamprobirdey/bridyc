@@ -6370,7 +6370,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../css-loader??ref--17-1!../postcss-loader/src??ref--17-2!./croppie.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/croppie/croppie.css");
+var content = __webpack_require__(/*! !../css-loader??ref--18-1!../postcss-loader/src??ref--18-2!./croppie.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/croppie/croppie.css");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -8040,7 +8040,7 @@ if(false) {}
 
 /***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/croppie/croppie.css":
 /*!****************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader??ref--17-1!./node_modules/postcss-loader/src??ref--17-2!./node_modules/croppie/croppie.css ***!
+  !*** ./node_modules/css-loader??ref--18-1!./node_modules/postcss-loader/src??ref--18-2!./node_modules/croppie/croppie.css ***!
   \****************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -63501,6 +63501,17 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/sass/blogs.scss":
+/*!***********************************!*\
+  !*** ./resources/sass/blogs.scss ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+
 /***/ "./resources/sass/contact.scss":
 /*!*************************************!*\
   !*** ./resources/sass/contact.scss ***!
@@ -63601,25 +63612,26 @@ __webpack_require__.r(__webpack_exports__);
 /***/ }),
 
 /***/ 0:
-/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/index.scss ./resources/sass/application.scss ./resources/sass/faq.scss ./resources/sass/contact.scss ./resources/sass/privacy.scss ./resources/sass/institutedashboard.scss ./resources/sass/institutelandingpage.scss ./resources/sass/profile.scss ./resources/sass/about.scss ./resources/sass/login-register.scss ./resources/sass/error.scss ***!
-  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/index.scss ./resources/sass/application.scss ./resources/sass/faq.scss ./resources/sass/contact.scss ./resources/sass/privacy.scss ./resources/sass/institutedashboard.scss ./resources/sass/institutelandingpage.scss ./resources/sass/profile.scss ./resources/sass/about.scss ./resources/sass/login-register.scss ./resources/sass/error.scss ./resources/sass/blogs.scss ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/js/app.js */"./resources/js/app.js");
-__webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/sass/app.scss */"./resources/sass/app.scss");
-__webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/sass/index.scss */"./resources/sass/index.scss");
-__webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/sass/application.scss */"./resources/sass/application.scss");
-__webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/sass/faq.scss */"./resources/sass/faq.scss");
-__webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/sass/contact.scss */"./resources/sass/contact.scss");
-__webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/sass/privacy.scss */"./resources/sass/privacy.scss");
-__webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/sass/institutedashboard.scss */"./resources/sass/institutedashboard.scss");
-__webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/sass/institutelandingpage.scss */"./resources/sass/institutelandingpage.scss");
-__webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/sass/profile.scss */"./resources/sass/profile.scss");
-__webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/sass/about.scss */"./resources/sass/about.scss");
-__webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/sass/login-register.scss */"./resources/sass/login-register.scss");
-module.exports = __webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/sass/error.scss */"./resources/sass/error.scss");
+__webpack_require__(/*! C:\laragon\www\bridyc\resources\js\app.js */"./resources/js/app.js");
+__webpack_require__(/*! C:\laragon\www\bridyc\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\laragon\www\bridyc\resources\sass\index.scss */"./resources/sass/index.scss");
+__webpack_require__(/*! C:\laragon\www\bridyc\resources\sass\application.scss */"./resources/sass/application.scss");
+__webpack_require__(/*! C:\laragon\www\bridyc\resources\sass\faq.scss */"./resources/sass/faq.scss");
+__webpack_require__(/*! C:\laragon\www\bridyc\resources\sass\contact.scss */"./resources/sass/contact.scss");
+__webpack_require__(/*! C:\laragon\www\bridyc\resources\sass\privacy.scss */"./resources/sass/privacy.scss");
+__webpack_require__(/*! C:\laragon\www\bridyc\resources\sass\institutedashboard.scss */"./resources/sass/institutedashboard.scss");
+__webpack_require__(/*! C:\laragon\www\bridyc\resources\sass\institutelandingpage.scss */"./resources/sass/institutelandingpage.scss");
+__webpack_require__(/*! C:\laragon\www\bridyc\resources\sass\profile.scss */"./resources/sass/profile.scss");
+__webpack_require__(/*! C:\laragon\www\bridyc\resources\sass\about.scss */"./resources/sass/about.scss");
+__webpack_require__(/*! C:\laragon\www\bridyc\resources\sass\login-register.scss */"./resources/sass/login-register.scss");
+__webpack_require__(/*! C:\laragon\www\bridyc\resources\sass\error.scss */"./resources/sass/error.scss");
+module.exports = __webpack_require__(/*! C:\laragon\www\bridyc\resources\sass\blogs.scss */"./resources/sass/blogs.scss");
 
 
 /***/ })
