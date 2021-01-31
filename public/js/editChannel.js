@@ -1218,6 +1218,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 
 
 
@@ -3704,7 +3708,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.btnsubmiticon[data-v-d9ed4160] {\r\n  background-color: #013737;\r\n  color: white;\r\n  padding-top: 2px;\r\n  padding-bottom: 2px;\r\n  border-radius: 0;\r\n  z-index: 100;\n}\n.btnsuca[data-v-d9ed4160] {\r\n  text-align: center;\n}\n.btn-success[data-v-d9ed4160] {\r\n  padding-top: 0.1rem !important;\r\n  padding-bottom: 0.1rem !important;\n}\r\n", ""]);
+exports.push([module.i, "\n.btnsubmiticon[data-v-d9ed4160] {\r\n  background-color: #013737;\r\n  color: white;\r\n  padding-top: 2px;\r\n  padding-bottom: 2px;\r\n  border-radius: 0;\r\n  z-index: 100;\n}\n.btnsuca[data-v-d9ed4160] {\r\n  text-align: center;\n}\n.btn-success[data-v-d9ed4160] {\r\n  padding-top: 0.1rem !important;\r\n  padding-bottom: 0.1rem !important;\n}\n.label-btn[data-v-d9ed4160]{\r\n  background-color: #003585;\r\n  color: white;\r\n  font-family: sans-serif;\r\n  border-radius: 0.3rem;\r\n  cursor: pointer;\n}\r\n", ""]);
 
 // exports
 
@@ -18082,23 +18086,41 @@ var render = function() {
       [
         _c(
           "div",
-          { staticClass: "modal-dialog", attrs: { role: "document" } },
+          {
+            staticClass: "modal-dialog modal-dialog-centered",
+            attrs: { role: "document" }
+          },
           [
             _c("div", { staticClass: "modal-content" }, [
-              _vm._m(1),
-              _vm._v(" "),
-              _c("div", { staticClass: "modal-body" }, [
-                _c("div", { staticClass: "button-wrapper" }, [
+              _c("div", { staticClass: "modal-body my-n3" }, [
+                _c("div", [
                   _c("input", {
                     ref: "file",
-                    staticClass: "btn btn-primary",
-                    attrs: { type: "file", accept: "image/*" },
+                    attrs: {
+                      id: "file-button",
+                      hidden: "",
+                      type: "file",
+                      accept: "image/*"
+                    },
                     on: {
                       change: function($event) {
                         return _vm.loadCroppieImage($event)
                       }
                     }
                   }),
+                  _vm._v(" "),
+                  _c(
+                    "label",
+                    {
+                      staticClass: "label-btn py-2 px-3 mt-2",
+                      attrs: { for: "file-button" }
+                    },
+                    [_vm._v("Select file")]
+                  ),
+                  _vm._v(" "),
+                  _c("span", { attrs: { id: "file-chosen" } }, [
+                    _vm._v("No file chosen")
+                  ]),
                   _vm._v(" "),
                   _vm.croppieImageValidation != ""
                     ? _c("p", {
@@ -18131,11 +18153,12 @@ var render = function() {
       [
         _c(
           "div",
-          { staticClass: "modal-dialog", attrs: { role: "document" } },
+          {
+            staticClass: "modal-dialog modal-dialog-centered",
+            attrs: { role: "document" }
+          },
           [
             _c("div", { staticClass: "modal-content" }, [
-              _vm._m(2),
-              _vm._v(" "),
               _c(
                 "div",
                 { staticClass: "modal-body" },
@@ -18150,7 +18173,7 @@ var render = function() {
                   _c(
                     "button",
                     {
-                      staticClass: "btn btn-secondary mt-2",
+                      staticClass: "btn btn-info mt-2",
                       on: { click: _vm.uploadImage2 }
                     },
                     [_vm._v("\n            Submit\n          ")]
@@ -18159,10 +18182,10 @@ var render = function() {
                   _c(
                     "button",
                     {
-                      staticClass: "btn btn-dark",
+                      staticClass: "btn btn-dark mt-2",
                       on: { click: _vm.addImageFile }
                     },
-                    [_vm._v("\n            change Image\n          ")]
+                    [_vm._v("\n            Change Image\n          ")]
                   )
                 ],
                 1
@@ -18183,40 +18206,6 @@ var staticRenderFns = [
       "div",
       { staticClass: "spinner-border text-warning", attrs: { role: "status" } },
       [_c("span", { staticClass: "sr-only" }, [_vm._v("Loading...")])]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "button",
-      {
-        staticClass: "close ml-auto mr-2",
-        attrs: {
-          type: "button",
-          "data-dismiss": "modal",
-          "aria-label": "Close"
-        }
-      },
-      [_c("span", { attrs: { "aria-hidden": "true" } }, [_vm._v("×")])]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "button",
-      {
-        staticClass: "close ml-auto mr-2",
-        attrs: {
-          type: "button",
-          "data-dismiss": "modal",
-          "aria-label": "Close"
-        }
-      },
-      [_c("span", { attrs: { "aria-hidden": "true" } }, [_vm._v("×")])]
     )
   }
 ]

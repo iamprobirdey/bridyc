@@ -70,29 +70,34 @@
       aria-labelledby="exampleModalLabel"
       aria-hidden="true"
     >
-      <div class="modal-dialog" role="document">
+      <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
-          <button
+          <!--button
             type="button"
             class="close ml-auto mr-2"
             data-dismiss="modal"
             aria-label="Close"
           >
             <span aria-hidden="true">&times;</span>
-          </button>
+          </button-->
 
-          <div class="modal-body">
-            <div class="button-wrapper">
+          <div class="modal-body my-n3">
+            <div>
               <input
+                id="file-button"
+                hidden
                 type="file"
                 ref="file"
-                class="btn btn-primary"
                 @change="loadCroppieImage($event)"
                 accept="image/*"
               />
+              <label for="file-button" class="label-btn py-2 px-3 mt-2">Select file</label>
+              <span id="file-chosen">No file chosen</span>
               <!-- <span class="btn btn-success" @click="$refs.file.click()">
                 Load image
               </span> -->
+
+
               <p
                 v-html="croppieImageValidation"
                 v-if="croppieImageValidation != ''"
@@ -112,16 +117,16 @@
       aria-labelledby="exampleModalLabel"
       aria-hidden="true"
     >
-      <div class="modal-dialog" role="document">
+      <div class="modal-dialog modal-dialog-centered"  role="document">
         <div class="modal-content">
-          <button
+          <!--button
             type="button"
             class="close ml-auto mr-2"
             data-dismiss="modal"
             aria-label="Close"
           >
             <span aria-hidden="true">&times;</span>
-          </button>
+          </button-->
 
           <div class="modal-body">
             <cropper
@@ -130,17 +135,16 @@
               :src="coppieImageData"
               @change="onChangeIconDimention"
             />
-            <button class="btn btn-secondary mt-2" @click="uploadImage2">
+            <button class="btn btn-info mt-2" @click="uploadImage2">
               Submit
             </button>
-            <button class="btn btn-dark" @click="addImageFile">
-              change Image
+            <button class="btn btn-dark mt-2" @click="addImageFile">
+              Change Image
             </button>
           </div>
         </div>
       </div>
     </div>
-
     <!--  -->
   </div>
 </template>
@@ -314,6 +318,15 @@ export default {
   },
 };
 </script>
+<!--script>
+const filebutton = document.getElementById('file-button');
+
+const fileChosen = document.getElementById('file-chosen');
+
+filebutton.addEventListener('change', function(){
+  fileChosen.textContent = this.files[0].name
+})
+</script-->
 
 <style scoped>
 .btnsubmiticon {
@@ -330,5 +343,13 @@ export default {
 .btn-success {
   padding-top: 0.1rem !important;
   padding-bottom: 0.1rem !important;
+}
+
+.label-btn{
+  background-color: #003585;
+  color: white;
+  font-family: sans-serif;
+  border-radius: 0.3rem;
+  cursor: pointer;
 }
 </style>
