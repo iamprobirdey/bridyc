@@ -81,30 +81,30 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 20);
+/******/ 	return __webpack_require__(__webpack_require__.s = 19);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./resources/js/firebase-messaging-sw.js":
-/*!***********************************************!*\
-  !*** ./resources/js/firebase-messaging-sw.js ***!
-  \***********************************************/
+/***/ "./resources/js/blog.js":
+/*!******************************!*\
+  !*** ./resources/js/blog.js ***!
+  \******************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nError: ENOENT: no such file or directory, open '/home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/js/firebase-messaging-sw.js'");
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nError: ENOENT: no such file or directory, open '/home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/js/blog.js'");
 
 /***/ }),
 
-/***/ 20:
-/*!*****************************************************!*\
-  !*** multi ./resources/js/firebase-messaging-sw.js ***!
-  \*****************************************************/
+/***/ 19:
+/*!************************************!*\
+  !*** multi ./resources/js/blog.js ***!
+  \************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/js/firebase-messaging-sw.js */"./resources/js/firebase-messaging-sw.js");
+module.exports = __webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/js/blog.js */"./resources/js/blog.js");
 
 
 /***/ })

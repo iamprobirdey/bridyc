@@ -751,9 +751,9 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var vue_advanced_cropper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-advanced-cropper */ "./node_modules/vue-advanced-cropper/dist/index.es.js");
-/* harmony import */ var vue_advanced_cropper_dist_style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-advanced-cropper/dist/style.css */ "./node_modules/vue-advanced-cropper/dist/style.css");
-/* harmony import */ var vue_advanced_cropper_dist_style_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vue_advanced_cropper_dist_style_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var vue_advanced_cropper__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-advanced-cropper */ "./node_modules/vue-advanced-cropper/dist/index.es.js");
+/* harmony import */ var vue_advanced_cropper_dist_style_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue-advanced-cropper/dist/style.css */ "./node_modules/vue-advanced-cropper/dist/style.css");
+/* harmony import */ var vue_advanced_cropper_dist_style_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(vue_advanced_cropper_dist_style_css__WEBPACK_IMPORTED_MODULE_2__);
 //
 //
 //
@@ -789,7 +789,7 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   components: {
-    Cropper: vue_advanced_cropper__WEBPACK_IMPORTED_MODULE_0__["Cropper"]
+    Cropper: vue_advanced_cropper__WEBPACK_IMPORTED_MODULE_1__["Cropper"]
   },
   methods: {
     change: function change(_ref) {
@@ -1068,6 +1068,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue_picture_input__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-picture-input */ "./node_modules/vue-picture-input/PictureInput.vue");
 /* harmony import */ var compressorjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! compressorjs */ "./node_modules/compressorjs/dist/compressor.js");
 /* harmony import */ var compressorjs__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(compressorjs__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var vue_advanced_cropper__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue-advanced-cropper */ "./node_modules/vue-advanced-cropper/dist/index.es.js");
+/* harmony import */ var vue_advanced_cropper_dist_style_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vue-advanced-cropper/dist/style.css */ "./node_modules/vue-advanced-cropper/dist/style.css");
+/* harmony import */ var vue_advanced_cropper_dist_style_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(vue_advanced_cropper_dist_style_css__WEBPACK_IMPORTED_MODULE_3__);
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 //
@@ -1136,6 +1139,88 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -1149,12 +1234,68 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       userImage: "",
       userImageStatus: false,
       userId: null
-    }, _defineProperty(_ref, "url", "/api/icon/upload"), _defineProperty(_ref, "domainUrl", location.origin), _defineProperty(_ref, "wait", false), _ref;
+    }, _defineProperty(_ref, "url", "/api/icon/upload"), _defineProperty(_ref, "domainUrl", location.origin), _defineProperty(_ref, "wait", false), _defineProperty(_ref, "coppieImageData", ""), _defineProperty(_ref, "croppieImageValidation", ""), _ref;
   },
   mounted: function mounted() {
     this.getImageData();
   },
   methods: {
+    addImageFile: function addImageFile() {
+      $("#addImageFile").modal("show");
+      $("#addImageCroppie").modal("hide");
+    },
+    loadCroppieImage: function loadCroppieImage(event) {
+      var _this = this;
+
+      var input = event.target;
+
+      if (input.files && input.files[0]) {
+        var validImageTypes = ["image/jpeg", "image/png", "image/jpg"];
+
+        if (validImageTypes.includes(input.files[0]["type"])) {
+          var reader = new FileReader();
+
+          reader.onload = function (e) {
+            _this.coppieImageData = e.target.result;
+          };
+
+          reader.readAsDataURL(input.files[0]);
+          $("#addImageFile").modal("hide");
+          $("#addImageCroppie").modal("show");
+        } else {
+          this.croppieImageValidation = "This is not valid image file";
+        }
+      }
+    },
+    uploadImage2: function uploadImage2() {
+      var _this2 = this;
+
+      console.log("hit");
+
+      var _this$$refs$cropper$g = this.$refs.cropper.getResult(),
+          canvas = _this$$refs$cropper$g.canvas;
+
+      if (canvas) {
+        var form = new FormData();
+        canvas.toBlob(function (blob) {
+          form.append("image", blob);
+          axios.post(_this2.url, form, {
+            emulateJSON: true
+          }).then(function (response) {
+            _this2.userImage = response.data.image;
+            _this2.userImageStatus = true;
+            _this2.wait = false;
+            $("#addImageCroppie").modal("hide");
+          })["catch"](function (errors) {
+            _this2.wait = false;
+
+            if (errors.response.data.errors.image) {
+              _this2.imageError = errors.response.data.errors.image[0];
+            }
+          });
+        }, "image/jpeg");
+      }
+    },
     b64toBlob: function b64toBlob(dataURI) {
       var byteString = atob(dataURI.split(",")[1]);
       var ab = new ArrayBuffer(byteString.length);
@@ -1169,12 +1310,12 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
       });
     },
     getImageData: function getImageData() {
-      var _this = this;
+      var _this3 = this;
 
       axios.get("/api/icon").then(function (response) {
-        _this.userImage = response.data.image;
-        _this.userId = response.data.userId;
-        _this.userImageStatus = true;
+        _this3.userImage = response.data.image;
+        _this3.userId = response.data.userId;
+        _this3.userImageStatus = true;
       })["catch"](function (errors) {
         Vue.toasted.error("Something went wrong", {
           position: "top-center",
@@ -1229,7 +1370,8 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
   },
   components: {
     PictureInput: vue_picture_input__WEBPACK_IMPORTED_MODULE_0__["default"],
-    Compressor: compressorjs__WEBPACK_IMPORTED_MODULE_1___default.a
+    Compressor: compressorjs__WEBPACK_IMPORTED_MODULE_1___default.a,
+    Cropper: vue_advanced_cropper__WEBPACK_IMPORTED_MODULE_2__["Cropper"]
   }
 });
 
@@ -17809,7 +17951,7 @@ var render = function() {
               staticClass: "btn",
               on: {
                 click: function($event) {
-                  return _vm.editTheIcon()
+                  return _vm.addImageFile()
                 }
               }
             },
@@ -17909,7 +18051,112 @@ var render = function() {
           ],
           1
         )
-      : _vm._e()
+      : _vm._e(),
+    _vm._v(" "),
+    _c(
+      "div",
+      {
+        staticClass: "modal fade",
+        attrs: {
+          id: "addImageFile",
+          tabindex: "-1",
+          role: "dialog",
+          "aria-labelledby": "exampleModalLabel",
+          "aria-hidden": "true"
+        }
+      },
+      [
+        _c(
+          "div",
+          { staticClass: "modal-dialog", attrs: { role: "document" } },
+          [
+            _c("div", { staticClass: "modal-content" }, [
+              _vm._m(1),
+              _vm._v(" "),
+              _c("div", { staticClass: "modal-body" }, [
+                _c("div", { staticClass: "button-wrapper" }, [
+                  _c("input", {
+                    ref: "file",
+                    staticClass: "btn btn-primary",
+                    attrs: { type: "file", accept: "image/*" },
+                    on: {
+                      change: function($event) {
+                        return _vm.loadCroppieImage($event)
+                      }
+                    }
+                  }),
+                  _vm._v(" "),
+                  _vm.croppieImageValidation != ""
+                    ? _c("p", {
+                        staticClass: "text-danger",
+                        domProps: {
+                          innerHTML: _vm._s(_vm.croppieImageValidation)
+                        }
+                      })
+                    : _vm._e()
+                ])
+              ])
+            ])
+          ]
+        )
+      ]
+    ),
+    _vm._v(" "),
+    _c(
+      "div",
+      {
+        staticClass: "modal fade",
+        attrs: {
+          id: "addImageCroppie",
+          tabindex: "-1",
+          role: "dialog",
+          "aria-labelledby": "exampleModalLabel",
+          "aria-hidden": "true"
+        }
+      },
+      [
+        _c(
+          "div",
+          { staticClass: "modal-dialog", attrs: { role: "document" } },
+          [
+            _c("div", { staticClass: "modal-content" }, [
+              _vm._m(2),
+              _vm._v(" "),
+              _c(
+                "div",
+                { staticClass: "modal-body" },
+                [
+                  _c("cropper", {
+                    ref: "cropper",
+                    staticClass: "upload-example-cropper",
+                    attrs: { src: _vm.coppieImageData }
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "button",
+                    {
+                      staticClass: "btn btn-secondary mt-2",
+                      on: { click: _vm.uploadImage2 }
+                    },
+                    [_vm._v("\n            Submit\n          ")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "button",
+                    {
+                      staticClass: "btn btn-dark",
+                      on: { click: _vm.addImageFile }
+                    },
+                    [_vm._v("\n            change Image\n          ")]
+                  )
+                ],
+                1
+              )
+            ])
+          ]
+        )
+      ]
+    )
   ])
 }
 var staticRenderFns = [
@@ -17921,6 +18168,40 @@ var staticRenderFns = [
       "div",
       { staticClass: "spinner-border text-warning", attrs: { role: "status" } },
       [_c("span", { staticClass: "sr-only" }, [_vm._v("Loading...")])]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "button",
+      {
+        staticClass: "close ml-auto mr-2",
+        attrs: {
+          type: "button",
+          "data-dismiss": "modal",
+          "aria-label": "Close"
+        }
+      },
+      [_c("span", { attrs: { "aria-hidden": "true" } }, [_vm._v("×")])]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "button",
+      {
+        staticClass: "close ml-auto mr-2",
+        attrs: {
+          type: "button",
+          "data-dismiss": "modal",
+          "aria-label": "Close"
+        }
+      },
+      [_c("span", { attrs: { "aria-hidden": "true" } }, [_vm._v("×")])]
     )
   }
 ]
