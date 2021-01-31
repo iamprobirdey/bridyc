@@ -63305,14 +63305,14 @@ module.exports = function(module) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var vue_croppie__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! vue-croppie */ "./node_modules/vue-croppie/dist/vue-croppie.es.js");
-/* harmony import */ var croppie_croppie_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! croppie/croppie.css */ "./node_modules/croppie/croppie.css");
-/* harmony import */ var croppie_croppie_css__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(croppie_croppie_css__WEBPACK_IMPORTED_MODULE_5__);
-/* harmony import */ var vue_toasted__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-toasted */ "./node_modules/vue-toasted/dist/vue-toasted.min.js");
-/* harmony import */ var vue_toasted__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vue_toasted__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var vee_validate__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vee-validate */ "./node_modules/vee-validate/dist/vee-validate.esm.js");
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var vue_croppie__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-croppie */ "./node_modules/vue-croppie/dist/vue-croppie.es.js");
+/* harmony import */ var croppie_croppie_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! croppie/croppie.css */ "./node_modules/croppie/croppie.css");
+/* harmony import */ var croppie_croppie_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(croppie_croppie_css__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var vue_toasted__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue-toasted */ "./node_modules/vue-toasted/dist/vue-toasted.min.js");
+/* harmony import */ var vue_toasted__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(vue_toasted__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var vee_validate__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vee-validate */ "./node_modules/vee-validate/dist/vee-validate.esm.js");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_4__);
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -63327,10 +63327,10 @@ window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.
 
 
 
-Vue.use(vue_toasted__WEBPACK_IMPORTED_MODULE_1___default.a);
-Vue.use(vee_validate__WEBPACK_IMPORTED_MODULE_2__["default"]); //Vue.use(Croppa);
+Vue.use(vue_toasted__WEBPACK_IMPORTED_MODULE_2___default.a);
+Vue.use(vee_validate__WEBPACK_IMPORTED_MODULE_3__["default"]); //Vue.use(Croppa);
 
-Vue.use(vue_croppie__WEBPACK_IMPORTED_MODULE_4__["default"]);
+Vue.use(vue_croppie__WEBPACK_IMPORTED_MODULE_0__["default"]);
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue

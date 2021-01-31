@@ -751,9 +751,9 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var vue_advanced_cropper__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-advanced-cropper */ "./node_modules/vue-advanced-cropper/dist/index.es.js");
-/* harmony import */ var vue_advanced_cropper_dist_style_css__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vue-advanced-cropper/dist/style.css */ "./node_modules/vue-advanced-cropper/dist/style.css");
-/* harmony import */ var vue_advanced_cropper_dist_style_css__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(vue_advanced_cropper_dist_style_css__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var vue_advanced_cropper__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-advanced-cropper */ "./node_modules/vue-advanced-cropper/dist/index.es.js");
+/* harmony import */ var vue_advanced_cropper_dist_style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue-advanced-cropper/dist/style.css */ "./node_modules/vue-advanced-cropper/dist/style.css");
+/* harmony import */ var vue_advanced_cropper_dist_style_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(vue_advanced_cropper_dist_style_css__WEBPACK_IMPORTED_MODULE_1__);
 //
 //
 //
@@ -789,7 +789,7 @@ __webpack_require__.r(__webpack_exports__);
     };
   },
   components: {
-    Cropper: vue_advanced_cropper__WEBPACK_IMPORTED_MODULE_1__["Cropper"]
+    Cropper: vue_advanced_cropper__WEBPACK_IMPORTED_MODULE_0__["Cropper"]
   },
   methods: {
     change: function change(_ref) {
