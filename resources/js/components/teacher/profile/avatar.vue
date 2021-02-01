@@ -62,7 +62,7 @@
     >
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
-          <div class="modal-body">
+          <div class="modal-body cropper-modal">
             <cropper
               class="upload-example-cropper"
               ref="cropper"
@@ -196,6 +196,11 @@ export default {
   font-family: sans-serif;
   border-radius: 0.3rem;
   cursor: pointer;
+}
+
+.cropper-modal{
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
 }
 </style>
 
