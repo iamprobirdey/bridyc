@@ -46,7 +46,7 @@
                 <p>A product by <a href="https://bucketbyte.com/" target="_blank">Bucket Byte</a></p>
             </div>
             <div class="d-flex justify-content-center">
-                <p class="mr-1"><i class="fa fa-copyright" aria-hidden="true"></i> 2020 bridyc.com |</p>
+                <p class="mr-1"><i class="fa fa-copyright" aria-hidden="true"></i> 2021 bridyc.com |</p>
                 <p>All rights reserved </p>
             </div>
         </div>

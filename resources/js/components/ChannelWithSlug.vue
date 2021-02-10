@@ -73,10 +73,6 @@
               <i class="fa fa-phone mr-1" aria-hidden="true"></i>
               {{ phoneNo }}
             </p>
-            <p class="m-1 mr-2">
-              <i class="fa fa-envelope mr-1" aria-hidden="true"></i
-              >{{ userData.email }}
-            </p>
           </div>
         </div>
         <div class="d-flex logo-title">
@@ -182,6 +178,17 @@
       <br />
       <br />
       <br />
+
+      <div class="dropdown share-button">
+        <span
+          ><img class="share-img" src="/images/share.svg" alt="share button"
+        /></span>
+        <div class="dropdown-content">
+          <twitter-button class="share-button dropdown-item" btnText />
+          <facebook-button class="share-button dropdown-item" btnText />
+          <whatsapp-button class="share-button dropdown-item" btnText />
+        </div>
+      </div>
 
       <div class="inspills mx-lg-5">
         <!-- Nav pills -->
@@ -370,9 +377,9 @@
               <div class="insadditionalinfo mt-4 text-capitalize">
                 <p>
                   <img src="/images/address.svg" alt="address icon" /> Address:
-                  {{ channelData.village.name }},
-                  {{ channelData.district.name }},
-                  {{ channelData.state.name }}
+                  {{ locationData.location }},
+                  <!-- {{ channelData.district.name }},
+                  {{ channelData.state.name }} -->
                 </p>
                 <p>
                   <img src="/images/mailbox.svg" alt="pin code icon" /> Pin
@@ -584,12 +591,16 @@
 </template>
 
 <script>
+import TwitterButton from "vue-share-buttons/src/components/TwitterButton";
+import FacebookButton from "vue-share-buttons/src/components/FacebookButton";
+import WhatsappButton from "vue-share-buttons/src/components/WhatsAppButton";
 export default {
   data() {
     return {
       channelData: {},
       userData: {},
       currentuserData: {},
+      locationData: {},
       domainUrl: location.origin,
       phoneNo: "",
       socialCount: 0,
@@ -599,6 +610,11 @@ export default {
       channelRequestDecider: "",
       channelFacker: false,
     };
+  },
+  components: {
+    TwitterButton,
+    FacebookButton,
+    WhatsappButton,
   },
   props: {
     user: {
@@ -621,11 +637,16 @@ export default {
       type: Boolean,
       default: null,
     },
+    location: {
+      type: Object,
+      default: null,
+    },
   },
   created() {
     this.userData = this.user;
     this.channelData = this.channel;
     this.currentuserData = this.currentuser;
+    this.locationData = this.location;
     console.log(this.currentuserData);
     this.phoneNo = this.userData.phone ? this.userData.phone : "Not provided";
     this.userID = this.userid;
@@ -701,5 +722,20 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  width: 45px;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 </style>

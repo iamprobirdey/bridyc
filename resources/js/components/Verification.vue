@@ -83,7 +83,7 @@
             }}</span>
           </div>
 
-          <div
+          <!-- <div
             class="form-group"
             :class="{
               'has-error':
@@ -116,7 +116,7 @@
             <span v-show="serverErrors.village_id != ''" class="text-danger">{{
               serverErrors.village_id
             }}</span>
-          </div>
+          </div> -->
           <div
             class="form-group"
             :class="{
@@ -128,7 +128,7 @@
               id="title"
               v-on:focus="serverErrors.title = ''"
               v-model="formData.title"
-              v-validate="'required|max:40'"
+              v-validate="'required|max:100'"
               data-vv-delay="20"
               name="title"
               type="text"
@@ -136,7 +136,7 @@
                 'form-control': true,
                 'is-invalid': errors.has('title'),
               }"
-              placeholder="Insert your institute name"
+              placeholder="Enter your institute name"
             />
             <i v-show="errors.has('title')" class="is-invalid"></i>
 
@@ -166,7 +166,7 @@
                 'form-control': true,
                 'is-invalid': errors.has('udise'),
               }"
-              placeholder="Enter your institute udise code Optinal"
+              placeholder="Enter your institute udise code Optional"
             />
             <i v-show="errors.has('udise')" class="is-invalid"></i>
 
@@ -198,7 +198,7 @@
                 'form-control': true,
                 'is-invalid': errors.has('location'),
               }"
-              placeholder="Insert your institute location"
+              placeholder="Enter your School/College Full Address"
             />
             <i v-show="errors.has('location')" class="is-invalid"></i>
 
@@ -448,18 +448,18 @@ export default {
       }
       return false;
     },
-    villageStatusComputed: function () {
-      if (this.formData.state_id != "" && this.formData.district_id != "") {
-        this.villageData = [];
-        this.districtData[0].filter((item) => {
-          if (item.id === this.formData.district_id) {
-            this.villageData.push(item.village);
-          }
-        });
-        return true;
-      }
-      return false;
-    },
+    // villageStatusComputed: function () {
+    //   if (this.formData.state_id != "" && this.formData.district_id != "") {
+    //     this.villageData = [];
+    //     this.districtData[0].filter((item) => {
+    //       if (item.id === this.formData.district_id) {
+    //         this.villageData.push(item.village);
+    //       }
+    //     });
+    //     return true;
+    //   }
+    //   return false;
+    // },
   },
   created() {
     this.placesData = this.places;

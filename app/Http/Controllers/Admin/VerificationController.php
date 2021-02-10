@@ -30,7 +30,9 @@ class VerificationController extends Controller
             'district',
             'village',
             'language'
-        ])->get();
+        ])
+            ->latest()
+            ->get();
         return view('admin.verification.verification', compact('users'));
     }
 

@@ -91,6 +91,7 @@ main{
        font-weight: 100;
     }
      }*/
+     
  }
  .logo-title{
      position: relative;
@@ -153,7 +154,7 @@ main{
 
  .inssocial{
    position: relative;
-   top:-76px;
+   top:-70px;
    left:63%;
    font-size: 15px;
    width:115px;
@@ -209,6 +210,31 @@ main{
     height: 16px;
   }
 }
+
+
+ .share-button{
+   .share-img{
+     width: 20px;
+     height: 20px;
+     @include screensize(laptop){
+       width: 30px;
+       height:30px;
+     }
+   }
+  top:-190px;
+  left: 85%;
+  @include screensize(tablet){
+    left: 87%;
+  }
+  @include screensize(laptop){
+    top: -160px;
+    left:18px;
+  }
+  @include screensize(desktop){
+    top: -160px;
+    left:50px;
+  }
+ }
 
 
 

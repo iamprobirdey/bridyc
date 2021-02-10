@@ -81,7 +81,11 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
+<<<<<<< HEAD
+/******/ 	return __webpack_require__(__webpack_require__.s = 18);
+=======
 /******/ 	return __webpack_require__(__webpack_require__.s = 20);
+>>>>>>> b0fe97cb8205501db7684288499995a19474cf58
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -93,11 +97,39 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
+<<<<<<< HEAD
+importScripts('https://www.gstatic.com/firebasejs/8.2.2/firebase-app.js');
+importScripts('https://www.gstatic.com/firebasejs/8.2.2/firebase-messaging.js');
+var firebaseConfig = {
+  apiKey: "AIzaSyD1QOe8gYXL9bLBkxjfK9yhBOMnF80W7sg",
+  authDomain: "bridyc-89d72.firebaseapp.com",
+  projectId: "bridyc-89d72",
+  storageBucket: "bridyc-89d72.appspot.com",
+  messagingSenderId: "774509716299",
+  appId: "1:774509716299:web:4a4f7f5ac5f1185287bece",
+  measurementId: "G-QF5FY5Y9NT"
+}; // Initialize Firebase
+
+firebase.initializeApp(firebaseConfig);
+var messaging = firebase.messaging();
+messaging.setBackgroundMessageHandler(function (payload) {
+  var title = 'Hello World';
+  var options = {
+    body: payload.data.status
+  };
+  return self.registration.showNotification(title, options);
+});
+
+/***/ }),
+
+/***/ 18:
+=======
 throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nError: ENOENT: no such file or directory, open '/home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/js/firebase-messaging-sw.js'");
 
 /***/ }),
 
 /***/ 20:
+>>>>>>> b0fe97cb8205501db7684288499995a19474cf58
 /*!*****************************************************!*\
   !*** multi ./resources/js/firebase-messaging-sw.js ***!
   \*****************************************************/

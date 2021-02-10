@@ -3,7 +3,6 @@
     <table class="table responsive">
       <thead>
         <tr>
-          <th scope="col">Serial Number</th>
           <th scope="col">Block</th>
           <th scope="col">Status</th>
           <th scope="col">Slug Generator</th>
@@ -15,7 +14,6 @@
       </thead>
       <tbody>
         <tr v-for="(verification, index) in usersData" :key="verification.id">
-          <td>{{ verification.id }}</td>
           <td>
             <button
               class="btn btn-primary"
@@ -98,6 +96,14 @@
               Delete Channel
             </button>
           </td>
+          <!-- <td>
+            <a
+              class="btn btn-secondary"
+              :href="'user/dashboard/channel/' + verification.title"
+            >
+              Visit Institute
+            </a>
+          </td> -->
         </tr>
       </tbody>
     </table>

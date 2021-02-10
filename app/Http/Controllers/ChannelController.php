@@ -7,6 +7,7 @@ use App\InstituteAnalysis;
 use App\Podcast;
 use App\User;
 use App\UserChannelRequest;
+use App\Verification;
 use Illuminate\Support\Facades\Auth;
 use Spatie\Activitylog\Models\Activity;
 
@@ -34,7 +35,6 @@ class ChannelController extends Controller
 
     public function getChannelBySlug(Channel $channel)
     {
-
         //$this->fireTheLog($channel);
         $channeldata = Channel::where('id', $channel->id)
             ->with(['state', 'district', 'village', 'language', 'achievement', 'board'])
@@ -48,8 +48,6 @@ class ChannelController extends Controller
                 $query->orderBy('created_at', 'desc');
             }])
             ->get();
-
-
         $user = User::where('id', $channel->user_id)
             ->select('id', 'email', 'vission', 'message', 'name', 'avatar')
             ->with('verification')
@@ -65,8 +63,10 @@ class ChannelController extends Controller
 
         $userId = current_user_id();
 
+        $location = Verification::where('user_id', $channel->user_id)
+            ->select('location')->first();
 
-        return view('channel_with_slug', compact(['channeldata', 'user', 'currentUser', 'userId', 'isTeacher']));
+        return view('channel_with_slug', compact(['channeldata', 'user', 'currentUser', 'userId', 'isTeacher', 'location']));
     }
 
     private function fireTheLog($channel)
