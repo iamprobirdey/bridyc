@@ -151,6 +151,7 @@ class ProfileController extends Controller
     public function storeAvatar(User $user, Request $request)
     {
         $this->authorize('updatingteahcer', $user);
+
         $request->validate([
             'image' => 'mimes:jpeg,jpg,png|required|max:7000|file'
         ]);
@@ -158,8 +159,8 @@ class ProfileController extends Controller
         $time = Carbon::now('Asia/Kolkata');
         $imageName = $time->year . $time->month . $time->day . ($time->micro + mt_rand(11111, 99999)) . '.jpg';
         $realImage = Image::make($request->file('image'));
-        $realImage->fit(600, 600, null, 'center');
-        $image = $imageS = $imageM = Image::canvas(600, 600, '#ffffff')->insert($realImage);
+        $realImage->fit($request->input('width'), $request->input('height'), null, 'center');
+        $image = $imageS = $imageM = Image::canvas($request->input('width'), $request->input('height'), '#ffffff')->insert($realImage);
         $path = "media/teacher/" . current_user_id() . "/" . "profile/";
 
         if (is_dir($path)) {

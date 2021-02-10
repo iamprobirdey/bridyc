@@ -11,6 +11,17 @@
                 </a>
             </li>
             <li class="nav-item ">
+<<<<<<< HEAD
+=======
+                <a class="nav-link" href="{{url('/admin/userinfo/')}}">
+                    <span class="material-icons sidebaricons">
+                        dashboard
+                    </span>
+                    User Information
+                </a>
+            </li>
+            <li class="nav-item ">
+>>>>>>> 91565265fdf04e92c306bfd5f6d8c7a0ac7eea4c
                 <a class="nav-link" href="{{url('/admin/country')}}">
                     <span class="material-icons sidebaricons">
                         dashboard

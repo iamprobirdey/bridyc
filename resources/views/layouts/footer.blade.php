@@ -18,6 +18,8 @@
     $("left-sidebar .nav li").removeClass("active");
     $(this).addClass("active");
   });
+
+
 </script>
 </body>
 

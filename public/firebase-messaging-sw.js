@@ -81,7 +81,11 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
+<<<<<<< HEAD
 /******/ 	return __webpack_require__(__webpack_require__.s = 18);
+=======
+/******/ 	return __webpack_require__(__webpack_require__.s = 20);
+>>>>>>> 91565265fdf04e92c306bfd5f6d8c7a0ac7eea4c
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -93,6 +97,7 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
+<<<<<<< HEAD
 importScripts('https://www.gstatic.com/firebasejs/8.2.2/firebase-app.js');
 importScripts('https://www.gstatic.com/firebasejs/8.2.2/firebase-messaging.js');
 var firebaseConfig = {
@@ -118,13 +123,24 @@ messaging.setBackgroundMessageHandler(function (payload) {
 /***/ }),
 
 /***/ 18:
+=======
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nError: ENOENT: no such file or directory, open '/home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/js/firebase-messaging-sw.js'");
+
+/***/ }),
+
+/***/ 20:
+>>>>>>> 91565265fdf04e92c306bfd5f6d8c7a0ac7eea4c
 /*!*****************************************************!*\
   !*** multi ./resources/js/firebase-messaging-sw.js ***!
   \*****************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
+<<<<<<< HEAD
 module.exports = __webpack_require__(/*! C:\laragon\www\bridyc\resources\js\firebase-messaging-sw.js */"./resources/js/firebase-messaging-sw.js");
+=======
+module.exports = __webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/js/firebase-messaging-sw.js */"./resources/js/firebase-messaging-sw.js");
+>>>>>>> 91565265fdf04e92c306bfd5f6d8c7a0ac7eea4c
 
 
 /***/ })

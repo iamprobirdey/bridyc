@@ -119,12 +119,21 @@ export default {
   created() {},
   mounted() {
     this.verificationData = this.verification;
+<<<<<<< HEAD
     console.log(this.verificationData.id);
+=======
+>>>>>>> 91565265fdf04e92c306bfd5f6d8c7a0ac7eea4c
   },
   methods: {
+<<<<<<< HEAD
     getTheSubmitId() {
       this.metaKeywordsDescriptionsId = this.verificationData.id;
       this.metaGenerationForm();
+=======
+    getTheSubmitId(data) {
+      //this.metaKeywordsDescriptionsId = id;
+      //this.metaGenerationForm();
+>>>>>>> 91565265fdf04e92c306bfd5f6d8c7a0ac7eea4c
     },
     getMetaModel() {
       $("#metaGenerator" + this.verificationData.id).modal("show");
