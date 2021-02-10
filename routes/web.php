@@ -303,7 +303,6 @@ Route::group([
         Route::post('channel/delete/notification/{channel_notifications:id}', 'User\ChannelNotificationController@delete');
     });
 });
-
 //institue multi image upload ==> done
 //Admin side delete user problem ==> done
 //user verification layout changes with modal ==> done
