@@ -61092,6 +61092,17 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./resources/sass/blogs.scss":
+/*!***********************************!*\
+  !*** ./resources/sass/blogs.scss ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+throw new Error("Module build failed (from ./node_modules/css-loader/index.js):\nModuleBuildError: Module build failed (from ./node_modules/sass-loader/dist/cjs.js):\nError: ENOENT: no such file or directory, open '/home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/sass/blogs.scss'\n    at /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/node_modules/webpack/lib/NormalModule.js:316:20\n    at /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/node_modules/loader-runner/lib/LoaderRunner.js:367:11\n    at /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/node_modules/loader-runner/lib/LoaderRunner.js:203:19\n    at /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/node_modules/enhanced-resolve/lib/CachedInputFileSystem.js:85:15\n    at processTicksAndRejections (internal/process/task_queues.js:79:11)");
+
+/***/ }),
+
 /***/ "./resources/sass/contact.scss":
 /*!*************************************!*\
   !*** ./resources/sass/contact.scss ***!
@@ -61192,9 +61203,9 @@ __webpack_require__.r(__webpack_exports__);
 /***/ }),
 
 /***/ 0:
-/*!********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/index.scss ./resources/sass/application.scss ./resources/sass/faq.scss ./resources/sass/contact.scss ./resources/sass/privacy.scss ./resources/sass/institutedashboard.scss ./resources/sass/institutelandingpage.scss ./resources/sass/profile.scss ./resources/sass/about.scss ./resources/sass/login-register.scss ./resources/sass/error.scss ***!
-  \********************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** multi ./resources/js/app.js ./resources/sass/app.scss ./resources/sass/index.scss ./resources/sass/application.scss ./resources/sass/faq.scss ./resources/sass/contact.scss ./resources/sass/privacy.scss ./resources/sass/institutedashboard.scss ./resources/sass/institutelandingpage.scss ./resources/sass/profile.scss ./resources/sass/about.scss ./resources/sass/login-register.scss ./resources/sass/error.scss ./resources/sass/blogs.scss ***!
+  \************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -61210,7 +61221,8 @@ __webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Brid
 __webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/sass/profile.scss */"./resources/sass/profile.scss");
 __webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/sass/about.scss */"./resources/sass/about.scss");
 __webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/sass/login-register.scss */"./resources/sass/login-register.scss");
-module.exports = __webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/sass/error.scss */"./resources/sass/error.scss");
+__webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/sass/error.scss */"./resources/sass/error.scss");
+module.exports = __webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/sass/blogs.scss */"./resources/sass/blogs.scss");
 
 
 /***/ })
