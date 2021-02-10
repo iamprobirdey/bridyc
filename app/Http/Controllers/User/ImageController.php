@@ -38,6 +38,7 @@ class ImageController extends Controller
 
     public function storeImageIcon(StoreIconImageValidation $request)
     {
+
         $this->authorize('viewforchannel', auth()->user());
         $this->authorize('checkChannelForUser', auth()->user()->channel);
         $time = Carbon::now('Asia/Kolkata');
@@ -45,10 +46,9 @@ class ImageController extends Controller
         $imageName = $time->year . $time->month . $time->day . ($time->micro + mt_rand(11111, 99999)) . '.jpg';
 
 
-
         $realImage = Image::make($request->file('image'));
-        $realImage->fit(600, 600, null, 'center');
-        $image = $imageS = $imageM = Image::canvas(600, 600, '#ffffff')->insert($realImage);
+        $realImage->fit($request->input('width'), $request->input('height'), null, 'center');
+        $image = $imageS = $imageM = Image::canvas($request->input('width'), $request->input('height'), '#ffffff')->insert($realImage);
         $path = "media/channel/" . $currentUserId . "/avatar/";
         if (is_dir('media/channel/' . $currentUserId . '/avatar/')) {
             $avatar = Channel::where('user_id', $currentUserId)
@@ -112,8 +112,8 @@ class ImageController extends Controller
         $imageName = $time->year . $time->month . $time->day . ($time->micro + mt_rand(11111, 99999)) . '.jpg';
 
         $realImage = Image::make($request->validated()['image']);
-        $realImage->fit(600, 600, null, 'center');
-        $image = $imageS = $imageM = Image::canvas(600, 600, '#ffffff')->insert($realImage);
+        $realImage->fit($request->input('width'), $request->input('height'), null, 'center');
+        $image = $imageS = $imageM = Image::canvas($request->input('width'), $request->input('height'), '#ffffff')->insert($realImage);
         $path = "media/channel/" . $currentUserId . "/cover/";
 
         if (is_dir('media/channel/' . $currentUserId)) {

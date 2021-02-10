@@ -151,6 +151,9 @@ export default {
   },
   mounted() {},
   methods: {
+    goBack() {
+      this.genderVissionChecker = true;
+    },
     getFormData() {
       this.$validator.validate().then((result) => {
         console.log(result);

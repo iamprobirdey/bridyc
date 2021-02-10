@@ -4,7 +4,6 @@ main{
     .inscover{
       width: 100%;
       height: 230px;
-      object-fit: cover;
       @include screensize(tablet){
          height: 280px;
        }

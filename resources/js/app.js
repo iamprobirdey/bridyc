@@ -15,6 +15,8 @@ require("./bootstrap");
 
 window.Vue = require("vue");
 //import Croppa from 'vue-croppa';
+import VueCroppie from "vue-croppie";
+import "croppie/croppie.css";
 import Toasted from "vue-toasted";
 import VeeValidate from "vee-validate";
 import _, { includes } from "lodash";
@@ -22,6 +24,9 @@ import _, { includes } from "lodash";
 Vue.use(Toasted);
 Vue.use(VeeValidate);
 //Vue.use(Croppa);
+Vue.use(VueCroppie);
+
+
 
 
 /**

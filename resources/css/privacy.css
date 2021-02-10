@@ -1,0 +1,26 @@
+.mainheader {
+  background-color: #f9fafa;
+  font-size: 30px;
+  margin-top: 100px;
+  color: #3659a2;
+  text-align: center;
+}
+
+.ptbody {
+  margin-top: 50px;
+}
+
+@media only screen and (min-width: 768px) {
+  .ptbody {
+    margin-top: 80px;
+  }
+}
+
+.ptbody .mainbody {
+  background-color: white;
+  padding: 30px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}

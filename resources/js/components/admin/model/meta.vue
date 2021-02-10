@@ -119,12 +119,11 @@ export default {
   created() {},
   mounted() {
     this.verificationData = this.verification;
-    console.log(this.verificationData.id);
   },
   methods: {
-    getTheSubmitId() {
-      this.metaKeywordsDescriptionsId = this.verificationData.id;
-      this.metaGenerationForm();
+    getTheSubmitId(data) {
+      //this.metaKeywordsDescriptionsId = id;
+      //this.metaGenerationForm();
     },
     getMetaModel() {
       $("#metaGenerator" + this.verificationData.id).modal("show");

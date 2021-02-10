@@ -22,25 +22,123 @@ Auth::routes(['verify' => true]);
 //Route::post('login', 'Auth\LoginController@login');
 //Route::post('logout', 'Auth\LoginController@logout')->name('logout');
 
+
+
 Route::group([
     'name' => 'admin.',
     'prefix' => 'admin',
     'middleware' => ['can:admin']
 ], function () {
     Route::get('/', 'Admin\AdminController@index')->name('admin');
+    //User Information
     Route::group([
-        'name' => 'blog.',
-        'prefix' => 'blog'
+        'name' => 'userinfo.',
+        'prefix' => 'userinfo'
     ], function () {
-        Route::get('/', 'Admin\BlogController@index')->name('admin.blog.index');
+        Route::get('/', 'Admin\UserInformationController@index')->name('admin.userinfo.index');
+        Route::get('get/all/user/information', 'Admin\UserInformationController@getAllUserInformation');
+        Route::get('get/selected/user/information', 'Admin\UserInformationController@getSelectedInformation');
     });
+    //Country
     Route::group([
-        'name' => 'contact.',
-        'prefix' => 'contact'
+        'name' => 'country.',
+        'prefix' => 'country'
     ], function () {
-        Route::get('/', 'Admin\ContactUsController@index');
-        Route::post('/enquiry/{contact:id}', 'Admin\ContactUsController@enquiry')->name('enquiry');
+        Route::get('/', 'Admin\CountryController@index')->name('admin.country.index');
+        Route::get('create', 'Admin\CountryController@create');
+        Route::post('create', 'Admin\CountryController@store')->name('admin.country.create');
+        Route::get('updating/{country:id}', 'Admin\CountryController@updating');
+        Route::post('update/{country:id}', 'Admin\CountryController@update')->name('admin.country.update');
     });
+    //State
+    Route::group([
+        'name' => 'state.',
+        'prefix' => 'state'
+    ], function () {
+        Route::get('/', 'Admin\StateController@index');
+        Route::get('create', 'Admin\StateController@create');
+        Route::post('create', 'Admin\StateController@store')->name('admin.state.create');
+        Route::get('updating/{id}', 'Admin\StateController@updating');
+        Route::post('update/{id}', 'Admin\StateController@update')->name('admin.state.update');
+    });
+    //State
+    Route::group([
+        'name' => 'district.',
+        'prefix' => 'district'
+    ], function () {
+        Route::get('/', 'Admin\DistrictController@index');
+        Route::get('create', 'Admin\DistrictController@create');
+        Route::post('create', 'Admin\DistrictController@store')->name('admin.district.create');
+        Route::get('updating/{id}', 'Admin\DistrictController@updating');
+        Route::post('update/{id}', 'Admin\DistrictController@update')->name('admin.district.update');
+    });
+    //Village
+    Route::group([
+        'name' => 'village.',
+        'prefix' => 'village'
+    ], function () {
+        Route::get('/', 'Admin\VillageController@index');
+        Route::get('create', 'Admin\VillageController@create');
+        Route::post('create', 'Admin\VillageController@store')->name('admin.village.create');
+        Route::get('updating/{id}', 'Admin\VillageController@updating');
+        Route::post('update/{id}', 'Admin\VillageController@update')->name('admin.village.update');
+    });
+    //Board
+    Route::group([
+        'name' => 'board.',
+        'prefix' => 'board'
+    ], function () {
+        Route::get('/', 'Admin\BoardController@index');
+        Route::get('create', 'Admin\BoardController@create');
+        Route::post('create', 'Admin\BoardController@store')->name('admin.board.create');
+        Route::get('updating/{id}', 'Admin\BoardController@updating');
+        Route::post('update/{id}', 'Admin\BoardController@update')->name('admin.board.update');
+    });
+    //Standard
+    Route::group([
+        'name' => 'standard.',
+        'prefix' => 'standard'
+    ], function () {
+        Route::get('/', 'Admin\StandardController@index');
+        Route::get('create', 'Admin\StandardController@create');
+        Route::post('create', 'Admin\StandardController@store')->name('admin.standard.create');
+        Route::get('updating/{id}', 'Admin\StandardController@updating');
+        Route::post('update/{id}', 'Admin\StandardController@update')->name('admin.standard.update');
+    });
+    //Language
+    Route::group([
+        'name' => 'language.',
+        'prefix' => 'language'
+    ], function () {
+        Route::get('/', 'Admin\LanguageController@index');
+        Route::get('create', 'Admin\LanguageController@create');
+        Route::post('create', 'Admin\LanguageController@store')->name('admin.language.create');
+        Route::get('updating/{id}', 'Admin\LanguageController@updating');
+        Route::post('update/{id}', 'Admin\LanguageController@update')->name('admin.language.update');
+    });
+    //Subject
+    Route::group([
+        'name' => 'subject.',
+        'prefix' => 'subject'
+    ], function () {
+        Route::get('/', 'Admin\SubjectController@index');
+        Route::get('create', 'Admin\SubjectController@create');
+        Route::post('create', 'Admin\SubjectController@store')->name('admin.subject.create');
+        Route::get('updating/{id}', 'Admin\SubjectController@updating');
+        Route::post('update/{id}', 'Admin\SubjectController@update')->name('admin.subject.update');
+    });
+    //Hobby
+    Route::group([
+        'name' => 'hobby.',
+        'prefix' => 'hobby'
+    ], function () {
+        Route::get('/', 'Admin\HobbiesController@index');
+        Route::get('create', 'Admin\HobbiesController@create');
+        Route::post('create', 'Admin\HobbiesController@store')->name('admin.hobby.create');
+        Route::get('updating/{id}', 'Admin\HobbiesController@updating');
+        Route::post('update/{id}', 'Admin\HobbiesController@update')->name('admin.hobby.update');
+    });
+    //Podcast
     Route::group([
         'name' => 'podcast.',
         'prefix' => 'podcast'
@@ -52,103 +150,15 @@ Route::group([
         Route::post('update/{podcast:id}', 'Admin\PodcastController@update')->name('admin.podcast.update');
         Route::get('delete/{podcast:id}', 'Admin\PodcastController@delete');
     });
+    //Enquiry
     Route::group([
-        'name' => 'country.',
-        'prefix' => 'country'
+        'name' => 'contact.',
+        'prefix' => 'contact'
     ], function () {
-        Route::get('/', 'Admin\CountryController@index')->name('admin.country.index');
-        Route::get('create', 'Admin\CountryController@create');
-        Route::post('create', 'Admin\CountryController@store')->name('admin.country.create');
-        Route::get('updating/{country:id}', 'Admin\CountryController@updating');
-        Route::post('update/{country:id}', 'Admin\CountryController@update')->name('admin.country.update');
+        Route::get('/', 'Admin\ContactUsController@index');
+        Route::post('/enquiry/{contact:id}', 'Admin\ContactUsController@enquiry')->name('enquiry');
     });
-    Route::group([
-        'name' => 'state.',
-        'prefix' => 'state'
-    ], function () {
-        Route::get('/', 'Admin\StateController@index');
-        Route::get('create', 'Admin\StateController@create');
-        Route::post('create', 'Admin\StateController@store')->name('admin.state.create');
-        Route::get('updating/{id}', 'Admin\StateController@updating');
-        Route::post('update/{id}', 'Admin\StateController@update')->name('admin.state.update');
-    });
-
-    Route::group([
-        'name' => 'district.',
-        'prefix' => 'district'
-    ], function () {
-        Route::get('/', 'Admin\DistrictController@index');
-        Route::get('create', 'Admin\DistrictController@create');
-        Route::post('create', 'Admin\DistrictController@store')->name('admin.district.create');
-        Route::get('updating/{id}', 'Admin\DistrictController@updating');
-        Route::post('update/{id}', 'Admin\DistrictController@update')->name('admin.district.update');
-    });
-
-    Route::group([
-        'name' => 'village.',
-        'prefix' => 'village'
-    ], function () {
-        Route::get('/', 'Admin\VillageController@index');
-        Route::get('create', 'Admin\VillageController@create');
-        Route::post('create', 'Admin\VillageController@store')->name('admin.village.create');
-        Route::get('updating/{id}', 'Admin\VillageController@updating');
-        Route::post('update/{id}', 'Admin\VillageController@update')->name('admin.village.update');
-    });
-
-    Route::group([
-        'name' => 'board.',
-        'prefix' => 'board'
-    ], function () {
-        Route::get('/', 'Admin\BoardController@index');
-        Route::get('create', 'Admin\BoardController@create');
-        Route::post('create', 'Admin\BoardController@store')->name('admin.board.create');
-        Route::get('updating/{id}', 'Admin\BoardController@updating');
-        Route::post('update/{id}', 'Admin\BoardController@update')->name('admin.board.update');
-    });
-
-    Route::group([
-        'name' => 'standard.',
-        'prefix' => 'standard'
-    ], function () {
-        Route::get('/', 'Admin\StandardController@index');
-        Route::get('create', 'Admin\StandardController@create');
-        Route::post('create', 'Admin\StandardController@store')->name('admin.standard.create');
-        Route::get('updating/{id}', 'Admin\StandardController@updating');
-        Route::post('update/{id}', 'Admin\StandardController@update')->name('admin.standard.update');
-    });
-    Route::group([
-        'name' => 'subject.',
-        'prefix' => 'subject'
-    ], function () {
-        Route::get('/', 'Admin\SubjectController@index');
-        Route::get('create', 'Admin\SubjectController@create');
-        Route::post('create', 'Admin\SubjectController@store')->name('admin.subject.create');
-        Route::get('updating/{id}', 'Admin\SubjectController@updating');
-        Route::post('update/{id}', 'Admin\SubjectController@update')->name('admin.subject.update');
-    });
-
-    Route::group([
-        'name' => 'hobby.',
-        'prefix' => 'hobby'
-    ], function () {
-        Route::get('/', 'Admin\HobbiesController@index');
-        Route::get('create', 'Admin\HobbiesController@create');
-        Route::post('create', 'Admin\HobbiesController@store')->name('admin.hobby.create');
-        Route::get('updating/{id}', 'Admin\HobbiesController@updating');
-        Route::post('update/{id}', 'Admin\HobbiesController@update')->name('admin.hobby.update');
-    });
-
-    Route::group([
-        'name' => 'language.',
-        'prefix' => 'language'
-    ], function () {
-        Route::get('/', 'Admin\LanguageController@index');
-        Route::get('create', 'Admin\LanguageController@create');
-        Route::post('create', 'Admin\LanguageController@store')->name('admin.language.create');
-        Route::get('updating/{id}', 'Admin\LanguageController@updating');
-        Route::post('update/{id}', 'Admin\LanguageController@update')->name('admin.language.update');
-    });
-
+    //User Verification
     Route::group([
         'name' => 'verification.',
         'prefix' => 'verification'
@@ -163,6 +173,8 @@ Route::group([
         //Add meta-keywords and meta-description
         Route::post('api/keywords/description/{id}', 'User\MetaController@store');
         Route::get('api/delete/user/{user:id}', 'Admin\VerificationController@deleteUser');
+        //Institute Title
+        Route::post('api/institute/title/{user:id}', 'Admin\VerificationController@changeTitle');
     });
 });
 
