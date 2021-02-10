@@ -281,6 +281,59 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -312,7 +365,9 @@ __webpack_require__.r(__webpack_exports__);
       authValue: "",
       userId: "",
       wait: false,
-      blobData: {}
+      blobData: {},
+      step: 1,
+      prefill: ""
     };
   },
   props: {
@@ -334,12 +389,12 @@ __webpack_require__.r(__webpack_exports__);
   mounted: function mounted() {},
   methods: {
     addAchievement: function addAchievement() {
-      this.openAchievementForm = true;
+      this.openAchievementForm = !this.openAchievementForm;
       this.formData.image_path = "";
       this.formData.title = "";
       this.formData.description = "";
       this.formData.date = "";
-      this.showAchievement = false;
+      this.showAchievement = !this.showAchievement;
       this.wait = false;
     },
     achievementSubmit: _.debounce(function () {
@@ -347,7 +402,6 @@ __webpack_require__.r(__webpack_exports__);
 
       this.$validator.validate().then(function (result) {
         if (result) {
-          console.log(_this.formData);
           if (_this.formData.image_path === "") _this.serverErrors.image_path = "Image is required";
           var formUrl = "";
 
@@ -366,6 +420,8 @@ __webpack_require__.r(__webpack_exports__);
             new compressorjs__WEBPACK_IMPORTED_MODULE_1___default.a(_this.b64toBlob(_this.formData.image_path), {
               quality: 0.7,
               success: function success(result) {
+                var _this2 = this;
+
                 var blob = new FormData();
                 blob.append("title", vm.formData.title);
                 blob.append("description", vm.formData.description);
@@ -392,6 +448,22 @@ __webpack_require__.r(__webpack_exports__);
                     vm.wait = false;
                   }
                 })["catch"](function (errors) {
+                  if (errors.response.data.errors.image_path) {
+                    _this2.serverErrors.image_path = errors.response.data.errors.image_path[0];
+                  }
+
+                  if (errors.response.data.errors.title) {
+                    _this2.serverErrors.title = errors.response.data.errors.title[0];
+                  }
+
+                  if (errors.response.data.errors.description) {
+                    _this2.serverErrors.description = errors.response.data.errors.description[0];
+                  }
+
+                  if (errors.response.data.errors.date) {
+                    _this2.serverErrors.date = errors.response.data.errors.date[0];
+                  }
+
                   vm.disable = false;
                   vm.wait = false;
                   Vue.toasted.error("Something went wrong", {
@@ -466,6 +538,7 @@ __webpack_require__.r(__webpack_exports__);
     },
     editTheForm: function editTheForm(data, index) {
       this.editingUrlChecker = true;
+      this.prefill = this.baseUrl + "media/channel/" + this.userId + "/achievement/" + data.image_path;
       this.formData.title = data.title;
       this.formData.description = data.description;
       this.formData.date = data.date;
@@ -2944,7 +3017,14 @@ var render = function() {
           }
         }
       },
-      [_c("i", { staticClass: "fa fa-plus", attrs: { "aria-hidden": "true" } })]
+      [
+        _c("i", {
+          class: [
+            this.openAchievementForm === false ? "fa fa-plus" : "fa fa-minus"
+          ],
+          attrs: { "aria-hidden": "true" }
+        })
+      ]
     ),
     _vm._v(" "),
     _vm.showAchievement
@@ -3039,6 +3119,7 @@ var render = function() {
               _c("picture-input", {
                 ref: "pictureInput",
                 attrs: {
+                  prefill: _vm.prefill,
                   width: "200",
                   height: "200",
                   margin: "16",

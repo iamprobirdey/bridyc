@@ -72,14 +72,17 @@
     >
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
-          <!--button
-            type="button"
-            class="close ml-auto mr-2"
-            data-dismiss="modal"
-            aria-label="Close"
-          >
-            <span aria-hidden="true">&times;</span>
-          </button-->
+          <div class="modal-header">
+            <h5 class="modal-title">Upload Photo</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
 
           <div class="modal-body my-n3">
             <div>
@@ -90,6 +93,7 @@
                 ref="file"
                 @change="loadCroppieImage($event)"
                 accept="image/*"
+                @click="onFileClicked"
               />
               <label for="file-button" class="label-btn py-2 px-3 mt-2"
                 >Select file</label
@@ -117,19 +121,24 @@
       role="dialog"
       aria-labelledby="exampleModalLabel"
       aria-hidden="true"
+      data-backdrop="static"
+      data-keyboard="false"
     >
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
-          <!--button
-            type="button"
-            class="close ml-auto mr-2"
-            data-dismiss="modal"
-            aria-label="Close"
-          >
-            <span aria-hidden="true">&times;</span>
-          </button-->
+          <div class="modal-header">
+            <h5 class="modal-title">Upload Institute Icon</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
 
-          <div class="modal-body">
+          <div class="modal-body cropper-modal">
             <cropper
               class="upload-example-cropper"
               ref="cropper"
@@ -182,6 +191,9 @@ export default {
     const vueIns = this;
   },
   methods: {
+    onFileClicked(event) {
+      this.$refs.uploadFile.value = null;
+    },
     addImageFile() {
       $("#addImageFile").modal("show");
       $("#addImageCroppie").modal("hide");
@@ -346,5 +358,10 @@ export default {
   font-family: sans-serif;
   border-radius: 0.3rem;
   cursor: pointer;
+}
+
+.cropper-modal {
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
 }
 </style>

@@ -1,4 +1,5 @@
-@extends('student.layouts.master')
+@extends('admin.index')
+
 
 @section('title','Bridyc – Explore career possibilities|Learn from Achiever’s|Find Institute')
 @section('desc','BRIDYC is dedicated to empower young minds with the real life exposure and
@@ -17,24 +18,16 @@ students, Collectibles,
 best educational podcasts for college students, best career coaching podcast, best career advice videos, biology career
 video')
 
-@section('css_code')
-<link rel="stylesheet" type="text/css" href="{{url('css/app.css')}}">
-<link rel="stylesheet" type="text/css" href="{{url('css/about.css')}}">
-@endsection
-@section('content')
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<div>
-    Blog 2
+
+@section('adminContent')
+
+<div id="admin-user-information">
+    <admin-user-information></admin-user-information>
 </div>
+
 @endsection
 
 @section('js_code')
-
 <script src="{{url('js/app.js')}}"></script>
-
+<script src="{{url('js/adminUserInformation.js')}}"></script>
 @endsection

@@ -297,9 +297,11 @@
                     "
                   />
                   <div class="card-body mt-n1">
-                    <h6 class="card-title my-n1">{{ achievement.title }}</h6>
+                    <h6 class="card-title my-n1">
+                      {{ achievement.title.substr(0, 15) }}...
+                    </h6>
                     <p class="card-text">
-                      {{ achievement.description.substr(0, 20) }}
+                      {{ achievement.description.substr(0, 20) }} ...
                     </p>
                   </div>
                 </div>

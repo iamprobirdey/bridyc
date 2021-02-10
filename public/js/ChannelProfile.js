@@ -713,6 +713,30 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -1036,6 +1060,9 @@ __webpack_require__.r(__webpack_exports__);
   },
   mounted: function mounted() {},
   methods: {
+    goBack: function goBack() {
+      this.genderVissionChecker = true;
+    },
     getFormData: function getFormData() {
       var _this = this;
 
@@ -1132,7 +1159,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, "\n.picture-preview[data-v-e38ab4d4] {\n  position: static;\n}\n.label-btn[data-v-e38ab4d4] {\n  background-color: #003585;\n  color: white;\n  font-family: sans-serif;\n  border-radius: 0.3rem;\n  cursor: pointer;\n}\n", ""]);
+exports.push([module.i, "\n.picture-preview[data-v-e38ab4d4] {\n  position: static;\n}\n.label-btn[data-v-e38ab4d4] {\n  background-color: #003585;\n  color: white;\n  font-family: sans-serif;\n  border-radius: 0.3rem;\n  cursor: pointer;\n}\n.cropper-modal[data-v-e38ab4d4] {\n  max-height: calc(100vh - 40px);\n  overflow-y: auto;\n}\n", ""]);
 
 // exports
 
@@ -4198,6 +4225,8 @@ var render = function() {
           },
           [
             _c("div", { staticClass: "modal-content" }, [
+              _vm._m(0),
+              _vm._v(" "),
               _c("div", { staticClass: "modal-body my-n3" }, [
                 _c("div", [
                   _c("input", {
@@ -4252,7 +4281,9 @@ var render = function() {
           tabindex: "-1",
           role: "dialog",
           "aria-labelledby": "exampleModalLabel",
-          "aria-hidden": "true"
+          "aria-hidden": "true",
+          "data-backdrop": "static",
+          "data-keyboard": "false"
         }
       },
       [
@@ -4264,9 +4295,11 @@ var render = function() {
           },
           [
             _c("div", { staticClass: "modal-content" }, [
+              _vm._m(1),
+              _vm._v(" "),
               _c(
                 "div",
-                { staticClass: "modal-body" },
+                { staticClass: "modal-body cropper-modal" },
                 [
                   _c("cropper", {
                     ref: "cropper",
@@ -4277,7 +4310,7 @@ var render = function() {
                   _vm._v(" "),
                   _vm.wait
                     ? _c("div", { staticClass: "text-center mt-2" }, [
-                        _vm._m(0)
+                        _vm._m(2)
                       ])
                     : _vm._e(),
                   _vm._v(" "),
@@ -4309,6 +4342,50 @@ var render = function() {
   ])
 }
 var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "modal-header" }, [
+      _c("h5", { staticClass: "modal-title" }, [_vm._v("Upload Photo")]),
+      _vm._v(" "),
+      _c(
+        "button",
+        {
+          staticClass: "close",
+          attrs: {
+            type: "button",
+            "data-dismiss": "modal",
+            "aria-label": "Close"
+          }
+        },
+        [_c("span", { attrs: { "aria-hidden": "true" } }, [_vm._v("×")])]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "modal-header" }, [
+      _c("h5", { staticClass: "modal-title" }, [
+        _vm._v("Upload Profile Photo")
+      ]),
+      _vm._v(" "),
+      _c(
+        "button",
+        {
+          staticClass: "close",
+          attrs: {
+            type: "button",
+            "data-dismiss": "modal",
+            "aria-label": "Close"
+          }
+        },
+        [_c("span", { attrs: { "aria-hidden": "true" } }, [_vm._v("×")])]
+      )
+    ])
+  },
   function() {
     var _vm = this
     var _h = _vm.$createElement

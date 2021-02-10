@@ -68,9 +68,22 @@
       role="dialog"
       aria-labelledby="exampleModalLabel"
       aria-hidden="true"
+      data-backdrop="static"
+      data-keyboard="false"
     >
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Upload Photo</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
           <div class="modal-body my-n3">
             <div>
               <input
@@ -78,6 +91,8 @@
                 hidden
                 type="file"
                 @change="loadCroppieImageCroppie($event)"
+                @click="onFileClicked"
+                ref="uploadFile"
                 accept="image/*"
               />
               <label for="file-button1-cover" class="label-btn py-2 px-3 mt-2"
@@ -105,7 +120,18 @@
     >
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
-          <div class="modal-body">
+          <div class="modal-header">
+            <h5 class="modal-title">Upload Cover Photo</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body cropper-modal">
             <cropper
               class="upload-example-cropper"
               ref="cropper"
@@ -158,6 +184,9 @@ export default {
     this.getCoverData();
   },
   methods: {
+    onFileClicked(event) {
+      this.$refs.uploadFile.value = null;
+    },
     addCoverImageFile() {
       $("#addImageFileCover").modal("show");
       $("#addImageCroppieCover").modal("hide");
@@ -188,6 +217,7 @@ export default {
     uploadImage2() {
       const { canvas } = this.$refs.cropper.getResult();
       if (canvas) {
+        this.eventStateFired = false;
         const form = new FormData();
         canvas.toBlob((blob) => {
           form.append("image", blob);
@@ -253,5 +283,10 @@ export default {
   font-family: sans-serif;
   border-radius: 0.3rem;
   cursor: pointer;
+}
+
+.cropper-modal {
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
 }
 </style>

@@ -510,6 +510,31 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -550,6 +575,9 @@ __webpack_require__.r(__webpack_exports__);
     Cropper: vue_advanced_cropper__WEBPACK_IMPORTED_MODULE_2__["Cropper"]
   },
   methods: {
+    onFileClicked: function onFileClicked(event) {
+      this.$refs.uploadFile.value = null;
+    },
     addCollegeImageFile: function addCollegeImageFile() {
       $("#addImageFileCollege").modal("show");
       $("#addImageCroppieCollege").modal("hide");
@@ -845,6 +873,32 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -872,6 +926,9 @@ __webpack_require__.r(__webpack_exports__);
     this.getCoverData();
   },
   methods: {
+    onFileClicked: function onFileClicked(event) {
+      this.$refs.uploadFile.value = null;
+    },
     addCoverImageFile: function addCoverImageFile() {
       $("#addImageFileCover").modal("show");
       $("#addImageCroppieCover").modal("hide");
@@ -914,6 +971,7 @@ __webpack_require__.r(__webpack_exports__);
           canvas = _this$$refs$cropper$g.canvas;
 
       if (canvas) {
+        this.eventStateFired = false;
         var form = new FormData();
         canvas.toBlob(function (blob) {
           form.append("image", blob);
@@ -1251,6 +1309,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
@@ -1275,6 +1342,9 @@ __webpack_require__.r(__webpack_exports__);
     var vueIns = this;
   },
   methods: {
+    onFileClicked: function onFileClicked(event) {
+      this.$refs.uploadFile.value = null;
+    },
     addImageFile: function addImageFile() {
       $("#addImageFile").modal("show");
       $("#addImageCroppie").modal("hide");
@@ -3675,7 +3745,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.label-btn[data-v-7c156f90] {\n  background-color: #003585;\n  color: white;\n  font-family: sans-serif;\n  border-radius: 0.3rem;\n  cursor: pointer;\n}\n", ""]);
+exports.push([module.i, "\n.label-btn[data-v-7c156f90] {\n  background-color: #003585;\n  color: white;\n  font-family: sans-serif;\n  border-radius: 0.3rem;\n  cursor: pointer;\n}\n.cropper-modal[data-v-7c156f90] {\n  max-height: calc(100vh - 40px);\n  overflow-y: auto;\n}\n", ""]);
 
 // exports
 
@@ -3694,7 +3764,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.btnsubmitcover[data-v-ccb8d420] {\n  background-color: #013737;\n  color: white;\n  padding-top: 2px;\n  padding-bottom: 2px;\n  border-radius: 0;\n  z-index: 100;\n}\n.btnsuca[data-v-ccb8d420] {\n  text-align: center;\n}\n.btn-success[data-v-ccb8d420] {\n  padding-top: 0.1rem !important;\n  padding-bottom: 0.1rem !important;\n}\n.label-btn[data-v-ccb8d420] {\n  background-color: #003585;\n  color: white;\n  font-family: sans-serif;\n  border-radius: 0.3rem;\n  cursor: pointer;\n}\n", ""]);
+exports.push([module.i, "\n.btnsubmitcover[data-v-ccb8d420] {\n  background-color: #013737;\n  color: white;\n  padding-top: 2px;\n  padding-bottom: 2px;\n  border-radius: 0;\n  z-index: 100;\n}\n.btnsuca[data-v-ccb8d420] {\n  text-align: center;\n}\n.btn-success[data-v-ccb8d420] {\n  padding-top: 0.1rem !important;\n  padding-bottom: 0.1rem !important;\n}\n.label-btn[data-v-ccb8d420] {\n  background-color: #003585;\n  color: white;\n  font-family: sans-serif;\n  border-radius: 0.3rem;\n  cursor: pointer;\n}\n.cropper-modal[data-v-ccb8d420] {\n  max-height: calc(100vh - 40px);\n  overflow-y: auto;\n}\n", ""]);
 
 // exports
 
@@ -3732,7 +3802,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.btnsubmiticon[data-v-d9ed4160] {\n  background-color: #013737;\n  color: white;\n  padding-top: 2px;\n  padding-bottom: 2px;\n  border-radius: 0;\n  z-index: 100;\n}\n.btnsuca[data-v-d9ed4160] {\n  text-align: center;\n}\n.btn-success[data-v-d9ed4160] {\n  padding-top: 0.1rem !important;\n  padding-bottom: 0.1rem !important;\n}\n.label-btn[data-v-d9ed4160] {\n  background-color: #003585;\n  color: white;\n  font-family: sans-serif;\n  border-radius: 0.3rem;\n  cursor: pointer;\n}\n", ""]);
+exports.push([module.i, "\n.btnsubmiticon[data-v-d9ed4160] {\n  background-color: #013737;\n  color: white;\n  padding-top: 2px;\n  padding-bottom: 2px;\n  border-radius: 0;\n  z-index: 100;\n}\n.btnsuca[data-v-d9ed4160] {\n  text-align: center;\n}\n.btn-success[data-v-d9ed4160] {\n  padding-top: 0.1rem !important;\n  padding-bottom: 0.1rem !important;\n}\n.label-btn[data-v-d9ed4160] {\n  background-color: #003585;\n  color: white;\n  font-family: sans-serif;\n  border-radius: 0.3rem;\n  cursor: pointer;\n}\n.cropper-modal[data-v-d9ed4160] {\n  max-height: calc(100vh - 40px);\n  overflow-y: auto;\n}\n", ""]);
 
 // exports
 
@@ -17341,6 +17411,8 @@ var render = function() {
           },
           [
             _c("div", { staticClass: "modal-content" }, [
+              _vm._m(0),
+              _vm._v(" "),
               _c("div", { staticClass: "modal-body my-n3" }, [
                 _c("div", [
                   _c("input", {
@@ -17353,7 +17425,8 @@ var render = function() {
                     on: {
                       change: function($event) {
                         return _vm.loadCroppieImageCroppie($event)
-                      }
+                      },
+                      click: _vm.onFileClicked
                     }
                   }),
                   _vm._v(" "),
@@ -17395,7 +17468,9 @@ var render = function() {
           tabindex: "-1",
           role: "dialog",
           "aria-labelledby": "exampleModalLabel",
-          "aria-hidden": "true"
+          "aria-hidden": "true",
+          "data-backdrop": "static",
+          "data-keyboard": "false"
         }
       },
       [
@@ -17407,9 +17482,11 @@ var render = function() {
           },
           [
             _c("div", { staticClass: "modal-content" }, [
+              _vm._m(1),
+              _vm._v(" "),
               _c(
                 "div",
-                { staticClass: "modal-body" },
+                { staticClass: "modal-body cropper-modal" },
                 [
                   _c("cropper", {
                     ref: "cropper",
@@ -17420,7 +17497,7 @@ var render = function() {
                   _vm._v(" "),
                   _vm.wait
                     ? _c("div", { staticClass: "text-center mt-2" }, [
-                        _vm._m(0)
+                        _vm._m(2)
                       ])
                     : _vm._e(),
                   _vm._v(" "),
@@ -17452,6 +17529,50 @@ var render = function() {
   ])
 }
 var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "modal-header" }, [
+      _c("h5", { staticClass: "modal-title" }, [_vm._v("Upload Photo")]),
+      _vm._v(" "),
+      _c(
+        "button",
+        {
+          staticClass: "close",
+          attrs: {
+            type: "button",
+            "data-dismiss": "modal",
+            "aria-label": "Close"
+          }
+        },
+        [_c("span", { attrs: { "aria-hidden": "true" } }, [_vm._v("×")])]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "modal-header" }, [
+      _c("h5", { staticClass: "modal-title" }, [
+        _vm._v("Upload College Photo")
+      ]),
+      _vm._v(" "),
+      _c(
+        "button",
+        {
+          staticClass: "close",
+          attrs: {
+            type: "button",
+            "data-dismiss": "modal",
+            "aria-label": "Close"
+          }
+        },
+        [_c("span", { attrs: { "aria-hidden": "true" } }, [_vm._v("×")])]
+      )
+    ])
+  },
   function() {
     var _vm = this
     var _h = _vm.$createElement
@@ -17527,7 +17648,9 @@ var render = function() {
           tabindex: "-1",
           role: "dialog",
           "aria-labelledby": "exampleModalLabel",
-          "aria-hidden": "true"
+          "aria-hidden": "true",
+          "data-backdrop": "static",
+          "data-keyboard": "false"
         }
       },
       [
@@ -17539,9 +17662,12 @@ var render = function() {
           },
           [
             _c("div", { staticClass: "modal-content" }, [
+              _vm._m(0),
+              _vm._v(" "),
               _c("div", { staticClass: "modal-body my-n3" }, [
                 _c("div", [
                   _c("input", {
+                    ref: "uploadFile",
                     attrs: {
                       id: "file-button1-cover",
                       hidden: "",
@@ -17551,7 +17677,8 @@ var render = function() {
                     on: {
                       change: function($event) {
                         return _vm.loadCroppieImageCroppie($event)
-                      }
+                      },
+                      click: _vm.onFileClicked
                     }
                   }),
                   _vm._v(" "),
@@ -17605,9 +17732,11 @@ var render = function() {
           },
           [
             _c("div", { staticClass: "modal-content" }, [
+              _vm._m(1),
+              _vm._v(" "),
               _c(
                 "div",
-                { staticClass: "modal-body" },
+                { staticClass: "modal-body cropper-modal" },
                 [
                   _c("cropper", {
                     ref: "cropper",
@@ -17618,7 +17747,7 @@ var render = function() {
                   _vm._v(" "),
                   _vm.wait
                     ? _c("div", { staticClass: "text-center mt-2" }, [
-                        _vm._m(0)
+                        _vm._m(2)
                       ])
                     : _vm._e(),
                   _vm._v(" "),
@@ -17650,6 +17779,48 @@ var render = function() {
   ])
 }
 var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "modal-header" }, [
+      _c("h5", { staticClass: "modal-title" }, [_vm._v("Upload Photo")]),
+      _vm._v(" "),
+      _c(
+        "button",
+        {
+          staticClass: "close",
+          attrs: {
+            type: "button",
+            "data-dismiss": "modal",
+            "aria-label": "Close"
+          }
+        },
+        [_c("span", { attrs: { "aria-hidden": "true" } }, [_vm._v("×")])]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "modal-header" }, [
+      _c("h5", { staticClass: "modal-title" }, [_vm._v("Upload Cover Photo")]),
+      _vm._v(" "),
+      _c(
+        "button",
+        {
+          staticClass: "close",
+          attrs: {
+            type: "button",
+            "data-dismiss": "modal",
+            "aria-label": "Close"
+          }
+        },
+        [_c("span", { attrs: { "aria-hidden": "true" } }, [_vm._v("×")])]
+      )
+    ])
+  },
   function() {
     var _vm = this
     var _h = _vm.$createElement
@@ -17933,6 +18104,8 @@ var render = function() {
           },
           [
             _c("div", { staticClass: "modal-content" }, [
+              _vm._m(0),
+              _vm._v(" "),
               _c("div", { staticClass: "modal-body my-n3" }, [
                 _c("div", [
                   _c("input", {
@@ -17946,7 +18119,8 @@ var render = function() {
                     on: {
                       change: function($event) {
                         return _vm.loadCroppieImage($event)
-                      }
+                      },
+                      click: _vm.onFileClicked
                     }
                   }),
                   _vm._v(" "),
@@ -17988,7 +18162,9 @@ var render = function() {
           tabindex: "-1",
           role: "dialog",
           "aria-labelledby": "exampleModalLabel",
-          "aria-hidden": "true"
+          "aria-hidden": "true",
+          "data-backdrop": "static",
+          "data-keyboard": "false"
         }
       },
       [
@@ -18000,9 +18176,11 @@ var render = function() {
           },
           [
             _c("div", { staticClass: "modal-content" }, [
+              _vm._m(1),
+              _vm._v(" "),
               _c(
                 "div",
-                { staticClass: "modal-body" },
+                { staticClass: "modal-body cropper-modal" },
                 [
                   _c("cropper", {
                     ref: "cropper",
@@ -18013,7 +18191,7 @@ var render = function() {
                   _vm._v(" "),
                   _vm.wait
                     ? _c("div", { staticClass: "text-center mt-2" }, [
-                        _vm._m(0)
+                        _vm._m(2)
                       ])
                     : _vm._e(),
                   _vm._v(" "),
@@ -18045,6 +18223,50 @@ var render = function() {
   ])
 }
 var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "modal-header" }, [
+      _c("h5", { staticClass: "modal-title" }, [_vm._v("Upload Photo")]),
+      _vm._v(" "),
+      _c(
+        "button",
+        {
+          staticClass: "close",
+          attrs: {
+            type: "button",
+            "data-dismiss": "modal",
+            "aria-label": "Close"
+          }
+        },
+        [_c("span", { attrs: { "aria-hidden": "true" } }, [_vm._v("×")])]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "modal-header" }, [
+      _c("h5", { staticClass: "modal-title" }, [
+        _vm._v("Upload Institute Icon")
+      ]),
+      _vm._v(" "),
+      _c(
+        "button",
+        {
+          staticClass: "close",
+          attrs: {
+            type: "button",
+            "data-dismiss": "modal",
+            "aria-label": "Close"
+          }
+        },
+        [_c("span", { attrs: { "aria-hidden": "true" } }, [_vm._v("×")])]
+      )
+    ])
+  },
   function() {
     var _vm = this
     var _h = _vm.$createElement

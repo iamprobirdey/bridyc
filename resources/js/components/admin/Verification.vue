@@ -9,6 +9,7 @@
           <th scope="col">Slug Generator</th>
           <th scope="col">Keywords Generator</th>
           <th scope="col">Show Channel Data</th>
+          <th scope="col">Change Institute Name</th>
           <th scope="col">Delete</th>
         </tr>
       </thead>
@@ -81,6 +82,13 @@
             >
               Open
             </button>
+          </td>
+          <td>
+            <institute-name
+              :username="verification.title"
+              :userid="verification.user_id"
+              :verificationid="verification.id"
+            ></institute-name>
           </td>
           <td>
             <button
@@ -199,6 +207,7 @@
 
 <script>
 import meta from "./model/meta.vue";
+import InstituteName from "./model/InstituteName.vue";
 
 export default {
   data() {
@@ -390,7 +399,6 @@ export default {
     metaGenerationForm() {
       this.$validator.validate().then((result) => {
         if (result) {
-          console.log("called");
           axios
             .post(
               "verification/api/keywords/description/" +
@@ -426,6 +434,7 @@ export default {
   },
   components: {
     "meta-keywords": meta,
+    InstituteName,
   },
 };
 </script>

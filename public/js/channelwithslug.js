@@ -678,6 +678,8 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -1673,7 +1675,11 @@ var render = function() {
                               _vm._v(" "),
                               _c("div", { staticClass: "card-body mt-n1" }, [
                                 _c("h6", { staticClass: "card-title my-n1" }, [
-                                  _vm._v(_vm._s(achievement.title))
+                                  _vm._v(
+                                    "\n                    " +
+                                      _vm._s(achievement.title.substr(0, 15)) +
+                                      "...\n                  "
+                                  )
                                 ]),
                                 _vm._v(" "),
                                 _c("p", { staticClass: "card-text" }, [
@@ -1682,7 +1688,7 @@ var render = function() {
                                       _vm._s(
                                         achievement.description.substr(0, 20)
                                       ) +
-                                      "\n                  "
+                                      " ...\n                  "
                                   )
                                 ])
                               ])

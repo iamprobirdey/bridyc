@@ -118,13 +118,11 @@ export default {
   },
   created() {
     this.verificationData = this.verification;
-    console.log(this.verificationData);
   },
   mounted() {},
   methods: {
     getTheSubmitId(data) {
       //this.metaKeywordsDescriptionsId = id;
-      console.log(this.verificationData.id);
       //this.metaGenerationForm();
     },
     getMetaModel() {
@@ -132,7 +130,6 @@ export default {
     },
     metaGenerationForm() {
       this.$validator.validate().then((result) => {
-        console.log("Inside validation:- " + this.metaKeywordsDescriptionsId);
         if (result) {
           axios
             .post(
