@@ -113,4 +113,13 @@ class DashboardController extends Controller
             'channelId' => $channel->id
         ]);
     }
+
+    public function supervisor()
+    {
+        return view('institute.supervisor');
+    }
+
+    //class_name,male_student,female_student,total_students,
+
+    // /https://vue-formbuilder.netlify.app/
 }

@@ -75,6 +75,13 @@
                     New Feature
                 </a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link {{$router[$routerCount - 2] === 'supervisor' ? 'active' : '' }}"
+                    href="{{route('channel.supervisor',$channelTitle)}}">
+                    <i class="fa fa-plus sidebaricons" aria-hidden="true"></i>
+                    Supervisor
+                </a>
+            </li>
             @endif
         </ul>
     </div>
