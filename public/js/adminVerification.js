@@ -800,20 +800,10 @@ __webpack_require__.r(__webpack_exports__);
   created: function created() {},
   mounted: function mounted() {
     this.verificationData = this.verification;
-<<<<<<< HEAD
-    console.log(this.verificationData.id);
-=======
->>>>>>> 91565265fdf04e92c306bfd5f6d8c7a0ac7eea4c
   },
   methods: {
-<<<<<<< HEAD
-    getTheSubmitId: function getTheSubmitId() {
-      this.metaKeywordsDescriptionsId = this.verificationData.id;
-      this.metaGenerationForm();
-=======
     getTheSubmitId: function getTheSubmitId(data) {//this.metaKeywordsDescriptionsId = id;
       //this.metaGenerationForm();
->>>>>>> 91565265fdf04e92c306bfd5f6d8c7a0ac7eea4c
     },
     getMetaModel: function getMetaModel() {
       $("#metaGenerator" + this.verificationData.id).modal("show");

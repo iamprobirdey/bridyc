@@ -32,26 +32,8 @@ Route::group([
     Route::get('/', 'Admin\AdminController@index')->name('admin');
     //User Information
     Route::group([
-<<<<<<< HEAD
-        'name' => 'blog.',
-        'prefix' => 'blog'
-    ], function () {
-        Route::get('/', 'Admin\BlogController@index')->name('admin.blog.index');
-    });
-    Route::group([
-        'name' => 'contact.',
-        'prefix' => 'contact'
-    ], function () {
-        Route::get('/', 'Admin\ContactUsController@index');
-        Route::post('/enquiry/{contact:id}', 'Admin\ContactUsController@enquiry')->name('enquiry');
-    });
-    Route::group([
-        'name' => 'podcast.',
-        'prefix' => 'podcast'
-=======
         'name' => 'userinfo.',
         'prefix' => 'userinfo'
->>>>>>> 91565265fdf04e92c306bfd5f6d8c7a0ac7eea4c
     ], function () {
         Route::get('/', 'Admin\UserInformationController@index')->name('admin.userinfo.index');
         Route::get('get/all/user/information', 'Admin\UserInformationController@getAllUserInformation');

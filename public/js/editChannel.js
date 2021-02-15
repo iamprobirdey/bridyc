@@ -3745,11 +3745,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-<<<<<<< HEAD
-exports.push([module.i, "\n.btnsubmitcover[data-v-ccb8d420] {\r\n  background-color: #013737;\r\n  color: white;\r\n  padding-top: 2px;\r\n  padding-bottom: 2px;\r\n  border-radius: 0;\r\n  z-index: 100;\n}\n.btnsuca[data-v-ccb8d420] {\r\n  text-align: center;\n}\n.btn-success[data-v-ccb8d420] {\r\n  padding-top: 0.1rem !important;\r\n  padding-bottom: 0.1rem !important;\n}\r\n", ""]);
-=======
-exports.push([module.i, "\n.label-btn[data-v-7c156f90] {\n  background-color: #003585;\n  color: white;\n  font-family: sans-serif;\n  border-radius: 0.3rem;\n  cursor: pointer;\n}\n.cropper-modal[data-v-7c156f90] {\n  max-height: calc(100vh - 40px);\n  overflow-y: auto;\n}\n", ""]);
->>>>>>> 91565265fdf04e92c306bfd5f6d8c7a0ac7eea4c
+exports.push([module.i, "\n.label-btn[data-v-7c156f90] {\r\n  background-color: #003585;\r\n  color: white;\r\n  font-family: sans-serif;\r\n  border-radius: 0.3rem;\r\n  cursor: pointer;\n}\n.cropper-modal[data-v-7c156f90] {\r\n  max-height: calc(100vh - 40px);\r\n  overflow-y: auto;\n}\r\n", ""]);
 
 // exports
 
@@ -3768,7 +3764,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.btnsubmitcover[data-v-ccb8d420] {\n  background-color: #013737;\n  color: white;\n  padding-top: 2px;\n  padding-bottom: 2px;\n  border-radius: 0;\n  z-index: 100;\n}\n.btnsuca[data-v-ccb8d420] {\n  text-align: center;\n}\n.btn-success[data-v-ccb8d420] {\n  padding-top: 0.1rem !important;\n  padding-bottom: 0.1rem !important;\n}\n.label-btn[data-v-ccb8d420] {\n  background-color: #003585;\n  color: white;\n  font-family: sans-serif;\n  border-radius: 0.3rem;\n  cursor: pointer;\n}\n.cropper-modal[data-v-ccb8d420] {\n  max-height: calc(100vh - 40px);\n  overflow-y: auto;\n}\n", ""]);
+exports.push([module.i, "\n.btnsubmitcover[data-v-ccb8d420] {\r\n  background-color: #013737;\r\n  color: white;\r\n  padding-top: 2px;\r\n  padding-bottom: 2px;\r\n  border-radius: 0;\r\n  z-index: 100;\n}\n.btnsuca[data-v-ccb8d420] {\r\n  text-align: center;\n}\n.btn-success[data-v-ccb8d420] {\r\n  padding-top: 0.1rem !important;\r\n  padding-bottom: 0.1rem !important;\n}\n.label-btn[data-v-ccb8d420] {\r\n  background-color: #003585;\r\n  color: white;\r\n  font-family: sans-serif;\r\n  border-radius: 0.3rem;\r\n  cursor: pointer;\n}\n.cropper-modal[data-v-ccb8d420] {\r\n  max-height: calc(100vh - 40px);\r\n  overflow-y: auto;\n}\r\n", ""]);
 
 // exports
 
@@ -3806,11 +3802,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-<<<<<<< HEAD
-exports.push([module.i, "\n.btnsubmiticon[data-v-d9ed4160] {\r\n  background-color: #013737;\r\n  color: white;\r\n  padding-top: 2px;\r\n  padding-bottom: 2px;\r\n  border-radius: 0;\r\n  z-index: 100;\n}\n.btnsuca[data-v-d9ed4160] {\r\n  text-align: center;\n}\n.btn-success[data-v-d9ed4160] {\r\n  padding-top: 0.1rem !important;\r\n  padding-bottom: 0.1rem !important;\n}\r\n", ""]);
-=======
-exports.push([module.i, "\n.btnsubmiticon[data-v-d9ed4160] {\n  background-color: #013737;\n  color: white;\n  padding-top: 2px;\n  padding-bottom: 2px;\n  border-radius: 0;\n  z-index: 100;\n}\n.btnsuca[data-v-d9ed4160] {\n  text-align: center;\n}\n.btn-success[data-v-d9ed4160] {\n  padding-top: 0.1rem !important;\n  padding-bottom: 0.1rem !important;\n}\n.label-btn[data-v-d9ed4160] {\n  background-color: #003585;\n  color: white;\n  font-family: sans-serif;\n  border-radius: 0.3rem;\n  cursor: pointer;\n}\n.cropper-modal[data-v-d9ed4160] {\n  max-height: calc(100vh - 40px);\n  overflow-y: auto;\n}\n", ""]);
->>>>>>> 91565265fdf04e92c306bfd5f6d8c7a0ac7eea4c
+exports.push([module.i, "\n.btnsubmiticon[data-v-d9ed4160] {\r\n  background-color: #013737;\r\n  color: white;\r\n  padding-top: 2px;\r\n  padding-bottom: 2px;\r\n  border-radius: 0;\r\n  z-index: 100;\n}\n.btnsuca[data-v-d9ed4160] {\r\n  text-align: center;\n}\n.btn-success[data-v-d9ed4160] {\r\n  padding-top: 0.1rem !important;\r\n  padding-bottom: 0.1rem !important;\n}\n.label-btn[data-v-d9ed4160] {\r\n  background-color: #003585;\r\n  color: white;\r\n  font-family: sans-serif;\r\n  border-radius: 0.3rem;\r\n  cursor: pointer;\n}\n.cropper-modal[data-v-d9ed4160] {\r\n  max-height: calc(100vh - 40px);\r\n  overflow-y: auto;\n}\r\n", ""]);
 
 // exports
 

@@ -86,8 +86,6 @@
 /************************************************************************/
 /******/ ({
 
-<<<<<<< HEAD
-=======
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Application.vue?vue&type=script&lang=js&":
 /*!**********************************************************************************************************************************************************************!*\
   !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Application.vue?vue&type=script&lang=js& ***!
@@ -3834,17 +3832,11 @@ function normalizeComponent (
 
 /***/ }),
 
->>>>>>> 91565265fdf04e92c306bfd5f6d8c7a0ac7eea4c
 /***/ "./resources/js/application.js":
 /*!*************************************!*\
   !*** ./resources/js/application.js ***!
   \*************************************/
 /*! no static exports found */
-<<<<<<< HEAD
-/***/ (function(module, exports) {
-
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nError: ENOENT: no such file or directory, open '/home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/js/application.js'");
-=======
 /***/ (function(module, exports, __webpack_require__) {
 
 Vue.component("application", __webpack_require__(/*! ./components/Application.vue */ "./resources/js/components/Application.vue")["default"]);
@@ -3924,7 +3916,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Application_vue_vue_type_template_id_bf784f96___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
->>>>>>> 91565265fdf04e92c306bfd5f6d8c7a0ac7eea4c
 
 /***/ }),
 
@@ -3935,7 +3926,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/js/application.js */"./resources/js/application.js");
+module.exports = __webpack_require__(/*! C:\laragon\www\bridyc\resources\js\application.js */"./resources/js/application.js");
 
 
 /***/ })

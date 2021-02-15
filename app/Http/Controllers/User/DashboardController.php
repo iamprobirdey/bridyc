@@ -36,7 +36,7 @@ class DashboardController extends Controller
         return view(
             'institute.verification',
             compact('allPlaces', $allPlaces),
-            compact('usersVerification', $usersVerification),
+            compact('usersVerification', $usersVerification)
         )
             ->with('languages', $languages)
             ->with('authUser', $authUser)

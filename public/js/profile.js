@@ -1799,7 +1799,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.profile[data-v-3bd692e4] {\n  margin-top: 70px;\n  width: 700px;\n}\n", ""]);
+exports.push([module.i, "\n.profile[data-v-3bd692e4] {\r\n  margin-top: 70px;\r\n  width: 700px;\n}\r\n", ""]);
 
 // exports
 
@@ -1818,7 +1818,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, "\n.label-btn[data-v-c8033544] {\n  background-color: #003585;\n  color: white;\n  font-family: sans-serif;\n  border-radius: 0.3rem;\n  cursor: pointer;\n}\n.cropper-modal[data-v-c8033544] {\n  max-height: calc(100vh - 40px);\n  overflow-y: auto;\n}\n", ""]);
+exports.push([module.i, "\n.label-btn[data-v-c8033544] {\r\n  background-color: #003585;\r\n  color: white;\r\n  font-family: sans-serif;\r\n  border-radius: 0.3rem;\r\n  cursor: pointer;\n}\n.cropper-modal[data-v-c8033544] {\r\n  max-height: calc(100vh - 40px);\r\n  overflow-y: auto;\n}\r\n", ""]);
 
 // exports
 
@@ -2392,12 +2392,7 @@ if(false) {}
 /***/ (function(module, exports, __webpack_require__) {
 
 
-<<<<<<< HEAD
-// module
-exports.push([module.i, "\n.profile[data-v-3bd692e4] {\r\n  margin-top: 70px;\r\n  width: 700px;\n}\r\n", ""]);
-=======
 var content = __webpack_require__(/*! !../../css-loader??ref--18-1!../../vue-loader/lib/loaders/stylePostLoader.js!../../postcss-loader/src??ref--18-2!./vue-multiselect.min.css?vue&type=style&index=0&lang=css& */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-multiselect/dist/vue-multiselect.min.css?vue&type=style&index=0&lang=css&");
->>>>>>> 91565265fdf04e92c306bfd5f6d8c7a0ac7eea4c
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 

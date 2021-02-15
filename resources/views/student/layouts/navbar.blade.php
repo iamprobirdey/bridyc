@@ -56,7 +56,7 @@
             @endif
             @if (auth()->check() && auth()->user()->isAdmin())
             <a class="btn btndashboard mr-2" data-trigger="focus" data-toggle="popover" data-placement="bottom"
-                href="{{route('admin.blog.index')}}">
+                href="{{route('admin')}}">
                 <i class="fa fa-th-large" aria-hidden="true"></i> Admin Dashboard
             </a>
             @endif

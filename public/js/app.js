@@ -63305,20 +63305,6 @@ module.exports = function(module) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-<<<<<<< HEAD
-/* harmony import */ var vue_toasted__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-toasted */ "./node_modules/vue-toasted/dist/vue-toasted.min.js");
-/* harmony import */ var vue_toasted__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(vue_toasted__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var vee_validate__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vee-validate */ "./node_modules/vee-validate/dist/vee-validate.esm.js");
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_2__);
-// importScripts('https://www.gstatic.com/firebasejs/8.2.2/firebase-app.js');
-// importScripts('https://www.gstatic.com/firebasejs/8.2.2/firebase-analytics.js');
-// importScripts('https://www.gstatic.com/firebasejs/8.2.2/firebase-messaging.js');
-{
-  /* <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-app.js"></script>
-     <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-analytics.js"></script> */
-}
-=======
 /* harmony import */ var vue_croppie__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-croppie */ "./node_modules/vue-croppie/dist/vue-croppie.es.js");
 /* harmony import */ var croppie_croppie_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! croppie/croppie.css */ "./node_modules/croppie/croppie.css");
 /* harmony import */ var croppie_croppie_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(croppie_croppie_css__WEBPACK_IMPORTED_MODULE_1__);
@@ -63327,7 +63313,13 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vee_validate__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! vee-validate */ "./node_modules/vee-validate/dist/vee-validate.esm.js");
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_4__);
->>>>>>> 91565265fdf04e92c306bfd5f6d8c7a0ac7eea4c
+// importScripts('https://www.gstatic.com/firebasejs/8.2.2/firebase-app.js');
+// importScripts('https://www.gstatic.com/firebasejs/8.2.2/firebase-analytics.js');
+// importScripts('https://www.gstatic.com/firebasejs/8.2.2/firebase-messaging.js');
+{
+  /* <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-app.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-analytics.js"></script> */
+}
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -63676,7 +63668,6 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-<<<<<<< HEAD
 __webpack_require__(/*! C:\laragon\www\bridyc\resources\js\app.js */"./resources/js/app.js");
 __webpack_require__(/*! C:\laragon\www\bridyc\resources\sass\app.scss */"./resources/sass/app.scss");
 __webpack_require__(/*! C:\laragon\www\bridyc\resources\sass\index.scss */"./resources/sass/index.scss");
@@ -63689,23 +63680,8 @@ __webpack_require__(/*! C:\laragon\www\bridyc\resources\sass\institutelandingpag
 __webpack_require__(/*! C:\laragon\www\bridyc\resources\sass\profile.scss */"./resources/sass/profile.scss");
 __webpack_require__(/*! C:\laragon\www\bridyc\resources\sass\about.scss */"./resources/sass/about.scss");
 __webpack_require__(/*! C:\laragon\www\bridyc\resources\sass\login-register.scss */"./resources/sass/login-register.scss");
-module.exports = __webpack_require__(/*! C:\laragon\www\bridyc\resources\sass\error.scss */"./resources/sass/error.scss");
-=======
-__webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/js/app.js */"./resources/js/app.js");
-__webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/sass/app.scss */"./resources/sass/app.scss");
-__webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/sass/index.scss */"./resources/sass/index.scss");
-__webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/sass/application.scss */"./resources/sass/application.scss");
-__webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/sass/faq.scss */"./resources/sass/faq.scss");
-__webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/sass/contact.scss */"./resources/sass/contact.scss");
-__webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/sass/privacy.scss */"./resources/sass/privacy.scss");
-__webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/sass/institutedashboard.scss */"./resources/sass/institutedashboard.scss");
-__webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/sass/institutelandingpage.scss */"./resources/sass/institutelandingpage.scss");
-__webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/sass/profile.scss */"./resources/sass/profile.scss");
-__webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/sass/about.scss */"./resources/sass/about.scss");
-__webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/sass/login-register.scss */"./resources/sass/login-register.scss");
-__webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/sass/error.scss */"./resources/sass/error.scss");
-module.exports = __webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/sass/blogs.scss */"./resources/sass/blogs.scss");
->>>>>>> 91565265fdf04e92c306bfd5f6d8c7a0ac7eea4c
+__webpack_require__(/*! C:\laragon\www\bridyc\resources\sass\error.scss */"./resources/sass/error.scss");
+module.exports = __webpack_require__(/*! C:\laragon\www\bridyc\resources\sass\blogs.scss */"./resources/sass/blogs.scss");
 
 
 /***/ })

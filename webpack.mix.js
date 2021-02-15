@@ -17,13 +17,8 @@ mix.js("resources/js/app.js", "public/js")
     .js("resources/js/channelteacher.js", "public/js")
     .js("resources/js/teacherProfile.js", "public/js")
     .js("resources/js/ChannelNotification.js", "public/js")
-<<<<<<< HEAD
-    //Service Worker
-    .js("resources/js/firebase-messaging-sw.js", "public/")
-=======
     .js("resources/js/application.js", "public/js")
     .js("resources/js/adminUserInformation.js", "public/js")
->>>>>>> 91565265fdf04e92c306bfd5f6d8c7a0ac7eea4c
     // .sass("resources/sass/studentIndex.scss", "public/css")
     // .sass("resources/sass/institutedashboard.scss", "public/css")
     .sass("resources/sass/app.scss", "public/css")
