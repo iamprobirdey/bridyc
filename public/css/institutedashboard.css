@@ -952,3 +952,7 @@ main .notification-section ul li::before {
   margin-left: 0px !important;
 }
 
+.mb0 {
+  margin-bottom: 0rem !important;
+}
+

@@ -329,10 +329,10 @@ video')
                                 <input type="text" class="form-control" placeholder="মুঠ">
                             </div>
                         </div>
-                        <table class="table table-responsive-md table-bordered">
+                        <table class="table table-responsive-md mb0">
                             <tr>
                                 <th colspan="3" rowspan="4">নিম্ন প্ৰাথমিক শাখাৰ ছাত্র-ছাত্ৰীৰ সংখ্যা, ২০২০ বৰ্ষ ।</th>
-                                <th>First</th>
+                                <th>Firfst</th>
                                 <th>Last</th>
                                 <th>Handle</th>
                                 <th>Handle</th>
