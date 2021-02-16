@@ -948,3 +948,7 @@ main .notification-section ul li::before {
   content: "";
 }
 
+.table-bordered .row {
+  margin-left: 0px !important;
+}
+

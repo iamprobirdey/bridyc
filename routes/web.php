@@ -208,6 +208,9 @@ Route::group([
     Route::get('teacher/{channel:title}', 'User\DashboardController@teacher')->name('channel.teacher');
     Route::get('new/feature/{channel:title}', 'User\DashboardController@newFeature')->name('channel.feature');
     Route::get('notification/{channel:title}', 'User\DashboardController@notification')->name('channel.notification');
+    //Testing
+    Route::get('supervisor/{channel:title}', 'User\DashboardController@supervisor')->name('channel.supervisor');
+    Route::post('supervisor/create', 'Admin\StateController@store')->name('channel.supervisor.create');
 });
 
 Route::get('edit/student/profile/{user:username}', 'Student\ProfileController@index')->middleware(['can:student'])->middleware('verified');
