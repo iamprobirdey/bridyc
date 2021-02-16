@@ -272,64 +272,55 @@ video')
                 </table>
                 <form action="">
                     <div class="table-bordered">
-                        <div class="form-row">
+                        <div class="row mt-2">
                             <div class="form-group row col-md-4 ">
                                 <label class="d-flex align-items-end ">চাৰিওটা শাখাৰ সৰ্বমুঠ :</label>
                                 <div class="col ">
-                                    <label for="text">ছাত্র </label>
                                     <input type="text" class="form-control" placeholder="ছাত্র ">
                                 </div>
                             </div>
                             <div class="form-group col-md-4">
-                                <label for="text">ছাত্ৰী</label>
                                 <input type="text" class="form-control" placeholder="ছাত্ৰী">
 
                             </div>
                             <div class="form-group col-md-4">
-                                <label for="inputZip">মুঠ</label>
                                 <input type="text" class="form-control" placeholder="মুঠ">
                             </div>
                         </div>
                         <!--  form 2 -->
                         <div class="d-flex flex-row-reverse">
                             <div class="form-group col-md-3 ">
-                                <label for="inputCity">আচাৰ্য </label>
                                 <input type="text" class="form-control" placeholder="আচাৰ্য">
                             </div>
                             <div class="form-group col-md-3">
-                                <label for="text">আচৰ্যা</label>
                                 <input type="text" class="form-control" placeholder="আচৰ্যা">
 
                             </div>
                             <div class="form-group col-md-3">
-                                <label for="inputZip">মুঠ</label>
                                 <input type="text" class="form-control" placeholder="মুঠ">
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col">
+                        <div class="d-flex form-group">
+                            <div class="form-group col-md-6 ">
                                 <input type="text" class="form-control" placeholder="মুঠ অন্য কৰ্মচাৰী">
                             </div>
-                            <div class="col">
-                                <input type="text" class="form-control" placeholder="Last name">
+                            <div class="form-group col-md-6">
+                                <input type="text" class="form-control" placeholder="text">
                             </div>
                         </div>
-                        <div class="form-row ">
+                        <div class="mt-2 row">
                             <div class="form-group row col-md-8">
                                 <label class="d-flex align-items-end ">প্ৰতিটো শ্ৰেণীত থকা বিশেষভাবে সক্ষম ছাত্র-ছাত্ৰীৰ মুঠ সংখ্যা</label>
                                 <div class="col ">
-                                    <label for="text">ছাত্র </label>
-                                    <input type="text" class="form-control" id="inputPassword" placeholder="Text ">
+                                    <input type="text" class="form-control" id="inputPassword" placeholder="ছাত্র">
                                 </div>
                             </div>
                             <div class="form-group col-md-2">
-                                <label for="text">ছাত্ৰী </label>
-                                <input type="text" class="form-control" id="inputCity">
+                                <input type="text" class="form-control" placeholder="ছাত্ৰী">
 
                             </div>
                             <div class="form-group col-md-2">
-                                <label for="inputZip">মুঠ </label>
-                                <input type="text" class="form-control" id="inputZip">
+                                <input type="text" class="form-control" placeholder="মুঠ">
                             </div>
                         </div>
                         <table class="table table-responsive-md table-bordered">
