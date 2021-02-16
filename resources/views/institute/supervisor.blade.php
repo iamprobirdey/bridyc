@@ -277,7 +277,7 @@ video')
                                 <label class="d-flex align-items-end ">চাৰিওটা শাখাৰ সৰ্বমুঠ :</label>
                                 <div class="col ">
                                     <label for="text">ছাত্র </label>
-                                    <input type="text" class="form-control"  placeholder="ছাত্র ">
+                                    <input type="text" class="form-control" placeholder="ছাত্র ">
                                 </div>
                             </div>
                             <div class="form-group col-md-4">
@@ -308,27 +308,27 @@ video')
                         </div>
                         <div class="row">
                             <div class="col">
-                                <input type="text" class="form-control" placeholder="First name">
+                                <input type="text" class="form-control" placeholder="মুঠ অন্য কৰ্মচাৰী">
                             </div>
                             <div class="col">
                                 <input type="text" class="form-control" placeholder="Last name">
                             </div>
                         </div>
                         <div class="form-row ">
-                            <div class="form-group row col-md-4 ">
-                                <label class="d-flex align-items-end ">Text</label>
+                            <div class="form-group row col-md-8">
+                                <label class="d-flex align-items-end ">প্ৰতিটো শ্ৰেণীত থকা বিশেষভাবে সক্ষম ছাত্র-ছাত্ৰীৰ মুঠ সংখ্যা</label>
                                 <div class="col ">
-                                    <label for="text">2</label>
+                                    <label for="text">ছাত্র </label>
                                     <input type="text" class="form-control" id="inputPassword" placeholder="Text ">
                                 </div>
                             </div>
-                            <div class="form-group col-md-4">
-                                <label for="text">2</label>
+                            <div class="form-group col-md-2">
+                                <label for="text">ছাত্ৰী </label>
                                 <input type="text" class="form-control" id="inputCity">
 
                             </div>
-                            <div class="form-group col-md-4">
-                                <label for="inputZip">3</label>
+                            <div class="form-group col-md-2">
+                                <label for="inputZip">মুঠ </label>
                                 <input type="text" class="form-control" id="inputZip">
                             </div>
                         </div>
