@@ -274,36 +274,36 @@ video')
                     <div class="table-bordered">
                         <div class="form-row">
                             <div class="form-group row col-md-4 ">
-                                <label class="d-flex align-items-end ">Text</label>
+                                <label class="d-flex align-items-end ">চাৰিওটা শাখাৰ সৰ্বমুঠ :</label>
                                 <div class="col ">
-                                    <label for="text">2</label>
-                                    <input type="text" class="form-control" id="inputPassword" placeholder="Text ">
+                                    <label for="text">ছাত্র </label>
+                                    <input type="text" class="form-control"  placeholder="ছাত্র ">
                                 </div>
                             </div>
                             <div class="form-group col-md-4">
-                                <label for="text">2</label>
-                                <input type="text" class="form-control" id="inputCity">
+                                <label for="text">ছাত্ৰী</label>
+                                <input type="text" class="form-control" placeholder="ছাত্ৰী">
 
                             </div>
                             <div class="form-group col-md-4">
-                                <label for="inputZip">3</label>
-                                <input type="text" class="form-control" id="inputZip">
+                                <label for="inputZip">মুঠ</label>
+                                <input type="text" class="form-control" placeholder="মুঠ">
                             </div>
                         </div>
                         <!--  form 2 -->
                         <div class="d-flex flex-row-reverse">
                             <div class="form-group col-md-3 ">
-                                <label for="inputCity">1</label>
-                                <input type="text" class="form-control" id="inputCity">
+                                <label for="inputCity">আচাৰ্য </label>
+                                <input type="text" class="form-control" placeholder="আচাৰ্য">
                             </div>
                             <div class="form-group col-md-3">
-                                <label for="text">2</label>
-                                <input type="text" class="form-control" id="inputCity">
+                                <label for="text">আচৰ্যা</label>
+                                <input type="text" class="form-control" placeholder="আচৰ্যা">
 
                             </div>
                             <div class="form-group col-md-3">
-                                <label for="inputZip">3</label>
-                                <input type="text" class="form-control" id="inputZip">
+                                <label for="inputZip">মুঠ</label>
+                                <input type="text" class="form-control" placeholder="মুঠ">
                             </div>
                         </div>
                         <div class="row">
