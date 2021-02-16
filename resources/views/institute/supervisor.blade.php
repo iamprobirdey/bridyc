@@ -300,12 +300,18 @@ video')
                                 <input type="text" class="form-control" placeholder="মুঠ">
                             </div>
                         </div>
-                        <div class="d-flex form-group">
-                            <div class="form-group col-md-6 ">
-                                <input type="text" class="form-control" placeholder="মুঠ অন্য কৰ্মচাৰী">
+                        <div class="row mt-2">
+                            <div class="form-group row col-md-4 ">
+                                <label class="d-flex align-items-end ">মুঠ অন্য কৰ্মচাৰী :</label>
+                                <div class="col ">
+                                    <input type="text" class="form-control" placeholder=" ">
+                                </div>
                             </div>
-                            <div class="form-group col-md-6">
-                                <input type="text" class="form-control" placeholder="text">
+                            <div class="form-group row col-md-4 ">
+                                <label class="d-flex align-items-end ">প্ৰতিটো শ্ৰেণীত ..:</label>
+                                <div class="col ">
+                                    <input type="text" class="form-control" placeholder=" ">
+                                </div>
                             </div>
                         </div>
                         <div class="mt-2 row">
