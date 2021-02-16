@@ -288,7 +288,7 @@ video')
                             </div>
                         </div>
                         <!--  form 2 -->
-                        <div class="d-flex flex-row-reverse">
+                        <div class="d-flex justify-content-end">
                             <div class="form-group col-md-3 ">
                                 <input type="text" class="form-control" placeholder="আচাৰ্য">
                             </div>
