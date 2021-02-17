@@ -191,6 +191,9 @@ Route::get('institute/register', 'Auth\InstituteController@instituteRegister');
 Route::post('institute/register', 'Auth\RegisterController@register');
 
 Route::get('channel/{channel:slug}', 'ChannelController@getChannelBySlug');
+Route::get('get/all/channel/data', 'ChannelController@getAllChannelData');
+Route::get('get/slug/channel/data/{channel:slug}', 'ChannelController@getSlugChannelJsonData');
+
 
 
 

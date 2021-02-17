@@ -647,7 +647,6 @@ export default {
     this.channelData = this.channel;
     this.currentuserData = this.currentuser;
     this.locationData = this.location;
-    console.log(this.currentuserData);
     this.phoneNo = this.userData.phone ? this.userData.phone : "Not provided";
     this.userID = this.userid;
     this.isTeacher = this.isteacher;
@@ -662,6 +661,7 @@ export default {
   mounted() {
     this.getChannelSession();
     this.requestChannelSatisfier();
+    this.getSlugData();
   },
   methods: {
     requestChannelSatisfier() {
