@@ -57,7 +57,8 @@ export default {
     };
   },
   created() {
-    if (sessionStorage.getItem("all-channels") === null) {
+    let data = sessionStorage.getItem("all-channels");
+    if (data === null) {
       this.getChannelsData();
     } else {
       this.getChannelsDataFromSession();
