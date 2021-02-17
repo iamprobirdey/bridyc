@@ -12,6 +12,7 @@ use App\Verification;
 use Carbon\Carbon;
 use Illuminate\Support\Str;
 use DB;
+use \Cache;
 
 class VerificationController extends Controller
 {
@@ -47,6 +48,7 @@ class VerificationController extends Controller
 
     public function updatingforon(User $user, $verification)
     {
+        Cache::forget('all-channels');
         $this->authorize('superadmin', auth()->user());
         DB::beginTransaction();
         try {

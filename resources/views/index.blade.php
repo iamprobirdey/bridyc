@@ -108,7 +108,7 @@ crossed those paths')
 
 
 <div id="channel">
-    <channel :channel="{{json_encode($channel)}}"></channel>
+    <channel></channel>
 </div>
 
 @endsection

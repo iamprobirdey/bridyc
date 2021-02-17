@@ -746,7 +746,6 @@ __webpack_require__.r(__webpack_exports__);
     this.channelData = this.channel;
     this.currentuserData = this.currentuser;
     this.locationData = this.location;
-    console.log(this.currentuserData);
     this.phoneNo = this.userData.phone ? this.userData.phone : "Not provided";
     this.userID = this.userid;
     this.isTeacher = this.isteacher;
@@ -758,6 +757,7 @@ __webpack_require__.r(__webpack_exports__);
   mounted: function mounted() {
     this.getChannelSession();
     this.requestChannelSatisfier();
+    this.getSlugData();
   },
   methods: {
     requestChannelSatisfier: function requestChannelSatisfier() {

@@ -10,50 +10,72 @@ use App\UserChannelRequest;
 use App\Verification;
 use Illuminate\Support\Facades\Auth;
 use Spatie\Activitylog\Models\Activity;
+use \Cache;
 
 class ChannelController extends Controller
 {
     public function index()
     {
 
-        $podcast = Podcast::orderBy('created_at', 'desc')->limit(1)->first();
+        $podcast = Cache::remember('podcast', 60 * 60 * 24, function () {
+            return  Podcast::orderBy('created_at', 'desc')->limit(1)->first();
+        });
+
         //activity('all-user')->log('User entered in Bridyc');
 
-        $channel = Channel::select(
-            'district_id',
-            'user_id',
-            'title',
-            'icon_avatar',
-            'description',
-            'slug'
-        )
-            ->where('status', 1)
-            ->with('district')
-            ->get();
-        return view('index', compact('channel', 'podcast'));
+        return view('index', compact('podcast'));
+    }
+
+    public function getAllChannelData()
+    {
+        $channel = Cache::remember('all-channels', 60 * 60 * 24, function () {
+            return  Channel::select(
+                'district_id',
+                'user_id',
+                'title',
+                'icon_avatar',
+                'description',
+                'slug'
+            )
+                ->where('status', 1)
+                ->with('district')
+                ->get();
+        });
+
+        return response()->json([
+            'channel_data' => $channel
+        ]);
     }
 
     public function getChannelBySlug(Channel $channel)
     {
         //$this->fireTheLog($channel);
-        $channeldata = Channel::where('id', $channel->id)
-            ->with(['state', 'district', 'village', 'language', 'achievement', 'board'])
-            ->with(['collegeImage' => function ($query) {
-                $query->limit(5);
-            }])
-            ->with(['teacher' => function ($query) {
-                $query->with(['user']);
-            }])
-            ->with(['notification' => function ($query) {
-                $query->orderBy('created_at', 'desc');
-            }])
-            ->get();
-        $user = User::where('id', $channel->user_id)
-            ->select('id', 'email', 'vission', 'message', 'name', 'avatar')
-            ->with('verification')
-            ->first();
+        $channeldata =  Cache::remember('channel--slug-data-' . $channel->id, 60 * 60 * 24, function () use ($channel) {
+            return Channel::where('id', $channel->id)
+                ->with(['state', 'district', 'village', 'language', 'achievement', 'board'])
+                ->with(['collegeImage' => function ($query) {
+                    $query->limit(5);
+                }])
+                ->with(['teacher' => function ($query) {
+                    $query->with(['user']);
+                }])
+                ->with(['notification' => function ($query) {
+                    $query->orderBy('created_at', 'desc');
+                }])
+                ->get();
+        });
+
+        $user = Cache::remember('channel-principle-data-' . $channel->user_id, 60 * 60 * 24, function () use ($channel) {
+            return  User::where('id', $channel->user_id)
+                ->select('id', 'email', 'vission', 'message', 'name', 'avatar')
+                ->with('verification')
+                ->first();
+        });
+
         $currentUser = null;
+
         $isTeacher = false;
+
         if (auth()->check()) {
             if (current_user()->isTeacher()) {
                 $currentUser = UserChannelRequest::where('user_id', current_user_id())->where('channel_id', $channel->id)->first();
@@ -63,8 +85,10 @@ class ChannelController extends Controller
 
         $userId = current_user_id();
 
-        $location = Verification::where('user_id', $channel->user_id)
-            ->select('location')->first();
+        $location = Cache::remember('channel-verification-data-' . $channel->user_id, 60 * 60 * 24, function () use ($channel) {
+            return  Verification::where('user_id', $channel->user_id)
+                ->select('location')->first();
+        });
 
         return view('channel_with_slug', compact(['channeldata', 'user', 'currentUser', 'userId', 'isTeacher', 'location']));
     }

@@ -56,17 +56,40 @@ export default {
       domainUrl: location.origin,
     };
   },
-  props: {
-    channel: {
-      type: Array,
-      default: null,
+  created() {
+    if (sessionStorage.getItem("all-channels") === null) {
+      this.getChannelsData();
+    } else {
+      this.getChannelsDataFromSession();
+    }
+  },
+  mounted() {},
+  methods: {
+    getChannelsData() {
+      axios
+        .get("get/all/channel/data")
+        .then((response) => {
+          if (response.data.channel_data) {
+            this.channelData = response.data.channel_data;
+            window.sessionStorage.setItem(
+              "all-channels",
+              JSON.stringify(this.channelData)
+            );
+          }
+        })
+        .catch((errors) => {
+          Vue.toasted.error("Something went wrong", {
+            position: "top-center",
+            duration: 5000,
+          });
+        });
+    },
+    getChannelsDataFromSession() {
+      this.channelData = JSON.parse(
+        window.sessionStorage.getItem("all-channels")
+      );
     },
   },
-  mounted() {
-    if (this.channel.length > 0) this.channelData = this.channel;
-    console.log(this.channelData);
-  },
-  methods: {},
 };
 </script>
 

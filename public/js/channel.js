@@ -152,17 +152,34 @@ __webpack_require__.r(__webpack_exports__);
       domainUrl: location.origin
     };
   },
-  props: {
-    channel: {
-      type: Array,
-      "default": null
+  created: function created() {
+    if (sessionStorage.getItem("all-channels") === null) {
+      this.getChannelsData();
+    } else {
+      this.getChannelsDataFromSession();
     }
   },
-  mounted: function mounted() {
-    if (this.channel.length > 0) this.channelData = this.channel;
-    console.log(this.channelData);
-  },
-  methods: {}
+  mounted: function mounted() {},
+  methods: {
+    getChannelsData: function getChannelsData() {
+      var _this = this;
+
+      axios.get("get/all/channel/data").then(function (response) {
+        if (response.data.channel_data) {
+          _this.channelData = response.data.channel_data;
+          window.sessionStorage.setItem("all-channels", JSON.stringify(_this.channelData));
+        }
+      })["catch"](function (errors) {
+        Vue.toasted.error("Something went wrong", {
+          position: "top-center",
+          duration: 5000
+        });
+      });
+    },
+    getChannelsDataFromSession: function getChannelsDataFromSession() {
+      this.channelData = JSON.parse(window.sessionStorage.getItem("all-channels"));
+    }
+  }
 });
 
 /***/ }),
