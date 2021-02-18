@@ -1,1 +1,950 @@
-nav{max-width:100%;background-color:#fff}nav .navbar-toggler:focus{outline:0}nav .imglogodash{width:110px;height:auto;margin-left:-12%;transition:all .5s ease}@media only screen and (min-width:481px){nav .imglogodash{width:115px;height:auto}}@media only screen and (min-width:768px){nav .imglogodash{margin:5px;width:150px}}@media only screen and (min-width:1280px){nav .imglogodash{margin:7px;width:120px}}nav ul li .accounticon{font-size:20px;color:#96511f;padding:7px}@media only screen and (min-width:481px){nav ul li .accounticon{font-size:23px;padding:15px}}.border-gradient{border-bottom:4px solid;border-image-slice:1}.border-gradient-color{border-image-source:linear-gradient(90deg,#906,#f1aa00)}.popnav{padding-left:1em;padding-right:1em;margin-left:-26px;margin-right:-26px;text-align:left}.popnav li{margin-top:5px;margin-bottom:5px;padding-left:25px;padding-right:25px;list-style-type:none}.popnav li:hover{background-color:#96511f}.popnav li a{color:#000;font-size:18px;font-family:Segoe UI,Tahoma,Geneva,Verdana,sans-serif}.popnav li a:hover{text-decoration:none;color:#fff}.linklog{text-align:left;margin-left:-13px;margin-right:-13px;padding-left:25px}.linklog a{font-family:Segoe UI,Tahoma,Geneva,Verdana,sans-serif;color:#000;font-size:18px}.linklog a:hover{text-decoration:none;color:#fff}.linklog:hover{background-color:#96511f}#sidebarcollapse{position:fixed;left:0;top:0;z-index:100;padding:70px 0 0 10px;background-color:#fff;width:70%;overflow:auto}#sidebarcollapse .left-sidebar{position:-webkit-sticky;position:sticky;top:0;height:calc(100vh - 70px);padding-top:50px}#sidebarcollapse .left-sidebar ul li{margin-bottom:20px;margin-left:-10px}#sidebarcollapse .left-sidebar ul li a{color:#011737;font-weight:500}#sidebarcollapse .left-sidebar ul .active{background-color:#906;color:#fff}#sidebarcollapse .left-sidebar ul .sidebaricons{font-size:.9rem}.modaltext,.short{width:100%!important}main{padding-top:70px;margin-bottom:40px}main .inscover{width:100%;height:230px}@media only screen and (min-width:481px){main .inscover{height:280px}}@media only screen and (min-width:768px){main .inscover{height:310px}}main .blankdiv{height:auto;width:100%;position:relative;background-color:#f9fafa;padding-top:55px;padding-left:10px}main .blankdiv p{font-size:15px}@media only screen and (min-width:481px){main .blankdiv p{font-size:16px}}@media only screen and (min-width:768px){main .blankdiv p{font-size:18px}}@media only screen and (min-width:481px){main .blankdiv{height:130px;padding-bottom:95px}}@media only screen and (min-width:768px){main .blankdiv{height:150px;padding-left:60px;padding-top:110px}}@media only screen and (min-width:1280px){main .blankdiv{padding-top:90px}}main .blankdiv .insweb{background-color:#003585;color:#fff;font-size:14px;width:110px;margin-left:-20px}@media only screen and (min-width:481px){main .blankdiv .insweb{width:130px;font-size:16px}}@media only screen and (min-width:768px){main .blankdiv .insweb{width:157px;font-size:18px;margin-left:-58px}}@media only screen and (min-width:1280px){main .blankdiv .insweb{margin-left:-25px}}main .blankdiv .insweb-available img{width:15px;height:15px}main .blankdiv .insweb-available:hover{text-decoration:none}@media only screen and (min-width:768px){main .blankdiv .phemdiv{display:block}}main .logo-title{position:relative;top:-224px;margin-bottom:-120px;left:-12px}@media only screen and (min-width:360px){main .logo-title{top:-219px}}@media only screen and (min-width:481px){main .logo-title{top:-245px}}@media only screen and (min-width:768px){main .logo-title{top:-318px;left:-132px}}@media only screen and (min-width:1280px){main .logo-title{top:-299px;left:-86px}}main .logo-title .logoinstitute{width:70px;height:80px;border:1px solid #dcdcdc;transition:all .5s ease}@media only screen and (min-width:481px){main .logo-title .logoinstitute{width:90px;height:90px}}@media only screen and (min-width:768px){main .logo-title .logoinstitute{width:145px;height:145px;margin-left:120px!important}}main .logo-title .institle{font-size:16px;margin-top:45px;transition:all .5s ease;font-family:Verdana,Geneva,Tahoma,sans-serif}@media only screen and (min-width:360px){main .logo-title .institle{font-size:18px;margin-top:38px}}@media only screen and (min-width:481px){main .logo-title .institle{font-size:21px;margin-top:45px}}@media only screen and (min-width:768px){main .logo-title .institle{font-size:32px;margin-top:65px}}@media only screen and (min-width:1280px){main .logo-title .institle{font-size:34px}}main .inssocial{position:relative;top:-70px;left:67%;width:100px;font-size:15px}main .inssocial img{width:20px;height:20px}@media only screen and (min-width:481px){main .inssocial{top:-88px;left:70%}main .inssocial img{width:25px;height:25px}}@media only screen and (min-width:768px){main .inssocial{top:-198px;left:80%;font-size:18px}}main .inspills{margin-top:-20px;margin-left:-.7rem;margin-right:-.7rem}@media only screen and (min-width:481px){main .inspills{margin-top:-25px}}@media only screen and (min-width:768px){main .inspills{margin-top:-70px}}main .inspills .nav-pills .nav-link{color:#011737}main .inspills .nav-pills .active{background-color:#003585;color:#fff}main .inspills .inscarou{width:100%;height:auto}main .inspills .inscarou ul li{width:8px;height:8px;border-radius:100%;background-color:#000}@media only screen and (min-width:768px){main .inspills .inscarou ul li{top:10px}}@media only screen and (min-width:768px){main .inspills .inscarou{margin-bottom:180px}}main .inspills .inscarou img{width:100%;height:200px}@media only screen and (min-width:768px){main .inspills .inscarou img{height:400px}}main .inspills .notice{background-color:#f5f9ff;align-items:center;margin-bottom:60px;height:auto;width:100%}main .inspills .notice h5{font-weight:400;color:#003585}main .inspills .notice hr{border-bottom:2px solid #db3737}main .inspills .notice p{color:#000}main .inspills .notice p:before{background-image:url(/images/arrow.svg);background-size:10px 20px;display:inline-block;width:10px;height:15px;content:""}main .inspills .facultyachieve .facultyachievecard{width:200px;height:250px}main .inspills .facultyachieve .facultyachievecard img{width:100%;height:170px}main .inspills .description{padding:1rem;margin-left:auto;margin-right:auto;width:100%}main .inspills .description p{border-left:10px solid #96e0b7;color:#011737;padding-left:10px}main .inspills h2{color:#003585;font-family:Verdana,Geneva,Tahoma,sans-serif;font-size:18px}@media only screen and (min-width:481px){main .inspills h2{font-size:32px}}main .inspills .princidiv{margin-top:50px}main .inspills .princidiv h3{color:#003585;font-family:Verdana,Geneva,Tahoma,sans-serif;font-size:18px}@media only screen and (min-width:481px){main .inspills .princidiv h3{font-size:24px}}main .inspills .princidiv img{width:24px;height:24px}@media only screen and (min-width:481px){main .inspills .princidiv img{height:30px}}main .inspills .princidiv .principalcard{text-align:center;color:#011737;border:none}main .inspills .princidiv .principalcard p{color:#011737}main .inspills .princidiv .principalcard img{width:100%;height:250px}main .inspills .princidiv h6{color:#003585;font-family:Verdana,Geneva,Tahoma,sans-serif}main .inspills .insadditionalinfo p{font-size:18px}main .inspills .insadditionalinfo img{width:18px;height:18px}main .btnveri{background-color:#011737;width:100%;color:#fff;padding:10px;font-weight:700}@media only screen and (min-width:768px){main .btnveri{font-weight:300;padding:7px}}main .btnveri:hover{color:#fff}main .datetime{background-color:#011737;text-align:center}@media only screen and (min-width:768px){main .datetime{width:300px}}main .quote{font-family:Franklin Gothic Medium,Arial Narrow,Arial,sans-serif;font-style:italic;text-align:center}main .infraheader{text-align:center}main .infrabtn,main .infraheader{background-color:#011737;color:#fff}main .infrabtn{margin-left:-15px}main .infrabtn:hover{color:#fff}@media only screen and (min-width:768px){main .infrabtn{margin-left:0}}@media only screen and (min-width:1024px){main .infrabtn{margin-left:60px}}main .infrastructure-display p{font-size:16px;color:#011737;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Open Sans,Helvetica Neue,sans-serif}main .infrastructure-display p img{width:16px;height:16px}main .edit-social{list-style:none;margin-left:-40px;margin-bottom:20px}main .edit-social li{color:#000}main .edit-social li:before{background-image:url(/images/arrow.svg);background-size:10px 20px;display:inline-block;width:10px;height:15px;content:""}main .btnsubmit{background-color:#011737;padding-left:15px;padding-right:15px}main .btnsubmit:hover,main .btnwebdes{background-color:#003585}main .btnwebdes,main .btnwebdes:hover{color:#fff}main .btnadd{background-color:#003585;color:#fff}main .btnadd:hover{color:#fff}main .btnadd:focus{box-shadow:none}main .gendercard{width:80px;height:40px;border:0;border-radius:20px;float:right;margin-top:-5px;background-color:#d30383;color:#fff}main .gendercard .card-body{margin-top:-15px}main .visioncard{width:90%;border:0;height:auto}main .profiledetails{border:0;border-radius:15px;height:auto}main .profiledetails .card-body{font-size:18px}@media only screen and (min-width:481px){main .profiledetails{height:50px}}main .sidebar-facard{width:200px;height:280px}main .sidebar-facard .card-text{margin-top:5px;line-height:.9rem}main .sidebar-facard img{width:100%;height:170px}main .editachieve{position:relative;top:-50px;left:80px;color:#6fb604}main .editachieve:focus{box-shadow:none}main .body-channelprofile{font-family:Verdana,Geneva,Tahoma,sans-serif}main .body-channelprofile::-moz-placeholder{color:#dcdcdc}main .body-channelprofile:-ms-input-placeholder{color:#dcdcdc}main .body-channelprofile::-ms-input-placeholder{color:#dcdcdc}main .body-channelprofile::placeholder{color:#dcdcdc}main .body-channelprofile h4{font-family:Verdana,Geneva,Tahoma,sans-serif}main .profile{max-width:100%}main .profile .princi-name{font-family:Verdana,Geneva,Tahoma,sans-serif;color:#003585}main .profile .princi-profile-picture{border:2px solid #dcdcdc}main .profile img{width:170px;height:170px}@media only screen and (min-width:768px){main .profile img{width:200px;height:200px}}main .princi-profile-edit{position:relative;left:-16%;top:53px;z-index:inherit;cursor:pointer;background-color:#f1f0f0}@media only screen and (min-width:481px){main .princi-profile-edit{left:-11%;top:55px}}@media only screen and (min-width:768px){main .princi-profile-edit{left:-7%;top:70px}}@media only screen and (min-width:1280px){main .princi-profile-edit{left:-6%}}main .upload-profile-pic{position:relative;top:-153px}main .edit-btn{color:#6fb604}main .btnsubmit{background-color:#003585;color:#fff;position:relative;top:5px;left:0;border-radius:20px;padding-left:20px;padding-right:20px}main .btnsubmit:hover{background-color:#011737;color:#fff}main .pricipal-modal h5,main .pricipal-modal h6{color:#003585;font-family:Verdana,Geneva,Tahoma,sans-serif}main .princi-profile-display .mission-message-display{background-color:#f9fafa}main .teacher-section{color:#003585}main .notification-section,main .teacher-section h3,main .teacher-section h5{font-family:Verdana,Geneva,Tahoma,sans-serif}main .notification-section h3{color:#003585}main .notification-section .add-notifications{background-color:#003585;color:#fff}main .notification-section label{color:#003585}main .notification-section .btn-publish{background-color:#906;color:#fff}main .notification-section input::-moz-placeholder{color:#8b8b8b}main .notification-section input:-ms-input-placeholder{color:#8b8b8b}main .notification-section input::-ms-input-placeholder{color:#8b8b8b}main .notification-section input::placeholder{color:#8b8b8b}main .notification-section ul{list-style:none}main .notification-section ul li:before{background-image:url(/images/arrow.svg);background-size:10px 20px;display:inline-block;width:10px;height:15px;content:""}
+nav {
+  max-width: 100%;
+  background-color: white;
+}
+
+nav .navbar-toggler:focus {
+  outline: 0;
+}
+
+nav .imglogodash {
+  width: 110px;
+  height: auto;
+  margin-left: -12%;
+  transition: all ease .5s;
+}
+
+@media only screen and (min-width: 481px) {
+  nav .imglogodash {
+    width: 115px;
+    height: auto;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  nav .imglogodash {
+    margin: 5px;
+    width: 150px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  nav .imglogodash {
+    margin: 7px;
+    width: 120px;
+  }
+}
+
+nav ul li .accounticon {
+  font-size: 20px;
+  color: #96511f;
+  padding: 7px;
+}
+
+@media only screen and (min-width: 481px) {
+  nav ul li .accounticon {
+    font-size: 23px;
+    padding: 15px;
+  }
+}
+
+.border-gradient {
+  border-bottom: 4px solid;
+  border-image-slice: 1;
+}
+
+.border-gradient-color {
+  border-image-source: linear-gradient(to right, #990066, #f1aa00);
+}
+
+.popnav {
+  padding-left: 1em;
+  padding-right: 1em;
+  margin-left: -26px;
+  margin-right: -26px;
+  text-align: left;
+}
+
+.popnav li {
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding-left: 25px;
+  padding-right: 25px;
+  list-style-type: none;
+}
+
+.popnav li:hover {
+  background-color: #96511f;
+}
+
+.popnav li a {
+  color: black;
+  font-size: 18px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.popnav li a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.linklog {
+  text-align: left;
+  margin-left: -13px;
+  margin-right: -13px;
+  padding-left: 25px;
+}
+
+.linklog a {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: black;
+  font-size: 18px;
+}
+
+.linklog a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+.linklog:hover {
+  background-color: #96511f;
+}
+
+#sidebarcollapse {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  padding: 70px 0 0 10px;
+  background-color: white;
+  width: 70%;
+  overflow: auto;
+}
+
+#sidebarcollapse .left-sidebar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  height: calc(100vh - 70px);
+  padding-top: 50px;
+}
+
+#sidebarcollapse .left-sidebar ul li {
+  margin-bottom: 20px;
+  margin-left: -10px;
+}
+
+#sidebarcollapse .left-sidebar ul li a {
+  color: #011737;
+  font-weight: 500;
+}
+
+#sidebarcollapse .left-sidebar ul .active {
+  background-color: #990066;
+  color: white;
+}
+
+#sidebarcollapse .left-sidebar ul .sidebaricons {
+  font-size: 0.9rem;
+}
+
+.modaltext {
+  width: 100% !important;
+}
+
+.short {
+  width: 100% !important;
+}
+
+main {
+  padding-top: 70px;
+  margin-bottom: 40px;
+}
+
+main .inscover {
+  width: 100%;
+  height: 230px;
+}
+
+@media only screen and (min-width: 481px) {
+  main .inscover {
+    height: 280px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  main .inscover {
+    height: 310px;
+  }
+}
+
+main .blankdiv {
+  height: auto;
+  width: 100%;
+  position: relative;
+  background-color: #f9fafa;
+  padding-top: 55px;
+  padding-left: 10px;
+}
+
+main .blankdiv p {
+  font-size: 15px;
+}
+
+@media only screen and (min-width: 481px) {
+  main .blankdiv p {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  main .blankdiv p {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (min-width: 481px) {
+  main .blankdiv {
+    height: 130px;
+    padding-bottom: 95px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  main .blankdiv {
+    height: 150px;
+    padding-left: 60px;
+    padding-top: 110px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  main .blankdiv {
+    padding-top: 90px;
+  }
+}
+
+main .blankdiv .insweb {
+  background-color: #003585;
+  color: white;
+  font-size: 14px;
+  width: 110px;
+  margin-left: -20px;
+}
+
+@media only screen and (min-width: 481px) {
+  main .blankdiv .insweb {
+    width: 130px;
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  main .blankdiv .insweb {
+    width: 157px;
+    font-size: 18px;
+    margin-left: -58px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  main .blankdiv .insweb {
+    margin-left: -25px;
+  }
+}
+
+main .blankdiv .insweb-available img {
+  width: 15px;
+  height: 15px;
+}
+
+main .blankdiv .insweb-available:hover {
+  text-decoration: none;
+}
+
+@media only screen and (min-width: 768px) {
+  main .blankdiv .phemdiv {
+    display: block;
+  }
+}
+
+main .logo-title {
+  position: relative;
+  top: -224px;
+  margin-bottom: -120px;
+  left: -12px;
+}
+
+@media only screen and (min-width: 360px) {
+  main .logo-title {
+    top: -219px;
+  }
+}
+
+@media only screen and (min-width: 481px) {
+  main .logo-title {
+    top: -245px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  main .logo-title {
+    top: -318px;
+    left: -132px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  main .logo-title {
+    top: -299px;
+    left: -86px;
+  }
+}
+
+main .logo-title .logoinstitute {
+  width: 70px;
+  height: 80px;
+  border: 1px solid gainsboro;
+  transition: all ease .5s;
+}
+
+@media only screen and (min-width: 481px) {
+  main .logo-title .logoinstitute {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  main .logo-title .logoinstitute {
+    width: 145px;
+    height: 145px;
+    margin-left: 120px !important;
+  }
+}
+
+main .logo-title .institle {
+  font-size: 16px;
+  margin-top: 45px;
+  transition: all ease .5s;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+@media only screen and (min-width: 360px) {
+  main .logo-title .institle {
+    font-size: 18px;
+    margin-top: 38px;
+  }
+}
+
+@media only screen and (min-width: 481px) {
+  main .logo-title .institle {
+    font-size: 21px;
+    margin-top: 45px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  main .logo-title .institle {
+    font-size: 32px;
+    margin-top: 65px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  main .logo-title .institle {
+    font-size: 34px;
+  }
+}
+
+main .inssocial {
+  position: relative;
+  top: -70px;
+  left: 67%;
+  width: 100px;
+  font-size: 15px;
+}
+
+main .inssocial img {
+  width: 20px;
+  height: 20px;
+}
+
+@media only screen and (min-width: 481px) {
+  main .inssocial {
+    top: -88px;
+    left: 70%;
+  }
+
+  main .inssocial img {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  main .inssocial {
+    top: -198px;
+    left: 80%;
+    font-size: 18px;
+  }
+}
+
+main .inspills {
+  margin-top: -20px;
+  margin-left: -.7rem;
+  margin-right: -.7rem;
+}
+
+@media only screen and (min-width: 481px) {
+  main .inspills {
+    margin-top: -25px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  main .inspills {
+    margin-top: -70px;
+  }
+}
+
+main .inspills .nav-pills .nav-link {
+  color: #011737;
+}
+
+main .inspills .nav-pills .active {
+  background-color: #003585;
+  color: white;
+}
+
+main .inspills .inscarou {
+  width: 100%;
+  height: auto;
+}
+
+main .inspills .inscarou ul li {
+  width: 8px;
+  height: 8px;
+  border-radius: 100%;
+  background-color: black;
+}
+
+@media only screen and (min-width: 768px) {
+  main .inspills .inscarou ul li {
+    top: 10px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  main .inspills .inscarou {
+    margin-bottom: 180px;
+  }
+}
+
+main .inspills .inscarou img {
+  width: 100%;
+  height: 200px;
+}
+
+@media only screen and (min-width: 768px) {
+  main .inspills .inscarou img {
+    height: 400px;
+  }
+}
+
+main .inspills .notice {
+  background-color: #f5f9ff;
+  align-items: center;
+  margin-bottom: 60px;
+  height: auto;
+  width: 100%;
+}
+
+main .inspills .notice h5 {
+  font-weight: 400;
+  color: #003585;
+}
+
+main .inspills .notice hr {
+  border-bottom: 2px solid #db3737;
+}
+
+main .inspills .notice p {
+  color: black;
+}
+
+main .inspills .notice p::before {
+  background-image: url("/images/arrow.svg");
+  background-size: 10px 20px;
+  display: inline-block;
+  width: 10px;
+  height: 15px;
+  content: "";
+}
+
+main .inspills .facultyachieve .facultyachievecard {
+  width: 200px;
+  height: 250px;
+}
+
+main .inspills .facultyachieve .facultyachievecard img {
+  width: 100%;
+  height: 170px;
+}
+
+main .inspills .description {
+  padding: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+main .inspills .description p {
+  border-left: 10px solid #96e0b7;
+  color: #011737;
+  padding-left: 10px;
+}
+
+main .inspills h2 {
+  color: #003585;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 18px;
+}
+
+@media only screen and (min-width: 481px) {
+  main .inspills h2 {
+    font-size: 32px;
+  }
+}
+
+main .inspills .princidiv {
+  margin-top: 50px;
+}
+
+main .inspills .princidiv h3 {
+  color: #003585;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 18px;
+}
+
+@media only screen and (min-width: 481px) {
+  main .inspills .princidiv h3 {
+    font-size: 24px;
+  }
+}
+
+main .inspills .princidiv img {
+  width: 24px;
+  height: 24px;
+}
+
+@media only screen and (min-width: 481px) {
+  main .inspills .princidiv img {
+    height: 30px;
+  }
+}
+
+main .inspills .princidiv .principalcard {
+  text-align: center;
+  color: #011737;
+  border: none;
+}
+
+main .inspills .princidiv .principalcard p {
+  color: #011737;
+}
+
+main .inspills .princidiv .principalcard img {
+  width: 100%;
+  height: 250px;
+}
+
+main .inspills .princidiv h6 {
+  color: #003585;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+main .inspills .insadditionalinfo p {
+  font-size: 18px;
+}
+
+main .inspills .insadditionalinfo img {
+  width: 18px;
+  height: 18px;
+}
+
+main .btnveri {
+  background-color: #011737;
+  width: 100%;
+  color: white;
+  padding: 10px;
+  font-weight: 700;
+}
+
+@media only screen and (min-width: 768px) {
+  main .btnveri {
+    font-weight: 300;
+    padding: 7px;
+  }
+}
+
+main .btnveri:hover {
+  color: white;
+}
+
+main .datetime {
+  background-color: #011737;
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  main .datetime {
+    width: 300px;
+  }
+}
+
+main .quote {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-style: italic;
+  text-align: center;
+}
+
+main .infraheader {
+  text-align: center;
+  background-color: #011737;
+  color: white;
+}
+
+main .infrabtn {
+  margin-left: -15px;
+  background-color: #011737;
+  color: white;
+}
+
+main .infrabtn:hover {
+  color: white;
+}
+
+@media only screen and (min-width: 768px) {
+  main .infrabtn {
+    margin-left: 0px;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  main .infrabtn {
+    margin-left: 60px;
+  }
+}
+
+main .infrastructure-display p {
+  font-size: 16px;
+  color: #011737;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+main .infrastructure-display p img {
+  width: 16px;
+  height: 16px;
+}
+
+main .edit-social {
+  list-style: none;
+  margin-left: -40px;
+  margin-bottom: 20px;
+}
+
+main .edit-social li {
+  color: black;
+}
+
+main .edit-social li::before {
+  background-image: url("/images/arrow.svg");
+  background-size: 10px 20px;
+  display: inline-block;
+  width: 10px;
+  height: 15px;
+  content: "";
+}
+
+main .btnsubmit {
+  background-color: #011737;
+  color: white;
+  position: relative;
+  top: 5px;
+  left: 0;
+  border-radius: 20px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+main .btnsubmit:hover {
+  background-color: #003585;
+  color: white;
+}
+
+main .btnwebdes {
+  color: white;
+  background-color: #003585;
+}
+
+main .btnwebdes:hover {
+  color: white;
+}
+
+main .btnadd {
+  background-color: #003585;
+  color: white;
+}
+
+main .btnadd:hover {
+  color: white;
+}
+
+main .btnadd:focus {
+  box-shadow: none;
+}
+
+main .gendercard {
+  width: 80px;
+  height: 40px;
+  border: 0;
+  border-radius: 20px;
+  float: right;
+  margin-top: -5px;
+  background-color: #d30383;
+  color: white;
+}
+
+main .gendercard .card-body {
+  margin-top: -15px;
+}
+
+main .visioncard {
+  width: 90%;
+  border: 0;
+  height: auto;
+}
+
+main .profiledetails {
+  border: 0;
+  border-radius: 15px;
+  height: auto;
+}
+
+main .profiledetails .card-body {
+  font-size: 18px;
+}
+
+@media only screen and (min-width: 481px) {
+  main .profiledetails {
+    height: 50px;
+  }
+}
+
+main .sidebar-facard {
+  width: 200px;
+  height: 280px;
+}
+
+main .sidebar-facard .card-text {
+  margin-top: 5px;
+  line-height: .9rem;
+}
+
+main .sidebar-facard img {
+  width: 100%;
+  height: 170px;
+}
+
+main .editachieve {
+  position: relative;
+  top: -50px;
+  left: 80px;
+  color: #6fb604;
+}
+
+main .editachieve:focus {
+  box-shadow: none;
+}
+
+main .body-channelprofile {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+main .body-channelprofile::-moz-placeholder {
+  color: gainsboro;
+}
+
+main .body-channelprofile:-ms-input-placeholder {
+  color: gainsboro;
+}
+
+main .body-channelprofile::-ms-input-placeholder {
+  color: gainsboro;
+}
+
+main .body-channelprofile::placeholder {
+  color: gainsboro;
+}
+
+main .body-channelprofile h4 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+main .profile {
+  max-width: 100%;
+}
+
+main .profile .princi-name {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #003585;
+}
+
+main .profile .princi-profile-picture {
+  border: 2px solid gainsboro;
+}
+
+main .profile img {
+  width: 170px;
+  height: 170px;
+}
+
+@media only screen and (min-width: 768px) {
+  main .profile img {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+main .princi-profile-edit {
+  position: relative;
+  left: -16%;
+  top: 53px;
+  z-index: inherit;
+  cursor: pointer;
+  background-color: #f1f0f0;
+}
+
+@media only screen and (min-width: 481px) {
+  main .princi-profile-edit {
+    left: -11%;
+    top: 55px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  main .princi-profile-edit {
+    left: -7%;
+    top: 70px;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
+  main .princi-profile-edit {
+    left: -6%;
+  }
+}
+
+main .upload-profile-pic {
+  position: relative;
+  top: -153px;
+}
+
+main .edit-btn {
+  color: #6fb604;
+}
+
+main .btnsubmit {
+  background-color: #003585;
+  color: white;
+  position: relative;
+  top: 5px;
+  left: 0;
+  border-radius: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+main .btnsubmit:hover {
+  background-color: #011737;
+  color: white;
+}
+
+main .pricipal-modal h5 {
+  color: #003585;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+main .pricipal-modal h6 {
+  color: #003585;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+main .princi-profile-display .mission-message-display {
+  background-color: #f9fafa;
+}
+
+main .teacher-section {
+  color: #003585;
+}
+
+main .teacher-section h3 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+main .teacher-section h5 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+main .notification-section {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+main .notification-section h3 {
+  color: #003585;
+}
+
+main .notification-section .add-notifications {
+  background-color: #003585;
+  color: white;
+}
+
+main .notification-section label {
+  color: #003585;
+}
+
+main .notification-section .btn-publish {
+  background-color: #990066;
+  color: white;
+}
+
+main .notification-section input::-moz-placeholder {
+  color: #8b8b8b;
+}
+
+main .notification-section input:-ms-input-placeholder {
+  color: #8b8b8b;
+}
+
+main .notification-section input::-ms-input-placeholder {
+  color: #8b8b8b;
+}
+
+main .notification-section input::placeholder {
+  color: #8b8b8b;
+}
+
+main .notification-section ul {
+  list-style: none;
+}
+
+main .notification-section ul li::before {
+  background-image: url("/images/arrow.svg");
+  background-size: 10px 20px;
+  display: inline-block;
+  width: 10px;
+  height: 15px;
+  content: "";
+}
+
