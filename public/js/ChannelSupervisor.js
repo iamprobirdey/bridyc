@@ -812,6 +812,530 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -913,25 +1437,25 @@ var render = function() {
       _vm._v(" "),
       _vm.steps == 2
         ? _c("li", { class: { active: _vm.steps > 1 } }, [
-            _vm._v("\n      Lower Class Details\n    ")
+            _vm._v("\n        Lower Class Details\n      ")
           ])
         : _vm._e(),
       _vm._v(" "),
       _vm.steps == 3
         ? _c("li", { class: { active: _vm.steps > 2 } }, [
-            _vm._v("\n      Middle Class Details\n    ")
+            _vm._v("\n        Middle Class Details\n      ")
           ])
         : _vm._e(),
       _vm._v(" "),
       _vm.steps == 4
         ? _c("li", { class: { active: _vm.steps > 3 } }, [
-            _vm._v("\n      Higher Class Details\n    ")
+            _vm._v("\n        Higher Class Details\n      ")
           ])
         : _vm._e(),
       _vm._v(" "),
       _vm.steps == 5
         ? _c("li", { class: { active: _vm.steps > 4 } }, [
-            _vm._v("\n      Higher Class Details\n    ")
+            _vm._v("\n        Higher Class Details\n      ")
           ])
         : _vm._e()
     ]),
@@ -940,7 +1464,7 @@ var render = function() {
       ? _c(
           "form",
           {
-            staticClass: "form-horizontal",
+            staticClass: "form-horizontal container-lg",
             attrs: { "data-vv-scope": "step1" },
             on: {
               submit: function($event) {
@@ -965,7 +1489,7 @@ var render = function() {
                 },
                 [
                   _c("label", { attrs: { for: "inputEmail4" } }, [
-                    _vm._v("Institute Name")
+                    _vm._v("নিকেতনৰ নাম")
                   ]),
                   _vm._v(" "),
                   _c("input", {
@@ -987,7 +1511,7 @@ var render = function() {
                     attrs: {
                       type: "text",
                       name: "institute_name",
-                      placeholder: "Enter your Institute Name"
+                      placeholder: "নিকেতনৰ নাম"
                     },
                     domProps: { value: _vm.step1.institute_name },
                     on: {
@@ -1043,7 +1567,7 @@ var render = function() {
               _c(
                 "div",
                 {
-                  staticClass: "form-group col-md-3",
+                  staticClass: "form-group col-md-3 col-sm-6",
                   class: {
                     "has-error":
                       _vm.errors.has("serverErrors.city") ||
@@ -1052,7 +1576,7 @@ var render = function() {
                 },
                 [
                   _c("label", { attrs: { for: "inputCity" } }, [
-                    _vm._v("City")
+                    _vm._v("স্থান")
                   ]),
                   _vm._v(" "),
                   _c("input", {
@@ -1120,7 +1644,7 @@ var render = function() {
               _c(
                 "div",
                 {
-                  staticClass: "form-group col-md-3",
+                  staticClass: "form-group col-md-3 col-sm-6",
                   class: {
                     "has-error":
                       _vm.errors.has("serverErrors.post_office") ||
@@ -1128,9 +1652,7 @@ var render = function() {
                   }
                 },
                 [
-                  _c("label", { attrs: { for: "text" } }, [
-                    _vm._v("Post Office")
-                  ]),
+                  _c("label", { attrs: { for: "text" } }, [_vm._v("ডাকঘৰ")]),
                   _vm._v(" "),
                   _c("input", {
                     directives: [
@@ -1197,7 +1719,7 @@ var render = function() {
               _c(
                 "div",
                 {
-                  staticClass: "form-group col-md-3",
+                  staticClass: "form-group col-md-3 col-sm-6",
                   class: {
                     "has-error":
                       _vm.errors.has("serverErrors.district") ||
@@ -1205,9 +1727,7 @@ var render = function() {
                   }
                 },
                 [
-                  _c("label", { attrs: { for: "inputZip" } }, [
-                    _vm._v("District")
-                  ]),
+                  _c("label", { attrs: { for: "inputZip" } }, [_vm._v("জিলা")]),
                   _vm._v(" "),
                   _c("input", {
                     directives: [
@@ -1274,7 +1794,7 @@ var render = function() {
               _c(
                 "div",
                 {
-                  staticClass: "form-group col-md-3",
+                  staticClass: "form-group col-md-3 col-sm-6",
                   class: {
                     "has-error":
                       _vm.errors.has("serverErrors.pin") ||
@@ -1282,7 +1802,7 @@ var render = function() {
                   }
                 },
                 [
-                  _c("label", [_vm._v("Pin")]),
+                  _c("label", [_vm._v("পিন")]),
                   _vm._v(" "),
                   _c("input", {
                     directives: [
@@ -1351,7 +1871,7 @@ var render = function() {
               _c(
                 "div",
                 {
-                  staticClass: "form-group col-md-4",
+                  staticClass: "form-group col-md-4 col-sm-6",
                   class: {
                     "has-error":
                       _vm.errors.has("serverErrors.date") ||
@@ -1360,7 +1880,7 @@ var render = function() {
                 },
                 [
                   _c("label", { attrs: { for: "inputCity" } }, [
-                    _vm._v("Date")
+                    _vm._v("নিকেতন স্থাপনৰ তাৰিখ")
                   ]),
                   _vm._v(" "),
                   _c("input", {
@@ -1428,7 +1948,7 @@ var render = function() {
               _c(
                 "div",
                 {
-                  staticClass: "form-group col-md-4",
+                  staticClass: "form-group col-md-4 col-sm-6",
                   class: {
                     "has-error":
                       _vm.errors.has("serverErrors.bibhag") ||
@@ -1436,7 +1956,7 @@ var render = function() {
                   }
                 },
                 [
-                  _c("label", { attrs: { for: "text" } }, [_vm._v("Bibhag")]),
+                  _c("label", { attrs: { for: "text" } }, [_vm._v("বিভাগ")]),
                   _vm._v(" "),
                   _c("input", {
                     directives: [
@@ -1512,7 +2032,7 @@ var render = function() {
                 },
                 [
                   _c("label", { attrs: { for: "inputZip" } }, [
-                    _vm._v("Songkul")
+                    _vm._v("সংকুল")
                   ]),
                   _vm._v(" "),
                   _c("input", {
@@ -1582,7 +2102,7 @@ var render = function() {
               _c(
                 "div",
                 {
-                  staticClass: "form-group col-md-6",
+                  staticClass: "form-group col-md-6 col-sm-6",
                   class: {
                     "has-error":
                       _vm.errors.has("serverErrors.number") ||
@@ -1591,7 +2111,7 @@ var render = function() {
                 },
                 [
                   _c("label", { attrs: { for: "inputCity" } }, [
-                    _vm._v("Mobile Number")
+                    _vm._v("প্ৰধানাচাৰ্যৰ মোবাইল নং :")
                   ]),
                   _vm._v(" "),
                   _c("input", {
@@ -1659,7 +2179,7 @@ var render = function() {
               _c(
                 "div",
                 {
-                  staticClass: "form-group col-md-6",
+                  staticClass: "form-group col-md-6 col-sm-6",
                   class: {
                     "has-error":
                       _vm.errors.has("serverErrors.niketan") ||
@@ -1667,7 +2187,9 @@ var render = function() {
                   }
                 },
                 [
-                  _c("label", { attrs: { for: "text" } }, [_vm._v("Niketan ")]),
+                  _c("label", { attrs: { for: "text" } }, [
+                    _vm._v("নিকেতনৰ দুৰাভাষ")
+                  ]),
                   _vm._v(" "),
                   _c("input", {
                     directives: [
@@ -1736,7 +2258,7 @@ var render = function() {
               _c(
                 "div",
                 {
-                  staticClass: "form-group col-md-4",
+                  staticClass: "form-group col-md-4 col-sm-6",
                   class: {
                     "has-error":
                       _vm.errors.has("serverErrors.email") ||
@@ -1745,7 +2267,7 @@ var render = function() {
                 },
                 [
                   _c("label", { attrs: { for: "inputCity" } }, [
-                    _vm._v("Email")
+                    _vm._v("E-mail")
                   ]),
                   _vm._v(" "),
                   _c("input", {
@@ -1813,7 +2335,7 @@ var render = function() {
               _c(
                 "div",
                 {
-                  staticClass: "form-group col-md-4",
+                  staticClass: "form-group col-md-4 col-sm-6",
                   class: {
                     "has-error":
                       _vm.errors.has("serverErrors.website") ||
@@ -1969,6 +2491,76 @@ var render = function() {
               )
             ]),
             _vm._v(" "),
+            _c("link", {
+              attrs: { rel: "stylesheet", href: "afterdelete.css" }
+            }),
+            _vm._v(" "),
+            _vm._m(1),
+            _vm._v(" "),
+            _vm._m(2),
+            _vm._v(" "),
+            _vm._m(3),
+            _vm._v(" "),
+            _vm._m(4),
+            _vm._v(" "),
+            _vm._m(5),
+            _vm._v(" "),
+            _vm._m(6),
+            _vm._v(" "),
+            _vm._m(7),
+            _vm._v(" "),
+            _vm._m(8),
+            _vm._v(" "),
+            _vm._m(9),
+            _vm._v(" "),
+            _vm._m(10),
+            _vm._v(" "),
+            _vm._m(11),
+            _vm._v(" "),
+            _vm._m(12),
+            _vm._v(" "),
+            _vm._m(13),
+            _vm._v(" "),
+            _vm._m(14),
+            _vm._v(" "),
+            _vm._m(15),
+            _vm._v(" "),
+            _vm._m(16),
+            _vm._v(" "),
+            _vm._m(17),
+            _vm._v(" "),
+            _vm._m(18),
+            _vm._v(" "),
+            _vm._m(19),
+            _vm._v(" "),
+            _vm._m(20),
+            _vm._v(" "),
+            _vm._m(21),
+            _vm._v(" "),
+            _vm._m(22),
+            _vm._v(" "),
+            _vm._m(23),
+            _vm._v(" "),
+            _vm._m(24),
+            _vm._v(" "),
+            _vm._m(25),
+            _vm._v(" "),
+            _vm._m(26),
+            _vm._v(" "),
+            _vm._m(27),
+            _vm._v(" "),
+            _vm._m(28),
+            _vm._v(" "),
+            _vm._m(29),
+            _vm._v(" "),
+            _vm._m(30),
+            _vm._v(" "),
+            _vm._m(31),
+            _vm._v(" "),
+            _vm._m(32),
+            _vm._v(" "),
+            _vm._m(33),
+            _vm._v(" "),
             _c("div", { staticClass: "d-flex flex-row-reverse" }, [
               _c(
                 "button",
@@ -1976,11 +2568,11 @@ var render = function() {
                   staticClass: "btn btn-outline-secondary",
                   attrs: { disabled: _vm.steps === 1, type: "submit" }
                 },
-                [_vm._v("\n        Back\n      ")]
+                [_vm._v("\n          Back\n        ")]
               )
             ]),
             _vm._v(" "),
-            _vm._m(1)
+            _vm._m(34)
           ]
         )
       : _vm._e(),
@@ -2001,9 +2593,9 @@ var render = function() {
           [
             _c("h1", [_vm._v("Step 2")]),
             _vm._v(" "),
-            _vm._m(2),
+            _vm._m(35),
             _vm._v(" "),
-            _vm._m(3),
+            _vm._m(36),
             _vm._v(" "),
             _c("div", { staticClass: "d-flex flex-row-reverse" }, [
               _c(
@@ -2017,11 +2609,11 @@ var render = function() {
                     }
                   }
                 },
-                [_vm._v("\n        Back\n      ")]
+                [_vm._v("\n          Back\n        ")]
               )
             ]),
             _vm._v(" "),
-            _vm._m(4)
+            _vm._m(37)
           ]
         )
       : _vm._e(),
@@ -2042,13 +2634,13 @@ var render = function() {
           [
             _c("h1", [_vm._v("Step 3")]),
             _vm._v(" "),
-            _vm._m(5),
+            _vm._m(38),
             _vm._v(" "),
-            _vm._m(6),
+            _vm._m(39),
             _vm._v(" "),
-            _vm._m(7),
+            _vm._m(40),
             _vm._v(" "),
-            _vm._m(8)
+            _vm._m(41)
           ]
         )
       : _vm._e(),
@@ -2069,11 +2661,11 @@ var render = function() {
           [
             _c("h1", [_vm._v("Step 4")]),
             _vm._v(" "),
-            _vm._m(9),
+            _vm._m(42),
             _vm._v(" "),
-            _vm._m(10),
+            _vm._m(43),
             _vm._v(" "),
-            _vm._m(11)
+            _vm._m(44)
           ]
         )
       : _vm._e(),
@@ -2094,11 +2686,11 @@ var render = function() {
           [
             _c("h1", [_vm._v("Step 5")]),
             _vm._v(" "),
-            _vm._m(12),
+            _vm._m(45),
             _vm._v(" "),
-            _vm._m(13),
+            _vm._m(46),
             _vm._v(" "),
-            _vm._m(14)
+            _vm._m(47)
           ]
         )
       : _vm._e()
@@ -2117,6 +2709,1921 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "p-2 row" }, [
+      _c("p", { staticClass: "mt-2 mr-2" }, [_vm._v("(ক)")]),
+      _vm._v(" "),
+      _c("p", { staticClass: "mt-2 mr-2" }, [
+        _vm._v(
+          "\n        নিকেতনখন কত অৱস্থিত -- চহৰত/গাঁৱত/বনাঞ্চলত (✓ চিন দিব ) | নিকেতনলৈ\n        ছাত্র-ছাত্ৰী অহা গাঁৱৰ সংখ্যা\n    "
+        )
+      ]),
+      _vm._v(" "),
+      _c("input", {
+        staticClass: "form-control col-1 mr-2",
+        attrs: { type: "text", placeholder: "নিকেতনখন ....." }
+      }),
+      _vm._v(" "),
+      _c("p", { staticClass: "mt-2 mr-2" }, [_vm._v("নগৰীয়া বস্তিৰ সংখ্যা")]),
+      _vm._v(" "),
+      _c("input", {
+        staticClass: "form-control col-1 mr-2",
+        attrs: { type: "text", placeholder: "নগৰীয়া বস্তিৰ সংখ্যা" }
+      }),
+      _vm._v(" "),
+      _c("p", { staticClass: "mt-2 mr-2" }, [_vm._v("ৱাৰ্ডৰ সংখ্যা")]),
+      _vm._v(" "),
+      _c("input", {
+        staticClass: "form-control col-1 mr-2",
+        attrs: { type: "text", placeholder: "ৱাৰ্ডৰ সংখ্যা" }
+      }),
+      _vm._v(" "),
+      _c("p", { staticClass: "mt-2 mr-2" }, [
+        _vm._v(
+          "\n        গাঁৱৰ তালিকা বেলেগে সংলগ্ন কৰি গাঁৱৰ পৰা অহা ছাত্র-ছাত্ৰী সংখ্যা দিব |\n    "
+        )
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "row" }, [
+      _c("div", { staticClass: "col" }, [_vm._v("(খ) মাহিলী শিক্ষণ শুল্ক :")]),
+      _vm._v(" "),
+      _c(
+        "table",
+        { staticClass: "table col-8 table-responsive table-borderless" },
+        [
+          _c("tbody", [
+            _c("tr", [
+              _c("td", [_vm._v("অংকুৰ, মুকুল")]),
+              _vm._v(" "),
+              _c("td", [
+                _c("input", {
+                  staticClass: "form-control",
+                  attrs: { type: "text", placeholder: "  " }
+                })
+              ]),
+              _vm._v(" "),
+              _c("td", [_vm._v("১মৰ পৰা ৫ ম")]),
+              _vm._v(" "),
+              _c("td", [
+                _c("input", {
+                  staticClass: "form-control",
+                  attrs: { type: "text", placeholder: "  " }
+                })
+              ])
+            ]),
+            _vm._v(" "),
+            _c("tr", [
+              _c("td", [_vm._v("৬ষ্টৰ পৰা ৮ ম")]),
+              _vm._v(" "),
+              _c("td", [
+                _c("input", {
+                  staticClass: "form-control",
+                  attrs: { type: "text", placeholder: "  " }
+                })
+              ]),
+              _vm._v(" "),
+              _c("td", [_vm._v("৯ ম আৰু ১০ ম")]),
+              _vm._v(" "),
+              _c("td", [
+                _c("input", {
+                  staticClass: "form-control",
+                  attrs: { type: "text", placeholder: "  " }
+                })
+              ])
+            ])
+          ])
+        ]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "p-2 row" }, [
+      _c("p", { staticClass: "mt-2 mr-2" }, [_vm._v("(গ)")]),
+      _vm._v(" "),
+      _c("p", { staticClass: "mt-2 mr-2" }, [
+        _vm._v("(১) আচাৰ্য/আচাৰ্জাৰ নুন্যতম মানধন")
+      ]),
+      _vm._v(" "),
+      _c("input", {
+        staticClass: "form-control col-2 mr-2",
+        attrs: { type: "text", placeholder: "নুন্যতম মানধন.." }
+      }),
+      _vm._v(" "),
+      _c("p", { staticClass: "mt-2 mr-2" }, [
+        _vm._v("(২) আচাৰ্য/আচাৰ্জাৰ অধিকতম মানধন")
+      ]),
+      _vm._v(" "),
+      _c("input", {
+        staticClass: "form-control col-2 mr-2",
+        attrs: { type: "text", placeholder: "অধিকতম মানধন" }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "p-2 row" }, [
+      _c("p", { staticClass: "mt-2 mr-2" }, [_vm._v("(ঘ)")]),
+      _vm._v(" "),
+      _c("p", { staticClass: "mt-2 mr-2" }, [
+        _vm._v(
+          "\n        নিকেতনৰ হিচাব পৰীক্ষকৰ প্ৰতিবেদন ২০১৯ বৰ্ষৰ ৩১ মাৰ্চলৈ সম্পূৰ্ণ কৰি\n        প্ৰদেশ কাৰ্যালয়লৈ প্ৰেৰণ কৰিছে/কৰা নাই (✓ চিন দিব ) ।\n    "
+        )
+      ]),
+      _vm._v(" "),
+      _c("p", { staticClass: "mt-2 mr-2" }, [
+        _vm._v("যদি কৰা নাই কোন চনলৈ পঠাইছে লিখিব")
+      ]),
+      _vm._v(" "),
+      _c("input", {
+        staticClass: "form-control col-2 mr-2",
+        attrs: { type: "text", placeholder: " " }
+      }),
+      _vm._v(
+        "নিকেতনৰ তথ্য আৰু হিচাব-নিকাচ চাৰ্টাড\n    অকাউন্টটেণ্টৰ (C/A) দ্বাৰা আৰু\n    কম্পিউটাৰৰ যোগেদি কৰা হয়/নহয় (✓ চিন দিব )\n"
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "p-2 row" }, [
+      _c("p", { staticClass: "mt-2 mr-2" }, [
+        _vm._v(
+          "\n        (ঙ) নিকেতনৰ বেংক একাউণ্ট নম্বৰ আৰু বেংকৰ নাম (যিমানটা থাকে)\n    "
+        )
+      ]),
+      _vm._v(" "),
+      _c("input", {
+        staticClass: "form-control col-1 mr-2",
+        attrs: { type: "text", placeholder: " " }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "p-2 row" }, [
+      _c("p", { staticClass: "mt-2 mr-2" }, [
+        _vm._v(
+          "\n        (চ) ভবিষ্য নিধি - E. P. F. আছে/নাই । যদি আছে নম্বৰ দিব :\n    "
+        )
+      ]),
+      _vm._v(" "),
+      _c("select", { staticClass: "custom-select col-2" }, [
+        _c("option", { attrs: { selected: "" } }, [_vm._v("আছে")]),
+        _vm._v(" "),
+        _c("option", { attrs: { value: "1" } }, [_vm._v("নাই")])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "p-2 row" }, [
+      _c("p", { staticClass: "mt-2 mr-2" }, [
+        _vm._v(
+          "\n        (জ) নিকেতনৰ আচাৰ্যসকল প্ৰান্তীয় আচাৰ্য কল্যান নিধিৰ সদস্য হয়নে ?\n    "
+        )
+      ]),
+      _vm._v(" "),
+      _c("select", { staticClass: "custom-select col-2" }, [
+        _c("option", { attrs: { selected: "" } }, [_vm._v("হয়")]),
+        _vm._v(" "),
+        _c("option", { attrs: { value: "1" } }, [_vm._v("নহয়")])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "p-2 row" }, [
+      _c("p", { staticClass: "mt-2 mr-2" }, [
+        _vm._v(
+          "\n        (ঝ) নিকেতনৰ আচাৰ্য/ আৰু কৰ্মচাৰীসকল কোনো স্থ্য স্বা বীমা/অটল অমৃত\n        কাৰ্ড / আয়ুষ্মান ভাৰত কাৰ্ড লৈছেনে নাই, যদি লোৱা নাই উপৰোক্ত আঁচনিৰ\n        আওতালৈ আনিব লাগে ।\n    "
+        )
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "p-2 row" }, [
+      _c("p", { staticClass: "mt-2 mr-2" }),
+      _vm._v("\n    ৫। (ক) প্রধানাচাৰ্য/ভাৰপ্ৰাপ্ত প্রধানাচাৰ্যৰ নাম "),
+      _c("p"),
+      _vm._v(" "),
+      _c("input", {
+        staticClass: "form-control col-2 mr-2",
+        attrs: { type: "text", placeholder: " " }
+      }),
+      _vm._v(" "),
+      _c("p", { staticClass: "mt-2 mr-2" }, [
+        _vm._v("\n        স্থানীয় সমিতিৰ পৰা পোৱা নিযুক্তিৰ তাৰিখ ")
+      ]),
+      _vm._v(" "),
+      _c("input", {
+        staticClass: "form-control col-2 mr-2",
+        attrs: { type: "text", placeholder: " " }
+      }),
+      _vm._v(" "),
+      _c("p", { staticClass: "mt-2 mr-2" }, [
+        _vm._v("\n        শিশু শিক্ষা সমিতি, অসমৰ পৰা পোৱা নিযুক্তিৰ তাৰিখ")
+      ]),
+      _vm._v(" "),
+      _c("input", {
+        staticClass: "form-control col-2 mr-2",
+        attrs: { type: "text", placeholder: " " }
+      }),
+      _vm._v(" "),
+      _c("p", { staticClass: "mt-2 mr-2" }, [
+        _vm._v(
+          "প্রধানাচাৰ্য স্থায়ী/অস্থায়ী/ভাৰপ্ৰাপ্ত (✓ চিন দিব )। উপ-প্ৰধানাচাৰ্যৰ নাম (যদি আছে) : "
+        )
+      ]),
+      _vm._v(" "),
+      _c("input", {
+        staticClass: "form-control col-2 mr-2",
+        attrs: { type: "text", placeholder: " " }
+      }),
+      _vm._v(" "),
+      _c("p", { staticClass: "mt-2 mr-2" }, [
+        _vm._v("প্রধানাচাৰ্য প্ৰশিক্ষণ লোৱা চন ")
+      ]),
+      _vm._v(" "),
+      _c("input", {
+        staticClass: "form-control col-2 mr-2",
+        attrs: { type: "text", placeholder: " " }
+      }),
+      _vm._v(" "),
+      _c("p", { staticClass: "mt-2 mr-2" }, [
+        _vm._v("নিযুক্তি স্থায়ী/অস্থায়ী (✓ চিন দিব )।")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "p-2 row" }, [
+      _c("p", { staticClass: "mt-2 mr-2" }, [
+        _vm._v("(৬) (ক) নিকেতনৰ মাটিৰ পৰিমাণ")
+      ]),
+      _vm._v(" "),
+      _c("input", {
+        staticClass: "form-control col-2 mr-2",
+        attrs: { type: "text", placeholder: " " }
+      }),
+      _vm._v(" "),
+      _c("p", { staticClass: "mt-2 mr-2" }, [
+        _vm._v(
+          "মাটি নিজৰ হয় / নহয় । (ম্যাদী/চৰকাৰী/দখল) নিকেতনৰ ভৱন পকা/অৰ্দ্ধ পকা/ অস্থায়ী (✓ চিন দিব )।"
+        )
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "p-2 row" }, [
+      _c("p", { staticClass: "mt-2 mr-2" }, [_vm._v("(খ) নিকেতনখন")]),
+      _vm._v(" "),
+      _c("input", {
+        staticClass: "form-control col-2 mr-2",
+        attrs: { type: "text", placeholder: " " }
+      }),
+      _vm._v(" "),
+      _c("p", { staticClass: "mt-2 mr-2" }, [_vm._v("পঞ্চায়ত,")]),
+      _vm._v(" "),
+      _c("input", {
+        staticClass: "form-control col-2 mr-2",
+        attrs: { type: "text", placeholder: " " }
+      }),
+      _vm._v(" "),
+      _c("p", { staticClass: "mt-2 mr-2" }, [_vm._v("উন্নয়ন খণ্ড (ব্লক)ত")]),
+      _vm._v(" "),
+      _c("input", {
+        staticClass: "form-control col-2 mr-2",
+        attrs: { type: "text", placeholder: " " }
+      }),
+      _vm._v(" "),
+      _c("p", { staticClass: "mt-2 mr-2" }, [_vm._v("মহকুমাত অৱস্থিত ।")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "p-2 row" }, [
+      _c("p", { staticClass: "mt-2 mr-2" }, [
+        _vm._v("(গ) পুথিভঁৰাল ব্যৱস্থা : অধ্যয়ন কক্ষ")
+      ]),
+      _vm._v(" "),
+      _c("input", {
+        staticClass: "form-control col-2 mr-2",
+        attrs: { type: "text", placeholder: " " }
+      }),
+      _vm._v(" "),
+      _c("p", { staticClass: "mt-2 mr-2" }, [_vm._v("টা /আলমাৰী সংখ্যা")]),
+      _vm._v(" "),
+      _c("input", {
+        staticClass: "form-control col-2 mr-2",
+        attrs: { type: "text", placeholder: " " }
+      }),
+      _vm._v(" "),
+      _c("p", { staticClass: "mt-2 mr-2" }, [_vm._v("টা/কিতাবৰ সংখ্যা")]),
+      _vm._v(" "),
+      _c("input", {
+        staticClass: "form-control col-2 mr-2",
+        attrs: { type: "text", placeholder: " " }
+      }),
+      _vm._v(" "),
+      _c("p", { staticClass: "mt-2 mr-2" }, [
+        _vm._v(
+          "খন । পঞ্জীয়ন বহীত কিতাব কিতাবসমূহ পঞ্জীয়ন কৰা হয়/নহয় । (✓ চিন দিব )"
+        )
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "p-2 row" }, [
+      _c("p", { staticClass: "mt-2 mr-2" }, [
+        _vm._v(
+          "(ঘ) বিজ্ঞানাগাৰৰ ব্যবস্থা আছে/নাই আৰু নিয়মিত ব্যৱহাৰ হয়/নহয় । (✓ চিন দিব )"
+        )
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "p-2 row" }, [
+      _c("p", { staticClass: "mt-2 mr-2" }, [
+        _vm._v(
+          "(ঙ) খেলপথাৰ আছে/নাই । (✓ চিন দিব ) যদি নাই, কি ধৰণৰ ব্যবস্থা আছে"
+        )
+      ]),
+      _vm._v(" "),
+      _c("input", {
+        staticClass: "form-control col-2 mr-2",
+        attrs: { type: "text", placeholder: " " }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "p-2 row" }, [
+      _c("p", { staticClass: "mt-2 mr-2" }, [
+        _vm._v(
+          "(চ) উপযুক্ত প্ৰাৰ্থনা গৃহ আছে/নাই (✓ চিন দিব ) (যদি নাই সোনকালে ব্যবস্থা কৰিব) । প্ৰথনা বিদ্যা\n        ভাৰতীয় ক্ৰম অনুসৰি হয়/নহয় (✓ চিন দিব )\n        । বহি প্ৰাৰ্থনা হয়নে ?"
+        )
+      ]),
+      _vm._v(" "),
+      _c("input", {
+        staticClass: "form-control col-2 mr-2",
+        attrs: { type: "text", placeholder: " " }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: " d-flex justify-content-center " }, [
+      _c("h5", { staticClass: "mb-0 h4 titleCentre" }, [
+        _vm._v(
+          "\n        নিম্নলিখিত কাৰ্যব্যবস্থা সমূহৰ আপোনাৰ নিকেতনৰ\n        ক্ষেত্ৰত যিটো প্ৰযোজ্য হয়\n        তাত (✓) চীন দিব ।\n    "
+        )
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "p-2 row" }, [
+      _c("p", { staticClass: "mt-2 mr-2" }, [
+        _vm._v("৭ । (ক) পঞ্জীয়নৰ বাবে চৰকাৰৰ সৈতে হোৱা যোগাযোগ")
+      ]),
+      _vm._v(" "),
+      _c("input", {
+        staticClass: "form-control col-2 mr-2",
+        attrs: { type: "text", placeholder: " " }
+      }),
+      _vm._v(" "),
+      _c("p", { staticClass: "mt-2 mr-2" }, [
+        _vm._v(
+          "(ক) আবেদন কৰিছে (খ) নিকেতন খোলাৰ অনুমতি হৈছে (গ) যদি চৰকাৰী পঞ্জীভূক্ত হৈছে, পঞ্জীয়ন নম্বৰ দিব\n    "
+        )
+      ]),
+      _vm._v(" "),
+      _c("input", {
+        staticClass: "form-control col-2 mr-2",
+        attrs: { type: "text", placeholder: " " }
+      }),
+      _vm._v(" "),
+      _c("p", { staticClass: "mt-2 mr-2" }, [
+        _vm._v("(ঘ) কোনো ধৰণৰ যোগাযোগ হোৱা নাই । সেৱাৰ কড নম্বৰ দিব")
+      ]),
+      _vm._v(" "),
+      _c("input", {
+        staticClass: "form-control col-2 mr-2",
+        attrs: { type: "text", placeholder: " " }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "p-2 row" }, [
+      _c("p", { staticClass: "mt-2 mr-2" }, [
+        _vm._v("৭ । (ক) পঞ্জীয়নৰ বাবে চৰকাৰৰ সৈতে হোৱা যোগাযোগ")
+      ]),
+      _vm._v(" "),
+      _c("input", {
+        staticClass: "form-control col-2 mr-2",
+        attrs: { type: "text", placeholder: " " }
+      }),
+      _vm._v(" "),
+      _c("p", { staticClass: "mt-2 mr-2" }, [
+        _vm._v(
+          "(ক) আবেদন কৰিছে (খ) নিকেতন খোলাৰ অনুমতি হৈছে (গ) যদি চৰকাৰী পঞ্জীভূক্ত হৈছে, পঞ্জীয়ন নম্বৰ দিব\n    "
+        )
+      ]),
+      _vm._v(" "),
+      _c("input", {
+        staticClass: "form-control col-2 mr-2",
+        attrs: { type: "text", placeholder: " " }
+      }),
+      _vm._v(" "),
+      _c("p", { staticClass: "mt-2 mr-2" }, [
+        _vm._v("(ঘ) কোনো ধৰণৰ যোগাযোগ হোৱা নাই । সেৱাৰ কড নম্বৰ দিব")
+      ]),
+      _vm._v(" "),
+      _c("input", {
+        staticClass: "form-control col-2 mr-2",
+        attrs: { type: "text", placeholder: " " }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "p-2 row" }, [
+      _c("p", { staticClass: "mt-2 mr-2" }, [
+        _vm._v("(খ) শিশু শিক্ষা সমিতি, অসমৰ অন্তৰ্ভুক্তৰ পঞ্জীয়ন নম্বৰ দিব")
+      ]),
+      _vm._v(" "),
+      _c("input", {
+        staticClass: "form-control col-2 mr-2",
+        attrs: { type: "text", placeholder: " " }
+      }),
+      _vm._v(" "),
+      _c("p", { staticClass: "mt-2 mr-2" }, [
+        _vm._v("(যদি নাই অতি সোনকালে মূল প্ৰমাণ পত্ৰ সহ পঞ্জীয়ন নম্বৰ লব )")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "p-2 row" }, [
+      _c("p", { staticClass: "mt-2 mr-2" }, [
+        _vm._v(
+          "(গ) ষষ্ঠ শ্ৰেণীৰ‍ পৰা অষ্টম শ্ৰেণীলৈ সমিতিৰ উচ্চ মাধ্যমিক বিদ্যালয় উপ-সমিতিৰ পৰা অনুমোদন পোৱা\n        চন"
+        )
+      ]),
+      _vm._v(" "),
+      _c("input", {
+        staticClass: "form-control col-2 mr-2",
+        attrs: { type: "text", placeholder: " " }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "p-2 row" }, [
+      _c("p", { staticClass: "mt-2 mr-2" }, [
+        _vm._v(
+          "(ঘ) নৱম আৰু দশম শ্ৰেণীৰ‍ বাবে সমিতিৰ উচ্চ মাধ্যমিক বিদ্যালয় উপ-সমিতিৰ পৰা অনুমোদন পোৱা চন"
+        )
+      ]),
+      _vm._v(" "),
+      _c("input", {
+        staticClass: "form-control col-2 mr-2",
+        attrs: { type: "text", placeholder: " " }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "p-2 row" }, [
+      _c("p", { staticClass: "mt-2 mr-2" }, [
+        _vm._v("৮ । (ক) বালিকা শিক্ষাৰ কালাংখ নিমনীয়া ভাবে হৈ আছে/নাই ।")
+      ]),
+      _vm._v(" "),
+      _c("select", { staticClass: "custom-select col-2" }, [
+        _c("option", { attrs: { selected: "" } }, [_vm._v("আছে")]),
+        _vm._v(" "),
+        _c("option", { attrs: { value: "1" } }, [_vm._v("নাই")])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "p-2 row" }, [
+      _c("p", { staticClass: "mt-2 mr-2" }, [
+        _vm._v(
+          "(খ) পঞ্চপদী শিক্ষণ পদ্ধতিৰ আধাৰত সকলো আচাৰ্যই পাঠ যোজনা\n        বনাই পাঠ দান কৰে/নকৰে । যদি নকৰে কিয় নকৰে জনাব :"
+        )
+      ]),
+      _vm._v(" "),
+      _c("input", {
+        staticClass: "form-control col-2 mr-2",
+        attrs: { type: "text", placeholder: " " }
+      })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "p-2 row" }, [
+      _c("p", { staticClass: "mt-2 mr-2" }, [
+        _vm._v(
+          "(গ) Spoken English অথবা Class ত English to English কোন কোন শ্ৰেণীত কেইটাকৈ Class"
+        )
+      ]),
+      _vm._v(" "),
+      _c("input", {
+        staticClass: "form-control col-2 mr-2",
+        attrs: { type: "text", placeholder: " " }
+      }),
+      _vm._v(" "),
+      _c("p", { staticClass: "mt-2 mr-2" }, [_vm._v("হয় । ")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "p-2 row" }, [
+      _c("p", { staticClass: "mt-2 mr-2" }, [
+        _vm._v("(ঘ) স্মাৰ্ট ক্লাছৰ ব্যবস্থা আছে/নাই ।")
+      ]),
+      _vm._v(" "),
+      _c("select", { staticClass: "custom-select col-2" }, [
+        _c("option", { attrs: { selected: "" } }, [_vm._v("আছে")]),
+        _vm._v(" "),
+        _c("option", { attrs: { value: "1" } }, [_vm._v("নাই")])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "p-2 row" }, [
+      _c("p", { staticClass: "mt-2 mr-2" }, [
+        _vm._v("(ঙ) নিকেতনত শিশু বাটিকাৰ সুকীয়া ব্যবস্থা হৈছে/হোৱা নাই ।")
+      ]),
+      _vm._v(" "),
+      _c("select", { staticClass: "custom-select col-2" }, [
+        _c("option", { attrs: { selected: "" } }, [_vm._v("হৈছে")]),
+        _vm._v(" "),
+        _c("option", { attrs: { value: "1" } }, [_vm._v("হোৱা নাই")])
+      ]),
+      _vm._v(" "),
+      _c("p", { staticClass: "mt-2 mr-2" }, [
+        _vm._v(" শিশু বাটিকা প্ৰমুখ নিযুক্তি দিছে/দিয়া নাই ।")
+      ]),
+      _vm._v(" "),
+      _c("select", { staticClass: "custom-select col-2" }, [
+        _c("option", { attrs: { selected: "" } }, [_vm._v("দিছে")]),
+        _vm._v(" "),
+        _c("option", { attrs: { value: "1" } }, [_vm._v("দিয়া নাই")])
+      ]),
+      _vm._v(" "),
+      _c("p", { staticClass: "mt-2 mr-2" }, [
+        _vm._v(
+          "নিকেতন শিশু বাটিকা কোনটো ৰূপত আছে --- নমুনা ৰূপ/ প্ৰভাৱীৰূপ/পযত্নশীল ৰূপ "
+        )
+      ]),
+      _vm._v(" "),
+      _c("select", { staticClass: "custom-select col-2" }, [
+        _c("option", { attrs: { selected: "" } }, [_vm._v("নমুনা ৰূপ")]),
+        _vm._v(" "),
+        _c("option", { attrs: { value: "1" } }, [_vm._v("প্ৰভাৱীৰূপ")]),
+        _vm._v(" "),
+        _c("option", { attrs: { value: "1" } }, [_vm._v("পযত্নশীল ৰূপ")])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "p-2 row" }, [
+      _c("p", { staticClass: "mt-2 mr-2" }, [
+        _vm._v("(চ) কম্পিউটাৰ শিক্ষা ব্যবস্থা আছে/নাই ।")
+      ]),
+      _vm._v(" "),
+      _c("select", { staticClass: "custom-select col-2" }, [
+        _c("option", { attrs: { selected: "" } }, [_vm._v("আছে")]),
+        _vm._v(" "),
+        _c("option", { attrs: { value: "1" } }, [_vm._v("নাই")])
+      ]),
+      _vm._v(" "),
+      _c("p", { staticClass: "mt-2 mr-2" }, [
+        _vm._v(" শিশু বাটিকা প্ৰমুখ নিযুক্তি দিছে/দিয়া নাই ")
+      ]),
+      _vm._v(" "),
+      _c("select", { staticClass: "custom-select col-2" }, [
+        _c("option", { attrs: { selected: "" } }, [_vm._v("দিছে ।")]),
+        _vm._v(" "),
+        _c("option", { attrs: { value: "1" } }, [_vm._v("দিয়া নাই ।")])
+      ]),
+      _vm._v(" "),
+      _c("p", { staticClass: "mt-2 mr-2" }, [
+        _vm._v("যদি আছে কম্পিউটাৰ /লেপটপ (Laptop) কিমানতা")
+      ]),
+      _vm._v(" "),
+      _c("input", {
+        staticClass: "form-control col-2 mr-2",
+        attrs: { type: "text", placeholder: " " }
+      }),
+      _vm._v(" "),
+      _c("p", { staticClass: "mt-2 mr-2" }, [
+        _vm._v("কম্পিউটাৰ বিষয়ৰ আচাৰ্য আছে/নাই ।")
+      ]),
+      _vm._v(" "),
+      _c("select", { staticClass: "custom-select col-2" }, [
+        _c("option", { attrs: { selected: "" } }, [_vm._v("আছে ।")]),
+        _vm._v(" "),
+        _c("option", { attrs: { value: "1" } }, [_vm._v("নাই ।")])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "p-2 row" }, [
+      _c("p", { staticClass: "mt-2 mr-2" }, [
+        _vm._v(
+          "(ছ) অটল টিংকাৰিং প্ৰয়োগ শালাৰ (Atal Tinkering Labortory)\n        বাবে Atal Inovation Mission, Niti Ayogত আবেদন কৰিছেনে নাই?\n        ( ষষ্ঠ শ্ৰেণীৰ‍ পৰা দশম শ্ৰেণীলৈ মুঠ ৪০০\n        ছাত্ৰ-ছাত্ৰী থকা, ১৫০০বৰ্গ ফুট স্থানৰ নিকেতনৰ ক্ষেত্ৰত প্ৰযোজ্য )"
+        )
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: " d-flex justify-content-center " }, [
+      _c("h5", { staticClass: "mb-0 h5  " }, [
+        _vm._v(
+          "\n        বিদ্যা ভাৰতী অখিল ভাৰতীয় শিক্ষা সংস্থানৰ সংবদ্ধ\n    "
+        )
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "mt-2 d-flex justify-content-center " }, [
+      _c("h2", { staticClass: "mb-0  tit leCentre" }, [
+        _vm._v("\n        শিশু শিক্ষা সমিতি, অসম\n    ")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      { staticClass: "mb-2 mt-2 d-flex justify-content-center " },
+      [
+        _c("h5", { staticClass: "mb-0 h5  " }, [
+          _vm._v(
+            "\n        ৰাধাগোবিন্দ বৰুৱা পথ, প্ৰশান্ত পথ, গুৱাহাটী - ৭৮১০২৮\n    "
+          )
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "p-2 row justify-content-between" }, [
+      _c("div", { staticClass: "col-4 mt-3" }, [
+        _c("p", {}, [_vm._v(" আচাৰ্য/আচাৰ্যাৰ বিৱৰণ - ২০২০")])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "p-2 col-4 row" }, [
+        _c("p", { staticClass: "mt-2 mr-2" }, [_vm._v(" নিকেতনৰ নাম")]),
+        _vm._v(" "),
+        _c("input", {
+          staticClass: "form-control col  mr-2",
+          attrs: { type: "text", placeholder: " " }
+        })
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("table", { staticClass: "table table-bordered" }, [
+      _c("tbody", [
+        _c("tr", [
+          _c("td", [_vm._v("ক্ৰ: নং.")]),
+          _vm._v(" "),
+          _c("td", [
+            _vm._v(
+              "প্ৰধানাচাৰ্য, শিশু বাটিকা প্ৰমুখ আৰু বালিকা শিক্ষা প্ৰমুখৰ নাম ক্ৰমে লিখিব ।"
+            )
+          ]),
+          _vm._v(" "),
+          _c("td", [_vm._v("জন্মৰ তাৰিখ আৰু ব্লাড গ্ৰুপ")]),
+          _vm._v(" "),
+          _c("td", [_vm._v("নিকেতনৰ যোগদানৰ তাৰিখ আৰু মোবাইল নং ")]),
+          _vm._v(" "),
+          _c("td", [_vm._v("ই-মেইল আই ডি")]),
+          _vm._v(" "),
+          _c("td", [_vm._v("হুৱাটছআপ নম্বৰ")]),
+          _vm._v(" "),
+          _c("td", [_vm._v("শিক্ষাগত অৰ্হতা ")]),
+          _vm._v(" "),
+          _c("td", [_vm._v("পাঠদান কৰা মূল বিষয় ")]),
+          _vm._v(" "),
+          _c("td", [_vm._v("৭ দিনীয়া")]),
+          _vm._v(" "),
+          _c("td", [_vm._v("১৫ দিনীয়া")])
+        ]),
+        _vm._v(" "),
+        _c("tr", [
+          _c("td", [_vm._v("১")]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ])
+        ]),
+        _vm._v(" "),
+        _c("tr", [
+          _c("td", [_vm._v(" ২")]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ])
+        ]),
+        _vm._v(" "),
+        _c("tr", [
+          _c("td", [_vm._v(" ৩")]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ])
+        ]),
+        _vm._v(" "),
+        _c("tr", [
+          _c("td", { attrs: { colspan: "2" } }, [
+            _vm._v("আধাৰভূত বিষয়ৰ আচৰ্য/আচাৰ্যাৰ নাম লিখিব")
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ])
+        ]),
+        _vm._v(" "),
+        _c("tr", [
+          _c("td", [_vm._v(" ৪")]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ])
+        ]),
+        _vm._v(" "),
+        _c("tr", [
+          _c("td", [_vm._v(" ৫")]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ])
+        ]),
+        _vm._v(" "),
+        _c("tr", [
+          _c("td", [_vm._v(" ৬")]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ])
+        ]),
+        _vm._v(" "),
+        _c("tr", [
+          _c("td", [_vm._v(" ৭ ")]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ])
+        ]),
+        _vm._v(" "),
+        _c("tr", [
+          _c("td", [_vm._v("৮")]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ])
+        ]),
+        _vm._v(" "),
+        _c("tr", [
+          _c("td", { attrs: { colspan: "2" } }, [
+            _vm._v("বিজ্ঞান বিষয়ৰ আচৰ্য/আচাৰ্যাৰ নাম লিখিব")
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ])
+        ]),
+        _vm._v(" "),
+        _c("tr", [
+          _c("td", [_vm._v("৯ ")]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ])
+        ]),
+        _vm._v(" "),
+        _c("tr", [
+          _c("td", [_vm._v("১০")]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ])
+        ]),
+        _vm._v(" "),
+        _c("tr", [
+          _c("td", [_vm._v(" ১১")]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ])
+        ]),
+        _vm._v(" "),
+        _c("tr", [
+          _c("td", [_vm._v(" ১২")]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ])
+        ]),
+        _vm._v(" "),
+        _c("tr", [
+          _c("td", { attrs: { colspan: "2" } }, [
+            _vm._v("আচৰ্য/আচাৰ্যাৰ আৰু অন্য কৰ্মচাৰীৰ নাম লিখিব")
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ])
+        ]),
+        _vm._v(" "),
+        _c("tr", [
+          _c("td", [_vm._v("১৩")]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ])
+        ]),
+        _vm._v(" "),
+        _c("tr", [
+          _c("td", [_vm._v(" ১৪")]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("td", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ])
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
     return _c("div", { staticClass: "d-flex flex-row-reverse" }, [
       _c(
         "button",
@@ -2136,53 +4643,19 @@ var staticRenderFns = [
         _c("tr", [
           _c("th", { staticClass: "mx-auto", attrs: { rowspan: "4" } }, [
             _vm._v(
-              "\n          শিশু বাটিকাৰ ছাত্র-ছাত্ৰীৰ সংখ্যা - ২০২০ বৰ্ষ ।\n        "
+              "\n            শিশু বাটিকাৰ ছাত্র-ছাত্ৰীৰ সংখ্যা - ২০২০ বৰ্ষ ।\n          "
             )
           ]),
           _vm._v(" "),
-          _c("th", [_vm._v("First")]),
+          _c("th", [_vm._v("শিশু বাটিকা")]),
           _vm._v(" "),
-          _c("th", [_vm._v("Last")]),
+          _c("th", [_vm._v(" অংকুৰ ")]),
           _vm._v(" "),
-          _c("th", [_vm._v("Handle")]),
+          _c("th", [_vm._v("মুকুল ")]),
           _vm._v(" "),
-          _c("th", [_vm._v("Handle")]),
+          _c("th", [_vm._v("মুঠ ")]),
           _vm._v(" "),
-          _c("th", [_vm._v("Handle")]),
-          _vm._v(" "),
-          _c("th", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ])
-        ]),
-        _vm._v(" "),
-        _c("tr", [
-          _c("th", [_vm._v("First")]),
-          _vm._v(" "),
-          _c("th", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ]),
-          _vm._v(" "),
-          _c("th", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ]),
-          _vm._v(" "),
-          _c("th", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ]),
-          _vm._v(" "),
-          _c("th", [_vm._v("Handle")]),
+          _c("th", [_vm._v(" আচাৰ্য")]),
           _vm._v(" "),
           _c("th", [
             _c("input", {
@@ -2193,7 +4666,7 @@ var staticRenderFns = [
         ]),
         _vm._v(" "),
         _c("tr", [
-          _c("th", [_vm._v("First")]),
+          _c("th", [_vm._v("ছাত্র")]),
           _vm._v(" "),
           _c("th", [
             _c("input", {
@@ -2216,7 +4689,7 @@ var staticRenderFns = [
             })
           ]),
           _vm._v(" "),
-          _c("th", [_vm._v("Handle")]),
+          _c("th", [_vm._v("আচাৰ্যা")]),
           _vm._v(" "),
           _c("th", [
             _c("input", {
@@ -2227,7 +4700,7 @@ var staticRenderFns = [
         ]),
         _vm._v(" "),
         _c("tr", [
-          _c("th", [_vm._v("First")]),
+          _c("th", [_vm._v("ছাত্ৰী")]),
           _vm._v(" "),
           _c("th", [
             _c("input", {
@@ -2250,7 +4723,41 @@ var staticRenderFns = [
             })
           ]),
           _vm._v(" "),
-          _c("th", [_vm._v("Handle")]),
+          _c("th", [_vm._v("মুঠ")]),
+          _vm._v(" "),
+          _c("th", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ])
+        ]),
+        _vm._v(" "),
+        _c("tr", [
+          _c("th", [_vm._v("মুঠ")]),
+          _vm._v(" "),
+          _c("th", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("th", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("th", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("th", [_vm._v("অন্য কৰ্মচাৰী")]),
           _vm._v(" "),
           _c("th", [
             _c("input", {
@@ -2273,80 +4780,25 @@ var staticRenderFns = [
         _c("tr", [
           _c("th", { attrs: { colspan: "3", rowspan: "4" } }, [
             _vm._v(
-              "\n          নিম্ন প্ৰাথমিক শাখাৰ ছাত্র-ছাত্ৰীৰ সংখ্যা, ২০২০ বৰ্ষ ।\n        "
+              "\n            নিম্ন প্ৰাথমিক শাখাৰ ছাত্র-ছাত্ৰীৰ সংখ্যা, ২০২০ বৰ্ষ ।\n          "
             )
           ]),
           _vm._v(" "),
-          _c("th", [_vm._v("First")]),
+          _c("th", [_vm._v("শ্ৰেণী")]),
           _vm._v(" "),
-          _c("th", [_vm._v("Last")]),
+          _c("th", [_vm._v(" ১ম")]),
           _vm._v(" "),
-          _c("th", [_vm._v("Handle")]),
+          _c("th", [_vm._v(" ২য় ")]),
           _vm._v(" "),
-          _c("th", [_vm._v("Handle")]),
+          _c("th", [_vm._v("৩য়")]),
           _vm._v(" "),
-          _c("th", [_vm._v("Handle")]),
+          _c("th", [_vm._v("৪ৰ্থ ")]),
           _vm._v(" "),
-          _c("th", [_vm._v("Handle")]),
+          _c("th", [_vm._v("৫ম")]),
           _vm._v(" "),
-          _c("th", [_vm._v("Handle")]),
+          _c("th", [_vm._v(" মুঠ")]),
           _vm._v(" "),
-          _c("th", [_vm._v("Handle")]),
-          _vm._v(" "),
-          _c("th", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ])
-        ]),
-        _vm._v(" "),
-        _c("tr", [
-          _c("th", [_vm._v("First")]),
-          _vm._v(" "),
-          _c("th", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ]),
-          _vm._v(" "),
-          _c("th", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ]),
-          _vm._v(" "),
-          _c("th", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ]),
-          _vm._v(" "),
-          _c("th", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ]),
-          _vm._v(" "),
-          _c("th", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ]),
-          _vm._v(" "),
-          _c("th", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ]),
-          _vm._v(" "),
-          _c("th", [_vm._v("Handle")]),
+          _c("th", [_vm._v("আচাৰ্য")]),
           _vm._v(" "),
           _c("th", [
             _c("input", {
@@ -2357,7 +4809,7 @@ var staticRenderFns = [
         ]),
         _vm._v(" "),
         _c("tr", [
-          _c("th", [_vm._v("First")]),
+          _c("th", [_vm._v("ছাত্র")]),
           _vm._v(" "),
           _c("th", [
             _c("input", {
@@ -2401,7 +4853,7 @@ var staticRenderFns = [
             })
           ]),
           _vm._v(" "),
-          _c("th", [_vm._v("Handle")]),
+          _c("th", [_vm._v("আচাৰ্যা")]),
           _vm._v(" "),
           _c("th", [
             _c("input", {
@@ -2412,7 +4864,7 @@ var staticRenderFns = [
         ]),
         _vm._v(" "),
         _c("tr", [
-          _c("th", [_vm._v("First")]),
+          _c("th", [_vm._v("ছাত্ৰী")]),
           _vm._v(" "),
           _c("th", [
             _c("input", {
@@ -2456,7 +4908,62 @@ var staticRenderFns = [
             })
           ]),
           _vm._v(" "),
-          _c("th", [_vm._v("Handle")]),
+          _c("th", [_vm._v("মুঠ")]),
+          _vm._v(" "),
+          _c("th", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ])
+        ]),
+        _vm._v(" "),
+        _c("tr", [
+          _c("th", [_vm._v("মুঠ")]),
+          _vm._v(" "),
+          _c("th", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("th", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("th", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("th", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("th", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("th", [
+            _c("input", {
+              staticClass: "form-control",
+              attrs: { type: "text", value: " " }
+            })
+          ]),
+          _vm._v(" "),
+          _c("th", [_vm._v("অন্য কৰ্মচাৰী")]),
           _vm._v(" "),
           _c("th", [
             _c("input", {
@@ -2491,27 +4998,27 @@ var staticRenderFns = [
         _c("tr", [
           _c("th", { attrs: { colspan: "3", rowspan: "4" } }, [
             _vm._v(
-              "\n          উচ্চ প্ৰাথমিক শাখাৰ ছাত্র-ছাত্ৰীৰ সংখ্যা, ২০২০ বৰ্ষ ।\n        "
+              "\n            উচ্চ প্ৰাথমিক শাখাৰ ছাত্র-ছাত্ৰীৰ সংখ্যা, ২০২০ বৰ্ষ ।\n          "
             )
           ]),
           _vm._v(" "),
-          _c("th", [_vm._v("First")]),
+          _c("th", [_vm._v("শ্ৰেণী")]),
           _vm._v(" "),
-          _c("th", [_vm._v("Last")]),
+          _c("th", [_vm._v("৬ষ্ঠ")]),
           _vm._v(" "),
-          _c("th", [_vm._v("Handle")]),
+          _c("th", [_vm._v("৭ম")]),
           _vm._v(" "),
-          _c("th", [_vm._v("Handle")]),
+          _c("th", [_vm._v("৮ম")]),
           _vm._v(" "),
-          _c("th", [_vm._v("Handle")]),
+          _c("th", [_vm._v("মুঠ")]),
           _vm._v(" "),
-          _c("th", [_vm._v("Handle")]),
+          _c("th", [_vm._v("আচাৰ্য")]),
           _vm._v(" "),
-          _c("th", [_vm._v("Handle")])
+          _c("th")
         ]),
         _vm._v(" "),
         _c("tr", [
-          _c("th", [_vm._v("First")]),
+          _c("th", [_vm._v("ছাত্র")]),
           _vm._v(" "),
           _c("th", [
             _c("input", {
@@ -2541,7 +5048,7 @@ var staticRenderFns = [
             })
           ]),
           _vm._v(" "),
-          _c("th", [_vm._v("Handle")]),
+          _c("th", [_vm._v("আচাৰ্যা")]),
           _vm._v(" "),
           _c("th", [
             _c("input", {
@@ -2552,7 +5059,7 @@ var staticRenderFns = [
         ]),
         _vm._v(" "),
         _c("tr", [
-          _c("th", [_vm._v("First")]),
+          _c("th", [_vm._v("ছাত্ৰী")]),
           _vm._v(" "),
           _c("th", [
             _c("input", {
@@ -2582,7 +5089,7 @@ var staticRenderFns = [
             })
           ]),
           _vm._v(" "),
-          _c("th", [_vm._v("Handle")]),
+          _c("th", [_vm._v(" মুঠ")]),
           _vm._v(" "),
           _c("th", [
             _c("input", {
@@ -2593,7 +5100,7 @@ var staticRenderFns = [
         ]),
         _vm._v(" "),
         _c("tr", [
-          _c("th", [_vm._v("First")]),
+          _c("th", [_vm._v(" মুঠ")]),
           _vm._v(" "),
           _c("th", [
             _c("input", {
@@ -2623,7 +5130,7 @@ var staticRenderFns = [
             })
           ]),
           _vm._v(" "),
-          _c("th", [_vm._v("Handle")]),
+          _c("th", [_vm._v("অন্য কৰ্মচাৰী")]),
           _vm._v(" "),
           _c("th", [
             _c("input", {
@@ -2646,25 +5153,25 @@ var staticRenderFns = [
         _c("tr", [
           _c("th", { staticClass: "mx-auto", attrs: { rowspan: "4" } }, [
             _vm._v(
-              "\n          উচ্চ মাধ্যমিক শাখাৰ ছাত্র-ছাত্ৰীৰ সংখ্যা, ২০২০ বৰ্ষ ।\n        "
+              "\n            উচ্চ মাধ্যমিক শাখাৰ ছাত্র-ছাত্ৰীৰ সংখ্যা, ২০২০ বৰ্ষ ।\n          "
             )
           ]),
           _vm._v(" "),
-          _c("th", [_vm._v("First")]),
+          _c("th", [_vm._v("শ্ৰেণী")]),
           _vm._v(" "),
-          _c("th", [_vm._v("Last")]),
+          _c("th", [_vm._v("৯ম")]),
           _vm._v(" "),
-          _c("th", [_vm._v("Handle")]),
+          _c("th", [_vm._v("১০ম")]),
           _vm._v(" "),
-          _c("th", [_vm._v("Handle")]),
+          _c("th", [_vm._v("মুঠ")]),
           _vm._v(" "),
-          _c("th", [_vm._v("Handle")]),
+          _c("th", [_vm._v("আচাৰ্য")]),
           _vm._v(" "),
-          _c("th", [_vm._v("Handle")])
+          _c("th")
         ]),
         _vm._v(" "),
         _c("tr", [
-          _c("th", [_vm._v("First")]),
+          _c("th", [_vm._v(" ছাত্র ")]),
           _vm._v(" "),
           _c("th", [
             _c("input", {
@@ -2687,7 +5194,7 @@ var staticRenderFns = [
             })
           ]),
           _vm._v(" "),
-          _c("th", [_vm._v("Handle")]),
+          _c("th", [_vm._v("আচাৰ্যা")]),
           _vm._v(" "),
           _c("th", [
             _c("input", {
@@ -2698,7 +5205,7 @@ var staticRenderFns = [
         ]),
         _vm._v(" "),
         _c("tr", [
-          _c("th", [_vm._v("First")]),
+          _c("th", [_vm._v("ছাত্ৰী")]),
           _vm._v(" "),
           _c("th", [
             _c("input", {
@@ -2721,7 +5228,7 @@ var staticRenderFns = [
             })
           ]),
           _vm._v(" "),
-          _c("th", [_vm._v("Handle")]),
+          _c("th", [_vm._v(" মুঠ")]),
           _vm._v(" "),
           _c("th", [
             _c("input", {
@@ -2732,7 +5239,7 @@ var staticRenderFns = [
         ]),
         _vm._v(" "),
         _c("tr", [
-          _c("th", [_vm._v("First")]),
+          _c("th", [_vm._v(" মুঠ")]),
           _vm._v(" "),
           _c("th", [
             _c("input", {
@@ -2755,7 +5262,7 @@ var staticRenderFns = [
             })
           ]),
           _vm._v(" "),
-          _c("th", [_vm._v("Handle")]),
+          _c("th", [_vm._v("অন্য কৰ্মচাৰী")]),
           _vm._v(" "),
           _c("th", [
             _c("input", {
@@ -2880,7 +5387,7 @@ var staticRenderFns = [
         _c("div", { staticClass: "form-group row col-md-8" }, [
           _c("label", { staticClass: "d-flex align-items-end" }, [
             _vm._v(
-              "প্ৰতিটো শ্ৰেণীত থকা বিশেষভাবে সক্ষম ছাত্র-ছাত্ৰীৰ মুঠ\n            সংখ্যা"
+              "প্ৰতিটো শ্ৰেণীত থকা বিশেষভাবে সক্ষম ছাত্র-ছাত্ৰীৰ মুঠ\n              সংখ্যা"
             )
           ]),
           _vm._v(" "),
@@ -2911,23 +5418,23 @@ var staticRenderFns = [
         _c("tr", [
           _c("th", { attrs: { colspan: "3", rowspan: "4" } }, [
             _vm._v(
-              "\n            নিম্ন প্ৰাথমিক শাখাৰ ছাত্র-ছাত্ৰীৰ সংখ্যা, ২০২০ বৰ্ষ ।\n          "
+              "\n               নিকেতনৰ দ্বাৰা পৰিচালিত সংস্কাৰ কেন্দ্ৰ\n            "
             )
           ]),
           _vm._v(" "),
-          _c("th", [_vm._v("Firfst")]),
+          _c("th", [_vm._v("সংখ্যা")]),
           _vm._v(" "),
-          _c("th", [_vm._v("Last")]),
+          _c("th", [_vm._v("ছাত্র")]),
           _vm._v(" "),
-          _c("th", [_vm._v("Handle")]),
+          _c("th", [_vm._v("ছাত্ৰী")]),
           _vm._v(" "),
-          _c("th", [_vm._v("Handle")]),
+          _c("th", [_vm._v("মুঠ")]),
           _vm._v(" "),
-          _c("th", [_vm._v("Handle")]),
+          _c("th", [_vm._v("আচাৰ্য")]),
           _vm._v(" "),
-          _c("th", [_vm._v("Handle")]),
+          _c("th", [_vm._v("আচাৰ্যা")]),
           _vm._v(" "),
-          _c("th", [_vm._v("Handle")])
+          _c("th", [_vm._v("মুঠ")])
         ]),
         _vm._v(" "),
         _c("tr", [
@@ -3011,148 +5518,154 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("table", { staticClass: "table table-bordered" }, [
-      _c("tbody", [
-        _c("tr", [
-          _c("td", [_vm._v("Mark")]),
-          _vm._v(" "),
-          _c("td", [_vm._v("Otto")]),
-          _vm._v(" "),
-          _c("td", [_vm._v("@mdo")]),
-          _vm._v(" "),
-          _c("td", [_vm._v("Mark")]),
-          _vm._v(" "),
-          _c("td", { attrs: { colspan: "4" } }, [_vm._v("Ottos")])
-        ]),
-        _vm._v(" "),
-        _c("tr", [
-          _c("td", [_vm._v("Mark")]),
-          _vm._v(" "),
-          _c("td", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
+    return _c(
+      "table",
+      { staticClass: "table table-bordered table-responsive" },
+      [
+        _c("tbody", [
+          _c("tr", [
+            _c("td", [_vm._v("মুঠ ছাত্র-ছাত্ৰীৰ ভিতৰত কিমান জন  ")]),
+            _vm._v(" "),
+            _c("td", [_vm._v("ছাত্র ")]),
+            _vm._v(" "),
+            _c("td", [_vm._v("ছাত্ৰী")]),
+            _vm._v(" "),
+            _c("td", [_vm._v("মুঠ")]),
+            _vm._v(" "),
+            _c("td", { attrs: { colspan: "4" } }, [
+              _vm._v("অন্য ধর্মাবলম্বী ছাত্র-ছাত্ৰী কিমান জন")
+            ])
           ]),
           _vm._v(" "),
-          _c("td", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
+          _c("tr", [
+            _c("td", [_vm._v("(ক) অনুসূচীত জাতি (SC)")]),
+            _vm._v(" "),
+            _c("td", [
+              _c("input", {
+                staticClass: "form-control",
+                attrs: { type: "text", value: " " }
+              })
+            ]),
+            _vm._v(" "),
+            _c("td", [
+              _c("input", {
+                staticClass: "form-control",
+                attrs: { type: "text", value: " " }
+              })
+            ]),
+            _vm._v(" "),
+            _c("td", [
+              _c("input", {
+                staticClass: "form-control",
+                attrs: { type: "text", value: " " }
+              })
+            ]),
+            _vm._v(" "),
+            _c("td", { attrs: { rowspan: "2" } }, [_vm._v("(ক) (মুছলমান)")]),
+            _vm._v(" "),
+            _c("td", [_c("p", [_vm._v("ছাত্র")])]),
+            _vm._v(" "),
+            _c("td", [_c("p", [_vm._v("ছাত্ৰী")])]),
+            _vm._v(" "),
+            _c("td", [_vm._v("মুঠ")])
           ]),
           _vm._v(" "),
-          _c("td", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
+          _c("tr", [
+            _c("td", [_vm._v("(খ) অনুসূচীত জনজাতি (ST) \n                ")]),
+            _vm._v(" "),
+            _c("td", [
+              _c("input", {
+                staticClass: "form-control",
+                attrs: { type: "text", value: " " }
+              })
+            ]),
+            _vm._v(" "),
+            _c("td", [
+              _c("input", {
+                staticClass: "form-control",
+                attrs: { type: "text", value: " " }
+              })
+            ]),
+            _vm._v(" "),
+            _c("td", [
+              _c("input", {
+                staticClass: "form-control",
+                attrs: { type: "text", value: " " }
+              })
+            ]),
+            _vm._v(" "),
+            _c("td", [
+              _c("input", {
+                staticClass: "form-control",
+                attrs: { type: "text", value: " " }
+              })
+            ]),
+            _vm._v(" "),
+            _c("td", [
+              _c("input", {
+                staticClass: "form-control",
+                attrs: { type: "text", value: " " }
+              })
+            ]),
+            _vm._v(" "),
+            _c("td", [
+              _c("input", {
+                staticClass: "form-control",
+                attrs: { type: "text", value: " " }
+              })
+            ])
           ]),
           _vm._v(" "),
-          _c("td", { attrs: { rowspan: "2" } }, [_vm._v("Otto")]),
-          _vm._v(" "),
-          _c("td", [_c("p", [_vm._v("Male")])]),
-          _vm._v(" "),
-          _c("td", [_c("p", [_vm._v("Female")])]),
-          _vm._v(" "),
-          _c("td", [_vm._v("Total")])
-        ]),
-        _vm._v(" "),
-        _c("tr", [
-          _c("td", [_vm._v("Mark")]),
-          _vm._v(" "),
-          _c("td", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ]),
-          _vm._v(" "),
-          _c("td", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ]),
-          _vm._v(" "),
-          _c("td", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ]),
-          _vm._v(" "),
-          _c("td", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ]),
-          _vm._v(" "),
-          _c("td", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ]),
-          _vm._v(" "),
-          _c("td", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ])
-        ]),
-        _vm._v(" "),
-        _c("tr", [
-          _c("td", [_vm._v("Mark")]),
-          _vm._v(" "),
-          _c("td", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ]),
-          _vm._v(" "),
-          _c("td", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ]),
-          _vm._v(" "),
-          _c("td", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ]),
-          _vm._v(" "),
-          _c("td", [_vm._v("Otto")]),
-          _vm._v(" "),
-          _c("td", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ]),
-          _vm._v(" "),
-          _c("td", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ]),
-          _vm._v(" "),
-          _c("td", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
+          _c("tr", [
+            _c("td", [_vm._v("(গ) অন্যান্য পিছপৰা জাতি (OBC)")]),
+            _vm._v(" "),
+            _c("td", [
+              _c("input", {
+                staticClass: "form-control",
+                attrs: { type: "text", value: " " }
+              })
+            ]),
+            _vm._v(" "),
+            _c("td", [
+              _c("input", {
+                staticClass: "form-control",
+                attrs: { type: "text", value: " " }
+              })
+            ]),
+            _vm._v(" "),
+            _c("td", [
+              _c("input", {
+                staticClass: "form-control",
+                attrs: { type: "text", value: " " }
+              })
+            ]),
+            _vm._v(" "),
+            _c("td", [_vm._v("(খ) খ্ৰীষ্টান")]),
+            _vm._v(" "),
+            _c("td", [
+              _c("input", {
+                staticClass: "form-control",
+                attrs: { type: "text", value: " " }
+              })
+            ]),
+            _vm._v(" "),
+            _c("td", [
+              _c("input", {
+                staticClass: "form-control",
+                attrs: { type: "text", value: " " }
+              })
+            ]),
+            _vm._v(" "),
+            _c("td", [
+              _c("input", {
+                staticClass: "form-control",
+                attrs: { type: "text", value: " " }
+              })
+            ])
           ])
         ])
-      ])
-    ])
+      ]
+    )
   },
   function() {
     var _vm = this
