@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('supervisor.index')
 
 
 @section('title','Bridyc – Explore career possibilities|Learn from Achiever’s|Find Institute')
@@ -19,28 +19,21 @@ best educational podcasts for college students, best career coaching podcast, be
 video')
 
 
-@section('css_code')
-<link rel="stylesheet" type="text/css" href="{{url('css/institutedashboard.css')}}">
-@endsection
+@section('supervisorContent')
 
-@section('content')
-<div class="container-fluid">
-    <div class="row">
-        @include('layouts.sidebar')
-        <main role="main" class="col-lg-10 ml-lg-auto">
-            <br>
-            <br>
-            <div id="channel-supervisor">
-                <channel-supervisor></channel-supervisor>
-            </div>
-        </main>
-    </div>
-</div>
-@endsection
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Date</th>
+            <th scope="col">Institute Name</th>
+            <th scope="col">Download</th>
+            <th scope="col">View</th>
+        </tr>
+    </thead>
+    <tbody>
 
-@section('js_code')
-<script src="{{url('js/app.js')}}"></script>
-<script src="{{url('js/dashboardBlade.js')}}"></script>
-<script src="{{url('js/ChannelSupervisor.js')}}"></script>
-{{-- <script src="{{env('APP_URL')}}{{mix('/js/editChannel.js')}}"></script> --}}
+    </tbody>
+</table>
+
 @endsection

@@ -806,6 +806,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -873,6 +879,9 @@ __webpack_require__.r(__webpack_exports__);
     },
     submitForm: function submitForm() {
       console.log("Probir");
+    },
+    goPrev: function goPrev() {
+      if (this.steps > 1) this.steps = this.steps - 1;
     }
   }
 });
@@ -1996,9 +2005,23 @@ var render = function() {
             _vm._v(" "),
             _vm._m(3),
             _vm._v(" "),
-            _vm._m(4),
+            _c("div", { staticClass: "d-flex flex-row-reverse" }, [
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-outline-secondary",
+                  attrs: { type: "button" },
+                  on: {
+                    click: function($event) {
+                      return _vm.goPrev()
+                    }
+                  }
+                },
+                [_vm._v("\n        Back\n      ")]
+              )
+            ]),
             _vm._v(" "),
-            _vm._m(5)
+            _vm._m(4)
           ]
         )
       : _vm._e(),
@@ -2019,13 +2042,13 @@ var render = function() {
           [
             _c("h1", [_vm._v("Step 3")]),
             _vm._v(" "),
+            _vm._m(5),
+            _vm._v(" "),
             _vm._m(6),
             _vm._v(" "),
             _vm._m(7),
             _vm._v(" "),
-            _vm._m(8),
-            _vm._v(" "),
-            _vm._m(9)
+            _vm._m(8)
           ]
         )
       : _vm._e(),
@@ -2046,11 +2069,11 @@ var render = function() {
           [
             _c("h1", [_vm._v("Step 4")]),
             _vm._v(" "),
+            _vm._m(9),
+            _vm._v(" "),
             _vm._m(10),
             _vm._v(" "),
-            _vm._m(11),
-            _vm._v(" "),
-            _vm._m(12)
+            _vm._m(11)
           ]
         )
       : _vm._e(),
@@ -2071,11 +2094,11 @@ var render = function() {
           [
             _c("h1", [_vm._v("Step 5")]),
             _vm._v(" "),
+            _vm._m(12),
+            _vm._v(" "),
             _vm._m(13),
             _vm._v(" "),
-            _vm._m(14),
-            _vm._v(" "),
-            _vm._m(15)
+            _vm._m(14)
           ]
         )
       : _vm._e()
@@ -2444,18 +2467,6 @@ var staticRenderFns = [
         ])
       ]
     )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "d-flex flex-row-reverse" }, [
-      _c(
-        "button",
-        { staticClass: "btn btn-outline-secondary", attrs: { type: "submit" } },
-        [_vm._v("Back")]
-      )
-    ])
   },
   function() {
     var _vm = this

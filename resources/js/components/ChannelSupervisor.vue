@@ -445,7 +445,13 @@
         </tr>
       </table>
       <div class="d-flex flex-row-reverse">
-        <button type="submit" class="btn btn-outline-secondary">Back</button>
+        <button
+          type="button"
+          class="btn btn-outline-secondary"
+          @click="goPrev()"
+        >
+          Back
+        </button>
       </div>
       <div class="d-flex flex-row-reverse">
         <button type="submit" class="btn btn-outline-primary">Next</button>
@@ -777,6 +783,9 @@ export default {
     },
     submitForm() {
       console.log("Probir");
+    },
+    goPrev() {
+      if (this.steps > 1) this.steps = this.steps - 1;
     },
   },
 };

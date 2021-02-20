@@ -60,6 +60,12 @@
                 <i class="fa fa-th-large" aria-hidden="true"></i> Admin Dashboard
             </a>
             @endif
+            @if (auth()->check() && auth()->user()->isSupervisor())
+            <a class="btn btndashboard mr-2" data-trigger="focus" data-toggle="popover" data-placement="bottom"
+                href="{{route('supervisor')}}">
+                <i class="fa fa-th-large" aria-hidden="true"></i> Supervisor Dashboard
+            </a>
+            @endif
             @if (Auth::check())
             <a class="btn btn-danger m-2" href="{{ route('logout') }}" onclick="event.preventDefault();
                                 document.getElementById('logout-form').submit();">
