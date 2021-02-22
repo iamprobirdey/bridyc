@@ -336,45 +336,6 @@
           </div>
         </div>
       </div>
-<!-- 
-  Form Start Here
- -->
- 
- <table class="table table-bordered table-responsive">
-    <thead>
-        <tr>
-            <th scope="col">ID</th>
-            <th scope="col">School/College Name</th>
-            <th class="col-2" scope="col">Action</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <th scope="row">1</th>
-            <td>College Name</td>
-            <td>
-                <div class="dropdown">
-                    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd"
-                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z"
-                                clip-rule="evenodd" />
-                        </svg>
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">View</a>
-                        <a class="dropdown-item" href="#">Download</a>
-                    </div>
-                </div>
-            </td>
-        </tr>
-    </tbody>
-</table>
-
-<!-- 
-  Form Start Here
- -->
       <!--
        pdf 2nd & 3rd page start
      -->
