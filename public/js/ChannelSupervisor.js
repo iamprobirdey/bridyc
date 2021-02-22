@@ -1330,6 +1330,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -1397,6 +1403,9 @@ __webpack_require__.r(__webpack_exports__);
     },
     submitForm: function submitForm() {
       console.log("Probir");
+    },
+    goPrev: function goPrev() {
+      if (this.steps > 1) this.steps = this.steps - 1;
     }
   }
 });
@@ -2588,9 +2597,23 @@ var render = function() {
             _vm._v(" "),
             _vm._m(36),
             _vm._v(" "),
-            _vm._m(37),
+            _c("div", { staticClass: "d-flex flex-row-reverse" }, [
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-outline-secondary",
+                  attrs: { type: "button" },
+                  on: {
+                    click: function($event) {
+                      return _vm.goPrev()
+                    }
+                  }
+                },
+                [_vm._v("\n          Back\n        ")]
+              )
+            ]),
             _vm._v(" "),
-            _vm._m(38)
+            _vm._m(37)
           ]
         )
       : _vm._e(),
@@ -2611,13 +2634,13 @@ var render = function() {
           [
             _c("h1", [_vm._v("Step 3")]),
             _vm._v(" "),
+            _vm._m(38),
+            _vm._v(" "),
             _vm._m(39),
             _vm._v(" "),
             _vm._m(40),
             _vm._v(" "),
-            _vm._m(41),
-            _vm._v(" "),
-            _vm._m(42)
+            _vm._m(41)
           ]
         )
       : _vm._e(),
@@ -2638,11 +2661,11 @@ var render = function() {
           [
             _c("h1", [_vm._v("Step 4")]),
             _vm._v(" "),
+            _vm._m(42),
+            _vm._v(" "),
             _vm._m(43),
             _vm._v(" "),
-            _vm._m(44),
-            _vm._v(" "),
-            _vm._m(45)
+            _vm._m(44)
           ]
         )
       : _vm._e(),
@@ -2663,11 +2686,11 @@ var render = function() {
           [
             _c("h1", [_vm._v("Step 5")]),
             _vm._v(" "),
+            _vm._m(45),
+            _vm._v(" "),
             _vm._m(46),
             _vm._v(" "),
-            _vm._m(47),
-            _vm._v(" "),
-            _vm._m(48)
+            _vm._m(47)
           ]
         )
       : _vm._e()
@@ -4959,18 +4982,6 @@ var staticRenderFns = [
     return _c("div", { staticClass: "d-flex flex-row-reverse" }, [
       _c(
         "button",
-        { staticClass: "btn btn-outline-secondary", attrs: { type: "submit" } },
-        [_vm._v("Back")]
-      )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "d-flex flex-row-reverse" }, [
-      _c(
-        "button",
         { staticClass: "btn btn-outline-primary", attrs: { type: "submit" } },
         [_vm._v("Next")]
       )
@@ -5821,15 +5832,14 @@ if (typeof element != "undefined" && element != null) {
 /*!*******************************************************!*\
   !*** ./resources/js/components/ChannelSupervisor.vue ***!
   \*******************************************************/
-/*! no static exports found */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ChannelSupervisor_vue_vue_type_template_id_6c60f470___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ChannelSupervisor.vue?vue&type=template&id=6c60f470& */ "./resources/js/components/ChannelSupervisor.vue?vue&type=template&id=6c60f470&");
 /* harmony import */ var _ChannelSupervisor_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ChannelSupervisor.vue?vue&type=script&lang=js& */ "./resources/js/components/ChannelSupervisor.vue?vue&type=script&lang=js&");
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _ChannelSupervisor_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _ChannelSupervisor_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
 
@@ -5859,7 +5869,7 @@ component.options.__file = "resources/js/components/ChannelSupervisor.vue"
 /*!********************************************************************************!*\
   !*** ./resources/js/components/ChannelSupervisor.vue?vue&type=script&lang=js& ***!
   \********************************************************************************/
-/*! no static exports found */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -5894,7 +5904,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\laragon\www\bridyc\resources\js\ChannelSupervisor.js */"./resources/js/ChannelSupervisor.js");
+module.exports = __webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/js/ChannelSupervisor.js */"./resources/js/ChannelSupervisor.js");
 
 
 /***/ })

@@ -68,17 +68,25 @@ class User extends Authenticatable implements MustVerifyEmail
     {
         return $this->user_type === 'institute';
     }
+
     public function isAdmin()
     {
         return $this->user_type === 'admin';
     }
+
     public function isStudent()
     {
         return $this->user_type === 'student';
     }
+
     public function isTeacher()
     {
         return $this->user_type === 'teacher';
+    }
+
+    public function isSupervisor()
+    {
+        return $this->user_type === 'supervisor';
     }
 
     public function is_verified()

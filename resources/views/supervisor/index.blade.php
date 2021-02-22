@@ -26,12 +26,13 @@ video')
 @section('content')
 <div class="container-fluid">
     <div class="row">
-        @include('layouts.sidebar')
+        @include('supervisor.sidebar')
         <main role="main" class="col-lg-10 ml-lg-auto">
             <br>
             <br>
-            <div id="channel-supervisor">
-                <channel-supervisor></channel-supervisor>
+
+            <div class="container">
+                @yield('supervisorContent')
             </div>
         </main>
     </div>
@@ -39,8 +40,5 @@ video')
 @endsection
 
 @section('js_code')
-<script src="{{url('js/app.js')}}"></script>
 <script src="{{url('js/dashboardBlade.js')}}"></script>
-<script src="{{url('js/ChannelSupervisor.js')}}"></script>
-{{-- <script src="{{env('APP_URL')}}{{mix('/js/editChannel.js')}}"></script> --}}
 @endsection

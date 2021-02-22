@@ -178,6 +178,16 @@ Route::group([
     });
 });
 
+
+Route::group([
+    'name' => 'supervisor.',
+    'prefix' => 'supervisor',
+    'middleware' => ['can:supervisor']
+], function () {
+    Route::get('/', 'Supervisor\SupervisorController@index')->name('supervisor');
+});
+
+
 Route::get('/', 'ChannelController@index');
 Route::get('/application', 'HomeController@application');
 Route::get('/faq', 'HomeController@faq');
