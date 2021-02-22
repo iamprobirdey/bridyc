@@ -1336,10 +1336,1832 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      steps: 1,
+      steps: 8,
       max_steps: 5,
       step1: {
         institute_name: "",
@@ -1357,6 +3179,167 @@ __webpack_require__.r(__webpack_exports__);
         webiste: "",
         whatsapp: ""
       },
+      step2: {
+        ankul_1: "",
+        ankul_2: "",
+        ankul_3: "",
+        mukul_1: "",
+        mukul_2: "",
+        mukul_3: "",
+        muth_1: "",
+        muth_2: "",
+        muth_3: "",
+        teacher_male_1: "",
+        teacher_female_1: "",
+        teacher_total_1: "",
+        teacher_karmachari_1: "",
+        //Next Form
+        one_male: "",
+        one_female: "",
+        one_total: "",
+        two_male: "",
+        two_female: "",
+        two_total: "",
+        three_male: "",
+        three_female: "",
+        three_total: "",
+        four_male: "",
+        four_female: "",
+        four_total: "",
+        five_male: "",
+        five_female: "",
+        five_total: "",
+        muth_male: "",
+        muth_female: "",
+        muth_total: "",
+        teacher_male_2: "",
+        teacher_female_2: "",
+        teacher_total_2: "",
+        teacher_karmachari_2: ""
+      },
+      step3: {
+        six_male: "",
+        six_female: "",
+        six_total: "",
+        seven_male: "",
+        seven_female: "",
+        seven_total: "",
+        eight_male: "",
+        eight_female: "",
+        eight_total: "",
+        muth_male_1: "",
+        muth_female_1: "",
+        muth_total_1: "",
+        teacher_male_1: "",
+        teacher_female_1: "",
+        teacher_total_1: "",
+        teacher_karmachari_1: "",
+        //next form
+        nine_male: "",
+        nine_female: "",
+        nine_total: "",
+        ten_male: "",
+        ten_female: "",
+        ten_total: "",
+        muth_male_2: "",
+        muth_female_2: "",
+        muth_total_2: "",
+        teacher_male_2: "",
+        teacher_female_2: "",
+        teacher_total_2: "",
+        teacher_karmachari_2: ""
+      },
+      step4: {
+        one: "",
+        two: "",
+        three: "",
+        four: "",
+        five: "",
+        six: "",
+        seven: "",
+        eight: "",
+        nine: "",
+        ten: "",
+        eleven: "",
+        twelve: "",
+        thirteen: "",
+        fourteen: "",
+        fiveteen: "",
+        sixteen: "",
+        seventeen: "",
+        eighteen: ""
+      },
+      step5: {
+        sc_male: "",
+        sc_female: "",
+        sc_total: "",
+        st_male: "",
+        st_female: "",
+        st_total: "",
+        obc_male: "",
+        obc_female: "",
+        obc_total: "",
+        muslim_male: "",
+        muslim_female: "",
+        muslim_total: "",
+        chritian_male: "",
+        chritian_female: "",
+        chritian_total: ""
+      },
+      step6: {
+        one: "",
+        two: "",
+        three: "",
+        four: "",
+        five: "",
+        six: "",
+        seven: "",
+        eight: "",
+        nine: "",
+        ten: "",
+        eleven: "",
+        twelve: "",
+        thirteen: ""
+      },
+      step7: {
+        one: "",
+        two: "",
+        three: "",
+        four: "",
+        five: "",
+        six: "",
+        seven: "",
+        eight: "",
+        nine: "",
+        ten: "",
+        eleven: "",
+        twelve: "",
+        thirteen: "",
+        fourteen: ""
+      },
+      step8: {
+        one: "",
+        two: "",
+        three: "",
+        four: "",
+        five: "",
+        six: "",
+        seven: "",
+        eight: "",
+        nine: "",
+        ten: "",
+        eleven: "",
+        twelve: "",
+        thirteen: "",
+        fourteen: "",
+        fiveteen: "",
+        sixteen: "",
+        seventeen: "",
+        eighteen: "",
+        nineteen: "",
+        twenty: ""
+      },
+      step9: {},
       serverErrors: {
         //step 1
         institute_name: "",
@@ -1372,8 +3355,44 @@ __webpack_require__.r(__webpack_exports__);
         niketan: "",
         email: "",
         webiste: "",
-        whatsapp: "" //step 2
-
+        whatsapp: "",
+        //step 2
+        ankul_1: "",
+        ankul_2: "",
+        ankul_3: "",
+        mukul_1: "",
+        mukul_2: "",
+        mukul_3: "",
+        muth_1: "",
+        muth_2: "",
+        muth_3: "",
+        teacher_male_1: "",
+        teacher_female_1: "",
+        teacher_total_1: "",
+        teacher_karmachari_1: "",
+        //Next Form
+        one_male: "",
+        one_female: "",
+        one_total: "",
+        two_male: "",
+        two_female: "",
+        two_total: "",
+        three_male: "",
+        three_female: "",
+        three_total: "",
+        four_male: "",
+        four_female: "",
+        four_total: "",
+        five_male: "",
+        five_female: "",
+        five_total: "",
+        muth_male: "",
+        muth_female: "",
+        muth_total: "",
+        teacher_male_2: "",
+        teacher_female_2: "",
+        teacher_total_2: "",
+        teacher_karmachari_2: ""
       }
     };
   },
@@ -1386,7 +3405,7 @@ __webpack_require__.r(__webpack_exports__);
       this.$validator.validate().then(function (result) {
         if (result) {
           console.log("hit");
-          if (_this.steps != _this.max_steps) _this.steps = _this.steps + 1; //   const el = this.$el.querySelector(".steps");
+          if (_this.steps != _this.max_steps) _this.steps++; //   const el = this.$el.querySelector(".steps");
           //   console.log(el);
           //   el.scrollIntoView();
         } else {
@@ -1405,6 +3424,7 @@ __webpack_require__.r(__webpack_exports__);
       console.log("Probir");
     },
     goPrev: function goPrev() {
+      console.log("hit");
       if (this.steps > 1) this.steps = this.steps - 1;
     }
   }
@@ -1503,8 +3523,8 @@ var render = function() {
                       {
                         name: "validate",
                         rawName: "v-validate",
-                        value: "required|max:100",
-                        expression: "'required|max:100'"
+                        value: "required",
+                        expression: "'required'"
                       }
                     ],
                     staticClass: "form-control",
@@ -1815,12 +3835,12 @@ var render = function() {
                       {
                         name: "validate",
                         rawName: "v-validate",
-                        value: "required",
-                        expression: "'required'"
+                        value: "required|min:6|max:6",
+                        expression: "'required|min:6|max:6'"
                       }
                     ],
                     staticClass: "form-control",
-                    attrs: { type: "text", name: "pin" },
+                    attrs: { type: "number", name: "pin" },
                     domProps: { value: _vm.step1.pin },
                     on: {
                       input: function($event) {
@@ -1899,7 +3919,7 @@ var render = function() {
                       }
                     ],
                     staticClass: "form-control",
-                    attrs: { type: "text", name: "date" },
+                    attrs: { type: "date", name: "date" },
                     domProps: { value: _vm.step1.date },
                     on: {
                       input: function($event) {
@@ -2125,12 +4145,12 @@ var render = function() {
                       {
                         name: "validate",
                         rawName: "v-validate",
-                        value: "required",
-                        expression: "'required'"
+                        value: "required|min:10|max:10",
+                        expression: "'required|min:10|max:10'"
                       }
                     ],
                     staticClass: "form-control",
-                    attrs: { type: "text", name: "number" },
+                    attrs: { type: "number", name: "number" },
                     domProps: { value: _vm.step1.number },
                     on: {
                       input: function($event) {
@@ -2281,8 +4301,8 @@ var render = function() {
                       {
                         name: "validate",
                         rawName: "v-validate",
-                        value: "required",
-                        expression: "'required'"
+                        value: "required|email",
+                        expression: "'required|email'"
                       }
                     ],
                     staticClass: "form-control",
@@ -2356,8 +4376,8 @@ var render = function() {
                       {
                         name: "validate",
                         rawName: "v-validate",
-                        value: "required",
-                        expression: "'required'"
+                        value: "url",
+                        expression: "'url'"
                       }
                     ],
                     staticClass: "form-control",
@@ -2434,13 +4454,13 @@ var render = function() {
                         {
                           name: "validate",
                           rawName: "v-validate",
-                          value: "required",
-                          expression: "'required'"
+                          value: "required|min:10|max:10",
+                          expression: "'required|min:10|max:10'"
                         }
                       ],
                       staticClass: "form-control",
                       attrs: {
-                        type: "text",
+                        type: "number",
                         placeholder: "Username",
                         name: "whatsapp"
                       },
@@ -2491,10 +4511,6 @@ var render = function() {
               )
             ]),
             _vm._v(" "),
-            _c("link", {
-              attrs: { rel: "stylesheet", href: "afterdelete.css" }
-            }),
-            _vm._v(" "),
             _vm._m(1),
             _vm._v(" "),
             _vm._m(2),
@@ -2505,74 +4521,18 @@ var render = function() {
             _vm._v(" "),
             _vm._m(5),
             _vm._v(" "),
-            _vm._m(6),
-            _vm._v(" "),
-            _vm._m(7),
-            _vm._v(" "),
-            _vm._m(8),
-            _vm._v(" "),
-            _vm._m(9),
-            _vm._v(" "),
-            _vm._m(10),
-            _vm._v(" "),
-            _vm._m(11),
-            _vm._v(" "),
-            _vm._m(12),
-            _vm._v(" "),
-            _vm._m(13),
-            _vm._v(" "),
-            _vm._m(14),
-            _vm._v(" "),
-            _vm._m(15),
-            _vm._v(" "),
-            _vm._m(16),
-            _vm._v(" "),
-            _vm._m(17),
-            _vm._v(" "),
-            _vm._m(18),
-            _vm._v(" "),
-            _vm._m(19),
-            _vm._v(" "),
-            _vm._m(20),
-            _vm._v(" "),
-            _vm._m(21),
-            _vm._v(" "),
-            _vm._m(22),
-            _vm._v(" "),
-            _vm._m(23),
-            _vm._v(" "),
-            _vm._m(24),
-            _vm._v(" "),
-            _vm._m(25),
-            _vm._v(" "),
-            _vm._m(26),
-            _vm._v(" "),
-            _vm._m(27),
-            _vm._v(" "),
-            _vm._m(28),
-            _vm._v(" "),
-            _vm._m(29),
-            _vm._v(" "),
-            _vm._m(30),
-            _vm._v(" "),
-            _vm._m(31),
-            _vm._v(" "),
-            _vm._m(32),
-            _vm._v(" "),
-            _vm._m(33),
-            _vm._v(" "),
             _c("div", { staticClass: "d-flex flex-row-reverse" }, [
               _c(
                 "button",
                 {
                   staticClass: "btn btn-outline-secondary",
-                  attrs: { disabled: _vm.steps === 1, type: "submit" }
+                  attrs: { disabled: _vm.steps === 1, type: "button" }
                 },
                 [_vm._v("\n          Back\n        ")]
               )
             ]),
             _vm._v(" "),
-            _vm._m(34)
+            _vm._m(6)
           ]
         )
       : _vm._e(),
@@ -2582,20 +4542,2280 @@ var render = function() {
           "form",
           {
             staticClass: "form-horizontal",
-            attrs: { "data-vv-scope": "step1" },
+            attrs: { "data-vv-scope": "step2" },
             on: {
               submit: function($event) {
                 $event.preventDefault()
-                return _vm.validateStepForm("step1")
+                return _vm.validateStepForm("step2")
               }
             }
           },
           [
             _c("h1", [_vm._v("Step 2")]),
             _vm._v(" "),
-            _vm._m(35),
+            _c(
+              "table",
+              { staticClass: "table table-responsive-md table-bordered" },
+              [
+                _c("tr", [
+                  _c(
+                    "th",
+                    { staticClass: "mx-auto", attrs: { rowspan: "4" } },
+                    [
+                      _vm._v(
+                        "\n            শিশু বাটিকাৰ ছাত্র-ছাত্ৰীৰ সংখ্যা - ২০২০ বৰ্ষ ।\n          "
+                      )
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("th", [_vm._v("শিশু বাটিকা")]),
+                  _vm._v(" "),
+                  _c("th", [_vm._v("অংকুৰ")]),
+                  _vm._v(" "),
+                  _c("th", [_vm._v("মুকুল")]),
+                  _vm._v(" "),
+                  _c("th", [_vm._v("মুঠ")]),
+                  _vm._v(" "),
+                  _c("th", [_vm._v("আচাৰ্য")]),
+                  _vm._v(" "),
+                  _c("th", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.step2.teacher_male_1,
+                          expression: "step2.teacher_male_1"
+                        },
+                        {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required|number",
+                          expression: "'required|number'"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "number",
+                        name: "teacher_male_1",
+                        placeholder: "Teacher"
+                      },
+                      domProps: { value: _vm.step2.teacher_male_1 },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(
+                            _vm.step2,
+                            "teacher_male_1",
+                            $event.target.value
+                          )
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.has("step2.teacher_male_1"),
+                            expression: "errors.has('step2.teacher_male_1')"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [
+                        _vm._v(
+                          "\n              " +
+                            _vm._s(_vm.errors.first("step2.teacher_male_1")) +
+                            "\n            "
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.serverErrors.teacher_male_1 != "",
+                            expression: "serverErrors.teacher_male_1 != ''"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [
+                        _vm._v(
+                          _vm._s(_vm.serverErrors.teacher_male_1) +
+                            "\n            "
+                        )
+                      ]
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("tr", [
+                  _c("th", [_vm._v("ছাত্র")]),
+                  _vm._v(" "),
+                  _c("th", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.step2.ankul_1,
+                          expression: "step2.ankul_1"
+                        },
+                        {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required|number",
+                          expression: "'required|number'"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "number",
+                        name: "ankul_1",
+                        placeholder: ""
+                      },
+                      domProps: { value: _vm.step2.ankul_1 },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.step2, "ankul_1", $event.target.value)
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.has("step2.ankul_1"),
+                            expression: "errors.has('step2.ankul_1')"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [_vm._v(_vm._s(_vm.errors.first("step2.ankul_1")))]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.serverErrors.ankul_1 != "",
+                            expression: "serverErrors.ankul_1 != ''"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [_vm._v(_vm._s(_vm.serverErrors.ankul_1))]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("th", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.step2.mukul_1,
+                          expression: "step2.mukul_1"
+                        },
+                        {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required|number",
+                          expression: "'required|number'"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "number",
+                        name: "mukul_1",
+                        placeholder: "Teacher"
+                      },
+                      domProps: { value: _vm.step2.mukul_1 },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.step2, "mukul_1", $event.target.value)
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.has("step2.mukul_1"),
+                            expression: "errors.has('step2.mukul_1')"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [_vm._v(_vm._s(_vm.errors.first("step2.mukul_1")))]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.serverErrors.mukul_1 != "",
+                            expression: "serverErrors.mukul_1 != ''"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [_vm._v(_vm._s(_vm.serverErrors.mukul_1))]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("th", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.step2.muth_1,
+                          expression: "step2.muth_1"
+                        },
+                        {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required|number",
+                          expression: "'required|number'"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "number",
+                        name: "muth_1",
+                        placeholder: "Total"
+                      },
+                      domProps: { value: _vm.step2.muth_1 },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.step2, "muth_1", $event.target.value)
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.has("step2.muth_1"),
+                            expression: "errors.has('step2.muth_1')"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [_vm._v(_vm._s(_vm.errors.first("step2.muth_1")))]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.serverErrors.muth_1 != "",
+                            expression: "serverErrors.muth_1 != ''"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [_vm._v(_vm._s(_vm.serverErrors.muth_1))]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("th", [_vm._v("আচাৰ্যা")]),
+                  _vm._v(" "),
+                  _c("th", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.step2.teacher_female_1,
+                          expression: "step2.teacher_female_1"
+                        },
+                        {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required|number",
+                          expression: "'required|number'"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "number",
+                        name: "teacher_female_1",
+                        placeholder: "Ankul"
+                      },
+                      domProps: { value: _vm.step2.teacher_female_1 },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(
+                            _vm.step2,
+                            "teacher_female_1",
+                            $event.target.value
+                          )
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.has("step2.teacher_female_1"),
+                            expression: "errors.has('step2.teacher_female_1')"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [
+                        _vm._v(
+                          _vm._s(_vm.errors.first("step2.teacher_female_1"))
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.serverErrors.teacher_female_1 != "",
+                            expression: "serverErrors.teacher_female_1 != ''"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [_vm._v(_vm._s(_vm.serverErrors.teacher_female_1))]
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("tr", [
+                  _c("th", [_vm._v("ছাত্ৰী")]),
+                  _vm._v(" "),
+                  _c("th", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.step2.ankul_2,
+                          expression: "step2.ankul_2"
+                        },
+                        {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required|number",
+                          expression: "'required|number'"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "number",
+                        name: "ankul_2",
+                        placeholder: "abc"
+                      },
+                      domProps: { value: _vm.step2.ankul_2 },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.step2, "ankul_2", $event.target.value)
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.has("step2.ankul_2"),
+                            expression: "errors.has('step2.ankul_2')"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [_vm._v(_vm._s(_vm.errors.first("step2.ankul_2")))]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.serverErrors.ankul_2 != "",
+                            expression: "serverErrors.ankul_2 != ''"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [_vm._v(_vm._s(_vm.serverErrors.ankul_2))]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("th", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.step2.mukul_2,
+                          expression: "step2.mukul_2"
+                        },
+                        {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required|number",
+                          expression: "'required|number'"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "number",
+                        name: "mukul_2",
+                        placeholder: "pro"
+                      },
+                      domProps: { value: _vm.step2.mukul_2 },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.step2, "mukul_2", $event.target.value)
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.has("step2.mukul_2"),
+                            expression: "errors.has('step2.mukul_2')"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [_vm._v(_vm._s(_vm.errors.first("step2.mukul_2")))]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.serverErrors.mukul_2 != "",
+                            expression: "serverErrors.mukul_2 != ''"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [_vm._v(_vm._s(_vm.serverErrors.mukul_2))]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("th", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.step2.muth_2,
+                          expression: "step2.muth_2"
+                        },
+                        {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required|number",
+                          expression: "'required|number'"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "number",
+                        name: "muth_2",
+                        placeholder: "muth"
+                      },
+                      domProps: { value: _vm.step2.muth_2 },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.step2, "muth_2", $event.target.value)
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.has("step2.muth_2"),
+                            expression: "errors.has('step2.muth_2')"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [_vm._v(_vm._s(_vm.errors.first("step2.muth_2")))]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.serverErrors.muth_2 != "",
+                            expression: "serverErrors.muth_2 != ''"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [_vm._v(_vm._s(_vm.serverErrors.muth_2))]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("th", [_vm._v("মুঠ")]),
+                  _vm._v(" "),
+                  _c("th", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.step2.teacher_total_1,
+                          expression: "step2.teacher_total_1"
+                        },
+                        {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required|number",
+                          expression: "'required|number'"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "number",
+                        name: "teacher_total_1",
+                        placeholder: "muth"
+                      },
+                      domProps: { value: _vm.step2.teacher_total_1 },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(
+                            _vm.step2,
+                            "teacher_total_1",
+                            $event.target.value
+                          )
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.has("step2.teacher_total_1"),
+                            expression: "errors.has('step2.teacher_total_1')"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [
+                        _vm._v(
+                          _vm._s(_vm.errors.first("step2.teacher_total_1"))
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.serverErrors.teacher_total_1 != "",
+                            expression: "serverErrors.teacher_total_1 != ''"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [_vm._v(_vm._s(_vm.serverErrors.teacher_total_1))]
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("tr", [
+                  _c("th", [_vm._v("মুঠ")]),
+                  _vm._v(" "),
+                  _c("th", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.step2.ankul_3,
+                          expression: "step2.ankul_3"
+                        },
+                        {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required|number",
+                          expression: "'required|number'"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "number",
+                        name: "ankul_3",
+                        placeholder: "muth"
+                      },
+                      domProps: { value: _vm.step2.ankul_3 },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.step2, "ankul_3", $event.target.value)
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.has("step2.ankul_3"),
+                            expression: "errors.has('step2.ankul_3')"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [_vm._v(_vm._s(_vm.errors.first("step2.ankul_3")))]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.serverErrors.ankul_3 != "",
+                            expression: "serverErrors.ankul_3 != ''"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [_vm._v(_vm._s(_vm.serverErrors.ankul_3))]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("th", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.step2.mukul_3,
+                          expression: "step2.mukul_3"
+                        },
+                        {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required|number",
+                          expression: "'required|number'"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "number",
+                        name: "mukul_3",
+                        placeholder: "muth"
+                      },
+                      domProps: { value: _vm.step2.mukul_3 },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.step2, "mukul_3", $event.target.value)
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.has("step2.mukul_3"),
+                            expression: "errors.has('step2.mukul_3')"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [_vm._v(_vm._s(_vm.errors.first("step2.mukul_3")))]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.serverErrors.mukul_3 != "",
+                            expression: "serverErrors.mukul_3 != ''"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [_vm._v(_vm._s(_vm.serverErrors.mukul_3))]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("th", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.step2.muth_3,
+                          expression: "step2.muth_3"
+                        },
+                        {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required|number",
+                          expression: "'required|number'"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "number",
+                        name: "muth_3",
+                        placeholder: "muth"
+                      },
+                      domProps: { value: _vm.step2.muth_3 },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.step2, "muth_3", $event.target.value)
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.has("step2.muth_3"),
+                            expression: "errors.has('step2.muth_3')"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [_vm._v(_vm._s(_vm.errors.first("step2.muth_3")))]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.serverErrors.muth_3 != "",
+                            expression: "serverErrors.muth_3 != ''"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [_vm._v(_vm._s(_vm.serverErrors.muth_3))]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("th", [_vm._v("অন্য কৰ্মচাৰী")]),
+                  _vm._v(" "),
+                  _c("th", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.step2.teacher_karmachari_1,
+                          expression: "step2.teacher_karmachari_1"
+                        },
+                        {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required|number",
+                          expression: "'required|number'"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "number",
+                        name: "teacher_karmachari_1",
+                        placeholder: "muth"
+                      },
+                      domProps: { value: _vm.step2.teacher_karmachari_1 },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(
+                            _vm.step2,
+                            "teacher_karmachari_1",
+                            $event.target.value
+                          )
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.has("step2.teacher_karmachari_1"),
+                            expression:
+                              "errors.has('step2.teacher_karmachari_1')"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [
+                        _vm._v(
+                          _vm._s(_vm.errors.first("step2.teacher_karmachari_1"))
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.serverErrors.teacher_karmachari_1 != "",
+                            expression:
+                              "serverErrors.teacher_karmachari_1 != ''"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [_vm._v(_vm._s(_vm.serverErrors.teacher_karmachari_1))]
+                    )
+                  ])
+                ])
+              ]
+            ),
             _vm._v(" "),
-            _vm._m(36),
+            _c(
+              "table",
+              { staticClass: "table table-responsive-md table-bordered" },
+              [
+                _c("tr", [
+                  _c("th", { attrs: { colspan: "3", rowspan: "4" } }, [
+                    _vm._v(
+                      "\n            নিম্ন প্ৰাথমিক শাখাৰ ছাত্র-ছাত্ৰীৰ সংখ্যা, ২০২০ বৰ্ষ ।\n          "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("th", [_vm._v("শ্ৰেণী")]),
+                  _vm._v(" "),
+                  _c("th", [_vm._v("১ম")]),
+                  _vm._v(" "),
+                  _c("th", [_vm._v("২য়")]),
+                  _vm._v(" "),
+                  _c("th", [_vm._v("৩য়")]),
+                  _vm._v(" "),
+                  _c("th", [_vm._v("৪ৰ্থ")]),
+                  _vm._v(" "),
+                  _c("th", [_vm._v("৫ম")]),
+                  _vm._v(" "),
+                  _c("th", [_vm._v("মুঠ")]),
+                  _vm._v(" "),
+                  _c("th", [_vm._v("আচাৰ্য")]),
+                  _vm._v(" "),
+                  _c("th", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.step2.teacher_male_2,
+                          expression: "step2.teacher_male_2"
+                        },
+                        {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required|number",
+                          expression: "'required|number'"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "number",
+                        name: "teacher_male_2",
+                        placeholder: "Teacher"
+                      },
+                      domProps: { value: _vm.step2.teacher_male_2 },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(
+                            _vm.step2,
+                            "teacher_male_2",
+                            $event.target.value
+                          )
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.has("step2.teacher_male_2"),
+                            expression: "errors.has('step2.teacher_male_2')"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [
+                        _vm._v(
+                          "\n              " +
+                            _vm._s(_vm.errors.first("step2.teacher_male_2")) +
+                            "\n            "
+                        )
+                      ]
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("tr", [
+                  _c("th", [_vm._v("ছাত্র")]),
+                  _vm._v(" "),
+                  _c("th", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.step2.one_male,
+                          expression: "step2.one_male"
+                        },
+                        {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required|number",
+                          expression: "'required|number'"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "number",
+                        name: "one_male",
+                        placeholder: "Teacher"
+                      },
+                      domProps: { value: _vm.step2.one_male },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.step2, "one_male", $event.target.value)
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.has("step2.one_male"),
+                            expression: "errors.has('step2.one_male')"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [
+                        _vm._v(
+                          "\n              " +
+                            _vm._s(_vm.errors.first("step2.one_male")) +
+                            "\n            "
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("th", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.step2.two_male,
+                          expression: "step2.two_male"
+                        },
+                        {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required|number",
+                          expression: "'required|number'"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "number",
+                        name: "two_male",
+                        placeholder: "Teacher"
+                      },
+                      domProps: { value: _vm.step2.two_male },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.step2, "two_male", $event.target.value)
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.has("step2.two_male"),
+                            expression: "errors.has('step2.two_male')"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [
+                        _vm._v(
+                          "\n              " +
+                            _vm._s(_vm.errors.first("step2.two_male")) +
+                            "\n            "
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("th", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.step2.three_male,
+                          expression: "step2.three_male"
+                        },
+                        {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required|number",
+                          expression: "'required|number'"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "number",
+                        name: "three_male",
+                        placeholder: "Teacher"
+                      },
+                      domProps: { value: _vm.step2.three_male },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.step2, "three_male", $event.target.value)
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.has("step2.three_male"),
+                            expression: "errors.has('step2.three_male')"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [
+                        _vm._v(
+                          "\n              " +
+                            _vm._s(_vm.errors.first("step2.three_male")) +
+                            "\n            "
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("th", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.step2.four_male,
+                          expression: "step2.four_male"
+                        },
+                        {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required|number",
+                          expression: "'required|number'"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "number",
+                        name: "four_male",
+                        placeholder: "Teacher"
+                      },
+                      domProps: { value: _vm.step2.four_male },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.step2, "four_male", $event.target.value)
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.has("step2.four_male"),
+                            expression: "errors.has('step2.four_male')"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [
+                        _vm._v(
+                          "\n              " +
+                            _vm._s(_vm.errors.first("step2.four_male")) +
+                            "\n            "
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("th", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.step2.five_male,
+                          expression: "step2.five_male"
+                        },
+                        {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required|number",
+                          expression: "'required|number'"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "number",
+                        name: "five_male",
+                        placeholder: "Teacher"
+                      },
+                      domProps: { value: _vm.step2.five_male },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.step2, "five_male", $event.target.value)
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.has("step2.five_male"),
+                            expression: "errors.has('step2.five_male')"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [
+                        _vm._v(
+                          "\n              " +
+                            _vm._s(_vm.errors.first("step2.five_male")) +
+                            "\n            "
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("th", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.step2.muth_male,
+                          expression: "step2.muth_male"
+                        },
+                        {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required|number",
+                          expression: "'required|number'"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "number",
+                        name: "muth_male",
+                        placeholder: "Teacher"
+                      },
+                      domProps: { value: _vm.step2.muth_male },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.step2, "muth_male", $event.target.value)
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.has("step2.muth_male"),
+                            expression: "errors.has('step2.muth_male')"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [
+                        _vm._v(
+                          "\n              " +
+                            _vm._s(_vm.errors.first("step2.muth_male")) +
+                            "\n            "
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("th", [_vm._v("আচাৰ্যা")]),
+                  _vm._v(" "),
+                  _c("th", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.step2.teacher_female_2,
+                          expression: "step2.teacher_female_2"
+                        },
+                        {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required|number",
+                          expression: "'required|number'"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "number",
+                        name: "teacher_female_2",
+                        placeholder: "Teacher"
+                      },
+                      domProps: { value: _vm.step2.teacher_female_2 },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(
+                            _vm.step2,
+                            "teacher_female_2",
+                            $event.target.value
+                          )
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.has("step2.teacher_female_2"),
+                            expression: "errors.has('step2.teacher_female_2')"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [
+                        _vm._v(
+                          "\n              " +
+                            _vm._s(_vm.errors.first("step2.teacher_female_2")) +
+                            "\n            "
+                        )
+                      ]
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("tr", [
+                  _c("th", [_vm._v("ছাত্ৰী")]),
+                  _vm._v(" "),
+                  _c("th", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.step2.one_female,
+                          expression: "step2.one_female"
+                        },
+                        {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required|number",
+                          expression: "'required|number'"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "number",
+                        name: "one_female",
+                        placeholder: "Teacher"
+                      },
+                      domProps: { value: _vm.step2.one_female },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.step2, "one_female", $event.target.value)
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.has("step2.one_female"),
+                            expression: "errors.has('step2.one_female')"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [
+                        _vm._v(
+                          "\n              " +
+                            _vm._s(_vm.errors.first("step2.one_female")) +
+                            "\n            "
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("th", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.step2.two_female,
+                          expression: "step2.two_female"
+                        },
+                        {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required|number",
+                          expression: "'required|number'"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "number",
+                        name: "two_female",
+                        placeholder: "Teacher"
+                      },
+                      domProps: { value: _vm.step2.two_female },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.step2, "two_female", $event.target.value)
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.has("step2.two_female"),
+                            expression: "errors.has('step2.two_female')"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [
+                        _vm._v(
+                          "\n              " +
+                            _vm._s(_vm.errors.first("step2.two_female")) +
+                            "\n            "
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("th", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.step2.three_female,
+                          expression: "step2.three_female"
+                        },
+                        {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required|number",
+                          expression: "'required|number'"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "number",
+                        name: "three_female",
+                        placeholder: "Teacher"
+                      },
+                      domProps: { value: _vm.step2.three_female },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(
+                            _vm.step2,
+                            "three_female",
+                            $event.target.value
+                          )
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.has("step2.three_female"),
+                            expression: "errors.has('step2.three_female')"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [
+                        _vm._v(
+                          "\n              " +
+                            _vm._s(_vm.errors.first("step2.three_female")) +
+                            "\n            "
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("th", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.step2.four_female,
+                          expression: "step2.four_female"
+                        },
+                        {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required|number",
+                          expression: "'required|number'"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "number",
+                        name: "four_female",
+                        placeholder: "Teacher"
+                      },
+                      domProps: { value: _vm.step2.four_female },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(
+                            _vm.step2,
+                            "four_female",
+                            $event.target.value
+                          )
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.has("step2.four_female"),
+                            expression: "errors.has('step2.four_female')"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [
+                        _vm._v(
+                          "\n              " +
+                            _vm._s(_vm.errors.first("step2.four_female")) +
+                            "\n            "
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("th", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.step2.five_female,
+                          expression: "step2.five_female"
+                        },
+                        {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required|number",
+                          expression: "'required|number'"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "number",
+                        name: "five_female",
+                        placeholder: "Teacher"
+                      },
+                      domProps: { value: _vm.step2.five_female },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(
+                            _vm.step2,
+                            "five_female",
+                            $event.target.value
+                          )
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.has("step2.five_female"),
+                            expression: "errors.has('step2.five_female')"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [
+                        _vm._v(
+                          "\n              " +
+                            _vm._s(_vm.errors.first("step2.five_female")) +
+                            "\n            "
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("th", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.step2.muth_female,
+                          expression: "step2.muth_female"
+                        },
+                        {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required|number",
+                          expression: "'required|number'"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "number",
+                        name: "muth_female",
+                        placeholder: "Teacher"
+                      },
+                      domProps: { value: _vm.step2.muth_female },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(
+                            _vm.step2,
+                            "muth_female",
+                            $event.target.value
+                          )
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.has("step2.muth_female"),
+                            expression: "errors.has('step2.muth_female')"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [
+                        _vm._v(
+                          "\n              " +
+                            _vm._s(_vm.errors.first("step2.muth_female")) +
+                            "\n            "
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("th", [_vm._v("মুঠ")]),
+                  _vm._v(" "),
+                  _c("th", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.step2.teacher_total_2,
+                          expression: "step2.teacher_total_2"
+                        },
+                        {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required|number",
+                          expression: "'required|number'"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "number",
+                        name: "teacher_total_2",
+                        placeholder: "Teacher"
+                      },
+                      domProps: { value: _vm.step2.teacher_total_2 },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(
+                            _vm.step2,
+                            "teacher_total_2",
+                            $event.target.value
+                          )
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.has("step2.teacher_total_2"),
+                            expression: "errors.has('step2.teacher_total_2')"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [
+                        _vm._v(
+                          "\n              " +
+                            _vm._s(_vm.errors.first("step2.teacher_total_2")) +
+                            "\n            "
+                        )
+                      ]
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("tr", [
+                  _c("th", [_vm._v("মুঠ")]),
+                  _vm._v(" "),
+                  _c("th", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.step2.one_total,
+                          expression: "step2.one_total"
+                        },
+                        {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required|number",
+                          expression: "'required|number'"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "number",
+                        name: "one_total",
+                        placeholder: "Teacher"
+                      },
+                      domProps: { value: _vm.step2.one_total },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.step2, "one_total", $event.target.value)
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.has("step2.one_total"),
+                            expression: "errors.has('step2.one_total')"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [
+                        _vm._v(
+                          "\n              " +
+                            _vm._s(_vm.errors.first("step2.one_total")) +
+                            "\n            "
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("th", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.step2.two_total,
+                          expression: "step2.two_total"
+                        },
+                        {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required|number",
+                          expression: "'required|number'"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "number",
+                        name: "two_total",
+                        placeholder: "Teacher"
+                      },
+                      domProps: { value: _vm.step2.two_total },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.step2, "two_total", $event.target.value)
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.has("step2.two_total"),
+                            expression: "errors.has('step2.two_total')"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [
+                        _vm._v(
+                          "\n              " +
+                            _vm._s(_vm.errors.first("step2.two_total")) +
+                            "\n            "
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("th", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.step2.three_total,
+                          expression: "step2.three_total"
+                        },
+                        {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required|number",
+                          expression: "'required|number'"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "number",
+                        name: "three_total",
+                        placeholder: "Teacher"
+                      },
+                      domProps: { value: _vm.step2.three_total },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(
+                            _vm.step2,
+                            "three_total",
+                            $event.target.value
+                          )
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.has("step2.three_total"),
+                            expression: "errors.has('step2.three_total')"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [
+                        _vm._v(
+                          "\n              " +
+                            _vm._s(_vm.errors.first("step2.three_total")) +
+                            "\n            "
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("th", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.step2.four_total,
+                          expression: "step2.four_total"
+                        },
+                        {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required|number",
+                          expression: "'required|number'"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "number",
+                        name: "four_total",
+                        placeholder: "Teacher"
+                      },
+                      domProps: { value: _vm.step2.four_total },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.step2, "four_total", $event.target.value)
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.has("step2.four_total"),
+                            expression: "errors.has('step2.four_total')"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [
+                        _vm._v(
+                          "\n              " +
+                            _vm._s(_vm.errors.first("step2.four_total")) +
+                            "\n            "
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("th", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.step2.five_total,
+                          expression: "step2.five_total"
+                        },
+                        {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required|number",
+                          expression: "'required|number'"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "number",
+                        name: "five_total",
+                        placeholder: "Teacher"
+                      },
+                      domProps: { value: _vm.step2.five_total },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.step2, "five_total", $event.target.value)
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.has("step2.five_total"),
+                            expression: "errors.has('step2.five_total')"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [
+                        _vm._v(
+                          "\n              " +
+                            _vm._s(_vm.errors.first("step2.five_total")) +
+                            "\n            "
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("th", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.step2.muth_total,
+                          expression: "step2.muth_total"
+                        },
+                        {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required|number",
+                          expression: "'required|number'"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "number",
+                        name: "muth_total",
+                        placeholder: "Teacher"
+                      },
+                      domProps: { value: _vm.step2.muth_total },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.step2, "muth_total", $event.target.value)
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.has("step2.muth_total"),
+                            expression: "errors.has('step2.muth_total')"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [
+                        _vm._v(
+                          "\n              " +
+                            _vm._s(_vm.errors.first("step2.muth_total")) +
+                            "\n            "
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("th", [_vm._v("অন্য কৰ্মচাৰী")]),
+                  _vm._v(" "),
+                  _c("th", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.step2.teacher_karmachari_2,
+                          expression: "step2.teacher_karmachari_2"
+                        },
+                        {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required|number",
+                          expression: "'required|number'"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "number",
+                        name: "teacher_karmachari_2",
+                        placeholder: "Teacher"
+                      },
+                      domProps: { value: _vm.step2.teacher_karmachari_2 },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(
+                            _vm.step2,
+                            "teacher_karmachari_2",
+                            $event.target.value
+                          )
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.has("step2.teacher_karmachari_2"),
+                            expression:
+                              "errors.has('step2.teacher_karmachari_2')"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [
+                        _vm._v(
+                          "\n              " +
+                            _vm._s(
+                              _vm.errors.first("step2.teacher_karmachari_2")
+                            ) +
+                            "\n            "
+                        )
+                      ]
+                    )
+                  ])
+                ])
+              ]
+            ),
             _vm._v(" "),
             _c("div", { staticClass: "d-flex flex-row-reverse" }, [
               _c(
@@ -2613,7 +6833,7 @@ var render = function() {
               )
             ]),
             _vm._v(" "),
-            _vm._m(37)
+            _vm._m(7)
           ]
         )
       : _vm._e(),
@@ -2623,24 +6843,1827 @@ var render = function() {
           "form",
           {
             staticClass: "form-horizontal",
-            attrs: { "data-vv-scope": "step1" },
+            attrs: { "data-vv-scope": "step3" },
             on: {
               submit: function($event) {
                 $event.preventDefault()
-                return _vm.validateStepForm("step1")
+                return _vm.validateStepForm("step3")
               }
             }
           },
           [
             _c("h1", [_vm._v("Step 3")]),
             _vm._v(" "),
-            _vm._m(38),
+            _c(
+              "table",
+              { staticClass: "table table-responsive-md table-bordered" },
+              [
+                _c("tr", [
+                  _c("th", { attrs: { colspan: "3", rowspan: "4" } }, [
+                    _vm._v(
+                      "\n            উচ্চ প্ৰাথমিক শাখাৰ ছাত্র-ছাত্ৰীৰ সংখ্যা, ২০২০ বৰ্ষ ।\n          "
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("th", [_vm._v("শ্ৰেণী")]),
+                  _vm._v(" "),
+                  _c("th", [_vm._v("৬ষ্ঠ")]),
+                  _vm._v(" "),
+                  _c("th", [_vm._v("৭ম")]),
+                  _vm._v(" "),
+                  _c("th", [_vm._v("৮ম")]),
+                  _vm._v(" "),
+                  _c("th", [_vm._v("মুঠ")]),
+                  _vm._v(" "),
+                  _c("th", [_vm._v("আচাৰ্য")]),
+                  _vm._v(" "),
+                  _c("th", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.step3.teacher_male_1,
+                          expression: "step3.teacher_male_1"
+                        },
+                        {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required|number",
+                          expression: "'required|number'"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "number",
+                        name: "teacher_male_1",
+                        placeholder: "Teacher"
+                      },
+                      domProps: { value: _vm.step3.teacher_male_1 },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(
+                            _vm.step3,
+                            "teacher_male_1",
+                            $event.target.value
+                          )
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.has("step3.teacher_male_1"),
+                            expression: "errors.has('step3.teacher_male_1')"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [
+                        _vm._v(
+                          "\n              " +
+                            _vm._s(_vm.errors.first("step3.teacher_male_1")) +
+                            "\n            "
+                        )
+                      ]
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("tr", [
+                  _c("th", [_vm._v("ছাত্র")]),
+                  _vm._v(" "),
+                  _c("th", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.step3.six_male,
+                          expression: "step3.six_male"
+                        },
+                        {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required|number",
+                          expression: "'required|number'"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "number",
+                        name: "six_male",
+                        placeholder: "Teacher"
+                      },
+                      domProps: { value: _vm.step3.six_male },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.step3, "six_male", $event.target.value)
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.has("step3.six_male"),
+                            expression: "errors.has('step3.six_male')"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [
+                        _vm._v(
+                          "\n              " +
+                            _vm._s(_vm.errors.first("step3.six_male")) +
+                            "\n            "
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("th", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.step3.seven_male,
+                          expression: "step3.seven_male"
+                        },
+                        {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required|number",
+                          expression: "'required|number'"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "number",
+                        name: "seven_male",
+                        placeholder: "Teacher"
+                      },
+                      domProps: { value: _vm.step3.seven_male },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.step3, "seven_male", $event.target.value)
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.has("step3.seven_male"),
+                            expression: "errors.has('step3.seven_male')"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [
+                        _vm._v(
+                          "\n              " +
+                            _vm._s(_vm.errors.first("step3.seven_male")) +
+                            "\n            "
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("th", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.step3.eight_male,
+                          expression: "step3.eight_male"
+                        },
+                        {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required|number",
+                          expression: "'required|number'"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "number",
+                        name: "eight_male",
+                        placeholder: "Teacher"
+                      },
+                      domProps: { value: _vm.step3.eight_male },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.step3, "eight_male", $event.target.value)
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.has("step3.eight_male"),
+                            expression: "errors.has('step3.eight_male')"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [
+                        _vm._v(
+                          "\n              " +
+                            _vm._s(_vm.errors.first("step3.eight_male")) +
+                            "\n            "
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("th", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.step3.muth_male_1,
+                          expression: "step3.muth_male_1"
+                        },
+                        {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required|number",
+                          expression: "'required|number'"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "number",
+                        name: "muth_male_1",
+                        placeholder: "Teacher"
+                      },
+                      domProps: { value: _vm.step3.muth_male_1 },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(
+                            _vm.step3,
+                            "muth_male_1",
+                            $event.target.value
+                          )
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.has("step3.muth_male_1"),
+                            expression: "errors.has('step3.muth_male_1')"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [
+                        _vm._v(
+                          "\n              " +
+                            _vm._s(_vm.errors.first("step3.muth_male_1")) +
+                            "\n            "
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("th", [_vm._v("আচাৰ্যা")]),
+                  _vm._v(" "),
+                  _c("th", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.step3.teacher_female_1,
+                          expression: "step3.teacher_female_1"
+                        },
+                        {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required|number",
+                          expression: "'required|number'"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "number",
+                        name: "teacher_female_1",
+                        placeholder: "Teacher"
+                      },
+                      domProps: { value: _vm.step3.teacher_female_1 },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(
+                            _vm.step3,
+                            "teacher_female_1",
+                            $event.target.value
+                          )
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.has("step3.teacher_female_1"),
+                            expression: "errors.has('step3.teacher_female_1')"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [
+                        _vm._v(
+                          "\n              " +
+                            _vm._s(_vm.errors.first("step3.teacher_female_1")) +
+                            "\n            "
+                        )
+                      ]
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("tr", [
+                  _c("th", [_vm._v("ছাত্ৰী")]),
+                  _vm._v(" "),
+                  _c("th", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.step3.six_female,
+                          expression: "step3.six_female"
+                        },
+                        {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required|number",
+                          expression: "'required|number'"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "number",
+                        name: "six_female",
+                        placeholder: "Teacher"
+                      },
+                      domProps: { value: _vm.step3.six_female },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.step3, "six_female", $event.target.value)
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.has("step3.six_female"),
+                            expression: "errors.has('step3.six_female')"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [
+                        _vm._v(
+                          "\n              " +
+                            _vm._s(_vm.errors.first("step3.six_female")) +
+                            "\n            "
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("th", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.step3.seven_female,
+                          expression: "step3.seven_female"
+                        },
+                        {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required|number",
+                          expression: "'required|number'"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "number",
+                        name: "seven_female",
+                        placeholder: "Teacher"
+                      },
+                      domProps: { value: _vm.step3.seven_female },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(
+                            _vm.step3,
+                            "seven_female",
+                            $event.target.value
+                          )
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.has("step3.seven_female"),
+                            expression: "errors.has('step3.seven_female')"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [
+                        _vm._v(
+                          "\n              " +
+                            _vm._s(_vm.errors.first("step3.seven_female")) +
+                            "\n            "
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("th", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.step3.eight_female,
+                          expression: "step3.eight_female"
+                        },
+                        {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required|number",
+                          expression: "'required|number'"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "number",
+                        name: "eight_female",
+                        placeholder: "Teacher"
+                      },
+                      domProps: { value: _vm.step3.eight_female },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(
+                            _vm.step3,
+                            "eight_female",
+                            $event.target.value
+                          )
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.has("step3.eight_female"),
+                            expression: "errors.has('step3.eight_female')"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [
+                        _vm._v(
+                          "\n              " +
+                            _vm._s(_vm.errors.first("step3.eight_female")) +
+                            "\n            "
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("th", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.step3.muth_female_1,
+                          expression: "step3.muth_female_1"
+                        },
+                        {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required|number",
+                          expression: "'required|number'"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "number",
+                        name: "muth_female_1",
+                        placeholder: "Teacher"
+                      },
+                      domProps: { value: _vm.step3.muth_female_1 },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(
+                            _vm.step3,
+                            "muth_female_1",
+                            $event.target.value
+                          )
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.has("step3.muth_female_1"),
+                            expression: "errors.has('step3.muth_female_1')"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [
+                        _vm._v(
+                          "\n              " +
+                            _vm._s(_vm.errors.first("step3.muth_female_1")) +
+                            "\n            "
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("th", [_vm._v("মুঠ")]),
+                  _vm._v(" "),
+                  _c("th", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.step3.teacher_female_1,
+                          expression: "step3.teacher_female_1"
+                        },
+                        {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required|number",
+                          expression: "'required|number'"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "number",
+                        name: "teacher_female_1",
+                        placeholder: "Teacher"
+                      },
+                      domProps: { value: _vm.step3.teacher_female_1 },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(
+                            _vm.step3,
+                            "teacher_female_1",
+                            $event.target.value
+                          )
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.has("step3.teacher_female_1"),
+                            expression: "errors.has('step3.teacher_female_1')"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [
+                        _vm._v(
+                          "\n              " +
+                            _vm._s(_vm.errors.first("step3.teacher_female_1")) +
+                            "\n            "
+                        )
+                      ]
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("tr", [
+                  _c("th", [_vm._v("মুঠ")]),
+                  _vm._v(" "),
+                  _c("th", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.step3.six_total,
+                          expression: "step3.six_total"
+                        },
+                        {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required|number",
+                          expression: "'required|number'"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "number",
+                        name: "six_total",
+                        placeholder: "Teacher"
+                      },
+                      domProps: { value: _vm.step3.six_total },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.step3, "six_total", $event.target.value)
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.has("step3.six_total"),
+                            expression: "errors.has('step3.six_total')"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [
+                        _vm._v(
+                          "\n              " +
+                            _vm._s(_vm.errors.first("step3.six_total")) +
+                            "\n            "
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("th", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.step3.seven_total,
+                          expression: "step3.seven_total"
+                        },
+                        {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required|number",
+                          expression: "'required|number'"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "number",
+                        name: "seven_total",
+                        placeholder: "Teacher"
+                      },
+                      domProps: { value: _vm.step3.seven_total },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(
+                            _vm.step3,
+                            "seven_total",
+                            $event.target.value
+                          )
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.has("step3.seven_total"),
+                            expression: "errors.has('step3.seven_total')"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [
+                        _vm._v(
+                          "\n              " +
+                            _vm._s(_vm.errors.first("step3.seven_total")) +
+                            "\n            "
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("th", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.step3.eight_total,
+                          expression: "step3.eight_total"
+                        },
+                        {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required|number",
+                          expression: "'required|number'"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "number",
+                        name: "eight_total",
+                        placeholder: "Teacher"
+                      },
+                      domProps: { value: _vm.step3.eight_total },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(
+                            _vm.step3,
+                            "eight_total",
+                            $event.target.value
+                          )
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.has("step3.eight_total"),
+                            expression: "errors.has('step3.eight_total')"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [
+                        _vm._v(
+                          "\n              " +
+                            _vm._s(_vm.errors.first("step3.eight_total")) +
+                            "\n            "
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("th", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.step3.muth_total_1,
+                          expression: "step3.muth_total_1"
+                        },
+                        {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required|number",
+                          expression: "'required|number'"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "number",
+                        name: "muth_total_1",
+                        placeholder: "Teacher"
+                      },
+                      domProps: { value: _vm.step3.muth_total_1 },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(
+                            _vm.step3,
+                            "muth_total_1",
+                            $event.target.value
+                          )
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.has("step3.muth_total_1"),
+                            expression: "errors.has('step3.muth_total_1')"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [
+                        _vm._v(
+                          "\n              " +
+                            _vm._s(_vm.errors.first("step3.muth_total_1")) +
+                            "\n            "
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("th", [_vm._v("অন্য কৰ্মচাৰী")]),
+                  _vm._v(" "),
+                  _c("th", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.step3.teacher_karmachari_1,
+                          expression: "step3.teacher_karmachari_1"
+                        },
+                        {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required|number",
+                          expression: "'required|number'"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "number",
+                        name: "teacher_karmachari_1",
+                        placeholder: "Teacher"
+                      },
+                      domProps: { value: _vm.step3.teacher_karmachari_1 },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(
+                            _vm.step3,
+                            "teacher_karmachari_1",
+                            $event.target.value
+                          )
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.has("step3.teacher_karmachari_1"),
+                            expression:
+                              "errors.has('step3.teacher_karmachari_1')"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [
+                        _vm._v(
+                          "\n              " +
+                            _vm._s(
+                              _vm.errors.first("step3.teacher_karmachari_1")
+                            ) +
+                            "\n            "
+                        )
+                      ]
+                    )
+                  ])
+                ])
+              ]
+            ),
             _vm._v(" "),
-            _vm._m(39),
+            _c(
+              "table",
+              { staticClass: "table table-responsive-md table-bordered" },
+              [
+                _c("tr", [
+                  _c(
+                    "th",
+                    { staticClass: "mx-auto", attrs: { rowspan: "4" } },
+                    [
+                      _vm._v(
+                        "\n            উচ্চ মাধ্যমিক শাখাৰ ছাত্র-ছাত্ৰীৰ সংখ্যা, ২০২০ বৰ্ষ ।\n          "
+                      )
+                    ]
+                  ),
+                  _vm._v(" "),
+                  _c("th", [_vm._v("শ্ৰেণী")]),
+                  _vm._v(" "),
+                  _c("th", [_vm._v("৯ম")]),
+                  _vm._v(" "),
+                  _c("th", [_vm._v("১০ম")]),
+                  _vm._v(" "),
+                  _c("th", [_vm._v("মুঠ")]),
+                  _vm._v(" "),
+                  _c("th", [_vm._v("আচাৰ্য")]),
+                  _vm._v(" "),
+                  _c("th", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.step3.teacher_male_2,
+                          expression: "step3.teacher_male_2"
+                        },
+                        {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required|number",
+                          expression: "'required|number'"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "number",
+                        name: "teacher_male_2",
+                        placeholder: "Teacher"
+                      },
+                      domProps: { value: _vm.step3.teacher_male_2 },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(
+                            _vm.step3,
+                            "teacher_male_2",
+                            $event.target.value
+                          )
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.has("step3.teacher_male_2"),
+                            expression: "errors.has('step3.teacher_male_2')"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [
+                        _vm._v(
+                          "\n              " +
+                            _vm._s(_vm.errors.first("step3.teacher_male_2")) +
+                            "\n            "
+                        )
+                      ]
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("tr", [
+                  _c("th", [_vm._v("ছাত্র")]),
+                  _vm._v(" "),
+                  _c("th", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.step3.nine_male,
+                          expression: "step3.nine_male"
+                        },
+                        {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required|number",
+                          expression: "'required|number'"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "number",
+                        name: "nine_male",
+                        placeholder: "Teacher"
+                      },
+                      domProps: { value: _vm.step3.nine_male },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.step3, "nine_male", $event.target.value)
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.has("step3.nine_male"),
+                            expression: "errors.has('step3.nine_male')"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [
+                        _vm._v(
+                          "\n              " +
+                            _vm._s(_vm.errors.first("step3.nine_male")) +
+                            "\n            "
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("th", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.step3.ten_male,
+                          expression: "step3.ten_male"
+                        },
+                        {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required|number",
+                          expression: "'required|number'"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "number",
+                        name: "ten_male",
+                        placeholder: "Teacher"
+                      },
+                      domProps: { value: _vm.step3.ten_male },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.step3, "ten_male", $event.target.value)
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.has("step3.ten_male"),
+                            expression: "errors.has('step3.ten_male')"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [
+                        _vm._v(
+                          "\n              " +
+                            _vm._s(_vm.errors.first("step3.ten_male")) +
+                            "\n            "
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("th", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.step3.muth_male_2,
+                          expression: "step3.muth_male_2"
+                        },
+                        {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required|number",
+                          expression: "'required|number'"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "number",
+                        name: "muth_male_2",
+                        placeholder: "Teacher"
+                      },
+                      domProps: { value: _vm.step3.muth_male_2 },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(
+                            _vm.step3,
+                            "muth_male_2",
+                            $event.target.value
+                          )
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.has("step3.muth_male_2"),
+                            expression: "errors.has('step3.muth_male_2')"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [
+                        _vm._v(
+                          "\n              " +
+                            _vm._s(_vm.errors.first("step3.muth_male_2")) +
+                            "\n            "
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("th", [_vm._v("আচাৰ্যা")]),
+                  _vm._v(" "),
+                  _c("th", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.step3.teacher_female_2,
+                          expression: "step3.teacher_female_2"
+                        },
+                        {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required|number",
+                          expression: "'required|number'"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "number",
+                        name: "teacher_female_2",
+                        placeholder: "Teacher"
+                      },
+                      domProps: { value: _vm.step3.teacher_female_2 },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(
+                            _vm.step3,
+                            "teacher_female_2",
+                            $event.target.value
+                          )
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.has("step3.teacher_female_2"),
+                            expression: "errors.has('step3.teacher_female_2')"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [
+                        _vm._v(
+                          "\n              " +
+                            _vm._s(_vm.errors.first("step3.teacher_female_2")) +
+                            "\n            "
+                        )
+                      ]
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("tr", [
+                  _c("th", [_vm._v("ছাত্ৰী")]),
+                  _vm._v(" "),
+                  _c("th", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.step3.nine_female,
+                          expression: "step3.nine_female"
+                        },
+                        {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required|number",
+                          expression: "'required|number'"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "number",
+                        name: "nine_female",
+                        placeholder: "Teacher"
+                      },
+                      domProps: { value: _vm.step3.nine_female },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(
+                            _vm.step3,
+                            "nine_female",
+                            $event.target.value
+                          )
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.has("step3.nine_female"),
+                            expression: "errors.has('step3.nine_female')"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [
+                        _vm._v(
+                          "\n              " +
+                            _vm._s(_vm.errors.first("step3.nine_female")) +
+                            "\n            "
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("th", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.step3.ten_female,
+                          expression: "step3.ten_female"
+                        },
+                        {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required|number",
+                          expression: "'required|number'"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "number",
+                        name: "ten_female",
+                        placeholder: "Teacher"
+                      },
+                      domProps: { value: _vm.step3.ten_female },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.step3, "ten_female", $event.target.value)
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.has("step3.ten_female"),
+                            expression: "errors.has('step3.ten_female')"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [
+                        _vm._v(
+                          "\n              " +
+                            _vm._s(_vm.errors.first("step3.ten_female")) +
+                            "\n            "
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("th", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.step3.muth_total_2,
+                          expression: "step3.muth_total_2"
+                        },
+                        {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required|number",
+                          expression: "'required|number'"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "number",
+                        name: "muth_total_2",
+                        placeholder: "Teacher"
+                      },
+                      domProps: { value: _vm.step3.muth_total_2 },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(
+                            _vm.step3,
+                            "muth_total_2",
+                            $event.target.value
+                          )
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.has("step3.muth_total_2"),
+                            expression: "errors.has('step3.muth_total_2')"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [
+                        _vm._v(
+                          "\n              " +
+                            _vm._s(_vm.errors.first("step3.muth_total_2")) +
+                            "\n            "
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("th", [_vm._v("মুঠ")]),
+                  _vm._v(" "),
+                  _c("th", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.step3.teacher_total_2,
+                          expression: "step3.teacher_total_2"
+                        },
+                        {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required|number",
+                          expression: "'required|number'"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "number",
+                        name: "teacher_total_2",
+                        placeholder: "Teacher"
+                      },
+                      domProps: { value: _vm.step3.teacher_total_2 },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(
+                            _vm.step3,
+                            "teacher_total_2",
+                            $event.target.value
+                          )
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.has("step3.teacher_total_2"),
+                            expression: "errors.has('step3.teacher_total_2')"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [
+                        _vm._v(
+                          "\n              " +
+                            _vm._s(_vm.errors.first("step3.teacher_total_2")) +
+                            "\n            "
+                        )
+                      ]
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("tr", [
+                  _c("th", [_vm._v("মুঠ")]),
+                  _vm._v(" "),
+                  _c("th", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.step3.nine_total,
+                          expression: "step3.nine_total"
+                        },
+                        {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required|number",
+                          expression: "'required|number'"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "number",
+                        name: "nine_total",
+                        placeholder: "Teacher"
+                      },
+                      domProps: { value: _vm.step3.nine_total },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.step3, "nine_total", $event.target.value)
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.has("step3.nine_total"),
+                            expression: "errors.has('step3.nine_total')"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [
+                        _vm._v(
+                          "\n              " +
+                            _vm._s(_vm.errors.first("step3.nine_total")) +
+                            "\n            "
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("th", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.step3.ten_total,
+                          expression: "step3.ten_total"
+                        },
+                        {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required|number",
+                          expression: "'required|number'"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "number",
+                        name: "ten_total",
+                        placeholder: "Teacher"
+                      },
+                      domProps: { value: _vm.step3.ten_total },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.step3, "ten_total", $event.target.value)
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.has("step3.ten_total"),
+                            expression: "errors.has('step3.ten_total')"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [
+                        _vm._v(
+                          "\n              " +
+                            _vm._s(_vm.errors.first("step3.ten_total")) +
+                            "\n            "
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("th", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.step3.muth_total_2,
+                          expression: "step3.muth_total_2"
+                        },
+                        {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required|number",
+                          expression: "'required|number'"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "number",
+                        name: "muth_total_2",
+                        placeholder: "Teacher"
+                      },
+                      domProps: { value: _vm.step3.muth_total_2 },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(
+                            _vm.step3,
+                            "muth_total_2",
+                            $event.target.value
+                          )
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.has("step3.muth_total_2"),
+                            expression: "errors.has('step3.muth_total_2')"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [
+                        _vm._v(
+                          "\n              " +
+                            _vm._s(_vm.errors.first("step3.muth_total_2")) +
+                            "\n            "
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("th", [_vm._v("অন্য কৰ্মচাৰী")]),
+                  _vm._v(" "),
+                  _c("th", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.step3.teacher_total_2,
+                          expression: "step3.teacher_total_2"
+                        },
+                        {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required|number",
+                          expression: "'required|number'"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "number",
+                        name: "teacher_total_2",
+                        placeholder: "Teacher"
+                      },
+                      domProps: { value: _vm.step3.teacher_total_2 },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(
+                            _vm.step3,
+                            "teacher_total_2",
+                            $event.target.value
+                          )
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.has("step3.teacher_total_2"),
+                            expression: "errors.has('step3.teacher_total_2')"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [
+                        _vm._v(
+                          "\n              " +
+                            _vm._s(_vm.errors.first("step3.teacher_total_2")) +
+                            "\n            "
+                        )
+                      ]
+                    )
+                  ])
+                ])
+              ]
+            ),
             _vm._v(" "),
-            _vm._m(40),
+            _c("div", { staticClass: "d-flex flex-row-reverse" }, [
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-outline-secondary",
+                  attrs: { type: "button" },
+                  on: {
+                    click: function($event) {
+                      return _vm.goPrev()
+                    }
+                  }
+                },
+                [_vm._v("\n          Back\n        ")]
+              )
+            ]),
             _vm._v(" "),
-            _vm._m(41)
+            _vm._m(8)
           ]
         )
       : _vm._e(),
@@ -2650,22 +8673,1072 @@ var render = function() {
           "form",
           {
             staticClass: "form-horizontal",
-            attrs: { "data-vv-scope": "step1" },
+            attrs: { "data-vv-scope": "step4" },
             on: {
               submit: function($event) {
                 $event.preventDefault()
-                return _vm.validateStepForm("step1")
+                return _vm.validateStepForm("step4")
               }
             }
           },
           [
             _c("h1", [_vm._v("Step 4")]),
             _vm._v(" "),
-            _vm._m(42),
+            _c("div", { staticClass: "table-bordered" }, [
+              _c("div", { staticClass: "row mt-2" }, [
+                _c("div", { staticClass: "form-group row col-md-4" }, [
+                  _c("label", { staticClass: "d-flex align-items-end" }, [
+                    _vm._v("চাৰিওটা শাখাৰ সৰ্বমুঠ :")
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col" }, [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.step4.one,
+                          expression: "step4.one"
+                        },
+                        {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required|number",
+                          expression: "'required|number'"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "number",
+                        name: "one",
+                        placeholder: "ছাত্র "
+                      },
+                      domProps: { value: _vm.step4.one },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.step4, "one", $event.target.value)
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.has("step4.one"),
+                            expression: "errors.has('step4.one')"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [
+                        _vm._v(
+                          "\n                " +
+                            _vm._s(_vm.errors.first("step4.one")) +
+                            "\n              "
+                        )
+                      ]
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group col-md-4" }, [
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.step4.two,
+                        expression: "step4.two"
+                      },
+                      {
+                        name: "validate",
+                        rawName: "v-validate",
+                        value: "required|number",
+                        expression: "'required|number'"
+                      }
+                    ],
+                    staticClass: "form-control",
+                    attrs: {
+                      type: "number",
+                      name: "two",
+                      placeholder: "ছাত্ৰী"
+                    },
+                    domProps: { value: _vm.step4.two },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(_vm.step4, "two", $event.target.value)
+                      }
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "span",
+                    {
+                      directives: [
+                        {
+                          name: "show",
+                          rawName: "v-show",
+                          value: _vm.errors.has("step4.two"),
+                          expression: "errors.has('step4.two')"
+                        }
+                      ],
+                      staticClass: "text-danger"
+                    },
+                    [
+                      _vm._v(
+                        "\n              " +
+                          _vm._s(_vm.errors.first("step4.two")) +
+                          "\n            "
+                      )
+                    ]
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group col-md-4" }, [
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.step4.three,
+                        expression: "step4.three"
+                      },
+                      {
+                        name: "validate",
+                        rawName: "v-validate",
+                        value: "required|number",
+                        expression: "'required|number'"
+                      }
+                    ],
+                    staticClass: "form-control",
+                    attrs: {
+                      type: "number",
+                      name: "three",
+                      placeholder: "মুঠ"
+                    },
+                    domProps: { value: _vm.step4.three },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(_vm.step4, "three", $event.target.value)
+                      }
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "span",
+                    {
+                      directives: [
+                        {
+                          name: "show",
+                          rawName: "v-show",
+                          value: _vm.errors.has("step4.three"),
+                          expression: "errors.has('step4.three')"
+                        }
+                      ],
+                      staticClass: "text-danger"
+                    },
+                    [
+                      _vm._v(
+                        "\n              " +
+                          _vm._s(_vm.errors.first("step4.three")) +
+                          "\n            "
+                      )
+                    ]
+                  )
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "d-flex justify-content-end" }, [
+                _c("div", { staticClass: "form-group col-md-3" }, [
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.step4.four,
+                        expression: "step4.four"
+                      },
+                      {
+                        name: "validate",
+                        rawName: "v-validate",
+                        value: "required|number",
+                        expression: "'required|number'"
+                      }
+                    ],
+                    staticClass: "form-control",
+                    attrs: {
+                      type: "number",
+                      name: "four",
+                      placeholder: "আচাৰ্য"
+                    },
+                    domProps: { value: _vm.step4.four },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(_vm.step4, "four", $event.target.value)
+                      }
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "span",
+                    {
+                      directives: [
+                        {
+                          name: "show",
+                          rawName: "v-show",
+                          value: _vm.errors.has("step4.four"),
+                          expression: "errors.has('step4.four')"
+                        }
+                      ],
+                      staticClass: "text-danger"
+                    },
+                    [
+                      _vm._v(
+                        "\n              " +
+                          _vm._s(_vm.errors.first("step4.four")) +
+                          "\n            "
+                      )
+                    ]
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group col-md-3" }, [
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.step4.five,
+                        expression: "step4.five"
+                      },
+                      {
+                        name: "validate",
+                        rawName: "v-validate",
+                        value: "required|number",
+                        expression: "'required|number'"
+                      }
+                    ],
+                    staticClass: "form-control",
+                    attrs: {
+                      type: "number",
+                      name: "five",
+                      placeholder: "আচৰ্যা"
+                    },
+                    domProps: { value: _vm.step4.five },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(_vm.step4, "five", $event.target.value)
+                      }
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "span",
+                    {
+                      directives: [
+                        {
+                          name: "show",
+                          rawName: "v-show",
+                          value: _vm.errors.has("step4.five"),
+                          expression: "errors.has('step4.five')"
+                        }
+                      ],
+                      staticClass: "text-danger"
+                    },
+                    [
+                      _vm._v(
+                        "\n              " +
+                          _vm._s(_vm.errors.first("step4.five")) +
+                          "\n            "
+                      )
+                    ]
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group col-md-3" }, [
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.step4.six,
+                        expression: "step4.six"
+                      },
+                      {
+                        name: "validate",
+                        rawName: "v-validate",
+                        value: "required|number",
+                        expression: "'required|number'"
+                      }
+                    ],
+                    staticClass: "form-control",
+                    attrs: { type: "number", name: "six", placeholder: "মুঠ" },
+                    domProps: { value: _vm.step4.six },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(_vm.step4, "six", $event.target.value)
+                      }
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "span",
+                    {
+                      directives: [
+                        {
+                          name: "show",
+                          rawName: "v-show",
+                          value: _vm.errors.has("step4.six"),
+                          expression: "errors.has('step4.six')"
+                        }
+                      ],
+                      staticClass: "text-danger"
+                    },
+                    [
+                      _vm._v(
+                        "\n              " +
+                          _vm._s(_vm.errors.first("step4.six")) +
+                          "\n            "
+                      )
+                    ]
+                  )
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "row mt-2" }, [
+                _c("div", { staticClass: "form-group row col-md-4" }, [
+                  _c("label", { staticClass: "d-flex align-items-end" }, [
+                    _vm._v("মুঠ অন্য কৰ্মচাৰী :")
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col" }, [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.step4.seven,
+                          expression: "step4.seven"
+                        },
+                        {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required|number",
+                          expression: "'required|number'"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: { type: "number", name: "seven", placeholder: "" },
+                      domProps: { value: _vm.step4.seven },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.step4, "seven", $event.target.value)
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.has("step4.seven"),
+                            expression: "errors.has('step4.seven')"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [
+                        _vm._v(
+                          "\n                " +
+                            _vm._s(_vm.errors.first("step4.seven")) +
+                            "\n              "
+                        )
+                      ]
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group row col-md-4" }, [
+                  _c("label", { staticClass: "d-flex align-items-end" }, [
+                    _vm._v("প্ৰতিটো শ্ৰেণীত ..:")
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col" }, [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.step4.eight,
+                          expression: "step4.eight"
+                        },
+                        {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required|number",
+                          expression: "'required|number'"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: { type: "number", name: "eight", placeholder: "" },
+                      domProps: { value: _vm.step4.eight },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.step4, "eight", $event.target.value)
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.has("step4.eight"),
+                            expression: "errors.has('step4.eight')"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [
+                        _vm._v(
+                          "\n                " +
+                            _vm._s(_vm.errors.first("step4.eight")) +
+                            "\n              "
+                        )
+                      ]
+                    )
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "mt-2 row" }, [
+                _c("div", { staticClass: "form-group row col-md-8" }, [
+                  _c("label", { staticClass: "d-flex align-items-end" }, [
+                    _vm._v(
+                      "প্ৰতিটো শ্ৰেণীত থকা বিশেষভাবে সক্ষম ছাত্র-ছাত্ৰীৰ মুঠ\n              সংখ্যা"
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "col" }, [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.step4.nine,
+                          expression: "step4.nine"
+                        },
+                        {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required|number",
+                          expression: "'required|number'"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "number",
+                        name: "nine",
+                        placeholder: "ছাত্র"
+                      },
+                      domProps: { value: _vm.step4.nine },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.step4, "nine", $event.target.value)
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.has("step4.nine"),
+                            expression: "errors.has('step4.nine')"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [
+                        _vm._v(
+                          "\n                " +
+                            _vm._s(_vm.errors.first("step4.nine")) +
+                            "\n              "
+                        )
+                      ]
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group col-md-2" }, [
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.step4.ten,
+                        expression: "step4.ten"
+                      },
+                      {
+                        name: "validate",
+                        rawName: "v-validate",
+                        value: "required|number",
+                        expression: "'required|number'"
+                      }
+                    ],
+                    staticClass: "form-control",
+                    attrs: {
+                      type: "number",
+                      name: "ten",
+                      placeholder: "ছাত্ৰী"
+                    },
+                    domProps: { value: _vm.step4.ten },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(_vm.step4, "ten", $event.target.value)
+                      }
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "span",
+                    {
+                      directives: [
+                        {
+                          name: "show",
+                          rawName: "v-show",
+                          value: _vm.errors.has("step4.ten"),
+                          expression: "errors.has('step4.ten')"
+                        }
+                      ],
+                      staticClass: "text-danger"
+                    },
+                    [
+                      _vm._v(
+                        "\n              " +
+                          _vm._s(_vm.errors.first("step4.ten")) +
+                          "\n            "
+                      )
+                    ]
+                  )
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "form-group col-md-2" }, [
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.step4.eleven,
+                        expression: "step4.eleven"
+                      },
+                      {
+                        name: "validate",
+                        rawName: "v-validate",
+                        value: "required|number",
+                        expression: "'required|number'"
+                      }
+                    ],
+                    staticClass: "form-control",
+                    attrs: {
+                      type: "number",
+                      name: "eleven",
+                      placeholder: "মুঠ"
+                    },
+                    domProps: { value: _vm.step4.eleven },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(_vm.step4, "eleven", $event.target.value)
+                      }
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "span",
+                    {
+                      directives: [
+                        {
+                          name: "show",
+                          rawName: "v-show",
+                          value: _vm.errors.has("step4.eleven"),
+                          expression: "errors.has('step4.eleven')"
+                        }
+                      ],
+                      staticClass: "text-danger"
+                    },
+                    [
+                      _vm._v(
+                        "\n              " +
+                          _vm._s(_vm.errors.first("step4.eleven")) +
+                          "\n            "
+                      )
+                    ]
+                  )
+                ])
+              ]),
+              _vm._v(" "),
+              _c("table", { staticClass: "table table-responsive-md mb0" }, [
+                _vm._m(9),
+                _vm._v(" "),
+                _c("tr", [
+                  _c("th", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.step4.twelve,
+                          expression: "step4.twelve"
+                        },
+                        {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required|number",
+                          expression: "'required|number'"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "number",
+                        name: "twelve",
+                        placeholder: "মুঠ"
+                      },
+                      domProps: { value: _vm.step4.twelve },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.step4, "twelve", $event.target.value)
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.has("step4.twelve"),
+                            expression: "errors.has('step4.twelve')"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [
+                        _vm._v(
+                          "\n                " +
+                            _vm._s(_vm.errors.first("step4.twelve")) +
+                            "\n              "
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("th", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.step4.thirteen,
+                          expression: "step4.thirteen"
+                        },
+                        {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required|number",
+                          expression: "'required|number'"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "number",
+                        name: "thirteen",
+                        placeholder: "মুঠ"
+                      },
+                      domProps: { value: _vm.step4.thirteen },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.step4, "thirteen", $event.target.value)
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.has("step4.thirteen"),
+                            expression: "errors.has('step4.thirteen')"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [
+                        _vm._v(
+                          "\n                " +
+                            _vm._s(_vm.errors.first("step4.thirteen")) +
+                            "\n              "
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("th", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.step4.fourteen,
+                          expression: "step4.fourteen"
+                        },
+                        {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required|number",
+                          expression: "'required|number'"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "number",
+                        name: "fourteen",
+                        placeholder: "মুঠ"
+                      },
+                      domProps: { value: _vm.step4.fourteen },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.step4, "fourteen", $event.target.value)
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.has("step4.fourteen"),
+                            expression: "errors.has('step4.fourteen')"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [
+                        _vm._v(
+                          "\n                " +
+                            _vm._s(_vm.errors.first("step4.fourteen")) +
+                            "\n              "
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("th", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.step4.fiveteen,
+                          expression: "step4.fiveteen"
+                        },
+                        {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required|number",
+                          expression: "'required|number'"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "number",
+                        name: "fiveteen",
+                        placeholder: "মুঠ"
+                      },
+                      domProps: { value: _vm.step4.fiveteen },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.step4, "fiveteen", $event.target.value)
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.has("step4.fiveteen"),
+                            expression: "errors.has('step4.fiveteen')"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [
+                        _vm._v(
+                          "\n                " +
+                            _vm._s(_vm.errors.first("step4.fiveteen")) +
+                            "\n              "
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("th", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.step4.sixteen,
+                          expression: "step4.sixteen"
+                        },
+                        {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required|number",
+                          expression: "'required|number'"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "number",
+                        name: "sixteen",
+                        placeholder: "মুঠ"
+                      },
+                      domProps: { value: _vm.step4.sixteen },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.step4, "sixteen", $event.target.value)
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.has("step4.sixteen"),
+                            expression: "errors.has('step4.sixteen')"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [
+                        _vm._v(
+                          "\n                " +
+                            _vm._s(_vm.errors.first("step4.sixteen")) +
+                            "\n              "
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("th", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.step4.seventeen,
+                          expression: "step4.seventeen"
+                        },
+                        {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required|number",
+                          expression: "'required|number'"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "number",
+                        name: "seventeen",
+                        placeholder: "মুঠ"
+                      },
+                      domProps: { value: _vm.step4.seventeen },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.step4, "seventeen", $event.target.value)
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.has("step4.seventeen"),
+                            expression: "errors.has('step4.seventeen')"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [
+                        _vm._v(
+                          "\n                " +
+                            _vm._s(_vm.errors.first("step4.seventeen")) +
+                            "\n              "
+                        )
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _c("th", [
+                    _c("input", {
+                      directives: [
+                        {
+                          name: "model",
+                          rawName: "v-model",
+                          value: _vm.step4.eighteen,
+                          expression: "step4.eighteen"
+                        },
+                        {
+                          name: "validate",
+                          rawName: "v-validate",
+                          value: "required|number",
+                          expression: "'required|number'"
+                        }
+                      ],
+                      staticClass: "form-control",
+                      attrs: {
+                        type: "number",
+                        name: "eighteen",
+                        placeholder: "মুঠ"
+                      },
+                      domProps: { value: _vm.step4.eighteen },
+                      on: {
+                        input: function($event) {
+                          if ($event.target.composing) {
+                            return
+                          }
+                          _vm.$set(_vm.step4, "eighteen", $event.target.value)
+                        }
+                      }
+                    }),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.errors.has("step4.eighteen"),
+                            expression: "errors.has('step4.eighteen')"
+                          }
+                        ],
+                        staticClass: "text-danger"
+                      },
+                      [
+                        _vm._v(
+                          "\n                " +
+                            _vm._s(_vm.errors.first("step4.eighteen")) +
+                            "\n              "
+                        )
+                      ]
+                    )
+                  ])
+                ])
+              ])
+            ]),
             _vm._v(" "),
-            _vm._m(43),
+            _c("div", { staticClass: "d-flex flex-row-reverse" }, [
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-outline-secondary",
+                  attrs: { type: "button" },
+                  on: {
+                    click: function($event) {
+                      return _vm.goPrev()
+                    }
+                  }
+                },
+                [_vm._v("\n          Back\n        ")]
+              )
+            ]),
             _vm._v(" "),
-            _vm._m(44)
+            _vm._m(10)
           ]
         )
       : _vm._e(),
@@ -2675,22 +9748,4004 @@ var render = function() {
           "form",
           {
             staticClass: "form-horizontal",
-            attrs: { "data-vv-scope": "step1" },
+            attrs: { "data-vv-scope": "step5" },
             on: {
               submit: function($event) {
                 $event.preventDefault()
-                return _vm.submitForm("step1")
+                return _vm.validateStepForm("step5")
               }
             }
           },
           [
             _c("h1", [_vm._v("Step 5")]),
             _vm._v(" "),
-            _vm._m(45),
+            _c(
+              "table",
+              { staticClass: "table table-bordered table-responsive" },
+              [
+                _c("tbody", [
+                  _vm._m(11),
+                  _vm._v(" "),
+                  _c("tr", [
+                    _c("td", [_vm._v("(ক) অনুসূচীত জাতি (SC)")]),
+                    _vm._v(" "),
+                    _c("td", [
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.step5.sc_male,
+                            expression: "step5.sc_male"
+                          },
+                          {
+                            name: "validate",
+                            rawName: "v-validate",
+                            value: "required|number",
+                            expression: "'required|number'"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: {
+                          type: "number",
+                          name: "sc_male",
+                          placeholder: ""
+                        },
+                        domProps: { value: _vm.step5.sc_male },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(_vm.step5, "sc_male", $event.target.value)
+                          }
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c(
+                        "span",
+                        {
+                          directives: [
+                            {
+                              name: "show",
+                              rawName: "v-show",
+                              value: _vm.errors.has("step5.sc_male"),
+                              expression: "errors.has('step5.sc_male')"
+                            }
+                          ],
+                          staticClass: "text-danger"
+                        },
+                        [
+                          _vm._v(
+                            "\n                " +
+                              _vm._s(_vm.errors.first("step5.sc_male")) +
+                              "\n              "
+                          )
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("td", [
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.step5.sc_female,
+                            expression: "step5.sc_female"
+                          },
+                          {
+                            name: "validate",
+                            rawName: "v-validate",
+                            value: "required|number",
+                            expression: "'required|number'"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: {
+                          type: "number",
+                          name: "sc_female",
+                          placeholder: ""
+                        },
+                        domProps: { value: _vm.step5.sc_female },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.step5,
+                              "sc_female",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c(
+                        "span",
+                        {
+                          directives: [
+                            {
+                              name: "show",
+                              rawName: "v-show",
+                              value: _vm.errors.has("step5.sc_female"),
+                              expression: "errors.has('step5.sc_female')"
+                            }
+                          ],
+                          staticClass: "text-danger"
+                        },
+                        [
+                          _vm._v(
+                            "\n                " +
+                              _vm._s(_vm.errors.first("step5.sc_female")) +
+                              "\n              "
+                          )
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("td", [
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.step5.sc_total,
+                            expression: "step5.sc_total"
+                          },
+                          {
+                            name: "validate",
+                            rawName: "v-validate",
+                            value: "required|number",
+                            expression: "'required|number'"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: {
+                          type: "number",
+                          name: "sc_total",
+                          placeholder: ""
+                        },
+                        domProps: { value: _vm.step5.sc_total },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(_vm.step5, "sc_total", $event.target.value)
+                          }
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c(
+                        "span",
+                        {
+                          directives: [
+                            {
+                              name: "show",
+                              rawName: "v-show",
+                              value: _vm.errors.has("step5.sc_total"),
+                              expression: "errors.has('step5.sc_total')"
+                            }
+                          ],
+                          staticClass: "text-danger"
+                        },
+                        [
+                          _vm._v(
+                            "\n                " +
+                              _vm._s(_vm.errors.first("step5.sc_total")) +
+                              "\n              "
+                          )
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("td", { attrs: { rowspan: "2" } }, [
+                      _vm._v("(ক) (মুছলমান)")
+                    ]),
+                    _vm._v(" "),
+                    _vm._m(12),
+                    _vm._v(" "),
+                    _vm._m(13),
+                    _vm._v(" "),
+                    _c("td", [_vm._v("মুঠ")])
+                  ]),
+                  _vm._v(" "),
+                  _c("tr", [
+                    _c("td", [_vm._v("(খ) অনুসূচীত জনজাতি (ST)")]),
+                    _vm._v(" "),
+                    _c("td", [
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.step5.st_male,
+                            expression: "step5.st_male"
+                          },
+                          {
+                            name: "validate",
+                            rawName: "v-validate",
+                            value: "required|number",
+                            expression: "'required|number'"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: {
+                          type: "number",
+                          name: "st_male",
+                          placeholder: ""
+                        },
+                        domProps: { value: _vm.step5.st_male },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(_vm.step5, "st_male", $event.target.value)
+                          }
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c(
+                        "span",
+                        {
+                          directives: [
+                            {
+                              name: "show",
+                              rawName: "v-show",
+                              value: _vm.errors.has("step5.st_male"),
+                              expression: "errors.has('step5.st_male')"
+                            }
+                          ],
+                          staticClass: "text-danger"
+                        },
+                        [
+                          _vm._v(
+                            "\n                " +
+                              _vm._s(_vm.errors.first("step5.st_male")) +
+                              "\n              "
+                          )
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("td", [
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.step5.st_female,
+                            expression: "step5.st_female"
+                          },
+                          {
+                            name: "validate",
+                            rawName: "v-validate",
+                            value: "required|number",
+                            expression: "'required|number'"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: {
+                          type: "number",
+                          name: "st_female",
+                          placeholder: ""
+                        },
+                        domProps: { value: _vm.step5.st_female },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.step5,
+                              "st_female",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c(
+                        "span",
+                        {
+                          directives: [
+                            {
+                              name: "show",
+                              rawName: "v-show",
+                              value: _vm.errors.has("step5.st_female"),
+                              expression: "errors.has('step5.st_female')"
+                            }
+                          ],
+                          staticClass: "text-danger"
+                        },
+                        [
+                          _vm._v(
+                            "\n                " +
+                              _vm._s(_vm.errors.first("step5.st_female")) +
+                              "\n              "
+                          )
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("td", [
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.step5.st_total,
+                            expression: "step5.st_total"
+                          },
+                          {
+                            name: "validate",
+                            rawName: "v-validate",
+                            value: "required|number",
+                            expression: "'required|number'"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: {
+                          type: "number",
+                          name: "st_total",
+                          placeholder: ""
+                        },
+                        domProps: { value: _vm.step5.st_total },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(_vm.step5, "st_total", $event.target.value)
+                          }
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c(
+                        "span",
+                        {
+                          directives: [
+                            {
+                              name: "show",
+                              rawName: "v-show",
+                              value: _vm.errors.has("step5.st_total"),
+                              expression: "errors.has('step5.st_total')"
+                            }
+                          ],
+                          staticClass: "text-danger"
+                        },
+                        [
+                          _vm._v(
+                            "\n                " +
+                              _vm._s(_vm.errors.first("step5.st_total")) +
+                              "\n              "
+                          )
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("td", [
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.step5.muslim_male,
+                            expression: "step5.muslim_male"
+                          },
+                          {
+                            name: "validate",
+                            rawName: "v-validate",
+                            value: "required|number",
+                            expression: "'required|number'"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: {
+                          type: "number",
+                          name: "muslim_male",
+                          placeholder: ""
+                        },
+                        domProps: { value: _vm.step5.muslim_male },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.step5,
+                              "muslim_male",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c(
+                        "span",
+                        {
+                          directives: [
+                            {
+                              name: "show",
+                              rawName: "v-show",
+                              value: _vm.errors.has("step5.muslim_male"),
+                              expression: "errors.has('step5.muslim_male')"
+                            }
+                          ],
+                          staticClass: "text-danger"
+                        },
+                        [
+                          _vm._v(
+                            "\n                " +
+                              _vm._s(_vm.errors.first("step5.muslim_male")) +
+                              "\n              "
+                          )
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("td", [
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.step5.muslim_female,
+                            expression: "step5.muslim_female"
+                          },
+                          {
+                            name: "validate",
+                            rawName: "v-validate",
+                            value: "required|number",
+                            expression: "'required|number'"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: {
+                          type: "number",
+                          name: "muslim_female",
+                          placeholder: ""
+                        },
+                        domProps: { value: _vm.step5.muslim_female },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.step5,
+                              "muslim_female",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c(
+                        "span",
+                        {
+                          directives: [
+                            {
+                              name: "show",
+                              rawName: "v-show",
+                              value: _vm.errors.has("step5.muslim_female"),
+                              expression: "errors.has('step5.muslim_female')"
+                            }
+                          ],
+                          staticClass: "text-danger"
+                        },
+                        [
+                          _vm._v(
+                            "\n                " +
+                              _vm._s(_vm.errors.first("step5.muslim_female")) +
+                              "\n              "
+                          )
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("td", [
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.step5.muslim_total,
+                            expression: "step5.muslim_total"
+                          },
+                          {
+                            name: "validate",
+                            rawName: "v-validate",
+                            value: "required|number",
+                            expression: "'required|number'"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: {
+                          type: "number",
+                          name: "muslim_total",
+                          placeholder: ""
+                        },
+                        domProps: { value: _vm.step5.muslim_total },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.step5,
+                              "muslim_total",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c(
+                        "span",
+                        {
+                          directives: [
+                            {
+                              name: "show",
+                              rawName: "v-show",
+                              value: _vm.errors.has("step5.muslim_total"),
+                              expression: "errors.has('step5.muslim_total')"
+                            }
+                          ],
+                          staticClass: "text-danger"
+                        },
+                        [
+                          _vm._v(
+                            "\n                " +
+                              _vm._s(_vm.errors.first("step5.muslim_total")) +
+                              "\n              "
+                          )
+                        ]
+                      )
+                    ])
+                  ]),
+                  _vm._v(" "),
+                  _c("tr", [
+                    _c("td", [_vm._v("(গ) অন্যান্য পিছপৰা জাতি (OBC)")]),
+                    _vm._v(" "),
+                    _c("td", [
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.step5.obc_male,
+                            expression: "step5.obc_male"
+                          },
+                          {
+                            name: "validate",
+                            rawName: "v-validate",
+                            value: "required|number",
+                            expression: "'required|number'"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: {
+                          type: "number",
+                          name: "obc_male",
+                          placeholder: ""
+                        },
+                        domProps: { value: _vm.step5.obc_male },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(_vm.step5, "obc_male", $event.target.value)
+                          }
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c(
+                        "span",
+                        {
+                          directives: [
+                            {
+                              name: "show",
+                              rawName: "v-show",
+                              value: _vm.errors.has("step5.obc_male"),
+                              expression: "errors.has('step5.obc_male')"
+                            }
+                          ],
+                          staticClass: "text-danger"
+                        },
+                        [
+                          _vm._v(
+                            "\n                " +
+                              _vm._s(_vm.errors.first("step5.obc_male")) +
+                              "\n              "
+                          )
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("td", [
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.step5.obc_female,
+                            expression: "step5.obc_female"
+                          },
+                          {
+                            name: "validate",
+                            rawName: "v-validate",
+                            value: "required|number",
+                            expression: "'required|number'"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: {
+                          type: "number",
+                          name: "obc_female",
+                          placeholder: ""
+                        },
+                        domProps: { value: _vm.step5.obc_female },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.step5,
+                              "obc_female",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c(
+                        "span",
+                        {
+                          directives: [
+                            {
+                              name: "show",
+                              rawName: "v-show",
+                              value: _vm.errors.has("step5.obc_female"),
+                              expression: "errors.has('step5.obc_female')"
+                            }
+                          ],
+                          staticClass: "text-danger"
+                        },
+                        [
+                          _vm._v(
+                            "\n                " +
+                              _vm._s(_vm.errors.first("step5.obc_female")) +
+                              "\n              "
+                          )
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("td", [
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.step5.obc_total,
+                            expression: "step5.obc_total"
+                          },
+                          {
+                            name: "validate",
+                            rawName: "v-validate",
+                            value: "required|number",
+                            expression: "'required|number'"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: {
+                          type: "number",
+                          name: "obc_total",
+                          placeholder: ""
+                        },
+                        domProps: { value: _vm.step5.obc_total },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.step5,
+                              "obc_total",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c(
+                        "span",
+                        {
+                          directives: [
+                            {
+                              name: "show",
+                              rawName: "v-show",
+                              value: _vm.errors.has("step5.obc_total"),
+                              expression: "errors.has('step5.obc_total')"
+                            }
+                          ],
+                          staticClass: "text-danger"
+                        },
+                        [
+                          _vm._v(
+                            "\n                " +
+                              _vm._s(_vm.errors.first("step5.obc_total")) +
+                              "\n              "
+                          )
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v("(খ) খ্ৰীষ্টান")]),
+                    _vm._v(" "),
+                    _c("td", [
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.step5.chritian_male,
+                            expression: "step5.chritian_male"
+                          },
+                          {
+                            name: "validate",
+                            rawName: "v-validate",
+                            value: "required|number",
+                            expression: "'required|number'"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: {
+                          type: "number",
+                          name: "chritian_male",
+                          placeholder: ""
+                        },
+                        domProps: { value: _vm.step5.chritian_male },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.step5,
+                              "chritian_male",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c(
+                        "span",
+                        {
+                          directives: [
+                            {
+                              name: "show",
+                              rawName: "v-show",
+                              value: _vm.errors.has("step5.chritian_male"),
+                              expression: "errors.has('step5.chritian_male')"
+                            }
+                          ],
+                          staticClass: "text-danger"
+                        },
+                        [
+                          _vm._v(
+                            "\n                " +
+                              _vm._s(_vm.errors.first("step5.chritian_male")) +
+                              "\n              "
+                          )
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("td", [
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.step5.chritian_female,
+                            expression: "step5.chritian_female"
+                          },
+                          {
+                            name: "validate",
+                            rawName: "v-validate",
+                            value: "required|number",
+                            expression: "'required|number'"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: {
+                          type: "number",
+                          name: "chritian_female",
+                          placeholder: ""
+                        },
+                        domProps: { value: _vm.step5.chritian_female },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.step5,
+                              "chritian_female",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c(
+                        "span",
+                        {
+                          directives: [
+                            {
+                              name: "show",
+                              rawName: "v-show",
+                              value: _vm.errors.has("step5.chritian_female"),
+                              expression: "errors.has('step5.chritian_female')"
+                            }
+                          ],
+                          staticClass: "text-danger"
+                        },
+                        [
+                          _vm._v(
+                            "\n                " +
+                              _vm._s(
+                                _vm.errors.first("step5.chritian_female")
+                              ) +
+                              "\n              "
+                          )
+                        ]
+                      )
+                    ]),
+                    _vm._v(" "),
+                    _c("td", [
+                      _c("input", {
+                        directives: [
+                          {
+                            name: "model",
+                            rawName: "v-model",
+                            value: _vm.step5.chritian_total,
+                            expression: "step5.chritian_total"
+                          },
+                          {
+                            name: "validate",
+                            rawName: "v-validate",
+                            value: "required|number",
+                            expression: "'required|number'"
+                          }
+                        ],
+                        staticClass: "form-control",
+                        attrs: {
+                          type: "number",
+                          name: "chritian_total",
+                          placeholder: ""
+                        },
+                        domProps: { value: _vm.step5.chritian_total },
+                        on: {
+                          input: function($event) {
+                            if ($event.target.composing) {
+                              return
+                            }
+                            _vm.$set(
+                              _vm.step5,
+                              "chritian_total",
+                              $event.target.value
+                            )
+                          }
+                        }
+                      }),
+                      _vm._v(" "),
+                      _c(
+                        "span",
+                        {
+                          directives: [
+                            {
+                              name: "show",
+                              rawName: "v-show",
+                              value: _vm.errors.has("step5.chritian_total"),
+                              expression: "errors.has('step5.chritian_total')"
+                            }
+                          ],
+                          staticClass: "text-danger"
+                        },
+                        [
+                          _vm._v(
+                            "\n                " +
+                              _vm._s(_vm.errors.first("step5.chritian_total")) +
+                              "\n              "
+                          )
+                        ]
+                      )
+                    ])
+                  ])
+                ])
+              ]
+            ),
             _vm._v(" "),
-            _vm._m(46),
+            _c("div", { staticClass: "d-flex flex-row-reverse" }, [
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-outline-secondary",
+                  attrs: { type: "button" },
+                  on: {
+                    click: function($event) {
+                      return _vm.goPrev()
+                    }
+                  }
+                },
+                [_vm._v("\n          Back\n        ")]
+              )
+            ]),
             _vm._v(" "),
-            _vm._m(47)
+            _vm._m(14)
+          ]
+        )
+      : _vm._e(),
+    _vm._v(" "),
+    _vm.steps === 6
+      ? _c(
+          "form",
+          {
+            staticClass: "form-horizontal",
+            attrs: { "data-vv-scope": "step6" },
+            on: {
+              submit: function($event) {
+                $event.preventDefault()
+                return _vm.validateStepForm("step6")
+              }
+            }
+          },
+          [
+            _c("div", { staticClass: "p-2 row" }, [
+              _c("p", { staticClass: "mt-2 mr-2" }, [_vm._v("(ক)")]),
+              _vm._v(" "),
+              _c("p", { staticClass: "mt-2 mr-2" }, [
+                _vm._v(
+                  "\n          নিকেতনখন কত অৱস্থিত -- চহৰত/গাঁৱত/বনাঞ্চলত (✓ চিন দিব ) | নিকেতনলৈ\n          ছাত্র-ছাত্ৰী অহা গাঁৱৰ সংখ্যা\n        "
+                )
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.step6.one,
+                    expression: "step6.one"
+                  },
+                  {
+                    name: "validate",
+                    rawName: "v-validate",
+                    value: "required",
+                    expression: "'required'"
+                  }
+                ],
+                staticClass: "form-control col-1 mr-2",
+                attrs: {
+                  type: "text",
+                  name: "one",
+                  placeholder: "নিকেতনখন ....."
+                },
+                domProps: { value: _vm.step6.one },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.step6, "one", $event.target.value)
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  directives: [
+                    {
+                      name: "show",
+                      rawName: "v-show",
+                      value: _vm.errors.has("step6.one"),
+                      expression: "errors.has('step6.one')"
+                    }
+                  ],
+                  staticClass: "text-danger"
+                },
+                [
+                  _vm._v(
+                    "\n          " +
+                      _vm._s(_vm.errors.first("step6.one")) +
+                      "\n        "
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c("p", { staticClass: "mt-2 mr-2" }, [
+                _vm._v("নগৰীয়া বস্তিৰ সংখ্যা")
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.step6.two,
+                    expression: "step6.two"
+                  },
+                  {
+                    name: "validate",
+                    rawName: "v-validate",
+                    value: "required",
+                    expression: "'required'"
+                  }
+                ],
+                staticClass: "form-control col-1 mr-2",
+                attrs: {
+                  type: "text",
+                  name: "two",
+                  placeholder: "নগৰীয়া বস্তিৰ সংখ্যা"
+                },
+                domProps: { value: _vm.step6.two },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.step6, "two", $event.target.value)
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  directives: [
+                    {
+                      name: "show",
+                      rawName: "v-show",
+                      value: _vm.errors.has("step6.two"),
+                      expression: "errors.has('step6.two')"
+                    }
+                  ],
+                  staticClass: "text-danger"
+                },
+                [
+                  _vm._v(
+                    "\n          " +
+                      _vm._s(_vm.errors.first("step6.two")) +
+                      "\n        "
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c("p", { staticClass: "mt-2 mr-2" }, [_vm._v("ৱাৰ্ডৰ সংখ্যা")]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.step6.three,
+                    expression: "step6.three"
+                  },
+                  {
+                    name: "validate",
+                    rawName: "v-validate",
+                    value: "required",
+                    expression: "'required'"
+                  }
+                ],
+                staticClass: "form-control col-1 mr-2",
+                attrs: {
+                  type: "text",
+                  name: "three",
+                  placeholder: "ৱাৰ্ডৰ সংখ্যা"
+                },
+                domProps: { value: _vm.step6.three },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.step6, "three", $event.target.value)
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  directives: [
+                    {
+                      name: "show",
+                      rawName: "v-show",
+                      value: _vm.errors.has("step6.three"),
+                      expression: "errors.has('step6.three')"
+                    }
+                  ],
+                  staticClass: "text-danger"
+                },
+                [
+                  _vm._v(
+                    "\n          " +
+                      _vm._s(_vm.errors.first("step6.three")) +
+                      "\n        "
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c("p", { staticClass: "mt-2 mr-2" }, [
+                _vm._v(
+                  "\n          গাঁৱৰ তালিকা বেলেগে সংলগ্ন কৰি গাঁৱৰ পৰা অহা ছাত্র-ছাত্ৰী সংখ্যা দিব |\n        "
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col" }, [
+                _vm._v("(খ) মাহিলী শিক্ষণ শুল্ক :")
+              ]),
+              _vm._v(" "),
+              _c(
+                "table",
+                {
+                  staticClass: "table col-8 table-responsive table-borderless"
+                },
+                [
+                  _c("tbody", [
+                    _c("tr", [
+                      _c("td", [_vm._v("অংকুৰ, মুকুল")]),
+                      _vm._v(" "),
+                      _c("td", [
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.step6.four,
+                              expression: "step6.four"
+                            },
+                            {
+                              name: "validate",
+                              rawName: "v-validate",
+                              value: "required",
+                              expression: "'required'"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          attrs: {
+                            type: "text",
+                            name: "four",
+                            placeholder: ""
+                          },
+                          domProps: { value: _vm.step6.four },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.$set(_vm.step6, "four", $event.target.value)
+                            }
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "span",
+                          {
+                            directives: [
+                              {
+                                name: "show",
+                                rawName: "v-show",
+                                value: _vm.errors.has("step6.four"),
+                                expression: "errors.has('step6.four')"
+                              }
+                            ],
+                            staticClass: "text-danger"
+                          },
+                          [
+                            _vm._v(
+                              "\n                  " +
+                                _vm._s(_vm.errors.first("step6.four")) +
+                                "\n                "
+                            )
+                          ]
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("১মৰ পৰা ৫ ম")]),
+                      _vm._v(" "),
+                      _c("td", [
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.step6.five,
+                              expression: "step6.five"
+                            },
+                            {
+                              name: "validate",
+                              rawName: "v-validate",
+                              value: "required",
+                              expression: "'required'"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          attrs: {
+                            type: "text",
+                            name: "five",
+                            placeholder: ""
+                          },
+                          domProps: { value: _vm.step6.five },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.$set(_vm.step6, "five", $event.target.value)
+                            }
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "span",
+                          {
+                            directives: [
+                              {
+                                name: "show",
+                                rawName: "v-show",
+                                value: _vm.errors.has("step6.five"),
+                                expression: "errors.has('step6.five')"
+                              }
+                            ],
+                            staticClass: "text-danger"
+                          },
+                          [
+                            _vm._v(
+                              "\n                  " +
+                                _vm._s(_vm.errors.first("step6.five")) +
+                                "\n                "
+                            )
+                          ]
+                        )
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("tr", [
+                      _c("td", [_vm._v("৬ষ্টৰ পৰা ৮ ম")]),
+                      _vm._v(" "),
+                      _c("td", [
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.step6.six,
+                              expression: "step6.six"
+                            },
+                            {
+                              name: "validate",
+                              rawName: "v-validate",
+                              value: "required",
+                              expression: "'required'"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          attrs: { type: "text", name: "six", placeholder: "" },
+                          domProps: { value: _vm.step6.six },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.$set(_vm.step6, "six", $event.target.value)
+                            }
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "span",
+                          {
+                            directives: [
+                              {
+                                name: "show",
+                                rawName: "v-show",
+                                value: _vm.errors.has("step6.six"),
+                                expression: "errors.has('step6.six')"
+                              }
+                            ],
+                            staticClass: "text-danger"
+                          },
+                          [
+                            _vm._v(
+                              "\n                  " +
+                                _vm._s(_vm.errors.first("step6.six")) +
+                                "\n                "
+                            )
+                          ]
+                        )
+                      ]),
+                      _vm._v(" "),
+                      _c("td", [_vm._v("৯ ম আৰু ১০ ম")]),
+                      _vm._v(" "),
+                      _c("td", [
+                        _c("input", {
+                          directives: [
+                            {
+                              name: "model",
+                              rawName: "v-model",
+                              value: _vm.step6.seven,
+                              expression: "step6.seven"
+                            },
+                            {
+                              name: "validate",
+                              rawName: "v-validate",
+                              value: "required",
+                              expression: "'required'"
+                            }
+                          ],
+                          staticClass: "form-control",
+                          attrs: {
+                            type: "text",
+                            name: "seven",
+                            placeholder: ""
+                          },
+                          domProps: { value: _vm.step6.seven },
+                          on: {
+                            input: function($event) {
+                              if ($event.target.composing) {
+                                return
+                              }
+                              _vm.$set(_vm.step6, "seven", $event.target.value)
+                            }
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c(
+                          "span",
+                          {
+                            directives: [
+                              {
+                                name: "show",
+                                rawName: "v-show",
+                                value: _vm.errors.has("step6.seven"),
+                                expression: "errors.has('step6.seven')"
+                              }
+                            ],
+                            staticClass: "text-danger"
+                          },
+                          [
+                            _vm._v(
+                              "\n                  " +
+                                _vm._s(_vm.errors.first("step6.seven")) +
+                                "\n                "
+                            )
+                          ]
+                        )
+                      ])
+                    ])
+                  ])
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "p-2 row" }, [
+              _c("p", { staticClass: "mt-2 mr-2" }, [_vm._v("(গ)")]),
+              _vm._v(" "),
+              _c("p", { staticClass: "mt-2 mr-2" }, [
+                _vm._v("(১) আচাৰ্য/আচাৰ্জাৰ নুন্যতম মানধন")
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.step6.eight,
+                    expression: "step6.eight"
+                  },
+                  {
+                    name: "validate",
+                    rawName: "v-validate",
+                    value: "required",
+                    expression: "'required'"
+                  }
+                ],
+                staticClass: "form-control col-2 mr-2",
+                attrs: {
+                  type: "text",
+                  name: "eight",
+                  placeholder: "নুন্যতম মানধন.."
+                },
+                domProps: { value: _vm.step6.eight },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.step6, "eight", $event.target.value)
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  directives: [
+                    {
+                      name: "show",
+                      rawName: "v-show",
+                      value: _vm.errors.has("step6.eight"),
+                      expression: "errors.has('step6.eight')"
+                    }
+                  ],
+                  staticClass: "text-danger"
+                },
+                [
+                  _vm._v(
+                    "\n          " +
+                      _vm._s(_vm.errors.first("step6.eight")) +
+                      "\n        "
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c("p", { staticClass: "mt-2 mr-2" }, [
+                _vm._v("(২) আচাৰ্য/আচাৰ্জাৰ অধিকতম মানধন")
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.step6.nine,
+                    expression: "step6.nine"
+                  },
+                  {
+                    name: "validate",
+                    rawName: "v-validate",
+                    value: "required",
+                    expression: "'required'"
+                  }
+                ],
+                staticClass: "form-control col-2 mr-2",
+                attrs: {
+                  type: "text",
+                  name: "nine",
+                  placeholder: "অধিকতম মানধন"
+                },
+                domProps: { value: _vm.step6.nine },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.step6, "nine", $event.target.value)
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  directives: [
+                    {
+                      name: "show",
+                      rawName: "v-show",
+                      value: _vm.errors.has("step6.nine"),
+                      expression: "errors.has('step6.nine')"
+                    }
+                  ],
+                  staticClass: "text-danger"
+                },
+                [
+                  _vm._v(
+                    "\n          " +
+                      _vm._s(_vm.errors.first("step6.nine")) +
+                      "\n        "
+                  )
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "p-2 row" }, [
+              _c("p", { staticClass: "mt-2 mr-2" }, [_vm._v("(ঘ)")]),
+              _vm._v(" "),
+              _c("p", { staticClass: "mt-2 mr-2" }, [
+                _vm._v(
+                  "\n          নিকেতনৰ হিচাব পৰীক্ষকৰ প্ৰতিবেদন ২০১৯ বৰ্ষৰ ৩১ মাৰ্চলৈ সম্পূৰ্ণ কৰি\n          প্ৰদেশ কাৰ্যালয়লৈ প্ৰেৰণ কৰিছে/কৰা নাই (✓ চিন দিব ) ।\n        "
+                )
+              ]),
+              _vm._v(" "),
+              _c("p", { staticClass: "mt-2 mr-2" }, [
+                _vm._v("যদি কৰা নাই কোন চনলৈ পঠাইছে লিখিব")
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.step6.ten,
+                    expression: "step6.ten"
+                  },
+                  {
+                    name: "validate",
+                    rawName: "v-validate",
+                    value: "required",
+                    expression: "'required'"
+                  }
+                ],
+                staticClass: "form-control col-2 mr-2",
+                attrs: {
+                  type: "text",
+                  name: "ten",
+                  placeholder: "অধিকতম মানধন "
+                },
+                domProps: { value: _vm.step6.ten },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.step6, "ten", $event.target.value)
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  directives: [
+                    {
+                      name: "show",
+                      rawName: "v-show",
+                      value: _vm.errors.has("step6.ten"),
+                      expression: "errors.has('step6.ten')"
+                    }
+                  ],
+                  staticClass: "text-danger"
+                },
+                [
+                  _vm._v(
+                    "\n          " +
+                      _vm._s(_vm.errors.first("step6.ten")) +
+                      "\n        "
+                  )
+                ]
+              ),
+              _vm._v(
+                "\n        নিকেতনৰ তথ্য আৰু হিচাব-নিকাচ চাৰ্টাড অকাউন্টটেণ্টৰ (C/A) দ্বাৰা আৰু\n        কম্পিউটাৰৰ যোগেদি কৰা হয়/নহয় (✓ চিন দিব )\n      "
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "p-2 row" }, [
+              _c("p", { staticClass: "mt-2 mr-2" }, [
+                _vm._v(
+                  "\n          (ঙ) নিকেতনৰ বেংক একাউণ্ট নম্বৰ আৰু বেংকৰ নাম (যিমানটা থাকে)\n        "
+                )
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.step6.eleven,
+                    expression: "step6.eleven"
+                  },
+                  {
+                    name: "validate",
+                    rawName: "v-validate",
+                    value: "required",
+                    expression: "'required'"
+                  }
+                ],
+                staticClass: "form-control col-1 mr-2",
+                attrs: {
+                  type: "text",
+                  name: "eleven",
+                  placeholder: "অধিকতম মানধন "
+                },
+                domProps: { value: _vm.step6.eleven },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.step6, "eleven", $event.target.value)
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  directives: [
+                    {
+                      name: "show",
+                      rawName: "v-show",
+                      value: _vm.errors.has("step6.eleven"),
+                      expression: "errors.has('step6.eleven')"
+                    }
+                  ],
+                  staticClass: "text-danger"
+                },
+                [
+                  _vm._v(
+                    "\n          " +
+                      _vm._s(_vm.errors.first("step6.eleven")) +
+                      "\n        "
+                  )
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "p-2 row" }, [
+              _c("p", { staticClass: "mt-2 mr-2" }, [
+                _vm._v(
+                  "\n          (চ) ভবিষ্য নিধি - E. P. F. আছে/নাই । যদি আছে নম্বৰ দিব :\n        "
+                )
+              ]),
+              _vm._v(" "),
+              _c(
+                "select",
+                {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.step6.twelve,
+                      expression: "step6.twelve"
+                    },
+                    {
+                      name: "validate",
+                      rawName: "v-validate",
+                      value: "required",
+                      expression: "'required'"
+                    }
+                  ],
+                  staticClass: "custom-select col-2",
+                  attrs: { name: "twelve" },
+                  on: {
+                    change: function($event) {
+                      var $$selectedVal = Array.prototype.filter
+                        .call($event.target.options, function(o) {
+                          return o.selected
+                        })
+                        .map(function(o) {
+                          var val = "_value" in o ? o._value : o.value
+                          return val
+                        })
+                      _vm.$set(
+                        _vm.step6,
+                        "twelve",
+                        $event.target.multiple
+                          ? $$selectedVal
+                          : $$selectedVal[0]
+                      )
+                    }
+                  }
+                },
+                [
+                  _c("option", { attrs: { value: "আছে", selected: "" } }, [
+                    _vm._v("আছে")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "নাই" } }, [_vm._v("নাই")])
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  directives: [
+                    {
+                      name: "show",
+                      rawName: "v-show",
+                      value: _vm.errors.has("step6.twelve"),
+                      expression: "errors.has('step6.twelve')"
+                    }
+                  ],
+                  staticClass: "text-danger"
+                },
+                [
+                  _vm._v(
+                    "\n          " +
+                      _vm._s(_vm.errors.first("step6.twelve")) +
+                      "\n        "
+                  )
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "p-2 row" }, [
+              _c("p", { staticClass: "mt-2 mr-2" }, [
+                _vm._v(
+                  "\n          (জ) নিকেতনৰ আচাৰ্যসকল প্ৰান্তীয় আচাৰ্য কল্যান নিধিৰ সদস্য হয়নে ?\n        "
+                )
+              ]),
+              _vm._v(" "),
+              _c(
+                "select",
+                {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.step6.thirteen,
+                      expression: "step6.thirteen"
+                    },
+                    {
+                      name: "validate",
+                      rawName: "v-validate",
+                      value: "required",
+                      expression: "'required'"
+                    }
+                  ],
+                  staticClass: "custom-select col-2",
+                  attrs: { name: "thirteen" },
+                  on: {
+                    change: function($event) {
+                      var $$selectedVal = Array.prototype.filter
+                        .call($event.target.options, function(o) {
+                          return o.selected
+                        })
+                        .map(function(o) {
+                          var val = "_value" in o ? o._value : o.value
+                          return val
+                        })
+                      _vm.$set(
+                        _vm.step6,
+                        "thirteen",
+                        $event.target.multiple
+                          ? $$selectedVal
+                          : $$selectedVal[0]
+                      )
+                    }
+                  }
+                },
+                [
+                  _c("option", { attrs: { value: "হয়", selected: "" } }, [
+                    _vm._v("হয়")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "নহয়" } }, [_vm._v("নহয়")])
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  directives: [
+                    {
+                      name: "show",
+                      rawName: "v-show",
+                      value: _vm.errors.has("step6.thirteen"),
+                      expression: "errors.has('step6.thirteen')"
+                    }
+                  ],
+                  staticClass: "text-danger"
+                },
+                [
+                  _vm._v(
+                    "\n          " +
+                      _vm._s(_vm.errors.first("step6.thirteen")) +
+                      "\n        "
+                  )
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _vm._m(15),
+            _vm._v(" "),
+            _c("div", { staticClass: "d-flex flex-row-reverse" }, [
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-outline-secondary",
+                  attrs: { type: "button" },
+                  on: {
+                    click: function($event) {
+                      return _vm.goPrev()
+                    }
+                  }
+                },
+                [_vm._v("\n          Back\n        ")]
+              )
+            ]),
+            _vm._v(" "),
+            _vm._m(16)
+          ]
+        )
+      : _vm._e(),
+    _vm._v(" "),
+    _vm.steps === 7
+      ? _c(
+          "form",
+          {
+            staticClass: "form-horizontal",
+            attrs: { "data-vv-scope": "step7" },
+            on: {
+              submit: function($event) {
+                $event.preventDefault()
+                return _vm.validateStepForm("step7")
+              }
+            }
+          },
+          [
+            _c("div", { staticClass: "p-2 row" }, [
+              _c("p", { staticClass: "mt-2 mr-2" }),
+              _vm._v("\n    ৫। (ক) প্রধানাচাৰ্য/ভাৰপ্ৰাপ্ত প্রধানাচাৰ্যৰ নাম "),
+              _c("p"),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.step7.one,
+                    expression: "step7.one"
+                  },
+                  {
+                    name: "validate",
+                    rawName: "v-validate",
+                    value: "required",
+                    expression: "'required'"
+                  }
+                ],
+                staticClass: "form-control col-2 mr-2",
+                attrs: { type: "text", name: "one", placeholder: "" },
+                domProps: { value: _vm.step7.one },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.step7, "one", $event.target.value)
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  directives: [
+                    {
+                      name: "show",
+                      rawName: "v-show",
+                      value: _vm.errors.has("step7.one"),
+                      expression: "errors.has('step7.one')"
+                    }
+                  ],
+                  staticClass: "text-danger"
+                },
+                [
+                  _vm._v(
+                    "\n          " +
+                      _vm._s(_vm.errors.first("step7.one")) +
+                      "\n        "
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c("p", { staticClass: "mt-2 mr-2" }, [
+                _vm._v("\n        স্থানীয় সমিতিৰ পৰা পোৱা নিযুক্তিৰ তাৰিখ ")
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.step7.two,
+                    expression: "step7.two"
+                  },
+                  {
+                    name: "validate",
+                    rawName: "v-validate",
+                    value: "required",
+                    expression: "'required'"
+                  }
+                ],
+                staticClass: "form-control col-2 mr-2",
+                attrs: { type: "text", name: "two", placeholder: "" },
+                domProps: { value: _vm.step7.two },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.step7, "two", $event.target.value)
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  directives: [
+                    {
+                      name: "show",
+                      rawName: "v-show",
+                      value: _vm.errors.has("step7.two"),
+                      expression: "errors.has('step7.two')"
+                    }
+                  ],
+                  staticClass: "text-danger"
+                },
+                [
+                  _vm._v(
+                    "\n          " +
+                      _vm._s(_vm.errors.first("step7.two")) +
+                      "\n        "
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c("p", { staticClass: "mt-2 mr-2" }, [
+                _vm._v(
+                  "\n        শিশু শিক্ষা সমিতি, অসমৰ পৰা পোৱা নিযুক্তিৰ তাৰিখ"
+                )
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.step7.three,
+                    expression: "step7.three"
+                  },
+                  {
+                    name: "validate",
+                    rawName: "v-validate",
+                    value: "required",
+                    expression: "'required'"
+                  }
+                ],
+                staticClass: "form-control col-2 mr-2",
+                attrs: { type: "text", name: "three", placeholder: "" },
+                domProps: { value: _vm.step7.three },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.step7, "three", $event.target.value)
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  directives: [
+                    {
+                      name: "show",
+                      rawName: "v-show",
+                      value: _vm.errors.has("step7.three"),
+                      expression: "errors.has('step7.three')"
+                    }
+                  ],
+                  staticClass: "text-danger"
+                },
+                [
+                  _vm._v(
+                    "\n          " +
+                      _vm._s(_vm.errors.first("step7.three")) +
+                      "\n        "
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c("p", { staticClass: "mt-2 mr-2" }, [
+                _vm._v(
+                  "প্রধানাচাৰ্য স্থায়ী/অস্থায়ী/ভাৰপ্ৰাপ্ত (✓ চিন দিব )। উপ-প্ৰধানাচাৰ্যৰ নাম (যদি আছে) : "
+                )
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.step7.four,
+                    expression: "step7.four"
+                  },
+                  {
+                    name: "validate",
+                    rawName: "v-validate",
+                    value: "required",
+                    expression: "'required'"
+                  }
+                ],
+                staticClass: "form-control col-2 mr-2",
+                attrs: { type: "text", name: "four", placeholder: "" },
+                domProps: { value: _vm.step7.four },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.step7, "four", $event.target.value)
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  directives: [
+                    {
+                      name: "show",
+                      rawName: "v-show",
+                      value: _vm.errors.has("step7.four"),
+                      expression: "errors.has('step7.four')"
+                    }
+                  ],
+                  staticClass: "text-danger"
+                },
+                [
+                  _vm._v(
+                    "\n          " +
+                      _vm._s(_vm.errors.first("step7.four")) +
+                      "\n        "
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c("p", { staticClass: "mt-2 mr-2" }, [
+                _vm._v("প্রধানাচাৰ্য প্ৰশিক্ষণ লোৱা চন ")
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.step7.five,
+                    expression: "step7.five"
+                  },
+                  {
+                    name: "validate",
+                    rawName: "v-validate",
+                    value: "required",
+                    expression: "'required'"
+                  }
+                ],
+                staticClass: "form-control col-2 mr-2",
+                attrs: { type: "text", name: "five", placeholder: "" },
+                domProps: { value: _vm.step7.five },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.step7, "five", $event.target.value)
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  directives: [
+                    {
+                      name: "show",
+                      rawName: "v-show",
+                      value: _vm.errors.has("step7.five"),
+                      expression: "errors.has('step7.five')"
+                    }
+                  ],
+                  staticClass: "text-danger"
+                },
+                [
+                  _vm._v(
+                    "\n          " +
+                      _vm._s(_vm.errors.first("step7.five")) +
+                      "\n        "
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c("p", { staticClass: "mt-2 mr-2" }, [
+                _vm._v("নিযুক্তি স্থায়ী/অস্থায়ী (✓ চিন দিব )।")
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "p-2 row" }, [
+              _c("p", { staticClass: "mt-2 mr-2" }, [
+                _vm._v("(৬) (ক) নিকেতনৰ মাটিৰ পৰিমাণ")
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.step7.six,
+                    expression: "step7.six"
+                  },
+                  {
+                    name: "validate",
+                    rawName: "v-validate",
+                    value: "required",
+                    expression: "'required'"
+                  }
+                ],
+                staticClass: "form-control col-2 mr-2",
+                attrs: { type: "text", name: "six", placeholder: "" },
+                domProps: { value: _vm.step7.six },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.step7, "six", $event.target.value)
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  directives: [
+                    {
+                      name: "show",
+                      rawName: "v-show",
+                      value: _vm.errors.has("step7.six"),
+                      expression: "errors.has('step7.six')"
+                    }
+                  ],
+                  staticClass: "text-danger"
+                },
+                [
+                  _vm._v(
+                    "\n          " +
+                      _vm._s(_vm.errors.first("step7.six")) +
+                      "\n        "
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c("p", { staticClass: "mt-2 mr-2" }, [
+                _vm._v(
+                  "মাটি নিজৰ হয় / নহয় । (ম্যাদী/চৰকাৰী/দখল) নিকেতনৰ ভৱন পকা/অৰ্দ্ধ পকা/ অস্থায়ী (✓ চিন দিব )।"
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "p-2 row" }, [
+              _c("p", { staticClass: "mt-2 mr-2" }, [_vm._v("(খ) নিকেতনখন")]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.step7.seven,
+                    expression: "step7.seven"
+                  },
+                  {
+                    name: "validate",
+                    rawName: "v-validate",
+                    value: "required",
+                    expression: "'required'"
+                  }
+                ],
+                staticClass: "form-control col-2 mr-2",
+                attrs: { type: "text", name: "seven", placeholder: "" },
+                domProps: { value: _vm.step7.seven },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.step7, "seven", $event.target.value)
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  directives: [
+                    {
+                      name: "show",
+                      rawName: "v-show",
+                      value: _vm.errors.has("step7.seven"),
+                      expression: "errors.has('step7.seven')"
+                    }
+                  ],
+                  staticClass: "text-danger"
+                },
+                [
+                  _vm._v(
+                    "\n          " +
+                      _vm._s(_vm.errors.first("step7.seven")) +
+                      "\n        "
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c("p", { staticClass: "mt-2 mr-2" }, [_vm._v("পঞ্চায়ত,")]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.step7.eight,
+                    expression: "step7.eight"
+                  },
+                  {
+                    name: "validate",
+                    rawName: "v-validate",
+                    value: "required",
+                    expression: "'required'"
+                  }
+                ],
+                staticClass: "form-control col-2 mr-2",
+                attrs: { type: "text", name: "eight", placeholder: "" },
+                domProps: { value: _vm.step7.eight },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.step7, "eight", $event.target.value)
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  directives: [
+                    {
+                      name: "show",
+                      rawName: "v-show",
+                      value: _vm.errors.has("step7.eight"),
+                      expression: "errors.has('step7.eight')"
+                    }
+                  ],
+                  staticClass: "text-danger"
+                },
+                [
+                  _vm._v(
+                    "\n          " +
+                      _vm._s(_vm.errors.first("step7.eight")) +
+                      "\n        "
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c("p", { staticClass: "mt-2 mr-2" }, [
+                _vm._v("উন্নয়ন খণ্ড (ব্লক)ত")
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.step7.nine,
+                    expression: "step7.nine"
+                  },
+                  {
+                    name: "validate",
+                    rawName: "v-validate",
+                    value: "required",
+                    expression: "'required'"
+                  }
+                ],
+                staticClass: "form-control col-2 mr-2",
+                attrs: { type: "text", name: "nine", placeholder: "" },
+                domProps: { value: _vm.step7.nine },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.step7, "nine", $event.target.value)
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  directives: [
+                    {
+                      name: "show",
+                      rawName: "v-show",
+                      value: _vm.errors.has("step7.nine"),
+                      expression: "errors.has('step7.nine')"
+                    }
+                  ],
+                  staticClass: "text-danger"
+                },
+                [
+                  _vm._v(
+                    "\n          " +
+                      _vm._s(_vm.errors.first("step7.nine")) +
+                      "\n        "
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c("p", { staticClass: "mt-2 mr-2" }, [
+                _vm._v("মহকুমাত অৱস্থিত ।")
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "p-2 row" }, [
+              _c("p", { staticClass: "mt-2 mr-2" }, [
+                _vm._v("(গ) পুথিভঁৰাল ব্যৱস্থা : অধ্যয়ন কক্ষ")
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.step7.ten,
+                    expression: "step7.ten"
+                  },
+                  {
+                    name: "validate",
+                    rawName: "v-validate",
+                    value: "required",
+                    expression: "'required'"
+                  }
+                ],
+                staticClass: "form-control col-2 mr-2",
+                attrs: { type: "text", name: "ten", placeholder: "" },
+                domProps: { value: _vm.step7.ten },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.step7, "ten", $event.target.value)
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  directives: [
+                    {
+                      name: "show",
+                      rawName: "v-show",
+                      value: _vm.errors.has("step7.ten"),
+                      expression: "errors.has('step7.ten')"
+                    }
+                  ],
+                  staticClass: "text-danger"
+                },
+                [
+                  _vm._v(
+                    "\n          " +
+                      _vm._s(_vm.errors.first("step7.ten")) +
+                      "\n        "
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c("p", { staticClass: "mt-2 mr-2" }, [
+                _vm._v("টা /আলমাৰী সংখ্যা")
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.step7.eleven,
+                    expression: "step7.eleven"
+                  },
+                  {
+                    name: "validate",
+                    rawName: "v-validate",
+                    value: "required",
+                    expression: "'required'"
+                  }
+                ],
+                staticClass: "form-control col-2 mr-2",
+                attrs: { type: "text", name: "eleven", placeholder: "" },
+                domProps: { value: _vm.step7.eleven },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.step7, "eleven", $event.target.value)
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  directives: [
+                    {
+                      name: "show",
+                      rawName: "v-show",
+                      value: _vm.errors.has("step7.eleven"),
+                      expression: "errors.has('step7.eleven')"
+                    }
+                  ],
+                  staticClass: "text-danger"
+                },
+                [
+                  _vm._v(
+                    "\n          " +
+                      _vm._s(_vm.errors.first("step7.eleven")) +
+                      "\n        "
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c("p", { staticClass: "mt-2 mr-2" }, [
+                _vm._v("টা/কিতাবৰ সংখ্যা")
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.step7.twelve,
+                    expression: "step7.twelve"
+                  },
+                  {
+                    name: "validate",
+                    rawName: "v-validate",
+                    value: "required",
+                    expression: "'required'"
+                  }
+                ],
+                staticClass: "form-control col-2 mr-2",
+                attrs: { type: "text", name: "twelve", placeholder: "" },
+                domProps: { value: _vm.step7.twelve },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.step7, "twelve", $event.target.value)
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  directives: [
+                    {
+                      name: "show",
+                      rawName: "v-show",
+                      value: _vm.errors.has("step7.twelve"),
+                      expression: "errors.has('step7.twelve')"
+                    }
+                  ],
+                  staticClass: "text-danger"
+                },
+                [
+                  _vm._v(
+                    "\n          " +
+                      _vm._s(_vm.errors.first("step7.twelve")) +
+                      "\n        "
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c("p", { staticClass: "mt-2 mr-2" }, [
+                _vm._v(
+                  "খন । পঞ্জীয়ন বহীত কিতাব কিতাবসমূহ পঞ্জীয়ন কৰা হয়/নহয় । (✓ চিন দিব )"
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _vm._m(17),
+            _vm._v(" "),
+            _c("div", { staticClass: "p-2 row" }, [
+              _c("p", { staticClass: "mt-2 mr-2" }, [
+                _vm._v(
+                  "(ঙ) খেলপথাৰ আছে/নাই । (✓ চিন দিব ) যদি নাই, কি ধৰণৰ ব্যবস্থা আছে"
+                )
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.step7.thirteen,
+                    expression: "step7.thirteen"
+                  },
+                  {
+                    name: "validate",
+                    rawName: "v-validate",
+                    value: "required",
+                    expression: "'required'"
+                  }
+                ],
+                staticClass: "form-control col-2 mr-2",
+                attrs: { type: "text", name: "thirteen", placeholder: "" },
+                domProps: { value: _vm.step7.thirteen },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.step7, "thirteen", $event.target.value)
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  directives: [
+                    {
+                      name: "show",
+                      rawName: "v-show",
+                      value: _vm.errors.has("step7.thirteen"),
+                      expression: "errors.has('step7.thirteen')"
+                    }
+                  ],
+                  staticClass: "text-danger"
+                },
+                [
+                  _vm._v(
+                    "\n          " +
+                      _vm._s(_vm.errors.first("step7.thirteen")) +
+                      "\n        "
+                  )
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "p-2 row" }, [
+              _c("p", { staticClass: "mt-2 mr-2" }, [
+                _vm._v(
+                  "(চ) উপযুক্ত প্ৰাৰ্থনা গৃহ আছে/নাই (✓ চিন দিব ) (যদি নাই সোনকালে ব্যবস্থা কৰিব) । প্ৰথনা বিদ্যা\n        ভাৰতীয় ক্ৰম অনুসৰি হয়/নহয় (✓ চিন দিব )\n        । বহি প্ৰাৰ্থনা হয়নে ?"
+                )
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.step7.fourteen,
+                    expression: "step7.fourteen"
+                  },
+                  {
+                    name: "validate",
+                    rawName: "v-validate",
+                    value: "required",
+                    expression: "'required'"
+                  }
+                ],
+                staticClass: "form-control col-2 mr-2",
+                attrs: { type: "text", name: "fourteen", placeholder: "" },
+                domProps: { value: _vm.step7.fourteen },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.step7, "fourteen", $event.target.value)
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  directives: [
+                    {
+                      name: "show",
+                      rawName: "v-show",
+                      value: _vm.errors.has("step7.fourteen"),
+                      expression: "errors.has('step7.fourteen')"
+                    }
+                  ],
+                  staticClass: "text-danger"
+                },
+                [
+                  _vm._v(
+                    "\n          " +
+                      _vm._s(_vm.errors.first("step7.fourteen")) +
+                      "\n        "
+                  )
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "d-flex flex-row-reverse" }, [
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-outline-secondary",
+                  attrs: { type: "button" },
+                  on: {
+                    click: function($event) {
+                      return _vm.goPrev()
+                    }
+                  }
+                },
+                [_vm._v("\n          Back\n        ")]
+              )
+            ]),
+            _vm._v(" "),
+            _vm._m(18)
+          ]
+        )
+      : _vm._e(),
+    _vm._v(" "),
+    _vm.steps === 8
+      ? _c(
+          "form",
+          {
+            staticClass: "form-horizontal",
+            attrs: { "data-vv-scope": "step8" },
+            on: {
+              submit: function($event) {
+                $event.preventDefault()
+                return _vm.validateStepForm("step8")
+              }
+            }
+          },
+          [
+            _vm._m(19),
+            _vm._v(" "),
+            _c("div", { staticClass: "p-2 row" }, [
+              _c("p", { staticClass: "mt-2 mr-2" }, [
+                _vm._v("৭ । (ক) পঞ্জীয়নৰ বাবে চৰকাৰৰ সৈতে হোৱা যোগাযোগ")
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.step8.one,
+                    expression: "step8.one"
+                  },
+                  {
+                    name: "validate",
+                    rawName: "v-validate",
+                    value: "required",
+                    expression: "'required'"
+                  }
+                ],
+                staticClass: "form-control col-2 mr-2",
+                attrs: { type: "text", name: "one", placeholder: "" },
+                domProps: { value: _vm.step8.one },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.step8, "one", $event.target.value)
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  directives: [
+                    {
+                      name: "show",
+                      rawName: "v-show",
+                      value: _vm.errors.has("step8.one"),
+                      expression: "errors.has('step8.one')"
+                    }
+                  ],
+                  staticClass: "text-danger"
+                },
+                [
+                  _vm._v(
+                    "\n          " +
+                      _vm._s(_vm.errors.first("step8.one")) +
+                      "\n        "
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c("p", { staticClass: "mt-2 mr-2" }, [
+                _vm._v(
+                  "\n          (ক) আবেদন কৰিছে (খ) নিকেতন খোলাৰ অনুমতি হৈছে (গ) যদি চৰকাৰী পঞ্জীভূক্ত\n          হৈছে, পঞ্জীয়ন নম্বৰ দিব\n        "
+                )
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.step8.two,
+                    expression: "step8.two"
+                  },
+                  {
+                    name: "validate",
+                    rawName: "v-validate",
+                    value: "required",
+                    expression: "'required'"
+                  }
+                ],
+                staticClass: "form-control col-2 mr-2",
+                attrs: { type: "text", name: "two", placeholder: "" },
+                domProps: { value: _vm.step8.two },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.step8, "two", $event.target.value)
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  directives: [
+                    {
+                      name: "show",
+                      rawName: "v-show",
+                      value: _vm.errors.has("step8.two"),
+                      expression: "errors.has('step8.two')"
+                    }
+                  ],
+                  staticClass: "text-danger"
+                },
+                [
+                  _vm._v(
+                    "\n          " +
+                      _vm._s(_vm.errors.first("step8.two")) +
+                      "\n        "
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c("p", { staticClass: "mt-2 mr-2" }, [
+                _vm._v(
+                  "\n          (ঘ) কোনো ধৰণৰ যোগাযোগ হোৱা নাই । সেৱাৰ কড নম্বৰ দিব\n        "
+                )
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.step8.three,
+                    expression: "step8.three"
+                  },
+                  {
+                    name: "validate",
+                    rawName: "v-validate",
+                    value: "required",
+                    expression: "'required'"
+                  }
+                ],
+                staticClass: "form-control col-2 mr-2",
+                attrs: { type: "text", name: "three", placeholder: "3" },
+                domProps: { value: _vm.step8.three },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.step8, "three", $event.target.value)
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  directives: [
+                    {
+                      name: "show",
+                      rawName: "v-show",
+                      value: _vm.errors.has("step8.three"),
+                      expression: "errors.has('step8.three')"
+                    }
+                  ],
+                  staticClass: "text-danger"
+                },
+                [
+                  _vm._v(
+                    "\n          " +
+                      _vm._s(_vm.errors.first("step8.three")) +
+                      "\n        "
+                  )
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "p-2 row" }, [
+              _c("p", { staticClass: "mt-2 mr-2" }, [
+                _vm._v("৭ । (ক) পঞ্জীয়নৰ বাবে চৰকাৰৰ সৈতে হোৱা যোগাযোগ")
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.step8.four,
+                    expression: "step8.four"
+                  },
+                  {
+                    name: "validate",
+                    rawName: "v-validate",
+                    value: "required",
+                    expression: "'required'"
+                  }
+                ],
+                staticClass: "form-control col-2 mr-2",
+                attrs: { type: "text", name: "four", placeholder: "3" },
+                domProps: { value: _vm.step8.four },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.step8, "four", $event.target.value)
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  directives: [
+                    {
+                      name: "show",
+                      rawName: "v-show",
+                      value: _vm.errors.has("step8.four"),
+                      expression: "errors.has('step8.four')"
+                    }
+                  ],
+                  staticClass: "text-danger"
+                },
+                [
+                  _vm._v(
+                    "\n          " +
+                      _vm._s(_vm.errors.first("step8.four")) +
+                      "\n        "
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c("p", { staticClass: "mt-2 mr-2" }, [
+                _vm._v(
+                  "\n          (ক) আবেদন কৰিছে (খ) নিকেতন খোলাৰ অনুমতি হৈছে (গ) যদি চৰকাৰী পঞ্জীভূক্ত\n          হৈছে, পঞ্জীয়ন নম্বৰ দিব\n        "
+                )
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.step8.five,
+                    expression: "step8.five"
+                  },
+                  {
+                    name: "validate",
+                    rawName: "v-validate",
+                    value: "required",
+                    expression: "'required'"
+                  }
+                ],
+                staticClass: "form-control col-2 mr-2",
+                attrs: { type: "text", name: "five", placeholder: "3" },
+                domProps: { value: _vm.step8.five },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.step8, "five", $event.target.value)
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  directives: [
+                    {
+                      name: "show",
+                      rawName: "v-show",
+                      value: _vm.errors.has("step8.five"),
+                      expression: "errors.has('step8.five')"
+                    }
+                  ],
+                  staticClass: "text-danger"
+                },
+                [
+                  _vm._v(
+                    "\n          " +
+                      _vm._s(_vm.errors.first("step8.five")) +
+                      "\n        "
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c("p", { staticClass: "mt-2 mr-2" }, [
+                _vm._v(
+                  "\n          (ঘ) কোনো ধৰণৰ যোগাযোগ হোৱা নাই । সেৱাৰ কড নম্বৰ দিব\n        "
+                )
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.step8.six,
+                    expression: "step8.six"
+                  },
+                  {
+                    name: "validate",
+                    rawName: "v-validate",
+                    value: "required",
+                    expression: "'required'"
+                  }
+                ],
+                staticClass: "form-control col-2 mr-2",
+                attrs: { type: "text", name: "six", placeholder: "3" },
+                domProps: { value: _vm.step8.six },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.step8, "six", $event.target.value)
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  directives: [
+                    {
+                      name: "show",
+                      rawName: "v-show",
+                      value: _vm.errors.has("step8.six"),
+                      expression: "errors.has('step8.six')"
+                    }
+                  ],
+                  staticClass: "text-danger"
+                },
+                [
+                  _vm._v(
+                    "\n          " +
+                      _vm._s(_vm.errors.first("step8.six")) +
+                      "\n        "
+                  )
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "p-2 row" }, [
+              _c("p", { staticClass: "mt-2 mr-2" }, [
+                _vm._v(
+                  "\n          (খ) শিশু শিক্ষা সমিতি, অসমৰ অন্তৰ্ভুক্তৰ পঞ্জীয়ন নম্বৰ দিব\n        "
+                )
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.step8.seven,
+                    expression: "step8.seven"
+                  },
+                  {
+                    name: "validate",
+                    rawName: "v-validate",
+                    value: "required",
+                    expression: "'required'"
+                  }
+                ],
+                staticClass: "form-control col-2 mr-2",
+                attrs: { type: "text", name: "seven", placeholder: "3" },
+                domProps: { value: _vm.step8.seven },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.step8, "seven", $event.target.value)
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  directives: [
+                    {
+                      name: "show",
+                      rawName: "v-show",
+                      value: _vm.errors.has("step8.seven"),
+                      expression: "errors.has('step8.seven')"
+                    }
+                  ],
+                  staticClass: "text-danger"
+                },
+                [
+                  _vm._v(
+                    "\n          " +
+                      _vm._s(_vm.errors.first("step8.seven")) +
+                      "\n        "
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c("p", { staticClass: "mt-2 mr-2" }, [
+                _vm._v(
+                  "\n          (যদি নাই অতি সোনকালে মূল প্ৰমাণ পত্ৰ সহ পঞ্জীয়ন নম্বৰ লব )\n        "
+                )
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "p-2 row" }, [
+              _c("p", { staticClass: "mt-2 mr-2" }, [
+                _vm._v(
+                  "\n          (গ) ষষ্ঠ শ্ৰেণীৰ‍ পৰা অষ্টম শ্ৰেণীলৈ সমিতিৰ উচ্চ মাধ্যমিক বিদ্যালয়\n          উপ-সমিতিৰ পৰা অনুমোদন পোৱা চন\n        "
+                )
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.step8.eight,
+                    expression: "step8.eight"
+                  },
+                  {
+                    name: "validate",
+                    rawName: "v-validate",
+                    value: "required",
+                    expression: "'required'"
+                  }
+                ],
+                staticClass: "form-control col-2 mr-2",
+                attrs: { type: "text", name: "eight", placeholder: "3" },
+                domProps: { value: _vm.step8.eight },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.step8, "eight", $event.target.value)
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  directives: [
+                    {
+                      name: "show",
+                      rawName: "v-show",
+                      value: _vm.errors.has("step8.eight"),
+                      expression: "errors.has('step8.eight')"
+                    }
+                  ],
+                  staticClass: "text-danger"
+                },
+                [
+                  _vm._v(
+                    "\n          " +
+                      _vm._s(_vm.errors.first("step8.eight")) +
+                      "\n        "
+                  )
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "p-2 row" }, [
+              _c("p", { staticClass: "mt-2 mr-2" }, [
+                _vm._v(
+                  "\n          (ঘ) নৱম আৰু দশম শ্ৰেণীৰ‍ বাবে সমিতিৰ উচ্চ মাধ্যমিক বিদ্যালয় উপ-সমিতিৰ\n          পৰা অনুমোদন পোৱা চন\n        "
+                )
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.step8.nine,
+                    expression: "step8.nine"
+                  },
+                  {
+                    name: "validate",
+                    rawName: "v-validate",
+                    value: "required",
+                    expression: "'required'"
+                  }
+                ],
+                staticClass: "form-control col-2 mr-2",
+                attrs: { type: "text", name: "nine", placeholder: "3" },
+                domProps: { value: _vm.step8.nine },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.step8, "nine", $event.target.value)
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  directives: [
+                    {
+                      name: "show",
+                      rawName: "v-show",
+                      value: _vm.errors.has("step8.nine"),
+                      expression: "errors.has('step8.nine')"
+                    }
+                  ],
+                  staticClass: "text-danger"
+                },
+                [
+                  _vm._v(
+                    "\n          " +
+                      _vm._s(_vm.errors.first("step8.nine")) +
+                      "\n        "
+                  )
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "p-2 row" }, [
+              _c("p", { staticClass: "mt-2 mr-2" }, [
+                _vm._v(
+                  "\n          ৮ । (ক) বালিকা শিক্ষাৰ কালাংখ নিমনীয়া ভাবে হৈ আছে/নাই ।\n        "
+                )
+              ]),
+              _vm._v(" "),
+              _c(
+                "select",
+                {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.step8.ten,
+                      expression: "step8.ten"
+                    },
+                    {
+                      name: "validate",
+                      rawName: "v-validate",
+                      value: "required",
+                      expression: "'required'"
+                    }
+                  ],
+                  staticClass: "custom-select col-2",
+                  attrs: { name: "ten" },
+                  on: {
+                    change: function($event) {
+                      var $$selectedVal = Array.prototype.filter
+                        .call($event.target.options, function(o) {
+                          return o.selected
+                        })
+                        .map(function(o) {
+                          var val = "_value" in o ? o._value : o.value
+                          return val
+                        })
+                      _vm.$set(
+                        _vm.step8,
+                        "ten",
+                        $event.target.multiple
+                          ? $$selectedVal
+                          : $$selectedVal[0]
+                      )
+                    }
+                  }
+                },
+                [
+                  _c("option", { attrs: { value: "আছে", selected: "" } }, [
+                    _vm._v("আছে")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "নাই" } }, [_vm._v("নাই")])
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  directives: [
+                    {
+                      name: "show",
+                      rawName: "v-show",
+                      value: _vm.errors.has("step8.ten"),
+                      expression: "errors.has('step8.ten')"
+                    }
+                  ],
+                  staticClass: "text-danger"
+                },
+                [
+                  _vm._v(
+                    "\n          " +
+                      _vm._s(_vm.errors.first("step8.ten")) +
+                      "\n        "
+                  )
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "p-2 row" }, [
+              _c("p", { staticClass: "mt-2 mr-2" }, [
+                _vm._v(
+                  "\n          (খ) পঞ্চপদী শিক্ষণ পদ্ধতিৰ আধাৰত সকলো আচাৰ্যই পাঠ যোজনা বনাই পাঠ দান\n          কৰে/নকৰে । যদি নকৰে কিয় নকৰে জনাব :\n        "
+                )
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.step8.eleven,
+                    expression: "step8.eleven"
+                  },
+                  {
+                    name: "validate",
+                    rawName: "v-validate",
+                    value: "required",
+                    expression: "'required'"
+                  }
+                ],
+                staticClass: "form-control col-2 mr-2",
+                attrs: { type: "text", name: "eleven", placeholder: "3" },
+                domProps: { value: _vm.step8.eleven },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.step8, "eleven", $event.target.value)
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  directives: [
+                    {
+                      name: "show",
+                      rawName: "v-show",
+                      value: _vm.errors.has("step8.eleven"),
+                      expression: "errors.has('step8.eleven')"
+                    }
+                  ],
+                  staticClass: "text-danger"
+                },
+                [
+                  _vm._v(
+                    "\n          " +
+                      _vm._s(_vm.errors.first("step8.eleven")) +
+                      "\n        "
+                  )
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "p-2 row" }, [
+              _c("p", { staticClass: "mt-2 mr-2" }, [
+                _vm._v(
+                  "\n          (গ) Spoken English অথবা Class ত English to English কোন কোন শ্ৰেণীত\n          কেইটাকৈ Class\n        "
+                )
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.step8.twelve,
+                    expression: "step8.twelve"
+                  },
+                  {
+                    name: "validate",
+                    rawName: "v-validate",
+                    value: "required",
+                    expression: "'required'"
+                  }
+                ],
+                staticClass: "form-control col-2 mr-2",
+                attrs: { type: "text", name: "twelve", placeholder: "3" },
+                domProps: { value: _vm.step8.twelve },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.step8, "twelve", $event.target.value)
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  directives: [
+                    {
+                      name: "show",
+                      rawName: "v-show",
+                      value: _vm.errors.has("step8.twelve"),
+                      expression: "errors.has('step8.twelve')"
+                    }
+                  ],
+                  staticClass: "text-danger"
+                },
+                [
+                  _vm._v(
+                    "\n          " +
+                      _vm._s(_vm.errors.first("step8.twelve")) +
+                      "\n        "
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c("p", { staticClass: "mt-2 mr-2" }, [_vm._v("হয় ।")])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "p-2 row" }, [
+              _c("p", { staticClass: "mt-2 mr-2" }, [
+                _vm._v("(ঘ) স্মাৰ্ট ক্লাছৰ ব্যবস্থা আছে/নাই ।")
+              ]),
+              _vm._v(" "),
+              _c(
+                "select",
+                {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.step8.thirteen,
+                      expression: "step8.thirteen"
+                    },
+                    {
+                      name: "validate",
+                      rawName: "v-validate",
+                      value: "required",
+                      expression: "'required'"
+                    }
+                  ],
+                  staticClass: "custom-select col-2",
+                  attrs: { name: "thirteen" },
+                  on: {
+                    change: function($event) {
+                      var $$selectedVal = Array.prototype.filter
+                        .call($event.target.options, function(o) {
+                          return o.selected
+                        })
+                        .map(function(o) {
+                          var val = "_value" in o ? o._value : o.value
+                          return val
+                        })
+                      _vm.$set(
+                        _vm.step8,
+                        "thirteen",
+                        $event.target.multiple
+                          ? $$selectedVal
+                          : $$selectedVal[0]
+                      )
+                    }
+                  }
+                },
+                [
+                  _c("option", { attrs: { value: "আছে", selected: "" } }, [
+                    _vm._v("আছে")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "নাই" } }, [_vm._v("নাই")])
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  directives: [
+                    {
+                      name: "show",
+                      rawName: "v-show",
+                      value: _vm.errors.has("step8.thirteen"),
+                      expression: "errors.has('step8.thirteen')"
+                    }
+                  ],
+                  staticClass: "text-danger"
+                },
+                [
+                  _vm._v(
+                    "\n          " +
+                      _vm._s(_vm.errors.first("step8.thirteen")) +
+                      "\n        "
+                  )
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "p-2 row" }, [
+              _c("p", { staticClass: "mt-2 mr-2" }, [
+                _vm._v(
+                  "\n          (ঙ) নিকেতনত শিশু বাটিকাৰ সুকীয়া ব্যবস্থা হৈছে/হোৱা নাই ।\n        "
+                )
+              ]),
+              _vm._v(" "),
+              _c(
+                "select",
+                {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.step8.fourteen,
+                      expression: "step8.fourteen"
+                    },
+                    {
+                      name: "validate",
+                      rawName: "v-validate",
+                      value: "required",
+                      expression: "'required'"
+                    }
+                  ],
+                  staticClass: "custom-select col-2",
+                  attrs: { name: "fourteen" },
+                  on: {
+                    change: function($event) {
+                      var $$selectedVal = Array.prototype.filter
+                        .call($event.target.options, function(o) {
+                          return o.selected
+                        })
+                        .map(function(o) {
+                          var val = "_value" in o ? o._value : o.value
+                          return val
+                        })
+                      _vm.$set(
+                        _vm.step8,
+                        "fourteen",
+                        $event.target.multiple
+                          ? $$selectedVal
+                          : $$selectedVal[0]
+                      )
+                    }
+                  }
+                },
+                [
+                  _c("option", { attrs: { selected: "", value: "হৈছে" } }, [
+                    _vm._v("হৈছে")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "হোৱা নাই" } }, [
+                    _vm._v("হোৱা নাই")
+                  ])
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  directives: [
+                    {
+                      name: "show",
+                      rawName: "v-show",
+                      value: _vm.errors.has("step8.fourteen"),
+                      expression: "errors.has('step8.fourteen')"
+                    }
+                  ],
+                  staticClass: "text-danger"
+                },
+                [
+                  _vm._v(
+                    "\n          " +
+                      _vm._s(_vm.errors.first("step8.fourteen")) +
+                      "\n        "
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c("p", { staticClass: "mt-2 mr-2" }, [
+                _vm._v("শিশু বাটিকা প্ৰমুখ নিযুক্তি দিছে/দিয়া নাই ।")
+              ]),
+              _vm._v(" "),
+              _c(
+                "select",
+                {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.step8.fiveteen,
+                      expression: "step8.fiveteen"
+                    },
+                    {
+                      name: "validate",
+                      rawName: "v-validate",
+                      value: "required",
+                      expression: "'required'"
+                    }
+                  ],
+                  staticClass: "custom-select col-2",
+                  attrs: { name: "fiveteen" },
+                  on: {
+                    change: function($event) {
+                      var $$selectedVal = Array.prototype.filter
+                        .call($event.target.options, function(o) {
+                          return o.selected
+                        })
+                        .map(function(o) {
+                          var val = "_value" in o ? o._value : o.value
+                          return val
+                        })
+                      _vm.$set(
+                        _vm.step8,
+                        "fiveteen",
+                        $event.target.multiple
+                          ? $$selectedVal
+                          : $$selectedVal[0]
+                      )
+                    }
+                  }
+                },
+                [
+                  _c("option", { attrs: { selected: "", value: "দিছে" } }, [
+                    _vm._v("দিছে")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "দিয়া নাই" } }, [
+                    _vm._v("দিয়া নাই")
+                  ])
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  directives: [
+                    {
+                      name: "show",
+                      rawName: "v-show",
+                      value: _vm.errors.has("step8.fiveteen"),
+                      expression: "errors.has('step8.fiveteen')"
+                    }
+                  ],
+                  staticClass: "text-danger"
+                },
+                [
+                  _vm._v(
+                    "\n          " +
+                      _vm._s(_vm.errors.first("step8.fiveteen")) +
+                      "\n        "
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c("p", { staticClass: "mt-2 mr-2" }, [
+                _vm._v(
+                  "\n          নিকেতন শিশু বাটিকা কোনটো ৰূপত আছে --- নমুনা ৰূপ/ প্ৰভাৱীৰূপ/পযত্নশীল\n          ৰূপ\n        "
+                )
+              ]),
+              _vm._v(" "),
+              _c(
+                "select",
+                {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.step8.sixteen,
+                      expression: "step8.sixteen"
+                    },
+                    {
+                      name: "validate",
+                      rawName: "v-validate",
+                      value: "required",
+                      expression: "'required'"
+                    }
+                  ],
+                  staticClass: "custom-select col-2",
+                  attrs: { name: "sixteen" },
+                  on: {
+                    change: function($event) {
+                      var $$selectedVal = Array.prototype.filter
+                        .call($event.target.options, function(o) {
+                          return o.selected
+                        })
+                        .map(function(o) {
+                          var val = "_value" in o ? o._value : o.value
+                          return val
+                        })
+                      _vm.$set(
+                        _vm.step8,
+                        "sixteen",
+                        $event.target.multiple
+                          ? $$selectedVal
+                          : $$selectedVal[0]
+                      )
+                    }
+                  }
+                },
+                [
+                  _c(
+                    "option",
+                    { attrs: { selected: "", value: "নমুনা ৰূপ" } },
+                    [_vm._v("নমুনা ৰূপ")]
+                  ),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "প্ৰভাৱীৰূপ" } }, [
+                    _vm._v("প্ৰভাৱীৰূপ")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "পযত্নশীল ৰূপ" } }, [
+                    _vm._v("পযত্নশীল ৰূপ")
+                  ])
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  directives: [
+                    {
+                      name: "show",
+                      rawName: "v-show",
+                      value: _vm.errors.has("step8.sixteen"),
+                      expression: "errors.has('step8.sixteen')"
+                    }
+                  ],
+                  staticClass: "text-danger"
+                },
+                [
+                  _vm._v(
+                    "\n          " +
+                      _vm._s(_vm.errors.first("step8.sixteen")) +
+                      "\n        "
+                  )
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "p-2 row" }, [
+              _c("p", { staticClass: "mt-2 mr-2" }, [
+                _vm._v("(চ) কম্পিউটাৰ শিক্ষা ব্যবস্থা আছে/নাই ।")
+              ]),
+              _vm._v(" "),
+              _c(
+                "select",
+                {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.step8.seventeen,
+                      expression: "step8.seventeen"
+                    },
+                    {
+                      name: "validate",
+                      rawName: "v-validate",
+                      value: "required",
+                      expression: "'required'"
+                    }
+                  ],
+                  staticClass: "custom-select col-2",
+                  attrs: { name: "seventeen" },
+                  on: {
+                    change: function($event) {
+                      var $$selectedVal = Array.prototype.filter
+                        .call($event.target.options, function(o) {
+                          return o.selected
+                        })
+                        .map(function(o) {
+                          var val = "_value" in o ? o._value : o.value
+                          return val
+                        })
+                      _vm.$set(
+                        _vm.step8,
+                        "seventeen",
+                        $event.target.multiple
+                          ? $$selectedVal
+                          : $$selectedVal[0]
+                      )
+                    }
+                  }
+                },
+                [
+                  _c("option", { attrs: { selected: "", value: "আছে" } }, [
+                    _vm._v("আছে")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "নাই" } }, [_vm._v("নাই")])
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  directives: [
+                    {
+                      name: "show",
+                      rawName: "v-show",
+                      value: _vm.errors.has("step8.seventeen"),
+                      expression: "errors.has('step8.seventeen')"
+                    }
+                  ],
+                  staticClass: "text-danger"
+                },
+                [
+                  _vm._v(
+                    "\n          " +
+                      _vm._s(_vm.errors.first("step8.seventeen")) +
+                      "\n        "
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c("p", { staticClass: "mt-2 mr-2" }, [
+                _vm._v("শিশু বাটিকা প্ৰমুখ নিযুক্তি দিছে/দিয়া নাই")
+              ]),
+              _vm._v(" "),
+              _c(
+                "select",
+                {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.step8.eighteen,
+                      expression: "step8.eighteen"
+                    },
+                    {
+                      name: "validate",
+                      rawName: "v-validate",
+                      value: "required",
+                      expression: "'required'"
+                    }
+                  ],
+                  staticClass: "custom-select col-2",
+                  attrs: { name: "eighteen" },
+                  on: {
+                    change: function($event) {
+                      var $$selectedVal = Array.prototype.filter
+                        .call($event.target.options, function(o) {
+                          return o.selected
+                        })
+                        .map(function(o) {
+                          var val = "_value" in o ? o._value : o.value
+                          return val
+                        })
+                      _vm.$set(
+                        _vm.step8,
+                        "eighteen",
+                        $event.target.multiple
+                          ? $$selectedVal
+                          : $$selectedVal[0]
+                      )
+                    }
+                  }
+                },
+                [
+                  _c("option", { attrs: { selected: "", value: "দিছে ।" } }, [
+                    _vm._v("দিছে ।")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "দিয়া নাই ।" } }, [
+                    _vm._v("দিয়া নাই ।")
+                  ])
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  directives: [
+                    {
+                      name: "show",
+                      rawName: "v-show",
+                      value: _vm.errors.has("step8.eighteen"),
+                      expression: "errors.has('step8.eighteen')"
+                    }
+                  ],
+                  staticClass: "text-danger"
+                },
+                [
+                  _vm._v(
+                    "\n          " +
+                      _vm._s(_vm.errors.first("step8.eighteen")) +
+                      "\n        "
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c("p", { staticClass: "mt-2 mr-2" }, [
+                _vm._v("যদি আছে কম্পিউটাৰ /লেপটপ (Laptop) কিমানতা")
+              ]),
+              _vm._v(" "),
+              _c("input", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.step8.nineteen,
+                    expression: "step8.nineteen"
+                  },
+                  {
+                    name: "validate",
+                    rawName: "v-validate",
+                    value: "required",
+                    expression: "'required'"
+                  }
+                ],
+                staticClass: "form-control col-2 mr-2",
+                attrs: { type: "text", name: "nineteen", placeholder: "3" },
+                domProps: { value: _vm.step8.nineteen },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.$set(_vm.step8, "nineteen", $event.target.value)
+                  }
+                }
+              }),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  directives: [
+                    {
+                      name: "show",
+                      rawName: "v-show",
+                      value: _vm.errors.has("step8.nineteen"),
+                      expression: "errors.has('step8.nineteen')"
+                    }
+                  ],
+                  staticClass: "text-danger"
+                },
+                [
+                  _vm._v(
+                    "\n          " +
+                      _vm._s(_vm.errors.first("step8.nineteen")) +
+                      "\n        "
+                  )
+                ]
+              ),
+              _vm._v(" "),
+              _c("p", { staticClass: "mt-2 mr-2" }, [
+                _vm._v("কম্পিউটাৰ বিষয়ৰ আচাৰ্য আছে/নাই ।")
+              ]),
+              _vm._v(" "),
+              _c(
+                "select",
+                {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.step8.twenty,
+                      expression: "step8.twenty"
+                    },
+                    {
+                      name: "validate",
+                      rawName: "v-validate",
+                      value: "required",
+                      expression: "'required'"
+                    }
+                  ],
+                  staticClass: "custom-select col-2",
+                  attrs: { name: "twenty" },
+                  on: {
+                    change: function($event) {
+                      var $$selectedVal = Array.prototype.filter
+                        .call($event.target.options, function(o) {
+                          return o.selected
+                        })
+                        .map(function(o) {
+                          var val = "_value" in o ? o._value : o.value
+                          return val
+                        })
+                      _vm.$set(
+                        _vm.step8,
+                        "twenty",
+                        $event.target.multiple
+                          ? $$selectedVal
+                          : $$selectedVal[0]
+                      )
+                    }
+                  }
+                },
+                [
+                  _c("option", { attrs: { selected: "", value: "আছে ।" } }, [
+                    _vm._v("আছে ।")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "নাই ।" } }, [_vm._v("নাই ।")])
+                ]
+              ),
+              _vm._v(" "),
+              _c(
+                "span",
+                {
+                  directives: [
+                    {
+                      name: "show",
+                      rawName: "v-show",
+                      value: _vm.errors.has("step8.twenty"),
+                      expression: "errors.has('step8.twenty')"
+                    }
+                  ],
+                  staticClass: "text-danger"
+                },
+                [
+                  _vm._v(
+                    "\n          " +
+                      _vm._s(_vm.errors.first("step8.twenty")) +
+                      "\n        "
+                  )
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _vm._m(20),
+            _vm._v(" "),
+            _c("div", { staticClass: "d-flex flex-row-reverse" }, [
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-outline-secondary",
+                  attrs: { type: "button" },
+                  on: {
+                    click: function($event) {
+                      return _vm.goPrev()
+                    }
+                  }
+                },
+                [_vm._v("\n          Back\n    ")]
+              )
+            ]),
+            _vm._v(" "),
+            _vm._m(21)
           ]
         )
       : _vm._e()
@@ -2709,38 +13764,9 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "p-2 row" }, [
-      _c("p", { staticClass: "mt-2 mr-2" }, [_vm._v("(ক)")]),
-      _vm._v(" "),
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v(
-          "\n        নিকেতনখন কত অৱস্থিত -- চহৰত/গাঁৱত/বনাঞ্চলত (✓ চিন দিব ) | নিকেতনলৈ\n        ছাত্র-ছাত্ৰী অহা গাঁৱৰ সংখ্যা\n    "
-        )
-      ]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "form-control col-1 mr-2",
-        attrs: { type: "text", placeholder: "নিকেতনখন ....." }
-      }),
-      _vm._v(" "),
-      _c("p", { staticClass: "mt-2 mr-2" }, [_vm._v("নগৰীয়া বস্তিৰ সংখ্যা")]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "form-control col-1 mr-2",
-        attrs: { type: "text", placeholder: "নগৰীয়া বস্তিৰ সংখ্যা" }
-      }),
-      _vm._v(" "),
-      _c("p", { staticClass: "mt-2 mr-2" }, [_vm._v("ৱাৰ্ডৰ সংখ্যা")]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "form-control col-1 mr-2",
-        attrs: { type: "text", placeholder: "ৱাৰ্ডৰ সংখ্যা" }
-      }),
-      _vm._v(" "),
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v(
-          "\n        গাঁৱৰ তালিকা বেলেগে সংলগ্ন কৰি গাঁৱৰ পৰা অহা ছাত্র-ছাত্ৰী সংখ্যা দিব |\n    "
-        )
+    return _c("div", { staticClass: "d-flex justify-content-center" }, [
+      _c("h5", { staticClass: "mb-0 h5" }, [
+        _vm._v("বিদ্যা ভাৰতী অখিল ভাৰতীয় শিক্ষা সংস্থানৰ সংবদ্ধ")
       ])
     ])
   },
@@ -2748,682 +13774,9 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col" }, [_vm._v("(খ) মাহিলী শিক্ষণ শুল্ক :")]),
-      _vm._v(" "),
-      _c(
-        "table",
-        { staticClass: "table col-8 table-responsive table-borderless" },
-        [
-          _c("tbody", [
-            _c("tr", [
-              _c("td", [_vm._v("অংকুৰ, মুকুল")]),
-              _vm._v(" "),
-              _c("td", [
-                _c("input", {
-                  staticClass: "form-control",
-                  attrs: { type: "text", placeholder: "  " }
-                })
-              ]),
-              _vm._v(" "),
-              _c("td", [_vm._v("১মৰ পৰা ৫ ম")]),
-              _vm._v(" "),
-              _c("td", [
-                _c("input", {
-                  staticClass: "form-control",
-                  attrs: { type: "text", placeholder: "  " }
-                })
-              ])
-            ]),
-            _vm._v(" "),
-            _c("tr", [
-              _c("td", [_vm._v("৬ষ্টৰ পৰা ৮ ম")]),
-              _vm._v(" "),
-              _c("td", [
-                _c("input", {
-                  staticClass: "form-control",
-                  attrs: { type: "text", placeholder: "  " }
-                })
-              ]),
-              _vm._v(" "),
-              _c("td", [_vm._v("৯ ম আৰু ১০ ম")]),
-              _vm._v(" "),
-              _c("td", [
-                _c("input", {
-                  staticClass: "form-control",
-                  attrs: { type: "text", placeholder: "  " }
-                })
-              ])
-            ])
-          ])
-        ]
-      )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "p-2 row" }, [
-      _c("p", { staticClass: "mt-2 mr-2" }, [_vm._v("(গ)")]),
-      _vm._v(" "),
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v("(১) আচাৰ্য/আচাৰ্জাৰ নুন্যতম মানধন")
-      ]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "form-control col-2 mr-2",
-        attrs: { type: "text", placeholder: "নুন্যতম মানধন.." }
-      }),
-      _vm._v(" "),
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v("(২) আচাৰ্য/আচাৰ্জাৰ অধিকতম মানধন")
-      ]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "form-control col-2 mr-2",
-        attrs: { type: "text", placeholder: "অধিকতম মানধন" }
-      })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "p-2 row" }, [
-      _c("p", { staticClass: "mt-2 mr-2" }, [_vm._v("(ঘ)")]),
-      _vm._v(" "),
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v(
-          "\n        নিকেতনৰ হিচাব পৰীক্ষকৰ প্ৰতিবেদন ২০১৯ বৰ্ষৰ ৩১ মাৰ্চলৈ সম্পূৰ্ণ কৰি\n        প্ৰদেশ কাৰ্যালয়লৈ প্ৰেৰণ কৰিছে/কৰা নাই (✓ চিন দিব ) ।\n    "
-        )
-      ]),
-      _vm._v(" "),
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v("যদি কৰা নাই কোন চনলৈ পঠাইছে লিখিব")
-      ]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "form-control col-2 mr-2",
-        attrs: { type: "text", placeholder: " " }
-      }),
-      _vm._v(
-        "নিকেতনৰ তথ্য আৰু হিচাব-নিকাচ চাৰ্টাড\n    অকাউন্টটেণ্টৰ (C/A) দ্বাৰা আৰু\n    কম্পিউটাৰৰ যোগেদি কৰা হয়/নহয় (✓ চিন দিব )\n"
-      )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "p-2 row" }, [
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v(
-          "\n        (ঙ) নিকেতনৰ বেংক একাউণ্ট নম্বৰ আৰু বেংকৰ নাম (যিমানটা থাকে)\n    "
-        )
-      ]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "form-control col-1 mr-2",
-        attrs: { type: "text", placeholder: " " }
-      })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "p-2 row" }, [
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v(
-          "\n        (চ) ভবিষ্য নিধি - E. P. F. আছে/নাই । যদি আছে নম্বৰ দিব :\n    "
-        )
-      ]),
-      _vm._v(" "),
-      _c("select", { staticClass: "custom-select col-2" }, [
-        _c("option", { attrs: { selected: "" } }, [_vm._v("আছে")]),
-        _vm._v(" "),
-        _c("option", { attrs: { value: "1" } }, [_vm._v("নাই")])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "p-2 row" }, [
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v(
-          "\n        (জ) নিকেতনৰ আচাৰ্যসকল প্ৰান্তীয় আচাৰ্য কল্যান নিধিৰ সদস্য হয়নে ?\n    "
-        )
-      ]),
-      _vm._v(" "),
-      _c("select", { staticClass: "custom-select col-2" }, [
-        _c("option", { attrs: { selected: "" } }, [_vm._v("হয়")]),
-        _vm._v(" "),
-        _c("option", { attrs: { value: "1" } }, [_vm._v("নহয়")])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "p-2 row" }, [
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v(
-          "\n        (ঝ) নিকেতনৰ আচাৰ্য/ আৰু কৰ্মচাৰীসকল কোনো স্থ্য স্বা বীমা/অটল অমৃত\n        কাৰ্ড / আয়ুষ্মান ভাৰত কাৰ্ড লৈছেনে নাই, যদি লোৱা নাই উপৰোক্ত আঁচনিৰ\n        আওতালৈ আনিব লাগে ।\n    "
-        )
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "p-2 row" }, [
-      _c("p", { staticClass: "mt-2 mr-2" }),
-      _vm._v("\n    ৫। (ক) প্রধানাচাৰ্য/ভাৰপ্ৰাপ্ত প্রধানাচাৰ্যৰ নাম "),
-      _c("p"),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "form-control col-2 mr-2",
-        attrs: { type: "text", placeholder: " " }
-      }),
-      _vm._v(" "),
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v("\n        স্থানীয় সমিতিৰ পৰা পোৱা নিযুক্তিৰ তাৰিখ ")
-      ]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "form-control col-2 mr-2",
-        attrs: { type: "text", placeholder: " " }
-      }),
-      _vm._v(" "),
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v("\n        শিশু শিক্ষা সমিতি, অসমৰ পৰা পোৱা নিযুক্তিৰ তাৰিখ")
-      ]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "form-control col-2 mr-2",
-        attrs: { type: "text", placeholder: " " }
-      }),
-      _vm._v(" "),
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v(
-          "প্রধানাচাৰ্য স্থায়ী/অস্থায়ী/ভাৰপ্ৰাপ্ত (✓ চিন দিব )। উপ-প্ৰধানাচাৰ্যৰ নাম (যদি আছে) : "
-        )
-      ]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "form-control col-2 mr-2",
-        attrs: { type: "text", placeholder: " " }
-      }),
-      _vm._v(" "),
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v("প্রধানাচাৰ্য প্ৰশিক্ষণ লোৱা চন ")
-      ]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "form-control col-2 mr-2",
-        attrs: { type: "text", placeholder: " " }
-      }),
-      _vm._v(" "),
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v("নিযুক্তি স্থায়ী/অস্থায়ী (✓ চিন দিব )।")
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "p-2 row" }, [
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v("(৬) (ক) নিকেতনৰ মাটিৰ পৰিমাণ")
-      ]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "form-control col-2 mr-2",
-        attrs: { type: "text", placeholder: " " }
-      }),
-      _vm._v(" "),
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v(
-          "মাটি নিজৰ হয় / নহয় । (ম্যাদী/চৰকাৰী/দখল) নিকেতনৰ ভৱন পকা/অৰ্দ্ধ পকা/ অস্থায়ী (✓ চিন দিব )।"
-        )
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "p-2 row" }, [
-      _c("p", { staticClass: "mt-2 mr-2" }, [_vm._v("(খ) নিকেতনখন")]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "form-control col-2 mr-2",
-        attrs: { type: "text", placeholder: " " }
-      }),
-      _vm._v(" "),
-      _c("p", { staticClass: "mt-2 mr-2" }, [_vm._v("পঞ্চায়ত,")]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "form-control col-2 mr-2",
-        attrs: { type: "text", placeholder: " " }
-      }),
-      _vm._v(" "),
-      _c("p", { staticClass: "mt-2 mr-2" }, [_vm._v("উন্নয়ন খণ্ড (ব্লক)ত")]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "form-control col-2 mr-2",
-        attrs: { type: "text", placeholder: " " }
-      }),
-      _vm._v(" "),
-      _c("p", { staticClass: "mt-2 mr-2" }, [_vm._v("মহকুমাত অৱস্থিত ।")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "p-2 row" }, [
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v("(গ) পুথিভঁৰাল ব্যৱস্থা : অধ্যয়ন কক্ষ")
-      ]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "form-control col-2 mr-2",
-        attrs: { type: "text", placeholder: " " }
-      }),
-      _vm._v(" "),
-      _c("p", { staticClass: "mt-2 mr-2" }, [_vm._v("টা /আলমাৰী সংখ্যা")]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "form-control col-2 mr-2",
-        attrs: { type: "text", placeholder: " " }
-      }),
-      _vm._v(" "),
-      _c("p", { staticClass: "mt-2 mr-2" }, [_vm._v("টা/কিতাবৰ সংখ্যা")]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "form-control col-2 mr-2",
-        attrs: { type: "text", placeholder: " " }
-      }),
-      _vm._v(" "),
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v(
-          "খন । পঞ্জীয়ন বহীত কিতাব কিতাবসমূহ পঞ্জীয়ন কৰা হয়/নহয় । (✓ চিন দিব )"
-        )
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "p-2 row" }, [
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v(
-          "(ঘ) বিজ্ঞানাগাৰৰ ব্যবস্থা আছে/নাই আৰু নিয়মিত ব্যৱহাৰ হয়/নহয় । (✓ চিন দিব )"
-        )
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "p-2 row" }, [
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v(
-          "(ঙ) খেলপথাৰ আছে/নাই । (✓ চিন দিব ) যদি নাই, কি ধৰণৰ ব্যবস্থা আছে"
-        )
-      ]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "form-control col-2 mr-2",
-        attrs: { type: "text", placeholder: " " }
-      })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "p-2 row" }, [
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v(
-          "(চ) উপযুক্ত প্ৰাৰ্থনা গৃহ আছে/নাই (✓ চিন দিব ) (যদি নাই সোনকালে ব্যবস্থা কৰিব) । প্ৰথনা বিদ্যা\n        ভাৰতীয় ক্ৰম অনুসৰি হয়/নহয় (✓ চিন দিব )\n        । বহি প্ৰাৰ্থনা হয়নে ?"
-        )
-      ]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "form-control col-2 mr-2",
-        attrs: { type: "text", placeholder: " " }
-      })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: " d-flex justify-content-center " }, [
-      _c("h5", { staticClass: "mb-0 h4 titleCentre" }, [
-        _vm._v(
-          "\n        নিম্নলিখিত কাৰ্যব্যবস্থা সমূহৰ আপোনাৰ নিকেতনৰ\n        ক্ষেত্ৰত যিটো প্ৰযোজ্য হয়\n        তাত (✓) চীন দিব ।\n    "
-        )
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "p-2 row" }, [
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v("৭ । (ক) পঞ্জীয়নৰ বাবে চৰকাৰৰ সৈতে হোৱা যোগাযোগ")
-      ]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "form-control col-2 mr-2",
-        attrs: { type: "text", placeholder: " " }
-      }),
-      _vm._v(" "),
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v(
-          "(ক) আবেদন কৰিছে (খ) নিকেতন খোলাৰ অনুমতি হৈছে (গ) যদি চৰকাৰী পঞ্জীভূক্ত হৈছে, পঞ্জীয়ন নম্বৰ দিব\n    "
-        )
-      ]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "form-control col-2 mr-2",
-        attrs: { type: "text", placeholder: " " }
-      }),
-      _vm._v(" "),
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v("(ঘ) কোনো ধৰণৰ যোগাযোগ হোৱা নাই । সেৱাৰ কড নম্বৰ দিব")
-      ]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "form-control col-2 mr-2",
-        attrs: { type: "text", placeholder: " " }
-      })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "p-2 row" }, [
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v("৭ । (ক) পঞ্জীয়নৰ বাবে চৰকাৰৰ সৈতে হোৱা যোগাযোগ")
-      ]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "form-control col-2 mr-2",
-        attrs: { type: "text", placeholder: " " }
-      }),
-      _vm._v(" "),
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v(
-          "(ক) আবেদন কৰিছে (খ) নিকেতন খোলাৰ অনুমতি হৈছে (গ) যদি চৰকাৰী পঞ্জীভূক্ত হৈছে, পঞ্জীয়ন নম্বৰ দিব\n    "
-        )
-      ]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "form-control col-2 mr-2",
-        attrs: { type: "text", placeholder: " " }
-      }),
-      _vm._v(" "),
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v("(ঘ) কোনো ধৰণৰ যোগাযোগ হোৱা নাই । সেৱাৰ কড নম্বৰ দিব")
-      ]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "form-control col-2 mr-2",
-        attrs: { type: "text", placeholder: " " }
-      })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "p-2 row" }, [
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v("(খ) শিশু শিক্ষা সমিতি, অসমৰ অন্তৰ্ভুক্তৰ পঞ্জীয়ন নম্বৰ দিব")
-      ]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "form-control col-2 mr-2",
-        attrs: { type: "text", placeholder: " " }
-      }),
-      _vm._v(" "),
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v("(যদি নাই অতি সোনকালে মূল প্ৰমাণ পত্ৰ সহ পঞ্জীয়ন নম্বৰ লব )")
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "p-2 row" }, [
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v(
-          "(গ) ষষ্ঠ শ্ৰেণীৰ‍ পৰা অষ্টম শ্ৰেণীলৈ সমিতিৰ উচ্চ মাধ্যমিক বিদ্যালয় উপ-সমিতিৰ পৰা অনুমোদন পোৱা\n        চন"
-        )
-      ]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "form-control col-2 mr-2",
-        attrs: { type: "text", placeholder: " " }
-      })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "p-2 row" }, [
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v(
-          "(ঘ) নৱম আৰু দশম শ্ৰেণীৰ‍ বাবে সমিতিৰ উচ্চ মাধ্যমিক বিদ্যালয় উপ-সমিতিৰ পৰা অনুমোদন পোৱা চন"
-        )
-      ]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "form-control col-2 mr-2",
-        attrs: { type: "text", placeholder: " " }
-      })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "p-2 row" }, [
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v("৮ । (ক) বালিকা শিক্ষাৰ কালাংখ নিমনীয়া ভাবে হৈ আছে/নাই ।")
-      ]),
-      _vm._v(" "),
-      _c("select", { staticClass: "custom-select col-2" }, [
-        _c("option", { attrs: { selected: "" } }, [_vm._v("আছে")]),
-        _vm._v(" "),
-        _c("option", { attrs: { value: "1" } }, [_vm._v("নাই")])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "p-2 row" }, [
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v(
-          "(খ) পঞ্চপদী শিক্ষণ পদ্ধতিৰ আধাৰত সকলো আচাৰ্যই পাঠ যোজনা\n        বনাই পাঠ দান কৰে/নকৰে । যদি নকৰে কিয় নকৰে জনাব :"
-        )
-      ]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "form-control col-2 mr-2",
-        attrs: { type: "text", placeholder: " " }
-      })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "p-2 row" }, [
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v(
-          "(গ) Spoken English অথবা Class ত English to English কোন কোন শ্ৰেণীত কেইটাকৈ Class"
-        )
-      ]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "form-control col-2 mr-2",
-        attrs: { type: "text", placeholder: " " }
-      }),
-      _vm._v(" "),
-      _c("p", { staticClass: "mt-2 mr-2" }, [_vm._v("হয় । ")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "p-2 row" }, [
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v("(ঘ) স্মাৰ্ট ক্লাছৰ ব্যবস্থা আছে/নাই ।")
-      ]),
-      _vm._v(" "),
-      _c("select", { staticClass: "custom-select col-2" }, [
-        _c("option", { attrs: { selected: "" } }, [_vm._v("আছে")]),
-        _vm._v(" "),
-        _c("option", { attrs: { value: "1" } }, [_vm._v("নাই")])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "p-2 row" }, [
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v("(ঙ) নিকেতনত শিশু বাটিকাৰ সুকীয়া ব্যবস্থা হৈছে/হোৱা নাই ।")
-      ]),
-      _vm._v(" "),
-      _c("select", { staticClass: "custom-select col-2" }, [
-        _c("option", { attrs: { selected: "" } }, [_vm._v("হৈছে")]),
-        _vm._v(" "),
-        _c("option", { attrs: { value: "1" } }, [_vm._v("হোৱা নাই")])
-      ]),
-      _vm._v(" "),
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v(" শিশু বাটিকা প্ৰমুখ নিযুক্তি দিছে/দিয়া নাই ।")
-      ]),
-      _vm._v(" "),
-      _c("select", { staticClass: "custom-select col-2" }, [
-        _c("option", { attrs: { selected: "" } }, [_vm._v("দিছে")]),
-        _vm._v(" "),
-        _c("option", { attrs: { value: "1" } }, [_vm._v("দিয়া নাই")])
-      ]),
-      _vm._v(" "),
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v(
-          "নিকেতন শিশু বাটিকা কোনটো ৰূপত আছে --- নমুনা ৰূপ/ প্ৰভাৱীৰূপ/পযত্নশীল ৰূপ "
-        )
-      ]),
-      _vm._v(" "),
-      _c("select", { staticClass: "custom-select col-2" }, [
-        _c("option", { attrs: { selected: "" } }, [_vm._v("নমুনা ৰূপ")]),
-        _vm._v(" "),
-        _c("option", { attrs: { value: "1" } }, [_vm._v("প্ৰভাৱীৰূপ")]),
-        _vm._v(" "),
-        _c("option", { attrs: { value: "1" } }, [_vm._v("পযত্নশীল ৰূপ")])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "p-2 row" }, [
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v("(চ) কম্পিউটাৰ শিক্ষা ব্যবস্থা আছে/নাই ।")
-      ]),
-      _vm._v(" "),
-      _c("select", { staticClass: "custom-select col-2" }, [
-        _c("option", { attrs: { selected: "" } }, [_vm._v("আছে")]),
-        _vm._v(" "),
-        _c("option", { attrs: { value: "1" } }, [_vm._v("নাই")])
-      ]),
-      _vm._v(" "),
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v(" শিশু বাটিকা প্ৰমুখ নিযুক্তি দিছে/দিয়া নাই ")
-      ]),
-      _vm._v(" "),
-      _c("select", { staticClass: "custom-select col-2" }, [
-        _c("option", { attrs: { selected: "" } }, [_vm._v("দিছে ।")]),
-        _vm._v(" "),
-        _c("option", { attrs: { value: "1" } }, [_vm._v("দিয়া নাই ।")])
-      ]),
-      _vm._v(" "),
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v("যদি আছে কম্পিউটাৰ /লেপটপ (Laptop) কিমানতা")
-      ]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "form-control col-2 mr-2",
-        attrs: { type: "text", placeholder: " " }
-      }),
-      _vm._v(" "),
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v("কম্পিউটাৰ বিষয়ৰ আচাৰ্য আছে/নাই ।")
-      ]),
-      _vm._v(" "),
-      _c("select", { staticClass: "custom-select col-2" }, [
-        _c("option", { attrs: { selected: "" } }, [_vm._v("আছে ।")]),
-        _vm._v(" "),
-        _c("option", { attrs: { value: "1" } }, [_vm._v("নাই ।")])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "p-2 row" }, [
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v(
-          "(ছ) অটল টিংকাৰিং প্ৰয়োগ শালাৰ (Atal Tinkering Labortory)\n        বাবে Atal Inovation Mission, Niti Ayogত আবেদন কৰিছেনে নাই?\n        ( ষষ্ঠ শ্ৰেণীৰ‍ পৰা দশম শ্ৰেণীলৈ মুঠ ৪০০\n        ছাত্ৰ-ছাত্ৰী থকা, ১৫০০বৰ্গ ফুট স্থানৰ নিকেতনৰ ক্ষেত্ৰত প্ৰযোজ্য )"
-        )
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: " d-flex justify-content-center " }, [
-      _c("h5", { staticClass: "mb-0 h5  " }, [
-        _vm._v(
-          "\n        বিদ্যা ভাৰতী অখিল ভাৰতীয় শিক্ষা সংস্থানৰ সংবদ্ধ\n    "
-        )
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "mt-2 d-flex justify-content-center " }, [
-      _c("h2", { staticClass: "mb-0  tit leCentre" }, [
-        _vm._v("\n        শিশু শিক্ষা সমিতি, অসম\n    ")
+    return _c("div", { staticClass: "mt-2 d-flex justify-content-center" }, [
+      _c("h2", { staticClass: "mb-0 tit leCentre" }, [
+        _vm._v("শিশু শিক্ষা সমিতি, অসম")
       ])
     ])
   },
@@ -3433,11 +13786,11 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c(
       "div",
-      { staticClass: "mb-2 mt-2 d-flex justify-content-center " },
+      { staticClass: "mb-2 mt-2 d-flex justify-content-center" },
       [
-        _c("h5", { staticClass: "mb-0 h5  " }, [
+        _c("h5", { staticClass: "mb-0 h5" }, [
           _vm._v(
-            "\n        ৰাধাগোবিন্দ বৰুৱা পথ, প্ৰশান্ত পথ, গুৱাহাটী - ৭৮১০২৮\n    "
+            "\n          ৰাধাগোবিন্দ বৰুৱা পথ, প্ৰশান্ত পথ, গুৱাহাটী - ৭৮১০২৮\n        "
           )
         ])
       ]
@@ -3449,14 +13802,14 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "p-2 row justify-content-between" }, [
       _c("div", { staticClass: "col-4 mt-3" }, [
-        _c("p", {}, [_vm._v(" আচাৰ্য/আচাৰ্যাৰ বিৱৰণ - ২০২০")])
+        _c("p", {}, [_vm._v("আচাৰ্য/আচাৰ্যাৰ বিৱৰণ - ২০২০")])
       ]),
       _vm._v(" "),
       _c("div", { staticClass: "p-2 col-4 row" }, [
-        _c("p", { staticClass: "mt-2 mr-2" }, [_vm._v(" নিকেতনৰ নাম")]),
+        _c("p", { staticClass: "mt-2 mr-2" }, [_vm._v("নিকেতনৰ নাম")]),
         _vm._v(" "),
         _c("input", {
-          staticClass: "form-control col  mr-2",
+          staticClass: "form-control col mr-2",
           attrs: { type: "text", placeholder: " " }
         })
       ])
@@ -3473,21 +13826,21 @@ var staticRenderFns = [
           _vm._v(" "),
           _c("td", [
             _vm._v(
-              "প্ৰধানাচাৰ্য, শিশু বাটিকা প্ৰমুখ আৰু বালিকা শিক্ষা প্ৰমুখৰ নাম ক্ৰমে লিখিব ।"
+              "\n              প্ৰধানাচাৰ্য, শিশু বাটিকা প্ৰমুখ আৰু বালিকা শিক্ষা প্ৰমুখৰ নাম\n              ক্ৰমে লিখিব ।\n            "
             )
           ]),
           _vm._v(" "),
           _c("td", [_vm._v("জন্মৰ তাৰিখ আৰু ব্লাড গ্ৰুপ")]),
           _vm._v(" "),
-          _c("td", [_vm._v("নিকেতনৰ যোগদানৰ তাৰিখ আৰু মোবাইল নং ")]),
+          _c("td", [_vm._v("নিকেতনৰ যোগদানৰ তাৰিখ আৰু মোবাইল নং")]),
           _vm._v(" "),
           _c("td", [_vm._v("ই-মেইল আই ডি")]),
           _vm._v(" "),
           _c("td", [_vm._v("হুৱাটছআপ নম্বৰ")]),
           _vm._v(" "),
-          _c("td", [_vm._v("শিক্ষাগত অৰ্হতা ")]),
+          _c("td", [_vm._v("শিক্ষাগত অৰ্হতা")]),
           _vm._v(" "),
-          _c("td", [_vm._v("পাঠদান কৰা মূল বিষয় ")]),
+          _c("td", [_vm._v("পাঠদান কৰা মূল বিষয়")]),
           _vm._v(" "),
           _c("td", [_vm._v("৭ দিনীয়া")]),
           _vm._v(" "),
@@ -3562,7 +13915,7 @@ var staticRenderFns = [
         ]),
         _vm._v(" "),
         _c("tr", [
-          _c("td", [_vm._v(" ২")]),
+          _c("td", [_vm._v("২")]),
           _vm._v(" "),
           _c("td", [
             _c("input", {
@@ -3629,7 +13982,7 @@ var staticRenderFns = [
         ]),
         _vm._v(" "),
         _c("tr", [
-          _c("td", [_vm._v(" ৩")]),
+          _c("td", [_vm._v("৩")]),
           _vm._v(" "),
           _c("td", [
             _c("input", {
@@ -3758,7 +14111,7 @@ var staticRenderFns = [
         ]),
         _vm._v(" "),
         _c("tr", [
-          _c("td", [_vm._v(" ৪")]),
+          _c("td", [_vm._v("৪")]),
           _vm._v(" "),
           _c("td", [
             _c("input", {
@@ -3825,7 +14178,7 @@ var staticRenderFns = [
         ]),
         _vm._v(" "),
         _c("tr", [
-          _c("td", [_vm._v(" ৫")]),
+          _c("td", [_vm._v("৫")]),
           _vm._v(" "),
           _c("td", [
             _c("input", {
@@ -3892,7 +14245,7 @@ var staticRenderFns = [
         ]),
         _vm._v(" "),
         _c("tr", [
-          _c("td", [_vm._v(" ৬")]),
+          _c("td", [_vm._v("৬")]),
           _vm._v(" "),
           _c("td", [
             _c("input", {
@@ -3959,7 +14312,7 @@ var staticRenderFns = [
         ]),
         _vm._v(" "),
         _c("tr", [
-          _c("td", [_vm._v(" ৭ ")]),
+          _c("td", [_vm._v("৭")]),
           _vm._v(" "),
           _c("td", [
             _c("input", {
@@ -4155,7 +14508,7 @@ var staticRenderFns = [
         ]),
         _vm._v(" "),
         _c("tr", [
-          _c("td", [_vm._v("৯ ")]),
+          _c("td", [_vm._v("৯")]),
           _vm._v(" "),
           _c("td", [
             _c("input", {
@@ -4289,7 +14642,7 @@ var staticRenderFns = [
         ]),
         _vm._v(" "),
         _c("tr", [
-          _c("td", [_vm._v(" ১১")]),
+          _c("td", [_vm._v("১১")]),
           _vm._v(" "),
           _c("td", [
             _c("input", {
@@ -4356,7 +14709,7 @@ var staticRenderFns = [
         ]),
         _vm._v(" "),
         _c("tr", [
-          _c("td", [_vm._v(" ১২")]),
+          _c("td", [_vm._v("১২")]),
           _vm._v(" "),
           _c("td", [
             _c("input", {
@@ -4552,7 +14905,7 @@ var staticRenderFns = [
         ]),
         _vm._v(" "),
         _c("tr", [
-          _c("td", [_vm._v(" ১৪")]),
+          _c("td", [_vm._v("১৪")]),
           _vm._v(" "),
           _c("td", [
             _c("input", {
@@ -4636,653 +14989,11 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "table",
-      { staticClass: "table table-responsive-md table-bordered" },
-      [
-        _c("tr", [
-          _c("th", { staticClass: "mx-auto", attrs: { rowspan: "4" } }, [
-            _vm._v(
-              "\n            শিশু বাটিকাৰ ছাত্র-ছাত্ৰীৰ সংখ্যা - ২০২০ বৰ্ষ ।\n          "
-            )
-          ]),
-          _vm._v(" "),
-          _c("th", [_vm._v("শিশু বাটিকা")]),
-          _vm._v(" "),
-          _c("th", [_vm._v(" অংকুৰ ")]),
-          _vm._v(" "),
-          _c("th", [_vm._v("মুকুল ")]),
-          _vm._v(" "),
-          _c("th", [_vm._v("মুঠ ")]),
-          _vm._v(" "),
-          _c("th", [_vm._v(" আচাৰ্য")]),
-          _vm._v(" "),
-          _c("th", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ])
-        ]),
-        _vm._v(" "),
-        _c("tr", [
-          _c("th", [_vm._v("ছাত্র")]),
-          _vm._v(" "),
-          _c("th", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ]),
-          _vm._v(" "),
-          _c("th", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ]),
-          _vm._v(" "),
-          _c("th", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ]),
-          _vm._v(" "),
-          _c("th", [_vm._v("আচাৰ্যা")]),
-          _vm._v(" "),
-          _c("th", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ])
-        ]),
-        _vm._v(" "),
-        _c("tr", [
-          _c("th", [_vm._v("ছাত্ৰী")]),
-          _vm._v(" "),
-          _c("th", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ]),
-          _vm._v(" "),
-          _c("th", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ]),
-          _vm._v(" "),
-          _c("th", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ]),
-          _vm._v(" "),
-          _c("th", [_vm._v("মুঠ")]),
-          _vm._v(" "),
-          _c("th", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ])
-        ]),
-        _vm._v(" "),
-        _c("tr", [
-          _c("th", [_vm._v("মুঠ")]),
-          _vm._v(" "),
-          _c("th", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ]),
-          _vm._v(" "),
-          _c("th", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ]),
-          _vm._v(" "),
-          _c("th", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ]),
-          _vm._v(" "),
-          _c("th", [_vm._v("অন্য কৰ্মচাৰী")]),
-          _vm._v(" "),
-          _c("th", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ])
-        ])
-      ]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "table",
-      { staticClass: "table table-responsive-md table-bordered" },
-      [
-        _c("tr", [
-          _c("th", { attrs: { colspan: "3", rowspan: "4" } }, [
-            _vm._v(
-              "\n            নিম্ন প্ৰাথমিক শাখাৰ ছাত্র-ছাত্ৰীৰ সংখ্যা, ২০২০ বৰ্ষ ।\n          "
-            )
-          ]),
-          _vm._v(" "),
-          _c("th", [_vm._v("শ্ৰেণী")]),
-          _vm._v(" "),
-          _c("th", [_vm._v(" ১ম")]),
-          _vm._v(" "),
-          _c("th", [_vm._v(" ২য় ")]),
-          _vm._v(" "),
-          _c("th", [_vm._v("৩য়")]),
-          _vm._v(" "),
-          _c("th", [_vm._v("৪ৰ্থ ")]),
-          _vm._v(" "),
-          _c("th", [_vm._v("৫ম")]),
-          _vm._v(" "),
-          _c("th", [_vm._v(" মুঠ")]),
-          _vm._v(" "),
-          _c("th", [_vm._v("আচাৰ্য")]),
-          _vm._v(" "),
-          _c("th", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ])
-        ]),
-        _vm._v(" "),
-        _c("tr", [
-          _c("th", [_vm._v("ছাত্র")]),
-          _vm._v(" "),
-          _c("th", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ]),
-          _vm._v(" "),
-          _c("th", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ]),
-          _vm._v(" "),
-          _c("th", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ]),
-          _vm._v(" "),
-          _c("th", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ]),
-          _vm._v(" "),
-          _c("th", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ]),
-          _vm._v(" "),
-          _c("th", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ]),
-          _vm._v(" "),
-          _c("th", [_vm._v("আচাৰ্যা")]),
-          _vm._v(" "),
-          _c("th", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ])
-        ]),
-        _vm._v(" "),
-        _c("tr", [
-          _c("th", [_vm._v("ছাত্ৰী")]),
-          _vm._v(" "),
-          _c("th", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ]),
-          _vm._v(" "),
-          _c("th", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ]),
-          _vm._v(" "),
-          _c("th", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ]),
-          _vm._v(" "),
-          _c("th", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ]),
-          _vm._v(" "),
-          _c("th", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ]),
-          _vm._v(" "),
-          _c("th", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ]),
-          _vm._v(" "),
-          _c("th", [_vm._v("মুঠ")]),
-          _vm._v(" "),
-          _c("th", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ])
-        ]),
-        _vm._v(" "),
-        _c("tr", [
-          _c("th", [_vm._v("মুঠ")]),
-          _vm._v(" "),
-          _c("th", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ]),
-          _vm._v(" "),
-          _c("th", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ]),
-          _vm._v(" "),
-          _c("th", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ]),
-          _vm._v(" "),
-          _c("th", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ]),
-          _vm._v(" "),
-          _c("th", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ]),
-          _vm._v(" "),
-          _c("th", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ]),
-          _vm._v(" "),
-          _c("th", [_vm._v("অন্য কৰ্মচাৰী")]),
-          _vm._v(" "),
-          _c("th", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ])
-        ])
-      ]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
     return _c("div", { staticClass: "d-flex flex-row-reverse" }, [
       _c(
         "button",
         { staticClass: "btn btn-outline-primary", attrs: { type: "submit" } },
         [_vm._v("Next")]
-      )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "table",
-      { staticClass: "table table-responsive-md table-bordered" },
-      [
-        _c("tr", [
-          _c("th", { attrs: { colspan: "3", rowspan: "4" } }, [
-            _vm._v(
-              "\n            উচ্চ প্ৰাথমিক শাখাৰ ছাত্র-ছাত্ৰীৰ সংখ্যা, ২০২০ বৰ্ষ ।\n          "
-            )
-          ]),
-          _vm._v(" "),
-          _c("th", [_vm._v("শ্ৰেণী")]),
-          _vm._v(" "),
-          _c("th", [_vm._v("৬ষ্ঠ")]),
-          _vm._v(" "),
-          _c("th", [_vm._v("৭ম")]),
-          _vm._v(" "),
-          _c("th", [_vm._v("৮ম")]),
-          _vm._v(" "),
-          _c("th", [_vm._v("মুঠ")]),
-          _vm._v(" "),
-          _c("th", [_vm._v("আচাৰ্য")]),
-          _vm._v(" "),
-          _c("th")
-        ]),
-        _vm._v(" "),
-        _c("tr", [
-          _c("th", [_vm._v("ছাত্র")]),
-          _vm._v(" "),
-          _c("th", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ]),
-          _vm._v(" "),
-          _c("th", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ]),
-          _vm._v(" "),
-          _c("th", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ]),
-          _vm._v(" "),
-          _c("th", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ]),
-          _vm._v(" "),
-          _c("th", [_vm._v("আচাৰ্যা")]),
-          _vm._v(" "),
-          _c("th", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ])
-        ]),
-        _vm._v(" "),
-        _c("tr", [
-          _c("th", [_vm._v("ছাত্ৰী")]),
-          _vm._v(" "),
-          _c("th", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ]),
-          _vm._v(" "),
-          _c("th", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ]),
-          _vm._v(" "),
-          _c("th", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ]),
-          _vm._v(" "),
-          _c("th", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ]),
-          _vm._v(" "),
-          _c("th", [_vm._v(" মুঠ")]),
-          _vm._v(" "),
-          _c("th", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ])
-        ]),
-        _vm._v(" "),
-        _c("tr", [
-          _c("th", [_vm._v(" মুঠ")]),
-          _vm._v(" "),
-          _c("th", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ]),
-          _vm._v(" "),
-          _c("th", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ]),
-          _vm._v(" "),
-          _c("th", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ]),
-          _vm._v(" "),
-          _c("th", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ]),
-          _vm._v(" "),
-          _c("th", [_vm._v("অন্য কৰ্মচাৰী")]),
-          _vm._v(" "),
-          _c("th", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ])
-        ])
-      ]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c(
-      "table",
-      { staticClass: "table table-responsive-md table-bordered" },
-      [
-        _c("tr", [
-          _c("th", { staticClass: "mx-auto", attrs: { rowspan: "4" } }, [
-            _vm._v(
-              "\n            উচ্চ মাধ্যমিক শাখাৰ ছাত্র-ছাত্ৰীৰ সংখ্যা, ২০২০ বৰ্ষ ।\n          "
-            )
-          ]),
-          _vm._v(" "),
-          _c("th", [_vm._v("শ্ৰেণী")]),
-          _vm._v(" "),
-          _c("th", [_vm._v("৯ম")]),
-          _vm._v(" "),
-          _c("th", [_vm._v("১০ম")]),
-          _vm._v(" "),
-          _c("th", [_vm._v("মুঠ")]),
-          _vm._v(" "),
-          _c("th", [_vm._v("আচাৰ্য")]),
-          _vm._v(" "),
-          _c("th")
-        ]),
-        _vm._v(" "),
-        _c("tr", [
-          _c("th", [_vm._v(" ছাত্র ")]),
-          _vm._v(" "),
-          _c("th", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ]),
-          _vm._v(" "),
-          _c("th", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ]),
-          _vm._v(" "),
-          _c("th", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ]),
-          _vm._v(" "),
-          _c("th", [_vm._v("আচাৰ্যা")]),
-          _vm._v(" "),
-          _c("th", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ])
-        ]),
-        _vm._v(" "),
-        _c("tr", [
-          _c("th", [_vm._v("ছাত্ৰী")]),
-          _vm._v(" "),
-          _c("th", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ]),
-          _vm._v(" "),
-          _c("th", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ]),
-          _vm._v(" "),
-          _c("th", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ]),
-          _vm._v(" "),
-          _c("th", [_vm._v(" মুঠ")]),
-          _vm._v(" "),
-          _c("th", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ])
-        ]),
-        _vm._v(" "),
-        _c("tr", [
-          _c("th", [_vm._v(" মুঠ")]),
-          _vm._v(" "),
-          _c("th", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ]),
-          _vm._v(" "),
-          _c("th", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ]),
-          _vm._v(" "),
-          _c("th", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ]),
-          _vm._v(" "),
-          _c("th", [_vm._v("অন্য কৰ্মচাৰী")]),
-          _vm._v(" "),
-          _c("th", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ])
-        ])
-      ]
-    )
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "d-flex flex-row-reverse" }, [
-      _c(
-        "button",
-        { staticClass: "btn btn-outline-secondary", attrs: { type: "submit" } },
-        [_vm._v("Back")]
       )
     ])
   },
@@ -5302,191 +15013,91 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "table-bordered" }, [
-      _c("div", { staticClass: "row mt-2" }, [
-        _c("div", { staticClass: "form-group row col-md-4" }, [
-          _c("label", { staticClass: "d-flex align-items-end" }, [
-            _vm._v("চাৰিওটা শাখাৰ সৰ্বমুঠ :")
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col" }, [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", placeholder: "ছাত্র " }
-            })
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "form-group col-md-4" }, [
-          _c("input", {
-            staticClass: "form-control",
-            attrs: { type: "text", placeholder: "ছাত্ৰী" }
-          })
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "form-group col-md-4" }, [
-          _c("input", {
-            staticClass: "form-control",
-            attrs: { type: "text", placeholder: "মুঠ" }
-          })
-        ])
+    return _c("tr", [
+      _c("th", { attrs: { colspan: "3", rowspan: "4" } }, [
+        _vm._v(
+          "\n              নিকেতনৰ দ্বাৰা পৰিচালিত সংস্কাৰ কেন্দ্ৰ\n            "
+        )
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "d-flex justify-content-end" }, [
-        _c("div", { staticClass: "form-group col-md-3" }, [
-          _c("input", {
-            staticClass: "form-control",
-            attrs: { type: "text", placeholder: "আচাৰ্য" }
-          })
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "form-group col-md-3" }, [
-          _c("input", {
-            staticClass: "form-control",
-            attrs: { type: "text", placeholder: "আচৰ্যা" }
-          })
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "form-group col-md-3" }, [
-          _c("input", {
-            staticClass: "form-control",
-            attrs: { type: "text", placeholder: "মুঠ" }
-          })
-        ])
-      ]),
+      _c("th", [_vm._v("সংখ্যা")]),
       _vm._v(" "),
-      _c("div", { staticClass: "row mt-2" }, [
-        _c("div", { staticClass: "form-group row col-md-4" }, [
-          _c("label", { staticClass: "d-flex align-items-end" }, [
-            _vm._v("মুঠ অন্য কৰ্মচাৰী :")
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col" }, [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", placeholder: " " }
-            })
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "form-group row col-md-4" }, [
-          _c("label", { staticClass: "d-flex align-items-end" }, [
-            _vm._v("প্ৰতিটো শ্ৰেণীত ..:")
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col" }, [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", placeholder: " " }
-            })
-          ])
-        ])
-      ]),
+      _c("th", [_vm._v("ছাত্র")]),
       _vm._v(" "),
-      _c("div", { staticClass: "mt-2 row" }, [
-        _c("div", { staticClass: "form-group row col-md-8" }, [
-          _c("label", { staticClass: "d-flex align-items-end" }, [
-            _vm._v(
-              "প্ৰতিটো শ্ৰেণীত থকা বিশেষভাবে সক্ষম ছাত্র-ছাত্ৰীৰ মুঠ\n              সংখ্যা"
-            )
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "col" }, [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", id: "inputPassword", placeholder: "ছাত্র" }
-            })
-          ])
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "form-group col-md-2" }, [
-          _c("input", {
-            staticClass: "form-control",
-            attrs: { type: "text", placeholder: "ছাত্ৰী" }
-          })
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "form-group col-md-2" }, [
-          _c("input", {
-            staticClass: "form-control",
-            attrs: { type: "text", placeholder: "মুঠ" }
-          })
-        ])
-      ]),
+      _c("th", [_vm._v("ছাত্ৰী")]),
       _vm._v(" "),
-      _c("table", { staticClass: "table table-responsive-md mb0" }, [
-        _c("tr", [
-          _c("th", { attrs: { colspan: "3", rowspan: "4" } }, [
-            _vm._v(
-              "\n               নিকেতনৰ দ্বাৰা পৰিচালিত সংস্কাৰ কেন্দ্ৰ\n            "
-            )
-          ]),
-          _vm._v(" "),
-          _c("th", [_vm._v("সংখ্যা")]),
-          _vm._v(" "),
-          _c("th", [_vm._v("ছাত্র")]),
-          _vm._v(" "),
-          _c("th", [_vm._v("ছাত্ৰী")]),
-          _vm._v(" "),
-          _c("th", [_vm._v("মুঠ")]),
-          _vm._v(" "),
-          _c("th", [_vm._v("আচাৰ্য")]),
-          _vm._v(" "),
-          _c("th", [_vm._v("আচাৰ্যা")]),
-          _vm._v(" "),
-          _c("th", [_vm._v("মুঠ")])
-        ]),
-        _vm._v(" "),
-        _c("tr", [
-          _c("th", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ]),
-          _vm._v(" "),
-          _c("th", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ]),
-          _vm._v(" "),
-          _c("th", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ]),
-          _vm._v(" "),
-          _c("th", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ]),
-          _vm._v(" "),
-          _c("th", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ]),
-          _vm._v(" "),
-          _c("th", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ]),
-          _vm._v(" "),
-          _c("th", [
-            _c("input", {
-              staticClass: "form-control",
-              attrs: { type: "text", value: " " }
-            })
-          ])
-        ])
+      _c("th", [_vm._v("মুঠ")]),
+      _vm._v(" "),
+      _c("th", [_vm._v("আচাৰ্য")]),
+      _vm._v(" "),
+      _c("th", [_vm._v("আচাৰ্যা")]),
+      _vm._v(" "),
+      _c("th", [_vm._v("মুঠ")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "d-flex flex-row-reverse" }, [
+      _c(
+        "button",
+        { staticClass: "btn btn-outline-primary", attrs: { type: "submit" } },
+        [_vm._v("Next")]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("tr", [
+      _c("td", [_vm._v("মুঠ ছাত্র-ছাত্ৰীৰ ভিতৰত কিমান জন")]),
+      _vm._v(" "),
+      _c("td", [_vm._v("ছাত্র")]),
+      _vm._v(" "),
+      _c("td", [_vm._v("ছাত্ৰী")]),
+      _vm._v(" "),
+      _c("td", [_vm._v("মুঠ")]),
+      _vm._v(" "),
+      _c("td", { attrs: { colspan: "4" } }, [
+        _vm._v("অন্য ধর্মাবলম্বী ছাত্র-ছাত্ৰী কিমান জন")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("td", [_c("p", [_vm._v("ছাত্র")])])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("td", [_c("p", [_vm._v("ছাত্ৰী")])])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "d-flex flex-row-reverse" }, [
+      _c(
+        "button",
+        { staticClass: "btn btn-outline-primary", attrs: { type: "submit" } },
+        [_vm._v("Next")]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "p-2 row" }, [
+      _c("p", { staticClass: "mt-2 mr-2" }, [
+        _vm._v(
+          "\n          (ঝ) নিকেতনৰ আচাৰ্য/ আৰু কৰ্মচাৰীসকল কোনো স্থ্য স্বা বীমা/অটল অমৃত\n          কাৰ্ড / আয়ুষ্মান ভাৰত কাৰ্ড লৈছেনে নাই, যদি লোৱা নাই উপৰোক্ত আঁচনিৰ\n          আওতালৈ আনিব লাগে ।\n        "
+        )
       ])
     ])
   },
@@ -5497,9 +15108,21 @@ var staticRenderFns = [
     return _c("div", { staticClass: "d-flex flex-row-reverse" }, [
       _c(
         "button",
-        { staticClass: "btn btn-outline-secondary", attrs: { type: "submit" } },
-        [_vm._v("Back")]
+        { staticClass: "btn btn-outline-primary", attrs: { type: "submit" } },
+        [_vm._v("Next")]
       )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "p-2 row" }, [
+      _c("p", { staticClass: "mt-2 mr-2" }, [
+        _vm._v(
+          "(ঘ) বিজ্ঞানাগাৰৰ ব্যবস্থা আছে/নাই আৰু নিয়মিত ব্যৱহাৰ হয়/নহয় । (✓ চিন দিব )"
+        )
+      ])
     ])
   },
   function() {
@@ -5518,165 +15141,24 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c(
-      "table",
-      { staticClass: "table table-bordered table-responsive" },
-      [
-        _c("tbody", [
-          _c("tr", [
-            _c("td", [_vm._v("মুঠ ছাত্র-ছাত্ৰীৰ ভিতৰত কিমান জন  ")]),
-            _vm._v(" "),
-            _c("td", [_vm._v("ছাত্র ")]),
-            _vm._v(" "),
-            _c("td", [_vm._v("ছাত্ৰী")]),
-            _vm._v(" "),
-            _c("td", [_vm._v("মুঠ")]),
-            _vm._v(" "),
-            _c("td", { attrs: { colspan: "4" } }, [
-              _vm._v("অন্য ধর্মাবলম্বী ছাত্র-ছাত্ৰী কিমান জন")
-            ])
-          ]),
-          _vm._v(" "),
-          _c("tr", [
-            _c("td", [_vm._v("(ক) অনুসূচীত জাতি (SC)")]),
-            _vm._v(" "),
-            _c("td", [
-              _c("input", {
-                staticClass: "form-control",
-                attrs: { type: "text", value: " " }
-              })
-            ]),
-            _vm._v(" "),
-            _c("td", [
-              _c("input", {
-                staticClass: "form-control",
-                attrs: { type: "text", value: " " }
-              })
-            ]),
-            _vm._v(" "),
-            _c("td", [
-              _c("input", {
-                staticClass: "form-control",
-                attrs: { type: "text", value: " " }
-              })
-            ]),
-            _vm._v(" "),
-            _c("td", { attrs: { rowspan: "2" } }, [_vm._v("(ক) (মুছলমান)")]),
-            _vm._v(" "),
-            _c("td", [_c("p", [_vm._v("ছাত্র")])]),
-            _vm._v(" "),
-            _c("td", [_c("p", [_vm._v("ছাত্ৰী")])]),
-            _vm._v(" "),
-            _c("td", [_vm._v("মুঠ")])
-          ]),
-          _vm._v(" "),
-          _c("tr", [
-            _c("td", [_vm._v("(খ) অনুসূচীত জনজাতি (ST) \n                ")]),
-            _vm._v(" "),
-            _c("td", [
-              _c("input", {
-                staticClass: "form-control",
-                attrs: { type: "text", value: " " }
-              })
-            ]),
-            _vm._v(" "),
-            _c("td", [
-              _c("input", {
-                staticClass: "form-control",
-                attrs: { type: "text", value: " " }
-              })
-            ]),
-            _vm._v(" "),
-            _c("td", [
-              _c("input", {
-                staticClass: "form-control",
-                attrs: { type: "text", value: " " }
-              })
-            ]),
-            _vm._v(" "),
-            _c("td", [
-              _c("input", {
-                staticClass: "form-control",
-                attrs: { type: "text", value: " " }
-              })
-            ]),
-            _vm._v(" "),
-            _c("td", [
-              _c("input", {
-                staticClass: "form-control",
-                attrs: { type: "text", value: " " }
-              })
-            ]),
-            _vm._v(" "),
-            _c("td", [
-              _c("input", {
-                staticClass: "form-control",
-                attrs: { type: "text", value: " " }
-              })
-            ])
-          ]),
-          _vm._v(" "),
-          _c("tr", [
-            _c("td", [_vm._v("(গ) অন্যান্য পিছপৰা জাতি (OBC)")]),
-            _vm._v(" "),
-            _c("td", [
-              _c("input", {
-                staticClass: "form-control",
-                attrs: { type: "text", value: " " }
-              })
-            ]),
-            _vm._v(" "),
-            _c("td", [
-              _c("input", {
-                staticClass: "form-control",
-                attrs: { type: "text", value: " " }
-              })
-            ]),
-            _vm._v(" "),
-            _c("td", [
-              _c("input", {
-                staticClass: "form-control",
-                attrs: { type: "text", value: " " }
-              })
-            ]),
-            _vm._v(" "),
-            _c("td", [_vm._v("(খ) খ্ৰীষ্টান")]),
-            _vm._v(" "),
-            _c("td", [
-              _c("input", {
-                staticClass: "form-control",
-                attrs: { type: "text", value: " " }
-              })
-            ]),
-            _vm._v(" "),
-            _c("td", [
-              _c("input", {
-                staticClass: "form-control",
-                attrs: { type: "text", value: " " }
-              })
-            ]),
-            _vm._v(" "),
-            _c("td", [
-              _c("input", {
-                staticClass: "form-control",
-                attrs: { type: "text", value: " " }
-              })
-            ])
-          ])
-        ])
-      ]
-    )
+    return _c("div", { staticClass: "d-flex justify-content-center" }, [
+      _c("h5", { staticClass: "mb-0 h4 titleCentre" }, [
+        _vm._v(
+          "\n          নিম্নলিখিত কাৰ্যব্যবস্থা সমূহৰ আপোনাৰ নিকেতনৰ ক্ষেত্ৰত যিটো প্ৰযোজ্য\n          হয় তাত (✓) চীন দিব ।\n        "
+        )
+      ])
+    ])
   },
   function() {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "d-flex flex-row-reverse" }, [
-      _c(
-        "button",
-        { staticClass: "btn btn-outline-secondary", attrs: { type: "submit" } },
-        [_vm._v("Back")]
-      )
+    return _c("div", { staticClass: "p-2 row" }, [
+      _c("p", { staticClass: "mt-2 mr-2" }, [
+        _vm._v(
+          "\n          (ছ) অটল টিংকাৰিং প্ৰয়োগ শালাৰ (Atal Tinkering Labortory) বাবে Atal\n          Inovation Mission, Niti Ayogত আবেদন কৰিছেনে নাই? ( ষষ্ঠ শ্ৰেণীৰ‍ পৰা\n          দশম শ্ৰেণীলৈ মুঠ ৪০০ ছাত্ৰ-ছাত্ৰী থকা, ১৫০০বৰ্গ ফুট স্থানৰ নিকেতনৰ\n          ক্ষেত্ৰত প্ৰযোজ্য )\n        "
+        )
+      ])
     ])
   },
   function() {
@@ -5687,7 +15169,7 @@ var staticRenderFns = [
       _c(
         "button",
         { staticClass: "btn btn-outline-primary", attrs: { type: "submit" } },
-        [_vm._v("Submit")]
+        [_vm._v("Next")]
       )
     ])
   }
