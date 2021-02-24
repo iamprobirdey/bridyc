@@ -22,6 +22,10 @@ Auth::routes(['verify' => true]);
 //Route::post('login', 'Auth\LoginController@login');
 //Route::post('logout', 'Auth\LoginController@logout')->name('logout');
 
+Route::get('sitemap', 'SitemapController@index');
+Route::get('sitemap/static', 'SitemapController@static');
+Route::get('sitemap/channels', 'SitemapController@channels');
+Route::get('sitemap/podcasts', 'SitemapController@podcasts');
 
 
 Route::group([
