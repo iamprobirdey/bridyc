@@ -336,257 +336,42 @@
           </div>
         </div>
       </div>
-
       <!--
        pdf 2nd & 3rd page start
      -->
-
-
-      <!--  -->
-
-      <div class="d-flex justify-content-center">
-        <h5 class="mb-0 h5">বিদ্যা ভাৰতী অখিল ভাৰতীয় শিক্ষা সংস্থানৰ সংবদ্ধ</h5>
-      </div>
-      <div class="mt-2 d-flex justify-content-center">
-        <h2 class="mb-0 tit leCentre">শিশু শিক্ষা সমিতি, অসম</h2>
-      </div>
-      <div class="mb-2 mt-2 d-flex justify-content-center">
-        <h5 class="mb-0 h5">
-          ৰাধাগোবিন্দ বৰুৱা পথ, প্ৰশান্ত পথ, গুৱাহাটী - ৭৮১০২৮
-        </h5>
-      </div>
-      <div class="p-2 row justify-content-between">
-        <div class="col-4 mt-3">
-          <p class="">আচাৰ্য/আচাৰ্যাৰ বিৱৰণ - ২০২০</p>
-        </div>
-
-        <div class="p-2 col-4 row">
-          <p class="mt-2 mr-2">নিকেতনৰ নাম</p>
-          <input type="text" class="form-control col mr-2" placeholder=" " />
-        </div>
-      </div>
-      <!--  -->
-
-      <table class="table table-bordered">
-        <tbody>
-          <tr>
-            <td>ক্ৰ: নং.</td>
+ <table class="table table-bordered table-responsive">
+    <thead>
+        <tr>
+            <th scope="col">ID</th>
+            <th scope="col">School/College Name</th>
+            <th class="col-2" scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td>College Name</td>
             <td>
-              প্ৰধানাচাৰ্য, শিশু বাটিকা প্ৰমুখ আৰু বালিকা শিক্ষা প্ৰমুখৰ নাম
-              ক্ৰমে লিখিব ।
+                <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item" href="#">View</a>
+                        <a class="dropdown-item" href="#">Download</a>
+                    </div>
+                </div>
             </td>
-            <td>জন্মৰ তাৰিখ আৰু ব্লাড গ্ৰুপ</td>
-            <td>নিকেতনৰ যোগদানৰ তাৰিখ আৰু মোবাইল নং</td>
-            <td>ই-মেইল আই ডি</td>
-            <td>হুৱাটছআপ নম্বৰ</td>
-            <td>শিক্ষাগত অৰ্হতা</td>
-            <td>পাঠদান কৰা মূল বিষয়</td>
-            <td>৭ দিনীয়া</td>
-            <td>১৫ দিনীয়া</td>
-          </tr>
-          <tr>
-            <td>১</td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-          </tr>
-          <tr>
-            <td>২</td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-          </tr>
-          <tr>
-            <td>৩</td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-          </tr>
-          <tr>
-            <td colspan="2">আধাৰভূত বিষয়ৰ আচৰ্য/আচাৰ্যাৰ নাম লিখিব</td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-          </tr>
-          <tr>
-            <td>৪</td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-          </tr>
-          <tr>
-            <td>৫</td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-          </tr>
-          <tr>
-            <td>৬</td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-          </tr>
-          <tr>
-            <td>৭</td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-          </tr>
-          <tr>
-            <td>৮</td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-          </tr>
-          <tr>
-            <td colspan="2">বিজ্ঞান বিষয়ৰ আচৰ্য/আচাৰ্যাৰ নাম লিখিব</td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-          </tr>
-          <tr>
-            <td>৯</td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-          </tr>
-          <tr>
-            <td>১০</td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-          </tr>
-          <tr>
-            <td>১১</td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-          </tr>
-          <tr>
-            <td>১২</td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-          </tr>
-          <tr>
-            <td colspan="2">আচৰ্য/আচাৰ্যাৰ আৰু অন্য কৰ্মচাৰীৰ নাম লিখিব</td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-          </tr>
-          <tr>
-            <td>১৩</td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-          </tr>
-          <tr>
-            <td>১৪</td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-          </tr>
-        </tbody>
-      </table>
+        </tr>
+    </tbody>
+</table>
+
+
 
       <!--
        pdf 2nd & 3rd End start
@@ -3059,13 +2844,276 @@
         <button type="submit" class="btn btn-outline-primary">Next</button>
     </div>
     </form>
+
+
+    <form
+     class="form-horizontal"
+      @submit.prevent="validateStepForm('step9')"
+      data-vv-scope="step9"
+      v-if="steps === 9">
+              <div class="d-flex justify-content-center">
+        <h5 class="mb-0 h5">বিদ্যা ভাৰতী অখিল ভাৰতীয় শিক্ষা সংস্থানৰ সংবদ্ধ</h5>
+      </div>
+      <div class="mt-2 d-flex justify-content-center">
+        <h2 class="mb-0 tit leCentre">শিশু শিক্ষা সমিতি, অসম</h2>
+      </div>
+      <div class="mb-2 mt-2 d-flex justify-content-center">
+        <h5 class="mb-0 h5">
+          ৰাধাগোবিন্দ বৰুৱা পথ, প্ৰশান্ত পথ, গুৱাহাটী - ৭৮১০২৮
+        </h5>
+      </div>
+      <div class="p-2 row justify-content-between">
+        <div class="col-4 mt-3">
+          <p class="">আচাৰ্য/আচাৰ্যাৰ বিৱৰণ - ২০২০</p>
+        </div>
+
+        <div class="p-2 col-4 row">
+          <p class="mt-2 mr-2">নিকেতনৰ নাম</p>
+          <input type="text" class="form-control col mr-2" placeholder=" " />
+        </div>
+      </div>
+      <!--  -->
+
+      <table class="table table-bordered">
+        <tbody>
+          <tr>
+            <td>ক্ৰ: নং.</td>
+            <td>
+              প্ৰধানাচাৰ্য, শিশু বাটিকা প্ৰমুখ আৰু বালিকা শিক্ষা প্ৰমুখৰ নাম
+              ক্ৰমে লিখিব ।
+            </td>
+            <td>জন্মৰ তাৰিখ আৰু ব্লাড গ্ৰুপ</td>
+            <td>নিকেতনৰ যোগদানৰ তাৰিখ আৰু মোবাইল নং</td>
+            <td>ই-মেইল আই ডি</td>
+            <td>হুৱাটছআপ নম্বৰ</td>
+            <td>শিক্ষাগত অৰ্হতা</td>
+            <td>পাঠদান কৰা মূল বিষয়</td>
+            <td>৭ দিনীয়া</td>
+            <td>১৫ দিনীয়া</td>
+          </tr>
+          <tr>
+            <td>১</td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+          </tr>
+          <tr>
+            <td>২</td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+          </tr>
+          <tr>
+            <td>৩</td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+          </tr>
+          <tr>
+            <td colspan="2">আধাৰভূত বিষয়ৰ আচৰ্য/আচাৰ্যাৰ নাম লিখিব</td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+          </tr>
+          <tr>
+            <td>৪</td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+          </tr>
+          <tr>
+            <td>৫</td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+          </tr>
+          <tr>
+            <td>৬</td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+          </tr>
+          <tr>
+            <td>৭</td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+          </tr>
+          <tr>
+            <td>৮</td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+          </tr>
+          <tr>
+            <td colspan="2">বিজ্ঞান বিষয়ৰ আচৰ্য/আচাৰ্যাৰ নাম লিখিব</td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+          </tr>
+          <tr>
+            <td>৯</td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+          </tr>
+          <tr>
+            <td>১০</td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+          </tr>
+          <tr>
+            <td>১১</td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+          </tr>
+          <tr>
+            <td>১২</td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+          </tr>
+          <tr>
+            <td colspan="2">আচৰ্য/আচাৰ্যাৰ আৰু অন্য কৰ্মচাৰীৰ নাম লিখিব</td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+          </tr>
+          <tr>
+            <td>১৩</td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+          </tr>
+          <tr>
+            <td>১৪</td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+            <td><input type="text" value=" " class="form-control" /></td>
+          </tr>
+        </tbody>
+      </table>
+            <div class="d-flex flex-row-reverse">
+        <button
+          type="button"
+          class="btn btn-outline-secondary"
+          @click="goPrev()"
+        >
+          Back
+    </button>
+    </div>
+    <div class="d-flex flex-row-reverse">
+        <button type="submit" class="btn btn-outline-primary">Next</button>
+    </div>
+    </form>
   </div>
 </template>
 <script>
 export default {
   data() {
     return {
-      steps: 8,
+      steps: 9,
       max_steps: 5,
       step1: {
         institute_name: "", //id => number
@@ -3244,7 +3292,9 @@ export default {
         nineteen: "",
         twenty: "",
       },
-      step9: {},
+      step9: {
+        insins: "",
+      },
       serverErrors: {
         //step 1
         institute_name: "", //id => number

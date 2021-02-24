@@ -3158,10 +3158,58 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      steps: 8,
+      steps: 9,
       max_steps: 5,
       step1: {
         institute_name: "",
@@ -3339,7 +3387,9 @@ __webpack_require__.r(__webpack_exports__);
         nineteen: "",
         twenty: ""
       },
-      step9: {},
+      step9: {
+        insins: ""
+      },
       serverErrors: {
         //step 1
         institute_name: "",
@@ -4511,15 +4561,63 @@ var render = function() {
               )
             ]),
             _vm._v(" "),
-            _vm._m(1),
-            _vm._v(" "),
-            _vm._m(2),
-            _vm._v(" "),
-            _vm._m(3),
-            _vm._v(" "),
-            _vm._m(4),
-            _vm._v(" "),
-            _vm._m(5),
+            _c(
+              "table",
+              { staticClass: "table table-bordered table-responsive" },
+              [
+                _vm._m(1),
+                _vm._v(" "),
+                _c("tbody", [
+                  _c("tr", [
+                    _c("th", { attrs: { scope: "row" } }, [_vm._v("1")]),
+                    _vm._v(" "),
+                    _c("td", [_vm._v("College Name")]),
+                    _vm._v(" "),
+                    _c("td", [
+                      _c("div", { staticClass: "dropdown" }, [
+                        _c(
+                          "button",
+                          {
+                            staticClass: "btn btn-primary dropdown-toggle",
+                            attrs: {
+                              type: "button",
+                              id: "dropdownMenuButton",
+                              "data-toggle": "dropdown",
+                              "aria-haspopup": "true",
+                              "aria-expanded": "false"
+                            }
+                          },
+                          [
+                            _c(
+                              "svg",
+                              {
+                                attrs: {
+                                  xmlns: "http://www.w3.org/2000/svg",
+                                  viewBox: "0 0 20 20",
+                                  fill: "currentColor"
+                                }
+                              },
+                              [
+                                _c("path", {
+                                  attrs: {
+                                    "fill-rule": "evenodd",
+                                    d:
+                                      "M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z",
+                                    "clip-rule": "evenodd"
+                                  }
+                                })
+                              ]
+                            )
+                          ]
+                        ),
+                        _vm._v(" "),
+                        _vm._m(2)
+                      ])
+                    ])
+                  ])
+                ])
+              ]
+            ),
             _vm._v(" "),
             _c("div", { staticClass: "d-flex flex-row-reverse" }, [
               _c(
@@ -4532,7 +4630,7 @@ var render = function() {
               )
             ]),
             _vm._v(" "),
-            _vm._m(6)
+            _vm._m(3)
           ]
         )
       : _vm._e(),
@@ -6833,7 +6931,7 @@ var render = function() {
               )
             ]),
             _vm._v(" "),
-            _vm._m(7)
+            _vm._m(4)
           ]
         )
       : _vm._e(),
@@ -8663,7 +8761,7 @@ var render = function() {
               )
             ]),
             _vm._v(" "),
-            _vm._m(8)
+            _vm._m(5)
           ]
         )
       : _vm._e(),
@@ -9324,7 +9422,7 @@ var render = function() {
               ]),
               _vm._v(" "),
               _c("table", { staticClass: "table table-responsive-md mb0" }, [
-                _vm._m(9),
+                _vm._m(6),
                 _vm._v(" "),
                 _c("tr", [
                   _c("th", [
@@ -9738,7 +9836,7 @@ var render = function() {
               )
             ]),
             _vm._v(" "),
-            _vm._m(10)
+            _vm._m(7)
           ]
         )
       : _vm._e(),
@@ -9764,7 +9862,7 @@ var render = function() {
               { staticClass: "table table-bordered table-responsive" },
               [
                 _c("tbody", [
-                  _vm._m(11),
+                  _vm._m(8),
                   _vm._v(" "),
                   _c("tr", [
                     _c("td", [_vm._v("(ক) অনুসূচীত জাতি (SC)")]),
@@ -9945,9 +10043,9 @@ var render = function() {
                       _vm._v("(ক) (মুছলমান)")
                     ]),
                     _vm._v(" "),
-                    _vm._m(12),
+                    _vm._m(9),
                     _vm._v(" "),
-                    _vm._m(13),
+                    _vm._m(10),
                     _vm._v(" "),
                     _c("td", [_vm._v("মুঠ")])
                   ]),
@@ -10691,7 +10789,7 @@ var render = function() {
               )
             ]),
             _vm._v(" "),
-            _vm._m(14)
+            _vm._m(11)
           ]
         )
       : _vm._e(),
@@ -11551,7 +11649,7 @@ var render = function() {
               )
             ]),
             _vm._v(" "),
-            _vm._m(15),
+            _vm._m(12),
             _vm._v(" "),
             _c("div", { staticClass: "d-flex flex-row-reverse" }, [
               _c(
@@ -11569,7 +11667,7 @@ var render = function() {
               )
             ]),
             _vm._v(" "),
-            _vm._m(16)
+            _vm._m(13)
           ]
         )
       : _vm._e(),
@@ -12264,7 +12362,7 @@ var render = function() {
               ])
             ]),
             _vm._v(" "),
-            _vm._m(17),
+            _vm._m(14),
             _vm._v(" "),
             _c("div", { staticClass: "p-2 row" }, [
               _c("p", { staticClass: "mt-2 mr-2" }, [
@@ -12398,7 +12496,7 @@ var render = function() {
               )
             ]),
             _vm._v(" "),
-            _vm._m(18)
+            _vm._m(15)
           ]
         )
       : _vm._e(),
@@ -12417,7 +12515,7 @@ var render = function() {
             }
           },
           [
-            _vm._m(19),
+            _vm._m(16),
             _vm._v(" "),
             _c("div", { staticClass: "p-2 row" }, [
               _c("p", { staticClass: "mt-2 mr-2" }, [
@@ -13727,7 +13825,7 @@ var render = function() {
               )
             ]),
             _vm._v(" "),
-            _vm._m(20),
+            _vm._m(17),
             _vm._v(" "),
             _c("div", { staticClass: "d-flex flex-row-reverse" }, [
               _c(
@@ -13745,7 +13843,52 @@ var render = function() {
               )
             ]),
             _vm._v(" "),
-            _vm._m(21)
+            _vm._m(18)
+          ]
+        )
+      : _vm._e(),
+    _vm._v(" "),
+    _vm.steps === 9
+      ? _c(
+          "form",
+          {
+            staticClass: "form-horizontal",
+            attrs: { "data-vv-scope": "step9" },
+            on: {
+              submit: function($event) {
+                $event.preventDefault()
+                return _vm.validateStepForm("step9")
+              }
+            }
+          },
+          [
+            _vm._m(19),
+            _vm._v(" "),
+            _vm._m(20),
+            _vm._v(" "),
+            _vm._m(21),
+            _vm._v(" "),
+            _vm._m(22),
+            _vm._v(" "),
+            _vm._m(23),
+            _vm._v(" "),
+            _c("div", { staticClass: "d-flex flex-row-reverse" }, [
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-outline-secondary",
+                  attrs: { type: "button" },
+                  on: {
+                    click: function($event) {
+                      return _vm.goPrev()
+                    }
+                  }
+                },
+                [_vm._v("\n          Back\n    ")]
+              )
+            ]),
+            _vm._v(" "),
+            _vm._m(24)
           ]
         )
       : _vm._e()
@@ -13758,6 +13901,243 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "input-group-prepend" }, [
       _c("div", { staticClass: "input-group-text" }, [_vm._v("+91")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", [
+      _c("tr", [
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("ID")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("School/College Name")]),
+        _vm._v(" "),
+        _c("th", { staticClass: "col-2", attrs: { scope: "col" } }, [
+          _vm._v("Action")
+        ])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c(
+      "div",
+      {
+        staticClass: "dropdown-menu",
+        attrs: { "aria-labelledby": "dropdownMenuButton" }
+      },
+      [
+        _c("a", { staticClass: "dropdown-item", attrs: { href: "#" } }, [
+          _vm._v("View")
+        ]),
+        _vm._v(" "),
+        _c("a", { staticClass: "dropdown-item", attrs: { href: "#" } }, [
+          _vm._v("Download")
+        ])
+      ]
+    )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "d-flex flex-row-reverse" }, [
+      _c(
+        "button",
+        { staticClass: "btn btn-outline-primary", attrs: { type: "submit" } },
+        [_vm._v("Next")]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "d-flex flex-row-reverse" }, [
+      _c(
+        "button",
+        { staticClass: "btn btn-outline-primary", attrs: { type: "submit" } },
+        [_vm._v("Next")]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "d-flex flex-row-reverse" }, [
+      _c(
+        "button",
+        { staticClass: "btn btn-outline-primary", attrs: { type: "submit" } },
+        [_vm._v("Next")]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("tr", [
+      _c("th", { attrs: { colspan: "3", rowspan: "4" } }, [
+        _vm._v(
+          "\n              নিকেতনৰ দ্বাৰা পৰিচালিত সংস্কাৰ কেন্দ্ৰ\n            "
+        )
+      ]),
+      _vm._v(" "),
+      _c("th", [_vm._v("সংখ্যা")]),
+      _vm._v(" "),
+      _c("th", [_vm._v("ছাত্র")]),
+      _vm._v(" "),
+      _c("th", [_vm._v("ছাত্ৰী")]),
+      _vm._v(" "),
+      _c("th", [_vm._v("মুঠ")]),
+      _vm._v(" "),
+      _c("th", [_vm._v("আচাৰ্য")]),
+      _vm._v(" "),
+      _c("th", [_vm._v("আচাৰ্যা")]),
+      _vm._v(" "),
+      _c("th", [_vm._v("মুঠ")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "d-flex flex-row-reverse" }, [
+      _c(
+        "button",
+        { staticClass: "btn btn-outline-primary", attrs: { type: "submit" } },
+        [_vm._v("Next")]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("tr", [
+      _c("td", [_vm._v("মুঠ ছাত্র-ছাত্ৰীৰ ভিতৰত কিমান জন")]),
+      _vm._v(" "),
+      _c("td", [_vm._v("ছাত্র")]),
+      _vm._v(" "),
+      _c("td", [_vm._v("ছাত্ৰী")]),
+      _vm._v(" "),
+      _c("td", [_vm._v("মুঠ")]),
+      _vm._v(" "),
+      _c("td", { attrs: { colspan: "4" } }, [
+        _vm._v("অন্য ধর্মাবলম্বী ছাত্র-ছাত্ৰী কিমান জন")
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("td", [_c("p", [_vm._v("ছাত্র")])])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("td", [_c("p", [_vm._v("ছাত্ৰী")])])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "d-flex flex-row-reverse" }, [
+      _c(
+        "button",
+        { staticClass: "btn btn-outline-primary", attrs: { type: "submit" } },
+        [_vm._v("Next")]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "p-2 row" }, [
+      _c("p", { staticClass: "mt-2 mr-2" }, [
+        _vm._v(
+          "\n          (ঝ) নিকেতনৰ আচাৰ্য/ আৰু কৰ্মচাৰীসকল কোনো স্থ্য স্বা বীমা/অটল অমৃত\n          কাৰ্ড / আয়ুষ্মান ভাৰত কাৰ্ড লৈছেনে নাই, যদি লোৱা নাই উপৰোক্ত আঁচনিৰ\n          আওতালৈ আনিব লাগে ।\n        "
+        )
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "d-flex flex-row-reverse" }, [
+      _c(
+        "button",
+        { staticClass: "btn btn-outline-primary", attrs: { type: "submit" } },
+        [_vm._v("Next")]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "p-2 row" }, [
+      _c("p", { staticClass: "mt-2 mr-2" }, [
+        _vm._v(
+          "(ঘ) বিজ্ঞানাগাৰৰ ব্যবস্থা আছে/নাই আৰু নিয়মিত ব্যৱহাৰ হয়/নহয় । (✓ চিন দিব )"
+        )
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "d-flex flex-row-reverse" }, [
+      _c(
+        "button",
+        { staticClass: "btn btn-outline-primary", attrs: { type: "submit" } },
+        [_vm._v("Next")]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "d-flex justify-content-center" }, [
+      _c("h5", { staticClass: "mb-0 h4 titleCentre" }, [
+        _vm._v(
+          "\n          নিম্নলিখিত কাৰ্যব্যবস্থা সমূহৰ আপোনাৰ নিকেতনৰ ক্ষেত্ৰত যিটো প্ৰযোজ্য\n          হয় তাত (✓) চীন দিব ।\n        "
+        )
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "p-2 row" }, [
+      _c("p", { staticClass: "mt-2 mr-2" }, [
+        _vm._v(
+          "\n          (ছ) অটল টিংকাৰিং প্ৰয়োগ শালাৰ (Atal Tinkering Labortory) বাবে Atal\n          Inovation Mission, Niti Ayogত আবেদন কৰিছেনে নাই? ( ষষ্ঠ শ্ৰেণীৰ‍ পৰা\n          দশম শ্ৰেণীলৈ মুঠ ৪০০ ছাত্ৰ-ছাত্ৰী থকা, ১৫০০বৰ্গ ফুট স্থানৰ নিকেতনৰ\n          ক্ষেত্ৰত প্ৰযোজ্য )\n        "
+        )
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "d-flex flex-row-reverse" }, [
+      _c(
+        "button",
+        { staticClass: "btn btn-outline-primary", attrs: { type: "submit" } },
+        [_vm._v("Next")]
+      )
     ])
   },
   function() {
@@ -14970,194 +15350,6 @@ var staticRenderFns = [
             })
           ])
         ])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "d-flex flex-row-reverse" }, [
-      _c(
-        "button",
-        { staticClass: "btn btn-outline-primary", attrs: { type: "submit" } },
-        [_vm._v("Next")]
-      )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "d-flex flex-row-reverse" }, [
-      _c(
-        "button",
-        { staticClass: "btn btn-outline-primary", attrs: { type: "submit" } },
-        [_vm._v("Next")]
-      )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "d-flex flex-row-reverse" }, [
-      _c(
-        "button",
-        { staticClass: "btn btn-outline-primary", attrs: { type: "submit" } },
-        [_vm._v("Next")]
-      )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("tr", [
-      _c("th", { attrs: { colspan: "3", rowspan: "4" } }, [
-        _vm._v(
-          "\n              নিকেতনৰ দ্বাৰা পৰিচালিত সংস্কাৰ কেন্দ্ৰ\n            "
-        )
-      ]),
-      _vm._v(" "),
-      _c("th", [_vm._v("সংখ্যা")]),
-      _vm._v(" "),
-      _c("th", [_vm._v("ছাত্র")]),
-      _vm._v(" "),
-      _c("th", [_vm._v("ছাত্ৰী")]),
-      _vm._v(" "),
-      _c("th", [_vm._v("মুঠ")]),
-      _vm._v(" "),
-      _c("th", [_vm._v("আচাৰ্য")]),
-      _vm._v(" "),
-      _c("th", [_vm._v("আচাৰ্যা")]),
-      _vm._v(" "),
-      _c("th", [_vm._v("মুঠ")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "d-flex flex-row-reverse" }, [
-      _c(
-        "button",
-        { staticClass: "btn btn-outline-primary", attrs: { type: "submit" } },
-        [_vm._v("Next")]
-      )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("tr", [
-      _c("td", [_vm._v("মুঠ ছাত্র-ছাত্ৰীৰ ভিতৰত কিমান জন")]),
-      _vm._v(" "),
-      _c("td", [_vm._v("ছাত্র")]),
-      _vm._v(" "),
-      _c("td", [_vm._v("ছাত্ৰী")]),
-      _vm._v(" "),
-      _c("td", [_vm._v("মুঠ")]),
-      _vm._v(" "),
-      _c("td", { attrs: { colspan: "4" } }, [
-        _vm._v("অন্য ধর্মাবলম্বী ছাত্র-ছাত্ৰী কিমান জন")
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("td", [_c("p", [_vm._v("ছাত্র")])])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("td", [_c("p", [_vm._v("ছাত্ৰী")])])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "d-flex flex-row-reverse" }, [
-      _c(
-        "button",
-        { staticClass: "btn btn-outline-primary", attrs: { type: "submit" } },
-        [_vm._v("Next")]
-      )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "p-2 row" }, [
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v(
-          "\n          (ঝ) নিকেতনৰ আচাৰ্য/ আৰু কৰ্মচাৰীসকল কোনো স্থ্য স্বা বীমা/অটল অমৃত\n          কাৰ্ড / আয়ুষ্মান ভাৰত কাৰ্ড লৈছেনে নাই, যদি লোৱা নাই উপৰোক্ত আঁচনিৰ\n          আওতালৈ আনিব লাগে ।\n        "
-        )
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "d-flex flex-row-reverse" }, [
-      _c(
-        "button",
-        { staticClass: "btn btn-outline-primary", attrs: { type: "submit" } },
-        [_vm._v("Next")]
-      )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "p-2 row" }, [
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v(
-          "(ঘ) বিজ্ঞানাগাৰৰ ব্যবস্থা আছে/নাই আৰু নিয়মিত ব্যৱহাৰ হয়/নহয় । (✓ চিন দিব )"
-        )
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "d-flex flex-row-reverse" }, [
-      _c(
-        "button",
-        { staticClass: "btn btn-outline-primary", attrs: { type: "submit" } },
-        [_vm._v("Next")]
-      )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "d-flex justify-content-center" }, [
-      _c("h5", { staticClass: "mb-0 h4 titleCentre" }, [
-        _vm._v(
-          "\n          নিম্নলিখিত কাৰ্যব্যবস্থা সমূহৰ আপোনাৰ নিকেতনৰ ক্ষেত্ৰত যিটো প্ৰযোজ্য\n          হয় তাত (✓) চীন দিব ।\n        "
-        )
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "p-2 row" }, [
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v(
-          "\n          (ছ) অটল টিংকাৰিং প্ৰয়োগ শালাৰ (Atal Tinkering Labortory) বাবে Atal\n          Inovation Mission, Niti Ayogত আবেদন কৰিছেনে নাই? ( ষষ্ঠ শ্ৰেণীৰ‍ পৰা\n          দশম শ্ৰেণীলৈ মুঠ ৪০০ ছাত্ৰ-ছাত্ৰী থকা, ১৫০০বৰ্গ ফুট স্থানৰ নিকেতনৰ\n          ক্ষেত্ৰত প্ৰযোজ্য )\n        "
-        )
       ])
     ])
   },
