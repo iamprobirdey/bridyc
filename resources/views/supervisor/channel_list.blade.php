@@ -21,18 +21,46 @@ video')
 
 @section('supervisorContent')
 
-<table class="table">
+
+{{-- <th scope="col">Id</th>
+    <th scope="col">Date</th>
+    <th scope="col">Institute Name</th>
+    <th scope="col">Download</th>
+    <th scope="col">View</th> --}}
+
+
+<table class="table table-bordered table-responsive">
     <thead>
         <tr>
-            <th scope="col">Id</th>
-            <th scope="col">Date</th>
-            <th scope="col">Institute Name</th>
-            <th scope="col">Download</th>
-            <th scope="col">View</th>
+            <th scope="col">ID</th>
+            <th scope="col">School/College Name</th>
+            <th class="col-5" scope="col">Action</th>
         </tr>
     </thead>
     <tbody>
+        @foreach ($supervisorData as $item)
+        <tr>
 
+            <th scope="row">1</th>
+            <td>{{$item->channel->title}}</td>
+            <td>
+                <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        {{-- <a class="dropdown-item" href="#">View</a> --}}
+                        <a class="dropdown-item" href="#">Download</a>
+                    </div>
+                </div>
+            </td>
+        </tr>
+        @endforeach
     </tbody>
 </table>
 

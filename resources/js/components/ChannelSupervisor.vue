@@ -339,37 +339,7 @@
       <!--
        pdf 2nd & 3rd page start
      -->
- <table class="table table-bordered table-responsive">
-    <thead>
-        <tr>
-            <th scope="col">ID</th>
-            <th scope="col">School/College Name</th>
-            <th class="col-2" scope="col">Action</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <th scope="row">1</th>
-            <td>College Name</td>
-            <td>
-                <div class="dropdown">
-                    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd"
-                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z"
-                                clip-rule="evenodd" />
-                        </svg>
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        <a class="dropdown-item" href="#">View</a>
-                        <a class="dropdown-item" href="#">Download</a>
-                    </div>
-                </div>
-            </td>
-        </tr>
-    </tbody>
-</table>
+
 
 
 
@@ -413,7 +383,7 @@
               type="number"
               class="form-control"
               v-model="step2.teacher_male_1"
-              v-validate="'required|number'"
+              v-validate="'required|numeric'"
               name="teacher_male_1"
               placeholder="Teacher"
             />
@@ -435,7 +405,7 @@
               type="number"
               class="form-control"
               v-model="step2.ankul_1"
-              v-validate="'required|number'"
+              v-validate="'required|numeric'"
               name="ankul_1"
               placeholder=""
             />
@@ -452,7 +422,7 @@
               type="number"
               class="form-control"
               v-model="step2.mukul_1"
-              v-validate="'required|number'"
+              v-validate="'required|numeric'"
               name="mukul_1"
               placeholder="Teacher"
             />
@@ -468,7 +438,7 @@
               type="number"
               class="form-control"
               v-model="step2.muth_1"
-              v-validate="'required|number'"
+              v-validate="'required|numeric'"
               name="muth_1"
               placeholder="Total"
             />
@@ -485,7 +455,7 @@
               type="number"
               class="form-control"
               v-model="step2.teacher_female_1"
-              v-validate="'required|number'"
+              v-validate="'required|numeric'"
               name="teacher_female_1"
               placeholder="Ankul"
             />
@@ -508,7 +478,7 @@
               type="number"
               class="form-control"
               v-model="step2.ankul_2"
-              v-validate="'required|number'"
+              v-validate="'required|numeric'"
               name="ankul_2"
               placeholder="abc"
             />
@@ -524,7 +494,7 @@
               type="number"
               class="form-control"
               v-model="step2.mukul_2"
-              v-validate="'required|number'"
+              v-validate="'required|numeric'"
               name="mukul_2"
               placeholder="pro"
             />
@@ -540,7 +510,7 @@
               type="number"
               class="form-control"
               v-model="step2.muth_2"
-              v-validate="'required|number'"
+              v-validate="'required|numeric'"
               name="muth_2"
               placeholder="muth"
             />
@@ -557,7 +527,7 @@
               type="number"
               class="form-control"
               v-model="step2.teacher_total_1"
-              v-validate="'required|number'"
+              v-validate="'required|numeric'"
               name="teacher_total_1"
               placeholder="muth"
             />
@@ -580,7 +550,7 @@
               type="number"
               class="form-control"
               v-model="step2.ankul_3"
-              v-validate="'required|number'"
+              v-validate="'required|numeric'"
               name="ankul_3"
               placeholder="muth"
             />
@@ -596,7 +566,7 @@
               type="number"
               class="form-control"
               v-model="step2.mukul_3"
-              v-validate="'required|number'"
+              v-validate="'required|numeric'"
               name="mukul_3"
               placeholder="muth"
             />
@@ -612,7 +582,7 @@
               type="number"
               class="form-control"
               v-model="step2.muth_3"
-              v-validate="'required|number'"
+              v-validate="'required|numeric'"
               name="muth_3"
               placeholder="muth"
             />
@@ -629,7 +599,7 @@
               type="number"
               class="form-control"
               v-model="step2.teacher_karmachari_1"
-              v-validate="'required|number'"
+              v-validate="'required|numeric'"
               name="teacher_karmachari_1"
               placeholder="muth"
             />
@@ -664,7 +634,7 @@
               type="number"
               class="form-control"
               v-model="step2.teacher_male_2"
-              v-validate="'required|number'"
+              v-validate="'required|numeric'"
               name="teacher_male_2"
               placeholder="Teacher"
             />
@@ -683,7 +653,7 @@
               type="number"
               class="form-control"
               v-model="step2.one_male"
-              v-validate="'required|number'"
+              v-validate="'required|numeric'"
               name="one_male"
               placeholder="Teacher"
             />
@@ -696,7 +666,7 @@
               type="number"
               class="form-control"
               v-model="step2.two_male"
-              v-validate="'required|number'"
+              v-validate="'required|numeric'"
               name="two_male"
               placeholder="Teacher"
             />
@@ -709,7 +679,7 @@
               type="number"
               class="form-control"
               v-model="step2.three_male"
-              v-validate="'required|number'"
+              v-validate="'required|numeric'"
               name="three_male"
               placeholder="Teacher"
             />
@@ -722,7 +692,7 @@
               type="number"
               class="form-control"
               v-model="step2.four_male"
-              v-validate="'required|number'"
+              v-validate="'required|numeric'"
               name="four_male"
               placeholder="Teacher"
             />
@@ -735,7 +705,7 @@
               type="number"
               class="form-control"
               v-model="step2.five_male"
-              v-validate="'required|number'"
+              v-validate="'required|numeric'"
               name="five_male"
               placeholder="Teacher"
             />
@@ -748,7 +718,7 @@
               type="number"
               class="form-control"
               v-model="step2.muth_male"
-              v-validate="'required|number'"
+              v-validate="'required|numeric'"
               name="muth_male"
               placeholder="Teacher"
             />
@@ -762,7 +732,7 @@
               type="number"
               class="form-control"
               v-model="step2.teacher_female_2"
-              v-validate="'required|number'"
+              v-validate="'required|numeric'"
               name="teacher_female_2"
               placeholder="Teacher"
             />
@@ -781,7 +751,7 @@
               type="number"
               class="form-control"
               v-model="step2.one_female"
-              v-validate="'required|number'"
+              v-validate="'required|numeric'"
               name="one_female"
               placeholder="Teacher"
             />
@@ -794,7 +764,7 @@
               type="number"
               class="form-control"
               v-model="step2.two_female"
-              v-validate="'required|number'"
+              v-validate="'required|numeric'"
               name="two_female"
               placeholder="Teacher"
             />
@@ -807,7 +777,7 @@
               type="number"
               class="form-control"
               v-model="step2.three_female"
-              v-validate="'required|number'"
+              v-validate="'required|numeric'"
               name="three_female"
               placeholder="Teacher"
             />
@@ -820,7 +790,7 @@
               type="number"
               class="form-control"
               v-model="step2.four_female"
-              v-validate="'required|number'"
+              v-validate="'required|numeric'"
               name="four_female"
               placeholder="Teacher"
             />
@@ -833,7 +803,7 @@
               type="number"
               class="form-control"
               v-model="step2.five_female"
-              v-validate="'required|number'"
+              v-validate="'required|numeric'"
               name="five_female"
               placeholder="Teacher"
             />
@@ -846,7 +816,7 @@
               type="number"
               class="form-control"
               v-model="step2.muth_female"
-              v-validate="'required|number'"
+              v-validate="'required|numeric'"
               name="muth_female"
               placeholder="Teacher"
             />
@@ -860,7 +830,7 @@
               type="number"
               class="form-control"
               v-model="step2.teacher_total_2"
-              v-validate="'required|number'"
+              v-validate="'required|numeric'"
               name="teacher_total_2"
               placeholder="Teacher"
             />
@@ -879,7 +849,7 @@
               type="number"
               class="form-control"
               v-model="step2.one_total"
-              v-validate="'required|number'"
+              v-validate="'required|numeric'"
               name="one_total"
               placeholder="Teacher"
             />
@@ -892,7 +862,7 @@
               type="number"
               class="form-control"
               v-model="step2.two_total"
-              v-validate="'required|number'"
+              v-validate="'required|numeric'"
               name="two_total"
               placeholder="Teacher"
             />
@@ -905,7 +875,7 @@
               type="number"
               class="form-control"
               v-model="step2.three_total"
-              v-validate="'required|number'"
+              v-validate="'required|numeric'"
               name="three_total"
               placeholder="Teacher"
             />
@@ -918,7 +888,7 @@
               type="number"
               class="form-control"
               v-model="step2.four_total"
-              v-validate="'required|number'"
+              v-validate="'required|numeric'"
               name="four_total"
               placeholder="Teacher"
             />
@@ -931,7 +901,7 @@
               type="number"
               class="form-control"
               v-model="step2.five_total"
-              v-validate="'required|number'"
+              v-validate="'required|numeric'"
               name="five_total"
               placeholder="Teacher"
             />
@@ -944,7 +914,7 @@
               type="number"
               class="form-control"
               v-model="step2.muth_total"
-              v-validate="'required|number'"
+              v-validate="'required|numeric'"
               name="muth_total"
               placeholder="Teacher"
             />
@@ -958,7 +928,7 @@
               type="number"
               class="form-control"
               v-model="step2.teacher_karmachari_2"
-              v-validate="'required|number'"
+              v-validate="'required|numeric'"
               name="teacher_karmachari_2"
               placeholder="Teacher"
             />
@@ -1008,7 +978,7 @@
               type="number"
               class="form-control"
               v-model="step3.teacher_male_1"
-              v-validate="'required|number'"
+              v-validate="'required|numeric'"
               name="teacher_male_1"
               placeholder="Teacher"
             />
@@ -1027,7 +997,7 @@
               type="number"
               class="form-control"
               v-model="step3.six_male"
-              v-validate="'required|number'"
+              v-validate="'required|numeric'"
               name="six_male"
               placeholder="Teacher"
             />
@@ -1040,7 +1010,7 @@
               type="number"
               class="form-control"
               v-model="step3.seven_male"
-              v-validate="'required|number'"
+              v-validate="'required|numeric'"
               name="seven_male"
               placeholder="Teacher"
             />
@@ -1053,7 +1023,7 @@
               type="number"
               class="form-control"
               v-model="step3.eight_male"
-              v-validate="'required|number'"
+              v-validate="'required|numeric'"
               name="eight_male"
               placeholder="Teacher"
             />
@@ -1066,7 +1036,7 @@
               type="number"
               class="form-control"
               v-model="step3.muth_male_1"
-              v-validate="'required|number'"
+              v-validate="'required|numeric'"
               name="muth_male_1"
               placeholder="Teacher"
             />
@@ -1080,7 +1050,7 @@
               type="number"
               class="form-control"
               v-model="step3.teacher_female_1"
-              v-validate="'required|number'"
+              v-validate="'required|numeric'"
               name="teacher_female_1"
               placeholder="Teacher"
             />
@@ -1099,7 +1069,7 @@
               type="number"
               class="form-control"
               v-model="step3.six_female"
-              v-validate="'required|number'"
+              v-validate="'required|numeric'"
               name="six_female"
               placeholder="Teacher"
             />
@@ -1112,7 +1082,7 @@
               type="number"
               class="form-control"
               v-model="step3.seven_female"
-              v-validate="'required|number'"
+              v-validate="'required|numeric'"
               name="seven_female"
               placeholder="Teacher"
             />
@@ -1125,7 +1095,7 @@
               type="number"
               class="form-control"
               v-model="step3.eight_female"
-              v-validate="'required|number'"
+              v-validate="'required|numeric'"
               name="eight_female"
               placeholder="Teacher"
             />
@@ -1138,7 +1108,7 @@
               type="number"
               class="form-control"
               v-model="step3.muth_female_1"
-              v-validate="'required|number'"
+              v-validate="'required|numeric'"
               name="muth_female_1"
               placeholder="Teacher"
             />
@@ -1155,7 +1125,7 @@
               type="number"
               class="form-control"
               v-model="step3.teacher_female_1"
-              v-validate="'required|number'"
+              v-validate="'required|numeric'"
               name="teacher_female_1"
               placeholder="Teacher"
             />
@@ -1174,7 +1144,7 @@
               type="number"
               class="form-control"
               v-model="step3.six_total"
-              v-validate="'required|number'"
+              v-validate="'required|numeric'"
               name="six_total"
               placeholder="Teacher"
             />
@@ -1187,7 +1157,7 @@
               type="number"
               class="form-control"
               v-model="step3.seven_total"
-              v-validate="'required|number'"
+              v-validate="'required|numeric'"
               name="seven_total"
               placeholder="Teacher"
             />
@@ -1200,7 +1170,7 @@
               type="number"
               class="form-control"
               v-model="step3.eight_total"
-              v-validate="'required|number'"
+              v-validate="'required|numeric'"
               name="eight_total"
               placeholder="Teacher"
             />
@@ -1213,7 +1183,7 @@
               type="number"
               class="form-control"
               v-model="step3.muth_total_1"
-              v-validate="'required|number'"
+              v-validate="'required|numeric'"
               name="muth_total_1"
               placeholder="Teacher"
             />
@@ -1227,7 +1197,7 @@
               type="number"
               class="form-control"
               v-model="step3.teacher_karmachari_1"
-              v-validate="'required|number'"
+              v-validate="'required|numeric'"
               name="teacher_karmachari_1"
               placeholder="Teacher"
             />
@@ -1255,7 +1225,7 @@
               type="number"
               class="form-control"
               v-model="step3.teacher_male_2"
-              v-validate="'required|number'"
+              v-validate="'required|numeric'"
               name="teacher_male_2"
               placeholder="Teacher"
             />
@@ -1274,7 +1244,7 @@
               type="number"
               class="form-control"
               v-model="step3.nine_male"
-              v-validate="'required|number'"
+              v-validate="'required|numeric'"
               name="nine_male"
               placeholder="Teacher"
             />
@@ -1287,7 +1257,7 @@
               type="number"
               class="form-control"
               v-model="step3.ten_male"
-              v-validate="'required|number'"
+              v-validate="'required|numeric'"
               name="ten_male"
               placeholder="Teacher"
             />
@@ -1300,7 +1270,7 @@
               type="number"
               class="form-control"
               v-model="step3.muth_male_2"
-              v-validate="'required|number'"
+              v-validate="'required|numeric'"
               name="muth_male_2"
               placeholder="Teacher"
             />
@@ -1314,7 +1284,7 @@
               type="number"
               class="form-control"
               v-model="step3.teacher_female_2"
-              v-validate="'required|number'"
+              v-validate="'required|numeric'"
               name="teacher_female_2"
               placeholder="Teacher"
             />
@@ -1333,7 +1303,7 @@
               type="number"
               class="form-control"
               v-model="step3.nine_female"
-              v-validate="'required|number'"
+              v-validate="'required|numeric'"
               name="nine_female"
               placeholder="Teacher"
             />
@@ -1346,7 +1316,7 @@
               type="number"
               class="form-control"
               v-model="step3.ten_female"
-              v-validate="'required|number'"
+              v-validate="'required|numeric'"
               name="ten_female"
               placeholder="Teacher"
             />
@@ -1359,7 +1329,7 @@
               type="number"
               class="form-control"
               v-model="step3.muth_total_2"
-              v-validate="'required|number'"
+              v-validate="'required|numeric'"
               name="muth_total_2"
               placeholder="Teacher"
             />
@@ -1373,7 +1343,7 @@
               type="number"
               class="form-control"
               v-model="step3.teacher_total_2"
-              v-validate="'required|number'"
+              v-validate="'required|numeric'"
               name="teacher_total_2"
               placeholder="Teacher"
             />
@@ -1392,7 +1362,7 @@
               type="number"
               class="form-control"
               v-model="step3.nine_total"
-              v-validate="'required|number'"
+              v-validate="'required|numeric'"
               name="nine_total"
               placeholder="Teacher"
             />
@@ -1405,7 +1375,7 @@
               type="number"
               class="form-control"
               v-model="step3.ten_total"
-              v-validate="'required|number'"
+              v-validate="'required|numeric'"
               name="ten_total"
               placeholder="Teacher"
             />
@@ -1418,7 +1388,7 @@
               type="number"
               class="form-control"
               v-model="step3.muth_total_2"
-              v-validate="'required|number'"
+              v-validate="'required|numeric'"
               name="muth_total_2"
               placeholder="Teacher"
             />
@@ -1432,7 +1402,7 @@
               type="number"
               class="form-control"
               v-model="step3.teacher_total_2"
-              v-validate="'required|number'"
+              v-validate="'required|numeric'"
               name="teacher_total_2"
               placeholder="Teacher"
             />
@@ -1477,7 +1447,7 @@
                 type="number"
                 class="form-control"
                 v-model="step4.one"
-                v-validate="'required|number'"
+                v-validate="'required|numeric'"
                 name="one"
                 placeholder="ছাত্র "
               />
@@ -1491,7 +1461,7 @@
               type="number"
               class="form-control"
               v-model="step4.two"
-              v-validate="'required|number'"
+              v-validate="'required|numeric'"
               name="two"
               placeholder="ছাত্ৰী"
             />
@@ -1504,7 +1474,7 @@
               type="number"
               class="form-control"
               v-model="step4.three"
-              v-validate="'required|number'"
+              v-validate="'required|numeric'"
               name="three"
               placeholder="মুঠ"
             />
@@ -1520,7 +1490,7 @@
               type="number"
               class="form-control"
               v-model="step4.four"
-              v-validate="'required|number'"
+              v-validate="'required|numeric'"
               name="four"
               placeholder="আচাৰ্য"
             />
@@ -1533,7 +1503,7 @@
               type="number"
               class="form-control"
               v-model="step4.five"
-              v-validate="'required|number'"
+              v-validate="'required|numeric'"
               name="five"
               placeholder="আচৰ্যা"
             />
@@ -1546,7 +1516,7 @@
               type="number"
               class="form-control"
               v-model="step4.six"
-              v-validate="'required|number'"
+              v-validate="'required|numeric'"
               name="six"
               placeholder="মুঠ"
             />
@@ -1563,7 +1533,7 @@
                 type="number"
                 class="form-control"
                 v-model="step4.seven"
-                v-validate="'required|number'"
+                v-validate="'required|numeric'"
                 name="seven"
                 placeholder=""
               />
@@ -1579,7 +1549,7 @@
                 type="number"
                 class="form-control"
                 v-model="step4.eight"
-                v-validate="'required|number'"
+                v-validate="'required|numeric'"
                 name="eight"
                 placeholder=""
               />
@@ -1600,7 +1570,7 @@
                 type="number"
                 class="form-control"
                 v-model="step4.nine"
-                v-validate="'required|number'"
+                v-validate="'required|numeric'"
                 name="nine"
                 placeholder="ছাত্র"
               />
@@ -1614,7 +1584,7 @@
               type="number"
               class="form-control"
               v-model="step4.ten"
-              v-validate="'required|number'"
+              v-validate="'required|numeric'"
               name="ten"
               placeholder="ছাত্ৰী"
             />
@@ -1627,7 +1597,7 @@
               type="number"
               class="form-control"
               v-model="step4.eleven"
-              v-validate="'required|number'"
+              v-validate="'required|numeric'"
               name="eleven"
               placeholder="মুঠ"
             />
@@ -1655,7 +1625,7 @@
                 type="number"
                 class="form-control"
                 v-model="step4.twelve"
-                v-validate="'required|number'"
+                v-validate="'required|numeric'"
                 name="twelve"
                 placeholder="মুঠ"
               />
@@ -1668,7 +1638,7 @@
                 type="number"
                 class="form-control"
                 v-model="step4.thirteen"
-                v-validate="'required|number'"
+                v-validate="'required|numeric'"
                 name="thirteen"
                 placeholder="মুঠ"
               />
@@ -1681,7 +1651,7 @@
                 type="number"
                 class="form-control"
                 v-model="step4.fourteen"
-                v-validate="'required|number'"
+                v-validate="'required|numeric'"
                 name="fourteen"
                 placeholder="মুঠ"
               />
@@ -1694,7 +1664,7 @@
                 type="number"
                 class="form-control"
                 v-model="step4.fiveteen"
-                v-validate="'required|number'"
+                v-validate="'required|numeric'"
                 name="fiveteen"
                 placeholder="মুঠ"
               />
@@ -1707,7 +1677,7 @@
                 type="number"
                 class="form-control"
                 v-model="step4.sixteen"
-                v-validate="'required|number'"
+                v-validate="'required|numeric'"
                 name="sixteen"
                 placeholder="মুঠ"
               />
@@ -1720,7 +1690,7 @@
                 type="number"
                 class="form-control"
                 v-model="step4.seventeen"
-                v-validate="'required|number'"
+                v-validate="'required|numeric'"
                 name="seventeen"
                 placeholder="মুঠ"
               />
@@ -1733,7 +1703,7 @@
                 type="number"
                 class="form-control"
                 v-model="step4.eighteen"
-                v-validate="'required|number'"
+                v-validate="'required|numeric'"
                 name="eighteen"
                 placeholder="মুঠ"
               />
@@ -1781,7 +1751,7 @@
                 type="number"
                 class="form-control"
                 v-model="step5.sc_male"
-                v-validate="'required|number'"
+                v-validate="'required|numeric'"
                 name="sc_male"
                 placeholder=""
               />
@@ -1794,7 +1764,7 @@
                 type="number"
                 class="form-control"
                 v-model="step5.sc_female"
-                v-validate="'required|number'"
+                v-validate="'required|numeric'"
                 name="sc_female"
                 placeholder=""
               />
@@ -1807,7 +1777,7 @@
                 type="number"
                 class="form-control"
                 v-model="step5.sc_total"
-                v-validate="'required|number'"
+                v-validate="'required|numeric'"
                 name="sc_total"
                 placeholder=""
               />
@@ -1831,7 +1801,7 @@
                 type="number"
                 class="form-control"
                 v-model="step5.st_male"
-                v-validate="'required|number'"
+                v-validate="'required|numeric'"
                 name="st_male"
                 placeholder=""
               />
@@ -1844,7 +1814,7 @@
                 type="number"
                 class="form-control"
                 v-model="step5.st_female"
-                v-validate="'required|number'"
+                v-validate="'required|numeric'"
                 name="st_female"
                 placeholder=""
               />
@@ -1857,7 +1827,7 @@
                 type="number"
                 class="form-control"
                 v-model="step5.st_total"
-                v-validate="'required|number'"
+                v-validate="'required|numeric'"
                 name="st_total"
                 placeholder=""
               />
@@ -1870,7 +1840,7 @@
                 type="number"
                 class="form-control"
                 v-model="step5.muslim_male"
-                v-validate="'required|number'"
+                v-validate="'required|numeric'"
                 name="muslim_male"
                 placeholder=""
               />
@@ -1886,7 +1856,7 @@
                 type="number"
                 class="form-control"
                 v-model="step5.muslim_female"
-                v-validate="'required|number'"
+                v-validate="'required|numeric'"
                 name="muslim_female"
                 placeholder=""
               />
@@ -1902,7 +1872,7 @@
                 type="number"
                 class="form-control"
                 v-model="step5.muslim_total"
-                v-validate="'required|number'"
+                v-validate="'required|numeric'"
                 name="muslim_total"
                 placeholder=""
               />
@@ -1921,7 +1891,7 @@
                 type="number"
                 class="form-control"
                 v-model="step5.obc_male"
-                v-validate="'required|number'"
+                v-validate="'required|numeric'"
                 name="obc_male"
                 placeholder=""
               />
@@ -1934,7 +1904,7 @@
                 type="number"
                 class="form-control"
                 v-model="step5.obc_female"
-                v-validate="'required|number'"
+                v-validate="'required|numeric'"
                 name="obc_female"
                 placeholder=""
               />
@@ -1947,7 +1917,7 @@
                 type="number"
                 class="form-control"
                 v-model="step5.obc_total"
-                v-validate="'required|number'"
+                v-validate="'required|numeric'"
                 name="obc_total"
                 placeholder=""
               />
@@ -1961,7 +1931,7 @@
                 type="number"
                 class="form-control"
                 v-model="step5.chritian_male"
-                v-validate="'required|number'"
+                v-validate="'required|numeric'"
                 name="chritian_male"
                 placeholder=""
               />
@@ -1977,7 +1947,7 @@
                 type="number"
                 class="form-control"
                 v-model="step5.chritian_female"
-                v-validate="'required|number'"
+                v-validate="'required|numeric'"
                 name="chritian_female"
                 placeholder=""
               />
@@ -1993,7 +1963,7 @@
                 type="number"
                 class="form-control"
                 v-model="step5.chritian_total"
-                v-validate="'required|number'"
+                v-validate="'required|numeric'"
                 name="chritian_total"
                 placeholder=""
               />
@@ -2848,7 +2818,7 @@
 
     <form
      class="form-horizontal"
-      @submit.prevent="validateStepForm('step9')"
+      @submit.prevent="submitForm('step9')"
       data-vv-scope="step9"
       v-if="steps === 9">
               <div class="d-flex justify-content-center">
@@ -2869,7 +2839,17 @@
 
         <div class="p-2 col-4 row">
           <p class="mt-2 mr-2">নিকেতনৰ নাম</p>
-          <input type="text" class="form-control col mr-2" placeholder=" " />
+            <input
+                type="text"
+                class="form-control"
+                v-model="step9.institute_name"
+                v-validate="'required'"
+                name="institute_name"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.institute_name')" class="text-danger">
+                {{ errors.first("step9.institute_name") }}
+            </span>
         </div>
       </div>
       <!--  -->
@@ -2893,204 +2873,1696 @@
           </tr>
           <tr>
             <td>১</td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
+            <td>
+            <input
+                type="text"
+                class="form-control"
+                v-model="step9.one_name"
+                v-validate="'required'"
+                name="one_name"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.one_name')" class="text-danger">
+                {{ errors.first("step9.one_name") }}
+            </span>
+            </td>
+            <td>
+                <input
+                type="text"
+                class="form-control"
+                v-model="step9.one_start_date"
+                v-validate="'required'"
+                name="one_start_date"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.one_start_date')" class="text-danger">
+                {{ errors.first("step9.one_start_date") }}
+            </span>
+            </td>
+            <td>
+                    <input
+                type="text"
+                class="form-control"
+                v-model="step9.one_end_date"
+                v-validate="'required'"
+                name="one_end_date"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.one_end_date')" class="text-danger">
+                {{ errors.first("step9.one_end_date") }}
+            </span>
+            </td>
+            <td>    <input
+                type="text"
+                class="form-control"
+                v-model="step9.one_mohila"
+                v-validate="'required'"
+                name="one_mohila"
+                placeholder="mohila"
+            />
+            <span v-show="errors.has('step9.one_mohila')" class="text-danger">
+                {{ errors.first("step9.one_mohila") }}
+            </span></td>
+            <td>
+                    <input
+                type="text"
+                class="form-control"
+                v-model="step9.one_nondor"
+                v-validate="'required'"
+                name="one_nondor"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.one_nondor')" class="text-danger">
+                {{ errors.first("step9.one_nondor") }}
+            </span>
+            </td>
+            <td>
+                    <input
+                type="text"
+                class="form-control"
+                v-model="step9.one_ahota"
+                v-validate="'required'"
+                name="one_ahota"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.one_ahota')" class="text-danger">
+                {{ errors.first("step9.one_ahota") }}
+            </span>
+            </td>
+            <td>
+                    <input
+                type="text"
+                class="form-control"
+                v-model="step9.one_pathdam"
+                v-validate="'required'"
+                name="one_pathdam"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.one_pathdam')" class="text-danger">
+                {{ errors.first("step9.one_pathdam") }}
+            </span>
+            </td>
+            <td>
+                    <input
+                type="text"
+                class="form-control"
+                v-model="step9.one_7_diniya"
+                v-validate="'required'"
+                name="one_7_diniya"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.one_7_diniya')" class="text-danger">
+                {{ errors.first("step9.one_7_diniya") }}
+            </span>
+            </td>
+            <td>
+                    <input
+                type="text"
+                class="form-control"
+                v-model="step9.one_15_diniya"
+                v-validate="'required'"
+                name="one_15_diniya"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.one_15_diniya')" class="text-danger">
+                {{ errors.first("step9.one_15_diniya") }}
+            </span>
+            </td>
           </tr>
           <tr>
             <td>২</td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
+            <td>
+                    <input
+                type="text"
+                class="form-control"
+                v-model="step9.two_name"
+                v-validate="'required'"
+                name="two_name"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.two_name')" class="text-danger">
+                {{ errors.first("step9.two_name") }}
+            </span>
+            </td>
+            <td>
+                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.two_start_date"
+                v-validate="'required'"
+                name="two_start_date"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.two_start_date')" class="text-danger">
+                {{ errors.first("step9.two_start_date") }}
+            </span>
+            </td>
+            <td>
+                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.two_end_date"
+                v-validate="'required'"
+                name="two_end_date"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.two_end_date')" class="text-danger">
+                {{ errors.first("step9.two_end_date") }}
+            </span>
+            </td>
+            <td>
+                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.two_mohila"
+                v-validate="'required'"
+                name="two_mohila"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.two_mohila')" class="text-danger">
+                {{ errors.first("step9.two_mohila") }}
+            </span>
+            </td>
+            <td>
+                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.two_nondor"
+                v-validate="'required'"
+                name="two_nondor"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.two_nondor')" class="text-danger">
+                {{ errors.first("step9.two_nondor") }}
+            </span>
+            </td>
+            <td>
+                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.two_ahota"
+                v-validate="'required'"
+                name="two_ahota"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.two_ahota')" class="text-danger">
+                {{ errors.first("step9.two_ahota") }}
+            </span>
+            </td>
+            <td>
+                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.two_pathdam"
+                v-validate="'required'"
+                name="two_pathdam"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.two_pathdam')" class="text-danger">
+                {{ errors.first("step9.two_pathdam") }}
+            </span>
+            </td>
+            <td>
+                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.two_7_diniya"
+                v-validate="'required'"
+                name="two_7_diniya"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.two_7_diniya')" class="text-danger">
+                {{ errors.first("step9.two_7_diniya") }}
+            </span>
+            </td>
+            <td>
+                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.two_15_diniya"
+                v-validate="'required'"
+                name="two_15_diniya"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.two_15_diniya')" class="text-danger">
+                {{ errors.first("step9.two_15_diniya") }}
+            </span>
+            </td>
           </tr>
           <tr>
             <td>৩</td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
+            <td>
+                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.three_name"
+                v-validate="'required'"
+                name="three_name"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.three_name')" class="text-danger">
+                {{ errors.first("step9.three_name") }}
+            </span>
+            </td>
+            <td>
+                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.three_start_date"
+                v-validate="'required'"
+                name="three_start_date"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.three_start_date')" class="text-danger">
+                {{ errors.first("step9.three_start_date") }}
+            </span>
+            </td>
+            <td>
+                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.three_end_date"
+                v-validate="'required'"
+                name="three_end_date"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.three_end_date')" class="text-danger">
+                {{ errors.first("step9.three_end_date") }}
+            </span>
+            </td>
+            <td>
+                <input
+                type="text"
+                class="form-control"
+                v-model="step9.three_mohila"
+                v-validate="'required'"
+                name="three_mohila"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.three_mohila')" class="text-danger">
+                {{ errors.first("step9.three_mohila") }}
+            </span>
+            </td>
+            <td>
+                <input
+                type="text"
+                class="form-control"
+                v-model="step9.three_nondor"
+                v-validate="'required'"
+                name="three_nondor"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.three_nondor')" class="text-danger">
+                {{ errors.first("step9.three_nondor") }}
+            </span>
+            </td>
+            <td>
+                <input
+                type="text"
+                class="form-control"
+                v-model="step9.three_ahota"
+                v-validate="'required'"
+                name="three_ahota"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.three_ahota')" class="text-danger">
+                {{ errors.first("step9.three_ahota") }}
+            </span>
+            </td>
+            <td>
+                <input
+                type="text"
+                class="form-control"
+                v-model="step9.three_pathdam"
+                v-validate="'required'"
+                name="three_pathdam"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.three_pathdam')" class="text-danger">
+                {{ errors.first("step9.three_pathdam") }}
+            </span>
+            </td>
+            <td>
+                <input
+                type="text"
+                class="form-control"
+                v-model="step9.three_7_diniya"
+                v-validate="'required'"
+                name="three_7_diniya"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.three_7_diniya')" class="text-danger">
+                {{ errors.first("step9.three_7_diniya") }}
+            </span>
+            </td>
+            <td>
+                <input
+                type="text"
+                class="form-control"
+                v-model="step9.three_15_diniya"
+                v-validate="'required'"
+                name="three_15_diniya"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.three_15_diniya')" class="text-danger">
+                {{ errors.first("step9.three_15_diniya") }}
+            </span>
+            </td>
           </tr>
           <tr>
             <td colspan="2">আধাৰভূত বিষয়ৰ আচৰ্য/আচাৰ্যাৰ নাম লিখিব</td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
             <td>৪</td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.four_name"
+                v-validate="'required'"
+                name="four_name"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.four_name')" class="text-danger">
+                {{ errors.first("step9.four_name") }}
+            </span>
+            </td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.four_start_date"
+                v-validate="'required'"
+                name="four_start_date"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.four_start_date')" class="text-danger">
+                {{ errors.first("step9.four_start_date") }}
+            </span>
+            </td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.four_end_date"
+                v-validate="'required'"
+                name="four_end_date"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.four_end_date')" class="text-danger">
+                {{ errors.first("step9.four_end_date") }}
+            </span>
+            </td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.four_mohila"
+                v-validate="'required'"
+                name="four_mohila"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.four_mohila')" class="text-danger">
+                {{ errors.first("step9.four_mohila") }}
+            </span>
+            </td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.four_nondor"
+                v-validate="'required'"
+                name="four_nondor"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.four_nondor')" class="text-danger">
+                {{ errors.first("step9.four_nondor") }}
+            </span>
+            </td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.four_ahota"
+                v-validate="'required'"
+                name="four_ahota"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.four_ahota')" class="text-danger">
+                {{ errors.first("step9.four_ahota") }}
+            </span>
+            </td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.four_pathdam"
+                v-validate="'required'"
+                name="four_pathdam"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.four_pathdam')" class="text-danger">
+                {{ errors.first("step9.four_pathdam") }}
+            </span>
+            </td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.four_7_diniya"
+                v-validate="'required'"
+                name="four_7_diniya"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.four_7_diniya')" class="text-danger">
+                {{ errors.first("step9.four_7_diniya") }}
+            </span>
+            </td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.four_15_diniya"
+                v-validate="'required'"
+                name="four_15_diniya"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.four_15_diniya')" class="text-danger">
+                {{ errors.first("step9.four_15_diniya") }}
+            </span>
+            </td>
           </tr>
           <tr>
             <td>৫</td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.five_name"
+                v-validate="'required'"
+                name="five_name"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.five_name')" class="text-danger">
+                {{ errors.first("step9.five_name") }}
+            </span>
+            </td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.five_start_date"
+                v-validate="'required'"
+                name="five_start_date"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.five_start_date')" class="text-danger">
+                {{ errors.first("step9.five_start_date") }}
+            </span>
+            </td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.five_end_date"
+                v-validate="'required'"
+                name="five_end_date"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.five_end_date')" class="text-danger">
+                {{ errors.first("step9.five_end_date") }}
+            </span>
+            </td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.five_mohila"
+                v-validate="'required'"
+                name="five_mohila"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.five_mohila')" class="text-danger">
+                {{ errors.first("step9.five_mohila") }}
+            </span>
+            </td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.five_nondor"
+                v-validate="'required'"
+                name="five_nondor"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.five_nondor')" class="text-danger">
+                {{ errors.first("step9.five_nondor") }}
+            </span>
+            </td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.five_ahota"
+                v-validate="'required'"
+                name="five_ahota"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.five_ahota')" class="text-danger">
+                {{ errors.first("step9.five_ahota") }}
+            </span>
+            </td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.five_pathdam"
+                v-validate="'required'"
+                name="five_pathdam"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.five_pathdam')" class="text-danger">
+                {{ errors.first("step9.five_pathdam") }}
+            </span>
+            </td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.five_7_diniya"
+                v-validate="'required'"
+                name="five_7_diniya"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.five_7_diniya')" class="text-danger">
+                {{ errors.first("step9.five_7_diniya") }}
+            </span>
+            </td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.five_15_diniya"
+                v-validate="'required'"
+                name="five_15_diniya"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.five_15_diniya')" class="text-danger">
+                {{ errors.first("step9.five_15_diniya") }}
+            </span>
+            </td>
           </tr>
           <tr>
             <td>৬</td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.six_name"
+                v-validate="'required'"
+                name="six_name"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.six_name')" class="text-danger">
+                {{ errors.first("step9.six_name") }}
+            </span>
+            </td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.six_start_date"
+                v-validate="'required'"
+                name="six_start_date"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.six_start_date')" class="text-danger">
+                {{ errors.first("step9.six_start_date") }}
+            </span>
+            </td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.six_end_date"
+                v-validate="'required'"
+                name="six_end_date"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.six_end_date')" class="text-danger">
+                {{ errors.first("step9.six_end_date") }}
+            </span>
+            </td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.six_mohila"
+                v-validate="'required'"
+                name="six_mohila"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.six_mohila')" class="text-danger">
+                {{ errors.first("step9.six_mohila") }}
+            </span>
+            </td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.six_nondor"
+                v-validate="'required'"
+                name="six_nondor"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.six_nondor')" class="text-danger">
+                {{ errors.first("step9.six_nondor") }}
+            </span>
+            </td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.six_ahota"
+                v-validate="'required'"
+                name="six_ahota"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.six_ahota')" class="text-danger">
+                {{ errors.first("step9.six_ahota") }}
+            </span>
+            </td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.six_pathdam"
+                v-validate="'required'"
+                name="six_pathdam"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.six_pathdam')" class="text-danger">
+                {{ errors.first("step9.six_pathdam") }}
+            </span>
+            </td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.six_7_diniya"
+                v-validate="'required'"
+                name="six_7_diniya"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.six_7_diniya')" class="text-danger">
+                {{ errors.first("step9.six_7_diniya") }}
+            </span>
+            </td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.six_15_diniya"
+                v-validate="'required'"
+                name="six_15_diniya"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.six_15_diniya')" class="text-danger">
+                {{ errors.first("step9.six_15_diniya") }}
+            </span>
+            </td>
           </tr>
           <tr>
             <td>৭</td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.seven_name"
+                v-validate="'required'"
+                name="seven_name"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.seven_name')" class="text-danger">
+                {{ errors.first("step9.seven_name") }}
+            </span>
+            </td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.seven_start_date"
+                v-validate="'required'"
+                name="seven_start_date"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.seven_start_date')" class="text-danger">
+                {{ errors.first("step9.seven_start_date") }}
+            </span>
+            </td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.seven_end_date"
+                v-validate="'required'"
+                name="seven_end_date"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.seven_end_date')" class="text-danger">
+                {{ errors.first("step9.seven_end_date") }}
+            </span>
+            </td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.seven_mohila"
+                v-validate="'required'"
+                name="seven_mohila"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.seven_mohila')" class="text-danger">
+                {{ errors.first("step9.seven_mohila") }}
+            </span>
+            </td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.seven_nondor"
+                v-validate="'required'"
+                name="seven_nondor"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.seven_nondor')" class="text-danger">
+                {{ errors.first("step9.seven_nondor") }}
+            </span>
+            </td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.seven_ahota"
+                v-validate="'required'"
+                name="seven_ahota"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.seven_ahota')" class="text-danger">
+                {{ errors.first("step9.seven_ahota") }}
+            </span>
+            </td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.seven_pathdam"
+                v-validate="'required'"
+                name="seven_pathdam"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.seven_pathdam')" class="text-danger">
+                {{ errors.first("step9.seven_pathdam") }}
+            </span>
+            </td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.seven_7_diniya"
+                v-validate="'required'"
+                name="seven_7_diniya"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.seven_7_diniya')" class="text-danger">
+                {{ errors.first("step9.seven_7_diniya") }}
+            </span>
+            </td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.seven_15_diniya"
+                v-validate="'required'"
+                name="seven_15_diniya"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.seven_15_diniya')" class="text-danger">
+                {{ errors.first("step9.seven_15_diniya") }}
+            </span>
+            </td>
           </tr>
           <tr>
             <td>৮</td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.eight_name"
+                v-validate="'required'"
+                name="eight_name"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.eight_name')" class="text-danger">
+                {{ errors.first("step9.eight_name") }}
+            </span>
+            </td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.eight_start_date"
+                v-validate="'required'"
+                name="eight_start_date"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.eight_start_date')" class="text-danger">
+                {{ errors.first("step9.eight_start_date") }}
+            </span>
+            </td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.eight_end_date"
+                v-validate="'required'"
+                name="eight_end_date"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.eight_end_date')" class="text-danger">
+                {{ errors.first("step9.eight_end_date") }}
+            </span>
+            </td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.eight_mohila"
+                v-validate="'required'"
+                name="eight_mohila"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.eight_mohila')" class="text-danger">
+                {{ errors.first("step9.eight_mohila") }}
+            </span>
+            </td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.eight_nondor"
+                v-validate="'required'"
+                name="eight_nondor"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.eight_nondor')" class="text-danger">
+                {{ errors.first("step9.eight_nondor") }}
+            </span>
+            </td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.eight_ahota"
+                v-validate="'required'"
+                name="eight_ahota"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.eight_ahota')" class="text-danger">
+                {{ errors.first("step9.eight_ahota") }}
+            </span>
+            </td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.eight_pathdam"
+                v-validate="'required'"
+                name="eight_pathdam"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.eight_pathdam')" class="text-danger">
+                {{ errors.first("step9.eight_pathdam") }}
+            </span>
+            </td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.eight_7_diniya"
+                v-validate="'required'"
+                name="eight_7_diniya"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.eight_7_diniya')" class="text-danger">
+                {{ errors.first("step9.eight_7_diniya") }}
+            </span>
+            </td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.eight_15_diniya"
+                v-validate="'required'"
+                name="eight_15_diniya"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.eight_15_diniya')" class="text-danger">
+                {{ errors.first("step9.eight_15_diniya") }}
+            </span>
+            </td>
           </tr>
           <tr>
             <td colspan="2">বিজ্ঞান বিষয়ৰ আচৰ্য/আচাৰ্যাৰ নাম লিখিব</td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
             <td>৯</td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.nine_name"
+                v-validate="'required'"
+                name="nine_name"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.nine_name')" class="text-danger">
+                {{ errors.first("step9.nine_name") }}
+            </span>
+            </td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.nine_start_date"
+                v-validate="'required'"
+                name="nine_start_date"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.nine_start_date')" class="text-danger">
+                {{ errors.first("step9.nine_start_date") }}
+            </span>
+            </td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.nine_end_date"
+                v-validate="'required'"
+                name="nine_end_date"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.nine_end_date')" class="text-danger">
+                {{ errors.first("step9.nine_end_date") }}
+            </span>
+            </td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.nine_mohila"
+                v-validate="'required'"
+                name="nine_mohila"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.nine_mohila')" class="text-danger">
+                {{ errors.first("step9.nine_mohila") }}
+            </span>
+            </td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.nine_nondor"
+                v-validate="'required'"
+                name="nine_nondor"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.nine_nondor')" class="text-danger">
+                {{ errors.first("step9.nine_nondor") }}
+            </span>
+            </td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.nine_ahota"
+                v-validate="'required'"
+                name="nine_ahota"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.nine_ahota')" class="text-danger">
+                {{ errors.first("step9.nine_ahota") }}
+            </span>
+            </td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.nine_pathdam"
+                v-validate="'required'"
+                name="nine_pathdam"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.nine_pathdam')" class="text-danger">
+                {{ errors.first("step9.nine_pathdam") }}
+            </span>
+            </td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.nine_7_diniya"
+                v-validate="'required'"
+                name="nine_7_diniya"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.nine_7_diniya')" class="text-danger">
+                {{ errors.first("step9.nine_7_diniya") }}
+            </span>
+            </td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.nine_15_diniya"
+                v-validate="'required'"
+                name="nine_15_diniya"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.nine_15_diniya')" class="text-danger">
+                {{ errors.first("step9.nine_15_diniya") }}
+            </span>
+            </td>
           </tr>
           <tr>
             <td>১০</td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
+            <td>                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.ten_name"
+                v-validate="'required'"
+                name="ten_name"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.ten_name')" class="text-danger">
+                {{ errors.first("step9.ten_name") }}
+            </span></td>
+            <td>                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.ten_start_date"
+                v-validate="'required'"
+                name="ten_start_date"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.ten_start_date')" class="text-danger">
+                {{ errors.first("step9.ten_start_date") }}
+            </span></td>
+            <td>                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.ten_end_date"
+                v-validate="'required'"
+                name="ten_end_date"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.ten_end_date')" class="text-danger">
+                {{ errors.first("step9.ten_end_date") }}
+            </span></td>
+            <td>                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.ten_mohila"
+                v-validate="'required'"
+                name="ten_mohila"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.ten_mohila')" class="text-danger">
+                {{ errors.first("step9.ten_mohila") }}
+            </span></td>
+            <td>                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.ten_nondor"
+                v-validate="'required'"
+                name="ten_nondor"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.ten_nondor')" class="text-danger">
+                {{ errors.first("step9.ten_nondor") }}
+            </span></td>
+            <td>                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.ten_ahota"
+                v-validate="'required'"
+                name="ten_ahota"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.ten_ahota')" class="text-danger">
+                {{ errors.first("step9.ten_ahota") }}
+            </span></td>
+            <td>                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.ten_pathdam"
+                v-validate="'required'"
+                name="ten_pathdam"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.ten_pathdam')" class="text-danger">
+                {{ errors.first("step9.ten_pathdam") }}
+            </span></td>
+            <td>                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.ten_7_diniya"
+                v-validate="'required'"
+                name="ten_7_diniya"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.ten_7_diniya')" class="text-danger">
+                {{ errors.first("step9.ten_7_diniya") }}
+            </span></td>
+            <td>                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.ten_15_diniya"
+                v-validate="'required'"
+                name="ten_15_diniya"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.ten_15_diniya')" class="text-danger">
+                {{ errors.first("step9.ten_15_diniya") }}
+            </span></td>
           </tr>
           <tr>
             <td>১১</td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.eleven_name"
+                v-validate="'required'"
+                name="eleven_name"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.eleven_name')" class="text-danger">
+                {{ errors.first("step9.eleven_name") }}
+            </span>
+            </td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.eleven_start_date"
+                v-validate="'required'"
+                name="eleven_start_date"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.eleven_start_date')" class="text-danger">
+                {{ errors.first("step9.eleven_start_date") }}
+            </span>
+            </td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.eleven_end_date"
+                v-validate="'required'"
+                name="eleven_end_date"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.eleven_end_date')" class="text-danger">
+                {{ errors.first("step9.eleven_end_date") }}
+            </span>
+            </td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.eleven_mohila"
+                v-validate="'required'"
+                name="eleven_mohila"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.eleven_mohila')" class="text-danger">
+                {{ errors.first("step9.eleven_mohila") }}
+            </span>
+            </td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.eleven_nondor"
+                v-validate="'required'"
+                name="eleven_nondor"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.eleven_nondor')" class="text-danger">
+                {{ errors.first("step9.eleven_nondor") }}
+            </span>
+            </td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.eleven_ahota"
+                v-validate="'required'"
+                name="eleven_ahota"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.eleven_ahota')" class="text-danger">
+                {{ errors.first("step9.eleven_ahota") }}
+            </span>
+            </td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.eleven_pathdam"
+                v-validate="'required'"
+                name="eleven_pathdam"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.eleven_pathdam')" class="text-danger">
+                {{ errors.first("step9.eleven_pathdam") }}
+            </span>
+            </td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.eleven_7_diniya"
+                v-validate="'required'"
+                name="eleven_7_diniya"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.eleven_7_diniya')" class="text-danger">
+                {{ errors.first("step9.eleven_7_diniya") }}
+            </span>
+            </td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.eleven_15_diniya"
+                v-validate="'required'"
+                name="eleven_15_diniya"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.eleven_15_diniya')" class="text-danger">
+                {{ errors.first("step9.eleven_15_diniya") }}
+            </span>
+            </td>
           </tr>
           <tr>
             <td>১২</td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.twelve_name"
+                v-validate="'required'"
+                name="twelve_name"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.twelve_name')" class="text-danger">
+                {{ errors.first("step9.twelve_name") }}
+            </span>
+            </td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.twelve_start_date"
+                v-validate="'required'"
+                name="twelve_start_date"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.twelve_start_date')" class="text-danger">
+                {{ errors.first("step9.twelve_start_date") }}
+            </span>
+            </td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.twelve_end_date"
+                v-validate="'required'"
+                name="twelve_end_date"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.twelve_end_date')" class="text-danger">
+                {{ errors.first("step9.twelve_end_date") }}
+            </span>
+            </td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.twelve_mohila"
+                v-validate="'required'"
+                name="twelve_mohila"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.twelve_mohila')" class="text-danger">
+                {{ errors.first("step9.twelve_mohila") }}
+            </span>
+            </td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.twelve_nondor"
+                v-validate="'required'"
+                name="twelve_nondor"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.twelve_nondor')" class="text-danger">
+                {{ errors.first("step9.twelve_nondor") }}
+            </span>
+            </td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.twelve_ahota"
+                v-validate="'required'"
+                name="twelve_ahota"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.twelve_ahota')" class="text-danger">
+                {{ errors.first("step9.twelve_ahota") }}
+            </span>
+            </td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.twelve_pathdam"
+                v-validate="'required'"
+                name="twelve_pathdam"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.twelve_pathdam')" class="text-danger">
+                {{ errors.first("step9.twelve_pathdam") }}
+            </span>
+            </td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.twelve_7_diniya"
+                v-validate="'required'"
+                name="twelve_7_diniya"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.twelve_7_diniya')" class="text-danger">
+                {{ errors.first("step9.twelve_7_diniya") }}
+            </span>
+            </td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.twelve_15_diniya"
+                v-validate="'required'"
+                name="twelve_15_diniya"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.twelve_15_diniya')" class="text-danger">
+                {{ errors.first("step9.twelve_15_diniya") }}
+            </span>
+            </td>
           </tr>
           <tr>
             <td colspan="2">আচৰ্য/আচাৰ্যাৰ আৰু অন্য কৰ্মচাৰীৰ নাম লিখিব</td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
           </tr>
           <tr>
             <td>১৩</td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.thirteen_name"
+                v-validate="'required'"
+                name="thirteen_name"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.thirteen_name')" class="text-danger">
+                {{ errors.first("step9.thirteen_name") }}
+            </span>
+            </td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.thirteen_start_date"
+                v-validate="'required'"
+                name="thirteen_start_date"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.thirteen_start_date')" class="text-danger">
+                {{ errors.first("step9.thirteen_start_date") }}
+            </span>
+            </td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.thirteen_end_date"
+                v-validate="'required'"
+                name="thirteen_end_date"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.thirteen_end_date')" class="text-danger">
+                {{ errors.first("step9.thirteen_end_date") }}
+            </span>
+            </td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.thirteen_mohila"
+                v-validate="'required'"
+                name="thirteen_mohila"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.thirteen_mohila')" class="text-danger">
+                {{ errors.first("step9.thirteen_mohila") }}
+            </span>
+            </td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.thirteen_nondor"
+                v-validate="'required'"
+                name="thirteen_nondor"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.thirteen_nondor')" class="text-danger">
+                {{ errors.first("step9.thirteen_nondor") }}
+            </span>
+            </td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.thirteen_ahota"
+                v-validate="'required'"
+                name="thirteen_ahota"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.thirteen_ahota')" class="text-danger">
+                {{ errors.first("step9.thirteen_ahota") }}
+            </span>
+            </td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.thirteen_pathdam"
+                v-validate="'required'"
+                name="thirteen_pathdam"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.thirteen_pathdam')" class="text-danger">
+                {{ errors.first("step9.thirteen_pathdam") }}
+            </span>
+            </td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.thirteen_7_diniya"
+                v-validate="'required'"
+                name="thirteen_7_diniya"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.thirteen_7_diniya')" class="text-danger">
+                {{ errors.first("step9.thirteen_7_diniya") }}
+            </span>
+            </td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.thirteen_15_diniya"
+                v-validate="'required'"
+                name="thirteen_15_diniya"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.thirteen_15_diniya')" class="text-danger">
+                {{ errors.first("step9.thirteen_15_diniya") }}
+            </span>
+            </td>
           </tr>
           <tr>
             <td>১৪</td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
-            <td><input type="text" value=" " class="form-control" /></td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.fourteen_name"
+                v-validate="'required'"
+                name="fourteen_name"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.fourteen_name')" class="text-danger">
+                {{ errors.first("step9.fourteen_name") }}
+            </span>
+            </td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.fourteen_start_date"
+                v-validate="'required'"
+                name="fourteen_start_date"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.fourteen_start_date')" class="text-danger">
+                {{ errors.first("step9.fourteen_start_date") }}
+            </span>
+            </td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.fourteen_end_date"
+                v-validate="'required'"
+                name="fourteen_end_date"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.fourteen_end_date')" class="text-danger">
+                {{ errors.first("step9.fourteen_end_date") }}
+            </span>
+            </td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.fourteen_mohila"
+                v-validate="'required'"
+                name="fourteen_mohila"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.fourteen_mohila')" class="text-danger">
+                {{ errors.first("step9.fourteen_mohila") }}
+            </span>
+            </td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.fourteen_nondor"
+                v-validate="'required'"
+                name="fourteen_nondor"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.fourteen_nondor')" class="text-danger">
+                {{ errors.first("step9.fourteen_nondor") }}
+            </span>
+            </td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.fourteen_ahota"
+                v-validate="'required'"
+                name="fourteen_ahota"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.fourteen_ahota')" class="text-danger">
+                {{ errors.first("step9.fourteen_ahota") }}
+            </span>
+            </td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.fourteen_pathdam"
+                v-validate="'required'"
+                name="fourteen_pathdam"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.fourteen_pathdam')" class="text-danger">
+                {{ errors.first("step9.fourteen_pathdam") }}
+            </span>
+            </td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.fourteen_7_diniya"
+                v-validate="'required'"
+                name="fourteen_7_diniya"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.fourteen_7_diniya')" class="text-danger">
+                {{ errors.first("step9.fourteen_7_diniya") }}
+            </span>
+            </td>
+            <td>
+                                        <input
+                type="text"
+                class="form-control"
+                v-model="step9.fourteen_15_diniya"
+                v-validate="'required'"
+                name="fourteen_15_diniya"
+                placeholder=""
+            />
+            <span v-show="errors.has('step9.fourteen_15_diniya')" class="text-danger">
+                {{ errors.first("step9.fourteen_15_diniya") }}
+            </span>
+            </td>
           </tr>
         </tbody>
       </table>
@@ -3104,7 +4576,7 @@
     </button>
     </div>
     <div class="d-flex flex-row-reverse">
-        <button type="submit" class="btn btn-outline-primary">Next</button>
+        <button type="submit" class="btn btn-outline-primary">Submit</button>
     </div>
     </form>
   </div>
@@ -3113,8 +4585,9 @@
 export default {
   data() {
     return {
-      steps: 9,
-      max_steps: 5,
+      steps: 1,
+      max_steps: 9,
+      finalFormData: {},
       step1: {
         institute_name: "", //id => number
         city: "",
@@ -3293,7 +4766,148 @@ export default {
         twenty: "",
       },
       step9: {
-        insins: "",
+        institute_name: "",
+        //row start
+        //1st row
+        one_name: "",
+        one_start_date: "",
+        one_end_date: "",
+        one_mohila: "",
+        one_nondor: "",
+        one_ahota: "",
+        one_pathdam: "",
+        one_7_diniya: "",
+        one_15_diniya: "",
+        //2nd row
+        two_name: "",
+        two_start_date: "",
+        two_end_date: "",
+        two_mohila: "",
+        two_nondor: "",
+        two_ahota: "",
+        two_pathdam: "",
+        two_7_diniya: "",
+        two_15_diniya: "",
+        //3rd row
+        three_name: "",
+        three_start_date: "",
+        three_end_date: "",
+        three_mohila: "",
+        three_nondor: "",
+        three_ahota: "",
+        three_pathdam: "",
+        three_7_diniya: "",
+        three_15_diniya: "",
+        //4th row
+        four_name: "",
+        four_start_date: "",
+        four_end_date: "",
+        four_mohila: "",
+        four_nondor: "",
+        four_ahota: "",
+        four_pathdam: "",
+        four_7_diniya: "",
+        four_15_diniya: "",
+        //5th
+        five_name: "",
+        five_start_date: "",
+        five_end_date: "",
+        five_mohila: "",
+        five_nondor: "",
+        five_ahota: "",
+        five_pathdam: "",
+        five_7_diniya: "",
+        five_15_diniya: "",
+        //6th
+        six_name: "",
+        six_start_date: "",
+        six_end_date: "",
+        six_mohila: "",
+        six_nondor: "",
+        six_ahota: "",
+        six_pathdam: "",
+        six_7_diniya: "",
+        six_15_diniya: "",
+        //7th
+        seven_name: "",
+        seven_start_date: "",
+        seven_end_date: "",
+        seven_mohila: "",
+        seven_nondor: "",
+        seven_ahota: "",
+        seven_pathdam: "",
+        seven_7_diniya: "",
+        seven_15_diniya: "",
+        //8th
+        eight_name: "",
+        eight_start_date: "",
+        eight_end_date: "",
+        eight_mohila: "",
+        eight_nondor: "",
+        eight_ahota: "",
+        eight_pathdam: "",
+        eight_7_diniya: "",
+        eight_15_diniya: "",
+        //9th row
+        nine_name: "",
+        nine_start_date: "",
+        nine_end_date: "",
+        nine_mohila: "",
+        nine_nondor: "",
+        nine_ahota: "",
+        nine_pathdam: "",
+        nine_7_diniya: "",
+        nine_15_diniya: "",
+        //10th row
+        ten_name: "",
+        ten_start_date: "",
+        ten_end_date: "",
+        ten_mohila: "",
+        ten_nondor: "",
+        ten_ahota: "",
+        ten_pathdam: "",
+        ten_7_diniya: "",
+        ten_15_diniya: "",
+        //11th row
+        eleven_name: "",
+        eleven_start_date: "",
+        eleven_end_date: "",
+        eleven_mohila: "",
+        eleven_nondor: "",
+        eleven_ahota: "",
+        eleven_pathdam: "",
+        eleven_7_diniya: "",
+        eleven_15_diniya: "",
+        //12th row
+        twelve_name: "",
+        twelve_start_date: "",
+        twelve_end_date: "",
+        twelve_mohila: "",
+        twelve_nondor: "",
+        twelve_ahota: "",
+        twelve_pathdam: "",
+        twelve_7_diniya: "",
+        twelve_15_diniya: "",
+        //13th row
+        thirteen_name: "",
+        thirteen_start_date: "",
+        thirteen_end_date: "",
+        thirteen_mohila: "",
+        thirteen_nondor: "",
+        thirteen_ahota: "",
+        thirteen_pathdam: "",
+        thirteen_7_diniya: "",
+        thirteen_15_diniya: "",
+        //14th row
+        fourteen_name: "",
+        fourteen_start_date: "",
+        fourteen_end_date: "",
+        fourteen_mohila: "",
+        fourteen_nondor: "",
+        fourteen_ahota: "",
+        fourteen_pathdam: "",
+        fourteen_7_diniya: "",
+        fourteen_15_diniya: "",
       },
       serverErrors: {
         //step 1
@@ -3349,7 +4963,17 @@ export default {
         teacher_total_2: "",
         teacher_karmachari_2: "",
       },
+      channelId: "",
     };
+  },
+  props: {
+    channelid: {
+      type: Number,
+      default: null,
+    },
+  },
+  created() {
+    this.channelId = this.channelid;
   },
   mounted() {},
   methods: {
@@ -3357,7 +4981,6 @@ export default {
       //this.$validator.validateAll(scope).then((result) => {
       this.$validator.validate().then((result) => {
         if (result) {
-          console.log("hit");
           if (this.steps != this.max_steps) this.steps++;
 
           //   const el = this.$el.querySelector(".steps");
@@ -3376,8 +4999,44 @@ export default {
         }
       });
     },
-    submitForm() {
-      console.log("Probir");
+    submitForm(scope) {
+      this.$validator.validate().then((result) => {
+        if (result) {
+          this.step1 = { step1: this.step1 };
+          this.step2 = { step2: this.step2 };
+          this.step3 = { step3: this.step3 };
+          this.step4 = { step4: this.step4 };
+          this.step5 = { step5: this.step5 };
+          this.step6 = { step6: this.step6 };
+          this.step7 = { step7: this.step7 };
+          this.step8 = { step8: this.step8 };
+          this.step9 = { step9: this.step9 };
+          this.finalFormData = _.merge(this.finalFormData, this.step1);
+          this.finalFormData = _.merge(this.finalFormData, this.step2);
+          this.finalFormData = _.merge(this.finalFormData, this.step3);
+          this.finalFormData = _.merge(this.finalFormData, this.step4);
+          this.finalFormData = _.merge(this.finalFormData, this.step5);
+          this.finalFormData = _.merge(this.finalFormData, this.step6);
+          this.finalFormData = _.merge(this.finalFormData, this.step7);
+          this.finalFormData = _.merge(this.finalFormData, this.step8);
+          this.finalFormData = _.merge(this.finalFormData, this.step9);
+          axios
+            .post(
+              "/api/supervisor/form/submit/" + this.channelId,
+              this.finalFormData
+            )
+            .then((response) => {
+              if (response.data.message === true) {
+                Vue.toasted.success("Please fill the required fields!", {
+                  position: "top-center",
+                  duration: 3000,
+                });
+              }
+              this.steps = 1;
+            })
+            .catch((errors) => {});
+        }
+      });
     },
     goPrev() {
       console.log("hit");

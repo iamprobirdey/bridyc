@@ -182,6 +182,9 @@ return [
         //User Agent
         //Jenssegers\Agent\AgentServiceProvider::class,
 
+        //pdf
+        Barryvdh\DomPDF\ServiceProvider::class,
+
 
     ],
 
@@ -236,6 +239,9 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
         'Image' => 'Intervention\Image\Facades\Image',
+
+        //pdf
+        'PDF' => Barryvdh\DomPDF\Facade::class,
 
         //User Agent
         //'Agent' => Jenssegers\Agent\Facades\Agent::class,

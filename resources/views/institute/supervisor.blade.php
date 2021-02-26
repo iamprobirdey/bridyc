@@ -31,7 +31,7 @@ video')
             <br>
             <br>
             <div id="channel-supervisor">
-                <channel-supervisor></channel-supervisor>
+                <channel-supervisor :channelid="{{$channelid}}"></channel-supervisor>
             </div>
         </main>
     </div>
