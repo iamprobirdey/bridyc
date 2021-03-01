@@ -6,6 +6,8 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes(['verify' => true]);
 
+
+
 // Route::get('test', 'Teacher\PhoneNumberVerificationController@phoneVerification');
 
 // Route::get('google/login', 'Auth\GoogleLoginController@getGoogleLogIn')->middleware('guest');

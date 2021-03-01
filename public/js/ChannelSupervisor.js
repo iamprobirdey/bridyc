@@ -1335,7 +1335,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -5904,7 +5903,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/js/ChannelSupervisor.js */"./resources/js/ChannelSupervisor.js");
+module.exports = __webpack_require__(/*! C:\laragon\www\bridyc\resources\js\ChannelSupervisor.js */"./resources/js/ChannelSupervisor.js");
 
 
 /***/ })

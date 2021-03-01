@@ -32,8 +32,9 @@ video')
         </tr>
     </thead>
     <tbody>
-
     </tbody>
 </table>
+
+
 
 @endsection

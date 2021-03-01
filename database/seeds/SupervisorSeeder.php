@@ -24,7 +24,7 @@ class SupervisorSeeder extends Seeder
         $user1 = User::create([
             'name' => Str::random(10),
             'email' => 'supervisor@gmail.com',
-            'password' => '$2y$10$MLQ1DkGHDZ0fZ1TR/k4KVeD2B.1nawZDw4Qsz7AMuAsoXrq3ddNeO',
+            'password' => '$2y$10$ss2iCTPjTtW0uhlOM7TtduV5jzDio.1JClG8FPZ.NpNiVYoSanPMi',
             'username' => 'supervisor',
             'user_type' => 'supervisor',
         ]);
