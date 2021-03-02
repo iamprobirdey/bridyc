@@ -331,25 +331,25 @@ export default {
     //     });
     //   }
     // }, 500),
-    // deleteCollege(image, index) {
-    //   axios
-    //     .post("/api/delete/college/image/" + image.id)
-    //     .then((response) => {
-    //       if (response.data.message) {
-    //         this.channelData.college_image.splice(index, 1);
-    //         Vue.toasted.success("Image successfully deleted", {
-    //           position: "top-center",
-    //           duration: 5000,
-    //         });
-    //       }
-    //     })
-    //     .catch((errors) => {
-    //       Vue.toasted.error("Image successfully deleted", {
-    //         position: "top-center",
-    //         duration: 5000,
-    //       });
-    //     });
-    // },
+    deleteCollege(image, index) {
+      axios
+        .post("/api/delete/college/image/" + image.id)
+        .then((response) => {
+          if (response.data.message) {
+            this.channelData.college_image.splice(index, 1);
+            Vue.toasted.success("Image successfully deleted", {
+              position: "top-center",
+              duration: 5000,
+            });
+          }
+        })
+        .catch((errors) => {
+          Vue.toasted.error("Image successfully deleted", {
+            position: "top-center",
+            duration: 5000,
+          });
+        });
+    },
     // insertImage() {
     //   this.collegeImageEntry = true;
     //   this.wait = false;
