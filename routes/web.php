@@ -184,7 +184,8 @@ Route::group([
     'prefix' => 'supervisor',
     'middleware' => ['can:supervisor']
 ], function () {
-    Route::get('/', 'Supervisor\SupervisorController@index')->name('supervisor');
+    Route::get('/dashboard', 'Supervisor\SupervisorController@index')->name('supervisor.dashboard');
+    Route::get('/report', 'Supervisor\SupervisorController@report')->name('supervisor');
     Route::get('/view/{id}', 'Supervisor\SupervisorController@view')->name('supervisor.view');
     Route::get('/pdf/{id}', 'Supervisor\SupervisorController@test');
     Route::get('/test', 'Supervisor\SupervisorController@test2');

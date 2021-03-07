@@ -14,6 +14,11 @@ class SupervisorController extends Controller
 {
     public function index()
     {
+        return view('supervisor.dashboard');
+    }
+
+    public function report()
+    {
         $supervisorData = ChannelSupervisor::with('channel')->get();
         return view('supervisor.channel_list', compact('supervisorData'));
     }
