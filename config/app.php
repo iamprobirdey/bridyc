@@ -183,9 +183,7 @@ return [
         //Jenssegers\Agent\AgentServiceProvider::class,
 
         //pdf
-        Barryvdh\DomPDF\ServiceProvider::class,
-
-
+        Meneses\LaravelMpdf\LaravelMpdfServiceProvider::class
     ],
 
     /*
@@ -241,10 +239,14 @@ return [
         'Image' => 'Intervention\Image\Facades\Image',
 
         //pdf
-        'PDF' => Barryvdh\DomPDF\Facade::class,
-
+        'PDF' => Meneses\LaravelMpdf\Facades\LaravelMpdf::class
         //User Agent
         //'Agent' => Jenssegers\Agent\Facades\Agent::class,
+
+
+
+
+
 
     ],
 

@@ -3,13 +3,7 @@
 <html>
 
 {{-- @section('css_code') --}}
-<link rel="stylesheet" type="text/css" href="{{url('css/app.css')}}">
-<style>
-    .page-break {
-        page-break-after: always;
-    }
-</style>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
 {{-- @endsection
 @section('content') --}}
 <br>
@@ -22,14 +16,34 @@ $form_data = json_decode($supervisorData[0]->form_data);
 //dd($supervisorData[0]->channel->title);
 //dd($form_data->step1->city);
 
+
 @endphp
+
+<head>
+    {{-- <link rel="stylesheet" type="text/css" href="{{url('css/app.css')}}"> --}}
+    <style>
+        .page-break {
+            page-break-after: always;
+        }
+
+        .letMePutOneColor {
+            color: red
+        }
+
+        body {
+            font-family: 'examplefont', sans-serif;
+        }
+    </style>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    {{-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"> --}}
+</head>
 
 <body>
     <div class="container">
         <form class="form-horizontal ">
             <div class="form-row">
                 <div class="form-group col-md-12">
-                    <label for="inputEmail4">Niketan Name</label>
+                    <label for="inputEmail4 letMePutOneColor">নিকেতনৰ নাম</label>
                     <input value="{{$supervisorData[0]->channel->title}}" type="text" name="institute_name"
                         class="form-control" placeholder="নিকেতনৰ নাম" />
                 </div>
@@ -37,7 +51,7 @@ $form_data = json_decode($supervisorData[0]->form_data);
 
             <div class="form-row">
                 <div class="form-group col-md-3 col-sm-6">
-                    <label for="inputCity">স্থান</label>
+                    <label for="inputCity">{!! htmlspecialchars('স্থান') !!}</label>
                     <input value="{{$form_data->step1->city}}" type="text" name="city" class="form-control" />
                 </div>
                 <div class="form-group col-md-3 col-sm-6">
@@ -81,15 +95,15 @@ $form_data = json_decode($supervisorData[0]->form_data);
 
             <div class="form-row">
                 <div class="form-group col-md-4 col-sm-6">
-                    <label for="inputCity">E-mail</label>
+                    <label for="inputCity">ই-মেইল</label>
                     <input type="email" class="form-control" name="email" value="{{$form_data->step1->email}}" />
                 </div>
                 <div class="form-group col-md-4 col-sm-6">
-                    <label for="text">Website</label>
+                    <label for="text">ৱেবছাইট</label>
                     <input type="text" class="form-control" name="website" value="{{$form_data->step1->website}}" />
                 </div>
                 <div class="form-group col-md-4">
-                    <label for="text">WhatApp</label>
+                    <label for="text">মোবাইল নম্বৰ</label>
                     <div class="input-group">
                         <div class="input-group-prepend">
                             <div class="input-group-text">+91</div>

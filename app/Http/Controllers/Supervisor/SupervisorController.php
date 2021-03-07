@@ -2,10 +2,13 @@
 
 namespace App\Http\Controllers\Supervisor;
 
+use App\Channel;
 use App\ChannelSupervisor;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use Barryvdh\DomPDF\Facade as PDF;
+//use Barryvdh\Snappy\Facades\SnappyPdf as PDF;
+//use Barryvdh\DomPDF\PDF;
+use PDF;
 
 class SupervisorController extends Controller
 {
@@ -15,14 +18,24 @@ class SupervisorController extends Controller
         return view('supervisor.channel_list', compact('supervisorData'));
     }
 
-    public function test()
+    public function test($id)
+    {
+        $supervisorData = ChannelSupervisor::with('channel')->where('id', $id)->get();
+        $pdf = PDF::loadView('supervisor.supervisor_form', compact('supervisorData'));
+        return $pdf->stream('document.pdf');
+    }
+
+    public function test2()
     {
         $supervisorData = ChannelSupervisor::with('channel')->where('id', 4)->get();
 
-        //PDF::set_option('enable_html5_parser', TRUE);
         $pdf = PDF::loadView('supervisor.supervisor_form', compact('supervisorData'));
-        //return $pdf->download($supervisorData[0]->channel->title . 'pdf');
-        return $pdf->download('pro.pdf');
-        //return view('supervisor.supervisor_form', compact('supervisorData'));
+        return $pdf->stream('document.pdf');
+    }
+
+    public function view($id)
+    {
+        $supervisorData = ChannelSupervisor::with('channel')->where('id', $id)->get();
+        return view('supervisor.supervisor_view', compact('supervisorData'));
     }
 }

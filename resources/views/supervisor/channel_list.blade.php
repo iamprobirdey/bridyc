@@ -32,32 +32,24 @@ video')
 <table class="table table-bordered table-responsive">
     <thead>
         <tr>
-            <th scope="col">ID</th>
-            <th scope="col">School/College Name</th>
-            <th class="col-5" scope="col">Action</th>
+            <th scope="col-1" scope="col">ID</th>
+            <th scope="col-3" scope="col">Date</th>
+            <th scope="col-4" scope="col">School/College Name</th>
+            <th scope="col-2" scope="col">View</th>
+            <th class="col-2" scope="col">Action</th>
         </tr>
     </thead>
     <tbody>
         @foreach ($supervisorData as $item)
         <tr>
-
-            <th scope="row">1</th>
+            <th scope="row">{{$item->id}}</th>
+            <td>{{$item->created_at->diffForHumans()}}</td>
             <td>{{$item->channel->title}}</td>
             <td>
-                <div class="dropdown">
-                    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd"
-                                d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z"
-                                clip-rule="evenodd" />
-                        </svg>
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                        {{-- <a class="dropdown-item" href="#">View</a> --}}
-                        <a class="dropdown-item" href="#">Download</a>
-                    </div>
-                </div>
+                <a class="btn btn-primary" href="{{url('supervisor/view/' . $item->id)}}">View</a>
+            </td>
+            <td>
+                <a class="btn btn-success" href="{{url('supervisor/pdf/' . $item->id)}}">Download</a>
             </td>
         </tr>
         @endforeach

@@ -3,7 +3,7 @@
 
         <ul class="nav flex-column">
             <li class="nav-item ">
-                <a class="nav-link" href="{{url('/admin/userinfo/')}}">
+                <a class="nav-link" href="{{url('/supervisor')}}">
                     <span class="material-icons sidebaricons">
                         dashboard
                     </span>
