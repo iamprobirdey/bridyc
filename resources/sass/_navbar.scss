@@ -1,194 +1,168 @@
-nav{
+
+
+
+nav {
     margin-left: auto;
     margin-right: auto;
     background-color: white;
 
     #collapsibleNavbar {
-      @include screensize(formobilemenu){
-        position: fixed;
-        top: 0;
-        right: 0;
-        padding-top: 60px;
-        z-index: 99;
-        width: 80%;
-        height: 100%;
-        background-color:rgba(1, 22, 54, 0.9);
-        overflow: auto;
-      }
-      .closemenu{
-        color: white;
-        position: relative;
-        top:-50px;
-        right: 15px;
-        font-size: 40px; 
-        font-weight: 100;
-        text-shadow:white;
-        
-       }
-      
+        @include screensize(formobilemenu) {
+            position: fixed;
+            top: 0;
+            right: 0;
+            padding-top: 60px;
+            z-index: 99;
+            width: 80%;
+            height: 100%;
+            background-color: rgba(1, 22, 54, 0.9);
+            overflow: auto;
+        }
+
+        .closemenu {
+            color: white;
+            position: relative;
+            top: -50px;
+            right: 15px;
+            font-size: 40px;
+            font-weight: 100;
+            text-shadow: white;
+
+        }
+
     }
 
 
- 
-    a{
-    .imglogo{
-        width:90px;
-        height: auto;
-        margin-top: -12px;
-        margin-bottom: -9px;
-        margin-left: -5px;
-        transition: all ease .5s;
-        @include screensize(tablet){
-            width: 140px;
+
+    a {
+        .imglogo {
+            width: 90px;
             height: auto;
-            margin-top: -5px;
-            margin-bottom:-5px;
-        }
-        
-    }
-  }
-  ul{
-    a{
-        font-size: large;
-        color: black;
-        margin-left: 20px;
-        margin-right:20px;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        &:hover{
-           color: black;
-       }
-       @include screensize(formobilemenu){
-          color:white;
-          &:hover{
-              color: white;
-          }
-      }
-     }
-}
+            margin-top: -12px;
+            margin-bottom: -9px;
+            margin-left: 6px;
+            transition: all ease .5s;
 
-  .colbtn{
-      color: #011737;
-  }
-
-  .btndashboard{
-    border-radius: 0;
-    background-color: #990066;
-    color: white;
-    &:hover{
-        color: white; 
-        background-color: #7e0255;
-    }
-}
-
-    .navbtn{
-        @include screensize(formobilemenu){
-            background-color: #003585;
-        }
-        margin-top: 20px;
-        border-radius: 25px;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        color: white;
-        background-color: #011737;
-
-        @include screensize(forbutton){
-            margin-top: 0px;
+            @include screensize(tablet) {
+                width: 100px;
+                height: auto;
+                margin-top: -5px;
+                margin-bottom: -5px;
             }
-            &:hover{
+
+        }
+    }
+
+    ul {
+        a {
+            font-size: large;
+            color: black;
+            margin-left: 20px;
+            margin-right: 20px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+            &:hover {
+                color: black;
+            }
+
+            @include screensize(formobilemenu) {
                 color: white;
-                background-color: #011737;
-            }
-    }
 
-}
-
-//scss for when navbar shrinks on scroll starts here 
-.shrink{
-    background-color: white;
-    transition: all ease-in .5s;
-        a{
-            @include screensize(formobilemenu){
-                color:white;
-                &:hover{
+                &:hover {
                     color: white;
                 }
             }
-        color: black;
-        &:hover{
-            color: black;
-        }
-        
-       
-        .imglogo{
-            width: 80px;
-            @include screensize(tablet){
-                width: 110px;
-                }
         }
     }
 
-    .navbtn{
-        @include screensize(formobilemenu){
-            background-color: #003585;
-        }
-        margin-top: 20px;
-        background-color: #011737;
-        color: white;
-        @include screensize(forbutton){
-            margin-top: 0px;
-            }
-            &:hover{
-                color: white;
-                background-color: #011737;
-            }
-    }
-    .colbtn{
+    .colbtn {
         color: #011737;
     }
-    .btndashboard{
+
+    .btndashboard {
+        border-radius: 0;
+        background-color: #990066;
         color: white;
-        &:hover{
+
+        &:hover {
             color: white;
+            background-color: #7e0255;
         }
-    }
-    .btn-danger{
-      color: white;
-      &:hover{
-          color:white;
-      }
     }
 
-    #collapsibleNavbar{
-        @include screensize(formobilemenu){
-        background-color:rgba(1, 29, 71, 0.9);
-        color:white;
+    .navbtn {
+        @include screensize(formobilemenu) {
+            background-color: #003585;
         }
-        
+
+        margin-top: 20px;
+        border-radius: 6px;
+        color: white;
+        background-color: #3C50E0;
+
+        @include screensize(forbutton) {
+            margin-top: 0px;
+        }
+
+        &:hover {
+            color: white;
+            background-color: #00139A;
+            transition: 0.5s ease, transform 0.25s ease;
+        }
     }
+    .navbtnborder{
+        
+        @include screensize(formobilemenu) {
+            background-color: #003585;
+        }
+
+        margin-top: 20px;
+        border-radius: 6px;
+        color: #3C50E0;
+        background-color: #F4F8FE;
+        border: 2px solid #D4E0FF;
+
+        @include screensize(forbutton) {
+            margin-top: 0px;
+        }
+
+        &:hover {
+            transition: 0.5s ease, transform 0.25s ease;
+            color: white;
+            background-color: #00139A;
+            border: 2px solid #00139A;
+        }
+    }
+
 }
-//scss for when navbar shrinks on scroll ends here 
+
 
 //registration and login scss starts here
-.regBen{
+.regBen {
     background-image: linear-gradient(to top, #011737, #00385e, #005d84, #0084a8, #02aec8);
     text-align: center;
     margin-left: 14px;
     margin-right: 14px;
-    @include screensize(laptop){
-    margin-left: 0;
-    margin-right: 0;
+
+    @include screensize(laptop) {
+        margin-left: 0;
+        margin-right: 0;
     }
-    .regformlogo{
+
+    .regformlogo {
         width: 100px;
         height: 100px;
         margin-top: 20px;
         margin-left: auto;
         margin-right: auto;
     }
-    p{
+
+    p {
         color: white;
         text-align: left;
     }
-    .haveanaccount{
+
+    .haveanaccount {
         color: black;
         font-weight: 700;
         background-color: white;
@@ -198,10 +172,12 @@ nav{
         position: absolute;
         left: 16px;
         display: none;
-        @include screensize(laptop){
+
+        @include screensize(laptop) {
             display: block;
-            }
-        &:hover{
+        }
+
+        &:hover {
             background-color: rgb(246, 246, 246);
             border-bottom-left-radius: 5px;
             border-top-right-radius: 5px;
@@ -209,84 +185,95 @@ nav{
         }
 
     }
-    .smallclose{
+
+    .smallclose {
         color: white;
-        @include screensize(laptop){
+
+        @include screensize(laptop) {
             display: none;
-            }
+        }
     }
 }
 
-.signup{
+.signup {
     margin-top: 30px;
     margin-bottom: 80px;
-    .regheader{
+
+    .regheader {
         text-align: center;
         margin-top: 30px;
         font-family: Georgia, 'Times New Roman', Times, serif;
-        .fbsignup{
-            background-color:#011737;
+
+        .fbsignup {
+            background-color: #011737;
             color: white;
             padding: 7px;
             text-decoration: none;
-            &:hover{
-                background-color:#014270 ;
+
+            &:hover {
+                background-color: #014270;
             }
         }
     }
-    p{
+
+    p {
         font-size: 12px;
     }
-    .haveaccount{
-        @include screensize(laptop){
+
+    .haveaccount {
+        @include screensize(laptop) {
             display: none;
-            }
+        }
     }
 }
 
 
-.bigclose{
+.bigclose {
     display: none;
 
-    @include screensize(laptop){
+    @include screensize(laptop) {
         display: block;
         color: #011737;
-        }
+    }
 }
-.iplognsign{
+
+.iplognsign {
     border-top: 0;
     border-left: 0;
     border-right: 0;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
-   }
+}
 
-.btnlognsign{
+.btnlognsign {
     width: 100%;
     color: white;
     background-color: #011737;
     padding-left: 45px;
     padding-right: 45px;
-    &:hover{
-        background-color:#014270 ;
+
+    &:hover {
+        background-color: #014270;
         color: white;
     }
 }
 
-.login{
-    margin-bottom:50px;
-    @include screensize(laptop){
+.login {
+    margin-bottom: 50px;
+
+    @include screensize(laptop) {
         margin-top: 100px;
         margin-bottom: 130px;
-        }
-    .logheader{
+    }
+
+    .logheader {
         text-align: center;
         font-family: Georgia, 'Times New Roman', Times, serif;
     }
-    .newuser{
+
+    .newuser {
         text-decoration: none;
     }
 }
+
 //scss for login and registration ends here
-
-

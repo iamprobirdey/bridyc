@@ -33,6 +33,7 @@ crossed those paths')
 @endsection
 @section('content')
 
+
 <banner>
 
     <div class="img-fluid imgban">
@@ -41,7 +42,9 @@ crossed those paths')
             <p class="sitevalue">Learn | Share | Engage | Find Institute</p>
             <p>And we charge you <strong>Nothing</strong></p>
             <br>
-            <a href="{{route('about')}}" class="p-2 p-md-3">Read More</a>
+            <a href="{{route('about')}}" class="p-2 p-md-3">Read More
+                <img class="svg24" src="/images/custom/rightarrow.svg" alt="">
+            </a>
         </div>
     </div>
     <div class="container focusplace">
@@ -66,8 +69,7 @@ crossed those paths')
                         {{$podcast->summary}}
                     </p>
 
-                    <button class="btn playbtn" data-toggle="modal" data-src="{{$podcast->youtube_link}}"
-                        data-target="#podcastModal"><img src="/images/play.svg"> Watch Now</button>
+                    <button class="btn playbtn" data-toggle="modal" data-src="{{$podcast->youtube_link}}" data-target="#podcastModal"><img src="/images/play.svg"> Watch Now</button>
                 </div>
             </div>
             @endif
@@ -84,8 +86,7 @@ crossed those paths')
                 </button>
 
                 <div class="embed-responsive embed-responsive-16by9">
-                    <iframe class="embed-responsive-item" src="" id="video" allowscriptaccess="always"
-                        allow="autoplay"></iframe>
+                    <iframe class="embed-responsive-item" src="" id="video" allowscriptaccess="always" allow="autoplay"></iframe>
                 </div>
             </div>
         </div>
@@ -93,18 +94,30 @@ crossed those paths')
 </div>
 
 <br>
-<section>
+<!-- <section>
     <div class="container-fluid">
         <div class="aboutdesc mx-auto">
-            <h4>SCHOOLS AND COLLEGES</h4>
+            <div class="overAllCentre mt-6">
+                <h4>SCHOOLS AND COLLEGES</h4>
 
-            <p>
-                Look out for the right institute for you or your kids. Visit the institute you like
-                and find out more about them.
-            </p>
+                <p>
+                    Look out for the right institute for you or your kids. Visit the institute you like
+                    and find out more about them.
+                </p>
+            </div>
         </div>
     </div>
-</section>
+</section> -->
+<div class="alert alert-warning" role="alert">
+<div class="overAllCentre mt-6">
+                <h4>SCHOOLS AND COLLEGES</h4>
+
+                <p>
+                    Look out for the right institute for you or your kids. Visit the institute you like
+                    and find out more about them.
+                </p>
+            </div>
+</div>
 
 
 <div id="channel">

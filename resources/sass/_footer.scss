@@ -1,7 +1,7 @@
 
 
 .footer-class{
-    background-image: linear-gradient(to right top, #011737, #002847, #003954, #004a5f, #005b67);
+    background-color: #140B5C;
     color: white;
         a{
             color: white;
@@ -15,7 +15,9 @@
      }
 
      hr{
-         border-bottom: 3px solid white;
+         border-bottom: 2px solid white;
+         margin: 20px 20px;
+         border-radius: 6px;
 
      }
 }
@@ -58,7 +60,7 @@
 
      .txtbanner {
         width: 100%;
-        //font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-family: 'Nunito Sans', sans-serif;
         
         h1{
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -87,7 +89,7 @@
     margin-top: 50px;
     color: #3659a2; 
     background-color:#f9fafa ;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
 }
 
 

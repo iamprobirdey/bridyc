@@ -22,7 +22,7 @@
         top:-50px;
         color:white;
         font-weight: 500;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-family: 'Nunito Sans', sans-serif;
 
         background-image: linear-gradient(to bottom, #3659a2, #3259ae, #3058b9, #3157c4, #3456cf);
         @include screensize(laptop){
@@ -31,7 +31,7 @@
     }
     .accordion{
         background: #f9fafa;
-        font-family: "Roboto", sans-serif;
+        font-family: 'Nunito Sans', sans-serif;
         color: #3659a2;
         font-size: 14px;
         font-weight: 700;

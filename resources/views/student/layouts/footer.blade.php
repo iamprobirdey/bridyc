@@ -67,10 +67,10 @@
     $(document).ready(function(){
     $(document).on("scroll", function(){
         if($(window).scrollTop()>60){
-            $("nav").addClass("shrink");
+            $("nav").addClass("shadow-sm");
             }
             else{
-                $("nav").removeClass("shrink");
+                $("nav").removeClass("shadow-sm");
             }
         })
     });

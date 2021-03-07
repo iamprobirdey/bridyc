@@ -1,14 +1,14 @@
 <header>
-    <nav class="navbar navbar-expand-lg shadow fixed-top px-3">
+    <nav class="navbar navbar-expand-lg fixed-top px-3">
         <a class="navbar-brand" href="{{url('/')}}"><img class="imglogo img-fluid align-middle"
-                src="/images/bridyc-logo-new.png" alt="Bridyc logo"></a>
+                src="/images/custom/bridyc-logo.svg" alt="Bridyc logo"></a>
 
         <button class="navbar-toggler collapsed" type="button" data-toggle="slide-collapse"
             data-target="#collapsibleNavbar" aria-expanded="false">
             <i class="fa fa-bars colbtn" aria-hidden="true"></i>
         </button>
 
-        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="collapsibleNavbar">
             <button type="button" class="close closemenu d-lg-none" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
@@ -67,7 +67,8 @@
             </form>
             @else
             {{-- <button type="button" id="lognsign" class="btn ml-auto navbtn" data-toggle="modal" data-target="#regForm">Login/Register</button> --}}
-            <a type="button" class="btn ml-auto navbtn" href="{{route('login')}}">Login/Register</a>
+            <a type="button" class="btn ml-auto navbtnborder " href="{{route('login')}}">Login</a>
+            <a type="button" class="btn navbtn ml-2" href="{{route('register')}}">Register</a>
             @endif
         </div>
     </nav>

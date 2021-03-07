@@ -1,87 +1,92 @@
+.imgbancontact {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/contact-header-m.jpg");
 
-.imgbancontact{
-    background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/contact-header-m.jpg");
+    @include screensize(tablet) {
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/contact-header-t.jpg");
+    }
 
-    @include screensize(tablet){
-    background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/contact-header-t.jpg");
+    @include screensize(laptop) {
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/contact-header-l.jpg");
     }
-    @include screensize(laptop){
-        background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/contact-header-l.jpg");
-    }
-    @include screensize(desktop){
-        background-image: linear-gradient(to bottom,rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/contact-header-d.jpg");
+
+    @include screensize(desktop) {
+        background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("/images/contact-header-d.jpg");
     }
 }
 
 
 
-.contactheader{
+.contactheader {
     margin-top: 50px;
     color: #3659a2;
-    background-color:#f9fafa ;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #f9fafa;
+    font-family: 'Nunito Sans', sans-serif;
 }
 
-.contactform{
+.contactform {
 
-    .contactadd{
+    .contactadd {
         text-align: center;
-        font-family: Verdana, Geneva, Tahoma, sans-serif;
-        h6{
-            img{
+        font-family: 'Nunito Sans', sans-serif;
+
+        h6 {
+            img {
                 width: 25px;
                 height: 25px;
             }
         }
-        .contact-line{
-            color:#3659a2;
+
+        .contact-line {
+            color: #3659a2;
         }
 
-        @include screensize(tablet){
+        @include screensize(tablet) {
             padding-top: 60px;
         }
     }
 
-    h2{
+    h2 {
         text-align: center;
         margin-bottom: 20px;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        font-family: 'Nunito Sans', sans-serif;
         font-weight: 100;
         font-size: 25px;
     }
 
 
-    .contact-query{
+    .contact-query {
         clip-path: polygon(0 0, 100% 0, 100% 100%, 8% 100%);
         background-image: linear-gradient(to right top, #990066, #831874, #67267f, #442f85, #003585);
 
-        @include screensize(desktop){
+        @include screensize(desktop) {
             clip-path: polygon(0 0, 100% 0%, 100% 100%, 20% 100%);
             padding-left: 100px !important;
         }
 
-        input{
-            background-color:#f9fafa;
+        input {
+            background-color: #f9fafa;
             border-radius: 25px;
         }
-        textarea{
-            background-color:#f9fafa;
+
+        textarea {
+            background-color: #f9fafa;
         }
 
-        label{
+        label {
             color: white;
         }
 
-        h2{
+        h2 {
             color: white;
         }
 
-        .btncontact{
-            color:white;
-            background-color:#442f85 ;
-               &:hover{
-                background-color:#67267f;
-             }
+        .btncontact {
+            color: white;
+            background-color: #442f85;
+
+            &:hover {
+                background-color: #67267f;
+            }
         }
     }
 }
