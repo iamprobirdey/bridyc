@@ -41,7 +41,7 @@ video')
     </div>
     <div class="row">
         <div class="col-sm p-1 col-sm-6 col-md-3">
-            <div class="card-body shadow-sm">
+            <div class="card-body shadow-sm" style="background-color: #E7F7FF; border-radius: 55;">
                 <div class="d-flex card-title">
                     <h5>10368</h5>
                     <p class="ml-auto ">
@@ -55,7 +55,7 @@ video')
             </div>
         </div>
         <div class="col-sm p-1 col-sm-6 col-md-3">
-            <div class="card-body shadow-sm">
+            <div class="card-body shadow-sm" style="background-color: #FFF9ED;">
                 <div class="d-flex card-title">
                     <h5>388,688</h5>
                     <p class="ml-auto ">
@@ -69,7 +69,7 @@ video')
             </div>
         </div>
         <div class="col-sm p-1 col-sm-6 col-md-3">
-            <div class="card-body shadow-sm">
+            <div class="card-body shadow-sm" style="background-color: #C1CBF9;">
                 <div class="d-flex card-title">
                     <h5>1,086</h5>
                     <p class="ml-auto ">
@@ -83,7 +83,7 @@ video')
             </div>
         </div>
         <div class="col-sm p-1 col-sm-6 col-md-3">
-            <div class="card-body shadow-sm">
+            <div class="card-body shadow-sm" style="background-color: #B3E9DE;">
                 <div class="d-flex card-title">
                     <h5>$1,060,386</h5>
                     <p class="ml-auto ">
@@ -99,7 +99,7 @@ video')
     </div>
     <div class="margin-fill">
         <div class="row  mt-2 d-flex d-flex justify-content-between">
-            <div class="col-sm-12 col-lg-7 shadow-sm">
+            <div class="col-sm-12 col-lg-7 shadow-sm" >
                 <div class="table-responsive table--no-card m-b-40">
                     <table class="table t-text table-hover table-striped">
                         <thead>
