@@ -1,6 +1,121 @@
-<div>
+<form class="form-horizontal container-lg">
+    <h1>Step 1</h1>
+    <div class="form-row">
+        <div class="form-group col-md-12">
+            <label for="inputEmail4">নিকেতনৰ নাম</label>
+            <input type="text" name="institute_name" class="form-control" placeholder="নিকেতনৰ নাম" />
+        </div>
+    </div>
 
-    <p>
-        Html in vue
-    </p>
-</div>
+    <div class="form-row">
+        <div class="form-group col-md-3 col-sm-6">
+            <label for="inputCity">স্থান</label>
+            <input type="text" name="city" class="form-control" />
+        </div>
+        <div class="form-group col-md-3 col-sm-6">
+            <label for="text">ডাকঘৰ</label>
+            <input name="post_office" type="text" class="form-control" />
+        </div>
+        <div class="form-group col-md-3 col-sm-6">
+            <label for="inputZip">জিলা</label>
+            <input type="text" class="form-control" name="district" />
+        </div>
+        <div class="form-group col-md-3 col-sm-6">
+            <label>পিন</label>
+            <input type="number" class="form-control" name="pin" />
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-4 col-sm-6">
+            <label for="inputCity">নিকেতন স্থাপনৰ তাৰিখ</label>
+            <input type="date" class="form-control" name="date" />
+        </div>
+        <div class="form-group col-md-4 col-sm-6">
+            <label for="text">বিভাগ</label>
+            <input type="text" class="form-control" name="bibhag" />
+        </div>
+        <div class="form-group col-md-4">
+            <label for="inputZip">সংকুল</label>
+            <input type="text" class="form-control" name="songkul" />
+        </div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6 col-sm-6">
+            <label for="inputCity">প্ৰধানাচাৰ্যৰ মোবাইল নং :</label>
+            <input type="number" class="form-control" name="number" />
+        </div>
+        <div class="form-group col-md-6 col-sm-6">
+            <label for="text">নিকেতনৰ দুৰাভাষ</label>
+            <input type="text" class="form-control" name="niketan" />
+        </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-4 col-sm-6">
+            <label for="inputCity">E-mail</label>
+            <input type="email" class="form-control" name="email" />
+        </div>
+        <div class="form-group col-md-4 col-sm-6">
+            <label for="text">Website</label>
+            <input type="text" class="form-control" name="website" />
+        </div>
+        <div class="form-group col-md-4">
+            <label for="text">WhatApp</label>
+            <div class="input-group">
+                <div class="input-group-prepend">
+                    <div class="input-group-text">+91</div>
+                </div>
+                <input type="number" class="form-control" placeholder="Username" name="whatsapp" />
+            </div>
+        </div>
+    </div>
+    <!--
+ pdf 2nd & 3rd page start
+-->
+    <table class="table table-bordered table-responsive">
+        <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">School/College Name</th>
+                <th class="col-2" scope="col">Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <td>College Name</td>
+                <td>
+                    <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-11a1 1 0 10-2 0v2H7a1 1 0 100 2h2v2a1 1 0 102 0v-2h2a1 1 0 100-2h-2V7z"
+                                    clip-rule="evenodd" />
+                            </svg>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">View</a>
+                            <a class="dropdown-item" href="#">Download</a>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+
+    <!--
+ pdf 2nd & 3rd End start
+-->
+
+    <div class="d-flex flex-row-reverse">
+        <button :disabled="steps === 1" type="button" class="btn btn-outline-secondary">
+            Back
+        </button>
+    </div>
+    <div class="d-flex flex-row-reverse">
+        <button type="submit" class="btn btn-outline-primary">Next</button>
+    </div>
+</form>

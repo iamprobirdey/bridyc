@@ -114,10 +114,7 @@ class DashboardController extends Controller
         ]);
     }
 
-    public function supervisor()
-    {
-        return view('institute.supervisor');
-    }
+
 
     //class_name,male_student,female_student,total_students,
 

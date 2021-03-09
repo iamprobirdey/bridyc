@@ -186,7 +186,11 @@ Route::group([
     'prefix' => 'supervisor',
     'middleware' => ['can:supervisor']
 ], function () {
-    Route::get('/', 'Supervisor\SupervisorController@index')->name('supervisor');
+    Route::get('/dashboard', 'Supervisor\SupervisorController@index')->name('supervisor.dashboard');
+    Route::get('/report', 'Supervisor\SupervisorController@report')->name('supervisor');
+    Route::get('/view/{id}', 'Supervisor\SupervisorController@view')->name('supervisor.view');
+    Route::get('/pdf/{id}', 'Supervisor\SupervisorController@test');
+    Route::get('/test', 'Supervisor\SupervisorController@test2');
 });
 
 
@@ -221,8 +225,7 @@ Route::group([
     Route::get('new/feature/{channel:title}', 'User\DashboardController@newFeature')->name('channel.feature');
     Route::get('notification/{channel:title}', 'User\DashboardController@notification')->name('channel.notification');
     //Testing
-    Route::get('supervisor/{channel:title}', 'User\DashboardController@supervisor')->name('channel.supervisor');
-    Route::post('supervisor/create', 'Admin\StateController@store')->name('channel.supervisor.create');
+    Route::get('supervisor/{channel:title}', 'User\SupervisorController@supervisor')->name('channel.supervisor');
 });
 
 Route::get('edit/student/profile/{user:username}', 'Student\ProfileController@index')->middleware(['can:student'])->middleware('verified');
@@ -269,6 +272,9 @@ Route::group([
         'middleware' => ['can:institute']
     ], function () {
         //Institute ******
+
+        //Supervisor
+        Route::post('supervisor/form/submit/{channelid}', 'User\SupervisorController@submit');
         //Infrastructure
         Route::get('getUserData', 'User\InfrastructureController@getUserData');
         Route::post('infra/store/{id}', 'User\InfrastructureController@storeUserInformation');
