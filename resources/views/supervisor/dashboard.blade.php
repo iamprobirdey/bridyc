@@ -39,9 +39,9 @@ video')
         <a href="javascript:void(0);" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
             Add New</a>
     </div>
-    <div class="row">
-        <div class="col-sm p-1 col-sm-6 col-md-3">
-            <div class="card-body shadow-sm" style="background-color: #E7F7FF; border-radius: 55;">
+    <div class="row mb-4">
+        <div class="p-1 col-6">
+            <div class="card-body shadow-sm" style="background-color: #E7F7FF; height: 150px;">
                 <div class="d-flex card-title">
                     <h5>10368</h5>
                     <p class="ml-auto ">
@@ -49,13 +49,13 @@ video')
                     </p>
                 </div>
                 <div class="d-flex">
-                    <b>Members online</b>
+                    <b class="text-primary">Members online</b>
                     <p class="ml-auto btn-sm btn btn-outline-primary">View All</p>
                 </div>
             </div>
         </div>
-        <div class="col-sm p-1 col-sm-6 col-md-3">
-            <div class="card-body shadow-sm" style="background-color: #FFF9ED;">
+        <div class="p-1 col-6">
+            <div class="card-body shadow-sm" style="background-color: #FFF9ED;height: 150px;">
                 <div class="d-flex card-title">
                     <h5>388,688</h5>
                     <p class="ml-auto ">
@@ -63,13 +63,13 @@ video')
                     </p>
                 </div>
                 <div class="d-flex">
-                    <b>items solid</b>
+                    <b class="text-primary">items solid</b>
                     <p class="ml-auto btn-sm btn btn-outline-primary">View All</p>
                 </div>
             </div>
         </div>
-        <div class="col-sm p-1 col-sm-6 col-md-3">
-            <div class="card-body shadow-sm" style="background-color: #C1CBF9;">
+        <div class=" p-1 col-6">
+            <div class="card-body shadow-sm" style="background-color: #C1CBF9;height: 150px;">
                 <div class="d-flex card-title">
                     <h5>1,086</h5>
                     <p class="ml-auto ">
@@ -77,13 +77,13 @@ video')
                     </p>
                 </div>
                 <div class="d-flex">
-                    <b>this week</b>
+                    <b class="text-danger">this week</b>
                     <p class="ml-auto btn-sm btn btn-outline-primary">View All</p>
                 </div>
             </div>
         </div>
-        <div class="col-sm p-1 col-sm-6 col-md-3">
-            <div class="card-body shadow-sm" style="background-color: #B3E9DE;">
+        <div class="p-1 col-6">
+            <div class="card-body shadow-sm" style="background-color: #B3E9DE; height: 150px;">
                 <div class="d-flex card-title">
                     <h5>$1,060,386</h5>
                     <p class="ml-auto ">
@@ -91,7 +91,7 @@ video')
                     </p>
                 </div>
                 <div class="d-flex">
-                    <b>total earnings</b>
+                    <b class="text-primary">total earnings</b>
                     <p class="ml-auto btn-sm btn btn-outline-primary">View All</p>
                 </div>
             </div>
