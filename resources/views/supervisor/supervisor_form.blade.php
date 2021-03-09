@@ -21,9 +21,7 @@ $form_data = json_decode($supervisorData[0]->form_data);
 
 <head>
     {{-- <link rel="stylesheet" type="text/css" href="{{url('css/app.css')}}"> --}}
-    <!-- <link rel="stylesheet" href="test.css"> -->
     <style>
-
         .letMePutOneColor {
             color: red
         }
@@ -1664,7 +1662,6 @@ $form_data = json_decode($supervisorData[0]->form_data);
         </form>
     </div>
 </body>
-
 </html>
 {{-- @endsection
 

@@ -32,6 +32,7 @@ video')
     }
 </style>
 <div class="container">
+
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
         <h2 class="h4 mb-0">
             Overview
@@ -39,6 +40,7 @@ video')
         <a href="javascript:void(0);" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
             Add New</a>
     </div>
+    
     <div class="row mb-4">
         <div class="p-1 col-6">
             <div class="card-body shadow-sm" style="background-color: #E7F7FF; height: 150px;">
