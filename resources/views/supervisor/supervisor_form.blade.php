@@ -27,7 +27,8 @@ $form_data = json_decode($supervisorData[0]->form_data);
         }
 
         .letMePutOneColor {
-            color: red
+            color: red;
+            font-size: 40px;
         }
 
         body {
@@ -39,6 +40,7 @@ $form_data = json_decode($supervisorData[0]->form_data);
 </head>
 
 <body>
+    <h1 class="letMePutOneColor">নিকেতনৰ নাম</h1>
     <div class="container">
         <form class="form-horizontal ">
             <div class="form-row">
