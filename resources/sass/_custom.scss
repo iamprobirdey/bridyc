@@ -1,15 +1,43 @@
 .table-bordered .row {
     margin-left: 0px !important;
 }
+
 .mb0 {
     margin-bottom: 0rem !important;
 }
-::placeholder{
+
+::placeholder {
     color: #130f40 !important;
     opacity: 0.5 !important;
 }
+
 .titleCentre {
     padding: 6px 8px 6px 8px !important;
     border: 2px dashed #2c3e50ab;
     border-radius: 4px;
 }
+
+// preview pdf
+.btdash {
+    font-size: 12px;
+
+}
+.ml-tcenter{
+    margin-left: 5rem;
+}
+.i-logo{
+    height: 5rem;
+    width: 5rem;
+    margin-left: 2rem;
+}
+// preview pdf
+// dashboard of supervisor dashboard.blade.php
+.margin-fill{
+    margin-left: 4px;
+    margin-right: 4px;
+    
+}
+.t-text{
+    white-space: nowrap !important;
+}
+// dashboard of supervisor dashboard.blade.php

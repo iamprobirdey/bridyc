@@ -22,7 +22,9 @@ video')
 @section('supervisorContent')
 
 
-{{-- <th scope="col">Id</th>
+{{--
+
+    <th scope="col">Id</th>
     <th scope="col">Date</th>
     <th scope="col">Institute Name</th>
     <th scope="col">Download</th>
@@ -46,14 +48,18 @@ video')
             <td>{{$item->created_at->diffForHumans()}}</td>
             <td>{{$item->channel->title}}</td>
             <td>
-                <a class="btn btn-primary" href="{{url('supervisor/view/' . $item->id)}}">View</a>
+                <a class="btn btn-primary" href="{{url('supervisor/view/' . $item->id)}}">
+                    <img class="svgAction" src="/images/custom/icons/eye.svg" alt=""></a>
             </td>
             <td>
-                <a class="btn btn-success" href="{{url('supervisor/pdf/' . $item->id)}}">Download</a>
+                <a class="btn btn-success" href="{{url('supervisor/pdf/' . $item->id)}}">
+                    <img class="svgAction" src="/images/custom/icons/download.svg" alt=""></a>
             </td>
         </tr>
         @endforeach
     </tbody>
 </table>
+
+
 
 @endsection

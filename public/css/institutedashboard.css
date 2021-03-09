@@ -948,37 +948,3 @@ main .notification-section ul li::before {
   content: "";
 }
 
-.table-bordered .row {
-  margin-left: 0px !important;
-}
-
-.mb0 {
-  margin-bottom: 0rem !important;
-}
-
-::-moz-placeholder {
-  color: #130f40 !important;
-  opacity: 0.5 !important;
-}
-
-:-ms-input-placeholder {
-  color: #130f40 !important;
-  opacity: 0.5 !important;
-}
-
-::-ms-input-placeholder {
-  color: #130f40 !important;
-  opacity: 0.5 !important;
-}
-
-::placeholder {
-  color: #130f40 !important;
-  opacity: 0.5 !important;
-}
-
-.titleCentre {
-  padding: 6px 8px 6px 8px !important;
-  border: 2px dashed #2c3e50ab;
-  border-radius: 4px;
-}
-
