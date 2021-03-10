@@ -20,7 +20,7 @@ $form_data = json_decode($supervisorData[0]->form_data);
 <div class="container">
     <div class="row">
         <div class="col-sm-6 col-md-4">
-            <img class="i-logo" src="https://pbs.twimg.com/profile_images/631142672120451072/-z2Q6ZD9.png" alt="">
+            <img class="i-logo" src="/media/supervisor/sankardev.png" alt="">
         </div>
         <div class="col-sm-6 col-md-8">
 
