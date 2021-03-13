@@ -63339,6 +63339,7 @@ Vue.use(vue_toasted__WEBPACK_IMPORTED_MODULE_2___default.a);
 Vue.use(vee_validate__WEBPACK_IMPORTED_MODULE_3__["default"]); //Vue.use(Croppa);
 
 Vue.use(vue_croppie__WEBPACK_IMPORTED_MODULE_0__["default"]);
+getViewed();
 /**
  * The following block of code may be used to automatically register your
  * Vue components. It will recursively scan this directory for the Vue
@@ -63401,6 +63402,16 @@ messaging.onMessage(function (payload) {
 //     showToken('Error retrieving registration token. ', err);
 //     setTokenSentToServer(false);
 // });
+//Count the total visit
+
+function getViewed() {
+  if (sessionStorage.getItem('stoteTheView', document.location.origin) === null) {
+    sessionStorage.setItem('stoteTheView', document.location.origin);
+    axios.get("/api/total/site/visit/").then(function (response) {
+      console.log('done');
+    })["catch"](function (errors) {});
+  }
+}
 
 /***/ }),
 

@@ -6,6 +6,7 @@ use App\Acheivement;
 use App\Board;
 use App\Channel;
 use App\ChannelCollegeImages;
+use App\ChannelExpenseIncome;
 use App\ChannelNotification;
 use App\ChannelTeacher;
 use App\District;
@@ -86,5 +87,10 @@ trait ChannelAffair
     public function notification()
     {
         return $this->hasMany(ChannelNotification::class, 'channel_id', 'id');
+    }
+
+    public function expenseIncome()
+    {
+        return $this->hasMany(ChannelExpenseIncome::class, 'channel_id', 'id');
     }
 }

@@ -20,6 +20,7 @@ mix.js("resources/js/app.js", "public/js")
     .js("resources/js/application.js", "public/js")
     .js("resources/js/adminUserInformation.js", "public/js")
     .js("resources/js/ChannelSupervisor.js", "public/js")
+    .js("resources/js/weather.js", "public/js")
 
     // .sass("resources/sass/studentIndex.scss", "public/css")
     // .sass("resources/sass/institutedashboard.scss", "public/css")

@@ -4,7 +4,9 @@ namespace App\Http\Controllers\Supervisor;
 
 use App\Channel;
 use App\ChannelSupervisor;
+use App\District;
 use App\Http\Controllers\Controller;
+use App\TotalSiteVisit;
 use Illuminate\Http\Request;
 //use Barryvdh\Snappy\Facades\SnappyPdf as PDF;
 //use Barryvdh\DomPDF\PDF;
@@ -14,7 +16,30 @@ class SupervisorController extends Controller
 {
     public function index()
     {
-        return view('supervisor.dashboard');
+        $channelCount = Channel::count();
+        $totalSiteVisit = TotalSiteVisit::count();
+        return view(
+            'supervisor.dashboard',
+            compact(['channelCount', 'totalSiteVisit'])
+        );
+    }
+
+    public function getChannelData()
+    {
+        $allChannels = Channel::with(['expenseIncome', 'district'])->get();
+        $districts = District::all();
+        return response()->json([
+            'channels' => $allChannels,
+            'districts' => $districts
+        ]);
+    }
+
+    public function getChannelDataByDistrict($districtId)
+    {
+        $allChannels = Channel::with(['expenseIncome'])->where('district_id', $districtId)->get();
+        return response()->json([
+            'channels' => $allChannels,
+        ]);
     }
 
     public function report()
