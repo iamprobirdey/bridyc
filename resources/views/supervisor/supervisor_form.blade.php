@@ -1977,15 +1977,10 @@ $form_data = json_decode($supervisorData[0]->form_data);
                     </tr>
                 </tbody>
             </table>
-
         </form>
     </div>
 </body>
-
 </html>
 {{-- @endsection
-
 @section('js_code')
-
-
 @endsection --}}

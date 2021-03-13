@@ -5581,7 +5581,7 @@ var render = function() {
               _c(
                 "div",
                 {
-                  staticClass: "form-group col-md-3 col-sm-6",
+                  staticClass: "form-group col-md-3 col-6",
                   class: {
                     "has-error":
                       _vm.errors.has("serverErrors.city") ||
@@ -5658,7 +5658,7 @@ var render = function() {
               _c(
                 "div",
                 {
-                  staticClass: "form-group col-md-3 col-sm-6",
+                  staticClass: "form-group col-md-3 col-6",
                   class: {
                     "has-error":
                       _vm.errors.has("serverErrors.post_office") ||
@@ -5733,7 +5733,7 @@ var render = function() {
               _c(
                 "div",
                 {
-                  staticClass: "form-group col-md-3 col-sm-6",
+                  staticClass: "form-group col-md-3 col-6",
                   class: {
                     "has-error":
                       _vm.errors.has("serverErrors.district") ||
@@ -5808,7 +5808,7 @@ var render = function() {
               _c(
                 "div",
                 {
-                  staticClass: "form-group col-md-3 col-sm-6",
+                  staticClass: "form-group col-md-3 col-6",
                   class: {
                     "has-error":
                       _vm.errors.has("serverErrors.pin") ||
@@ -5885,7 +5885,7 @@ var render = function() {
               _c(
                 "div",
                 {
-                  staticClass: "form-group col-md-4 col-sm-6",
+                  staticClass: "form-group col-md-4 col-6",
                   class: {
                     "has-error":
                       _vm.errors.has("serverErrors.date") ||
@@ -5962,7 +5962,7 @@ var render = function() {
               _c(
                 "div",
                 {
-                  staticClass: "form-group col-md-4 col-sm-6",
+                  staticClass: "form-group col-md-4 col-6",
                   class: {
                     "has-error":
                       _vm.errors.has("serverErrors.bibhag") ||
@@ -6116,7 +6116,7 @@ var render = function() {
               _c(
                 "div",
                 {
-                  staticClass: "form-group col-md-6 col-sm-6",
+                  staticClass: "form-group col-md-6 col-6",
                   class: {
                     "has-error":
                       _vm.errors.has("serverErrors.number") ||
@@ -6193,7 +6193,7 @@ var render = function() {
               _c(
                 "div",
                 {
-                  staticClass: "form-group col-md-6 col-sm-6",
+                  staticClass: "form-group col-md-6 col-6",
                   class: {
                     "has-error":
                       _vm.errors.has("serverErrors.niketan") ||
@@ -6272,7 +6272,7 @@ var render = function() {
               _c(
                 "div",
                 {
-                  staticClass: "form-group col-md-4 col-sm-6",
+                  staticClass: "form-group col-md-4 col-6",
                   class: {
                     "has-error":
                       _vm.errors.has("serverErrors.email") ||
@@ -6349,7 +6349,7 @@ var render = function() {
               _c(
                 "div",
                 {
-                  staticClass: "form-group col-md-4 col-sm-6",
+                  staticClass: "form-group col-md-4 col-6",
                   class: {
                     "has-error":
                       _vm.errors.has("serverErrors.website") ||
@@ -10734,7 +10734,7 @@ var render = function() {
             _vm._v(" "),
             _c("div", { staticClass: "table-bordered" }, [
               _c("div", { staticClass: "row mt-2" }, [
-                _c("div", { staticClass: "form-group row col-md-4" }, [
+                _c("div", { staticClass: "form-group row col-md-4 ml-1" }, [
                   _c("label", { staticClass: "d-flex align-items-end" }, [
                     _vm._v("চাৰিওটা শাখাৰ সৰ্বমুঠ :")
                   ]),
@@ -13691,7 +13691,7 @@ var render = function() {
                 ]
               ),
               _vm._v(" "),
-              _c("p", { staticClass: "mt-2 mr-2" }, [
+              _c("p", { staticClass: "mt-2 mr-2 " }, [
                 _vm._v("\n        স্থানীয় সমিতিৰ পৰা পোৱা নিযুক্তিৰ তাৰিখ ")
               ]),
               _vm._v(" "),
@@ -13710,7 +13710,7 @@ var render = function() {
                     expression: "'required'"
                   }
                 ],
-                staticClass: "form-control col-2 mr-2",
+                staticClass: "form-control col-2 mr-2 mt-1",
                 attrs: { type: "text", name: "two", placeholder: "" },
                 domProps: { value: _vm.step7.two },
                 on: {
@@ -23678,12 +23678,12 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "p-2 row" }, [
-      _c("p", { staticClass: "mt-2 mr-2" }),
+      _c("p", { staticClass: "mt-2 mr-2 " }),
       _vm._v("\n    ৫। (ক) প্রধানাচাৰ্য/ভাৰপ্ৰাপ্ত প্রধানাচাৰ্যৰ নাম "),
       _c("p"),
       _vm._v(" "),
       _c("input", {
-        staticClass: "form-control col-2 mr-2",
+        staticClass: "form-control col-2 mr-2 mb-1",
         attrs: { type: "text", placeholder: " " }
       }),
       _vm._v(" "),
