@@ -36,7 +36,7 @@ class SupervisorController extends Controller
 
     public function getChannelDataByDistrict($districtId)
     {
-        $allChannels = Channel::with(['expenseIncome'])->where('district_id', $districtId)->get();
+        $allChannels = Channel::with(['expenseIncome', 'district'])->where('district_id', $districtId)->get();
         return response()->json([
             'channels' => $allChannels,
         ]);

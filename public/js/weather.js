@@ -362,6 +362,7 @@ __webpack_require__.r(__webpack_exports__);
       console.log("/api/get/supervisor/channel/data/" + this.district);
       axios.get("/api/get/supervisor/channel/data/" + this.district).then(function (response) {
         _this.channelsData = response.data.channels;
+        console.log(_this.channelsData);
       })["catch"](function (error) {
         Vue.toasted.error("Something went wrong", {
           position: "top-center",

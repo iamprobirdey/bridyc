@@ -240,6 +240,7 @@ export default {
         .get("/api/get/supervisor/channel/data/" + this.district)
         .then((response) => {
           this.channelsData = response.data.channels;
+          console.log(this.channelsData);
         })
         .catch((error) => {
           Vue.toasted.error("Something went wrong", {
