@@ -912,7 +912,7 @@ var render = function() {
             _c("div", { staticClass: "modal-content modal-lg" }, [
               _c(
                 "div",
-                { staticClass: "modal-body", staticStyle: { left: "-38px" } },
+                { staticClass: "modal-body", staticStyle: { left: "-20px" } },
                 [
                   _c(
                     "div",
@@ -920,7 +920,7 @@ var render = function() {
                     [
                       _c("expense", {
                         attrs: {
-                          width: "500",
+                          width: "470",
                           height: "350",
                           type: "bar",
                           options: _vm.chartOptions,

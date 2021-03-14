@@ -874,7 +874,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.dropdown[data-v-5192fd19] {\r\n  position: relative;\r\n  display: inline-block;\n}\n.dropdown-content[data-v-5192fd19] {\r\n  display: none;\r\n  position: absolute;\r\n  z-index: 1;\r\n  width: 45px;\n}\n.dropdown:hover .dropdown-content[data-v-5192fd19] {\r\n  display: block;\n}\r\n", ""]);
+exports.push([module.i, "\n.dropdown[data-v-5192fd19] {\n  position: relative;\n  display: inline-block;\n}\n.dropdown-content[data-v-5192fd19] {\n  display: none;\n  position: absolute;\n  z-index: 1;\n  width: 45px;\n}\n.dropdown:hover .dropdown-content[data-v-5192fd19] {\n  display: block;\n}\n", ""]);
 
 // exports
 
@@ -16419,7 +16419,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\laragon\www\bridyc\resources\js\channelwithslug.js */"./resources/js/channelwithslug.js");
+module.exports = __webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/js/channelwithslug.js */"./resources/js/channelwithslug.js");
 
 
 /***/ })
