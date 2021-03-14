@@ -4673,281 +4673,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -6505,70 +6230,6 @@ var render = function() {
               )
             ]),
             _vm._v(" "),
-            _vm._v("\n<<<<<<< HEAD\n    \n"),
-            _c("link", {
-              attrs: { rel: "stylesheet", href: "afterdelete.css" }
-            }),
-            _vm._v(" "),
-            _vm._m(1),
-            _vm._v(" "),
-            _vm._m(2),
-            _vm._v(" "),
-            _vm._m(3),
-            _vm._v(" "),
-            _vm._m(4),
-            _vm._v(" "),
-            _vm._m(5),
-            _vm._v(" "),
-            _vm._m(6),
-            _vm._v(" "),
-            _vm._m(7),
-            _vm._v(" "),
-            _vm._m(8),
-            _vm._v(" "),
-            _vm._m(9),
-            _vm._v(" "),
-            _vm._m(10),
-            _vm._v(" "),
-            _vm._m(11),
-            _vm._v(" "),
-            _vm._m(12),
-            _vm._v(" "),
-            _vm._m(13),
-            _vm._v(" "),
-            _vm._m(14),
-            _vm._v(" "),
-            _vm._m(15),
-            _vm._v(" "),
-            _vm._m(16),
-            _vm._v(" "),
-            _vm._m(17),
-            _vm._v(" "),
-            _vm._m(18),
-            _vm._v(" "),
-            _vm._m(19),
-            _vm._v(" "),
-            _vm._m(20),
-            _vm._v(" "),
-            _vm._m(21),
-            _vm._v(" "),
-            _vm._m(22),
-            _vm._v(" "),
-            _vm._m(23),
-            _vm._v(" "),
-            _vm._m(24),
-            _vm._v(" "),
-            _vm._m(25),
-            _vm._v(" "),
-            _vm._m(26),
-            _vm._v(" "),
-            _vm._m(27),
-            _vm._v(" "),
-            _vm._m(28),
-            _vm._v(
-              "\n=======\n>>>>>>> ce16f3187792d163513f3c32d552d1f5ede5aa26\n\n\n\n\n      "
-            ),
-            _vm._v(" "),
             _c("div", { staticClass: "d-flex flex-row-reverse" }, [
               _c(
                 "button",
@@ -6580,7 +6241,7 @@ var render = function() {
               )
             ]),
             _vm._v(" "),
-            _vm._m(29)
+            _vm._m(1)
           ]
         )
       : _vm._e(),
@@ -8881,7 +8542,7 @@ var render = function() {
               )
             ]),
             _vm._v(" "),
-            _vm._m(30)
+            _vm._m(2)
           ]
         )
       : _vm._e(),
@@ -10711,7 +10372,7 @@ var render = function() {
               )
             ]),
             _vm._v(" "),
-            _vm._m(31)
+            _vm._m(3)
           ]
         )
       : _vm._e(),
@@ -10733,70 +10394,66 @@ var render = function() {
             _c("h1", [_vm._v("Step 4")]),
             _vm._v(" "),
             _c("div", { staticClass: "table-bordered" }, [
-              _c("div", { staticClass: "row mt-2" }, [
-                _c("div", { staticClass: "form-group row col-md-4 ml-1" }, [
+              _c("div", { staticClass: "row mt-2 ml-2" }, [
+                _c("div", { staticClass: "form-group row ml-2" }, [
                   _c("label", { staticClass: "d-flex align-items-end" }, [
                     _vm._v("চাৰিওটা শাখাৰ সৰ্বমুঠ :")
                   ]),
                   _vm._v(" "),
-                  _c("div", { staticClass: "col" }, [
-                    _c("input", {
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.step4.one,
+                        expression: "step4.one"
+                      },
+                      {
+                        name: "validate",
+                        rawName: "v-validate",
+                        value: "required|numeric",
+                        expression: "'required|numeric'"
+                      }
+                    ],
+                    staticClass: "form-control col-4 m-1",
+                    attrs: {
+                      type: "number",
+                      name: "one",
+                      placeholder: "ছাত্র "
+                    },
+                    domProps: { value: _vm.step4.one },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(_vm.step4, "one", $event.target.value)
+                      }
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "span",
+                    {
                       directives: [
                         {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.step4.one,
-                          expression: "step4.one"
-                        },
-                        {
-                          name: "validate",
-                          rawName: "v-validate",
-                          value: "required|numeric",
-                          expression: "'required|numeric'"
+                          name: "show",
+                          rawName: "v-show",
+                          value: _vm.errors.has("step4.one"),
+                          expression: "errors.has('step4.one')"
                         }
                       ],
-                      staticClass: "form-control",
-                      attrs: {
-                        type: "number",
-                        name: "one",
-                        placeholder: "ছাত্র "
-                      },
-                      domProps: { value: _vm.step4.one },
-                      on: {
-                        input: function($event) {
-                          if ($event.target.composing) {
-                            return
-                          }
-                          _vm.$set(_vm.step4, "one", $event.target.value)
-                        }
-                      }
-                    }),
-                    _vm._v(" "),
-                    _c(
-                      "span",
-                      {
-                        directives: [
-                          {
-                            name: "show",
-                            rawName: "v-show",
-                            value: _vm.errors.has("step4.one"),
-                            expression: "errors.has('step4.one')"
-                          }
-                        ],
-                        staticClass: "text-danger"
-                      },
-                      [
-                        _vm._v(
-                          "\n                " +
-                            _vm._s(_vm.errors.first("step4.one")) +
-                            "\n              "
-                        )
-                      ]
-                    )
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "form-group col-md-4" }, [
+                      staticClass: "text-danger"
+                    },
+                    [
+                      _vm._v(
+                        "\n                " +
+                          _vm._s(_vm.errors.first("step4.one")) +
+                          "\n              "
+                      )
+                    ]
+                  ),
+                  _vm._v(" "),
                   _c("input", {
                     directives: [
                       {
@@ -10812,7 +10469,7 @@ var render = function() {
                         expression: "'required|numeric'"
                       }
                     ],
-                    staticClass: "form-control",
+                    staticClass: "form-control col-2 m-1",
                     attrs: {
                       type: "number",
                       name: "two",
@@ -10849,10 +10506,8 @@ var render = function() {
                           "\n            "
                       )
                     ]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "form-group col-md-4" }, [
+                  ),
+                  _vm._v(" "),
                   _c("input", {
                     directives: [
                       {
@@ -10868,7 +10523,7 @@ var render = function() {
                         expression: "'required|numeric'"
                       }
                     ],
-                    staticClass: "form-control",
+                    staticClass: "form-control col-2 m-1",
                     attrs: {
                       type: "number",
                       name: "three",
@@ -11076,7 +10731,7 @@ var render = function() {
               ]),
               _vm._v(" "),
               _c("div", { staticClass: "row mt-2" }, [
-                _c("div", { staticClass: "form-group row col-md-4" }, [
+                _c("div", { staticClass: "form-group row col-md-4 ml-2 " }, [
                   _c("label", { staticClass: "d-flex align-items-end" }, [
                     _vm._v("মুঠ অন্য কৰ্মচাৰী :")
                   ]),
@@ -11194,7 +10849,7 @@ var render = function() {
               ]),
               _vm._v(" "),
               _c("div", { staticClass: "mt-2 row" }, [
-                _c("div", { staticClass: "form-group row col-md-8" }, [
+                _c("div", { staticClass: "form-group row col-md-8 ml-2" }, [
                   _c("label", { staticClass: "d-flex align-items-end" }, [
                     _vm._v(
                       "প্ৰতিটো শ্ৰেণীত থকা বিশেষভাবে সক্ষম ছাত্র-ছাত্ৰীৰ মুঠ\n              সংখ্যা"
@@ -11372,7 +11027,7 @@ var render = function() {
               ]),
               _vm._v(" "),
               _c("table", { staticClass: "table table-responsive-md mb0" }, [
-                _vm._m(32),
+                _vm._m(4),
                 _vm._v(" "),
                 _c("tr", [
                   _c("th", [
@@ -11786,7 +11441,7 @@ var render = function() {
               )
             ]),
             _vm._v(" "),
-            _vm._m(33)
+            _vm._m(5)
           ]
         )
       : _vm._e(),
@@ -11812,7 +11467,7 @@ var render = function() {
               { staticClass: "table table-bordered table-responsive" },
               [
                 _c("tbody", [
-                  _vm._m(34),
+                  _vm._m(6),
                   _vm._v(" "),
                   _c("tr", [
                     _c("td", [_vm._v("(ক) অনুসূচীত জাতি (SC)")]),
@@ -11993,9 +11648,9 @@ var render = function() {
                       _vm._v("(ক) (মুছলমান)")
                     ]),
                     _vm._v(" "),
-                    _vm._m(35),
+                    _vm._m(7),
                     _vm._v(" "),
-                    _vm._m(36),
+                    _vm._m(8),
                     _vm._v(" "),
                     _c("td", [_vm._v("মুঠ")])
                   ]),
@@ -12739,7 +12394,7 @@ var render = function() {
               )
             ]),
             _vm._v(" "),
-            _vm._m(37)
+            _vm._m(9)
           ]
         )
       : _vm._e(),
@@ -13599,7 +13254,7 @@ var render = function() {
               )
             ]),
             _vm._v(" "),
-            _vm._m(38),
+            _vm._m(10),
             _vm._v(" "),
             _c("div", { staticClass: "d-flex flex-row-reverse" }, [
               _c(
@@ -13617,7 +13272,7 @@ var render = function() {
               )
             ]),
             _vm._v(" "),
-            _vm._m(39)
+            _vm._m(11)
           ]
         )
       : _vm._e(),
@@ -14312,7 +13967,7 @@ var render = function() {
               ])
             ]),
             _vm._v(" "),
-            _vm._m(40),
+            _vm._m(12),
             _vm._v(" "),
             _c("div", { staticClass: "p-2 row" }, [
               _c("p", { staticClass: "mt-2 mr-2" }, [
@@ -14446,7 +14101,7 @@ var render = function() {
               )
             ]),
             _vm._v(" "),
-            _vm._m(41)
+            _vm._m(13)
           ]
         )
       : _vm._e(),
@@ -14465,7 +14120,7 @@ var render = function() {
             }
           },
           [
-            _vm._m(42),
+            _vm._m(14),
             _vm._v(" "),
             _c("div", { staticClass: "p-2 row" }, [
               _c("p", { staticClass: "mt-2 mr-2" }, [
@@ -15775,7 +15430,7 @@ var render = function() {
               )
             ]),
             _vm._v(" "),
-            _vm._m(43),
+            _vm._m(15),
             _vm._v(" "),
             _c("div", { staticClass: "d-flex flex-row-reverse" }, [
               _c(
@@ -15793,7 +15448,7 @@ var render = function() {
               )
             ]),
             _vm._v(" "),
-            _vm._m(44)
+            _vm._m(16)
           ]
         )
       : _vm._e(),
@@ -15812,14 +15467,14 @@ var render = function() {
             }
           },
           [
-            _vm._m(45),
+            _vm._m(17),
             _vm._v(" "),
-            _vm._m(46),
+            _vm._m(18),
             _vm._v(" "),
-            _vm._m(47),
+            _vm._m(19),
             _vm._v(" "),
             _c("div", { staticClass: "p-2 row justify-content-between" }, [
-              _vm._m(48),
+              _vm._m(20),
               _vm._v(" "),
               _c("div", { staticClass: "p-2 col-4 row" }, [
                 _c("p", { staticClass: "mt-2 mr-2" }, [_vm._v("নিকেতনৰ নাম")]),
@@ -15882,7 +15537,7 @@ var render = function() {
             _vm._v(" "),
             _c("table", { staticClass: "table table-bordered" }, [
               _c("tbody", [
-                _vm._m(49),
+                _vm._m(21),
                 _vm._v(" "),
                 _c("tr", [
                   _c("td", [_vm._v("১")]),
@@ -17480,7 +17135,7 @@ var render = function() {
                   ])
                 ]),
                 _vm._v(" "),
-                _vm._m(50),
+                _vm._m(22),
                 _vm._v(" "),
                 _c("tr", [
                   _c("td", [_vm._v("৪")]),
@@ -20162,7 +19817,7 @@ var render = function() {
                   ])
                 ]),
                 _vm._v(" "),
-                _vm._m(51),
+                _vm._m(23),
                 _vm._v(" "),
                 _c("tr", [
                   _c("td", [_vm._v("৯")]),
@@ -22320,7 +21975,7 @@ var render = function() {
                   ])
                 ]),
                 _vm._v(" "),
-                _vm._m(52),
+                _vm._m(24),
                 _vm._v(" "),
                 _c("tr", [
                   _c("td", [_vm._v("১৩")]),
@@ -23446,7 +23101,7 @@ var render = function() {
               )
             ]),
             _vm._v(" "),
-            _vm._m(53)
+            _vm._m(25)
           ]
         )
       : _vm._e()
@@ -23459,706 +23114,6 @@ var staticRenderFns = [
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "input-group-prepend" }, [
       _c("div", { staticClass: "input-group-text" }, [_vm._v("+91")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "p-2 row" }, [
-      _c("p", { staticClass: "mt-2 mr-2" }, [_vm._v("(ক)")]),
-      _vm._v(" "),
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v(
-          "\n        নিকেতনখন কত অৱস্থিত -- চহৰত/গাঁৱত/বনাঞ্চলত (✓ চিন দিব ) | নিকেতনলৈ\n        ছাত্র-ছাত্ৰী অহা গাঁৱৰ সংখ্যা\n    "
-        )
-      ]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "form-control col-1 mr-2",
-        attrs: { type: "text", placeholder: "নিকেতনখন ....." }
-      }),
-      _vm._v(" "),
-      _c("p", { staticClass: "mt-2 mr-2" }, [_vm._v("নগৰীয়া বস্তিৰ সংখ্যা")]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "form-control col-1 mr-2",
-        attrs: { type: "text", placeholder: "নগৰীয়া বস্তিৰ সংখ্যা" }
-      }),
-      _vm._v(" "),
-      _c("p", { staticClass: "mt-2 mr-2" }, [_vm._v("ৱাৰ্ডৰ সংখ্যা")]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "form-control col-1 mr-2",
-        attrs: { type: "text", placeholder: "ৱাৰ্ডৰ সংখ্যা" }
-      }),
-      _vm._v(" "),
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v(
-          "\n        গাঁৱৰ তালিকা বেলেগে সংলগ্ন কৰি গাঁৱৰ পৰা অহা ছাত্র-ছাত্ৰী সংখ্যা দিব |\n    "
-        )
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "row" }, [
-      _c("div", { staticClass: "col" }, [_vm._v("(খ) মাহিলী শিক্ষণ শুল্ক :")]),
-      _vm._v(" "),
-      _c(
-        "table",
-        { staticClass: "table col-8 table-responsive table-borderless" },
-        [
-          _c("tbody", [
-            _c("tr", [
-              _c("td", [_vm._v("অংকুৰ, মুকুল")]),
-              _vm._v(" "),
-              _c("td", [
-                _c("input", {
-                  staticClass: "form-control",
-                  attrs: { type: "text", placeholder: "  " }
-                })
-              ]),
-              _vm._v(" "),
-              _c("td", [_vm._v("১মৰ পৰা ৫ ম")]),
-              _vm._v(" "),
-              _c("td", [
-                _c("input", {
-                  staticClass: "form-control",
-                  attrs: { type: "text", placeholder: "  " }
-                })
-              ])
-            ]),
-            _vm._v(" "),
-            _c("tr", [
-              _c("td", [_vm._v("৬ষ্টৰ পৰা ৮ ম")]),
-              _vm._v(" "),
-              _c("td", [
-                _c("input", {
-                  staticClass: "form-control",
-                  attrs: { type: "text", placeholder: "  " }
-                })
-              ]),
-              _vm._v(" "),
-              _c("td", [_vm._v("৯ ম আৰু ১০ ম")]),
-              _vm._v(" "),
-              _c("td", [
-                _c("input", {
-                  staticClass: "form-control",
-                  attrs: { type: "text", placeholder: "  " }
-                })
-              ])
-            ])
-          ])
-        ]
-      )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "p-2 row" }, [
-      _c("p", { staticClass: "mt-2 mr-2" }, [_vm._v("(গ)")]),
-      _vm._v(" "),
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v("(১) আচাৰ্য/আচাৰ্জাৰ নুন্যতম মানধন")
-      ]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "form-control col-2 mr-2",
-        attrs: { type: "text", placeholder: "নুন্যতম মানধন.." }
-      }),
-      _vm._v(" "),
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v("(২) আচাৰ্য/আচাৰ্জাৰ অধিকতম মানধন")
-      ]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "form-control col-2 mr-2",
-        attrs: { type: "text", placeholder: "অধিকতম মানধন" }
-      })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "p-2 row" }, [
-      _c("p", { staticClass: "mt-2 mr-2" }, [_vm._v("(ঘ)")]),
-      _vm._v(" "),
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v(
-          "\n        নিকেতনৰ হিচাব পৰীক্ষকৰ প্ৰতিবেদন ২০১৯ বৰ্ষৰ ৩১ মাৰ্চলৈ সম্পূৰ্ণ কৰি\n        প্ৰদেশ কাৰ্যালয়লৈ প্ৰেৰণ কৰিছে/কৰা নাই (✓ চিন দিব ) ।\n    "
-        )
-      ]),
-      _vm._v(" "),
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v("যদি কৰা নাই কোন চনলৈ পঠাইছে লিখিব")
-      ]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "form-control col-2 mr-2",
-        attrs: { type: "text", placeholder: " " }
-      }),
-      _vm._v(
-        "নিকেতনৰ তথ্য আৰু হিচাব-নিকাচ চাৰ্টাড\n    অকাউন্টটেণ্টৰ (C/A) দ্বাৰা আৰু\n    কম্পিউটাৰৰ যোগেদি কৰা হয়/নহয় (✓ চিন দিব )\n"
-      )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "p-2 row" }, [
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v(
-          "\n        (ঙ) নিকেতনৰ বেংক একাউণ্ট নম্বৰ আৰু বেংকৰ নাম (যিমানটা থাকে)\n    "
-        )
-      ]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "form-control col-1 mr-2",
-        attrs: { type: "text", placeholder: " " }
-      })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "p-2 row" }, [
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v(
-          "\n        (চ) ভবিষ্য নিধি - E. P. F. আছে/নাই । যদি আছে নম্বৰ দিব :\n    "
-        )
-      ]),
-      _vm._v(" "),
-      _c("select", { staticClass: "custom-select col-2" }, [
-        _c("option", { attrs: { selected: "" } }, [_vm._v("আছে")]),
-        _vm._v(" "),
-        _c("option", { attrs: { value: "1" } }, [_vm._v("নাই")])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "p-2 row" }, [
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v(
-          "\n        (জ) নিকেতনৰ আচাৰ্যসকল প্ৰান্তীয় আচাৰ্য কল্যান নিধিৰ সদস্য হয়নে ?\n    "
-        )
-      ]),
-      _vm._v(" "),
-      _c("select", { staticClass: "custom-select col-2" }, [
-        _c("option", { attrs: { selected: "" } }, [_vm._v("হয়")]),
-        _vm._v(" "),
-        _c("option", { attrs: { value: "1" } }, [_vm._v("নহয়")])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "p-2 row" }, [
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v(
-          "\n        (ঝ) নিকেতনৰ আচাৰ্য/ আৰু কৰ্মচাৰীসকল কোনো স্থ্য স্বা বীমা/অটল অমৃত\n        কাৰ্ড / আয়ুষ্মান ভাৰত কাৰ্ড লৈছেনে নাই, যদি লোৱা নাই উপৰোক্ত আঁচনিৰ\n        আওতালৈ আনিব লাগে ।\n    "
-        )
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "p-2 row" }, [
-      _c("p", { staticClass: "mt-2 mr-2 " }),
-      _vm._v("\n    ৫। (ক) প্রধানাচাৰ্য/ভাৰপ্ৰাপ্ত প্রধানাচাৰ্যৰ নাম "),
-      _c("p"),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "form-control col-2 mr-2 mb-1",
-        attrs: { type: "text", placeholder: " " }
-      }),
-      _vm._v(" "),
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v("\n        স্থানীয় সমিতিৰ পৰা পোৱা নিযুক্তিৰ তাৰিখ ")
-      ]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "form-control col-2 mr-2",
-        attrs: { type: "text", placeholder: " " }
-      }),
-      _vm._v(" "),
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v("\n        শিশু শিক্ষা সমিতি, অসমৰ পৰা পোৱা নিযুক্তিৰ তাৰিখ")
-      ]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "form-control col-2 mr-2",
-        attrs: { type: "text", placeholder: " " }
-      }),
-      _vm._v(" "),
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v(
-          "প্রধানাচাৰ্য স্থায়ী/অস্থায়ী/ভাৰপ্ৰাপ্ত (✓ চিন দিব )। উপ-প্ৰধানাচাৰ্যৰ নাম (যদি আছে) : "
-        )
-      ]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "form-control col-2 mr-2",
-        attrs: { type: "text", placeholder: " " }
-      }),
-      _vm._v(" "),
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v("প্রধানাচাৰ্য প্ৰশিক্ষণ লোৱা চন ")
-      ]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "form-control col-2 mr-2",
-        attrs: { type: "text", placeholder: " " }
-      }),
-      _vm._v(" "),
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v("নিযুক্তি স্থায়ী/অস্থায়ী (✓ চিন দিব )।")
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "p-2 row" }, [
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v("(৬) (ক) নিকেতনৰ মাটিৰ পৰিমাণ")
-      ]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "form-control col-2 mr-2",
-        attrs: { type: "text", placeholder: " " }
-      }),
-      _vm._v(" "),
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v(
-          "মাটি নিজৰ হয় / নহয় । (ম্যাদী/চৰকাৰী/দখল) নিকেতনৰ ভৱন পকা/অৰ্দ্ধ পকা/ অস্থায়ী (✓ চিন দিব )।"
-        )
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "p-2 row" }, [
-      _c("p", { staticClass: "mt-2 mr-2" }, [_vm._v("(খ) নিকেতনখন")]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "form-control col-2 mr-2",
-        attrs: { type: "text", placeholder: " " }
-      }),
-      _vm._v(" "),
-      _c("p", { staticClass: "mt-2 mr-2" }, [_vm._v("পঞ্চায়ত,")]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "form-control col-2 mr-2",
-        attrs: { type: "text", placeholder: " " }
-      }),
-      _vm._v(" "),
-      _c("p", { staticClass: "mt-2 mr-2" }, [_vm._v("উন্নয়ন খণ্ড (ব্লক)ত")]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "form-control col-2 mr-2",
-        attrs: { type: "text", placeholder: " " }
-      }),
-      _vm._v(" "),
-      _c("p", { staticClass: "mt-2 mr-2" }, [_vm._v("মহকুমাত অৱস্থিত ।")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "p-2 row" }, [
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v("(গ) পুথিভঁৰাল ব্যৱস্থা : অধ্যয়ন কক্ষ")
-      ]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "form-control col-2 mr-2",
-        attrs: { type: "text", placeholder: " " }
-      }),
-      _vm._v(" "),
-      _c("p", { staticClass: "mt-2 mr-2" }, [_vm._v("টা /আলমাৰী সংখ্যা")]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "form-control col-2 mr-2",
-        attrs: { type: "text", placeholder: " " }
-      }),
-      _vm._v(" "),
-      _c("p", { staticClass: "mt-2 mr-2" }, [_vm._v("টা/কিতাবৰ সংখ্যা")]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "form-control col-2 mr-2",
-        attrs: { type: "text", placeholder: " " }
-      }),
-      _vm._v(" "),
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v(
-          "খন । পঞ্জীয়ন বহীত কিতাব কিতাবসমূহ পঞ্জীয়ন কৰা হয়/নহয় । (✓ চিন দিব )"
-        )
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "p-2 row" }, [
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v(
-          "(ঘ) বিজ্ঞানাগাৰৰ ব্যবস্থা আছে/নাই আৰু নিয়মিত ব্যৱহাৰ হয়/নহয় । (✓ চিন দিব )"
-        )
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "p-2 row" }, [
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v(
-          "(ঙ) খেলপথাৰ আছে/নাই । (✓ চিন দিব ) যদি নাই, কি ধৰণৰ ব্যবস্থা আছে"
-        )
-      ]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "form-control col-2 mr-2",
-        attrs: { type: "text", placeholder: " " }
-      })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "p-2 row" }, [
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v(
-          "(চ) উপযুক্ত প্ৰাৰ্থনা গৃহ আছে/নাই (✓ চিন দিব ) (যদি নাই সোনকালে ব্যবস্থা কৰিব) । প্ৰথনা বিদ্যা\n        ভাৰতীয় ক্ৰম অনুসৰি হয়/নহয় (✓ চিন দিব )\n        । বহি প্ৰাৰ্থনা হয়নে ?"
-        )
-      ]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "form-control col-2 mr-2",
-        attrs: { type: "text", placeholder: " " }
-      })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: " d-flex justify-content-center " }, [
-      _c("h5", { staticClass: "mb-0 h4 titleCentre" }, [
-        _vm._v(
-          "\n        নিম্নলিখিত কাৰ্যব্যবস্থা সমূহৰ আপোনাৰ নিকেতনৰ\n        ক্ষেত্ৰত যিটো প্ৰযোজ্য হয়\n        তাত (✓) চীন দিব ।\n    "
-        )
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "p-2 row" }, [
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v("৭ । (ক) পঞ্জীয়নৰ বাবে চৰকাৰৰ সৈতে হোৱা যোগাযোগ")
-      ]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "form-control col-2 mr-2",
-        attrs: { type: "text", placeholder: " " }
-      }),
-      _vm._v(" "),
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v(
-          "(ক) আবেদন কৰিছে (খ) নিকেতন খোলাৰ অনুমতি হৈছে (গ) যদি চৰকাৰী পঞ্জীভূক্ত হৈছে, পঞ্জীয়ন নম্বৰ দিব\n    "
-        )
-      ]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "form-control col-2 mr-2",
-        attrs: { type: "text", placeholder: " " }
-      }),
-      _vm._v(" "),
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v("(ঘ) কোনো ধৰণৰ যোগাযোগ হোৱা নাই । সেৱাৰ কড নম্বৰ দিব")
-      ]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "form-control col-2 mr-2",
-        attrs: { type: "text", placeholder: " " }
-      })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "p-2 row" }, [
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v("৭ । (ক) পঞ্জীয়নৰ বাবে চৰকাৰৰ সৈতে হোৱা যোগাযোগ")
-      ]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "form-control col-2 mr-2",
-        attrs: { type: "text", placeholder: " " }
-      }),
-      _vm._v(" "),
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v(
-          "(ক) আবেদন কৰিছে (খ) নিকেতন খোলাৰ অনুমতি হৈছে (গ) যদি চৰকাৰী পঞ্জীভূক্ত হৈছে, পঞ্জীয়ন নম্বৰ দিব\n    "
-        )
-      ]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "form-control col-2 mr-2",
-        attrs: { type: "text", placeholder: " " }
-      }),
-      _vm._v(" "),
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v("(ঘ) কোনো ধৰণৰ যোগাযোগ হোৱা নাই । সেৱাৰ কড নম্বৰ দিব")
-      ]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "form-control col-2 mr-2",
-        attrs: { type: "text", placeholder: " " }
-      })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "p-2 row" }, [
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v("(খ) শিশু শিক্ষা সমিতি, অসমৰ অন্তৰ্ভুক্তৰ পঞ্জীয়ন নম্বৰ দিব")
-      ]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "form-control col-2 mr-2",
-        attrs: { type: "text", placeholder: " " }
-      }),
-      _vm._v(" "),
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v("(যদি নাই অতি সোনকালে মূল প্ৰমাণ পত্ৰ সহ পঞ্জীয়ন নম্বৰ লব )")
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "p-2 row" }, [
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v(
-          "(গ) ষষ্ঠ শ্ৰেণীৰ‍ পৰা অষ্টম শ্ৰেণীলৈ সমিতিৰ উচ্চ মাধ্যমিক বিদ্যালয় উপ-সমিতিৰ পৰা অনুমোদন পোৱা\n        চন"
-        )
-      ]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "form-control col-2 mr-2",
-        attrs: { type: "text", placeholder: " " }
-      })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "p-2 row" }, [
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v(
-          "(ঘ) নৱম আৰু দশম শ্ৰেণীৰ‍ বাবে সমিতিৰ উচ্চ মাধ্যমিক বিদ্যালয় উপ-সমিতিৰ পৰা অনুমোদন পোৱা চন"
-        )
-      ]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "form-control col-2 mr-2",
-        attrs: { type: "text", placeholder: " " }
-      })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "p-2 row" }, [
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v("৮ । (ক) বালিকা শিক্ষাৰ কালাংখ নিমনীয়া ভাবে হৈ আছে/নাই ।")
-      ]),
-      _vm._v(" "),
-      _c("select", { staticClass: "custom-select col-2" }, [
-        _c("option", { attrs: { selected: "" } }, [_vm._v("আছে")]),
-        _vm._v(" "),
-        _c("option", { attrs: { value: "1" } }, [_vm._v("নাই")])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "p-2 row" }, [
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v(
-          "(খ) পঞ্চপদী শিক্ষণ পদ্ধতিৰ আধাৰত সকলো আচাৰ্যই পাঠ যোজনা\n        বনাই পাঠ দান কৰে/নকৰে । যদি নকৰে কিয় নকৰে জনাব :"
-        )
-      ]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "form-control col-2 mr-2",
-        attrs: { type: "text", placeholder: " " }
-      })
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "p-2 row" }, [
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v(
-          "(গ) Spoken English অথবা Class ত English to English কোন কোন শ্ৰেণীত কেইটাকৈ Class"
-        )
-      ]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "form-control col-2 mr-2",
-        attrs: { type: "text", placeholder: " " }
-      }),
-      _vm._v(" "),
-      _c("p", { staticClass: "mt-2 mr-2" }, [_vm._v("হয় । ")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "p-2 row" }, [
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v("(ঘ) স্মাৰ্ট ক্লাছৰ ব্যবস্থা আছে/নাই ।")
-      ]),
-      _vm._v(" "),
-      _c("select", { staticClass: "custom-select col-2" }, [
-        _c("option", { attrs: { selected: "" } }, [_vm._v("আছে")]),
-        _vm._v(" "),
-        _c("option", { attrs: { value: "1" } }, [_vm._v("নাই")])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "p-2 row" }, [
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v("(ঙ) নিকেতনত শিশু বাটিকাৰ সুকীয়া ব্যবস্থা হৈছে/হোৱা নাই ।")
-      ]),
-      _vm._v(" "),
-      _c("select", { staticClass: "custom-select col-2" }, [
-        _c("option", { attrs: { selected: "" } }, [_vm._v("হৈছে")]),
-        _vm._v(" "),
-        _c("option", { attrs: { value: "1" } }, [_vm._v("হোৱা নাই")])
-      ]),
-      _vm._v(" "),
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v(" শিশু বাটিকা প্ৰমুখ নিযুক্তি দিছে/দিয়া নাই ।")
-      ]),
-      _vm._v(" "),
-      _c("select", { staticClass: "custom-select col-2" }, [
-        _c("option", { attrs: { selected: "" } }, [_vm._v("দিছে")]),
-        _vm._v(" "),
-        _c("option", { attrs: { value: "1" } }, [_vm._v("দিয়া নাই")])
-      ]),
-      _vm._v(" "),
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v(
-          "নিকেতন শিশু বাটিকা কোনটো ৰূপত আছে --- নমুনা ৰূপ/ প্ৰভাৱীৰূপ/পযত্নশীল ৰূপ "
-        )
-      ]),
-      _vm._v(" "),
-      _c("select", { staticClass: "custom-select col-2" }, [
-        _c("option", { attrs: { selected: "" } }, [_vm._v("নমুনা ৰূপ")]),
-        _vm._v(" "),
-        _c("option", { attrs: { value: "1" } }, [_vm._v("প্ৰভাৱীৰূপ")]),
-        _vm._v(" "),
-        _c("option", { attrs: { value: "1" } }, [_vm._v("পযত্নশীল ৰূপ")])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "p-2 row" }, [
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v("(চ) কম্পিউটাৰ শিক্ষা ব্যবস্থা আছে/নাই ।")
-      ]),
-      _vm._v(" "),
-      _c("select", { staticClass: "custom-select col-2" }, [
-        _c("option", { attrs: { selected: "" } }, [_vm._v("আছে")]),
-        _vm._v(" "),
-        _c("option", { attrs: { value: "1" } }, [_vm._v("নাই")])
-      ]),
-      _vm._v(" "),
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v(" শিশু বাটিকা প্ৰমুখ নিযুক্তি দিছে/দিয়া নাই ")
-      ]),
-      _vm._v(" "),
-      _c("select", { staticClass: "custom-select col-2" }, [
-        _c("option", { attrs: { selected: "" } }, [_vm._v("দিছে ।")]),
-        _vm._v(" "),
-        _c("option", { attrs: { value: "1" } }, [_vm._v("দিয়া নাই ।")])
-      ]),
-      _vm._v(" "),
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v("যদি আছে কম্পিউটাৰ /লেপটপ (Laptop) কিমানতা")
-      ]),
-      _vm._v(" "),
-      _c("input", {
-        staticClass: "form-control col-2 mr-2",
-        attrs: { type: "text", placeholder: " " }
-      }),
-      _vm._v(" "),
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v("কম্পিউটাৰ বিষয়ৰ আচাৰ্য আছে/নাই ।")
-      ]),
-      _vm._v(" "),
-      _c("select", { staticClass: "custom-select col-2" }, [
-        _c("option", { attrs: { selected: "" } }, [_vm._v("আছে ।")]),
-        _vm._v(" "),
-        _c("option", { attrs: { value: "1" } }, [_vm._v("নাই ।")])
-      ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "p-2 row" }, [
-      _c("p", { staticClass: "mt-2 mr-2" }, [
-        _vm._v(
-          "(ছ) অটল টিংকাৰিং প্ৰয়োগ শালাৰ (Atal Tinkering Labortory)\n        বাবে Atal Inovation Mission, Niti Ayogত আবেদন কৰিছেনে নাই?\n        ( ষষ্ঠ শ্ৰেণীৰ‍ পৰা দশম শ্ৰেণীলৈ মুঠ ৪০০\n        ছাত্ৰ-ছাত্ৰী থকা, ১৫০০বৰ্গ ফুট স্থানৰ নিকেতনৰ ক্ষেত্ৰত প্ৰযোজ্য )"
-        )
-      ])
     ])
   },
   function() {

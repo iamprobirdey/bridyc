@@ -339,276 +339,6 @@
       <!--
        pdf 2nd & 3rd page start
      -->
-<<<<<<< HEAD
-    
-<link rel="stylesheet" href="afterdelete.css">
-<div class="p-2 row">
-    <p class="mt-2 mr-2">(ক)</p>
-    <p class="mt-2 mr-2">
-        নিকেতনখন কত অৱস্থিত -- চহৰত/গাঁৱত/বনাঞ্চলত (✓ চিন দিব ) | নিকেতনলৈ
-        ছাত্র-ছাত্ৰী অহা গাঁৱৰ সংখ্যা
-    </p>
-
-    <input type="text" class="form-control col-1 mr-2" placeholder="নিকেতনখন ....." />
-    <p class="mt-2 mr-2">নগৰীয়া বস্তিৰ সংখ্যা</p>
-    <input type="text" class="form-control col-1 mr-2" placeholder="নগৰীয়া বস্তিৰ সংখ্যা" />
-    <p class="mt-2 mr-2">ৱাৰ্ডৰ সংখ্যা</p>
-    <input type="text" class="form-control col-1 mr-2" placeholder="ৱাৰ্ডৰ সংখ্যা" />
-    <p class="mt-2 mr-2">
-        গাঁৱৰ তালিকা বেলেগে সংলগ্ন কৰি গাঁৱৰ পৰা অহা ছাত্র-ছাত্ৰী সংখ্যা দিব |
-    </p>
-</div>
-
-<div class="row">
-    <div class="col">(খ) মাহিলী শিক্ষণ শুল্ক :</div>
-    <table class="table col-8 table-responsive table-borderless">
-        <tbody>
-            <tr>
-                <td>অংকুৰ, মুকুল</td>
-                <td>
-                    <input type="text" class="form-control" placeholder="  " />
-                </td>
-                <td>১মৰ পৰা ৫ ম</td>
-                <td>
-                    <input type="text" class="form-control" placeholder="  " />
-                </td>
-            </tr>
-            <tr>
-                <td>৬ষ্টৰ পৰা ৮ ম</td>
-                <td>
-                    <input type="text" class="form-control" placeholder="  " />
-                </td>
-                <td>৯ ম আৰু ১০ ম</td>
-                <td>
-                    <input type="text" class="form-control" placeholder="  " />
-                </td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-<div class="p-2 row">
-    <p class="mt-2 mr-2">(গ)</p>
-    <p class="mt-2 mr-2">(১) আচাৰ্য/আচাৰ্জাৰ নুন্যতম মানধন</p>
-    <input type="text" class="form-control col-2 mr-2" placeholder="নুন্যতম মানধন.." />
-    <p class="mt-2 mr-2">(২) আচাৰ্য/আচাৰ্জাৰ অধিকতম মানধন</p>
-    <input type="text" class="form-control col-2 mr-2" placeholder="অধিকতম মানধন" />
-</div>
-<div class="p-2 row">
-    <p class="mt-2 mr-2">(ঘ)</p>
-    <p class="mt-2 mr-2">
-        নিকেতনৰ হিচাব পৰীক্ষকৰ প্ৰতিবেদন ২০১৯ বৰ্ষৰ ৩১ মাৰ্চলৈ সম্পূৰ্ণ কৰি
-        প্ৰদেশ কাৰ্যালয়লৈ প্ৰেৰণ কৰিছে/কৰা নাই (✓ চিন দিব ) ।
-    </p>
-    <p class="mt-2 mr-2">যদি কৰা নাই কোন চনলৈ পঠাইছে লিখিব</p>
-    <input type="text" class="form-control col-2 mr-2" placeholder=" " />নিকেতনৰ তথ্য আৰু হিচাব-নিকাচ চাৰ্টাড
-    অকাউন্টটেণ্টৰ (C/A) দ্বাৰা আৰু
-    কম্পিউটাৰৰ যোগেদি কৰা হয়/নহয় (✓ চিন দিব )
-</div>
-<div class="p-2 row">
-    <p class="mt-2 mr-2">
-        (ঙ) নিকেতনৰ বেংক একাউণ্ট নম্বৰ আৰু বেংকৰ নাম (যিমানটা থাকে)
-    </p>
-    <input type="text" class="form-control col-1 mr-2" placeholder=" " />
-</div>
-<div class="p-2 row">
-    <p class="mt-2 mr-2">
-        (চ) ভবিষ্য নিধি - E. P. F. আছে/নাই । যদি আছে নম্বৰ দিব :
-    </p>
-    <select class="custom-select col-2">
-        <option selected>আছে</option>
-        <option value="1">নাই</option>
-    </select>
-</div>
-<div class="p-2 row">
-    <p class="mt-2 mr-2">
-        (জ) নিকেতনৰ আচাৰ্যসকল প্ৰান্তীয় আচাৰ্য কল্যান নিধিৰ সদস্য হয়নে ?
-    </p>
-    <select class="custom-select col-2">
-        <option selected>হয়</option>
-        <option value="1">নহয়</option>
-    </select>
-</div>
-<div class="p-2 row">
-    <p class="mt-2 mr-2">
-        (ঝ) নিকেতনৰ আচাৰ্য/ আৰু কৰ্মচাৰীসকল কোনো স্থ্য স্বা বীমা/অটল অমৃত
-        কাৰ্ড / আয়ুষ্মান ভাৰত কাৰ্ড লৈছেনে নাই, যদি লোৱা নাই উপৰোক্ত আঁচনিৰ
-        আওতালৈ আনিব লাগে ।
-    </p>
-</div>
-
-
-<div class="p-2 row">
-    <p class="mt-2 mr-2 "></p>
-    ৫। (ক) প্রধানাচাৰ্য/ভাৰপ্ৰাপ্ত প্রধানাচাৰ্যৰ নাম </p>
-    <input type="text" class="form-control col-2 mr-2 mb-1" placeholder=" " />
-    <p class="mt-2 mr-2">
-        স্থানীয় সমিতিৰ পৰা পোৱা নিযুক্তিৰ তাৰিখ </p>
-    <input type="text" class="form-control col-2 mr-2" placeholder=" " />
-    <p class="mt-2 mr-2">
-        শিশু শিক্ষা সমিতি, অসমৰ পৰা পোৱা নিযুক্তিৰ তাৰিখ</p>
-    <input type="text" class="form-control col-2 mr-2" placeholder=" " />
-    <p class="mt-2 mr-2">প্রধানাচাৰ্য স্থায়ী/অস্থায়ী/ভাৰপ্ৰাপ্ত (✓ চিন দিব )। উপ-প্ৰধানাচাৰ্যৰ নাম (যদি আছে) : </p>
-    <input type="text" class="form-control col-2 mr-2" placeholder=" " />
-    <p class="mt-2 mr-2">প্রধানাচাৰ্য প্ৰশিক্ষণ লোৱা চন </p>
-    <input type="text" class="form-control col-2 mr-2" placeholder=" " />
-    <p class="mt-2 mr-2">নিযুক্তি স্থায়ী/অস্থায়ী (✓ চিন দিব )।</p>
-</div>
-
-<div class="p-2 row">
-    <p class="mt-2 mr-2">(৬) (ক) নিকেতনৰ মাটিৰ পৰিমাণ</p>
-    <input type="text" class="form-control col-2 mr-2" placeholder=" " />
-    <p class="mt-2 mr-2">মাটি নিজৰ হয় / নহয় । (ম্যাদী/চৰকাৰী/দখল) নিকেতনৰ ভৱন পকা/অৰ্দ্ধ পকা/ অস্থায়ী (✓ চিন দিব )।</p>
-</div>
-<div class="p-2 row">
-    <p class="mt-2 mr-2">(খ) নিকেতনখন</p>
-    <input type="text" class="form-control col-2 mr-2" placeholder=" " />
-    <p class="mt-2 mr-2">পঞ্চায়ত,</p>
-    <input type="text" class="form-control col-2 mr-2" placeholder=" " />
-    <p class="mt-2 mr-2">উন্নয়ন খণ্ড (ব্লক)ত</p>
-    <input type="text" class="form-control col-2 mr-2" placeholder=" " />
-    <p class="mt-2 mr-2">মহকুমাত অৱস্থিত ।</p>
-</div>
-
-<div class="p-2 row">
-    <p class="mt-2 mr-2">(গ) পুথিভঁৰাল ব্যৱস্থা : অধ্যয়ন কক্ষ</p>
-    <input type="text" class="form-control col-2 mr-2" placeholder=" " />
-    <p class="mt-2 mr-2">টা /আলমাৰী সংখ্যা</p>
-    <input type="text" class="form-control col-2 mr-2" placeholder=" " />
-    <p class="mt-2 mr-2">টা/কিতাবৰ সংখ্যা</p>
-    <input type="text" class="form-control col-2 mr-2" placeholder=" " />
-    <p class="mt-2 mr-2">খন । পঞ্জীয়ন বহীত কিতাব কিতাবসমূহ পঞ্জীয়ন কৰা হয়/নহয় । (✓ চিন দিব )</p>
-</div>
-<div class="p-2 row">
-    <p class="mt-2 mr-2">(ঘ) বিজ্ঞানাগাৰৰ ব্যবস্থা আছে/নাই আৰু নিয়মিত ব্যৱহাৰ হয়/নহয় । (✓ চিন দিব )</p>
-</div>
-
-<div class="p-2 row">
-    <p class="mt-2 mr-2">(ঙ) খেলপথাৰ আছে/নাই । (✓ চিন দিব ) যদি নাই, কি ধৰণৰ ব্যবস্থা আছে</p>
-    <input type="text" class="form-control col-2 mr-2" placeholder=" " />
-</div>
-<div class="p-2 row">
-    <p class="mt-2 mr-2">(চ) উপযুক্ত প্ৰাৰ্থনা গৃহ আছে/নাই (✓ চিন দিব ) (যদি নাই সোনকালে ব্যবস্থা কৰিব) । প্ৰথনা বিদ্যা
-        ভাৰতীয় ক্ৰম অনুসৰি হয়/নহয় (✓ চিন দিব )
-        । বহি প্ৰাৰ্থনা হয়নে ?</p>
-    <input type="text" class="form-control col-2 mr-2" placeholder=" " />
-</div>
-
-
-<div class=" d-flex justify-content-center ">
-    <h5 class="mb-0 h4 titleCentre">
-        নিম্নলিখিত কাৰ্যব্যবস্থা সমূহৰ আপোনাৰ নিকেতনৰ
-        ক্ষেত্ৰত যিটো প্ৰযোজ্য হয়
-        তাত (✓) চীন দিব ।
-    </h5>
-</div>
-
-<!--  -->
-
-<div class="p-2 row">
-    <p class="mt-2 mr-2">৭ । (ক) পঞ্জীয়নৰ বাবে চৰকাৰৰ সৈতে হোৱা যোগাযোগ</p>
-    <input type="text" class="form-control col-2 mr-2" placeholder=" " />
-    <p class="mt-2 mr-2">(ক) আবেদন কৰিছে (খ) নিকেতন খোলাৰ অনুমতি হৈছে (গ) যদি চৰকাৰী পঞ্জীভূক্ত হৈছে, পঞ্জীয়ন নম্বৰ দিব
-    </p>
-    <input type="text" class="form-control col-2 mr-2" placeholder=" " />
-    <p class="mt-2 mr-2">(ঘ) কোনো ধৰণৰ যোগাযোগ হোৱা নাই । সেৱাৰ কড নম্বৰ দিব</p>
-    <input type="text" class="form-control col-2 mr-2" placeholder=" " />
-</div>
-
-<div class="p-2 row">
-    <p class="mt-2 mr-2">৭ । (ক) পঞ্জীয়নৰ বাবে চৰকাৰৰ সৈতে হোৱা যোগাযোগ</p>
-    <input type="text" class="form-control col-2 mr-2" placeholder=" " />
-    <p class="mt-2 mr-2">(ক) আবেদন কৰিছে (খ) নিকেতন খোলাৰ অনুমতি হৈছে (গ) যদি চৰকাৰী পঞ্জীভূক্ত হৈছে, পঞ্জীয়ন নম্বৰ দিব
-    </p>
-    <input type="text" class="form-control col-2 mr-2" placeholder=" " />
-    <p class="mt-2 mr-2">(ঘ) কোনো ধৰণৰ যোগাযোগ হোৱা নাই । সেৱাৰ কড নম্বৰ দিব</p>
-    <input type="text" class="form-control col-2 mr-2" placeholder=" " />
-</div>
-<div class="p-2 row">
-    <p class="mt-2 mr-2">(খ) শিশু শিক্ষা সমিতি, অসমৰ অন্তৰ্ভুক্তৰ পঞ্জীয়ন নম্বৰ দিব</p>
-    <input type="text" class="form-control col-2 mr-2" placeholder=" " />
-    <p class="mt-2 mr-2">(যদি নাই অতি সোনকালে মূল প্ৰমাণ পত্ৰ সহ পঞ্জীয়ন নম্বৰ লব )</p>
-</div>
-
-<div class="p-2 row">
-    <p class="mt-2 mr-2">(গ) ষষ্ঠ শ্ৰেণীৰ‍ পৰা অষ্টম শ্ৰেণীলৈ সমিতিৰ উচ্চ মাধ্যমিক বিদ্যালয় উপ-সমিতিৰ পৰা অনুমোদন পোৱা
-        চন</p>
-    <input type="text" class="form-control col-2 mr-2" placeholder=" " />
-</div>
-<div class="p-2 row">
-    <p class="mt-2 mr-2">(ঘ) নৱম আৰু দশম শ্ৰেণীৰ‍ বাবে সমিতিৰ উচ্চ মাধ্যমিক বিদ্যালয় উপ-সমিতিৰ পৰা অনুমোদন পোৱা চন</p>
-    <input type="text" class="form-control col-2 mr-2" placeholder=" " />
-</div>
-
-<div class="p-2 row">
-    <p class="mt-2 mr-2">৮ । (ক) বালিকা শিক্ষাৰ কালাংখ নিমনীয়া ভাবে হৈ আছে/নাই ।</p>
-    <select class="custom-select col-2">
-        <option selected>আছে</option>
-        <option value="1">নাই</option>
-    </select>
-</div>
-<div class="p-2 row">
-    <p class="mt-2 mr-2">(খ) পঞ্চপদী শিক্ষণ পদ্ধতিৰ আধাৰত সকলো আচাৰ্যই পাঠ যোজনা
-        বনাই পাঠ দান কৰে/নকৰে । যদি নকৰে কিয় নকৰে জনাব :</p>
-    <input type="text" class="form-control col-2 mr-2" placeholder=" " />
-</div>
-<div class="p-2 row">
-    <p class="mt-2 mr-2">(গ) Spoken English অথবা Class ত English to English কোন কোন শ্ৰেণীত কেইটাকৈ Class</p>
-    <input type="text" class="form-control col-2 mr-2" placeholder=" " />
-    <p class="mt-2 mr-2">হয় । </p>
-</div>
-
-<div class="p-2 row">
-    <p class="mt-2 mr-2">(ঘ) স্মাৰ্ট ক্লাছৰ ব্যবস্থা আছে/নাই ।</p>
-    <select class="custom-select col-2">
-        <option selected>আছে</option>
-        <option value="1">নাই</option>
-    </select>
-</div>
-<div class="p-2 row">
-    <p class="mt-2 mr-2">(ঙ) নিকেতনত শিশু বাটিকাৰ সুকীয়া ব্যবস্থা হৈছে/হোৱা নাই ।</p>
-    <select class="custom-select col-2">
-        <option selected>হৈছে</option>
-        <option value="1">হোৱা নাই</option>
-    </select>
-    <p class="mt-2 mr-2"> শিশু বাটিকা প্ৰমুখ নিযুক্তি দিছে/দিয়া নাই ।</p>
-    <select class="custom-select col-2">
-        <option selected>দিছে</option>
-        <option value="1">দিয়া নাই</option>
-    </select>
-    <p class="mt-2 mr-2">নিকেতন শিশু বাটিকা কোনটো ৰূপত আছে --- নমুনা ৰূপ/ প্ৰভাৱীৰূপ/পযত্নশীল ৰূপ </p>
-    <select class="custom-select col-2">
-        <option selected>নমুনা ৰূপ</option>
-        <option value="1">প্ৰভাৱীৰূপ</option>
-        <option value="1">পযত্নশীল ৰূপ</option>
-    </select>
-</div>
-<div class="p-2 row">
-    <p class="mt-2 mr-2">(চ) কম্পিউটাৰ শিক্ষা ব্যবস্থা আছে/নাই ।</p>
-    <select class="custom-select col-2">
-        <option selected>আছে</option>
-        <option value="1">নাই</option>
-    </select>
-    <p class="mt-2 mr-2"> শিশু বাটিকা প্ৰমুখ নিযুক্তি দিছে/দিয়া নাই </p>
-    <select class="custom-select col-2">
-        <option selected>দিছে ।</option>
-        <option value="1">দিয়া নাই ।</option>
-    </select>
-    <p class="mt-2 mr-2">যদি আছে কম্পিউটাৰ /লেপটপ (Laptop) কিমানতা</p>
-    <input type="text" class="form-control col-2 mr-2" placeholder=" " />
-    <p class="mt-2 mr-2">কম্পিউটাৰ বিষয়ৰ আচাৰ্য আছে/নাই ।</p>
-    <select class="custom-select col-2">
-        <option selected>আছে ।</option>
-        <option value="1">নাই ।</option>
-    </select>
-</div>
-<div class="p-2 row">
-    <p class="mt-2 mr-2">(ছ) অটল টিংকাৰিং প্ৰয়োগ শালাৰ (Atal Tinkering Labortory)
-        বাবে Atal Inovation Mission, Niti Ayogত আবেদন কৰিছেনে নাই?
-        ( ষষ্ঠ শ্ৰেণীৰ‍ পৰা দশম শ্ৰেণীলৈ মুঠ ৪০০
-        ছাত্ৰ-ছাত্ৰী থকা, ১৫০০বৰ্গ ফুট স্থানৰ নিকেতনৰ ক্ষেত্ৰত প্ৰযোজ্য )</p>
-</div>
-=======
->>>>>>> ce16f3187792d163513f3c32d552d1f5ede5aa26
 
 
 
@@ -1707,15 +1437,14 @@
     >
       <h1>Step 4</h1>
       <div class="table-bordered">
-        <div class="row mt-2">
-          <div class="form-group row col-md-4 ml-1">
+        <div class="row mt-2 ml-2">
+          <div class="form-group row ml-2">
             <label class="d-flex align-items-end"
               >চাৰিওটা শাখাৰ সৰ্বমুঠ :</label
             >
-            <div class="col">
               <input
                 type="number"
-                class="form-control"
+                class="form-control col-4 m-1"
                 v-model="step4.one"
                 v-validate="'required|numeric'"
                 name="one"
@@ -1724,12 +1453,9 @@
               <span v-show="errors.has('step4.one')" class="text-danger">
                 {{ errors.first("step4.one") }}
               </span>
-            </div>
-          </div>
-          <div class="form-group col-md-4">
-            <input
+<input
               type="number"
-              class="form-control"
+              class="form-control col-2 m-1"
               v-model="step4.two"
               v-validate="'required|numeric'"
               name="two"
@@ -1738,11 +1464,9 @@
             <span v-show="errors.has('step4.two')" class="text-danger">
               {{ errors.first("step4.two") }}
             </span>
-          </div>
-          <div class="form-group col-md-4">
             <input
               type="number"
-              class="form-control"
+              class="form-control col-2 m-1"
               v-model="step4.three"
               v-validate="'required|numeric'"
               name="three"
@@ -1752,6 +1476,7 @@
               {{ errors.first("step4.three") }}
             </span>
           </div>
+
         </div>
         <!--  form 2 -->
         <div class="d-flex justify-content-end">
@@ -1796,7 +1521,7 @@
           </div>
         </div>
         <div class="row mt-2">
-          <div class="form-group row col-md-4">
+          <div class="form-group row col-md-4 ml-2 ">
             <label class="d-flex align-items-end">মুঠ অন্য কৰ্মচাৰী :</label>
             <div class="col">
               <input
@@ -1830,7 +1555,7 @@
           </div>
         </div>
         <div class="mt-2 row">
-          <div class="form-group row col-md-8">
+          <div class="form-group row col-md-8 ml-2">
             <label class="d-flex align-items-end"
               >প্ৰতিটো শ্ৰেণীত থকা বিশেষভাবে সক্ষম ছাত্র-ছাত্ৰীৰ মুঠ
               সংখ্যা</label

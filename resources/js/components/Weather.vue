@@ -96,10 +96,10 @@
     >
       <div class="modal-dialog" role="document">
         <div class="modal-content modal-lg">
-          <div class="modal-body" style="left:-20px">
+          <div class="modal-body" style="left:-25px">
             <div class="container-fluid">
               <expense
-                width="470"
+                width="460"
                 height="350"
                 type="bar"
                 :options="chartOptions"
