@@ -1,16 +1,31 @@
 <template>
-  <div class="col-sm-12 col-lg-12 shadow-sm">
-    <div class="table-responsive table--no-card m-b-40">
-      <select name="usertype" v-model="district" @change="OnDataChange">
-        <option
-          v-for="(district, index) in districtData"
-          :key="index"
-          :value="district.id"
+  <div class="shadow-sm">
+    <div class="table-responsive table--no-card">
+      <div
+        class="d-sm-flex align-items-center justify-content-between mb-4 m-2"
+      >
+        <select
+          class="btn btn-outline-primary btn-sm"
+          name="usertype"
+          v-model="district"
+          @change="OnDataChange"
         >
-          {{ district.name }}
-        </option>
-      </select>
-      <a href="javascript:void(0)" @click="getChannelData()">Clear</a>
+          <option
+            v-for="(district, index) in districtData"
+            :key="index"
+            :value="district.id"
+          >
+            {{ district.name }}
+          </option>
+        </select>
+        <a
+          class="btn btn-outline-primary btn-sm"
+          href="javascript:void(0)"
+          @click="getChannelData()"
+          >Clear</a
+        >
+      </div>
+
       <table class="table t-text table-hover table-striped">
         <thead>
           <tr>
@@ -72,7 +87,7 @@
     </div>
 
     <div
-      class="modal fade bd-example-modal-lg"
+      class="modal fade"
       id="charts"
       tabindex="-1"
       role="dialog"
@@ -81,14 +96,16 @@
     >
       <div class="modal-dialog" role="document">
         <div class="modal-content modal-lg">
-          <div class="modal-body">
-            <expense
-              width="500"
-              height="350"
-              type="bar"
-              :options="chartOptions"
-              :series="series"
-            ></expense>
+          <div class="modal-body" style="left:-38px">
+            <div class="container-fluid">
+              <expense
+                width="500"
+                height="350"
+                type="bar"
+                :options="chartOptions"
+                :series="series"
+              ></expense>
+            </div>
           </div>
         </div>
       </div>

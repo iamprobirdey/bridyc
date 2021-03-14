@@ -221,6 +221,23 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -695,60 +712,71 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "col-sm-12 col-lg-12 shadow-sm" }, [
-    _c("div", { staticClass: "table-responsive table--no-card m-b-40" }, [
+  return _c("div", { staticClass: "shadow-sm" }, [
+    _c("div", { staticClass: "table-responsive table--no-card" }, [
       _c(
-        "select",
+        "div",
         {
-          directives: [
+          staticClass:
+            "d-sm-flex align-items-center justify-content-between mb-4 m-2"
+        },
+        [
+          _c(
+            "select",
             {
-              name: "model",
-              rawName: "v-model",
-              value: _vm.district,
-              expression: "district"
-            }
-          ],
-          attrs: { name: "usertype" },
-          on: {
-            change: [
-              function($event) {
-                var $$selectedVal = Array.prototype.filter
-                  .call($event.target.options, function(o) {
-                    return o.selected
-                  })
-                  .map(function(o) {
-                    var val = "_value" in o ? o._value : o.value
-                    return val
-                  })
-                _vm.district = $event.target.multiple
-                  ? $$selectedVal
-                  : $$selectedVal[0]
-              },
-              _vm.OnDataChange
-            ]
-          }
-        },
-        _vm._l(_vm.districtData, function(district, index) {
-          return _c(
-            "option",
-            { key: index, domProps: { value: district.id } },
-            [_vm._v("\n        " + _vm._s(district.name) + "\n      ")]
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.district,
+                  expression: "district"
+                }
+              ],
+              staticClass: "btn btn-outline-primary btn-sm",
+              attrs: { name: "usertype" },
+              on: {
+                change: [
+                  function($event) {
+                    var $$selectedVal = Array.prototype.filter
+                      .call($event.target.options, function(o) {
+                        return o.selected
+                      })
+                      .map(function(o) {
+                        var val = "_value" in o ? o._value : o.value
+                        return val
+                      })
+                    _vm.district = $event.target.multiple
+                      ? $$selectedVal
+                      : $$selectedVal[0]
+                  },
+                  _vm.OnDataChange
+                ]
+              }
+            },
+            _vm._l(_vm.districtData, function(district, index) {
+              return _c(
+                "option",
+                { key: index, domProps: { value: district.id } },
+                [_vm._v("\n          " + _vm._s(district.name) + "\n        ")]
+              )
+            }),
+            0
+          ),
+          _vm._v(" "),
+          _c(
+            "a",
+            {
+              staticClass: "btn btn-outline-primary btn-sm",
+              attrs: { href: "javascript:void(0)" },
+              on: {
+                click: function($event) {
+                  return _vm.getChannelData()
+                }
+              }
+            },
+            [_vm._v("Clear")]
           )
-        }),
-        0
-      ),
-      _vm._v(" "),
-      _c(
-        "a",
-        {
-          attrs: { href: "javascript:void(0)" },
-          on: {
-            click: function($event) {
-              return _vm.getChannelData()
-            }
-          }
-        },
-        [_vm._v("Clear")]
+        ]
       ),
       _vm._v(" "),
       _c("table", { staticClass: "table t-text table-hover table-striped" }, [
@@ -867,7 +895,7 @@ var render = function() {
     _c(
       "div",
       {
-        staticClass: "modal fade bd-example-modal-lg",
+        staticClass: "modal fade",
         attrs: {
           id: "charts",
           tabindex: "-1",
@@ -884,19 +912,25 @@ var render = function() {
             _c("div", { staticClass: "modal-content modal-lg" }, [
               _c(
                 "div",
-                { staticClass: "modal-body" },
+                { staticClass: "modal-body", staticStyle: { left: "-38px" } },
                 [
-                  _c("expense", {
-                    attrs: {
-                      width: "500",
-                      height: "350",
-                      type: "bar",
-                      options: _vm.chartOptions,
-                      series: _vm.series
-                    }
-                  })
-                ],
-                1
+                  _c(
+                    "div",
+                    { staticClass: "container-fluid" },
+                    [
+                      _c("expense", {
+                        attrs: {
+                          width: "500",
+                          height: "350",
+                          type: "bar",
+                          options: _vm.chartOptions,
+                          series: _vm.series
+                        }
+                      })
+                    ],
+                    1
+                  )
+                ]
               )
             ])
           ]

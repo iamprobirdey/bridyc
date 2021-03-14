@@ -3726,7 +3726,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.btn-success {\n  border-radius: 0;\n  padding: 5px;\n}\n", ""]);
+exports.push([module.i, "\n.btn-success {\r\n  border-radius: 0;\r\n  padding: 5px;\n}\r\n", ""]);
 
 // exports
 
@@ -3745,7 +3745,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.label-btn[data-v-7c156f90] {\n  background-color: #003585;\n  color: white;\n  font-family: sans-serif;\n  border-radius: 0.3rem;\n  cursor: pointer;\n}\n.cropper-modal[data-v-7c156f90] {\n  max-height: calc(100vh - 40px);\n  overflow-y: auto;\n}\n", ""]);
+exports.push([module.i, "\n.label-btn[data-v-7c156f90] {\r\n  background-color: #003585;\r\n  color: white;\r\n  font-family: sans-serif;\r\n  border-radius: 0.3rem;\r\n  cursor: pointer;\n}\n.cropper-modal[data-v-7c156f90] {\r\n  max-height: calc(100vh - 40px);\r\n  overflow-y: auto;\n}\r\n", ""]);
 
 // exports
 
@@ -3764,7 +3764,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.btnsubmitcover[data-v-ccb8d420] {\n  background-color: #013737;\n  color: white;\n  padding-top: 2px;\n  padding-bottom: 2px;\n  border-radius: 0;\n  z-index: 100;\n}\n.btnsuca[data-v-ccb8d420] {\n  text-align: center;\n}\n.btn-success[data-v-ccb8d420] {\n  padding-top: 0.1rem !important;\n  padding-bottom: 0.1rem !important;\n}\n.label-btn[data-v-ccb8d420] {\n  background-color: #003585;\n  color: white;\n  font-family: sans-serif;\n  border-radius: 0.3rem;\n  cursor: pointer;\n}\n.cropper-modal[data-v-ccb8d420] {\n  max-height: calc(100vh - 40px);\n  overflow-y: auto;\n}\n", ""]);
+exports.push([module.i, "\n.btnsubmitcover[data-v-ccb8d420] {\r\n  background-color: #013737;\r\n  color: white;\r\n  padding-top: 2px;\r\n  padding-bottom: 2px;\r\n  border-radius: 0;\r\n  z-index: 100;\n}\n.btnsuca[data-v-ccb8d420] {\r\n  text-align: center;\n}\n.btn-success[data-v-ccb8d420] {\r\n  padding-top: 0.1rem !important;\r\n  padding-bottom: 0.1rem !important;\n}\n.label-btn[data-v-ccb8d420] {\r\n  background-color: #003585;\r\n  color: white;\r\n  font-family: sans-serif;\r\n  border-radius: 0.3rem;\r\n  cursor: pointer;\n}\n.cropper-modal[data-v-ccb8d420] {\r\n  max-height: calc(100vh - 40px);\r\n  overflow-y: auto;\n}\r\n", ""]);
 
 // exports
 
@@ -3783,7 +3783,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.desctext[data-v-4ad50216] {\n  background-color: white;\n  color: black;\n}\n", ""]);
+exports.push([module.i, "\n.desctext[data-v-4ad50216] {\r\n  background-color: white;\r\n  color: black;\n}\r\n", ""]);
 
 // exports
 
@@ -3802,7 +3802,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.btnsubmiticon[data-v-d9ed4160] {\n  background-color: #013737;\n  color: white;\n  padding-top: 2px;\n  padding-bottom: 2px;\n  border-radius: 0;\n  z-index: 100;\n}\n.btnsuca[data-v-d9ed4160] {\n  text-align: center;\n}\n.btn-success[data-v-d9ed4160] {\n  padding-top: 0.1rem !important;\n  padding-bottom: 0.1rem !important;\n}\n.label-btn[data-v-d9ed4160] {\n  background-color: #003585;\n  color: white;\n  font-family: sans-serif;\n  border-radius: 0.3rem;\n  cursor: pointer;\n}\n.cropper-modal[data-v-d9ed4160] {\n  max-height: calc(100vh - 40px);\n  overflow-y: auto;\n}\n", ""]);
+exports.push([module.i, "\n.btnsubmiticon[data-v-d9ed4160] {\r\n  background-color: #013737;\r\n  color: white;\r\n  padding-top: 2px;\r\n  padding-bottom: 2px;\r\n  border-radius: 0;\r\n  z-index: 100;\n}\n.btnsuca[data-v-d9ed4160] {\r\n  text-align: center;\n}\n.btn-success[data-v-d9ed4160] {\r\n  padding-top: 0.1rem !important;\r\n  padding-bottom: 0.1rem !important;\n}\n.label-btn[data-v-d9ed4160] {\r\n  background-color: #003585;\r\n  color: white;\r\n  font-family: sans-serif;\r\n  border-radius: 0.3rem;\r\n  cursor: pointer;\n}\n.cropper-modal[data-v-d9ed4160] {\r\n  max-height: calc(100vh - 40px);\r\n  overflow-y: auto;\n}\r\n", ""]);
 
 // exports
 
@@ -3821,7 +3821,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\n.slide-fade-enter-active[data-v-ed4e66d8] {\n  transition: all 0.5s ease;\n}\n.slide-fade-leave-active[data-v-ed4e66d8] {\n  transition: all 0.5s cubic-bezier(1, 0.5, 0.8, 1);\n}\n.slide-fade-enter[data-v-ed4e66d8],\n.slide-fade-leave-to[data-v-ed4e66d8] {\n  transform: translateX(10px);\n  opacity: 0;\n}\n", ""]);
+exports.push([module.i, "\n.slide-fade-enter-active[data-v-ed4e66d8] {\r\n  transition: all 0.5s ease;\n}\n.slide-fade-leave-active[data-v-ed4e66d8] {\r\n  transition: all 0.5s cubic-bezier(1, 0.5, 0.8, 1);\n}\n.slide-fade-enter[data-v-ed4e66d8],\r\n.slide-fade-leave-to[data-v-ed4e66d8] {\r\n  transform: translateX(10px);\r\n  opacity: 0;\n}\r\n", ""]);
 
 // exports
 
@@ -33989,7 +33989,7 @@ if (typeof element != "undefined" && element != null) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/js/editChannel.js */"./resources/js/editChannel.js");
+module.exports = __webpack_require__(/*! C:\laragon\www\bridyc\resources\js\editChannel.js */"./resources/js/editChannel.js");
 
 
 /***/ })

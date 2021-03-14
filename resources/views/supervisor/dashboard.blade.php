@@ -24,7 +24,6 @@ video')
     .margin-fill {
         margin-left: 4px;
         margin-right: 4px;
-
     }
 
     .t-text {
@@ -71,51 +70,17 @@ video')
 
     </div>
     <div class="margin-fill">
-        <div class="row  mt-2 d-flex d-flex justify-content-between">
+        <div class="mt-2 ">
             <div id="weather">
                 <weather></weather>
             </div>
-            {{-- <div class="col-sm-12 col-lg-4 shadow-sm ">
-                <div class="table-responsive">
-                    <table class="t-text table table-hover table-striped">
-                        <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>Price</th>
-                                <th>Quantity</th>
-                                <th>Total</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th>iPhone X 64Gb Grey</th>
-                                <td>$999.00</td>
-                                <td>1</td>
-                                <td>$999.00</td>
-                            </tr>
-                            <tr>
-                                <th>iPhone X 64Gb Grey</th>
-                                <td>$999.00</td>
-                                <td>1</td>
-                                <td>$999.00</td>
-                            </tr>
-                            <tr>
-                                <th>iPhone X 64Gb Grey</th>
-                                <td>$999.00</td>
-                                <td>1</td>
-                                <td>$999.00</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div> --}}
+
         </div>
     </div>
 
 </div>
 
 @endsection
-
 @section('js_code')
 <script src="{{url('js/app.js')}}"></script>
 <script src="{{url('js/dashboardBlade.js')}}"></script>

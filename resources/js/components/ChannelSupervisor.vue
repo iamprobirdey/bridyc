@@ -56,7 +56,7 @@
 
       <div class="form-row">
         <div
-          class="form-group col-md-3 col-sm-6"
+          class="form-group col-md-3 col-6"
           :class="{
             'has-error':
               errors.has('serverErrors.city') || serverErrors.city != '',
@@ -78,7 +78,7 @@
           }}</span>
         </div>
         <div
-          class="form-group col-md-3 col-sm-6"
+          class="form-group col-md-3 col-6"
           :class="{
             'has-error':
               errors.has('serverErrors.post_office') ||
@@ -101,7 +101,7 @@
           }}</span>
         </div>
         <div
-          class="form-group col-md-3 col-sm-6"
+          class="form-group col-md-3 col-6"
           :class="{
             'has-error':
               errors.has('serverErrors.district') ||
@@ -124,7 +124,7 @@
           }}</span>
         </div>
         <div
-          class="form-group col-md-3 col-sm-6"
+          class="form-group col-md-3 col-6"
           :class="{
             'has-error':
               errors.has('serverErrors.pin') || serverErrors.pin != '',
@@ -148,7 +148,7 @@
       </div>
       <div class="form-row">
         <div
-          class="form-group col-md-4 col-sm-6"
+          class="form-group col-md-4 col-6"
           :class="{
             'has-error':
               errors.has('serverErrors.date') || serverErrors.date != '',
@@ -170,7 +170,7 @@
           }}</span>
         </div>
         <div
-          class="form-group col-md-4 col-sm-6"
+          class="form-group col-md-4 col-6"
           :class="{
             'has-error':
               errors.has('serverErrors.bibhag') || serverErrors.bibhag != '',
@@ -216,7 +216,7 @@
       </div>
       <div class="form-row">
         <div
-          class="form-group col-md-6 col-sm-6"
+          class="form-group col-md-6 col-6"
           :class="{
             'has-error':
               errors.has('serverErrors.number') || serverErrors.number != '',
@@ -238,7 +238,7 @@
           }}</span>
         </div>
         <div
-          class="form-group col-md-6 col-sm-6"
+          class="form-group col-md-6 col-6"
           :class="{
             'has-error':
               errors.has('serverErrors.niketan') || serverErrors.niketan != '',
@@ -263,7 +263,7 @@
 
       <div class="form-row">
         <div
-          class="form-group col-md-4 col-sm-6"
+          class="form-group col-md-4 col-6"
           :class="{
             'has-error':
               errors.has('serverErrors.email') || serverErrors.email != '',
@@ -285,7 +285,7 @@
           }}</span>
         </div>
         <div
-          class="form-group col-md-4 col-sm-6"
+          class="form-group col-md-4 col-6"
           :class="{
             'has-error':
               errors.has('serverErrors.website') || serverErrors.website != '',
@@ -438,9 +438,9 @@
 
 
 <div class="p-2 row">
-    <p class="mt-2 mr-2"></p>
+    <p class="mt-2 mr-2 "></p>
     ৫। (ক) প্রধানাচাৰ্য/ভাৰপ্ৰাপ্ত প্রধানাচাৰ্যৰ নাম </p>
-    <input type="text" class="form-control col-2 mr-2" placeholder=" " />
+    <input type="text" class="form-control col-2 mr-2 mb-1" placeholder=" " />
     <p class="mt-2 mr-2">
         স্থানীয় সমিতিৰ পৰা পোৱা নিযুক্তিৰ তাৰিখ </p>
     <input type="text" class="form-control col-2 mr-2" placeholder=" " />
@@ -1708,7 +1708,7 @@
       <h1>Step 4</h1>
       <div class="table-bordered">
         <div class="row mt-2">
-          <div class="form-group row col-md-4">
+          <div class="form-group row col-md-4 ml-1">
             <label class="d-flex align-items-end"
               >চাৰিওটা শাখাৰ সৰ্বমুঠ :</label
             >
@@ -2527,11 +2527,11 @@
         <span v-show="errors.has('step7.one')" class="text-danger">
           {{ errors.first("step7.one") }}
         </span>
-    <p class="mt-2 mr-2">
+    <p class="mt-2 mr-2 ">
         স্থানীয় সমিতিৰ পৰা পোৱা নিযুক্তিৰ তাৰিখ </p>
         <input
           type="text"
-          class="form-control col-2 mr-2"
+          class="form-control col-2 mr-2 mt-1"
           v-model="step7.two"
           v-validate="'required'"
           name="two"
