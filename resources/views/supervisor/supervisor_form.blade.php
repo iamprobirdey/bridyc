@@ -23,7 +23,8 @@ $form_data = json_decode($supervisorData[0]->form_data);
     {{-- <link rel="stylesheet" type="text/css" href="{{url('css/app.css')}}"> --}}
     <style>
         .letMePutOneColor {
-            color: red
+            color: red;
+            font-size: 40px;
         }
 
         .container {
@@ -52,6 +53,7 @@ $form_data = json_decode($supervisorData[0]->form_data);
 </head>
 
 <body>
+    <h1 class="letMePutOneColor">নিকেতনৰ নাম</h1>
     <div class="container">
         <div class="centre mb-0">
             <h5 class="mb-0 ">বিদ্যা ভাৰতী অখিল ভাৰতীয় শিক্ষা সংস্থানৰ সংবদ্ধ</h5>

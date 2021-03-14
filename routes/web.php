@@ -187,7 +187,7 @@ Route::group([
     'middleware' => ['can:supervisor']
 ], function () {
     Route::get('/dashboard', 'Supervisor\SupervisorController@index')->name('supervisor.dashboard');
-    Route::get('/report', 'Supervisor\SupervisorController@report')->name('supervisor');
+    Route::get('/report', 'Supervisor\SupervisorController@report')->name('supervisor.report');
     Route::get('/view/{id}', 'Supervisor\SupervisorController@view')->name('supervisor.view');
     Route::get('/pdf/{id}', 'Supervisor\SupervisorController@test');
     Route::get('/test', 'Supervisor\SupervisorController@test2');
@@ -240,6 +240,15 @@ Route::group([
 ], function () {
     //Independent
     Route::get('store/channel/session/{channelId}', 'ChannelController@storeChannelSession');
+    Route::get('total/site/visit/', 'TotalSiteVisitController@store');
+
+    //Supervisor api
+    Route::group([
+        'middleware' => ['can:supervisor']
+    ], function () {
+        Route::get('get/supervisor/channel/data', 'Supervisor\SupervisorController@getChannelData');
+        Route::get('get/supervisor/channel/data/{districtId}', 'Supervisor\SupervisorController@getChannelDataByDistrict');
+    });
 
     Route::group([
         'middleware' => ['can:student']

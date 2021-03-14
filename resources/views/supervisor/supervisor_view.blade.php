@@ -14,18 +14,16 @@
 @php
 $form_data = json_decode($supervisorData[0]->form_data);
 @endphp
-<div class="container ">
+<div class="container">
 
     <div class="d-flex flex-row-reverse">
         <button class="btn btn-outline-primary btn-sm print-invoice1 ">Print</button>
-
-
     </div>
 
-    <div class="printBox ">
+    <div class="printBox">
         <div class="row justify-content-between">
             <div class="col-sm-6 col-4 col-md-4">
-                <img class="i-logo" src="https://pbs.twimg.com/profile_images/631142672120451072/-z2Q6ZD9.png" alt="">
+                <img class="i-logo" src="/media/supervisor/sankardev.png" alt="">
             </div>
             <div class="col-sm-6 col-8 col-md-8">
                 <div class="mb-0 d-flex ">
@@ -1415,9 +1413,8 @@ $form_data = json_decode($supervisorData[0]->form_data);
             </table>
         </div>
     </div>
-    @endsection
+</div>
+@endsection
 
-    @section('js_code')
-
-
-    @endsection
+@section('js_code')
+@endsection

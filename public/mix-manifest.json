@@ -5,7 +5,7 @@
     "/js/achievement.js": "/js/achievement.js?id=d6db89c915b093cce4ce",
     "/js/adminUserInformation.js": "/js/adminUserInformation.js?id=a464a9a682e86257e1e1",
     "/js/adminVerification.js": "/js/adminVerification.js?id=e779b6e7d6a4d5d6d691",
-    "/js/app.js": "/js/app.js?id=740e7d84c3e1402949f6",
+    "/js/app.js": "/js/app.js?id=b2b36f573986475b272a",
     "/css/app.css": "/css/app.css?id=1fb88bd2d76f07445b72",
     "/css/index.css": "/css/index.css?id=a16690395be5904ced76",
     "/css/application.css": "/css/application.css?id=c73d6ea15cd5dedde28d",
@@ -32,5 +32,6 @@
     "/js/loginSignupModal.js": "/js/loginSignupModal.js?id=7acfd01a7ac8da5ab85a",
     "/js/profile.js": "/js/profile.js?id=46d2e6b0949e5f5aa59a",
     "/js/teacherProfile.js": "/js/teacherProfile.js?id=c065ed089109bbd5450f",
-    "/js/verification.js": "/js/verification.js?id=79f52bff8803ccd2d34c"
+    "/js/verification.js": "/js/verification.js?id=79f52bff8803ccd2d34c",
+    "/js/weather.js": "/js/weather.js?id=06e1e5df2b9b60a02f5a"
 }

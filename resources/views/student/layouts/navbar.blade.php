@@ -62,7 +62,7 @@
             @endif
             @if (auth()->check() && auth()->user()->isSupervisor())
             <a class="btn btndashboard mr-2" data-trigger="focus" data-toggle="popover" data-placement="bottom"
-                href="{{route('supervisor')}}">
+                href="{{route('supervisor.dashboard')}}">
                 <i class="fa fa-th-large" aria-hidden="true"></i> Supervisor Dashboard
             </a>
             @endif

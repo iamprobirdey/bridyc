@@ -38,7 +38,3 @@ video')
     </div>
 </div>
 @endsection
-
-@section('js_code')
-<script src="{{url('js/dashboardBlade.js')}}"></script>
-@endsection
