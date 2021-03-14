@@ -4943,11 +4943,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -10733,70 +10728,66 @@ var render = function() {
             _c("h1", [_vm._v("Step 4")]),
             _vm._v(" "),
             _c("div", { staticClass: "table-bordered" }, [
-              _c("div", { staticClass: "row mt-2" }, [
-                _c("div", { staticClass: "form-group row col-md-4 ml-1" }, [
+              _c("div", { staticClass: "row mt-2 ml-2" }, [
+                _c("div", { staticClass: "form-group row ml-2" }, [
                   _c("label", { staticClass: "d-flex align-items-end" }, [
                     _vm._v("চাৰিওটা শাখাৰ সৰ্বমুঠ :")
                   ]),
                   _vm._v(" "),
-                  _c("div", { staticClass: "col" }, [
-                    _c("input", {
+                  _c("input", {
+                    directives: [
+                      {
+                        name: "model",
+                        rawName: "v-model",
+                        value: _vm.step4.one,
+                        expression: "step4.one"
+                      },
+                      {
+                        name: "validate",
+                        rawName: "v-validate",
+                        value: "required|numeric",
+                        expression: "'required|numeric'"
+                      }
+                    ],
+                    staticClass: "form-control col-4 m-1",
+                    attrs: {
+                      type: "number",
+                      name: "one",
+                      placeholder: "ছাত্র "
+                    },
+                    domProps: { value: _vm.step4.one },
+                    on: {
+                      input: function($event) {
+                        if ($event.target.composing) {
+                          return
+                        }
+                        _vm.$set(_vm.step4, "one", $event.target.value)
+                      }
+                    }
+                  }),
+                  _vm._v(" "),
+                  _c(
+                    "span",
+                    {
                       directives: [
                         {
-                          name: "model",
-                          rawName: "v-model",
-                          value: _vm.step4.one,
-                          expression: "step4.one"
-                        },
-                        {
-                          name: "validate",
-                          rawName: "v-validate",
-                          value: "required|numeric",
-                          expression: "'required|numeric'"
+                          name: "show",
+                          rawName: "v-show",
+                          value: _vm.errors.has("step4.one"),
+                          expression: "errors.has('step4.one')"
                         }
                       ],
-                      staticClass: "form-control",
-                      attrs: {
-                        type: "number",
-                        name: "one",
-                        placeholder: "ছাত্র "
-                      },
-                      domProps: { value: _vm.step4.one },
-                      on: {
-                        input: function($event) {
-                          if ($event.target.composing) {
-                            return
-                          }
-                          _vm.$set(_vm.step4, "one", $event.target.value)
-                        }
-                      }
-                    }),
-                    _vm._v(" "),
-                    _c(
-                      "span",
-                      {
-                        directives: [
-                          {
-                            name: "show",
-                            rawName: "v-show",
-                            value: _vm.errors.has("step4.one"),
-                            expression: "errors.has('step4.one')"
-                          }
-                        ],
-                        staticClass: "text-danger"
-                      },
-                      [
-                        _vm._v(
-                          "\n                " +
-                            _vm._s(_vm.errors.first("step4.one")) +
-                            "\n              "
-                        )
-                      ]
-                    )
-                  ])
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "form-group col-md-4" }, [
+                      staticClass: "text-danger"
+                    },
+                    [
+                      _vm._v(
+                        "\n                " +
+                          _vm._s(_vm.errors.first("step4.one")) +
+                          "\n              "
+                      )
+                    ]
+                  ),
+                  _vm._v(" "),
                   _c("input", {
                     directives: [
                       {
@@ -10812,7 +10803,7 @@ var render = function() {
                         expression: "'required|numeric'"
                       }
                     ],
-                    staticClass: "form-control",
+                    staticClass: "form-control col-2 m-1",
                     attrs: {
                       type: "number",
                       name: "two",
@@ -10849,10 +10840,8 @@ var render = function() {
                           "\n            "
                       )
                     ]
-                  )
-                ]),
-                _vm._v(" "),
-                _c("div", { staticClass: "form-group col-md-4" }, [
+                  ),
+                  _vm._v(" "),
                   _c("input", {
                     directives: [
                       {
@@ -10868,7 +10857,7 @@ var render = function() {
                         expression: "'required|numeric'"
                       }
                     ],
-                    staticClass: "form-control",
+                    staticClass: "form-control col-2 m-1",
                     attrs: {
                       type: "number",
                       name: "three",
@@ -11076,7 +11065,7 @@ var render = function() {
               ]),
               _vm._v(" "),
               _c("div", { staticClass: "row mt-2" }, [
-                _c("div", { staticClass: "form-group row col-md-4" }, [
+                _c("div", { staticClass: "form-group row col-md-4 ml-2 " }, [
                   _c("label", { staticClass: "d-flex align-items-end" }, [
                     _vm._v("মুঠ অন্য কৰ্মচাৰী :")
                   ]),
@@ -11194,7 +11183,7 @@ var render = function() {
               ]),
               _vm._v(" "),
               _c("div", { staticClass: "mt-2 row" }, [
-                _c("div", { staticClass: "form-group row col-md-8" }, [
+                _c("div", { staticClass: "form-group row col-md-8 ml-2" }, [
                   _c("label", { staticClass: "d-flex align-items-end" }, [
                     _vm._v(
                       "প্ৰতিটো শ্ৰেণীত থকা বিশেষভাবে সক্ষম ছাত্র-ছাত্ৰীৰ মুঠ\n              সংখ্যা"
@@ -24666,14 +24655,15 @@ if (typeof element != "undefined" && element != null) {
 /*!*******************************************************!*\
   !*** ./resources/js/components/ChannelSupervisor.vue ***!
   \*******************************************************/
-/*! exports provided: default */
+/*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ChannelSupervisor_vue_vue_type_template_id_6c60f470___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ChannelSupervisor.vue?vue&type=template&id=6c60f470& */ "./resources/js/components/ChannelSupervisor.vue?vue&type=template&id=6c60f470&");
 /* harmony import */ var _ChannelSupervisor_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ChannelSupervisor.vue?vue&type=script&lang=js& */ "./resources/js/components/ChannelSupervisor.vue?vue&type=script&lang=js&");
-/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _ChannelSupervisor_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _ChannelSupervisor_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
 
@@ -24703,7 +24693,7 @@ component.options.__file = "resources/js/components/ChannelSupervisor.vue"
 /*!********************************************************************************!*\
   !*** ./resources/js/components/ChannelSupervisor.vue?vue&type=script&lang=js& ***!
   \********************************************************************************/
-/*! exports provided: default */
+/*! no static exports found */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

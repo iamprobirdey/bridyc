@@ -1707,15 +1707,14 @@
     >
       <h1>Step 4</h1>
       <div class="table-bordered">
-        <div class="row mt-2">
-          <div class="form-group row col-md-4 ml-1">
+        <div class="row mt-2 ml-2">
+          <div class="form-group row ml-2">
             <label class="d-flex align-items-end"
               >চাৰিওটা শাখাৰ সৰ্বমুঠ :</label
             >
-            <div class="col">
               <input
                 type="number"
-                class="form-control"
+                class="form-control col-4 m-1"
                 v-model="step4.one"
                 v-validate="'required|numeric'"
                 name="one"
@@ -1724,12 +1723,9 @@
               <span v-show="errors.has('step4.one')" class="text-danger">
                 {{ errors.first("step4.one") }}
               </span>
-            </div>
-          </div>
-          <div class="form-group col-md-4">
-            <input
+<input
               type="number"
-              class="form-control"
+              class="form-control col-2 m-1"
               v-model="step4.two"
               v-validate="'required|numeric'"
               name="two"
@@ -1738,11 +1734,9 @@
             <span v-show="errors.has('step4.two')" class="text-danger">
               {{ errors.first("step4.two") }}
             </span>
-          </div>
-          <div class="form-group col-md-4">
-            <input
+            <input 
               type="number"
-              class="form-control"
+              class="form-control col-2 m-1"
               v-model="step4.three"
               v-validate="'required|numeric'"
               name="three"
@@ -1752,6 +1746,7 @@
               {{ errors.first("step4.three") }}
             </span>
           </div>
+            
         </div>
         <!--  form 2 -->
         <div class="d-flex justify-content-end">
@@ -1796,7 +1791,7 @@
           </div>
         </div>
         <div class="row mt-2">
-          <div class="form-group row col-md-4">
+          <div class="form-group row col-md-4 ml-2 ">
             <label class="d-flex align-items-end">মুঠ অন্য কৰ্মচাৰী :</label>
             <div class="col">
               <input
@@ -1830,7 +1825,7 @@
           </div>
         </div>
         <div class="mt-2 row">
-          <div class="form-group row col-md-8">
+          <div class="form-group row col-md-8 ml-2">
             <label class="d-flex align-items-end"
               >প্ৰতিটো শ্ৰেণীত থকা বিশেষভাবে সক্ষম ছাত্র-ছাত্ৰীৰ মুঠ
               সংখ্যা</label
