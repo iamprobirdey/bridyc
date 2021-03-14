@@ -651,7 +651,7 @@
           <th>
             <input
               type="number"
-              class="form-control"
+              class="form-control formOne"
               v-model="step2.teacher_male_1"
               v-validate="'required|numeric'"
               name="teacher_male_1"
@@ -673,11 +673,11 @@
           <th>
             <input
               type="number"
-              class="form-control"
+              class="form-control formOne"
               v-model="step2.ankul_1"
               v-validate="'required|numeric'"
               name="ankul_1"
-              placeholder=""
+              placeholder="Testing form"
             />
             <span v-show="errors.has('step2.ankul_1')" class="text-danger">{{
               errors.first("step2.ankul_1")
@@ -690,7 +690,7 @@
           <th>
             <input
               type="number"
-              class="form-control"
+              class="form-control formOne"
               v-model="step2.mukul_1"
               v-validate="'required|numeric'"
               name="mukul_1"
@@ -706,7 +706,7 @@
           <th>
             <input
               type="number"
-              class="form-control"
+              class="form-control formOne"
               v-model="step2.muth_1"
               v-validate="'required|numeric'"
               name="muth_1"
@@ -723,7 +723,7 @@
           <th>
             <input
               type="number"
-              class="form-control"
+              class="form-control formOne"
               v-model="step2.teacher_female_1"
               v-validate="'required|numeric'"
               name="teacher_female_1"
@@ -746,7 +746,7 @@
           <th>
             <input
               type="number"
-              class="form-control"
+              class="form-control formOne"
               v-model="step2.ankul_2"
               v-validate="'required|numeric'"
               name="ankul_2"
@@ -762,7 +762,7 @@
           <th>
             <input
               type="number"
-              class="form-control"
+              class="form-control formOne"
               v-model="step2.mukul_2"
               v-validate="'required|numeric'"
               name="mukul_2"
@@ -778,7 +778,7 @@
           <th>
             <input
               type="number"
-              class="form-control"
+              class="form-control formOne"
               v-model="step2.muth_2"
               v-validate="'required|numeric'"
               name="muth_2"
@@ -795,7 +795,7 @@
           <th>
             <input
               type="number"
-              class="form-control"
+              class="form-control formOne"
               v-model="step2.teacher_total_1"
               v-validate="'required|numeric'"
               name="teacher_total_1"
@@ -818,7 +818,7 @@
           <th>
             <input
               type="number"
-              class="form-control"
+              class="form-control formOne"
               v-model="step2.ankul_3"
               v-validate="'required|numeric'"
               name="ankul_3"
@@ -834,7 +834,7 @@
           <th>
             <input
               type="number"
-              class="form-control"
+              class="form-control formOne"
               v-model="step2.mukul_3"
               v-validate="'required|numeric'"
               name="mukul_3"
@@ -850,7 +850,7 @@
           <th>
             <input
               type="number"
-              class="form-control"
+              class="form-control formOne"
               v-model="step2.muth_3"
               v-validate="'required|numeric'"
               name="muth_3"
@@ -867,7 +867,7 @@
           <th>
             <input
               type="number"
-              class="form-control"
+              class="form-control formOne"
               v-model="step2.teacher_karmachari_1"
               v-validate="'required|numeric'"
               name="teacher_karmachari_1"
@@ -902,7 +902,7 @@
           <th>
             <input
               type="number"
-              class="form-control"
+              class="form-control formOne"
               v-model="step2.teacher_male_2"
               v-validate="'required|numeric'"
               name="teacher_male_2"
@@ -921,7 +921,7 @@
           <th>
             <input
               type="number"
-              class="form-control"
+              class="form-control formOne"
               v-model="step2.one_male"
               v-validate="'required|numeric'"
               name="one_male"
@@ -934,7 +934,7 @@
           <th>
             <input
               type="number"
-              class="form-control"
+              class="form-control formOne"
               v-model="step2.two_male"
               v-validate="'required|numeric'"
               name="two_male"
@@ -947,7 +947,7 @@
           <th>
             <input
               type="number"
-              class="form-control"
+              class="form-control formOne"
               v-model="step2.three_male"
               v-validate="'required|numeric'"
               name="three_male"
@@ -960,7 +960,7 @@
           <th>
             <input
               type="number"
-              class="form-control"
+              class="form-control formOne"
               v-model="step2.four_male"
               v-validate="'required|numeric'"
               name="four_male"
@@ -973,7 +973,7 @@
           <th>
             <input
               type="number"
-              class="form-control"
+              class="form-control formOne"
               v-model="step2.five_male"
               v-validate="'required|numeric'"
               name="five_male"
@@ -986,7 +986,7 @@
           <th>
             <input
               type="number"
-              class="form-control"
+              class="form-control formOne"
               v-model="step2.muth_male"
               v-validate="'required|numeric'"
               name="muth_male"
@@ -1000,7 +1000,7 @@
           <th>
             <input
               type="number"
-              class="form-control"
+              class="form-control formOne"
               v-model="step2.teacher_female_2"
               v-validate="'required|numeric'"
               name="teacher_female_2"
@@ -1019,7 +1019,7 @@
           <th>
             <input
               type="number"
-              class="form-control"
+              class="form-control formOne"
               v-model="step2.one_female"
               v-validate="'required|numeric'"
               name="one_female"
@@ -1032,7 +1032,7 @@
           <th>
             <input
               type="number"
-              class="form-control"
+              class="form-control formOne"
               v-model="step2.two_female"
               v-validate="'required|numeric'"
               name="two_female"
@@ -1045,7 +1045,7 @@
           <th>
             <input
               type="number"
-              class="form-control"
+              class="form-control formOne"
               v-model="step2.three_female"
               v-validate="'required|numeric'"
               name="three_female"
@@ -1058,7 +1058,7 @@
           <th>
             <input
               type="number"
-              class="form-control"
+              class="form-control formOne"
               v-model="step2.four_female"
               v-validate="'required|numeric'"
               name="four_female"
@@ -1071,7 +1071,7 @@
           <th>
             <input
               type="number"
-              class="form-control"
+              class="form-control formOne"
               v-model="step2.five_female"
               v-validate="'required|numeric'"
               name="five_female"
@@ -1084,7 +1084,7 @@
           <th>
             <input
               type="number"
-              class="form-control"
+              class="form-control formOne"
               v-model="step2.muth_female"
               v-validate="'required|numeric'"
               name="muth_female"
@@ -1098,7 +1098,7 @@
           <th>
             <input
               type="number"
-              class="form-control"
+              class="form-control formOne"
               v-model="step2.teacher_total_2"
               v-validate="'required|numeric'"
               name="teacher_total_2"
@@ -1117,7 +1117,7 @@
           <th>
             <input
               type="number"
-              class="form-control"
+              class="form-control formOne"
               v-model="step2.one_total"
               v-validate="'required|numeric'"
               name="one_total"
@@ -1130,7 +1130,7 @@
           <th>
             <input
               type="number"
-              class="form-control"
+              class="form-control formOne"
               v-model="step2.two_total"
               v-validate="'required|numeric'"
               name="two_total"
@@ -1143,7 +1143,7 @@
           <th>
             <input
               type="number"
-              class="form-control"
+              class="form-control formOne"
               v-model="step2.three_total"
               v-validate="'required|numeric'"
               name="three_total"
@@ -1156,7 +1156,7 @@
           <th>
             <input
               type="number"
-              class="form-control"
+              class="form-control formOne"
               v-model="step2.four_total"
               v-validate="'required|numeric'"
               name="four_total"
@@ -1169,7 +1169,7 @@
           <th>
             <input
               type="number"
-              class="form-control"
+              class="form-control formOne"
               v-model="step2.five_total"
               v-validate="'required|numeric'"
               name="five_total"
@@ -1182,7 +1182,7 @@
           <th>
             <input
               type="number"
-              class="form-control"
+              class="form-control formOne"
               v-model="step2.muth_total"
               v-validate="'required|numeric'"
               name="muth_total"
@@ -1196,7 +1196,7 @@
           <th>
             <input
               type="number"
-              class="form-control"
+              class="form-control formOne"
               v-model="step2.teacher_karmachari_2"
               v-validate="'required|numeric'"
               name="teacher_karmachari_2"
@@ -1246,7 +1246,7 @@
           <th>
             <input
               type="number"
-              class="form-control"
+              class="form-control formOne"
               v-model="step3.teacher_male_1"
               v-validate="'required|numeric'"
               name="teacher_male_1"
@@ -1265,7 +1265,7 @@
           <th>
             <input
               type="number"
-              class="form-control"
+              class="form-control formOne"
               v-model="step3.six_male"
               v-validate="'required|numeric'"
               name="six_male"
@@ -1278,7 +1278,7 @@
           <th>
             <input
               type="number"
-              class="form-control"
+              class="form-control formOne"
               v-model="step3.seven_male"
               v-validate="'required|numeric'"
               name="seven_male"
@@ -1291,7 +1291,7 @@
           <th>
             <input
               type="number"
-              class="form-control"
+              class="form-control formOne"
               v-model="step3.eight_male"
               v-validate="'required|numeric'"
               name="eight_male"
@@ -1304,7 +1304,7 @@
           <th>
             <input
               type="number"
-              class="form-control"
+              class="form-control formOne"
               v-model="step3.muth_male_1"
               v-validate="'required|numeric'"
               name="muth_male_1"
@@ -1318,7 +1318,7 @@
           <th>
             <input
               type="number"
-              class="form-control"
+              class="form-control formOne"
               v-model="step3.teacher_female_1"
               v-validate="'required|numeric'"
               name="teacher_female_1"
@@ -1337,7 +1337,7 @@
           <th>
             <input
               type="number"
-              class="form-control"
+              class="form-control formOne"
               v-model="step3.six_female"
               v-validate="'required|numeric'"
               name="six_female"
@@ -1350,7 +1350,7 @@
           <th>
             <input
               type="number"
-              class="form-control"
+              class="form-control formOne"
               v-model="step3.seven_female"
               v-validate="'required|numeric'"
               name="seven_female"
@@ -1363,7 +1363,7 @@
           <th>
             <input
               type="number"
-              class="form-control"
+              class="form-control formOne"
               v-model="step3.eight_female"
               v-validate="'required|numeric'"
               name="eight_female"
@@ -1376,7 +1376,7 @@
           <th>
             <input
               type="number"
-              class="form-control"
+              class="form-control formOne"
               v-model="step3.muth_female_1"
               v-validate="'required|numeric'"
               name="muth_female_1"
@@ -1393,7 +1393,7 @@
           <th>
             <input
               type="number"
-              class="form-control"
+              class="form-control formOne"
               v-model="step3.teacher_female_1"
               v-validate="'required|numeric'"
               name="teacher_female_1"
@@ -1412,7 +1412,7 @@
           <th>
             <input
               type="number"
-              class="form-control"
+              class="form-control formOne"
               v-model="step3.six_total"
               v-validate="'required|numeric'"
               name="six_total"
@@ -1425,7 +1425,7 @@
           <th>
             <input
               type="number"
-              class="form-control"
+              class="form-control formOne"
               v-model="step3.seven_total"
               v-validate="'required|numeric'"
               name="seven_total"
@@ -1438,7 +1438,7 @@
           <th>
             <input
               type="number"
-              class="form-control"
+              class="form-control formOne"
               v-model="step3.eight_total"
               v-validate="'required|numeric'"
               name="eight_total"
@@ -1451,7 +1451,7 @@
           <th>
             <input
               type="number"
-              class="form-control"
+              class="form-control formOne"
               v-model="step3.muth_total_1"
               v-validate="'required|numeric'"
               name="muth_total_1"
@@ -1465,7 +1465,7 @@
           <th>
             <input
               type="number"
-              class="form-control"
+              class="form-control formOne"
               v-model="step3.teacher_karmachari_1"
               v-validate="'required|numeric'"
               name="teacher_karmachari_1"
@@ -1493,7 +1493,7 @@
           <th>
             <input
               type="number"
-              class="form-control"
+              class="form-control formOne"
               v-model="step3.teacher_male_2"
               v-validate="'required|numeric'"
               name="teacher_male_2"
@@ -1512,7 +1512,7 @@
           <th>
             <input
               type="number"
-              class="form-control"
+              class="form-control formOne"
               v-model="step3.nine_male"
               v-validate="'required|numeric'"
               name="nine_male"
@@ -1525,7 +1525,7 @@
           <th>
             <input
               type="number"
-              class="form-control"
+              class="form-control formOne"
               v-model="step3.ten_male"
               v-validate="'required|numeric'"
               name="ten_male"
@@ -1538,7 +1538,7 @@
           <th>
             <input
               type="number"
-              class="form-control"
+              class="form-control formOne"
               v-model="step3.muth_male_2"
               v-validate="'required|numeric'"
               name="muth_male_2"
@@ -1552,7 +1552,7 @@
           <th>
             <input
               type="number"
-              class="form-control"
+              class="form-control formOne"
               v-model="step3.teacher_female_2"
               v-validate="'required|numeric'"
               name="teacher_female_2"
@@ -1571,7 +1571,7 @@
           <th>
             <input
               type="number"
-              class="form-control"
+              class="form-control formOne"
               v-model="step3.nine_female"
               v-validate="'required|numeric'"
               name="nine_female"
@@ -1584,7 +1584,7 @@
           <th>
             <input
               type="number"
-              class="form-control"
+              class="form-control formOne"
               v-model="step3.ten_female"
               v-validate="'required|numeric'"
               name="ten_female"
@@ -1597,7 +1597,7 @@
           <th>
             <input
               type="number"
-              class="form-control"
+              class="form-control formOne"
               v-model="step3.muth_total_2"
               v-validate="'required|numeric'"
               name="muth_total_2"
@@ -1611,7 +1611,7 @@
           <th>
             <input
               type="number"
-              class="form-control"
+              class="form-control formOne"
               v-model="step3.teacher_total_2"
               v-validate="'required|numeric'"
               name="teacher_total_2"
@@ -1630,7 +1630,7 @@
           <th>
             <input
               type="number"
-              class="form-control"
+              class="form-control formOne"
               v-model="step3.nine_total"
               v-validate="'required|numeric'"
               name="nine_total"
@@ -1643,7 +1643,7 @@
           <th>
             <input
               type="number"
-              class="form-control"
+              class="form-control formOne"
               v-model="step3.ten_total"
               v-validate="'required|numeric'"
               name="ten_total"
@@ -1656,7 +1656,7 @@
           <th>
             <input
               type="number"
-              class="form-control"
+              class="form-control formOne"
               v-model="step3.muth_total_2"
               v-validate="'required|numeric'"
               name="muth_total_2"
@@ -1670,7 +1670,7 @@
           <th>
             <input
               type="number"
-              class="form-control"
+              class="form-control formOne"
               v-model="step3.teacher_total_2"
               v-validate="'required|numeric'"
               name="teacher_total_2"
@@ -1886,9 +1886,9 @@
           </tr>
           <tr>
             <th>
-              <input
-                type="number"
-                class="form-control"
+            <input
+              type="number"
+              class="form-control formOne"
                 v-model="step4.twelve"
                 v-validate="'required|numeric'"
                 name="twelve"
@@ -1899,9 +1899,9 @@
               </span>
             </th>
             <th>
-              <input
-                type="number"
-                class="form-control"
+            <input
+              type="number"
+              class="form-control formOne"
                 v-model="step4.thirteen"
                 v-validate="'required|numeric'"
                 name="thirteen"
@@ -1912,9 +1912,9 @@
               </span>
             </th>
             <th>
-              <input
-                type="number"
-                class="form-control"
+            <input
+              type="number"
+              class="form-control formOne"
                 v-model="step4.fourteen"
                 v-validate="'required|numeric'"
                 name="fourteen"
@@ -1925,9 +1925,9 @@
               </span>
             </th>
             <th>
-              <input
-                type="number"
-                class="form-control"
+            <input
+              type="number"
+              class="form-control formOne"
                 v-model="step4.fiveteen"
                 v-validate="'required|numeric'"
                 name="fiveteen"
@@ -1938,9 +1938,9 @@
               </span>
             </th>
             <th>
-              <input
-                type="number"
-                class="form-control"
+            <input
+              type="number"
+              class="form-control formOne"
                 v-model="step4.sixteen"
                 v-validate="'required|numeric'"
                 name="sixteen"
@@ -1951,9 +1951,9 @@
               </span>
             </th>
             <th>
-              <input
-                type="number"
-                class="form-control"
+            <input
+              type="number"
+              class="form-control formOne"
                 v-model="step4.seventeen"
                 v-validate="'required|numeric'"
                 name="seventeen"
@@ -1964,9 +1964,9 @@
               </span>
             </th>
             <th>
-              <input
-                type="number"
-                class="form-control"
+            <input
+              type="number"
+              class="form-control formOne"
                 v-model="step4.eighteen"
                 v-validate="'required|numeric'"
                 name="eighteen"
@@ -2014,7 +2014,7 @@
             <td>
               <input
                 type="number"
-                class="form-control"
+                class="form-control formOne"
                 v-model="step5.sc_male"
                 v-validate="'required|numeric'"
                 name="sc_male"
@@ -2027,7 +2027,7 @@
             <td>
               <input
                 type="number"
-                class="form-control"
+                class="form-control formOne"
                 v-model="step5.sc_female"
                 v-validate="'required|numeric'"
                 name="sc_female"
@@ -2040,7 +2040,7 @@
             <td>
               <input
                 type="number"
-                class="form-control"
+                class="form-control  formOne"
                 v-model="step5.sc_total"
                 v-validate="'required|numeric'"
                 name="sc_total"
@@ -2064,7 +2064,7 @@
             <td>
               <input
                 type="number"
-                class="form-control"
+                class="form-control formOne"
                 v-model="step5.st_male"
                 v-validate="'required|numeric'"
                 name="st_male"
@@ -2077,7 +2077,7 @@
             <td>
               <input
                 type="number"
-                class="form-control"
+                class="form-control formOne"
                 v-model="step5.st_female"
                 v-validate="'required|numeric'"
                 name="st_female"
@@ -2090,7 +2090,7 @@
             <td>
               <input
                 type="number"
-                class="form-control"
+                class="form-control formOne"
                 v-model="step5.st_total"
                 v-validate="'required|numeric'"
                 name="st_total"
@@ -2103,7 +2103,7 @@
             <td>
               <input
                 type="number"
-                class="form-control"
+                class="form-control formOne"
                 v-model="step5.muslim_male"
                 v-validate="'required|numeric'"
                 name="muslim_male"
@@ -2119,7 +2119,7 @@
             <td>
               <input
                 type="number"
-                class="form-control"
+                class="form-control formOne"
                 v-model="step5.muslim_female"
                 v-validate="'required|numeric'"
                 name="muslim_female"
@@ -2135,7 +2135,7 @@
             <td>
               <input
                 type="number"
-                class="form-control"
+                class="form-control formOne"
                 v-model="step5.muslim_total"
                 v-validate="'required|numeric'"
                 name="muslim_total"
@@ -2154,7 +2154,7 @@
             <td>
               <input
                 type="number"
-                class="form-control"
+                class="form-control formOne"
                 v-model="step5.obc_male"
                 v-validate="'required|numeric'"
                 name="obc_male"
@@ -2167,7 +2167,7 @@
             <td>
               <input
                 type="number"
-                class="form-control"
+                class="form-control formOne"
                 v-model="step5.obc_female"
                 v-validate="'required|numeric'"
                 name="obc_female"
@@ -2180,7 +2180,7 @@
             <td>
               <input
                 type="number"
-                class="form-control"
+                class="form-control formOne"
                 v-model="step5.obc_total"
                 v-validate="'required|numeric'"
                 name="obc_total"
@@ -2194,7 +2194,7 @@
             <td>
               <input
                 type="number"
-                class="form-control"
+                class="form-control formOne"
                 v-model="step5.chritian_male"
                 v-validate="'required|numeric'"
                 name="chritian_male"
@@ -2210,7 +2210,7 @@
             <td>
               <input
                 type="number"
-                class="form-control"
+                class="form-control formOne"
                 v-model="step5.chritian_female"
                 v-validate="'required|numeric'"
                 name="chritian_female"
@@ -2226,7 +2226,7 @@
             <td>
               <input
                 type="number"
-                class="form-control"
+                class="form-control formOne"
                 v-model="step5.chritian_total"
                 v-validate="'required|numeric'"
                 name="chritian_total"
@@ -5310,3 +5310,8 @@ export default {
   },
 };
 </script>
+<style scoped>
+.formOne{
+    width: 90px !important;
+}
+</style>
