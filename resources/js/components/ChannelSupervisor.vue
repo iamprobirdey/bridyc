@@ -1960,7 +1960,7 @@
                 v-model="step5.chritian_total"
                 v-validate="'required|numeric'"
                 name="chritian_total"
-                placeholder=""
+                placeholder="Placeholder"
               />
               <span
                 v-show="errors.has('step5.chritian_total')"
