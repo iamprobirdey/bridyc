@@ -4941,8 +4941,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -7209,7 +7207,7 @@ var render = function() {
               "\n=======\n>>>>>>> ce16f3187792d163513f3c32d552d1f5ede5aa26\n\n\n\n\n      "
             ),
             _vm._v(" "),
-            _c("div", { staticClass: "d-flex flex-row-reverse" }, [
+            _c("div", { staticClass: "d-flex justify-content-between" }, [
               _c(
                 "button",
                 {
@@ -7217,10 +7215,17 @@ var render = function() {
                   attrs: { disabled: _vm.steps === 1, type: "button" }
                 },
                 [_vm._v("\n          Back\n        ")]
+              ),
+              _vm._v(" "),
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-outline-primary",
+                  attrs: { type: "submit" }
+                },
+                [_vm._v("Next")]
               )
-            ]),
-            _vm._v(" "),
-            _vm._m(29)
+            ])
           ]
         )
       : _vm._e(),
@@ -9521,7 +9526,7 @@ var render = function() {
               )
             ]),
             _vm._v(" "),
-            _vm._m(30)
+            _vm._m(29)
           ]
         )
       : _vm._e(),
@@ -11351,7 +11356,7 @@ var render = function() {
               )
             ]),
             _vm._v(" "),
-            _vm._m(31)
+            _vm._m(30)
           ]
         )
       : _vm._e(),
@@ -12006,7 +12011,7 @@ var render = function() {
               ]),
               _vm._v(" "),
               _c("table", { staticClass: "table table-responsive-md mb0" }, [
-                _vm._m(32),
+                _vm._m(31),
                 _vm._v(" "),
                 _c("tr", [
                   _c("th", [
@@ -12420,7 +12425,7 @@ var render = function() {
               )
             ]),
             _vm._v(" "),
-            _vm._m(33)
+            _vm._m(32)
           ]
         )
       : _vm._e(),
@@ -12446,7 +12451,7 @@ var render = function() {
               { staticClass: "table table-bordered table-responsive" },
               [
                 _c("tbody", [
-                  _vm._m(34),
+                  _vm._m(33),
                   _vm._v(" "),
                   _c("tr", [
                     _c("td", [_vm._v("(ক) অনুসূচীত জাতি (SC)")]),
@@ -12627,9 +12632,9 @@ var render = function() {
                       _vm._v("(ক) (মুছলমান)")
                     ]),
                     _vm._v(" "),
-                    _vm._m(35),
+                    _vm._m(34),
                     _vm._v(" "),
-                    _vm._m(36),
+                    _vm._m(35),
                     _vm._v(" "),
                     _c("td", [_vm._v("মুঠ")])
                   ]),
@@ -13313,7 +13318,7 @@ var render = function() {
                         attrs: {
                           type: "number",
                           name: "chritian_total",
-                          placeholder: ""
+                          placeholder: "Placeholder"
                         },
                         domProps: { value: _vm.step5.chritian_total },
                         on: {
@@ -13373,7 +13378,7 @@ var render = function() {
               )
             ]),
             _vm._v(" "),
-            _vm._m(37)
+            _vm._m(36)
           ]
         )
       : _vm._e(),
@@ -14233,7 +14238,7 @@ var render = function() {
               )
             ]),
             _vm._v(" "),
-            _vm._m(38),
+            _vm._m(37),
             _vm._v(" "),
             _c("div", { staticClass: "d-flex flex-row-reverse" }, [
               _c(
@@ -14251,7 +14256,7 @@ var render = function() {
               )
             ]),
             _vm._v(" "),
-            _vm._m(39)
+            _vm._m(38)
           ]
         )
       : _vm._e(),
@@ -14946,7 +14951,7 @@ var render = function() {
               ])
             ]),
             _vm._v(" "),
-            _vm._m(40),
+            _vm._m(39),
             _vm._v(" "),
             _c("div", { staticClass: "p-2 row" }, [
               _c("p", { staticClass: "mt-2 mr-2" }, [
@@ -15080,7 +15085,7 @@ var render = function() {
               )
             ]),
             _vm._v(" "),
-            _vm._m(41)
+            _vm._m(40)
           ]
         )
       : _vm._e(),
@@ -15099,7 +15104,7 @@ var render = function() {
             }
           },
           [
-            _vm._m(42),
+            _vm._m(41),
             _vm._v(" "),
             _c("div", { staticClass: "p-2 row" }, [
               _c("p", { staticClass: "mt-2 mr-2" }, [
@@ -16409,7 +16414,7 @@ var render = function() {
               )
             ]),
             _vm._v(" "),
-            _vm._m(43),
+            _vm._m(42),
             _vm._v(" "),
             _c("div", { staticClass: "d-flex flex-row-reverse" }, [
               _c(
@@ -16427,7 +16432,7 @@ var render = function() {
               )
             ]),
             _vm._v(" "),
-            _vm._m(44)
+            _vm._m(43)
           ]
         )
       : _vm._e(),
@@ -16446,14 +16451,14 @@ var render = function() {
             }
           },
           [
+            _vm._m(44),
+            _vm._v(" "),
             _vm._m(45),
             _vm._v(" "),
             _vm._m(46),
             _vm._v(" "),
-            _vm._m(47),
-            _vm._v(" "),
             _c("div", { staticClass: "p-2 row justify-content-between" }, [
-              _vm._m(48),
+              _vm._m(47),
               _vm._v(" "),
               _c("div", { staticClass: "p-2 col-4 row" }, [
                 _c("p", { staticClass: "mt-2 mr-2" }, [_vm._v("নিকেতনৰ নাম")]),
@@ -16516,7 +16521,7 @@ var render = function() {
             _vm._v(" "),
             _c("table", { staticClass: "table table-bordered" }, [
               _c("tbody", [
-                _vm._m(49),
+                _vm._m(48),
                 _vm._v(" "),
                 _c("tr", [
                   _c("td", [_vm._v("১")]),
@@ -18114,7 +18119,7 @@ var render = function() {
                   ])
                 ]),
                 _vm._v(" "),
-                _vm._m(50),
+                _vm._m(49),
                 _vm._v(" "),
                 _c("tr", [
                   _c("td", [_vm._v("৪")]),
@@ -20796,7 +20801,7 @@ var render = function() {
                   ])
                 ]),
                 _vm._v(" "),
-                _vm._m(51),
+                _vm._m(50),
                 _vm._v(" "),
                 _c("tr", [
                   _c("td", [_vm._v("৯")]),
@@ -22954,7 +22959,7 @@ var render = function() {
                   ])
                 ]),
                 _vm._v(" "),
-                _vm._m(52),
+                _vm._m(51),
                 _vm._v(" "),
                 _c("tr", [
                   _c("td", [_vm._v("১৩")]),
@@ -24080,7 +24085,7 @@ var render = function() {
               )
             ]),
             _vm._v(" "),
-            _vm._m(53)
+            _vm._m(52)
           ]
         )
       : _vm._e()
@@ -24823,18 +24828,6 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "d-flex flex-row-reverse" }, [
-      _c(
-        "button",
-        { staticClass: "btn btn-outline-primary", attrs: { type: "submit" } },
-        [_vm._v("Next")]
-      )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
     return _c("tr", [
       _c("th", { attrs: { colspan: "3", rowspan: "4" } }, [
         _vm._v(
@@ -25300,15 +25293,14 @@ if (typeof element != "undefined" && element != null) {
 /*!*******************************************************!*\
   !*** ./resources/js/components/ChannelSupervisor.vue ***!
   \*******************************************************/
-/*! no static exports found */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ChannelSupervisor_vue_vue_type_template_id_6c60f470_scoped_true___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ChannelSupervisor.vue?vue&type=template&id=6c60f470&scoped=true& */ "./resources/js/components/ChannelSupervisor.vue?vue&type=template&id=6c60f470&scoped=true&");
 /* harmony import */ var _ChannelSupervisor_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ChannelSupervisor.vue?vue&type=script&lang=js& */ "./resources/js/components/ChannelSupervisor.vue?vue&type=script&lang=js&");
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _ChannelSupervisor_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _ChannelSupervisor_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));
-/* harmony import */ var _ChannelSupervisor_vue_vue_type_style_index_0_id_6c60f470_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ChannelSupervisor.vue?vue&type=style&index=0&id=6c60f470&scoped=true&lang=css& */ "./resources/js/components/ChannelSupervisor.vue?vue&type=style&index=0&id=6c60f470&scoped=true&lang=css&");
+/* empty/unused harmony star reexport *//* harmony import */ var _ChannelSupervisor_vue_vue_type_style_index_0_id_6c60f470_scoped_true_lang_css___WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ChannelSupervisor.vue?vue&type=style&index=0&id=6c60f470&scoped=true&lang=css& */ "./resources/js/components/ChannelSupervisor.vue?vue&type=style&index=0&id=6c60f470&scoped=true&lang=css&");
 /* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
 
@@ -25340,7 +25332,7 @@ component.options.__file = "resources/js/components/ChannelSupervisor.vue"
 /*!********************************************************************************!*\
   !*** ./resources/js/components/ChannelSupervisor.vue?vue&type=script&lang=js& ***!
   \********************************************************************************/
-/*! no static exports found */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";

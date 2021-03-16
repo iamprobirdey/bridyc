@@ -617,7 +617,7 @@
        pdf 2nd & 3rd End start
      -->
 
-      <div class="d-flex flex-row-reverse">
+      <div class="d-flex justify-content-between">
         <button
           :disabled="steps === 1"
           type="button"
@@ -625,8 +625,6 @@
         >
           Back
         </button>
-      </div>
-      <div class="d-flex flex-row-reverse">
         <button type="submit" class="btn btn-outline-primary">Next</button>
       </div>
     </form>
