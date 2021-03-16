@@ -1209,7 +1209,7 @@
           </th>
         </tr>
       </table>
-      <div class="d-flex flex-row-reverse">
+      <div class="d-flex justify-content-between">
         <button
           type="button"
           class="btn btn-outline-secondary"
@@ -1217,8 +1217,6 @@
         >
           Back
         </button>
-      </div>
-      <div class="d-flex flex-row-reverse">
         <button type="submit" class="btn btn-outline-primary">Next</button>
       </div>
     </form>
@@ -1683,7 +1681,7 @@
           </th>
         </tr>
       </table>
-      <div class="d-flex flex-row-reverse">
+      <div class="d-flex justify-content-between">
         <button
           type="button"
           class="btn btn-outline-secondary"
@@ -1691,8 +1689,6 @@
         >
           Back
         </button>
-      </div>
-      <div class="d-flex flex-row-reverse">
         <button type="submit" class="btn btn-outline-primary">Next</button>
       </div>
     </form>
@@ -1977,7 +1973,7 @@
           </tr>
         </table>
       </div>
-      <div class="d-flex flex-row-reverse">
+      <div class="d-flex justify-content-between">
         <button
           type="button"
           class="btn btn-outline-secondary"
@@ -1985,8 +1981,6 @@
         >
           Back
         </button>
-      </div>
-      <div class="d-flex flex-row-reverse">
         <button type="submit" class="btn btn-outline-primary">Next</button>
       </div>
     </form>
@@ -2240,7 +2234,7 @@
           </tr>
         </tbody>
       </table>
-      <div class="d-flex flex-row-reverse">
+      <div class="d-flex justify-content-between">
         <button
           type="button"
           class="btn btn-outline-secondary"
@@ -2248,8 +2242,6 @@
         >
           Back
         </button>
-      </div>
-      <div class="d-flex flex-row-reverse">
         <button type="submit" class="btn btn-outline-primary">Next</button>
       </div>
     </form>
@@ -2485,7 +2477,7 @@
           আওতালৈ আনিব লাগে ।
         </p>
       </div>
-      <div class="d-flex flex-row-reverse">
+      <div class="d-flex justify-content-between">
         <button
           type="button"
           class="btn btn-outline-secondary"
@@ -2493,8 +2485,6 @@
         >
           Back
         </button>
-      </div>
-      <div class="d-flex flex-row-reverse">
         <button type="submit" class="btn btn-outline-primary">Next</button>
       </div>
     </form>
@@ -2702,7 +2692,7 @@
         </span>
 </div>
 
-    <div class="d-flex flex-row-reverse">
+    <div class="d-flex justify-content-between">
         <button
           type="button"
           class="btn btn-outline-secondary"
@@ -2710,8 +2700,6 @@
         >
           Back
         </button>
-      </div>
-      <div class="d-flex flex-row-reverse">
         <button type="submit" class="btn btn-outline-primary">Next</button>
       </div>
 
@@ -3064,7 +3052,7 @@
         </p>
       </div>
 
-    <div class="d-flex flex-row-reverse">
+    <div class="d-flex justify-content-between">
         <button
           type="button"
           class="btn btn-outline-secondary"
@@ -3072,8 +3060,6 @@
         >
           Back
     </button>
-    </div>
-    <div class="d-flex flex-row-reverse">
         <button type="submit" class="btn btn-outline-primary">Next</button>
     </div>
     </form>

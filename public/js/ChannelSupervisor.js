@@ -4927,20 +4927,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -9510,7 +9496,7 @@ var render = function() {
               ]
             ),
             _vm._v(" "),
-            _c("div", { staticClass: "d-flex flex-row-reverse" }, [
+            _c("div", { staticClass: "d-flex justify-content-between" }, [
               _c(
                 "button",
                 {
@@ -9523,10 +9509,17 @@ var render = function() {
                   }
                 },
                 [_vm._v("\n          Back\n        ")]
+              ),
+              _vm._v(" "),
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-outline-primary",
+                  attrs: { type: "submit" }
+                },
+                [_vm._v("Next")]
               )
-            ]),
-            _vm._v(" "),
-            _vm._m(29)
+            ])
           ]
         )
       : _vm._e(),
@@ -11340,7 +11333,7 @@ var render = function() {
               ]
             ),
             _vm._v(" "),
-            _c("div", { staticClass: "d-flex flex-row-reverse" }, [
+            _c("div", { staticClass: "d-flex justify-content-between" }, [
               _c(
                 "button",
                 {
@@ -11353,10 +11346,17 @@ var render = function() {
                   }
                 },
                 [_vm._v("\n          Back\n        ")]
+              ),
+              _vm._v(" "),
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-outline-primary",
+                  attrs: { type: "submit" }
+                },
+                [_vm._v("Next")]
               )
-            ]),
-            _vm._v(" "),
-            _vm._m(30)
+            ])
           ]
         )
       : _vm._e(),
@@ -12011,7 +12011,7 @@ var render = function() {
               ]),
               _vm._v(" "),
               _c("table", { staticClass: "table table-responsive-md mb0" }, [
-                _vm._m(31),
+                _vm._m(29),
                 _vm._v(" "),
                 _c("tr", [
                   _c("th", [
@@ -12409,7 +12409,7 @@ var render = function() {
               ])
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "d-flex flex-row-reverse" }, [
+            _c("div", { staticClass: "d-flex justify-content-between" }, [
               _c(
                 "button",
                 {
@@ -12422,10 +12422,17 @@ var render = function() {
                   }
                 },
                 [_vm._v("\n          Back\n        ")]
+              ),
+              _vm._v(" "),
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-outline-primary",
+                  attrs: { type: "submit" }
+                },
+                [_vm._v("Next")]
               )
-            ]),
-            _vm._v(" "),
-            _vm._m(32)
+            ])
           ]
         )
       : _vm._e(),
@@ -12451,7 +12458,7 @@ var render = function() {
               { staticClass: "table table-bordered table-responsive" },
               [
                 _c("tbody", [
-                  _vm._m(33),
+                  _vm._m(30),
                   _vm._v(" "),
                   _c("tr", [
                     _c("td", [_vm._v("(ক) অনুসূচীত জাতি (SC)")]),
@@ -12632,9 +12639,9 @@ var render = function() {
                       _vm._v("(ক) (মুছলমান)")
                     ]),
                     _vm._v(" "),
-                    _vm._m(34),
+                    _vm._m(31),
                     _vm._v(" "),
-                    _vm._m(35),
+                    _vm._m(32),
                     _vm._v(" "),
                     _c("td", [_vm._v("মুঠ")])
                   ]),
@@ -13362,7 +13369,7 @@ var render = function() {
               ]
             ),
             _vm._v(" "),
-            _c("div", { staticClass: "d-flex flex-row-reverse" }, [
+            _c("div", { staticClass: "d-flex justify-content-between" }, [
               _c(
                 "button",
                 {
@@ -13375,10 +13382,17 @@ var render = function() {
                   }
                 },
                 [_vm._v("\n          Back\n        ")]
+              ),
+              _vm._v(" "),
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-outline-primary",
+                  attrs: { type: "submit" }
+                },
+                [_vm._v("Next")]
               )
-            ]),
-            _vm._v(" "),
-            _vm._m(36)
+            ])
           ]
         )
       : _vm._e(),
@@ -14238,9 +14252,9 @@ var render = function() {
               )
             ]),
             _vm._v(" "),
-            _vm._m(37),
+            _vm._m(33),
             _vm._v(" "),
-            _c("div", { staticClass: "d-flex flex-row-reverse" }, [
+            _c("div", { staticClass: "d-flex justify-content-between" }, [
               _c(
                 "button",
                 {
@@ -14253,10 +14267,17 @@ var render = function() {
                   }
                 },
                 [_vm._v("\n          Back\n        ")]
+              ),
+              _vm._v(" "),
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-outline-primary",
+                  attrs: { type: "submit" }
+                },
+                [_vm._v("Next")]
               )
-            ]),
-            _vm._v(" "),
-            _vm._m(38)
+            ])
           ]
         )
       : _vm._e(),
@@ -14951,7 +14972,7 @@ var render = function() {
               ])
             ]),
             _vm._v(" "),
-            _vm._m(39),
+            _vm._m(34),
             _vm._v(" "),
             _c("div", { staticClass: "p-2 row" }, [
               _c("p", { staticClass: "mt-2 mr-2" }, [
@@ -15069,7 +15090,7 @@ var render = function() {
               )
             ]),
             _vm._v(" "),
-            _c("div", { staticClass: "d-flex flex-row-reverse" }, [
+            _c("div", { staticClass: "d-flex justify-content-between" }, [
               _c(
                 "button",
                 {
@@ -15082,10 +15103,17 @@ var render = function() {
                   }
                 },
                 [_vm._v("\n          Back\n        ")]
+              ),
+              _vm._v(" "),
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-outline-primary",
+                  attrs: { type: "submit" }
+                },
+                [_vm._v("Next")]
               )
-            ]),
-            _vm._v(" "),
-            _vm._m(40)
+            ])
           ]
         )
       : _vm._e(),
@@ -15104,7 +15132,7 @@ var render = function() {
             }
           },
           [
-            _vm._m(41),
+            _vm._m(35),
             _vm._v(" "),
             _c("div", { staticClass: "p-2 row" }, [
               _c("p", { staticClass: "mt-2 mr-2" }, [
@@ -16414,9 +16442,9 @@ var render = function() {
               )
             ]),
             _vm._v(" "),
-            _vm._m(42),
+            _vm._m(36),
             _vm._v(" "),
-            _c("div", { staticClass: "d-flex flex-row-reverse" }, [
+            _c("div", { staticClass: "d-flex justify-content-between" }, [
               _c(
                 "button",
                 {
@@ -16429,10 +16457,17 @@ var render = function() {
                   }
                 },
                 [_vm._v("\n          Back\n    ")]
+              ),
+              _vm._v(" "),
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-outline-primary",
+                  attrs: { type: "submit" }
+                },
+                [_vm._v("Next")]
               )
-            ]),
-            _vm._v(" "),
-            _vm._m(43)
+            ])
           ]
         )
       : _vm._e(),
@@ -16451,14 +16486,14 @@ var render = function() {
             }
           },
           [
-            _vm._m(44),
+            _vm._m(37),
             _vm._v(" "),
-            _vm._m(45),
+            _vm._m(38),
             _vm._v(" "),
-            _vm._m(46),
+            _vm._m(39),
             _vm._v(" "),
             _c("div", { staticClass: "p-2 row justify-content-between" }, [
-              _vm._m(47),
+              _vm._m(40),
               _vm._v(" "),
               _c("div", { staticClass: "p-2 col-4 row" }, [
                 _c("p", { staticClass: "mt-2 mr-2" }, [_vm._v("নিকেতনৰ নাম")]),
@@ -16521,7 +16556,7 @@ var render = function() {
             _vm._v(" "),
             _c("table", { staticClass: "table table-bordered" }, [
               _c("tbody", [
-                _vm._m(48),
+                _vm._m(41),
                 _vm._v(" "),
                 _c("tr", [
                   _c("td", [_vm._v("১")]),
@@ -18119,7 +18154,7 @@ var render = function() {
                   ])
                 ]),
                 _vm._v(" "),
-                _vm._m(49),
+                _vm._m(42),
                 _vm._v(" "),
                 _c("tr", [
                   _c("td", [_vm._v("৪")]),
@@ -20801,7 +20836,7 @@ var render = function() {
                   ])
                 ]),
                 _vm._v(" "),
-                _vm._m(50),
+                _vm._m(43),
                 _vm._v(" "),
                 _c("tr", [
                   _c("td", [_vm._v("৯")]),
@@ -22959,7 +22994,7 @@ var render = function() {
                   ])
                 ]),
                 _vm._v(" "),
-                _vm._m(51),
+                _vm._m(44),
                 _vm._v(" "),
                 _c("tr", [
                   _c("td", [_vm._v("১৩")]),
@@ -24085,7 +24120,7 @@ var render = function() {
               )
             ]),
             _vm._v(" "),
-            _vm._m(52)
+            _vm._m(45)
           ]
         )
       : _vm._e()
@@ -24804,30 +24839,6 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "d-flex flex-row-reverse" }, [
-      _c(
-        "button",
-        { staticClass: "btn btn-outline-primary", attrs: { type: "submit" } },
-        [_vm._v("Next")]
-      )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "d-flex flex-row-reverse" }, [
-      _c(
-        "button",
-        { staticClass: "btn btn-outline-primary", attrs: { type: "submit" } },
-        [_vm._v("Next")]
-      )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
     return _c("tr", [
       _c("th", { attrs: { colspan: "3", rowspan: "4" } }, [
         _vm._v(
@@ -24848,18 +24859,6 @@ var staticRenderFns = [
       _c("th", [_vm._v("আচাৰ্যা")]),
       _vm._v(" "),
       _c("th", [_vm._v("মুঠ")])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "d-flex flex-row-reverse" }, [
-      _c(
-        "button",
-        { staticClass: "btn btn-outline-primary", attrs: { type: "submit" } },
-        [_vm._v("Next")]
-      )
     ])
   },
   function() {
@@ -24896,18 +24895,6 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "d-flex flex-row-reverse" }, [
-      _c(
-        "button",
-        { staticClass: "btn btn-outline-primary", attrs: { type: "submit" } },
-        [_vm._v("Next")]
-      )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
     return _c("div", { staticClass: "p-2 row" }, [
       _c("p", { staticClass: "mt-2 mr-2" }, [
         _vm._v(
@@ -24920,36 +24907,12 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "d-flex flex-row-reverse" }, [
-      _c(
-        "button",
-        { staticClass: "btn btn-outline-primary", attrs: { type: "submit" } },
-        [_vm._v("Next")]
-      )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
     return _c("div", { staticClass: "p-2 row" }, [
       _c("p", { staticClass: "mt-2 mr-2" }, [
         _vm._v(
           "(ঘ) বিজ্ঞানাগাৰৰ ব্যবস্থা আছে/নাই আৰু নিয়মিত ব্যৱহাৰ হয়/নহয় । (✓ চিন দিব )"
         )
       ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "d-flex flex-row-reverse" }, [
-      _c(
-        "button",
-        { staticClass: "btn btn-outline-primary", attrs: { type: "submit" } },
-        [_vm._v("Next")]
-      )
     ])
   },
   function() {
@@ -24974,18 +24937,6 @@ var staticRenderFns = [
           "\n          (ছ) অটল টিংকাৰিং প্ৰয়োগ শালাৰ (Atal Tinkering Labortory) বাবে Atal\n          Inovation Mission, Niti Ayogত আবেদন কৰিছেনে নাই? ( ষষ্ঠ শ্ৰেণীৰ‍ পৰা\n          দশম শ্ৰেণীলৈ মুঠ ৪০০ ছাত্ৰ-ছাত্ৰী থকা, ১৫০০বৰ্গ ফুট স্থানৰ নিকেতনৰ\n          ক্ষেত্ৰত প্ৰযোজ্য )\n        "
         )
       ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "d-flex flex-row-reverse" }, [
-      _c(
-        "button",
-        { staticClass: "btn btn-outline-primary", attrs: { type: "submit" } },
-        [_vm._v("Next")]
-      )
     ])
   },
   function() {
