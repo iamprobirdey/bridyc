@@ -12334,7 +12334,7 @@ var render = function() {
                         attrs: {
                           type: "number",
                           name: "chritian_total",
-                          placeholder: ""
+                          placeholder: "Placeholder"
                         },
                         domProps: { value: _vm.step5.chritian_total },
                         on: {
