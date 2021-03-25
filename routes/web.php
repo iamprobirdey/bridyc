@@ -208,7 +208,10 @@ Route::group([
     Route::get('notification/{channel:title}', 'User\DashboardController@notification')->name('channel.notification');
 
     //Accountant
-    Route::get('accoountant/{channel:title}', 'User\DashboardController@accountant')->name('channel.accountant');
+    Route::get('accoountant/{channel:title}', 'User\AccountantController@index')->name('channel.accountant');
+    Route::get('accoountant/{channel:title}/ledger', 'User\AccountantController@ledger')->name('channel.accountant.ledger');
+    Route::get('accoountant/{channel:title}/cashbook', 'User\AccountantController@cashbook')->name('channel.accountant.cashbook');
+    Route::get('accoountant/{channel:title}/admission', 'User\AccountantController@admission')->name('channel.accountant.admission');
 });
 
 Route::get('edit/student/profile/{user:username}', 'Student\ProfileController@index')->middleware(['can:student'])->middleware('verified');
@@ -255,6 +258,19 @@ Route::group([
         'middleware' => ['can:institute']
     ], function () {
         //Institute ******
+        //Accountant
+        //Ledger
+        Route::get('channel/get/ledger/data', 'User\LedgerController@getLedgerData');
+        Route::post('channel/add/ledger/{channel:id}', 'User\LedgerController@storeLedgerData');
+        Route::post('channel/edit/ledger/{ledgerid}', 'User\LedgerController@editLedgerData');
+        Route::get('channel/delete/parent/ledger/{ledgerid}', 'User\LedgerController@deleteParentLedger');
+        Route::post('channel/child/add/ledger/{channel:id}/{ledgerid}', 'User\LedgerController@storeChildLedger');
+        //Cashbook
+        Route::get('channel/get/cashbook/data', 'User\CashbookController@getCashbookData');
+        Route::post('channel/add/cashbook/{channel:id}', 'User\CashbookController@storeCashbookData');
+        Route::post('channel/edit/cashbook/{channel:id}', 'User\CashbookController@editCashbookData');
+        Route::get('channel/delete/cashbook/{cashbookid}', 'User\CashbookController@delete');
+
         //Infrastructure
         Route::get('getUserData', 'User\InfrastructureController@getUserData');
         Route::post('infra/store/{id}', 'User\InfrastructureController@storeUserInformation');

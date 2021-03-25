@@ -2,7 +2,7 @@
   <div>
     <div class="row">
       <div class="col-sm-4">
-        <button class="badge badge-primary">Create Leader</button>
+        <a href="" class="badge badge-primary">Create Leader</a>
       </div>
     </div>
   </div>

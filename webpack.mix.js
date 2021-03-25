@@ -17,10 +17,16 @@ mix.js("resources/js/app.js", "public/js")
     .js("resources/js/channelteacher.js", "public/js")
     .js("resources/js/teacherProfile.js", "public/js")
     .js("resources/js/ChannelNotification.js", "public/js")
-    .js("resources/js/ChannelAccountant.js", "public/js")
-    .js("resources/js/blog.js", "public/js")
     //Service Worker
     .js("resources/js/firebase-messaging-sw.js", "public/")
+    //Accountant
+    .js("resources/js/ChannelAccountant.js", "public/js")
+    .js("resources/js/ChannelAccountantLedger.js", "public/js")
+    .js("resources/js/ChannelAccountantCashbook.js", "public/js")
+    .js("resources/js/ChannelAccountantAdmission.js", "public/js")
+
+
+
     // .sass("resources/sass/studentIndex.scss", "public/css")
     // .sass("resources/sass/institutedashboard.scss", "public/css")
     .sass("resources/sass/app.scss", "public/css")

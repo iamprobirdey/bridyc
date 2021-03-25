@@ -113,9 +113,4 @@ class DashboardController extends Controller
             'channelId' => $channel->id
         ]);
     }
-
-    public function accountant(Channel $channel)
-    {
-        return view('institute.accountant');
-    }
 }

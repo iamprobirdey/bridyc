@@ -81,30 +81,30 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 18);
+/******/ 	return __webpack_require__(__webpack_require__.s = 19);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./resources/js/blog.js":
-/*!******************************!*\
-  !*** ./resources/js/blog.js ***!
-  \******************************/
+/***/ "./resources/js/adminUserInformation.js":
+/*!**********************************************!*\
+  !*** ./resources/js/adminUserInformation.js ***!
+  \**********************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nError: ENOENT: no such file or directory, open '/home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/js/blog.js'");
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nError: ENOENT: no such file or directory, open '/home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/js/adminUserInformation.js'");
 
 /***/ }),
 
-/***/ 18:
-/*!************************************!*\
-  !*** multi ./resources/js/blog.js ***!
-  \************************************/
+/***/ 19:
+/*!****************************************************!*\
+  !*** multi ./resources/js/adminUserInformation.js ***!
+  \****************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/js/blog.js */"./resources/js/blog.js");
+module.exports = __webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/js/adminUserInformation.js */"./resources/js/adminUserInformation.js");
 
 
 /***/ })

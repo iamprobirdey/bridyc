@@ -31,9 +31,9 @@ video')
             <br>
             <br>
             <div class="container">
-                <h1>Accountant</h1>
-                <div id="channel-accountant">
-                    <channel-accountant></channel-accountant>
+                <div id="channel-accountant-admission">
+                    <channel-accountant-admission :channelid="{{json_decode(auth()->user()->channel->id)}}">
+                    </channel-accountant-admission>
                 </div>
             </div>
         </main>
@@ -44,6 +44,6 @@ video')
 @section('js_code')
 <script src="{{url('js/app.js')}}"></script>
 <script src="{{url('js/dashboardBlade.js')}}"></script>
-<script src="{{url('js/ChannelAccountant.js')}}"></script>
+<script src="{{url('js/ChannelAccountantAdmission.js')}}"></script>
 {{-- <script src="{{env('APP_URL')}}{{mix('/js/editChannel.js')}}"></script> --}}
 @endsection

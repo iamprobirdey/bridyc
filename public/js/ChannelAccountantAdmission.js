@@ -81,15 +81,51 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 19);
+/******/ 	return __webpack_require__(__webpack_require__.s = 22);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ChannelAccountant.vue?vue&type=template&id=2a18dca2&":
-/*!********************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/ChannelAccountant.vue?vue&type=template&id=2a18dca2& ***!
-  \********************************************************************************************************************************************************************************************************************/
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ChannelAccountantAdmission.vue?vue&type=script&lang=js&":
+/*!*************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/ChannelAccountantAdmission.vue?vue&type=script&lang=js& ***!
+  \*************************************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  data: function data() {
+    return {
+      channelId: ""
+    };
+  },
+  props: {
+    channelid: {
+      type: Number,
+      "default": null
+    }
+  },
+  created: function created() {
+    this.channelId = this.channelid;
+  },
+  mounted: function mounted() {},
+  methods: {}
+});
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ChannelAccountantAdmission.vue?vue&type=template&id=72b64f37&":
+/*!*****************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/ChannelAccountantAdmission.vue?vue&type=template&id=72b64f37& ***!
+  \*****************************************************************************************************************************************************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -108,15 +144,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", [
-      _c("div", { staticClass: "row" }, [
-        _c("div", { staticClass: "col-sm-4" }, [
-          _c("a", { staticClass: "badge badge-primary", attrs: { href: "" } }, [
-            _vm._v("Create Leader")
-          ])
-        ])
-      ])
-    ])
+    return _c("div", [_c("h1", [_vm._v("Admission")])])
   }
 ]
 render._withStripped = true
@@ -237,45 +265,47 @@ function normalizeComponent (
 
 /***/ }),
 
-/***/ "./resources/js/ChannelAccountant.js":
-/*!*******************************************!*\
-  !*** ./resources/js/ChannelAccountant.js ***!
-  \*******************************************/
+/***/ "./resources/js/ChannelAccountantAdmission.js":
+/*!****************************************************!*\
+  !*** ./resources/js/ChannelAccountantAdmission.js ***!
+  \****************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-Vue.component("channel-accountant", __webpack_require__(/*! ./components/ChannelAccountant.vue */ "./resources/js/components/ChannelAccountant.vue")["default"]);
-var element = document.getElementById("channel-accountant");
+Vue.component("channel-accountant-admission", __webpack_require__(/*! ./components/ChannelAccountantAdmission.vue */ "./resources/js/components/ChannelAccountantAdmission.vue")["default"]);
+var element = document.getElementById("channel-accountant-admission");
 
 if (typeof element != "undefined" && element != null) {
   var cart = new Vue({
-    el: "#channel-accountant"
+    el: "#channel-accountant-admission"
   });
 }
 
 /***/ }),
 
-/***/ "./resources/js/components/ChannelAccountant.vue":
-/*!*******************************************************!*\
-  !*** ./resources/js/components/ChannelAccountant.vue ***!
-  \*******************************************************/
+/***/ "./resources/js/components/ChannelAccountantAdmission.vue":
+/*!****************************************************************!*\
+  !*** ./resources/js/components/ChannelAccountantAdmission.vue ***!
+  \****************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _ChannelAccountant_vue_vue_type_template_id_2a18dca2___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ChannelAccountant.vue?vue&type=template&id=2a18dca2& */ "./resources/js/components/ChannelAccountant.vue?vue&type=template&id=2a18dca2&");
-/* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+/* harmony import */ var _ChannelAccountantAdmission_vue_vue_type_template_id_72b64f37___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ChannelAccountantAdmission.vue?vue&type=template&id=72b64f37& */ "./resources/js/components/ChannelAccountantAdmission.vue?vue&type=template&id=72b64f37&");
+/* harmony import */ var _ChannelAccountantAdmission_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ChannelAccountantAdmission.vue?vue&type=script&lang=js& */ "./resources/js/components/ChannelAccountantAdmission.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
 
-var script = {}
+
+
 
 
 /* normalize component */
 
-var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_1__["default"])(
-  script,
-  _ChannelAccountant_vue_vue_type_template_id_2a18dca2___WEBPACK_IMPORTED_MODULE_0__["render"],
-  _ChannelAccountant_vue_vue_type_template_id_2a18dca2___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _ChannelAccountantAdmission_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _ChannelAccountantAdmission_vue_vue_type_template_id_72b64f37___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _ChannelAccountantAdmission_vue_vue_type_template_id_72b64f37___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
   false,
   null,
   null,
@@ -285,37 +315,51 @@ var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_
 
 /* hot reload */
 if (false) { var api; }
-component.options.__file = "resources/js/components/ChannelAccountant.vue"
+component.options.__file = "resources/js/components/ChannelAccountantAdmission.vue"
 /* harmony default export */ __webpack_exports__["default"] = (component.exports);
 
 /***/ }),
 
-/***/ "./resources/js/components/ChannelAccountant.vue?vue&type=template&id=2a18dca2&":
-/*!**************************************************************************************!*\
-  !*** ./resources/js/components/ChannelAccountant.vue?vue&type=template&id=2a18dca2& ***!
-  \**************************************************************************************/
+/***/ "./resources/js/components/ChannelAccountantAdmission.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************!*\
+  !*** ./resources/js/components/ChannelAccountantAdmission.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ChannelAccountantAdmission_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./ChannelAccountantAdmission.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ChannelAccountantAdmission.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_ChannelAccountantAdmission_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/ChannelAccountantAdmission.vue?vue&type=template&id=72b64f37&":
+/*!***********************************************************************************************!*\
+  !*** ./resources/js/components/ChannelAccountantAdmission.vue?vue&type=template&id=72b64f37& ***!
+  \***********************************************************************************************/
 /*! exports provided: render, staticRenderFns */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ChannelAccountant_vue_vue_type_template_id_2a18dca2___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./ChannelAccountant.vue?vue&type=template&id=2a18dca2& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ChannelAccountant.vue?vue&type=template&id=2a18dca2&");
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ChannelAccountant_vue_vue_type_template_id_2a18dca2___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ChannelAccountantAdmission_vue_vue_type_template_id_72b64f37___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./ChannelAccountantAdmission.vue?vue&type=template&id=72b64f37& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ChannelAccountantAdmission.vue?vue&type=template&id=72b64f37&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ChannelAccountantAdmission_vue_vue_type_template_id_72b64f37___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
-/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ChannelAccountant_vue_vue_type_template_id_2a18dca2___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_ChannelAccountantAdmission_vue_vue_type_template_id_72b64f37___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 
 /***/ }),
 
-/***/ 19:
-/*!*************************************************!*\
-  !*** multi ./resources/js/ChannelAccountant.js ***!
-  \*************************************************/
+/***/ 22:
+/*!**********************************************************!*\
+  !*** multi ./resources/js/ChannelAccountantAdmission.js ***!
+  \**********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/js/ChannelAccountant.js */"./resources/js/ChannelAccountant.js");
+module.exports = __webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/js/ChannelAccountantAdmission.js */"./resources/js/ChannelAccountantAdmission.js");
 
 
 /***/ })

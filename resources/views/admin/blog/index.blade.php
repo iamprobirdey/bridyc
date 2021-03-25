@@ -15,6 +15,6 @@
 
 @section('js_code')
 <script src="{{url('js/app.js')}}"></script>
-<script src="{{url('js/blog.js')}}"></script>
+{{-- <script src="{{url('js/blog.js')}}"></script> --}}
 
 @endsection

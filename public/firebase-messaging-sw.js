@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 20);
+/******/ 	return __webpack_require__(__webpack_require__.s = 18);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -117,7 +117,7 @@ messaging.setBackgroundMessageHandler(function (payload) {
 
 /***/ }),
 
-/***/ 20:
+/***/ 18:
 /*!*****************************************************!*\
   !*** multi ./resources/js/firebase-messaging-sw.js ***!
   \*****************************************************/
