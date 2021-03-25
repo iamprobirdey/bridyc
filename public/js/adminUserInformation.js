@@ -81,48 +81,48 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 18);
+/******/ 	return __webpack_require__(__webpack_require__.s = 19);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./resources/js/application.js":
-/*!*************************************!*\
-  !*** ./resources/js/application.js ***!
-  \*************************************/
+/***/ "./resources/js/adminUserInformation.js":
+/*!**********************************************!*\
+  !*** ./resources/js/adminUserInformation.js ***!
+  \**********************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-Vue.component("application", __webpack_require__(/*! ./components/Application.vue */ "./resources/js/components/Application.vue")["default"]);
-var element = document.getElementById("application");
+Vue.component("admin-user-information", __webpack_require__(/*! ./components/admin/UserInformation.vue */ "./resources/js/components/admin/UserInformation.vue")["default"]);
+var element = document.getElementById("admin-user-information");
 
 if (typeof element != "undefined" && element != null) {
-  var cart = new Vue({
-    el: "#application"
+  var vue = new Vue({
+    el: "#admin-user-information"
   });
 }
 
 /***/ }),
 
-/***/ "./resources/js/components/Application.vue":
-/*!*************************************************!*\
-  !*** ./resources/js/components/Application.vue ***!
-  \*************************************************/
+/***/ "./resources/js/components/admin/UserInformation.vue":
+/*!***********************************************************!*\
+  !*** ./resources/js/components/admin/UserInformation.vue ***!
+  \***********************************************************/
 /*! exports provided: default */
 /***/ (function(module, exports) {
 
-throw new Error("Module build failed (from ./node_modules/vue-loader/lib/index.js):\nError: ENOENT: no such file or directory, open 'C:\\laragon\\www\\bridyc\\resources\\js\\components\\Application.vue'");
+throw new Error("Module build failed (from ./node_modules/vue-loader/lib/index.js):\nError: ENOENT: no such file or directory, open 'C:\\laragon\\www\\bridyc\\resources\\js\\components\\admin\\UserInformation.vue'");
 
 /***/ }),
 
-/***/ 18:
-/*!*******************************************!*\
-  !*** multi ./resources/js/application.js ***!
-  \*******************************************/
+/***/ 19:
+/*!****************************************************!*\
+  !*** multi ./resources/js/adminUserInformation.js ***!
+  \****************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\laragon\www\bridyc\resources\js\application.js */"./resources/js/application.js");
+module.exports = __webpack_require__(/*! C:\laragon\www\bridyc\resources\js\adminUserInformation.js */"./resources/js/adminUserInformation.js");
 
 
 /***/ })

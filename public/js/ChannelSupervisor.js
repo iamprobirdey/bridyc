@@ -81,48 +81,30 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 18);
+/******/ 	return __webpack_require__(__webpack_require__.s = 20);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./resources/js/application.js":
-/*!*************************************!*\
-  !*** ./resources/js/application.js ***!
-  \*************************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-Vue.component("application", __webpack_require__(/*! ./components/Application.vue */ "./resources/js/components/Application.vue")["default"]);
-var element = document.getElementById("application");
-
-if (typeof element != "undefined" && element != null) {
-  var cart = new Vue({
-    el: "#application"
-  });
-}
-
-/***/ }),
-
-/***/ "./resources/js/components/Application.vue":
-/*!*************************************************!*\
-  !*** ./resources/js/components/Application.vue ***!
-  \*************************************************/
-/*! exports provided: default */
-/***/ (function(module, exports) {
-
-throw new Error("Module build failed (from ./node_modules/vue-loader/lib/index.js):\nError: ENOENT: no such file or directory, open 'C:\\laragon\\www\\bridyc\\resources\\js\\components\\Application.vue'");
-
-/***/ }),
-
-/***/ 18:
+/***/ "./resources/js/ChannelSupervisor.js":
 /*!*******************************************!*\
-  !*** multi ./resources/js/application.js ***!
+  !*** ./resources/js/ChannelSupervisor.js ***!
   \*******************************************/
 /*! no static exports found */
+/***/ (function(module, exports) {
+
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nError: ENOENT: no such file or directory, open 'C:\\laragon\\www\\bridyc\\resources\\js\\ChannelSupervisor.js'");
+
+/***/ }),
+
+/***/ 20:
+/*!*************************************************!*\
+  !*** multi ./resources/js/ChannelSupervisor.js ***!
+  \*************************************************/
+/*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\laragon\www\bridyc\resources\js\application.js */"./resources/js/application.js");
+module.exports = __webpack_require__(/*! C:\laragon\www\bridyc\resources\js\ChannelSupervisor.js */"./resources/js/ChannelSupervisor.js");
 
 
 /***/ })
