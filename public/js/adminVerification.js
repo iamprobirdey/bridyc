@@ -96,7 +96,6 @@
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _model_meta_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./model/meta.vue */ "./resources/js/components/admin/model/meta.vue");
-/* harmony import */ var _model_InstituteName_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./model/InstituteName.vue */ "./resources/js/components/admin/model/InstituteName.vue");
 //
 //
 //
@@ -302,15 +301,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
@@ -496,6 +486,7 @@ __webpack_require__.r(__webpack_exports__);
 
       this.$validator.validate().then(function (result) {
         if (result) {
+          console.log("called");
           axios.post("verification/api/keywords/description/" + _this7.metaKeywordsDescriptionsId, _this7.metaData).then(function (response) {
             if (response.data.msg === true) {
               Vue.toasted.success("Meta data is created", {
@@ -523,8 +514,7 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   components: {
-    "meta-keywords": _model_meta_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
-    InstituteName: _model_InstituteName_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
+    "meta-keywords": _model_meta_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
   }
 });
 
@@ -659,10 +649,12 @@ __webpack_require__.r(__webpack_exports__);
   created: function created() {},
   mounted: function mounted() {
     this.verificationData = this.verification;
+    console.log(this.verificationData.id);
   },
   methods: {
-    getTheSubmitId: function getTheSubmitId(data) {//this.metaKeywordsDescriptionsId = id;
-      //this.metaGenerationForm();
+    getTheSubmitId: function getTheSubmitId() {
+      this.metaKeywordsDescriptionsId = this.verificationData.id;
+      this.metaGenerationForm();
     },
     getMetaModel: function getMetaModel() {
       $("#metaGenerator" + this.verificationData.id).modal("show");
@@ -853,20 +845,6 @@ var render = function() {
                 [_vm._v("\n            Open\n          ")]
               )
             ]),
-            _vm._v(" "),
-            _c(
-              "td",
-              [
-                _c("institute-name", {
-                  attrs: {
-                    username: verification.title,
-                    userid: verification.user_id,
-                    verificationid: verification.id
-                  }
-                })
-              ],
-              1
-            ),
             _vm._v(" "),
             _c("td", [
               _c(
@@ -1137,10 +1115,6 @@ var staticRenderFns = [
         _c("th", { attrs: { scope: "col" } }, [_vm._v("Keywords Generator")]),
         _vm._v(" "),
         _c("th", { attrs: { scope: "col" } }, [_vm._v("Show Channel Data")]),
-        _vm._v(" "),
-        _c("th", { attrs: { scope: "col" } }, [
-          _vm._v("Change Institute Name")
-        ]),
         _vm._v(" "),
         _c("th", { attrs: { scope: "col" } }, [_vm._v("Delete")])
       ])
@@ -1618,17 +1592,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Verification_vue_vue_type_template_id_78fbb906___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
-
-/***/ }),
-
-/***/ "./resources/js/components/admin/model/InstituteName.vue":
-/*!***************************************************************!*\
-  !*** ./resources/js/components/admin/model/InstituteName.vue ***!
-  \***************************************************************/
-/*! exports provided: default */
-/***/ (function(module, exports) {
-
-throw new Error("Module build failed (from ./node_modules/vue-loader/lib/index.js):\nError: ENOENT: no such file or directory, open 'C:\\laragon\\www\\bridyc\\resources\\js\\components\\admin\\model\\InstituteName.vue'");
 
 /***/ }),
 

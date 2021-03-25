@@ -91,27 +91,9 @@
   !*** ./resources/js/adminUserInformation.js ***!
   \**********************************************/
 /*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
-
-Vue.component("admin-user-information", __webpack_require__(/*! ./components/admin/UserInformation.vue */ "./resources/js/components/admin/UserInformation.vue")["default"]);
-var element = document.getElementById("admin-user-information");
-
-if (typeof element != "undefined" && element != null) {
-  var vue = new Vue({
-    el: "#admin-user-information"
-  });
-}
-
-/***/ }),
-
-/***/ "./resources/js/components/admin/UserInformation.vue":
-/*!***********************************************************!*\
-  !*** ./resources/js/components/admin/UserInformation.vue ***!
-  \***********************************************************/
-/*! exports provided: default */
 /***/ (function(module, exports) {
 
-throw new Error("Module build failed (from ./node_modules/vue-loader/lib/index.js):\nError: ENOENT: no such file or directory, open 'C:\\laragon\\www\\bridyc\\resources\\js\\components\\admin\\UserInformation.vue'");
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nError: ENOENT: no such file or directory, open 'C:\\laragon\\www\\bridyc\\resources\\js\\adminUserInformation.js'");
 
 /***/ }),
 
