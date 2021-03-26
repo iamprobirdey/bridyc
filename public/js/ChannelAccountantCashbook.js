@@ -1280,7 +1280,7 @@ var render = function() {
                             },
                             [
                               _vm._v(
-                                "\n                  Edit\n                  "
+                                "\n                  Edited\n                  "
                               ),
                               _c(
                                 "svg",
