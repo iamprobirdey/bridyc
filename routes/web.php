@@ -33,6 +33,12 @@ Route::group([
         'prefix' => 'blog'
     ], function () {
         Route::get('/', 'Admin\BlogController@index')->name('admin.blog.index');
+        Route::get('/create', 'Admin\BlogController@create');
+        Route::post('/create', 'Admin\BlogController@store')->name('admin.blog.create');
+        //Category
+        Route::get('/category', 'Admin\BlogController@listCategory')->name('admin.blog.category.index');
+        Route::get('/category/create', 'Admin\BlogController@createCategory');
+        Route::post('/category/create', 'Admin\BlogController@storeCategory')->name('admin.blog.category.create');
     });
     Route::group([
         'name' => 'contact.',
@@ -175,6 +181,10 @@ Route::get('/privacy', 'HomeController@privacy');
 Route::get('/terms', 'HomeController@terms');
 Route::get('/about', 'HomeController@about')->name('about');
 
+//Blog
+Route::get('/blogs', 'BlogController@index');
+Route::get('/blogs/{slug}', 'BlogController@slug');
+
 Route::get('institute/register', 'Auth\InstituteController@instituteRegister');
 Route::post('institute/register', 'Auth\RegisterController@register');
 
@@ -196,6 +206,12 @@ Route::group([
     Route::get('teacher/{channel:title}', 'User\DashboardController@teacher')->name('channel.teacher');
     Route::get('new/feature/{channel:title}', 'User\DashboardController@newFeature')->name('channel.feature');
     Route::get('notification/{channel:title}', 'User\DashboardController@notification')->name('channel.notification');
+
+    //Accountant
+    Route::get('accoountant/{channel:title}', 'User\AccountantController@index')->name('channel.accountant');
+    Route::get('accoountant/{channel:title}/ledger', 'User\AccountantController@ledger')->name('channel.accountant.ledger');
+    Route::get('accoountant/{channel:title}/cashbook', 'User\AccountantController@cashbook')->name('channel.accountant.cashbook');
+    Route::get('accoountant/{channel:title}/admission', 'User\AccountantController@admission')->name('channel.accountant.admission');
 });
 
 Route::get('edit/student/profile/{user:username}', 'Student\ProfileController@index')->middleware(['can:student'])->middleware('verified');
@@ -242,6 +258,19 @@ Route::group([
         'middleware' => ['can:institute']
     ], function () {
         //Institute ******
+        //Accountant
+        //Ledger
+        Route::get('channel/get/ledger/data', 'User\LedgerController@getLedgerData');
+        Route::post('channel/add/ledger/{channel:id}', 'User\LedgerController@storeLedgerData');
+        Route::post('channel/edit/ledger/{ledgerid}', 'User\LedgerController@editLedgerData');
+        Route::get('channel/delete/parent/ledger/{ledgerid}', 'User\LedgerController@deleteParentLedger');
+        Route::post('channel/child/add/ledger/{channel:id}/{ledgerid}', 'User\LedgerController@storeChildLedger');
+        //Cashbook
+        Route::get('channel/get/cashbook/data', 'User\CashbookController@getCashbookData');
+        Route::post('channel/add/cashbook/{channel:id}', 'User\CashbookController@storeCashbookData');
+        Route::post('channel/edit/cashbook/{channel:id}', 'User\CashbookController@editCashbookData');
+        Route::get('channel/delete/cashbook/{cashbookid}', 'User\CashbookController@delete');
+
         //Infrastructure
         Route::get('getUserData', 'User\InfrastructureController@getUserData');
         Route::post('infra/store/{id}', 'User\InfrastructureController@storeUserInformation');

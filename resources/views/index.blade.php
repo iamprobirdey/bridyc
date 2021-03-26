@@ -33,6 +33,8 @@ crossed those paths')
 @endsection
 @section('content')
 
+
+
 <banner>
 
     <div class="img-fluid imgban">
@@ -75,6 +77,19 @@ crossed those paths')
     </div>
 </banner>
 
+<div class="container">
+    <div class="row">
+        <div class="col-sm-6 bg-dark">
+            <h2 class="text-light">Number of Institute On-Boarded</h2>
+            <h1 class="text-light text-center">{{count($channel)}}</h1>
+        </div>
+        <div class="col-sm-6 bg-secondary">
+            <h1 class="text-light">Number of Podcasts</h1>
+            <h1 class="text-light text-center">{{$podcastCount}}</h1>
+        </div>
+    </div>
+</div>
+
 <div class="modal fade" id="podcastModal">
     <div class="modal-dialog poddialog">
         <div class="modal-content">
@@ -91,6 +106,8 @@ crossed those paths')
         </div>
     </div>
 </div>
+
+
 
 <br>
 <section>

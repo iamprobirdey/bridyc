@@ -81,38 +81,30 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 19);
+/******/ 	return __webpack_require__(__webpack_require__.s = 18);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./resources/js/adminUserInformation.js":
-/*!**********************************************!*\
-  !*** ./resources/js/adminUserInformation.js ***!
-  \**********************************************/
+/***/ "./resources/js/blog.js":
+/*!******************************!*\
+  !*** ./resources/js/blog.js ***!
+  \******************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-<<<<<<< HEAD
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nError: ENOENT: no such file or directory, open 'C:\\laragon\\www\\bridyc\\resources\\js\\adminUserInformation.js'");
-=======
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nError: ENOENT: no such file or directory, open '/home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/js/adminUserInformation.js'");
->>>>>>> 1e8f27d31a3a6b25350bbd773ae8517a217c34cf
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nError: ENOENT: no such file or directory, open '/home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/js/blog.js'");
 
 /***/ }),
 
-/***/ 19:
-/*!****************************************************!*\
-  !*** multi ./resources/js/adminUserInformation.js ***!
-  \****************************************************/
+/***/ 18:
+/*!************************************!*\
+  !*** multi ./resources/js/blog.js ***!
+  \************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-<<<<<<< HEAD
-module.exports = __webpack_require__(/*! C:\laragon\www\bridyc\resources\js\adminUserInformation.js */"./resources/js/adminUserInformation.js");
-=======
-module.exports = __webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/js/adminUserInformation.js */"./resources/js/adminUserInformation.js");
->>>>>>> 1e8f27d31a3a6b25350bbd773ae8517a217c34cf
+module.exports = __webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/js/blog.js */"./resources/js/blog.js");
 
 
 /***/ })
