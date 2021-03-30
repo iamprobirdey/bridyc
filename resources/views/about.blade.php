@@ -22,69 +22,103 @@ video')
 <link rel="stylesheet" type="text/css" href="{{url('css/about.css')}}">
 @endsection
 @section('content')
+<style>
+.mt10{
+    margin-top: 10rem;
+}
+.mt5{
+    margin-top: 5rem;
+}
+.mt4{
+    margin-top: 4rem;
+}
+.mt2{
+    margin-top: 2rem;
+}
+</style>
 
-<div class="img-fluid imgbanabout about-faq-contact">
-    <div class="txtbanner">
-        <h1>About Us</h1>
-        <p>Know us, know our story and the reason we exist!</p>
+<div class="row justify-content-center mx-auto mt10" >
+    <div class="col-md-4 align-self-center text-left">
+        <div class="justify-content-end  text-justify">
+            <h3 class="font-weight-bold mt4">Wellcome to Bridyc</h3>
+            <div class="">
+                Know us, know our story and the reason
+                we exist!
+            </div>
+            <div class="mt-4 mb-2 mt5">
+                <a href="!#" class="btn btn-outline-primary mt-3">Read More</a>
+                <img class="svg24 ml-3 mt-3" src="/images/custom/rightarrow.svg" alt="">
+            </div>
+            <div class="">
+                <p class="">
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 text-center ">
+        <img src="/images/custom/welcomeBr.svg" class="mt-4" style="height: 250px;" alt="">
     </div>
 </div>
 
-<div class="mt-lg-5 pt-lg-5 container about-story">
-    <h6 class="text-uppercase">Bridge your chaos</h6>
-    <p>Not everyone of us is blessed enough to have the right exposure before choosing our paths
-        and that creates a lot of chaos. Been there, faced ourselves and we say, "NO MORE". Bridyc is a
-        bi-directional platform that works for both students/parents and institutes and help them
-        ease a lot of the processes. We are dedicated to empower young minds with the real life exposure and activities
-        who are looking for cross-training their minds before choosing an institute or a career.
-    </p>
+<div class="row justify-content-center mt-4">
+    <h4 class="text-center justify-content-center font-weight-bold mt5" style="width: 460px;">Know us, know our story and the reason
+        we exist!</h4>
 </div>
-
-<div class="row about-mission mt-4 mx-0 d-flex flex-column-reverse flex-sm-row">
-    <div class="col-md-8 text-mission my-auto">
-        <h4 class="text-uppercase">our mission</h4>
-        <p>Every student is uniquely smart. We believe that the right exposure and the right information can lead them
-            to
-            a happy decision. Bridyc is determined to expose you to all the possible career options, the real life
-            skills and activities, helps you learn, unlearn,
-            relearn and share your learnings with peer group of students.</p>
+<div class="row justify-content-center mx-auto mt5">
+    <div class="col-md-4 text-left ">
+        <img src="/images/custom/welcomeBr.svg" class="mt-4" style="height: 250px;" alt="">
     </div>
-    <div class="col-md-4 imgmission pr-0 mb-5">
-        <!--img src="/images/mission.png" class="rounded img-fluid" alt="our mission image"
-         srcset=""-->
-
-        <picture>
-            <source media="(min-width:1281px)" srcset="/images/mission-img-large.jpg">
-            <source media="(min-width:1024px)" srcset="/images/mission-img-xsmall.jpg">
-            <source media="(min-width:768px)" srcset="/images/mission-img-medium.jpg">
-            <source media="(min-width:481px)" srcset="/images/mission-img-small.jpg">
-            <source srcset="/images/mission-img-xsmall.jpg">
-            <img src="images/mission.jpg" class="rounded float-right" alt="our mission image">
-        </picture>
+    <div class="col-md-6 align-self-center text-left">
+        <div class="justify-content-end  text-justify">
+            <h5 class="font-weight-bold">Bridge your chaos</h5>
+            <div class="">
+                <p>Not everyone of us is blessed enough to have the right exposure before choosing our paths
+                    and that creates a lot of chaos. Been there, faced ourselves and we say, "NO MORE". Bridyc is a
+                    bi-directional platform that works for both students/parents and institutes and help them
+                    ease a lot of the processes. We are dedicated to empower young minds with the real life exposure and activities
+                    who are looking for cross-training their minds before choosing an institute or a career.
+                </p>
+            </div>
+        </div>
     </div>
 </div>
-
-<div class="row about-how mx-0">
-    <div class="col-md-4 pl-0">
-        <picture>
-            <source media="(min-width:1281px)" srcset="/images/about-man-large.jpg">
-            <source media="(min-width:1024px)" srcset="/images/about-man-xsmall.jpg">
-            <source media="(min-width:768px)" srcset="/images/aboutus-mediumsc.jpg">
-            <source media="(min-width:481px)" srcset="/images/about-man-small.jpg">
-            <source srcset="/images/aboutus-man-xxsmall.jpg">
-            <img src="images/aboutus.jpg" class="" alt="how we do it image">
-        </picture>
-
+<div class="row justify-content-center mx-auto mt5">
+    <div class="col-md-6 align-self-center text-left">
+        <div class="justify-content-end  text-justify">
+            <h5 class="font-weight-bold">Our mission</h5>
+            <div class="">
+                <p>Every student is uniquely smart. We believe that the right exposure and the right information can lead them
+                    to
+                    a happy decision. Bridyc is determined to expose you to all the possible career options, the real life
+                    skills and activities, helps you learn, unlearn,
+                    relearn and share your learnings with peer group of students.</p>
+            </div>
+        </div>
     </div>
-    <div class="col-md-8 text-how my-auto">
-        <h4 class="text-uppercase text-lg-right">how do we do it?</h4>
-        <p>We constantly research and post about all the possible and underrated career options
-            and the way to pursue them. We host podcast with people who have already crossed those
-            paths and are happy and successful in their career. We do have a forum section where
-            we try to have maximum discussion and also encourage students to have peer involvement
-            to solve each other’s doubts. Also, with the help of one click application, we totally
-            ease the process of applying to different institute at the same time.
-        </p>
+    <div class="col-md-4 text-right ">
+        <img src="/images/custom/welcomeBr1.svg" class="mt-4" style="height: 250px;" alt="">
+    </div>
+</div>
+
+<div class="row justify-content-center mx-auto mt5">
+    <div class="col-md-4 text-left d-none d-md-block">
+        <img src="/images/custom/welcomeBr2.svg" class="mt-4" style="height: 250px;" alt="">
+    </div>
+    <div class="col-md-6 align-self-center text-left">
+        <div class="justify-content-end  text-justify">
+            <h5 class="font-weight-bold">How do we do it?</h5>
+            <div class="">
+                <p>Not everyone of us is blessed enough to have the right exposure before choosing our paths
+                    and that creates a lot of chaos. Been there, faced ourselves and we say, "NO MORE". Bridyc is a
+                    bi-directional platform that works for both students/parents and institutes and help them
+                    ease a lot of the processes. We are dedicated to empower young minds with the real life exposure and activities
+                    who are looking for cross-training their minds before choosing an institute or a career.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 text-left d-block d-md-none">
+        <img src="/images/custom/welcomeBr2.svg" class="mt-4" style="height: 250px;" alt="">
     </div>
 </div>
 @endsection
