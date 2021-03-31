@@ -51,14 +51,15 @@ best educational podcasts for college students, best career coaching podcast, be
                 <div class="d-flex align-items-center flex-row">
                     <div class="p-2"><i class="fa fa-phone" aria-hidden="true"></i></div>
                     <div class="p-2">
-                        +91-9365441646 <br>
-                        +91-9476844478
+                        <a href="tel:+91-9365441646">+91-9365441646</a>
+                        <br>
+                        <a href="tel:+91-9476844478">+91-9476844478</a>
                     </div>
                 </div>
                 <div class="d-flex align-items-center flex-row">
                     <div class="p-2"><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
                     <div class="p-2 ml-1">
-                        info@bridyc.com
+                        <a href="mailto:info@bridyc.com">info@bridyc.com</a>
                     </div>
                 </div>
                 <div class="d-flex align-items-center flex-row">
