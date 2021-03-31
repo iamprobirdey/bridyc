@@ -178,20 +178,57 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
       contactData: {
-        'name': '',
-        'email': '',
-        'phone': '',
-        'message': ''
+        name: "",
+        email: "",
+        phone: "",
+        message: ""
       },
       contactError: {
-        'name': '',
-        'email': '',
-        'phone': '',
-        'message': ''
+        name: "",
+        email: "",
+        phone: "",
+        message: ""
       }
     };
   },
@@ -202,7 +239,7 @@ __webpack_require__.r(__webpack_exports__);
       this.$validator.resume();
       this.$validator.validate().then(function (result) {
         if (result) {
-          axios.post('contact', _this.contactData).then(function (response) {
+          axios.post("contact", _this.contactData).then(function (response) {
             if (response.data.message === true) {
               Vue.toasted.success("We will contact you soon", {
                 position: "top-center",
@@ -238,10 +275,10 @@ __webpack_require__.r(__webpack_exports__);
     },
     emptyTheForm: function emptyTheForm() {
       this.$validator.pause();
-      this.contactData.name = '';
-      this.contactData.email = '';
-      this.contactData.phone = '';
-      this.contactData.message = '';
+      this.contactData.name = "";
+      this.contactData.email = "";
+      this.contactData.phone = "";
+      this.contactData.message = "";
     }
   }
 });
@@ -278,7 +315,7 @@ var render = function() {
         _c(
           "div",
           {
-            staticClass: "form-group row",
+            staticClass: "form-group",
             class: {
               "has-error":
                 _vm.errors.has("contactError.name") ||
@@ -286,9 +323,7 @@ var render = function() {
             }
           },
           [
-            _c("label", { staticClass: "col-sm-3 col-form-label" }, [
-              _vm._v("Name :")
-            ]),
+            _c("label", [_vm._v("Your Full Name")]),
             _vm._v(" "),
             _c("input", {
               directives: [
@@ -305,7 +340,7 @@ var render = function() {
                   expression: "'required'"
                 }
               ],
-              staticClass: "col-sm-9",
+              staticClass: "form-control",
               class: {
                 "form-control": true,
                 "is-invalid": _vm.errors.has("name")
@@ -364,7 +399,7 @@ var render = function() {
         _c(
           "div",
           {
-            staticClass: "form-group row",
+            staticClass: "form-group",
             class: {
               "has-error":
                 _vm.errors.has("contactError.email") ||
@@ -372,9 +407,7 @@ var render = function() {
             }
           },
           [
-            _c("label", { staticClass: "col-sm-3 col-form-label" }, [
-              _vm._v("E-mail :")
-            ]),
+            _c("label", [_vm._v("Email")]),
             _vm._v(" "),
             _c("input", {
               directives: [
@@ -391,7 +424,7 @@ var render = function() {
                   expression: "'required|email'"
                 }
               ],
-              staticClass: "col-sm-9",
+              staticClass: "form-control",
               class: {
                 "form-control": true,
                 "is-invalid": _vm.errors.has("email")
@@ -400,7 +433,7 @@ var render = function() {
                 "data-vv-delay": "20",
                 name: "email",
                 type: "text",
-                placeholder: "Enter your email"
+                placeholder: "Enter your Email"
               },
               domProps: { value: _vm.contactData.email },
               on: {
@@ -412,6 +445,15 @@ var render = function() {
                 }
               }
             }),
+            _vm._v(" "),
+            _c(
+              "small",
+              {
+                staticClass: "form-text text-muted",
+                attrs: { id: "emailHelp" }
+              },
+              [_vm._v("We'll never share your email with anyone else.")]
+            ),
             _vm._v(" "),
             _c(
               "span",
@@ -450,7 +492,7 @@ var render = function() {
         _c(
           "div",
           {
-            staticClass: "form-group row",
+            staticClass: "form-group",
             class: {
               "has-error":
                 _vm.errors.has("contactError.phone") ||
@@ -458,9 +500,7 @@ var render = function() {
             }
           },
           [
-            _c("label", { staticClass: "col-sm-6 col-form-label" }, [
-              _vm._v("Phone Number :")
-            ]),
+            _c("label", [_vm._v("Phone Number")]),
             _vm._v(" "),
             _c("input", {
               directives: [
@@ -477,7 +517,7 @@ var render = function() {
                   expression: "'required|numeric|min:10|max:10'"
                 }
               ],
-              staticClass: "col-sm-6",
+              staticClass: "form-control",
               class: {
                 "form-control": true,
                 "is-invalid": _vm.errors.has("phone")
@@ -536,7 +576,7 @@ var render = function() {
         _c(
           "div",
           {
-            staticClass: "form-group row",
+            staticClass: "form-group",
             class: {
               "has-error":
                 _vm.errors.has("contactError.message") ||
@@ -544,9 +584,7 @@ var render = function() {
             }
           },
           [
-            _c("label", { staticClass: "col-sm-4 col-form-label" }, [
-              _vm._v("Message :")
-            ]),
+            _c("label", [_vm._v("Message")]),
             _vm._v(" "),
             _c("textarea", {
               directives: [
@@ -563,16 +601,17 @@ var render = function() {
                   expression: "'required'"
                 }
               ],
-              staticClass: "col-sm-8",
+              staticClass: "form-control",
               class: {
                 "form-control": true,
                 "is-invalid": _vm.errors.has("message")
               },
               attrs: {
+                rows: "5",
                 "data-vv-delay": "20",
                 name: "message",
                 type: "text",
-                placeholder: "Message text"
+                placeholder: "Enter your Message"
               },
               domProps: { value: _vm.contactData.message },
               on: {
@@ -621,8 +660,11 @@ var render = function() {
         _vm._v(" "),
         _c(
           "button",
-          { staticClass: "btn btncontact", attrs: { type: "submit" } },
-          [_vm._v("Submit")]
+          {
+            staticClass: "btn btn-outline-primary text-white btncontact",
+            attrs: { type: "submit" }
+          },
+          [_vm._v("\n      Submit\n    ")]
         )
       ]
     )

@@ -1,12 +1,12 @@
 @extends('student.layouts.master')
 
 @section('title','Bridyc – Explore career possibilities|Learn from Achiever’s|Find Institute')
-@section('desc','BRIDYC is dedicated to empower young minds with the real life exposure and 
-activities and provide access to students and parents in particular, who are looking for 
-cross-training their minds before choosing an institute or a career. The platform will allow 
-students to share their learnings, learn from their peers and from the people who have already 
+@section('desc','BRIDYC is dedicated to empower young minds with the real life exposure and
+activities and provide access to students and parents in particular, who are looking for
+cross-training their minds before choosing an institute or a career. The platform will allow
+students to share their learnings, learn from their peers and from the people who have already
 crossed those paths')
-@section('keywords','Best school in Assam, Junior college in Karbi Anglong, best school in diphu, Online career guidance in Assam, 
+@section('keywords','Best school in Assam, Junior college in Karbi Anglong, best school in diphu, Online career guidance in Assam,
 Schools in Guwahati, Career guidance in Assam, Online admission in junior college, career guidance in assam school, career guidance in assam website online zoology,
 career guidance in Assam website details, career guidance in assam website Guwahati, career guidance in Assam website link,
 career guidance in Assam website online youtube, career counselling Assam website, best educational podcasts for students, Collectibles,
@@ -17,50 +17,68 @@ best educational podcasts for college students, best career coaching podcast, be
 <link rel="stylesheet" type="text/css" href="{{url('css/contact.css')}}">
 @endsection
 @section('content')
-<div class="img-fluid imgbancontact about-faq-contact">
-<div class="txtbanner"> 
-          <h1>Do you have any queries?</h1>
-         <p>We would love to answer them..</p>
-        </div>
-</div>
 
-<div class="allheader container py-3 shadow">
-<h2 class="text-uppercase mb-5 text-center">Contact Us</h2>
-</div>
-<div class="container-fluid mb-5">
-    <div class="row contactform px-auto mx-2">
-        <div class="col-md-5 mt-5 contactadd">
-                <h6 class="text-center"><img src="/images/address.svg" alt="address marker"> Address</h6>
-                <h6>Silpukhuri, Guwahati</h6>
-                <h6>Assam 781003</h6>
-                
-                <hr class="my-4 w-75">
-                
-                <h6 class="text-center"><img src="/images/smartphone.svg" alt="cell phone"> Contact</h6>
-                <h6>+91-9435285795</h6>
-                <h6>+91-9476844478</h6>
-                
-                <h6>E-mail: info@bridyc.com</h6>
-                <br>
-                <h6 class="contact-line mx-lg-5">If you are an institute and want to onboard with us, please call/email us.</h6>
-        </div>
-    <br>
-        <div class="col-md-7 mt-5  px-lg-5 py-5 contact-query">
-        
-        <h2 class="text-uppercase">let's talk</h2>
-            <div id="contact-us" class="mx-5 mx-md-4 mx-lg-5">
-                <contact-us></contact-us>
+<style>
+    .mt10 {
+        margin-top: 10rem;
+    }
+
+    .mt5 {
+        margin-top: 5rem;
+    }
+
+    .mt4 {
+        margin-top: 4rem;
+    }
+
+    .mt2 {
+        margin-top: 2rem;
+    }
+
+    ::placeholder {
+        color: #C6D9DF !important;
+    }
+</style>
+<div class="row  justify-content-center mx-auto mt5 font-weight-bold">
+    <div class="col-md-4 text-left ">
+        <div class="justify-content-end  text-justify">
+            <h2 class="mt4">Get in touch</h2>
+            <div class="">
+                Fill up the form and our Team will get back
+                to you within 24 hours.
             </div>
-          
+            <div class="mt-4 mb-2 mt5">
+                <div class="d-flex align-items-center flex-row">
+                    <div class="p-2"><i class="fa fa-phone" aria-hidden="true"></i></div>
+                    <div class="p-2">
+                        +91-9365441646 <br>
+                        +91-9476844478
+                    </div>
+                </div>
+                <div class="d-flex align-items-center flex-row">
+                    <div class="p-2"><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
+                    <div class="p-2 ml-1">
+                        info@bridyc.com
+                    </div>
+                </div>
+                <div class="d-flex align-items-center flex-row">
+                    <div class="p-2"><i class="fa fa-map-o" aria-hidden="true"></i></div>
+                    <div class="p-2 ml-1">
+                        Silpukhuri, Guwahati<br>
+                        Assam 781003
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+    <div class="col-md-5 mt4 text-left">
+        <div id="contact-us" class="justify-content-end card-body text-white" style="background-color: #02044A; border-radius: 6px;">
+            <contact-us class="m-2"></contact-us>
+        </div>
     </div>
-<br>
+</div>
 @endsection
-
 @section('js_code')
-
 <script src="{{url('js/app.js')}}"></script>
 <script src="{{url('js/contactus.js')}}"></script>
-
 @endsection
