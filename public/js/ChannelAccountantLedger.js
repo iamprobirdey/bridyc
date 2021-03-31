@@ -450,6 +450,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -475,7 +481,9 @@ __webpack_require__.r(__webpack_exports__);
         balance: ""
       },
       showDot: null,
-      showDotBool: false
+      showDotBool: false,
+      cashbookUrl: "",
+      admissionUrl: ""
     };
   },
   props: {
@@ -487,9 +495,18 @@ __webpack_require__.r(__webpack_exports__);
   created: function created() {
     this.channelId = this.channelid;
     this.getTheLedgerData();
+    this.getTheAdmissionCashbookUrl();
   },
   mounted: function mounted() {},
   methods: {
+    getTheAdmissionCashbookUrl: function getTheAdmissionCashbookUrl() {
+      var url = location.pathname.split("/");
+      var url2 = location.pathname.split("/");
+      url[url.length - 1] = "admission";
+      url2[url2.length - 1] = "cashbook";
+      this.admissionUrl = location.origin + url.join("/");
+      this.cashbookUrl = location.origin + url2.join("/");
+    },
     createNewLedger: function createNewLedger() {
       this.urlDecider = "ledger-add";
       this.mainUrl = this.parentAddLedgeUrl + this.channelId;
@@ -696,6 +713,22 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "row" }, [
+    _c(
+      "a",
+      { staticClass: "btn btn-secondary", attrs: { href: _vm.cashbookUrl } },
+      [_vm._v("Go to Admission")]
+    ),
+    _vm._v(" "),
+    _c(
+      "a",
+      { staticClass: "btn btn-primary", attrs: { href: _vm.admissionUrl } },
+      [_vm._v("Go to Cashbook")]
+    ),
+    _vm._v(" "),
+    _c("br"),
+    _vm._v(" "),
+    _c("br"),
+    _vm._v(" "),
     _c(
       "button",
       {
@@ -936,7 +969,9 @@ var render = function() {
           tabindex: "-1",
           role: "dialog",
           "aria-labelledby": "exampleModalLabel",
-          "aria-hidden": "true"
+          "aria-hidden": "true",
+          "data-backdrop": "static",
+          "data-keyboard": "false"
         }
       },
       [

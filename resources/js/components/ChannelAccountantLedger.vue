@@ -1,5 +1,9 @@
 <template>
   <div class="row">
+    <a :href="cashbookUrl" class="btn btn-secondary">Go to Admission</a>
+    <a :href="admissionUrl" class="btn btn-primary">Go to Cashbook</a>
+    <br />
+    <br />
     <button @click="createNewLedger()" class="btn btn-primary">
       Create Ledger
     </button>
@@ -135,6 +139,8 @@
       role="dialog"
       aria-labelledby="exampleModalLabel"
       aria-hidden="true"
+      data-backdrop="static"
+      data-keyboard="false"
     >
       <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -380,6 +386,8 @@ export default {
       },
       showDot: null,
       showDotBool: false,
+      cashbookUrl: "",
+      admissionUrl: "",
     };
   },
   props: {
@@ -391,9 +399,18 @@ export default {
   created() {
     this.channelId = this.channelid;
     this.getTheLedgerData();
+    this.getTheAdmissionCashbookUrl();
   },
   mounted() {},
   methods: {
+    getTheAdmissionCashbookUrl() {
+      let url = location.pathname.split("/");
+      let url2 = location.pathname.split("/");
+      url[url.length - 1] = "admission";
+      url2[url2.length - 1] = "cashbook";
+      this.admissionUrl = location.origin + url.join("/");
+      this.cashbookUrl = location.origin + url2.join("/");
+    },
     createNewLedger() {
       this.urlDecider = "ledger-add";
       this.mainUrl = this.parentAddLedgeUrl + this.channelId;

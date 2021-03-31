@@ -270,6 +270,17 @@ Route::group([
         Route::post('channel/add/cashbook/{channel:id}', 'User\CashbookController@storeCashbookData');
         Route::post('channel/edit/cashbook/{channel:id}', 'User\CashbookController@editCashbookData');
         Route::get('channel/delete/cashbook/{cashbookid}', 'User\CashbookController@delete');
+        //Admission
+        Route::get('channel/school/session/check/{channel:id}', 'User\AdmissionController@getSchoolSession');
+        Route::post('channel/school/session/store/{channel:id}', 'User\AdmissionController@store');
+        Route::get('channel/get/accountant/class/data', 'User\AdmissionController@getClassData');
+        Route::get('channel/get/acccountant/admission/data/{channel:id}', 'User\AdmissionController@getAdmissionData');
+        Route::post('channel/accountant/admission/data/{channel:id}', 'User\AdmissionController@storeAdmissionData');
+        //Edit
+        Route::post('channel/accountant/edit/class/data/{admissionId}/{channel:id}/{classid}/{choice}', 'User\AdmissionController@editStandardData');
+
+
+
 
         //Infrastructure
         Route::get('getUserData', 'User\InfrastructureController@getUserData');

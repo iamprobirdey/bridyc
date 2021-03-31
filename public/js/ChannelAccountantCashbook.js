@@ -339,6 +339,12 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -364,12 +370,15 @@ __webpack_require__.r(__webpack_exports__);
         total: ""
       },
       showDot: null,
-      showDotBool: false
+      showDotBool: false,
+      ledgerUrl: "",
+      admissionUrl: ""
     };
   },
   created: function created() {
     this.channelId = this.channelid;
     this.getCashbookData();
+    this.getTheAdmissionLedgerUrl();
   },
   mounted: function mounted() {},
   props: {
@@ -379,6 +388,14 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   methods: {
+    getTheAdmissionLedgerUrl: function getTheAdmissionLedgerUrl() {
+      var url = location.pathname.split("/");
+      var url2 = location.pathname.split("/");
+      url[url.length - 1] = "admission";
+      url2[url2.length - 1] = "ledger";
+      this.admissionUrl = location.origin + url.join("/");
+      this.ledgerUrl = location.origin + url2.join("/");
+    },
     editCashbook: function editCashbook(cashbook, index) {
       this.cashbookForm.ledger_id = cashbook.accountant_ledger_id;
       this.cashbookForm.payment_type = cashbook.payment_type;
@@ -532,6 +549,22 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
+    _c(
+      "a",
+      { staticClass: "btn btn-secondary", attrs: { href: _vm.ledgerUrl } },
+      [_vm._v("Go to Ledger")]
+    ),
+    _vm._v(" "),
+    _c(
+      "a",
+      { staticClass: "btn btn-primary", attrs: { href: _vm.admissionUrl } },
+      [_vm._v("Go to Admission")]
+    ),
+    _vm._v(" "),
+    _c("br"),
+    _vm._v(" "),
+    _c("br"),
+    _vm._v(" "),
     _c(
       "button",
       {
@@ -695,7 +728,9 @@ var render = function() {
           tabindex: "-1",
           role: "dialog",
           "aria-labelledby": "exampleModalLabel",
-          "aria-hidden": "true"
+          "aria-hidden": "true",
+          "data-backdrop": "static",
+          "data-keyboard": "false"
         }
       },
       [
@@ -724,8 +759,8 @@ var render = function() {
                         staticClass: "form-group",
                         class: {
                           "has-error":
-                            _vm.errors.has("serverError.name") ||
-                            _vm.serverError.name != ""
+                            _vm.errors.has("serverError.ledger_id") ||
+                            _vm.serverError.ledger_id != ""
                         }
                       },
                       [
@@ -751,7 +786,7 @@ var render = function() {
                               }
                             ],
                             staticClass: "form-control",
-                            attrs: { name: "payment_mode" },
+                            attrs: { name: "ledger_id" },
                             on: {
                               change: [
                                 function($event) {
@@ -804,13 +839,13 @@ var render = function() {
                               {
                                 name: "show",
                                 rawName: "v-show",
-                                value: _vm.errors.has("name"),
-                                expression: "errors.has('name')"
+                                value: _vm.errors.has("ledger_id"),
+                                expression: "errors.has('ledger_id')"
                               }
                             ],
                             staticClass: "text-danger text-center"
                           },
-                          [_vm._v(_vm._s(_vm.errors.first("name")))]
+                          [_vm._v(_vm._s(_vm.errors.first("ledger_id")))]
                         ),
                         _vm._v(" "),
                         _c(
@@ -820,13 +855,13 @@ var render = function() {
                               {
                                 name: "show",
                                 rawName: "v-show",
-                                value: _vm.serverError.name != "",
-                                expression: "serverError.name != ''"
+                                value: _vm.serverError.ledger_id != "",
+                                expression: "serverError.ledger_id != ''"
                               }
                             ],
                             staticClass: "help text-danger"
                           },
-                          [_vm._v(_vm._s(_vm.serverError.name))]
+                          [_vm._v(_vm._s(_vm.serverError.ledger_id))]
                         )
                       ]
                     ),
@@ -1035,8 +1070,8 @@ var render = function() {
                         staticClass: "form-group",
                         class: {
                           "has-error":
-                            _vm.errors.has("serverError.balance") ||
-                            _vm.serverError.balance != ""
+                            _vm.errors.has("serverError.total") ||
+                            _vm.serverError.total != ""
                         }
                       },
                       [

@@ -16,14 +16,17 @@ class CreateChannelAccountantAdmissionsTable extends Migration
         Schema::create('channel_accountant_admissions', function (Blueprint $table) {
             $table->id();
             $table->foreignId('channel_id')->constrained()->onDelete('cascade');
-            $table->integer('admission_number');
+            $table->bigInteger('admission_number');
             $table->string('name');
-            $table->string('class');
-            $table->string('roll_number')->default('n/a');
+            $table->string('roll_number');
             $table->string('phone');
             $table->string('father_name');
             $table->string('category');
-            $table->json('options');
+            $table->integer('balance_taken')->default(0);
+            $table->integer('total_balance')->default(0);
+            $table->integer('old_balance')->default(0);
+            $table->string('payment_mode'); //online <=> offline
+            $table->json('options')->nullable();
             $table->timestamps();
             //address_line_1,address_line_2,caste,city,section,date_of_birth,gender,
             //father_ocupation,date_of_birth,
