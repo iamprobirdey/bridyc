@@ -73,7 +73,7 @@ best educational podcasts for college students, best career coaching podcast, be
         </div>
     </div>
     <div class="col-md-5 mt4 text-left">
-        <div id="contact-us" class="justify-content-end card-body text-white" style="background-color: #02044A; border-radius: 6px;">
+        <div id="contact-us" class="shadow-sm justify-content-end card-body text-white" style="background-color: #02044A; border-radius: 6px;">
             <contact-us class="m-2"></contact-us>
         </div>
     </div>
