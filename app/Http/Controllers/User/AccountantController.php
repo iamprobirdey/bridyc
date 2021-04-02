@@ -62,9 +62,10 @@ class AccountantController extends Controller
             ->with('children')
             ->with('standard.accountclass')
             ->get()[0];
-        $admissionChild = ChannelAccountantAdmission::where('admission_ledger_id', $admission->id)->get();
+        $admissionChild = ChannelAccountantLedger::where('channel_accountant_ledger_id', $admission->admission_ledger_id)->get();
+
         return view('institute.accountant.receipt_download', compact('admission', $admission))
-            ->with('child', $admissionChild);
+            ->with('admissionChild', $admissionChild);
     }
 
     public function getMonthlyReceipt($channelId, $admissionId, $monthlyBillId)

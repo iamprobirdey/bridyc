@@ -43,6 +43,10 @@ video')
                 <h2>Paid Balance : {{$admission->balance_taken}}</h2>
 
             </div>
+            Bills included :
+            @foreach ($admissionChild as $item)
+            {{$item->name}} : {{$item->balance}}
+            @endforeach
         </main>
     </div>
 </div>
