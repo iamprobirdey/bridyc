@@ -24,8 +24,8 @@ class StoreBoardValidation extends FormRequest
     public function rules()
     {
         return [
-            'board' => 'required|string|unique:boards,name|max:50',
-            'code' => 'required|string|unique:boards,code|max:50'
+            'board' => 'required|max:50|string|unique:boards,name|max:50',
+            'code' => 'required|max:50|string|unique:boards,code|max:50'
         ];
     }
 }

@@ -155,7 +155,7 @@ export default {
     },
     getClassData() {
       axios
-        .get("/api/channel/get/accountant/class/data")
+        .get("/api/channel/get/accountant/class/admission-ledger/data")
         .then((response) => {
           this.classRelectedData = response.data.data;
         })
@@ -205,6 +205,7 @@ export default {
               .then((response) => {
                 if (response.data.choice === "edit") {
                   $("#edit-class" + this.indexId).modal("hide");
+                  this.selectedClassId = this.classFormData.class_name;
                   this.classFormData.class_name = "";
                   Vue.toasted.success("Class has been edited successfully", {
                     position: "top-center",

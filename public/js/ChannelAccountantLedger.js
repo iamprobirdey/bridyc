@@ -456,6 +456,42 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -473,12 +509,14 @@ __webpack_require__.r(__webpack_exports__);
       ledgerForm: {
         name: "",
         payment_type: "credit",
-        balance: ""
+        balance: "",
+        admission_check: false
       },
       serverError: {
         name: "",
         payment_type: "",
-        balance: ""
+        balance: "",
+        admission_check: false
       },
       showDot: null,
       showDotBool: false,
@@ -715,13 +753,13 @@ var render = function() {
   return _c("div", { staticClass: "row" }, [
     _c(
       "a",
-      { staticClass: "btn btn-secondary", attrs: { href: _vm.cashbookUrl } },
+      { staticClass: "btn btn-secondary", attrs: { href: _vm.admissionUrl } },
       [_vm._v("Go to Admission")]
     ),
     _vm._v(" "),
     _c(
       "a",
-      { staticClass: "btn btn-primary", attrs: { href: _vm.admissionUrl } },
+      { staticClass: "btn btn-primary", attrs: { href: _vm.cashbookUrl } },
       [_vm._v("Go to Cashbook")]
     ),
     _vm._v(" "),
@@ -1265,6 +1303,129 @@ var render = function() {
                         )
                       ]
                     ),
+                    _vm._v(" "),
+                    _vm.urlDecider === "ledger-add" ||
+                    _vm.urlDecider === "ledger-edit"
+                      ? _c(
+                          "div",
+                          {
+                            staticClass: "form-group",
+                            class: {
+                              "has-error":
+                                _vm.errors.has("serverError.admission_check") ||
+                                _vm.serverError.admission_check != ""
+                            }
+                          },
+                          [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.ledgerForm.admission_check,
+                                  expression: "ledgerForm.admission_check"
+                                }
+                              ],
+                              class: {
+                                "form-control": true,
+                                "is-invalid": _vm.errors.has("admission_check")
+                              },
+                              attrs: {
+                                type: "checkbox",
+                                "data-vv-delay": "20",
+                                name: "admission_check",
+                                placeholder: "Balance"
+                              },
+                              domProps: {
+                                checked: Array.isArray(
+                                  _vm.ledgerForm.admission_check
+                                )
+                                  ? _vm._i(
+                                      _vm.ledgerForm.admission_check,
+                                      null
+                                    ) > -1
+                                  : _vm.ledgerForm.admission_check
+                              },
+                              on: {
+                                change: function($event) {
+                                  var $$a = _vm.ledgerForm.admission_check,
+                                    $$el = $event.target,
+                                    $$c = $$el.checked ? true : false
+                                  if (Array.isArray($$a)) {
+                                    var $$v = null,
+                                      $$i = _vm._i($$a, $$v)
+                                    if ($$el.checked) {
+                                      $$i < 0 &&
+                                        _vm.$set(
+                                          _vm.ledgerForm,
+                                          "admission_check",
+                                          $$a.concat([$$v])
+                                        )
+                                    } else {
+                                      $$i > -1 &&
+                                        _vm.$set(
+                                          _vm.ledgerForm,
+                                          "admission_check",
+                                          $$a
+                                            .slice(0, $$i)
+                                            .concat($$a.slice($$i + 1))
+                                        )
+                                    }
+                                  } else {
+                                    _vm.$set(
+                                      _vm.ledgerForm,
+                                      "admission_check",
+                                      $$c
+                                    )
+                                  }
+                                }
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("label", [
+                              _vm._v("Only check for Admission Ledger")
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "span",
+                              {
+                                directives: [
+                                  {
+                                    name: "show",
+                                    rawName: "v-show",
+                                    value: _vm.errors.has("admission_check"),
+                                    expression: "errors.has('admission_check')"
+                                  }
+                                ],
+                                staticClass: "text-danger text-center"
+                              },
+                              [
+                                _vm._v(
+                                  _vm._s(_vm.errors.first("admission_check"))
+                                )
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "span",
+                              {
+                                directives: [
+                                  {
+                                    name: "show",
+                                    rawName: "v-show",
+                                    value:
+                                      _vm.serverError.admission_check != "",
+                                    expression:
+                                      "serverError.admission_check != ''"
+                                  }
+                                ],
+                                staticClass: "help text-danger"
+                              },
+                              [_vm._v(_vm._s(_vm.serverError.admission_check))]
+                            )
+                          ]
+                        )
+                      : _vm._e(),
                     _vm._v(" "),
                     _c(
                       "button",

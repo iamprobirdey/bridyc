@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-if="userImageStatus">
+    <div>
       <img
         height="150"
         width="250"
@@ -14,18 +14,18 @@
       <!--
                         :srcset="domainUrl+'/media/channel/'+userId+'/m-'+userImage+','+domainUrl+'/media/channel/'+userId+'/s-'+userImage"
                      -->
-      <button @click="editTheIcon()" class="btn">
+      <button @click="addCoverImageFile()" class="btn">
         <i class="fa fa-pencil" aria-hidden="true"></i> Change Cover Photo
       </button>
     </div>
 
-    <div v-if="!userImageStatus">
+    <!-- <div v-if="!userImageStatus">
       <picture-input
         ref="pictureInput"
         width="300"
         height="200"
-        margin="16"
         accept="image/jpeg, image/png"
+        margin="17"
         size="7"
         button-class="btn"
         :custom-strings="{
@@ -33,7 +33,6 @@
           drag: 'Upload a cover picture',
         }"
         @change="onChange"
-        :crop="true"
       ></picture-input>
 
       <div v-if="wait" class="text-center mt-2">
@@ -60,13 +59,106 @@
         </button>
       </div>
       <span v-show="imageError" class="text-danger">{{ imageError }}</span>
+    </div> -->
+
+    <div
+      class="modal fade"
+      id="addImageFileCover"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+      data-backdrop="static"
+      data-keyboard="false"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Upload Photo</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body my-n3">
+            <div>
+              <input
+                id="file-button1-cover"
+                hidden
+                type="file"
+                @change="loadCroppieImageCroppie($event)"
+                @click="onFileClicked"
+                ref="uploadFile"
+                accept="image/*"
+              />
+              <label for="file-button1-cover" class="label-btn py-2 px-3 mt-2"
+                >Select file</label
+              >
+              <span id="file-chosen-cover">No file chosen</span>
+              <p
+                v-html="croppieCoverImageValidation"
+                v-if="croppieCoverImageValidation != ''"
+                class="text-danger"
+              ></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="addImageCroppieCover"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Upload Cover Photo</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body cropper-modal">
+            <cropper
+              class="upload-example-cropper"
+              ref="cropper"
+              :src="coppieCoverImageData"
+              @change="onChangeCoverDimention"
+            />
+            <div v-if="wait" class="text-center mt-2">
+              <div class="spinner-border text-warning" role="status">
+                <span class="sr-only">Loading...</span>
+              </div>
+            </div>
+            <button class="btn btn-info mt-2" @click="uploadImage2">
+              Submit
+            </button>
+            <button class="btn btn-dark mt-2" @click="addCoverImageFile">
+              Change Image
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script>
-import PictureInput from "vue-picture-input";
-import Compressor from "compressorjs";
+import { Cropper } from "vue-advanced-cropper";
+import "vue-advanced-cropper/dist/style.css";
 export default {
   data() {
     return {
@@ -79,23 +171,84 @@ export default {
       url: "/api/cover/upload",
       domainUrl: location.origin,
       wait: false,
+      coppieCoverImageData: "",
+      croppieCoverImageValidation: "",
+      coordinateCoverHeight: "",
+      coordinateCoverWidth: "",
     };
   },
   components: {
-    PictureInput,
-    Compressor,
+    Cropper,
   },
   mounted() {
     this.getCoverData();
   },
   methods: {
+    onFileClicked(event) {
+      this.$refs.uploadFile.value = null;
+    },
+    addCoverImageFile() {
+      $("#addImageFileCover").modal("show");
+      $("#addImageCroppieCover").modal("hide");
+    },
+    loadCroppieImageCroppie(event) {
+      var input = event.target;
+      if (input.files && input.files[0]) {
+        const validImageTypes = ["image/jpeg", "image/png", "image/jpg"];
+        if (validImageTypes.includes(input.files[0]["type"])) {
+          var reader = new FileReader();
+          reader.onload = (e) => {
+            this.coppieCoverImageData = e.target.result;
+          };
+          reader.readAsDataURL(input.files[0]);
+          $("#addImageFileCover").modal("hide");
+          $("#addImageCroppieCover").modal("show");
+        } else {
+          this.croppieCoverImageValidation = "This is not valid image file";
+        }
+      }
+    },
+    onChangeCoverDimention({ coordinates, canvas }) {
+      let width = coordinates.width;
+      let height = coordinates.height;
+      this.coordinateCoverWidth = width;
+      this.coordinateCoverHeight = height;
+    },
+    uploadImage2() {
+      const { canvas } = this.$refs.cropper.getResult();
+      if (canvas) {
+        this.eventStateFired = false;
+        const form = new FormData();
+        canvas.toBlob((blob) => {
+          form.append("image", blob);
+          form.append("height", this.coordinateCoverHeight);
+          form.append("width", this.coordinateCoverWidth);
+          this.wait = true;
+          axios
+            .post(this.url, form, { emulateJSON: true })
+            .then((response) => {
+              this.userImage = response.data.image;
+              //this.userImageStatus = true;
+              this.wait = false;
+              this.coppieCoverImageData = "";
+              $("#addImageCroppieCover").modal("hide");
+            })
+            .catch((errors) => {
+              this.wait = false;
+              if (errors.response.data.errors.image) {
+                this.imageError = errors.response.data.errors.image[0];
+              }
+            });
+        }, "image/jpeg");
+      }
+    },
+
     getCoverData() {
       axios
         .get("/api/cover")
         .then((response) => {
           this.userImage = response.data.image;
           this.userId = response.data.userId;
-          this.userImageStatus = true;
         })
         .catch((errors) => {
           Vue.toasted.error("Something went wrong", {
@@ -103,60 +256,6 @@ export default {
             duration: 5000,
           });
         });
-    },
-    b64toBlob(dataURI) {
-      var byteString = atob(dataURI.split(",")[1]);
-      var ab = new ArrayBuffer(byteString.length);
-      var ia = new Uint8Array(ab);
-
-      for (var i = 0; i < byteString.length; i++) {
-        ia[i] = byteString.charCodeAt(i);
-      }
-      return new Blob([ab], { type: "image/jpeg" });
-    },
-    onImageSubmit() {
-      if (this.imageData != "") {
-        this.wait = true;
-        let vm = this;
-        new Compressor(this.b64toBlob(this.imageData), {
-          quality: 0.7,
-          success(result) {
-            const formData = new FormData();
-            formData.append("image", result, result.name);
-            axios
-              .post(vm.url, formData)
-              .then((response) => {
-                vm.userImage = response.data.image;
-                vm.userImageStatus = true;
-                vm.wait = false;
-              })
-              .catch((errors) => {
-                vm.wait = false;
-                if (errors.response.data.errors.image) {
-                  vm.imageError = errors.response.data.errors.image[0];
-                }
-              });
-          },
-          error(err) {
-            Vue.toasted.error("Something went wrong!! Try again.", {
-              position: "top-center",
-              duration: 5000,
-            });
-          },
-        });
-      }
-    },
-    onChange(image) {
-      if (this.$refs.pictureInput.image)
-        this.imageData = this.$refs.pictureInput.image;
-    },
-    editTheIcon() {
-      this.userImageStatus = false;
-      this.wait = false;
-    },
-    canTheEdit() {
-      this.userImageStatus = true;
-      this.wait = false;
     },
   },
 };
@@ -177,5 +276,17 @@ export default {
 .btn-success {
   padding-top: 0.1rem !important;
   padding-bottom: 0.1rem !important;
+}
+.label-btn {
+  background-color: #003585;
+  color: white;
+  font-family: sans-serif;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+
+.cropper-modal {
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
 }
 </style>

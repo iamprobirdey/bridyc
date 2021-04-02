@@ -36,7 +36,7 @@ class DashboardController extends Controller
         return view(
             'institute.verification',
             compact('allPlaces', $allPlaces),
-            compact('usersVerification', $usersVerification),
+            compact('usersVerification', $usersVerification)
         )
             ->with('languages', $languages)
             ->with('authUser', $authUser)
@@ -113,4 +113,10 @@ class DashboardController extends Controller
             'channelId' => $channel->id
         ]);
     }
+
+
+
+    //class_name,male_student,female_student,total_students,
+
+    // /https://vue-formbuilder.netlify.app/
 }

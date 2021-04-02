@@ -17,14 +17,15 @@ class CreateChannelAccountantAdmissionsTable extends Migration
             $table->id();
             $table->foreignId('channel_id')->constrained()->onDelete('cascade');
             $table->bigInteger('admission_number');
+            $table->foreignId('admission_ledger_id')->constrained()->onDelete('cascade')->references('id')->on('channel_accountant_ledgers');
             $table->string('name');
             $table->string('roll_number');
             $table->string('phone');
             $table->string('father_name');
             $table->string('category');
-            $table->integer('balance_taken')->default(0);
-            $table->integer('total_balance')->default(0);
-            $table->integer('old_balance')->default(0);
+            $table->integer('total_balance');
+            $table->integer('balance_taken');
+            $table->integer('old_balance');
             $table->string('payment_mode'); //online <=> offline
             $table->json('options')->nullable();
             $table->timestamps();

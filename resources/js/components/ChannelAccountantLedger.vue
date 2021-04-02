@@ -1,7 +1,7 @@
 <template>
   <div class="row">
-    <a :href="cashbookUrl" class="btn btn-secondary">Go to Admission</a>
-    <a :href="admissionUrl" class="btn btn-primary">Go to Cashbook</a>
+    <a :href="admissionUrl" class="btn btn-secondary">Go to Admission</a>
+    <a :href="cashbookUrl" class="btn btn-primary">Go to Cashbook</a>
     <br />
     <br />
     <button @click="createNewLedger()" class="btn btn-primary">
@@ -248,6 +248,42 @@
                   >{{ serverError.balance }}</span
                 >
               </div>
+
+              <div
+                class="form-group"
+                :class="{
+                  'has-error':
+                    errors.has('serverError.admission_check') ||
+                    serverError.admission_check != '',
+                }"
+                v-if="
+                  urlDecider === 'ledger-add' || urlDecider === 'ledger-edit'
+                "
+              >
+                <input
+                  v-model="ledgerForm.admission_check"
+                  type="checkbox"
+                  data-vv-delay="20"
+                  name="admission_check"
+                  :class="{
+                    'form-control': true,
+                    'is-invalid': errors.has('admission_check'),
+                  }"
+                  placeholder="Balance"
+                />
+                <label>Only check for Admission Ledger</label>
+                <span
+                  v-show="errors.has('admission_check')"
+                  class="text-danger text-center"
+                  >{{ errors.first("admission_check") }}</span
+                >
+                <span
+                  v-show="serverError.admission_check != ''"
+                  class="help text-danger"
+                  >{{ serverError.admission_check }}</span
+                >
+              </div>
+
               <button type="submit" class="btn btn-success">Submit</button>
             </form>
           </div>
@@ -378,11 +414,13 @@ export default {
         name: "",
         payment_type: "credit",
         balance: "",
+        admission_check: false,
       },
       serverError: {
         name: "",
         payment_type: "",
         balance: "",
+        admission_check: false,
       },
       showDot: null,
       showDotBool: false,

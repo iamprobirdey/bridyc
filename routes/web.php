@@ -6,6 +6,8 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes(['verify' => true]);
 
+
+
 // Route::get('test', 'Teacher\PhoneNumberVerificationController@phoneVerification');
 
 // Route::get('google/login', 'Auth\GoogleLoginController@getGoogleLogIn')->middleware('guest');
@@ -22,15 +24,18 @@ Auth::routes(['verify' => true]);
 //Route::post('login', 'Auth\LoginController@login');
 //Route::post('logout', 'Auth\LoginController@logout')->name('logout');
 
+
+
 Route::group([
     'name' => 'admin.',
     'prefix' => 'admin',
     'middleware' => ['can:admin']
 ], function () {
     Route::get('/', 'Admin\AdminController@index')->name('admin');
+    //User Information
     Route::group([
-        'name' => 'blog.',
-        'prefix' => 'blog'
+        'name' => 'userinfo.',
+        'prefix' => 'userinfo'
     ], function () {
         Route::get('/', 'Admin\BlogController@index')->name('admin.blog.index');
         Route::get('/create', 'Admin\BlogController@create');
@@ -57,7 +62,11 @@ Route::group([
         Route::get('updating/{podcast:id}', 'Admin\PodcastController@updating');
         Route::post('update/{podcast:id}', 'Admin\PodcastController@update')->name('admin.podcast.update');
         Route::get('delete/{podcast:id}', 'Admin\PodcastController@delete');
+        Route::get('/', 'Admin\UserInformationController@index')->name('admin.userinfo.index');
+        Route::get('get/all/user/information', 'Admin\UserInformationController@getAllUserInformation');
+        Route::get('get/selected/user/information', 'Admin\UserInformationController@getSelectedInformation');
     });
+    //Country
     Route::group([
         'name' => 'country.',
         'prefix' => 'country'
@@ -68,6 +77,7 @@ Route::group([
         Route::get('updating/{country:id}', 'Admin\CountryController@updating');
         Route::post('update/{country:id}', 'Admin\CountryController@update')->name('admin.country.update');
     });
+    //State
     Route::group([
         'name' => 'state.',
         'prefix' => 'state'
@@ -78,7 +88,7 @@ Route::group([
         Route::get('updating/{id}', 'Admin\StateController@updating');
         Route::post('update/{id}', 'Admin\StateController@update')->name('admin.state.update');
     });
-
+    //State
     Route::group([
         'name' => 'district.',
         'prefix' => 'district'
@@ -89,7 +99,7 @@ Route::group([
         Route::get('updating/{id}', 'Admin\DistrictController@updating');
         Route::post('update/{id}', 'Admin\DistrictController@update')->name('admin.district.update');
     });
-
+    //Village
     Route::group([
         'name' => 'village.',
         'prefix' => 'village'
@@ -100,7 +110,7 @@ Route::group([
         Route::get('updating/{id}', 'Admin\VillageController@updating');
         Route::post('update/{id}', 'Admin\VillageController@update')->name('admin.village.update');
     });
-
+    //Board
     Route::group([
         'name' => 'board.',
         'prefix' => 'board'
@@ -111,7 +121,7 @@ Route::group([
         Route::get('updating/{id}', 'Admin\BoardController@updating');
         Route::post('update/{id}', 'Admin\BoardController@update')->name('admin.board.update');
     });
-
+    //Standard
     Route::group([
         'name' => 'standard.',
         'prefix' => 'standard'
@@ -122,28 +132,7 @@ Route::group([
         Route::get('updating/{id}', 'Admin\StandardController@updating');
         Route::post('update/{id}', 'Admin\StandardController@update')->name('admin.standard.update');
     });
-    Route::group([
-        'name' => 'subject.',
-        'prefix' => 'subject'
-    ], function () {
-        Route::get('/', 'Admin\SubjectController@index');
-        Route::get('create', 'Admin\SubjectController@create');
-        Route::post('create', 'Admin\SubjectController@store')->name('admin.subject.create');
-        Route::get('updating/{id}', 'Admin\SubjectController@updating');
-        Route::post('update/{id}', 'Admin\SubjectController@update')->name('admin.subject.update');
-    });
-
-    Route::group([
-        'name' => 'hobby.',
-        'prefix' => 'hobby'
-    ], function () {
-        Route::get('/', 'Admin\HobbiesController@index');
-        Route::get('create', 'Admin\HobbiesController@create');
-        Route::post('create', 'Admin\HobbiesController@store')->name('admin.hobby.create');
-        Route::get('updating/{id}', 'Admin\HobbiesController@updating');
-        Route::post('update/{id}', 'Admin\HobbiesController@update')->name('admin.hobby.update');
-    });
-
+    //Language
     Route::group([
         'name' => 'language.',
         'prefix' => 'language'
@@ -154,7 +143,49 @@ Route::group([
         Route::get('updating/{id}', 'Admin\LanguageController@updating');
         Route::post('update/{id}', 'Admin\LanguageController@update')->name('admin.language.update');
     });
-
+    //Subject
+    Route::group([
+        'name' => 'subject.',
+        'prefix' => 'subject'
+    ], function () {
+        Route::get('/', 'Admin\SubjectController@index');
+        Route::get('create', 'Admin\SubjectController@create');
+        Route::post('create', 'Admin\SubjectController@store')->name('admin.subject.create');
+        Route::get('updating/{id}', 'Admin\SubjectController@updating');
+        Route::post('update/{id}', 'Admin\SubjectController@update')->name('admin.subject.update');
+    });
+    //Hobby
+    Route::group([
+        'name' => 'hobby.',
+        'prefix' => 'hobby'
+    ], function () {
+        Route::get('/', 'Admin\HobbiesController@index');
+        Route::get('create', 'Admin\HobbiesController@create');
+        Route::post('create', 'Admin\HobbiesController@store')->name('admin.hobby.create');
+        Route::get('updating/{id}', 'Admin\HobbiesController@updating');
+        Route::post('update/{id}', 'Admin\HobbiesController@update')->name('admin.hobby.update');
+    });
+    //Podcast
+    Route::group([
+        'name' => 'podcast.',
+        'prefix' => 'podcast'
+    ], function () {
+        Route::get('/', 'Admin\PodcastController@index');
+        Route::get('create', 'Admin\PodcastController@create');
+        Route::post('create', 'Admin\PodcastController@store')->name('admin.podcast.create');
+        Route::get('updating/{podcast:id}', 'Admin\PodcastController@updating');
+        Route::post('update/{podcast:id}', 'Admin\PodcastController@update')->name('admin.podcast.update');
+        Route::get('delete/{podcast:id}', 'Admin\PodcastController@delete');
+    });
+    //Enquiry
+    Route::group([
+        'name' => 'contact.',
+        'prefix' => 'contact'
+    ], function () {
+        Route::get('/', 'Admin\ContactUsController@index');
+        Route::post('/enquiry/{contact:id}', 'Admin\ContactUsController@enquiry')->name('enquiry');
+    });
+    //User Verification
     Route::group([
         'name' => 'verification.',
         'prefix' => 'verification'
@@ -169,8 +200,24 @@ Route::group([
         //Add meta-keywords and meta-description
         Route::post('api/keywords/description/{id}', 'User\MetaController@store');
         Route::get('api/delete/user/{user:id}', 'Admin\VerificationController@deleteUser');
+        //Institute Title
+        Route::post('api/institute/title/{user:id}', 'Admin\VerificationController@changeTitle');
     });
 });
+
+
+Route::group([
+    'name' => 'supervisor.',
+    'prefix' => 'supervisor',
+    'middleware' => ['can:supervisor']
+], function () {
+    Route::get('/dashboard', 'Supervisor\SupervisorController@index')->name('supervisor.dashboard');
+    Route::get('/report', 'Supervisor\SupervisorController@report')->name('supervisor.report');
+    Route::get('/view/{id}', 'Supervisor\SupervisorController@view')->name('supervisor.view');
+    Route::get('/pdf/{id}', 'Supervisor\SupervisorController@test');
+    Route::get('/test', 'Supervisor\SupervisorController@test2');
+});
+
 
 Route::get('/', 'ChannelController@index');
 Route::get('/application', 'HomeController@application');
@@ -212,6 +259,14 @@ Route::group([
     Route::get('accoountant/{channel:title}/ledger', 'User\AccountantController@ledger')->name('channel.accountant.ledger');
     Route::get('accoountant/{channel:title}/cashbook', 'User\AccountantController@cashbook')->name('channel.accountant.cashbook');
     Route::get('accoountant/{channel:title}/admission', 'User\AccountantController@admission')->name('channel.accountant.admission');
+    Route::get('accoountant/{channel:title}/admission/monthly/bill/{admissionId}', 'User\AccountantController@monthly')->name('channel.accountant.admission.monthly');
+    Route::get('accoountant/{channel:title}/admission/receipt/{admissionId}', 'User\AccountantController@receipt')->name('channel.accountant.admission.receipt');
+    Route::get('accoountant/{channel:title}/admission/receipt/{admissionId}/get', 'User\AccountantController@getAdmissionReceipt')->name('channel.accountant.admission.receipt.get');
+    Route::get('accoountant/{channel:title}/admission/receipt/{admissionId}/get/{monthlybillId}', 'User\AccountantController@getMonthlyReceipt')->name('channel.accountant.admission.receipt.get.monthly');
+    //Testing
+    Route::get('supervisor/{channel:title}', 'User\SupervisorController@supervisor')->name('channel.supervisor');
+    //
+    Route::get('test/cron', 'User\AdmissionController@test');
 });
 
 Route::get('edit/student/profile/{user:username}', 'Student\ProfileController@index')->middleware(['can:student'])->middleware('verified');
@@ -226,6 +281,15 @@ Route::group([
 ], function () {
     //Independent
     Route::get('store/channel/session/{channelId}', 'ChannelController@storeChannelSession');
+    Route::get('total/site/visit/', 'TotalSiteVisitController@store');
+
+    //Supervisor api
+    Route::group([
+        'middleware' => ['can:supervisor']
+    ], function () {
+        Route::get('get/supervisor/channel/data', 'Supervisor\SupervisorController@getChannelData');
+        Route::get('get/supervisor/channel/data/{districtId}', 'Supervisor\SupervisorController@getChannelDataByDistrict');
+    });
 
     Route::group([
         'middleware' => ['can:student']
@@ -273,15 +337,21 @@ Route::group([
         //Admission
         Route::get('channel/school/session/check/{channel:id}', 'User\AdmissionController@getSchoolSession');
         Route::post('channel/school/session/store/{channel:id}', 'User\AdmissionController@store');
-        Route::get('channel/get/accountant/class/data', 'User\AdmissionController@getClassData');
+        Route::get('channel/get/accountant/class/admission-ledger/data', 'User\AdmissionController@getClassData');
         Route::get('channel/get/acccountant/admission/data/{channel:id}', 'User\AdmissionController@getAdmissionData');
         Route::post('channel/accountant/admission/data/{channel:id}', 'User\AdmissionController@storeAdmissionData');
         //Edit
         Route::post('channel/accountant/edit/class/data/{admissionId}/{channel:id}/{classid}/{choice}', 'User\AdmissionController@editStandardData');
+        //Monthly Bill
+        Route::post('channel/accountant/pay/pending/monthly/bill/{monthlyId}', 'User\MonthlyBillController@payMonthlyBillData');
+        Route::post('channel/accountant/pay/due/monthly/bill/{admissionId}', 'User\MonthlyBillController@dueMonthlyBillData');
 
 
 
 
+
+        //Supervisor
+        Route::post('supervisor/form/submit/{channelid}', 'User\SupervisorController@submit');
         //Infrastructure
         Route::get('getUserData', 'User\InfrastructureController@getUserData');
         Route::post('infra/store/{id}', 'User\InfrastructureController@storeUserInformation');
@@ -343,7 +413,6 @@ Route::group([
         Route::post('channel/delete/notification/{channel_notifications:id}', 'User\ChannelNotificationController@delete');
     });
 });
-
 //institue multi image upload ==> done
 //Admin side delete user problem ==> done
 //user verification layout changes with modal ==> done

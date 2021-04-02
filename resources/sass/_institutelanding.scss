@@ -4,7 +4,6 @@ main{
     .inscover{
       width: 100%;
       height: 230px;
-      object-fit: fill;
       @include screensize(tablet){
          height: 280px;
        }
@@ -49,7 +48,7 @@ main{
         font-size: 14px;
         width: 110px;
         margin-left: -20px;
-        
+
          @include screensize(tablet){
           width: 130px;
           font-size: 16px;
@@ -70,7 +69,7 @@ main{
        }
          &:hover{
            text-decoration: none;
-           
+
          }
      }
      .phemdiv{
@@ -123,7 +122,7 @@ main{
                  width: 90px;
                  height: 90px;
               }
-              
+
               @include screensize(laptop){
                  width: 140px;
                  height: 140px;
@@ -149,7 +148,7 @@ main{
            @include screensize(desktop){
             font-size: 34px;
            }
-             
+
             }
  }
 
@@ -186,7 +185,7 @@ main{
     left:82%;
   }
  }
- 
+
 .faculty-request{
   position: relative;
   top:-124px;
@@ -250,13 +249,13 @@ main{
            .nav-pills{
 
              .nav-link{
-               color: #011737; 
+               color: #011737;
              }
              .active{
                background-color:#003585;
                color:white;
              }
-             
+
            }
 
          .inscarou{
@@ -305,7 +304,7 @@ main{
               background-image: url('/images/arrow.svg');
               background-size: 10px 20px;
               display: inline-block;
-              width: 10px; 
+              width: 10px;
               height: 15px;
               content:"";
             }
@@ -313,8 +312,8 @@ main{
          }
 
 
-         .facultyachieve{ 
-           
+         .facultyachieve{
+
               .facultyachievecard{
                   width: 200px;
                   height: 250px;
@@ -326,7 +325,7 @@ main{
            }
 
            .description{
-             
+
              padding: 1rem;
              margin-left: auto;
              margin-right: auto;
@@ -349,7 +348,7 @@ main{
 
            .princidiv{
              margin-top: 50px;
-             
+
               h3{
                 color: #003585;
                 font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -358,12 +357,12 @@ main{
                   font-size: 24px;
                 }
               }
-             
+
              img{
                width: 24px;
                height:24px;
                @include screensize(tablet){
-                
+
                 height:30px;
                }
              }
@@ -377,7 +376,7 @@ main{
                img{
                  width: 100%;
                  height: 250px;
-                 
+
                }
              }
 
@@ -387,7 +386,7 @@ main{
              }
            }
 
-          
+
              .insadditionalinfo{
               p{
                 font-size: 18px;
@@ -397,7 +396,7 @@ main{
                 height: 18px;
               }
              }
-        
+
 
            .facilitydiv{
              p{
@@ -406,11 +405,11 @@ main{
                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
               img{
                 width: 16px;
-                height: 16px;           
+                height: 16px;
               }
              }
-               
-             
+
+
            }
 
 }

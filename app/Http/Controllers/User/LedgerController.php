@@ -29,10 +29,11 @@ class LedgerController extends Controller
             'channel_id' => $channel->id,
             'name' => $request->input('name'),
             'payment_type' => $request->input('payment_type'),
-            'balance' => $request->input('balance')
+            'balance' => $request->input('balance'),
+            'admission_check' => $request->input('admission_check')
         ]);
 
-        $ledgerData = ChannelAccountantLedger::find($ledgerData);
+        $ledgerData = ChannelAccountantLedger::find($ledgerData->id);
 
         return response()->json([
             'message' => true,
@@ -53,6 +54,7 @@ class LedgerController extends Controller
         $ledger->name = $request->input('name');
         $ledger->payment_type = $request->input('payment_type');
         $ledger->balance = $request->input('balance');
+        $ledger->admission_check = $request->input('admission_check');
         $ledger->save();
 
         return response()->json([
@@ -82,7 +84,8 @@ class LedgerController extends Controller
             'channel_accountant_ledger_id' => $ledgerId,
             'name' => $request->input('name'),
             'payment_type' => $request->input('payment_type'),
-            'balance' => $request->input('balance')
+            'balance' => $request->input('balance'),
+            'admission_check' => false
         ]);
         return response()->json([
             'message' => true,

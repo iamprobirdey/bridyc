@@ -24,8 +24,13 @@ mix.js("resources/js/app.js", "public/js")
     .js("resources/js/ChannelAccountantLedger.js", "public/js")
     .js("resources/js/ChannelAccountantCashbook.js", "public/js")
     .js("resources/js/ChannelAccountantAdmission.js", "public/js")
+    .js("resources/js/ChannelAccountantAdmissionMonthly.js", "public/js")
 
 
+    .js("resources/js/application.js", "public/js")
+    .js("resources/js/adminUserInformation.js", "public/js")
+    .js("resources/js/ChannelSupervisor.js", "public/js")
+    .js("resources/js/weather.js", "public/js")
 
     // .sass("resources/sass/studentIndex.scss", "public/css")
     // .sass("resources/sass/institutedashboard.scss", "public/css")
@@ -41,5 +46,6 @@ mix.js("resources/js/app.js", "public/js")
     .sass("resources/sass/about.scss", "public/css")
     .sass("resources/sass/login-register.scss", "public/css")
     .sass("resources/sass/error.scss", "public/css")
+    .sass("resources/sass/blogs.scss", "public/css")
     .browserSync("http://127.0.0.1:8000/")
     .version();

@@ -11,6 +11,7 @@
     <table class="table">
       <thead>
         <tr>
+          <th>#</th>
           <th scope="col">Admission Number</th>
           <th scope="col">Student Name</th>
           <th scope="col">Class</th>
@@ -19,10 +20,30 @@
           <th scope="col">Total Balance</th>
           <th scope="col">Total Pending Balance</th>
           <th scope="col">Paid Balance</th>
+          <th scope="col">Monthly Bill</th>
+          <th scope="col">Receipt</th>
+          <th scope="col">Official Details</th>
         </tr>
       </thead>
       <tbody>
         <tr v-for="(admission, index) in admissionData" :key="index">
+          <td>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              width="20"
+              height="20"
+              style="color: #1dbede"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M9.243 3.03a1 1 0 01.727 1.213L9.53 6h2.94l.56-2.243a1 1 0 111.94.486L14.53 6H17a1 1 0 110 2h-2.97l-1 4H15a1 1 0 110 2h-2.47l-.56 2.242a1 1 0 11-1.94-.485L10.47 14H7.53l-.56 2.242a1 1 0 11-1.94-.485L5.47 14H3a1 1 0 110-2h2.97l1-4H5a1 1 0 110-2h2.47l.56-2.243a1 1 0 011.213-.727zM9.03 8l-1 4h2.938l1-4H9.031z"
+                clip-rule="evenodd"
+              />
+            </svg>
+            {{ index + 1 }}
+          </td>
           <td>{{ admission.admission_number }}</td>
           <td>
             {{ admission.name }}
@@ -59,6 +80,57 @@
           <td>{{ admission.total_balance }}</td>
           <td>{{ admission.old_balance }}</td>
           <td>{{ admission.balance_taken }}</td>
+          <td>
+            <a :href="monthlyUrl + '/monthly/bill/' + admission.id">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                width="30"
+                height="30"
+                style="cursor: pointer; color: #c26925"
+              >
+                <path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z" />
+                <path
+                  fill-rule="evenodd"
+                  d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </a>
+          </td>
+          <td>
+            <a :href="reportUrl + '/receipt/' + admission.id">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                width="30"
+                height="30"
+                style="cursor: pointer; color: #31d6d3"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M5 2a2 2 0 00-2 2v14l3.5-2 3.5 2 3.5-2 3.5 2V4a2 2 0 00-2-2H5zm2.5 3a1.5 1.5 0 100 3 1.5 1.5 0 000-3zm6.207.293a1 1 0 00-1.414 0l-6 6a1 1 0 101.414 1.414l6-6a1 1 0 000-1.414zM12.5 10a1.5 1.5 0 100 3 1.5 1.5 0 000-3z"
+                  clip-rule="evenodd"
+                />
+              </svg>
+            </a>
+          </td>
+          <td>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              width="30"
+              height="30"
+              style="cursor: pointer; color: #6626a3"
+            >
+              <path
+                d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM14 11a1 1 0 011 1v1h1a1 1 0 110 2h-1v1a1 1 0 11-2 0v-1h-1a1 1 0 110-2h1v-1a1 1 0 011-1z"
+              />
+            </svg>
+          </td>
         </tr>
       </tbody>
     </table>
@@ -76,7 +148,6 @@
 import admission from "./accountant/Admission.vue";
 import SchoolSession from "./accountant/SchoolSession.vue";
 import EditClass from "./accountant/EditClass.vue";
-import EditChannel from "./EditChannel.vue";
 
 export default {
   data() {
@@ -87,6 +158,8 @@ export default {
       classData: [],
       ledgerUrl: "",
       cashbookUrl: "",
+      reportUrl: location.href,
+      monthlyUrl: location.href,
     };
   },
   components: {
@@ -118,7 +191,7 @@ export default {
     },
     getClassData() {
       axios
-        .get("/api/channel/get/accountant/class/data")
+        .get("/api/channel/get/accountant/class/admission-ledger/data")
         .then((response) => {
           this.classData = response.data.data;
         })
