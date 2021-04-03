@@ -4,7 +4,12 @@
     <br />
     <h6 class="d-inline">Add your institute's achievements here</h6>
     <button class="btn btnadd p-1 ml-1 rounded-0" @click="addAchievement()">
-      <i class="fa fa-plus" aria-hidden="true"></i>
+      <i
+        :class="[
+          this.openAchievementForm === false ? 'fa fa-plus' : 'fa fa-minus',
+        ]"
+        aria-hidden="true"
+      ></i>
     </button>
     <div class="row my-5" v-if="showAchievement">
       <div
@@ -44,10 +49,58 @@
       </div>
     </div>
     <br />
+    <!--
+    <div
+      class="modal fade"
+      id="addImageCroppieAvatar"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+      data-backdrop="static"
+      data-keyboard="false"
+    >
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Upload Profile Photo</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body cropper-modal">
+            <cropper
+              class="upload-example-cropper"
+              ref="cropper"
+              :src="coppieAvatarImageData"
+              @change="onChangeCoverDimention"
+            />
+            <div v-if="wait" class="text-center mt-2">
+              <div class="spinner-border text-warning" role="status">
+                <span class="sr-only">Loading...</span>
+              </div>
+            </div>
+            <button class="btn btn-info mt-2" @click="uploadImage2">
+              Submit
+            </button>
+            <button class="btn btn-dark mt-2" @click="addAvatarImageFile">
+              Change Image
+            </button>
+          </div>
+        </div>
+      </div>
+    </div> -->
+
     <div class="mt-5" v-if="openAchievementForm">
       <form @submit.prevent="achievementSubmit()">
         <picture-input
           ref="pictureInput"
+          :prefill="prefill"
           width="200"
           height="200"
           margin="16"
@@ -214,6 +267,8 @@ export default {
       userId: "",
       wait: false,
       blobData: {},
+      step: 1,
+      prefill: "",
     };
   },
   props: {
@@ -235,18 +290,17 @@ export default {
   mounted() {},
   methods: {
     addAchievement() {
-      this.openAchievementForm = true;
+      this.openAchievementForm = !this.openAchievementForm;
       this.formData.image_path = "";
       this.formData.title = "";
       this.formData.description = "";
       this.formData.date = "";
-      this.showAchievement = false;
+      this.showAchievement = !this.showAchievement;
       this.wait = false;
     },
     achievementSubmit: _.debounce(function () {
       this.$validator.validate().then((result) => {
         if (result) {
-          console.log(this.formData);
           if (this.formData.image_path === "")
             this.serverErrors.image_path = "Image is required";
           let formUrl = "";
@@ -289,6 +343,22 @@ export default {
                     }
                   })
                   .catch((errors) => {
+                    if (errors.response.data.errors.image_path) {
+                      this.serverErrors.image_path =
+                        errors.response.data.errors.image_path[0];
+                    }
+                    if (errors.response.data.errors.title) {
+                      this.serverErrors.title =
+                        errors.response.data.errors.title[0];
+                    }
+                    if (errors.response.data.errors.description) {
+                      this.serverErrors.description =
+                        errors.response.data.errors.description[0];
+                    }
+                    if (errors.response.data.errors.date) {
+                      this.serverErrors.date =
+                        errors.response.data.errors.date[0];
+                    }
                     vm.disable = false;
                     vm.wait = false;
                     Vue.toasted.error("Something went wrong", {
@@ -360,6 +430,12 @@ export default {
     },
     editTheForm(data, index) {
       this.editingUrlChecker = true;
+      this.prefill =
+        this.baseUrl +
+        "media/channel/" +
+        this.userId +
+        "/achievement/" +
+        data.image_path;
       this.formData.title = data.title;
       this.formData.description = data.description;
       this.formData.date = data.date;

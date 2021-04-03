@@ -15,6 +15,8 @@ require("./bootstrap");
 
 window.Vue = require("vue");
 //import Croppa from 'vue-croppa';
+import VueCroppie from "vue-croppie";
+import "croppie/croppie.css";
 import Toasted from "vue-toasted";
 import VeeValidate from "vee-validate";
 import _, { includes } from "lodash";
@@ -22,6 +24,9 @@ import _, { includes } from "lodash";
 Vue.use(Toasted);
 Vue.use(VeeValidate);
 //Vue.use(Croppa);
+Vue.use(VueCroppie);
+
+getViewed();
 
 
 /**
@@ -99,3 +104,24 @@ messaging.onMessage(function (payload) {
 //     showToken('Error retrieving registration token. ', err);
 //     setTokenSentToServer(false);
 // });
+
+
+//Count the total visit
+
+
+
+
+function getViewed() {
+
+    if (sessionStorage.getItem('stoteTheView', document.location.origin) === null) {
+        sessionStorage.setItem('stoteTheView', document.location.origin);
+        axios
+            .get("/api/total/site/visit/")
+            .then((response) => {
+                console.log('done');
+            })
+            .catch((errors) => { });
+    }
+
+}
+

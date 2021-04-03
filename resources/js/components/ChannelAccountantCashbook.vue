@@ -113,6 +113,8 @@
       role="dialog"
       aria-labelledby="exampleModalLabel"
       aria-hidden="true"
+      data-backdrop="static"
+      data-keyboard="false"
     >
       <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -131,14 +133,15 @@
                 class="form-group"
                 :class="{
                   'has-error':
-                    errors.has('serverError.name') || serverError.name != '',
+                    errors.has('serverError.ledger_id') ||
+                    serverError.ledger_id != '',
                 }"
               >
                 <label for="">Select Particular</label>
                 <select
                   v-model="cashbookForm.ledger_id"
                   class="form-control"
-                  name="payment_mode"
+                  name="ledger_id"
                   v-validate="'required'"
                   @change="onLedgerChange(cashbookForm.ledger_id, $event)"
                 >
@@ -151,14 +154,14 @@
                   </option>
                 </select>
                 <span
-                  v-show="errors.has('name')"
+                  v-show="errors.has('ledger_id')"
                   class="text-danger text-center"
-                  >{{ errors.first("name") }}</span
+                  >{{ errors.first("ledger_id") }}</span
                 >
                 <span
-                  v-show="serverError.name != ''"
+                  v-show="serverError.ledger_id != ''"
                   class="help text-danger"
-                  >{{ serverError.name }}</span
+                  >{{ serverError.ledger_id }}</span
                 >
               </div>
               <div
@@ -223,8 +226,7 @@
                 class="form-group"
                 :class="{
                   'has-error':
-                    errors.has('serverError.balance') ||
-                    serverError.balance != '',
+                    errors.has('serverError.total') || serverError.total != '',
                 }"
               >
                 <label for="">Select Total</label>
@@ -287,11 +289,14 @@ export default {
       },
       showDot: null,
       showDotBool: false,
+      ledgerUrl: "",
+      admissionUrl: "",
     };
   },
   created() {
     this.channelId = this.channelid;
     this.getCashbookData();
+    this.getTheAdmissionLedgerUrl();
   },
   mounted() {},
   props: {
@@ -301,6 +306,14 @@ export default {
     },
   },
   methods: {
+    getTheAdmissionLedgerUrl() {
+      let url = location.pathname.split("/");
+      let url2 = location.pathname.split("/");
+      url[url.length - 1] = "admission";
+      url2[url2.length - 1] = "ledger";
+      this.admissionUrl = location.origin + url.join("/");
+      this.ledgerUrl = location.origin + url2.join("/");
+    },
     editCashbook(cashbook, index) {
       this.cashbookForm.ledger_id = cashbook.accountant_ledger_id;
       this.cashbookForm.payment_type = cashbook.payment_type;

@@ -153,4 +153,26 @@ class VerificationController extends Controller
             'msg' => true
         ]);
     }
+
+    public function changeTitle($userId, Request $request)
+    {
+        $this->authorize('superadmin', auth()->user());
+        $request->validate([
+            'institute_title' => 'required|string'
+        ]);
+        if (Channel::where('title', $request->input('institute_title'))->exists()) {
+            return response()->json([
+                'error' => true
+            ]);
+        }
+
+        $channel = Channel::where('user_id', $userId)->first();
+        $channel->title = $request->input('institute_title');
+        $channel->slug = Str::slug($request->input('institute_title'));
+        $channel->save();
+
+        return response()->json([
+            'message' => true
+        ]);
+    }
 }

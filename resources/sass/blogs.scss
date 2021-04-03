@@ -1,0 +1,39 @@
+
+.blog1{
+    padding-right:0;
+    hr{
+        width: 3%;
+        border:1px solid black;
+        margin-left: 0px;
+        
+    }
+
+    .blog-content-wrapper{
+        width: 100%;
+        position: relative;
+        padding: 15px;
+    }
+
+    .blog-sidebar{
+        z-index: -1;
+        position: fixed;
+        top:150px;
+        right: 0;
+        width: 0;
+        height: 100%;
+        overflow-y:auto;
+    }
+}
+
+.toggled{
+    padding-right:250px;
+
+    .blog-sidebar{
+        width: 250px;
+    }
+
+    .blog-content-wrapper{
+        margin-left: -250px;
+        overflow-y: hidden;
+    }
+}

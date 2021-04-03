@@ -15,11 +15,12 @@ class CreateChannelAccountantLedgersTable extends Migration
     {
         Schema::create('channel_accountant_ledgers', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('channel_accountant_ledger_id')->nullable();
+            $table->bigInteger('channel_accountant_ledger_id')->nullable();
             $table->foreignId('channel_id')->constrained()->onDelete('cascade');
             $table->string('name');
             $table->string('payment_type');
             $table->string('balance');
+            $table->boolean('admission_check');
             $table->timestamps();
         });
     }

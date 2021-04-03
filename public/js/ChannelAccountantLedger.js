@@ -493,6 +493,54 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -510,15 +558,22 @@ __webpack_require__.r(__webpack_exports__);
       ledgerForm: {
         name: "",
         payment_type: "credit",
-        balance: ""
+        balance: "",
+        admission_check: false
       },
       serverError: {
         name: "",
         payment_type: "",
-        balance: ""
+        balance: "",
+        admission_check: false
       },
       showDot: null,
-      showDotBool: false
+      showDotBool: false,
+      cashbookUrl: "",
+      admissionUrl: "",
+      loader: true,
+      showSubDot: null,
+      showSubDotBool: false
     };
   },
   props: {
@@ -530,9 +585,22 @@ __webpack_require__.r(__webpack_exports__);
   created: function created() {
     this.channelId = this.channelid;
     this.getTheLedgerData();
+    this.getTheAdmissionCashbookUrl();
   },
   mounted: function mounted() {},
   methods: {
+    showSubLedgerDot: function showSubLedgerDot(index) {
+      this.showSubDot = index;
+      this.showSubDotBool = !this.showSubDotBool;
+    },
+    getTheAdmissionCashbookUrl: function getTheAdmissionCashbookUrl() {
+      var url = location.pathname.split("/");
+      var url2 = location.pathname.split("/");
+      url[url.length - 1] = "admission";
+      url2[url2.length - 1] = "cashbook";
+      this.admissionUrl = location.origin + url.join("/");
+      this.cashbookUrl = location.origin + url2.join("/");
+    },
     createNewLedger: function createNewLedger() {
       this.urlDecider = "ledger-add";
       this.mainUrl = this.parentAddLedgeUrl + this.channelId;
@@ -613,11 +681,20 @@ __webpack_require__.r(__webpack_exports__);
       var _this4 = this;
 
       this.subLedgerData = [];
-      this.ledgerData.forEach(function (element) {
-        if (ledger.id === parseInt(element.channel_accountant_ledger_id)) {
-          _this4.subLedgerData.push(element);
-        }
-      });
+      axios.get("/api/channel/get/subledger/ledger/data/" + ledger.id).then(function (response) {
+        _this4.loader = false;
+        _this4.subLedgerData = response.data.data;
+      })["catch"](function (errors) {
+        Vue.toasted.error("Something went wrong", {
+          position: "top-center",
+          duration: 5000
+        });
+      }); //   this.ledgerData.forEach((element) => {
+      //     if (ledger.id === parseInt(element.channel_accountant_ledger_id)) {
+      //       this.subLedgerData.push(element);
+      //     }
+      //   });
+
       $("#subLedgerModal").modal("show");
     },
     submitForm: function submitForm() {
@@ -653,9 +730,6 @@ __webpack_require__.r(__webpack_exports__);
                   position: "top-center",
                   duration: 5000
                 });
-
-                _this5.ledgerData.push(response.data.data);
-
                 _this5.ledgerForm.name = "";
                 _this5.ledgerForm.payment_type = "";
                 _this5.ledgerForm.balance = "";
@@ -725,7 +799,7 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ChannelAccountantLedger.vue?vue&type=style&index=0&lang=css&":
 /*!*******************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/css-loader??ref--17-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--17-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/ChannelAccountantLedger.vue?vue&type=style&index=0&lang=css& ***!
+  !*** ./node_modules/css-loader??ref--18-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--18-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/ChannelAccountantLedger.vue?vue&type=style&index=0&lang=css& ***!
   \*******************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
@@ -735,7 +809,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.customAction {\r\n  display: block;\r\n  position: absolute;\r\n  z-index: 1;\r\n  right: 120px;\n}\n@media (max-width: 576px) {\n.customAction {\r\n    right: 50px !important;\n}\n}\n@media (min-width: 1768px) {\n.customAction {\r\n    right: 260px !important;\n}\n}\r\n/* 2nd card */\n.customAction1 {\r\n  display: block;\r\n  position: absolute;\r\n  z-index: 1;\r\n  right: 80px;\n}\n@media (max-width: 576px) {\n.customAction1 {\r\n    right: 70px !important;\n}\n}\n@media (min-width: 1768px) {\n.customAction1 {\r\n    right: 80px !important;\n}\n}\r\n", ""]);
+exports.push([module.i, "\n.customAction {\r\n  display: block;\r\n  position: absolute;\r\n  z-index: 1;\r\n  right: 120px;\n}\n@media (max-width: 576px) {\n.customAction {\r\n    right: 50px !important;\n}\n}\n@media (min-width: 1768px) {\n.customAction {\r\n    right: 260px !important;\n}\n}\r\n/* 2nd card */\n.customAction1 {\r\n  display: block;\r\n  position: absolute;\r\n  z-index: 1;\r\n  right: 80px;\n}\n@media (max-width: 576px) {\n.customAction1 {\r\n    right: 70px !important;\n}\n}\n@media (min-width: 1768px) {\n.customAction1 {\r\n    right: 80px !important;\n}\n}\n.btn:focus {\r\n  box-shadow: 0 0 0 0.1rem rgba(0, 123, 255, 0.25) !important ;\n}\r\n", ""]);
 
 // exports
 
@@ -831,13 +905,13 @@ function toComment(sourceMap) {
 
 /***/ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ChannelAccountantLedger.vue?vue&type=style&index=0&lang=css&":
 /*!***********************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** ./node_modules/style-loader!./node_modules/css-loader??ref--17-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--17-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/ChannelAccountantLedger.vue?vue&type=style&index=0&lang=css& ***!
+  !*** ./node_modules/style-loader!./node_modules/css-loader??ref--18-1!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src??ref--18-2!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/ChannelAccountantLedger.vue?vue&type=style&index=0&lang=css& ***!
   \***********************************************************************************************************************************************************************************************************************************************************************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--17-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--17-2!../../../node_modules/vue-loader/lib??vue-loader-options!./ChannelAccountantLedger.vue?vue&type=style&index=0&lang=css& */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ChannelAccountantLedger.vue?vue&type=style&index=0&lang=css&");
+var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--18-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--18-2!../../../node_modules/vue-loader/lib??vue-loader-options!./ChannelAccountantLedger.vue?vue&type=style&index=0&lang=css& */ "./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ChannelAccountantLedger.vue?vue&type=style&index=0&lang=css&");
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -1395,7 +1469,19 @@ var render = function() {
             }
           }
         },
-        [_vm._v("\n      Create Ledger\n    ")]
+        [_vm._v("\n      Create Ledger d\n    ")]
+      ),
+      _vm._v(" "),
+      _c(
+        "a",
+        { staticClass: "btn btn-secondary", attrs: { href: _vm.admissionUrl } },
+        [_vm._v("Go to Admission")]
+      ),
+      _vm._v(" "),
+      _c(
+        "a",
+        { staticClass: "btn btn-primary", attrs: { href: _vm.cashbookUrl } },
+        [_vm._v("Go to Cashbook")]
       )
     ]),
     _vm._v(" "),
@@ -1407,209 +1493,204 @@ var render = function() {
           "tbody",
           [
             _vm._l(_vm.ledgerData, function(ledger, index) {
-              return ledger.channel_accountant_ledger_id === null
-                ? _c("tr", { key: index }, [
-                    _c("td", [
-                      _c(
-                        "svg",
-                        {
-                          staticStyle: { cursor: "pointer" },
-                          attrs: {
-                            xmlns: "http://www.w3.org/2000/svg",
-                            viewBox: "0 0 20 20",
-                            fill: "currentColor",
-                            height: "23",
-                            width: "34"
-                          },
-                          on: {
-                            click: function($event) {
-                              return _vm.getAllSubLedger(ledger)
-                            }
-                          }
+              return _c("tr", { key: index }, [
+                _c("td", [
+                  _c(
+                    "svg",
+                    {
+                      staticStyle: { cursor: "pointer" },
+                      attrs: {
+                        xmlns: "http://www.w3.org/2000/svg",
+                        viewBox: "0 0 20 20",
+                        fill: "currentColor",
+                        height: "23",
+                        width: "34"
+                      },
+                      on: {
+                        click: function($event) {
+                          return _vm.getAllSubLedger(ledger)
+                        }
+                      }
+                    },
+                    [
+                      _c("path", {
+                        attrs: {
+                          "fill-rule": "evenodd",
+                          d:
+                            "M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z",
+                          "clip-rule": "evenodd"
+                        }
+                      })
+                    ]
+                  )
+                ]),
+                _vm._v(" "),
+                _c("td", [_vm._v(_vm._s(index + 1))]),
+                _vm._v(" "),
+                _c("td", [_vm._v(_vm._s(ledger.name))]),
+                _vm._v(" "),
+                _c("td", [_vm._v(_vm._s(ledger.payment_type))]),
+                _vm._v(" "),
+                _c("td", [_vm._v(_vm._s(ledger.balance))]),
+                _vm._v(" "),
+                _c("td", [
+                  _c("a", { attrs: { href: "javascript:void(0)" } }, [
+                    _c(
+                      "svg",
+                      {
+                        staticStyle: { color: "black" },
+                        attrs: {
+                          xmlns: "http://www.w3.org/2000/svg",
+                          viewBox: "0 0 20 20",
+                          fill: "currentColor",
+                          height: "23",
+                          width: "34"
                         },
-                        [
-                          _c("path", {
-                            attrs: {
-                              "fill-rule": "evenodd",
-                              d:
-                                "M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z",
-                              "clip-rule": "evenodd"
-                            }
-                          })
-                        ]
-                      )
-                    ]),
-                    _vm._v(" "),
-                    _c("td", [_vm._v(_vm._s(index + 1))]),
-                    _vm._v(" "),
-                    _c("td", [_vm._v(_vm._s(ledger.name))]),
-                    _vm._v(" "),
-                    _c("td", [_vm._v(_vm._s(ledger.payment_type))]),
-                    _vm._v(" "),
-                    _c("td", [_vm._v(_vm._s(ledger.balance))]),
-                    _vm._v(" "),
-                    _c("td", [
-                      _c("a", { attrs: { href: "javascript:void(0)" } }, [
-                        _c(
-                          "svg",
-                          {
-                            staticStyle: { color: "black" },
-                            attrs: {
-                              xmlns: "http://www.w3.org/2000/svg",
-                              viewBox: "0 0 20 20",
-                              fill: "currentColor",
-                              height: "23",
-                              width: "34"
+                        on: {
+                          click: function($event) {
+                            return _vm.getTheDotDecide(index)
+                          }
+                        }
+                      },
+                      [
+                        _c("path", {
+                          attrs: {
+                            d:
+                              "M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"
+                          }
+                        })
+                      ]
+                    )
+                  ]),
+                  _vm._v(" "),
+                  _vm.showDot === index && _vm.showDotBool === true
+                    ? _c("div", { staticClass: "card customAction" }, [
+                        _c("div", { staticClass: "card-body" }, [
+                          _c(
+                            "p",
+                            {
+                              staticStyle: {
+                                color: "black",
+                                cursor: "pointer"
+                              },
+                              on: {
+                                click: function($event) {
+                                  return _vm.createSubLedger(ledger)
+                                }
+                              }
                             },
-                            on: {
-                              click: function($event) {
-                                return _vm.getTheDotDecide(index)
-                              }
-                            }
-                          },
-                          [
-                            _c("path", {
-                              attrs: {
-                                d:
-                                  "M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"
-                              }
-                            })
-                          ]
-                        )
-                      ]),
-                      _vm._v(" "),
-                      _vm.showDot === index && _vm.showDotBool === true
-                        ? _c("div", { staticClass: "card customAction" }, [
-                            _c("div", { staticClass: "card-body" }, [
-                              _c(
-                                "p",
-                                {
-                                  staticStyle: {
-                                    color: "black",
-                                    cursor: "pointer"
-                                  },
-                                  on: {
-                                    click: function($event) {
-                                      return _vm.createSubLedger(ledger)
-                                    }
-                                  }
-                                },
-                                [
-                                  _vm._v(
-                                    "\n                  Create Sub Ledger\n                  "
-                                  ),
-                                  _c(
-                                    "svg",
-                                    {
-                                      attrs: {
-                                        xmlns: "http://www.w3.org/2000/svg",
-                                        viewBox: "0 0 20 20",
-                                        fill: "currentColor",
-                                        height: "23",
-                                        width: "34"
-                                      }
-                                    },
-                                    [
-                                      _c("path", {
-                                        attrs: {
-                                          "fill-rule": "evenodd",
-                                          d:
-                                            "M2 5a2 2 0 012-2h12a2 2 0 012 2v2a2 2 0 01-2 2H4a2 2 0 01-2-2V5zm14 1a1 1 0 11-2 0 1 1 0 012 0zM2 13a2 2 0 012-2h12a2 2 0 012 2v2a2 2 0 01-2 2H4a2 2 0 01-2-2v-2zm14 1a1 1 0 11-2 0 1 1 0 012 0z",
-                                          "clip-rule": "evenodd"
-                                        }
-                                      })
-                                    ]
-                                  )
-                                ]
+                            [
+                              _vm._v(
+                                "\n                  Create Sub Ledger\n                  "
                               ),
-                              _vm._v(" "),
                               _c(
-                                "p",
+                                "svg",
                                 {
-                                  staticStyle: { cursor: "pointer" },
-                                  on: {
-                                    click: function($event) {
-                                      return _vm.editParentLedger(ledger, index)
-                                    }
+                                  attrs: {
+                                    xmlns: "http://www.w3.org/2000/svg",
+                                    viewBox: "0 0 20 20",
+                                    fill: "currentColor",
+                                    height: "23",
+                                    width: "34"
                                   }
                                 },
                                 [
-                                  _vm._v(
-                                    "\n                  Edit\n                  "
-                                  ),
-                                  _c(
-                                    "svg",
-                                    {
-                                      attrs: {
-                                        xmlns: "http://www.w3.org/2000/svg",
-                                        viewBox: "0 0 20 20",
-                                        fill: "currentColor",
-                                        height: "23",
-                                        width: "34"
-                                      }
-                                    },
-                                    [
-                                      _c("path", {
-                                        attrs: {
-                                          d:
-                                            "M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"
-                                        }
-                                      })
-                                    ]
-                                  )
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "p",
-                                {
-                                  staticStyle: {
-                                    color: "red",
-                                    cursor: "pointer"
-                                  },
-                                  on: {
-                                    click: function($event) {
-                                      return _vm.deleteParentLedger(
-                                        ledger.id,
-                                        index
-                                      )
+                                  _c("path", {
+                                    attrs: {
+                                      "fill-rule": "evenodd",
+                                      d:
+                                        "M2 5a2 2 0 012-2h12a2 2 0 012 2v2a2 2 0 01-2 2H4a2 2 0 01-2-2V5zm14 1a1 1 0 11-2 0 1 1 0 012 0zM2 13a2 2 0 012-2h12a2 2 0 012 2v2a2 2 0 01-2 2H4a2 2 0 01-2-2v-2zm14 1a1 1 0 11-2 0 1 1 0 012 0z",
+                                      "clip-rule": "evenodd"
                                     }
-                                  }
-                                },
-                                [
-                                  _vm._v(
-                                    "\n                  Delete\n                  "
-                                  ),
-                                  _c(
-                                    "svg",
-                                    {
-                                      attrs: {
-                                        xmlns: "http://www.w3.org/2000/svg",
-                                        viewBox: "0 0 20 20",
-                                        fill: "currentColor",
-                                        height: "23",
-                                        width: "34"
-                                      }
-                                    },
-                                    [
-                                      _c("path", {
-                                        attrs: {
-                                          "fill-rule": "evenodd",
-                                          d:
-                                            "M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z",
-                                          "clip-rule": "evenodd"
-                                        }
-                                      })
-                                    ]
-                                  )
+                                  })
                                 ]
                               )
-                            ])
-                          ])
-                        : _vm._e()
-                    ])
-                  ])
-                : _vm._e()
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "p",
+                            {
+                              staticStyle: { cursor: "pointer" },
+                              on: {
+                                click: function($event) {
+                                  return _vm.editParentLedger(ledger, index)
+                                }
+                              }
+                            },
+                            [
+                              _vm._v(
+                                "\n                  Edit\n                  "
+                              ),
+                              _c(
+                                "svg",
+                                {
+                                  attrs: {
+                                    xmlns: "http://www.w3.org/2000/svg",
+                                    viewBox: "0 0 20 20",
+                                    fill: "currentColor",
+                                    height: "23",
+                                    width: "34"
+                                  }
+                                },
+                                [
+                                  _c("path", {
+                                    attrs: {
+                                      d:
+                                        "M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"
+                                    }
+                                  })
+                                ]
+                              )
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "p",
+                            {
+                              staticStyle: { color: "red", cursor: "pointer" },
+                              on: {
+                                click: function($event) {
+                                  return _vm.deleteParentLedger(
+                                    ledger.id,
+                                    index
+                                  )
+                                }
+                              }
+                            },
+                            [
+                              _vm._v(
+                                "\n                  Delete\n                  "
+                              ),
+                              _c(
+                                "svg",
+                                {
+                                  attrs: {
+                                    xmlns: "http://www.w3.org/2000/svg",
+                                    viewBox: "0 0 20 20",
+                                    fill: "currentColor",
+                                    height: "23",
+                                    width: "34"
+                                  }
+                                },
+                                [
+                                  _c("path", {
+                                    attrs: {
+                                      "fill-rule": "evenodd",
+                                      d:
+                                        "M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z",
+                                      "clip-rule": "evenodd"
+                                    }
+                                  })
+                                ]
+                              )
+                            ]
+                          )
+                        ])
+                      ])
+                    : _vm._e()
+                ])
+              ])
             }),
             _vm._v(" "),
             _vm.ledgerDataFailed
@@ -1640,7 +1721,9 @@ var render = function() {
           tabindex: "-1",
           role: "dialog",
           "aria-labelledby": "exampleModalLabel",
-          "aria-hidden": "true"
+          "aria-hidden": "true",
+          "data-backdrop": "static",
+          "data-keyboard": "false"
         }
       },
       [
@@ -1935,6 +2018,129 @@ var render = function() {
                       ]
                     ),
                     _vm._v(" "),
+                    _vm.urlDecider === "ledger-add" ||
+                    _vm.urlDecider === "ledger-edit"
+                      ? _c(
+                          "div",
+                          {
+                            staticClass: "form-group",
+                            class: {
+                              "has-error":
+                                _vm.errors.has("serverError.admission_check") ||
+                                _vm.serverError.admission_check != ""
+                            }
+                          },
+                          [
+                            _c("input", {
+                              directives: [
+                                {
+                                  name: "model",
+                                  rawName: "v-model",
+                                  value: _vm.ledgerForm.admission_check,
+                                  expression: "ledgerForm.admission_check"
+                                }
+                              ],
+                              class: {
+                                "form-control": true,
+                                "is-invalid": _vm.errors.has("admission_check")
+                              },
+                              attrs: {
+                                type: "checkbox",
+                                "data-vv-delay": "20",
+                                name: "admission_check",
+                                placeholder: "Balance"
+                              },
+                              domProps: {
+                                checked: Array.isArray(
+                                  _vm.ledgerForm.admission_check
+                                )
+                                  ? _vm._i(
+                                      _vm.ledgerForm.admission_check,
+                                      null
+                                    ) > -1
+                                  : _vm.ledgerForm.admission_check
+                              },
+                              on: {
+                                change: function($event) {
+                                  var $$a = _vm.ledgerForm.admission_check,
+                                    $$el = $event.target,
+                                    $$c = $$el.checked ? true : false
+                                  if (Array.isArray($$a)) {
+                                    var $$v = null,
+                                      $$i = _vm._i($$a, $$v)
+                                    if ($$el.checked) {
+                                      $$i < 0 &&
+                                        _vm.$set(
+                                          _vm.ledgerForm,
+                                          "admission_check",
+                                          $$a.concat([$$v])
+                                        )
+                                    } else {
+                                      $$i > -1 &&
+                                        _vm.$set(
+                                          _vm.ledgerForm,
+                                          "admission_check",
+                                          $$a
+                                            .slice(0, $$i)
+                                            .concat($$a.slice($$i + 1))
+                                        )
+                                    }
+                                  } else {
+                                    _vm.$set(
+                                      _vm.ledgerForm,
+                                      "admission_check",
+                                      $$c
+                                    )
+                                  }
+                                }
+                              }
+                            }),
+                            _vm._v(" "),
+                            _c("label", [
+                              _vm._v("Only check for Admission Ledger")
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "span",
+                              {
+                                directives: [
+                                  {
+                                    name: "show",
+                                    rawName: "v-show",
+                                    value: _vm.errors.has("admission_check"),
+                                    expression: "errors.has('admission_check')"
+                                  }
+                                ],
+                                staticClass: "text-danger text-center"
+                              },
+                              [
+                                _vm._v(
+                                  _vm._s(_vm.errors.first("admission_check"))
+                                )
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "span",
+                              {
+                                directives: [
+                                  {
+                                    name: "show",
+                                    rawName: "v-show",
+                                    value:
+                                      _vm.serverError.admission_check != "",
+                                    expression:
+                                      "serverError.admission_check != ''"
+                                  }
+                                ],
+                                staticClass: "help text-danger"
+                              },
+                              [_vm._v(_vm._s(_vm.serverError.admission_check))]
+                            )
+                          ]
+                        )
+                      : _vm._e(),
+                    _vm._v(" "),
                     _c(
                       "button",
                       {
@@ -1973,6 +2179,21 @@ var render = function() {
               _vm._m(2),
               _vm._v(" "),
               _c("div", { staticClass: "modal-body" }, [
+                _vm.loader
+                  ? _c(
+                      "div",
+                      {
+                        staticClass: "spinner-border text-info",
+                        attrs: { role: "status" }
+                      },
+                      [
+                        _c("span", { staticClass: "sr-only" }, [
+                          _vm._v("Loading...")
+                        ])
+                      ]
+                    )
+                  : _vm._e(),
+                _vm._v(" "),
                 _c("table", { staticClass: "table" }, [
                   _vm._m(3),
                   _vm._v(" "),
@@ -1990,116 +2211,133 @@ var render = function() {
                           _c("td", [_vm._v(_vm._s(ledger.balance))]),
                           _vm._v(" "),
                           _c("td", [
-                            _c("a", { attrs: { href: "javascript:void(0)" } }, [
-                              _c(
-                                "svg",
-                                {
-                                  staticStyle: { color: "black" },
-                                  attrs: {
-                                    xmlns: "http://www.w3.org/2000/svg",
-                                    viewBox: "0 0 20 20",
-                                    fill: "currentColor",
-                                    height: "23",
-                                    width: "34"
+                            _c(
+                              "a",
+                              {
+                                attrs: { href: "javascript:void(0)" },
+                                on: {
+                                  click: function($event) {
+                                    return _vm.showSubLedgerDot(index)
                                   }
-                                },
-                                [
-                                  _c("path", {
+                                }
+                              },
+                              [
+                                _c(
+                                  "svg",
+                                  {
+                                    staticStyle: { color: "black" },
                                     attrs: {
-                                      d:
-                                        "M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"
+                                      xmlns: "http://www.w3.org/2000/svg",
+                                      viewBox: "0 0 20 20",
+                                      fill: "currentColor",
+                                      height: "23",
+                                      width: "34"
                                     }
-                                  })
-                                ]
-                              )
-                            ])
+                                  },
+                                  [
+                                    _c("path", {
+                                      attrs: {
+                                        d:
+                                          "M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"
+                                      }
+                                    })
+                                  ]
+                                )
+                              ]
+                            )
                           ]),
                           _vm._v(" "),
-                          _c("div", { staticClass: "card customAction1" }, [
-                            _c("div", { staticClass: "card-body" }, [
-                              _c(
-                                "p",
-                                {
-                                  staticStyle: { cursor: "pointer" },
-                                  on: {
-                                    click: function($event) {
-                                      return _vm.editChildLedger(ledger, index)
-                                    }
-                                  }
-                                },
-                                [
-                                  _vm._v(
-                                    "\n                      Edit\n                      "
-                                  ),
+                          _vm.showSubDot === index &&
+                          _vm.showSubDotBool === true
+                            ? _c("div", { staticClass: "card customAction1" }, [
+                                _c("div", { staticClass: "card-body" }, [
                                   _c(
-                                    "svg",
+                                    "p",
                                     {
-                                      attrs: {
-                                        xmlns: "http://www.w3.org/2000/svg",
-                                        viewBox: "0 0 20 20",
-                                        fill: "currentColor",
-                                        height: "23",
-                                        width: "34"
+                                      staticStyle: { cursor: "pointer" },
+                                      on: {
+                                        click: function($event) {
+                                          return _vm.editChildLedger(
+                                            ledger,
+                                            index
+                                          )
+                                        }
                                       }
                                     },
                                     [
-                                      _c("path", {
-                                        attrs: {
-                                          d:
-                                            "M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"
-                                        }
-                                      })
-                                    ]
-                                  )
-                                ]
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "p",
-                                {
-                                  staticStyle: {
-                                    color: "red",
-                                    cursor: "pointer"
-                                  },
-                                  on: {
-                                    click: function($event) {
-                                      return _vm.deleteChildLedger(
-                                        ledger,
-                                        index
+                                      _vm._v(
+                                        "\n                      Edit\n                      "
+                                      ),
+                                      _c(
+                                        "svg",
+                                        {
+                                          attrs: {
+                                            xmlns: "http://www.w3.org/2000/svg",
+                                            viewBox: "0 0 20 20",
+                                            fill: "currentColor",
+                                            height: "23",
+                                            width: "34"
+                                          }
+                                        },
+                                        [
+                                          _c("path", {
+                                            attrs: {
+                                              d:
+                                                "M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"
+                                            }
+                                          })
+                                        ]
                                       )
-                                    }
-                                  }
-                                },
-                                [
-                                  _vm._v(
-                                    "\n                      Delete\n                      "
+                                    ]
                                   ),
+                                  _vm._v(" "),
                                   _c(
-                                    "svg",
+                                    "p",
                                     {
-                                      attrs: {
-                                        xmlns: "http://www.w3.org/2000/svg",
-                                        viewBox: "0 0 20 20",
-                                        fill: "currentColor",
-                                        height: "23",
-                                        width: "34"
+                                      staticStyle: {
+                                        color: "red",
+                                        cursor: "pointer"
+                                      },
+                                      on: {
+                                        click: function($event) {
+                                          return _vm.deleteChildLedger(
+                                            ledger,
+                                            index
+                                          )
+                                        }
                                       }
                                     },
                                     [
-                                      _c("path", {
-                                        attrs: {
-                                          "fill-rule": "evenodd",
-                                          d:
-                                            "M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z",
-                                          "clip-rule": "evenodd"
-                                        }
-                                      })
+                                      _vm._v(
+                                        "\n                      Delete\n                      "
+                                      ),
+                                      _c(
+                                        "svg",
+                                        {
+                                          attrs: {
+                                            xmlns: "http://www.w3.org/2000/svg",
+                                            viewBox: "0 0 20 20",
+                                            fill: "currentColor",
+                                            height: "23",
+                                            width: "34"
+                                          }
+                                        },
+                                        [
+                                          _c("path", {
+                                            attrs: {
+                                              "fill-rule": "evenodd",
+                                              d:
+                                                "M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z",
+                                              "clip-rule": "evenodd"
+                                            }
+                                          })
+                                        ]
+                                      )
                                     ]
                                   )
-                                ]
-                              )
-                            ])
-                          ])
+                                ])
+                              ])
+                            : _vm._e()
                         ])
                       }),
                       _vm._v(" "),
@@ -2404,10 +2642,10 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_17_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_17_2_node_modules_vue_loader_lib_index_js_vue_loader_options_ChannelAccountantLedger_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader!../../../node_modules/css-loader??ref--17-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--17-2!../../../node_modules/vue-loader/lib??vue-loader-options!./ChannelAccountantLedger.vue?vue&type=style&index=0&lang=css& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ChannelAccountantLedger.vue?vue&type=style&index=0&lang=css&");
-/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_17_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_17_2_node_modules_vue_loader_lib_index_js_vue_loader_options_ChannelAccountantLedger_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_17_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_17_2_node_modules_vue_loader_lib_index_js_vue_loader_options_ChannelAccountantLedger_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_17_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_17_2_node_modules_vue_loader_lib_index_js_vue_loader_options_ChannelAccountantLedger_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_17_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_17_2_node_modules_vue_loader_lib_index_js_vue_loader_options_ChannelAccountantLedger_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
- /* harmony default export */ __webpack_exports__["default"] = (_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_17_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_17_2_node_modules_vue_loader_lib_index_js_vue_loader_options_ChannelAccountantLedger_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_18_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_18_2_node_modules_vue_loader_lib_index_js_vue_loader_options_ChannelAccountantLedger_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/style-loader!../../../node_modules/css-loader??ref--18-1!../../../node_modules/vue-loader/lib/loaders/stylePostLoader.js!../../../node_modules/postcss-loader/src??ref--18-2!../../../node_modules/vue-loader/lib??vue-loader-options!./ChannelAccountantLedger.vue?vue&type=style&index=0&lang=css& */ "./node_modules/style-loader/index.js!./node_modules/css-loader/index.js?!./node_modules/vue-loader/lib/loaders/stylePostLoader.js!./node_modules/postcss-loader/src/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/ChannelAccountantLedger.vue?vue&type=style&index=0&lang=css&");
+/* harmony import */ var _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_18_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_18_2_node_modules_vue_loader_lib_index_js_vue_loader_options_ChannelAccountantLedger_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_18_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_18_2_node_modules_vue_loader_lib_index_js_vue_loader_options_ChannelAccountantLedger_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__);
+/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_18_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_18_2_node_modules_vue_loader_lib_index_js_vue_loader_options_ChannelAccountantLedger_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_18_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_18_2_node_modules_vue_loader_lib_index_js_vue_loader_options_ChannelAccountantLedger_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
+ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_style_loader_index_js_node_modules_css_loader_index_js_ref_18_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_18_2_node_modules_vue_loader_lib_index_js_vue_loader_options_ChannelAccountantLedger_vue_vue_type_style_index_0_lang_css___WEBPACK_IMPORTED_MODULE_0___default.a); 
 
 /***/ }),
 

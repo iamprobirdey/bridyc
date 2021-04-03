@@ -12,7 +12,20 @@ class LedgerController extends Controller
 {
     public function getLedgerData()
     {
-        $channelLedgerData = ChannelAccountantLedger::select(['id', 'channel_id', 'name', 'payment_type', 'balance', 'channel_accountant_ledger_id'])->get();
+        $channelLedgerData = ChannelAccountantLedger::select(['id', 'channel_id', 'name', 'payment_type', 'balance'])
+            ->where('channel_accountant_ledger_id', null)
+            ->get();
+        //channel_accountant_ledger_id
+        return response()->json([
+            'data' => $channelLedgerData
+        ]);
+    }
+
+    public function getSubLedgerData($ledgerId)
+    {
+        $channelLedgerData = ChannelAccountantLedger::select(['id', 'channel_id', 'name', 'payment_type', 'balance'])
+            ->where('channel_accountant_ledger_id', $ledgerId)
+            ->get();
         return response()->json([
             'data' => $channelLedgerData
         ]);
@@ -29,11 +42,11 @@ class LedgerController extends Controller
             'channel_id' => $channel->id,
             'name' => $request->input('name'),
             'payment_type' => $request->input('payment_type'),
-            'balance' => $request->input('balance')
+            'balance' => $request->input('balance'),
+            'admission_check' => $request->input('admission_check')
         ]);
 
-        $ledgerData = ChannelAccountantLedger::find($ledgerData);
-
+        $ledgerData = ChannelAccountantLedger::where('id', $ledgerData->id)->where('channel_accountant_ledger_id', null)->get();
         return response()->json([
             'message' => true,
             'data' => $ledgerData[0]
@@ -53,6 +66,7 @@ class LedgerController extends Controller
         $ledger->name = $request->input('name');
         $ledger->payment_type = $request->input('payment_type');
         $ledger->balance = $request->input('balance');
+        $ledger->admission_check = $request->input('admission_check');
         $ledger->save();
 
         return response()->json([
@@ -82,11 +96,11 @@ class LedgerController extends Controller
             'channel_accountant_ledger_id' => $ledgerId,
             'name' => $request->input('name'),
             'payment_type' => $request->input('payment_type'),
-            'balance' => $request->input('balance')
+            'balance' => $request->input('balance'),
+            'admission_check' => false
         ]);
         return response()->json([
-            'message' => true,
-            'data' => $ledgerData
+            'message' => true
         ]);
     }
 }

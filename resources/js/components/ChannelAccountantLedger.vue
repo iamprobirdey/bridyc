@@ -32,13 +32,18 @@
     right: 80px !important;
   }
 }
+.btn:focus {
+  box-shadow: 0 0 0 0.1rem rgba(0, 123, 255, 0.25) !important ;
+}
 </style>
 <template>
   <div class="row">
     <div class="m-1">
       <button @click="createNewLedger()" class="btn btn-primary">
-        Create Ledger
+        Create Ledger d
       </button>
+      <a :href="admissionUrl" class="btn btn-secondary">Go to Admission</a>
+      <a :href="cashbookUrl" class="btn btn-primary">Go to Cashbook</a>
     </div>
 
     <div class="table-responsive">
@@ -54,11 +59,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr
-            v-for="(ledger, index) in ledgerData"
-            :key="index"
-            v-if="ledger.channel_accountant_ledger_id === null"
-          >
+          <tr v-for="(ledger, index) in ledgerData" :key="index">
             <td>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -176,6 +177,8 @@
       role="dialog"
       aria-labelledby="exampleModalLabel"
       aria-hidden="true"
+      data-backdrop="static"
+      data-keyboard="false"
     >
       <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -283,6 +286,42 @@
                   >{{ serverError.balance }}</span
                 >
               </div>
+
+              <div
+                class="form-group"
+                :class="{
+                  'has-error':
+                    errors.has('serverError.admission_check') ||
+                    serverError.admission_check != '',
+                }"
+                v-if="
+                  urlDecider === 'ledger-add' || urlDecider === 'ledger-edit'
+                "
+              >
+                <input
+                  v-model="ledgerForm.admission_check"
+                  type="checkbox"
+                  data-vv-delay="20"
+                  name="admission_check"
+                  :class="{
+                    'form-control': true,
+                    'is-invalid': errors.has('admission_check'),
+                  }"
+                  placeholder="Balance"
+                />
+                <label>Only check for Admission Ledger</label>
+                <span
+                  v-show="errors.has('admission_check')"
+                  class="text-danger text-center"
+                  >{{ errors.first("admission_check") }}</span
+                >
+                <span
+                  v-show="serverError.admission_check != ''"
+                  class="help text-danger"
+                  >{{ serverError.admission_check }}</span
+                >
+              </div>
+
               <button type="submit" class="btn btn-success">Submit</button>
             </form>
           </div>
@@ -309,6 +348,9 @@
           </button>
 
           <div class="modal-body">
+            <div class="spinner-border text-info" role="status" v-if="loader">
+              <span class="sr-only">Loading...</span>
+            </div>
             <table class="table">
               <thead>
                 <tr>
@@ -326,7 +368,10 @@
                   <td>{{ ledger.payment_type }}</td>
                   <td>{{ ledger.balance }}</td>
                   <td>
-                    <a href="javascript:void(0)">
+                    <a
+                      href="javascript:void(0)"
+                      @click="showSubLedgerDot(index)"
+                    >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 20 20"
@@ -342,7 +387,10 @@
                     </a>
                   </td>
 
-                  <div class="card customAction1">
+                  <div
+                    class="card customAction1"
+                    v-if="showSubDot === index && showSubDotBool === true"
+                  >
                     <div class="card-body">
                       <p
                         style="cursor: pointer"
@@ -415,14 +463,21 @@ export default {
         name: "",
         payment_type: "credit",
         balance: "",
+        admission_check: false,
       },
       serverError: {
         name: "",
         payment_type: "",
         balance: "",
+        admission_check: false,
       },
       showDot: null,
       showDotBool: false,
+      cashbookUrl: "",
+      admissionUrl: "",
+      loader: true,
+      showSubDot: null,
+      showSubDotBool: false,
     };
   },
   props: {
@@ -434,9 +489,22 @@ export default {
   created() {
     this.channelId = this.channelid;
     this.getTheLedgerData();
+    this.getTheAdmissionCashbookUrl();
   },
   mounted() {},
   methods: {
+    showSubLedgerDot(index) {
+      this.showSubDot = index;
+      this.showSubDotBool = !this.showSubDotBool;
+    },
+    getTheAdmissionCashbookUrl() {
+      let url = location.pathname.split("/");
+      let url2 = location.pathname.split("/");
+      url[url.length - 1] = "admission";
+      url2[url2.length - 1] = "cashbook";
+      this.admissionUrl = location.origin + url.join("/");
+      this.cashbookUrl = location.origin + url2.join("/");
+    },
     createNewLedger() {
       this.urlDecider = "ledger-add";
       this.mainUrl = this.parentAddLedgeUrl + this.channelId;
@@ -516,11 +584,23 @@ export default {
     },
     getAllSubLedger(ledger) {
       this.subLedgerData = [];
-      this.ledgerData.forEach((element) => {
-        if (ledger.id === parseInt(element.channel_accountant_ledger_id)) {
-          this.subLedgerData.push(element);
-        }
-      });
+      axios
+        .get("/api/channel/get/subledger/ledger/data/" + ledger.id)
+        .then((response) => {
+          this.loader = false;
+          this.subLedgerData = response.data.data;
+        })
+        .catch((errors) => {
+          Vue.toasted.error("Something went wrong", {
+            position: "top-center",
+            duration: 5000,
+          });
+        });
+      //   this.ledgerData.forEach((element) => {
+      //     if (ledger.id === parseInt(element.channel_accountant_ledger_id)) {
+      //       this.subLedgerData.push(element);
+      //     }
+      //   });
       $("#subLedgerModal").modal("show");
     },
     submitForm() {
@@ -563,7 +643,6 @@ export default {
                     position: "top-center",
                     duration: 5000,
                   });
-                  this.ledgerData.push(response.data.data);
                   this.ledgerForm.name = "";
                   this.ledgerForm.payment_type = "";
                   this.ledgerForm.balance = "";

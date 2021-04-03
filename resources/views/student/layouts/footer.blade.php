@@ -61,9 +61,29 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.2/lazysizes.min.js"></script>
+
+<script src="https://pixeldesign.club/design/layouts/designlight/dist/js/pages/Print/printArea.js"></script>
+
+
+
+
+
 @yield('js_code')
 
 <script type="text/javascript">
+$(function () {
+    "use strict";
+    $(".print-invoice1").click(function() {
+        var mode = 'iframe'; //popup
+        var close = mode == "popup";
+        var options = {
+            mode: mode,
+            popClose: close
+        };
+        $("div.printBox").printArea(options);
+    });
+
+});
     $(document).ready(function(){
     $(document).on("scroll", function(){
         if($(window).scrollTop()>60){

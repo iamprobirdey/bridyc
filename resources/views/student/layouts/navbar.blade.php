@@ -23,6 +23,9 @@
                     <a class="nav-link" href="{{url('/faq')}}"> FAQ</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="{{url('/blog1')}}"> Blog</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link" href="{{url('/contact')}}"> Contact Us</a>
                 </li>
                 <li class="nav-item">
@@ -56,8 +59,14 @@
             @endif
             @if (auth()->check() && auth()->user()->isAdmin())
             <a class="btn btndashboard mr-2" data-trigger="focus" data-toggle="popover" data-placement="bottom"
-                href="{{route('admin.blog.index')}}">
+                href="{{route('admin')}}">
                 <i class="fa fa-th-large" aria-hidden="true"></i> Admin Dashboard
+            </a>
+            @endif
+            @if (auth()->check() && auth()->user()->isSupervisor())
+            <a class="btn btndashboard mr-2" data-trigger="focus" data-toggle="popover" data-placement="bottom"
+                href="{{route('supervisor.dashboard')}}">
+                <i class="fa fa-th-large" aria-hidden="true"></i> Supervisor Dashboard
             </a>
             @endif
             @if (Auth::check())
