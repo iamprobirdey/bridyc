@@ -24,6 +24,31 @@ video')
 @endsection
 
 @section('content')
+<style>
+    .customMT{
+        margin-top: 6rem;
+    }
+    .noneTextD {
+        text-decoration: none !important;
+    }
+
+    .customBgcolor {
+        background-image: linear-gradient(90deg, #FFEDE9 0%, #FFF7F5 100%);
+        border-radius: 6px;
+    }
+
+    .customBgcolor1 {
+        background-color: #73E4B0;
+        background-image: linear-gradient(90deg, #9EEBC7 0%, #DDF9EB 100%);
+        border-radius: 6px;
+    }
+
+    .customBgcolor2 {
+        background-color: #D9AFD9;
+        background-image: linear-gradient(90deg, #E5DCFF 0%, #F3EFFF 100%);
+        border-radius: 6px;
+    }
+</style>
 <div class="container-fluid">
     <div class="row">
         @include('layouts.sidebar')
@@ -35,18 +60,42 @@ video')
             @endphp
             <div class="container">
                 <h1>Accountant</h1>
-                <div class="row">
-                    <div class="col-sm-4">
-                        <a href="{{route('channel.accountant.ledger',$channelTitle)}}"
-                            class="badge badge-primary">Create Ledger</a>
+                <div class="row justify-content-center noneTextD">
+                    <div class="col-sm-3 m-1 customBgcolor" style="height: 200px;">
+                        <div class="d-flex justify-content-between mt-4">
+                            <a href="{{route('channel.accountant.ledger',$channelTitle)}}" class="h5">Create Ledger</a>
+                            <svg xmlns="http://www.w3.org/2000/svg" style="height: 24px;" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <div class="d-flex justify-content-between customMT">
+                            <button type="button" class="btn btn-sm btn-outline-secondary">Add new</button>
+                            <button type="button" class="btn btn-sm btn-primary">View</button>
+                        </div>
                     </div>
-                    <div class="col-sm-4">
-                        <a href="{{route('channel.accountant.cashbook',$channelTitle)}}"
-                            class="badge badge-primary">Cashbook</a>
+                    <div class="col-sm-3 m-1 customBgcolor1" style="height: 200px;">
+                        <div class="d-flex justify-content-between mt-4">
+                            <a href="{{route('channel.accountant.cashbook',$channelTitle)}}" class="h5">Cashbook</a>
+                            <svg xmlns="http://www.w3.org/2000/svg" style="height: 24px;" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <div class="d-flex justify-content-between mb-2 customMT" >
+                            <button type="button" class="btn btn-sm btn-outline-secondary">Add new</button>
+                            <button type="button" class="btn btn-sm btn-primary">View</button>
+                        </div>
                     </div>
-                    <div class="col-sm-4">
-                        <a href="{{route('channel.accountant.admission',$channelTitle)}}"
-                            class="badge badge-primary">Admission</a>
+                    <div class="col-sm-3 m-1 customBgcolor2" style="height: 200px;">
+                        <div class="d-flex justify-content-between mt-4">
+                            <a href="{{route('channel.accountant.admission',$channelTitle)}}" class="h5">Admission</a>
+                            <svg xmlns="http://www.w3.org/2000/svg" style="height: 24px;" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                            </svg>
+                        </div>
+                        <div class="d-flex justify-content-between mb-2 customMT">
+                            <button type="button" class="btn btn-sm btn-outline-secondary">Add new</button>
+                            <button type="button" class="btn btn-sm btn-primary">View</button>
+                        </div>
                     </div>
                 </div>
             </div>

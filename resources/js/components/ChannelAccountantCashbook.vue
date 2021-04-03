@@ -1,97 +1,111 @@
+<style >
+.customAction {
+  display: block;
+  position: absolute;
+  z-index: 1;
+  right: 120px;
+}
+@media (max-width: 576px) {
+  .customAction {
+    right: 80px !important;
+  }
+}
+</style>
 <template>
   <div>
-    <a :href="ledgerUrl" class="btn btn-secondary">Go to Ledger</a>
-    <a :href="admissionUrl" class="btn btn-primary">Go to Admission</a>
-    <br />
-    <br />
-    <button class="btn btn-secondary" @click="createCashbook()">
-      Create Cashbook
-    </button>
-    <table class="table">
-      <thead>
-        <tr>
-          <th scope="col ">Id</th>
-          <th scope="col">Particular</th>
-          <th scope="col">Credit/Debit</th>
-          <th scope="col">Online/Offline</th>
-          <th scope="col">Balance</th>
-          <th>Action</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr v-for="(cashbook, index) in cashbookData" :key="index">
-          <td>{{ index + 1 }}</td>
-          <td>{{ cashbook.ledger.name }}</td>
-          <td>{{ cashbook.payment_type }}</td>
-          <td>{{ cashbook.payment_mode }}</td>
-          <td>{{ cashbook.total }}</td>
-          <td>
-            <a href="javascript:void(0)">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-                fill="currentColor"
-                height="23"
-                width="34"
+    <div class="m-1">
+      <button class="btn btn-secondary" @click="createCashbook()">
+        Create Cashbook
+      </button>
+    </div>
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col ">Id</th>
+            <th scope="col">Particular</th>
+            <th scope="col">Credit/Debit</th>
+            <th scope="col">Online/Offline</th>
+            <th scope="col">Balance</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="(cashbook, index) in cashbookData" :key="index">
+            <td>{{ index + 1 }}</td>
+            <td>{{ cashbook.ledger.name }}</td>
+            <td>{{ cashbook.payment_type }}</td>
+            <td>{{ cashbook.payment_mode }}</td>
+            <td>{{ cashbook.total }}</td>
+            <td>
+              <a
+                href="javascript:void(0)"
                 style="color: black"
                 v-on:click="getTheDotDecider(index)"
               >
-                <path
-                  d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"
-                />
-              </svg>
-            </a>
-          </td>
-
-          <div
-            class="card"
-            style="width: 18rem"
-            v-if="showDot === index && showDotBool === true"
-          >
-            <div class="card-body">
-              <p>
-                Edit
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 20 20"
                   fill="currentColor"
                   height="23"
                   width="34"
-                  style="cursor: pointer"
-                  @click="editCashbook(cashbook, index)"
                 >
                   <path
-                    d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"
+                    d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"
                   />
                 </svg>
-              </p>
-              <p>
-                Delete
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  height="23"
-                  width="34"
-                  style="color: red; cursor: pointer"
-                  @click="deleteCashbook(cashbook.id, index)"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-              </p>
-            </div>
-          </div>
-        </tr>
-        <button v-if="cashbookDataFailed" @click="getCashbookData()">
-          Try Again
-        </button>
-      </tbody>
-    </table>
-
+              </a>
+              <div
+                class="card customAction"
+                v-if="showDot === index && showDotBool === true"
+              >
+                <div class="card-body">
+                  <p
+                    style="cursor: pointer"
+                    @click="editCashbook(cashbook, index)"
+                  >
+                    Edited
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      height="23"
+                      width="34"
+                    >
+                      <path
+                        d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"
+                      />
+                    </svg>
+                  </p>
+                  <p
+                    style="color: red; cursor: pointer"
+                    @click="deleteCashbook(cashbook.id, index)"
+                  >
+                    Delete
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      height="23"
+                      width="34"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                  </p>
+                </div>
+              </div>
+            </td>
+          </tr>
+          <button v-if="cashbookDataFailed" @click="getCashbookData()">
+            Try Again
+          </button>
+        </tbody>
+      </table>
+    </div>
     <div
       class="modal fade"
       id="cashbookModal"

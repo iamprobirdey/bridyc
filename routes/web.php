@@ -325,6 +325,7 @@ Route::group([
         //Accountant
         //Ledger
         Route::get('channel/get/ledger/data', 'User\LedgerController@getLedgerData');
+        Route::get('channel/get/subledger/ledger/data/{ledgerId}', 'User\LedgerController@getSubLedgerData');
         Route::post('channel/add/ledger/{channel:id}', 'User\LedgerController@storeLedgerData');
         Route::post('channel/edit/ledger/{ledgerid}', 'User\LedgerController@editLedgerData');
         Route::get('channel/delete/parent/ledger/{ledgerid}', 'User\LedgerController@deleteParentLedger');

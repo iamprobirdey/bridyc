@@ -1,137 +1,175 @@
+<style >
+.customAction {
+  display: block;
+  position: absolute;
+  z-index: 1;
+  right: 120px;
+}
+@media (max-width: 576px) {
+  .customAction {
+    right: 50px !important;
+  }
+}
+@media (min-width: 1768px) {
+  .customAction {
+    right: 260px !important;
+  }
+}
+/* 2nd card */
+.customAction1 {
+  display: block;
+  position: absolute;
+  z-index: 1;
+  right: 80px;
+}
+@media (max-width: 576px) {
+  .customAction1 {
+    right: 70px !important;
+  }
+}
+@media (min-width: 1768px) {
+  .customAction1 {
+    right: 80px !important;
+  }
+}
+</style>
 <template>
   <div class="row">
     <a :href="admissionUrl" class="btn btn-secondary">Go to Admission</a>
     <a :href="cashbookUrl" class="btn btn-primary">Go to Cashbook</a>
     <br />
     <br />
-    <button @click="createNewLedger()" class="btn btn-primary">
-      Create Ledger
-    </button>
 
-    <table class="table">
-      <thead>
-        <tr>
-          <th>Sub-Ledger</th>
-          <th scope="col ">Id</th>
-          <th scope="col">Ledger Name</th>
-          <th scope="col">Credit/Debit</th>
-          <th scope="col">Balance</th>
-          <th>Action</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr
-          v-for="(ledger, index) in ledgerData"
-          :key="index"
-          v-if="ledger.channel_accountant_ledger_id === null"
-        >
-          <td>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-              height="23"
-              width="34"
-              @click="getAllSubLedger(ledger)"
-              style="cursor: pointer"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                clip-rule="evenodd"
-              />
-            </svg>
-          </td>
-          <td>{{ index + 1 }}</td>
-          <td>{{ ledger.name }}</td>
-          <td>{{ ledger.payment_type }}</td>
-          <td>{{ ledger.balance }}</td>
-          <td>
-            <a href="javascript:void(0)">
+    <div class="m-1">
+      <button @click="createNewLedger()" class="btn btn-primary">
+        Create Ledger
+      </button>
+    </div>
+
+    <div class="table-responsive">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Sub-Ledger</th>
+            <th scope="col ">Id</th>
+            <th scope="col">Ledger Name</th>
+            <th scope="col">Credit/Debit</th>
+            <th scope="col">Balance</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="(ledger, index) in ledgerData" :key="index">
+            <td>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="0 0 20 20"
                 fill="currentColor"
                 height="23"
                 width="34"
-                style="color: black"
-                v-on:click="getTheDotDecide(index)"
+                @click="getAllSubLedger(ledger)"
+                style="cursor: pointer"
               >
                 <path
-                  d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"
+                  fill-rule="evenodd"
+                  d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                  clip-rule="evenodd"
                 />
               </svg>
-            </a>
-          </td>
-          <!-- Card Start -->
-          <div
-            class="card"
-            style="width: 18rem"
-            v-if="showDot === index && showDotBool === true"
-          >
-            <div class="card-body">
-              <p>
-                Create Sub Ledger
+            </td>
+            <td>{{ index + 1 }}</td>
+            <td>{{ ledger.name }}</td>
+            <td>{{ ledger.payment_type }}</td>
+            <td>{{ ledger.balance }}</td>
+            <td>
+              <a href="javascript:void(0)">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 20 20"
                   fill="currentColor"
                   height="23"
                   width="34"
-                  style="color: black; cursor: pointer"
-                  @click="createSubLedger(ledger)"
+                  style="color: black"
+                  v-on:click="getTheDotDecide(index)"
                 >
                   <path
-                    fill-rule="evenodd"
-                    d="M2 5a2 2 0 012-2h12a2 2 0 012 2v2a2 2 0 01-2 2H4a2 2 0 01-2-2V5zm14 1a1 1 0 11-2 0 1 1 0 012 0zM2 13a2 2 0 012-2h12a2 2 0 012 2v2a2 2 0 01-2 2H4a2 2 0 01-2-2v-2zm14 1a1 1 0 11-2 0 1 1 0 012 0z"
-                    clip-rule="evenodd"
+                    d="M10 6a2 2 0 110-4 2 2 0 010 4zM10 12a2 2 0 110-4 2 2 0 010 4zM10 18a2 2 0 110-4 2 2 0 010 4z"
                   />
                 </svg>
-              </p>
-              <p>
-                Edit
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  height="23"
-                  width="34"
-                  style="cursor: pointer"
-                  @click="editParentLedger(ledger, index)"
-                >
-                  <path
-                    d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"
-                  />
-                </svg>
-              </p>
-              <p>
-                Delete
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  height="23"
-                  width="34"
-                  style="color: red; cursor: pointer"
-                  @click="deleteParentLedger(ledger.id, index)"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-              </p>
-            </div>
-          </div>
-          <!-- Card End -->
-        </tr>
-        <button v-if="ledgerDataFailed" @click="getTheLedgerData()">
-          Try Again
-        </button>
-      </tbody>
-    </table>
+              </a>
+              <!-- Card Start -->
 
+              <div
+                class="card customAction"
+                v-if="showDot === index && showDotBool === true"
+              >
+                <div class="card-body">
+                  <p
+                    style="color: black; cursor: pointer"
+                    @click="createSubLedger(ledger)"
+                  >
+                    Create Sub Ledger
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      height="23"
+                      width="34"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M2 5a2 2 0 012-2h12a2 2 0 012 2v2a2 2 0 01-2 2H4a2 2 0 01-2-2V5zm14 1a1 1 0 11-2 0 1 1 0 012 0zM2 13a2 2 0 012-2h12a2 2 0 012 2v2a2 2 0 01-2 2H4a2 2 0 01-2-2v-2zm14 1a1 1 0 11-2 0 1 1 0 012 0z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                  </p>
+                  <p
+                    style="cursor: pointer"
+                    @click="editParentLedger(ledger, index)"
+                  >
+                    Edit
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      height="23"
+                      width="34"
+                    >
+                      <path
+                        d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"
+                      />
+                    </svg>
+                  </p>
+                  <p
+                    style="color: red; cursor: pointer"
+                    @click="deleteParentLedger(ledger.id, index)"
+                  >
+                    Delete
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      height="23"
+                      width="34"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z"
+                        clip-rule="evenodd"
+                      />
+                    </svg>
+                  </p>
+                </div>
+              </div>
+              <!-- Card End -->
+            </td>
+          </tr>
+          <button v-if="ledgerDataFailed" @click="getTheLedgerData()">
+            Try Again
+          </button>
+        </tbody>
+      </table>
+    </div>
     <div
       class="modal fade"
       id="ledgerModal"
@@ -310,6 +348,9 @@
           </button>
 
           <div class="modal-body">
+            <div class="spinner-border text-info" role="status" v-if="loader">
+              <span class="sr-only">Loading...</span>
+            </div>
             <table class="table">
               <thead>
                 <tr>
@@ -327,7 +368,10 @@
                   <td>{{ ledger.payment_type }}</td>
                   <td>{{ ledger.balance }}</td>
                   <td>
-                    <a href="javascript:void(0)">
+                    <a
+                      href="javascript:void(0)"
+                      @click="showSubLedgerDot(index)"
+                    >
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 20 20"
@@ -343,9 +387,15 @@
                     </a>
                   </td>
 
-                  <div class="card" style="width: 18rem">
+                  <div
+                    class="card customAction1"
+                    v-if="showSubDot === index && showSubDotBool === true"
+                  >
                     <div class="card-body">
-                      <p>
+                      <p
+                        style="cursor: pointer"
+                        @click="editChildLedger(ledger, index)"
+                      >
                         Edit
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -353,15 +403,16 @@
                           fill="currentColor"
                           height="23"
                           width="34"
-                          style="cursor: pointer"
-                          @click="editChildLedger(ledger, index)"
                         >
                           <path
                             d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"
                           />
                         </svg>
                       </p>
-                      <p>
+                      <p
+                        style="color: red; cursor: pointer"
+                        @click="deleteChildLedger(ledger, index)"
+                      >
                         Delete
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -369,8 +420,6 @@
                           fill="currentColor"
                           height="23"
                           width="34"
-                          style="color: red; cursor: pointer"
-                          @click="deleteChildLedger(ledger, index)"
                         >
                           <path
                             fill-rule="evenodd"
@@ -426,6 +475,9 @@ export default {
       showDotBool: false,
       cashbookUrl: "",
       admissionUrl: "",
+      loader: true,
+      showSubDot: null,
+      showSubDotBool: false,
     };
   },
   props: {
@@ -441,6 +493,10 @@ export default {
   },
   mounted() {},
   methods: {
+    showSubLedgerDot(index) {
+      this.showSubDot = index;
+      this.showSubDotBool = !this.showSubDotBool;
+    },
     getTheAdmissionCashbookUrl() {
       let url = location.pathname.split("/");
       let url2 = location.pathname.split("/");
@@ -528,11 +584,23 @@ export default {
     },
     getAllSubLedger(ledger) {
       this.subLedgerData = [];
-      this.ledgerData.forEach((element) => {
-        if (ledger.id === parseInt(element.channel_accountant_ledger_id)) {
-          this.subLedgerData.push(element);
-        }
-      });
+      axios
+        .get("/api/channel/get/subledger/ledger/data/" + ledger.id)
+        .then((response) => {
+          this.loader = false;
+          this.subLedgerData = response.data.data;
+        })
+        .catch((errors) => {
+          Vue.toasted.error("Something went wrong", {
+            position: "top-center",
+            duration: 5000,
+          });
+        });
+      //   this.ledgerData.forEach((element) => {
+      //     if (ledger.id === parseInt(element.channel_accountant_ledger_id)) {
+      //       this.subLedgerData.push(element);
+      //     }
+      //   });
       $("#subLedgerModal").modal("show");
     },
     submitForm() {
@@ -575,7 +643,6 @@ export default {
                     position: "top-center",
                     duration: 5000,
                   });
-                  this.ledgerData.push(response.data.data);
                   this.ledgerForm.name = "";
                   this.ledgerForm.payment_type = "";
                   this.ledgerForm.balance = "";
