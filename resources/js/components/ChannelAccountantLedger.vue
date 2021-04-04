@@ -40,7 +40,7 @@
   <div class="row">
     <div class="m-1">
       <button @click="createNewLedger()" class="btn btn-primary">
-        Create Ledger d
+        Create Ledger
       </button>
       <a :href="admissionUrl" class="btn btn-secondary">Go to Admission</a>
       <a :href="cashbookUrl" class="btn btn-primary">Go to Cashbook</a>
