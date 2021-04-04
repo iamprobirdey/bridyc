@@ -193,7 +193,7 @@
 
           <div class="modal-body">
             <form @submit.prevent="submitForm()">
-              <h1 v-if="urlDecider === 'ledger-add'">Create A New Ledger</h1>
+              <h3 v-if="urlDecider === 'ledger-add'">Create a new Ledger</h3>
               <h1 v-else-if="urlDecider === 'ledger-edit'">Edit a Ledger</h1>
               <h1 v-else>Create a Sub Ledger</h1>
               <div
@@ -304,7 +304,7 @@
                   data-vv-delay="20"
                   name="admission_check"
                   :class="{
-                    'form-control': true,
+                    'ml-1': true,
                     'is-invalid': errors.has('admission_check'),
                   }"
                   placeholder="Balance"

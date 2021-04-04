@@ -1469,7 +1469,7 @@ var render = function() {
             }
           }
         },
-        [_vm._v("\n      Create Ledger d\n    ")]
+        [_vm._v("\n      Create Ledger\n    ")]
       ),
       _vm._v(" "),
       _c(
@@ -1747,7 +1747,7 @@ var render = function() {
                   },
                   [
                     _vm.urlDecider === "ledger-add"
-                      ? _c("h1", [_vm._v("Create A New Ledger")])
+                      ? _c("h3", [_vm._v("Create a new Ledger")])
                       : _vm.urlDecider === "ledger-edit"
                       ? _c("h1", [_vm._v("Edit a Ledger")])
                       : _c("h1", [_vm._v("Create a Sub Ledger")]),
@@ -2041,7 +2041,7 @@ var render = function() {
                                 }
                               ],
                               class: {
-                                "form-control": true,
+                                "ml-1": true,
                                 "is-invalid": _vm.errors.has("admission_check")
                               },
                               attrs: {
