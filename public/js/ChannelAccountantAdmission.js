@@ -244,6 +244,30 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 
 
@@ -257,7 +281,15 @@ __webpack_require__.r(__webpack_exports__);
       ledgerUrl: "",
       cashbookUrl: "",
       reportUrl: location.href,
-      monthlyUrl: location.href
+      monthlyUrl: location.href,
+      filter: {
+        search: "",
+        category: ""
+      },
+      admissionUrl: "/api/channel/get/acccountant/admission/data/",
+      currentPage: 1,
+      lastPage: "",
+      mainUrl: ""
     };
   },
   components: {
@@ -273,12 +305,62 @@ __webpack_require__.r(__webpack_exports__);
   },
   created: function created() {
     this.channelId = this.channelid;
-    this.getAdmissionData();
+    this.mainUrl = this.getAdmissionData();
     this.getClassData();
     this.getTheLedgerCashbookUrl();
   },
   mounted: function mounted() {},
   methods: {
+    urlGenerator: function urlGenerator() {
+      this.mainUrl = this.admissionUrl + this.channelId + "?page=" + this.currentPage + "&search=" + this.filter.search + "&category=" + this.filter.category;
+    },
+    lastPagePaginate: function lastPagePaginate() {
+      if (this.currentPage === 1) {
+        Vue.toasted.success("You are in first page", {
+          position: "top-center",
+          duration: 5000
+        });
+      }
+
+      if (this.currentPage > 1) {
+        this.currentPage = this.currentPage - 1;
+        this.getAdmissionData();
+      }
+    },
+    nextPagePaginate: function nextPagePaginate() {
+      if (this.currentPage === this.lastPage) {
+        Vue.toasted.success("You are in Last page", {
+          position: "top-center",
+          duration: 5000
+        });
+      }
+
+      if (this.currentPage < this.lastPage) {
+        this.currentPage = this.currentPage + 1;
+        this.getAdmissionData();
+      }
+    },
+    onSearchChange: _.debounce(function () {
+      if (!isNaN(this.filter.search)) {
+        this.getAdmissionData();
+      } else {
+        Vue.toasted.error("Searching Admission needs number", {
+          position: "top-center",
+          duration: 1000
+        });
+      }
+    }, 700),
+    onFilterCategoryChange: function onFilterCategoryChange() {
+      this.getAdmissionData();
+    },
+    getAdmissionData: function getAdmissionData() {
+      var _this = this;
+
+      this.urlGenerator();
+      axios.get(this.mainUrl).then(function (response) {
+        _this.admissionData = response.data.data;
+      })["catch"](function (error) {});
+    },
     getTheLedgerCashbookUrl: function getTheLedgerCashbookUrl() {
       var url = location.pathname.split("/");
       var url2 = location.pathname.split("/");
@@ -288,24 +370,16 @@ __webpack_require__.r(__webpack_exports__);
       this.cashbookUrl = location.origin + url2.join("/");
     },
     getClassData: function getClassData() {
-      var _this = this;
+      var _this2 = this;
 
       axios.get("/api/channel/get/accountant/class/admission-ledger/data").then(function (response) {
-        _this.classData = response.data.data;
+        _this2.classData = response.data.data;
       })["catch"](function (error) {
         Vue.toasted.error("Something went wrong", {
           position: "top-center",
           duration: 5000
         });
       });
-    },
-    getAdmissionData: function getAdmissionData() {
-      var _this2 = this;
-
-      axios.get("/api/channel/get/acccountant/admission/data/" + this.channelId).then(function (response) {
-        _this2.admissionData = response.data.data;
-        _this2.admissionData;
-      })["catch"](function (error) {});
     },
     takeAdmission: function takeAdmission() {
       this.admission_decider = true;
@@ -340,6 +414,9 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+//
+//
+//
 //
 //
 //
@@ -1401,6 +1478,23 @@ var render = function() {
   return _c(
     "div",
     [
+      _c("br"),
+      _vm._v(" "),
+      _c("br"),
+      _vm._v(" "),
+      _c(
+        "button",
+        {
+          staticClass: "btn btn-primary m-1",
+          on: {
+            click: function($event) {
+              return _vm.takeAdmission()
+            }
+          }
+        },
+        [_vm._v("\n    Take Admission\n  ")]
+      ),
+      _vm._v(" "),
       _c(
         "a",
         { staticClass: "btn btn-secondary", attrs: { href: _vm.ledgerUrl } },
@@ -1413,22 +1507,88 @@ var render = function() {
         [_vm._v("Go to Cashbook")]
       ),
       _vm._v(" "),
-      _c("br"),
-      _vm._v(" "),
-      _c("br"),
-      _vm._v(" "),
-      _c(
-        "button",
-        {
-          staticClass: "btn btn-primary",
-          on: {
-            click: function($event) {
-              return _vm.takeAdmission()
+      _c("form", { staticClass: "form-inline my-2 my-lg-0" }, [
+        _c("input", {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.filter.search,
+              expression: "filter.search"
             }
+          ],
+          staticClass: "form-control mr-sm-2",
+          attrs: {
+            type: "search",
+            placeholder: "Search Admission Number",
+            "aria-label": "Search"
+          },
+          domProps: { value: _vm.filter.search },
+          on: {
+            input: [
+              function($event) {
+                if ($event.target.composing) {
+                  return
+                }
+                _vm.$set(_vm.filter, "search", $event.target.value)
+              },
+              _vm.onSearchChange
+            ]
           }
-        },
-        [_vm._v("\n    Take Admission\n  ")]
-      ),
+        })
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "ml-12" }, [
+        _c("label", { attrs: { for: "lable" } }, [_vm._v("Filter Category")]),
+        _vm._v(" "),
+        _c(
+          "select",
+          {
+            directives: [
+              {
+                name: "model",
+                rawName: "v-model",
+                value: _vm.filter.category,
+                expression: "filter.category"
+              }
+            ],
+            attrs: { name: "payment" },
+            on: {
+              change: [
+                function($event) {
+                  var $$selectedVal = Array.prototype.filter
+                    .call($event.target.options, function(o) {
+                      return o.selected
+                    })
+                    .map(function(o) {
+                      var val = "_value" in o ? o._value : o.value
+                      return val
+                    })
+                  _vm.$set(
+                    _vm.filter,
+                    "category",
+                    $event.target.multiple ? $$selectedVal : $$selectedVal[0]
+                  )
+                },
+                function($event) {
+                  return _vm.onFilterCategoryChange()
+                }
+              ]
+            }
+          },
+          [
+            _c("option", { attrs: { value: "" } }, [_vm._v("All")]),
+            _vm._v(" "),
+            _c("option", { attrs: { value: "general" } }, [_vm._v("General")]),
+            _vm._v(" "),
+            _c("option", { attrs: { value: "st" } }, [_vm._v("ST")]),
+            _vm._v(" "),
+            _c("option", { attrs: { value: "sc" } }, [_vm._v("SC")]),
+            _vm._v(" "),
+            _c("option", { attrs: { value: "muslim" } }, [_vm._v("Muslim")])
+          ]
+        )
+      ]),
       _vm._v(" "),
       _c("table", { staticClass: "table" }, [
         _vm._m(0),
@@ -1711,7 +1871,7 @@ var render = function() {
     _c(
       "div",
       {
-        staticClass: "modal fade",
+        staticClass: "modal fade bd-example-modal-lg",
         attrs: {
           id: "admission",
           tabindex: "-1",
@@ -2451,23 +2611,7 @@ var render = function() {
                           ]
                         ),
                         _vm._v(" "),
-                        _c(
-                          "button",
-                          {
-                            staticClass: "btn btn-success",
-                            attrs: { type: "button", disabled: "" }
-                          },
-                          [_vm._v("\n              Previous\n            ")]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "button",
-                          {
-                            staticClass: "btn btn-success",
-                            attrs: { type: "submit" }
-                          },
-                          [_vm._v("Next")]
-                        )
+                        _vm._m(1)
                       ]
                     )
                   : _vm._e(),
@@ -2840,22 +2984,32 @@ var render = function() {
                         ),
                         _vm._v(" "),
                         _c(
-                          "button",
-                          {
-                            staticClass: "btn btn-success",
-                            attrs: { type: "button" },
-                            on: { click: _vm.previousStep }
-                          },
-                          [_vm._v("\n              Previous\n            ")]
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "button",
-                          {
-                            staticClass: "btn btn-success",
-                            attrs: { type: "submit" }
-                          },
-                          [_vm._v("Submit")]
+                          "div",
+                          { staticClass: "d-flex justify-content-between" },
+                          [
+                            _c(
+                              "button",
+                              {
+                                staticClass: "btn btn-success",
+                                attrs: { type: "button" },
+                                on: { click: _vm.previousStep }
+                              },
+                              [
+                                _vm._v(
+                                  "\n                Previous\n              "
+                                )
+                              ]
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "button",
+                              {
+                                staticClass: "btn btn-success",
+                                attrs: { type: "submit" }
+                              },
+                              [_vm._v("Submit")]
+                            )
+                          ]
                         )
                       ]
                     )
@@ -2885,6 +3039,27 @@ var staticRenderFns = [
       },
       [_c("span", { attrs: { "aria-hidden": "true" } }, [_vm._v("×")])]
     )
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "d-flex justify-content-between" }, [
+      _c(
+        "button",
+        {
+          staticClass: "btn btn-success",
+          attrs: { type: "button", disabled: "" }
+        },
+        [_vm._v("\n                Previous\n              ")]
+      ),
+      _vm._v(" "),
+      _c(
+        "button",
+        { staticClass: "btn btn-success", attrs: { type: "submit" } },
+        [_vm._v("Next")]
+      )
+    ])
   }
 ]
 render._withStripped = true

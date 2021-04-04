@@ -1,13 +1,37 @@
 <template>
   <div>
-    <a :href="ledgerUrl" class="btn btn-secondary">Go to Ledger</a>
-    <a :href="cashbookUrl" class="btn btn-primary">Go to Cashbook</a>
     <br />
     <br />
-    <button class="btn btn-primary" @click="takeAdmission()">
+    <button class="btn btn-primary m-1" @click="takeAdmission()">
       Take Admission
     </button>
+    <a :href="ledgerUrl" class="btn btn-secondary">Go to Ledger</a>
+    <a :href="cashbookUrl" class="btn btn-primary">Go to Cashbook</a>
 
+    <form class="form-inline my-2 my-lg-0">
+      <input
+        class="form-control mr-sm-2"
+        type="search"
+        placeholder="Search Admission Number"
+        aria-label="Search"
+        v-model="filter.search"
+        @input="onSearchChange"
+      />
+    </form>
+    <div class="ml-12">
+      <label for="lable">Filter Category</label>
+      <select
+        name="payment"
+        v-model="filter.category"
+        @change="onFilterCategoryChange()"
+      >
+        <option value="">All</option>
+        <option value="general">General</option>
+        <option value="st">ST</option>
+        <option value="sc">SC</option>
+        <option value="muslim">Muslim</option>
+      </select>
+    </div>
     <table class="table">
       <thead>
         <tr>
@@ -160,6 +184,14 @@ export default {
       cashbookUrl: "",
       reportUrl: location.href,
       monthlyUrl: location.href,
+      filter: {
+        search: "",
+        category: "",
+      },
+      admissionUrl: "/api/channel/get/acccountant/admission/data/",
+      currentPage: 1,
+      lastPage: "",
+      mainUrl: "",
     };
   },
   components: {
@@ -175,12 +207,71 @@ export default {
   },
   created() {
     this.channelId = this.channelid;
-    this.getAdmissionData();
+    this.mainUrl = this.getAdmissionData();
     this.getClassData();
     this.getTheLedgerCashbookUrl();
   },
   mounted() {},
   methods: {
+    urlGenerator() {
+      this.mainUrl =
+        this.admissionUrl +
+        this.channelId +
+        "?page=" +
+        this.currentPage +
+        "&search=" +
+        this.filter.search +
+        "&category=" +
+        this.filter.category;
+    },
+    lastPagePaginate() {
+      if (this.currentPage === 1) {
+        Vue.toasted.success("You are in first page", {
+          position: "top-center",
+          duration: 5000,
+        });
+      }
+      if (this.currentPage > 1) {
+        this.currentPage = this.currentPage - 1;
+
+        this.getAdmissionData();
+      }
+    },
+    nextPagePaginate() {
+      if (this.currentPage === this.lastPage) {
+        Vue.toasted.success("You are in Last page", {
+          position: "top-center",
+          duration: 5000,
+        });
+      }
+      if (this.currentPage < this.lastPage) {
+        this.currentPage = this.currentPage + 1;
+
+        this.getAdmissionData();
+      }
+    },
+    onSearchChange: _.debounce(function () {
+      if (!isNaN(this.filter.search)) {
+        this.getAdmissionData();
+      } else {
+        Vue.toasted.error("Searching Admission needs number", {
+          position: "top-center",
+          duration: 1000,
+        });
+      }
+    }, 700),
+    onFilterCategoryChange() {
+      this.getAdmissionData();
+    },
+    getAdmissionData() {
+      this.urlGenerator();
+      axios
+        .get(this.mainUrl)
+        .then((response) => {
+          this.admissionData = response.data.data;
+        })
+        .catch((error) => {});
+    },
     getTheLedgerCashbookUrl() {
       let url = location.pathname.split("/");
       let url2 = location.pathname.split("/");
@@ -201,15 +292,6 @@ export default {
             duration: 5000,
           });
         });
-    },
-    getAdmissionData() {
-      axios
-        .get("/api/channel/get/acccountant/admission/data/" + this.channelId)
-        .then((response) => {
-          this.admissionData = response.data.data;
-          this.admissionData;
-        })
-        .catch((error) => {});
     },
     takeAdmission() {
       this.admission_decider = true;

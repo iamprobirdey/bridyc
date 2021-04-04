@@ -541,6 +541,46 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -573,7 +613,13 @@ __webpack_require__.r(__webpack_exports__);
       admissionUrl: "",
       loader: true,
       showSubDot: null,
-      showSubDotBool: false
+      showSubDotBool: false,
+      filter: {
+        payment_mode: ""
+      },
+      ledgerUrl: "/api/channel/get/ledger/data?page=",
+      currentPage: 1,
+      lastPage: ""
     };
   },
   props: {
@@ -584,11 +630,38 @@ __webpack_require__.r(__webpack_exports__);
   },
   created: function created() {
     this.channelId = this.channelid;
+    this.mainLedgerUrl = this.ledgerUrl;
     this.getTheLedgerData();
     this.getTheAdmissionCashbookUrl();
   },
   mounted: function mounted() {},
   methods: {
+    lastPagePaginate: function lastPagePaginate() {
+      if (this.currentPage === 1) {
+        Vue.toasted.success("You are in first page", {
+          position: "top-center",
+          duration: 5000
+        });
+      }
+
+      if (this.currentPage > 1) {
+        this.currentPage = this.currentPage - 1;
+        this.onFilterChange();
+      }
+    },
+    nextPagePaginate: function nextPagePaginate() {
+      if (this.currentPage === this.lastPage) {
+        Vue.toasted.success("You are in Last page", {
+          position: "top-center",
+          duration: 5000
+        });
+      }
+
+      if (this.currentPage < this.lastPage) {
+        this.currentPage = this.currentPage + 1;
+        this.onFilterChange();
+      }
+    },
     showSubLedgerDot: function showSubLedgerDot(index) {
       this.showSubDot = index;
       this.showSubDotBool = !this.showSubDotBool;
@@ -609,9 +682,11 @@ __webpack_require__.r(__webpack_exports__);
     getTheLedgerData: function getTheLedgerData() {
       var _this = this;
 
-      axios.get("/api/channel/get/ledger/data").then(function (response) {
+      axios.get(this.mainLedgerUrl).then(function (response) {
         _this.ledgerDataFailed = false;
-        _this.ledgerData = response.data.data;
+        _this.ledgerData = response.data.data.data;
+        _this.currentPage = response.data.data.current_page;
+        _this.lastPage = response.data.data.last_page;
       })["catch"](function (errors) {
         Vue.toasted.error("Something went wrong", {
           position: "top-center",
@@ -619,6 +694,10 @@ __webpack_require__.r(__webpack_exports__);
         });
         _this.ledgerDataFailed = true;
       });
+    },
+    onFilterChange: function onFilterChange() {
+      this.mainLedgerUrl = this.ledgerUrl + this.currentPage + "&payment_mode=" + this.filter.payment_mode;
+      this.getTheLedgerData();
     },
     deleteParentLedger: function deleteParentLedger(ledgerId, index) {
       var _this2 = this;
@@ -809,7 +888,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.customAction {\n  display: block;\n  position: absolute;\n  z-index: 1;\n  right: 120px;\n}\n@media (max-width: 576px) {\n.customAction {\n    right: 50px !important;\n}\n}\n@media (min-width: 1768px) {\n.customAction {\n    right: 260px !important;\n}\n}\n/* 2nd card */\n.customAction1 {\n  display: block;\n  position: absolute;\n  z-index: 1;\n  right: 80px;\n}\n@media (max-width: 576px) {\n.customAction1 {\n    right: 70px !important;\n}\n}\n@media (min-width: 1768px) {\n.customAction1 {\n    right: 80px !important;\n}\n}\n", ""]);
+exports.push([module.i, "\n.customAction {\n  display: block;\n  position: absolute;\n  z-index: 1;\n  right: 120px;\n}\n@media (max-width: 576px) {\n.customAction {\n    right: 50px !important;\n}\n}\n@media (min-width: 1768px) {\n.customAction {\n    right: 260px !important;\n}\n}\n/* 2nd card */\n.customAction1 {\n  display: block;\n  position: absolute;\n  z-index: 1;\n  right: 80px;\n}\n@media (max-width: 576px) {\n.customAction1 {\n    right: 70px !important;\n}\n}\n@media (min-width: 1768px) {\n.customAction1 {\n    right: 80px !important;\n}\n}\n.btn:focus {\n  box-shadow: 0 0 0 0.1rem rgba(0, 123, 255, 0.25) !important ;\n}\n", ""]);
 
 // exports
 
@@ -1458,22 +1537,6 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "row" }, [
-    _c(
-      "a",
-      { staticClass: "btn btn-secondary", attrs: { href: _vm.admissionUrl } },
-      [_vm._v("Go to Admission")]
-    ),
-    _vm._v(" "),
-    _c(
-      "a",
-      { staticClass: "btn btn-primary", attrs: { href: _vm.cashbookUrl } },
-      [_vm._v("Go to Cashbook")]
-    ),
-    _vm._v(" "),
-    _c("br"),
-    _vm._v(" "),
-    _c("br"),
-    _vm._v(" "),
     _c("div", { staticClass: "m-1" }, [
       _c(
         "button",
@@ -1486,6 +1549,64 @@ var render = function() {
           }
         },
         [_vm._v("\n      Create Ledger\n    ")]
+      ),
+      _vm._v(" "),
+      _c(
+        "a",
+        { staticClass: "btn btn-secondary", attrs: { href: _vm.admissionUrl } },
+        [_vm._v("Go to Admission")]
+      ),
+      _vm._v(" "),
+      _c(
+        "a",
+        { staticClass: "btn btn-primary", attrs: { href: _vm.cashbookUrl } },
+        [_vm._v("Go to Cashbook")]
+      )
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "ml-12" }, [
+      _c("label", { attrs: { for: "lable" } }, [_vm._v("Filter")]),
+      _vm._v(" "),
+      _c(
+        "select",
+        {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.filter.payment_mode,
+              expression: "filter.payment_mode"
+            }
+          ],
+          attrs: { name: "payment" },
+          on: {
+            change: [
+              function($event) {
+                var $$selectedVal = Array.prototype.filter
+                  .call($event.target.options, function(o) {
+                    return o.selected
+                  })
+                  .map(function(o) {
+                    var val = "_value" in o ? o._value : o.value
+                    return val
+                  })
+                _vm.$set(
+                  _vm.filter,
+                  "payment_mode",
+                  $event.target.multiple ? $$selectedVal : $$selectedVal[0]
+                )
+              },
+              function($event) {
+                return _vm.onFilterChange()
+              }
+            ]
+          }
+        },
+        [
+          _c("option", { attrs: { value: "debit" } }, [_vm._v("Debit")]),
+          _vm._v(" "),
+          _c("option", { attrs: { value: "credit" } }, [_vm._v("Credit")])
+        ]
       )
     ]),
     _vm._v(" "),
@@ -1713,7 +1834,57 @@ var render = function() {
           ],
           2
         )
-      ])
+      ]),
+      _vm._v(" "),
+      _c(
+        "svg",
+        {
+          staticStyle: { cursor: "pointer" },
+          attrs: {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 20 20",
+            fill: "currentColor",
+            height: "20",
+            width: "20"
+          },
+          on: { click: _vm.lastPagePaginate }
+        },
+        [
+          _c("path", {
+            attrs: {
+              "fill-rule": "evenodd",
+              d:
+                "M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z",
+              "clip-rule": "evenodd"
+            }
+          })
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "svg",
+        {
+          staticStyle: { cursor: "pointer" },
+          attrs: {
+            xmlns: "http://www.w3.org/2000/svg",
+            viewBox: "0 0 20 20",
+            fill: "currentColor",
+            height: "20",
+            width: "20"
+          },
+          on: { click: _vm.nextPagePaginate }
+        },
+        [
+          _c("path", {
+            attrs: {
+              "fill-rule": "evenodd",
+              d:
+                "M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z",
+              "clip-rule": "evenodd"
+            }
+          })
+        ]
+      )
     ]),
     _vm._v(" "),
     _c(

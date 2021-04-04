@@ -18,6 +18,30 @@
         Create Cashbook
       </button>
     </div>
+    <div class="ml-12">
+      <label for="lable">Filter Debit/Credit</label>
+      <select
+        name="payment"
+        v-model="filter.payment_type"
+        @change="onFilterPaymentTypeChange()"
+      >
+        <option value="">All</option>
+        <option value="debit">Debit</option>
+        <option value="credit">Credit</option>
+      </select>
+    </div>
+    <div class="ml-12">
+      <label for="lable">Filter Online/Offline</label>
+      <select
+        name="payment"
+        v-model="filter.payment_mode"
+        @change="onFilterPaymentModeChange()"
+      >
+        <option value="">All</option>
+        <option value="online">Online</option>
+        <option value="offline">Offline</option>
+      </select>
+    </div>
     <div class="table-responsive">
       <table class="table">
         <thead>
@@ -64,7 +88,7 @@
                     style="cursor: pointer"
                     @click="editCashbook(cashbook, index)"
                   >
-                    Edited
+                    Edit
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 20 20"
@@ -106,6 +130,36 @@
         </tbody>
       </table>
     </div>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 20 20"
+      fill="currentColor"
+      height="20"
+      width="20"
+      style="cursor: pointer"
+      @click="lastPagePaginate"
+    >
+      <path
+        fill-rule="evenodd"
+        d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z"
+        clip-rule="evenodd"
+      />
+    </svg>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 20 20"
+      fill="currentColor"
+      height="20"
+      width="20"
+      style="cursor: pointer"
+      @click="nextPagePaginate"
+    >
+      <path
+        fill-rule="evenodd"
+        d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+        clip-rule="evenodd"
+      />
+    </svg>
     <div
       class="modal fade"
       id="cashbookModal"
@@ -291,10 +345,19 @@ export default {
       showDotBool: false,
       ledgerUrl: "",
       admissionUrl: "",
+      filter: {
+        payment_mode: "",
+        payment_type: "",
+      },
+      cashbookUrl: "/api/channel/get/cashbook/data?page=",
+      currentPage: 1,
+      lastPage: "",
+      mainCashbookUrl: "",
     };
   },
   created() {
     this.channelId = this.channelid;
+    this.mainCashbookUrl = this.cashbookUrl;
     this.getCashbookData();
     this.getTheAdmissionLedgerUrl();
   },
@@ -306,6 +369,63 @@ export default {
     },
   },
   methods: {
+    lastPagePaginate() {
+      if (this.currentPage === 1) {
+        Vue.toasted.success("You are in first page", {
+          position: "top-center",
+          duration: 5000,
+        });
+      }
+      if (this.currentPage > 1) {
+        this.currentPage = this.currentPage - 1;
+        this.getCashbookData();
+      }
+    },
+    nextPagePaginate() {
+      if (this.currentPage === this.lastPage) {
+        Vue.toasted.success("You are in Last page", {
+          position: "top-center",
+          duration: 5000,
+        });
+      }
+      if (this.currentPage < this.lastPage) {
+        this.currentPage = this.currentPage + 1;
+        this.getCashbookData();
+      }
+    },
+    urlGenerator() {
+      this.mainCashbookUrl =
+        this.cashbookUrl +
+        this.currentPage +
+        "&payment_mode=" +
+        this.filter.payment_mode +
+        "&payment_type=" +
+        this.filter.payment_type;
+    },
+    onFilterPaymentModeChange() {
+      this.getCashbookData();
+    },
+    onFilterPaymentTypeChange() {
+      this.getCashbookData();
+    },
+    getCashbookData() {
+      this.urlGenerator();
+      axios
+        .get(this.mainCashbookUrl)
+        .then((response) => {
+          this.cashbookData = response.data.cashbooks.data;
+          this.currentPage = response.data.cashbooks.current_page;
+          this.lastPage = response.data.cashbooks.last_page;
+          this.ledgerData = response.data.ledgers;
+        })
+        .catch((errors) => {
+          this.cashbookDataFailed = true;
+          Vue.toasted.error("Something went wrong", {
+            position: "top-center",
+            duration: 5000,
+          });
+        });
+    },
     getTheAdmissionLedgerUrl() {
       let url = location.pathname.split("/");
       let url2 = location.pathname.split("/");
@@ -333,21 +453,6 @@ export default {
           }
         })
         .catch((errors) => {
-          Vue.toasted.error("Something went wrong", {
-            position: "top-center",
-            duration: 5000,
-          });
-        });
-    },
-    getCashbookData() {
-      axios
-        .get("/api/channel/get/cashbook/data")
-        .then((response) => {
-          this.cashbookData = response.data.cashbooks;
-          this.ledgerData = response.data.ledgers;
-        })
-        .catch((errors) => {
-          this.cashbookDataFailed = true;
           Vue.toasted.error("Something went wrong", {
             position: "top-center",
             duration: 5000,

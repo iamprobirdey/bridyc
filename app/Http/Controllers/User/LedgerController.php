@@ -7,15 +7,28 @@ use App\ChannelAccountantLedger;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
+use DB;
 
 class LedgerController extends Controller
 {
-    public function getLedgerData()
+    public function getLedgerData(Request $request)
     {
-        $channelLedgerData = ChannelAccountantLedger::select(['id', 'channel_id', 'name', 'payment_type', 'balance'])
-            ->where('channel_accountant_ledger_id', null)
-            ->get();
-        //channel_accountant_ledger_id
+        $channelLedgerData = DB::table('channel_accountant_ledgers');
+
+        $channelLedgerData->select('id', 'channel_id', 'name', 'payment_type', 'balance');
+
+        if ($request->has('payment_mode') && $request->input('payment_mode')) {
+            $channelLedgerData = $channelLedgerData->where('payment_type', $request->input('payment_mode'));
+        }
+
+        $channelLedgerData->where('channel_accountant_ledger_id', null);
+
+        $channelLedgerData = $channelLedgerData->paginate(2);
+
+        //dd($channelLedgerData);
+        // $channelLedgerData = ChannelAccountantLedger::select(['id', 'channel_id', 'name', 'payment_type', 'balance'])
+        //     ->where('channel_accountant_ledger_id', null)
+        //     ->get();
         return response()->json([
             'data' => $channelLedgerData
         ]);
@@ -26,6 +39,7 @@ class LedgerController extends Controller
         $channelLedgerData = ChannelAccountantLedger::select(['id', 'channel_id', 'name', 'payment_type', 'balance'])
             ->where('channel_accountant_ledger_id', $ledgerId)
             ->get();
+
         return response()->json([
             'data' => $channelLedgerData
         ]);

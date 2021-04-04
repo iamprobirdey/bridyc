@@ -1,5 +1,6 @@
 <?php
 
+
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -8,7 +9,23 @@ Auth::routes(['verify' => true]);
 
 
 
-// Route::get('test', 'Teacher\PhoneNumberVerificationController@phoneVerification');
+Route::get('test', function () {
+    $users = DB::table('users');
+
+    $users = $users->paginate(2);
+    //dd($users);
+    $channelLedgerData = DB::table('channel_accountant_ledgers');
+
+    dd($channelLedgerData->paginate());
+    dd($channelLedgerData);
+    $channelLedgerData->select('id', 'channel_id', 'name', 'payment_type', 'balance');
+
+    // if ($request->has('payment_mode') && $request->input('payment_mode')) {
+    //     $channelLedgerData = $channelLedgerData->where('payment_type', $request->input('payment_mode'));
+    // }
+
+    $channelLedgerData->where('channel_accountant_ledger_id', null);
+});
 
 // Route::get('google/login', 'Auth\GoogleLoginController@getGoogleLogIn')->middleware('guest');
 // Route::get('google/response', 'Auth\GoogleLoginController@getBackGoogleValiationStore')->middleware('guest');

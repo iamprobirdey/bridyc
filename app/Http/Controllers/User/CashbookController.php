@@ -8,15 +8,31 @@ use App\ChannelAccountantLedger;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Validation\Rule;
+use DB;
 
 use function PHPSTORM_META\map;
 
 class CashbookController extends Controller
 {
-    public function getCashbookData()
+    public function getCashbookData(Request $request)
     {
-        $cashbookData =  ChannelAccountantCashbook::with('ledger')->get();
+        //$cashbookData = DB::table('channel_accountant_cashbooks');
+        $cashbookData = new ChannelAccountantCashbook();
+
+        if ($request->has('payment_mode') && $request->input('payment_mode')) {
+            $cashbookData = $cashbookData->where('payment_mode', $request->input('payment_mode'));
+        }
+
+        if ($request->has('payment_type') && $request->input('payment_type')) {
+            $cashbookData = $cashbookData->where('payment_type', $request->input('payment_type'));
+        }
+
+        $cashbookData =  $cashbookData->with('ledger');
+
+        $cashbookData = $cashbookData->paginate(2);
+
         $ledgerData = ChannelAccountantLedger::all();
+
         return response()->json([
             'message'  => true,
             'cashbooks' => $cashbookData,

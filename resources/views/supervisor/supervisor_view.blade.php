@@ -16,8 +16,11 @@ $form_data = json_decode($supervisorData[0]->form_data);
 @endphp
 <div class="container">
 
-    <div class="d-flex flex-row-reverse">
-        <button class="btn btn-outline-primary btn-sm print-invoice1 ">Print</button>
+    <div class="d-flex justify-content-end ">
+        <button class="btn btn-outline-primary btn-sm print-invoice1 m-1">Print</button>
+        <button class="btn btn-outline-primary btn-sm m-1">
+            <img class="svgAction" src="/images/custom/icons/download.svg" alt="">
+        </button>
     </div>
 
     <div class="printBox">

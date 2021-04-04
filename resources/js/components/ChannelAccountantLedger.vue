@@ -32,20 +32,30 @@
     right: 80px !important;
   }
 }
+.btn:focus {
+  box-shadow: 0 0 0 0.1rem rgba(0, 123, 255, 0.25) !important ;
+}
 </style>
 <template>
   <div class="row">
-    <a :href="admissionUrl" class="btn btn-secondary">Go to Admission</a>
-    <a :href="cashbookUrl" class="btn btn-primary">Go to Cashbook</a>
-    <br />
-    <br />
-
     <div class="m-1">
       <button @click="createNewLedger()" class="btn btn-primary">
         Create Ledger
       </button>
+      <a :href="admissionUrl" class="btn btn-secondary">Go to Admission</a>
+      <a :href="cashbookUrl" class="btn btn-primary">Go to Cashbook</a>
     </div>
-
+    <div class="ml-12">
+      <label for="lable">Filter</label>
+      <select
+        name="payment"
+        v-model="filter.payment_mode"
+        @change="onFilterChange()"
+      >
+        <option value="debit">Debit</option>
+        <option value="credit">Credit</option>
+      </select>
+    </div>
     <div class="table-responsive">
       <table class="table">
         <thead>
@@ -169,6 +179,36 @@
           </button>
         </tbody>
       </table>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 20 20"
+        fill="currentColor"
+        height="20"
+        width="20"
+        style="cursor: pointer"
+        @click="lastPagePaginate"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z"
+          clip-rule="evenodd"
+        />
+      </svg>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 20 20"
+        fill="currentColor"
+        height="20"
+        width="20"
+        style="cursor: pointer"
+        @click="nextPagePaginate"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z"
+          clip-rule="evenodd"
+        />
+      </svg>
     </div>
     <div
       class="modal fade"
@@ -478,6 +518,12 @@ export default {
       loader: true,
       showSubDot: null,
       showSubDotBool: false,
+      filter: {
+        payment_mode: "",
+      },
+      ledgerUrl: "/api/channel/get/ledger/data?page=",
+      currentPage: 1,
+      lastPage: "",
     };
   },
   props: {
@@ -488,11 +534,36 @@ export default {
   },
   created() {
     this.channelId = this.channelid;
+    this.mainLedgerUrl = this.ledgerUrl;
     this.getTheLedgerData();
     this.getTheAdmissionCashbookUrl();
   },
   mounted() {},
   methods: {
+    lastPagePaginate() {
+      if (this.currentPage === 1) {
+        Vue.toasted.success("You are in first page", {
+          position: "top-center",
+          duration: 5000,
+        });
+      }
+      if (this.currentPage > 1) {
+        this.currentPage = this.currentPage - 1;
+        this.onFilterChange();
+      }
+    },
+    nextPagePaginate() {
+      if (this.currentPage === this.lastPage) {
+        Vue.toasted.success("You are in Last page", {
+          position: "top-center",
+          duration: 5000,
+        });
+      }
+      if (this.currentPage < this.lastPage) {
+        this.currentPage = this.currentPage + 1;
+        this.onFilterChange();
+      }
+    },
     showSubLedgerDot(index) {
       this.showSubDot = index;
       this.showSubDotBool = !this.showSubDotBool;
@@ -512,10 +583,12 @@ export default {
     },
     getTheLedgerData() {
       axios
-        .get("/api/channel/get/ledger/data")
+        .get(this.mainLedgerUrl)
         .then((response) => {
           this.ledgerDataFailed = false;
-          this.ledgerData = response.data.data;
+          this.ledgerData = response.data.data.data;
+          this.currentPage = response.data.data.current_page;
+          this.lastPage = response.data.data.last_page;
         })
         .catch((errors) => {
           Vue.toasted.error("Something went wrong", {
@@ -524,6 +597,14 @@ export default {
           });
           this.ledgerDataFailed = true;
         });
+    },
+    onFilterChange() {
+      this.mainLedgerUrl =
+        this.ledgerUrl +
+        this.currentPage +
+        "&payment_mode=" +
+        this.filter.payment_mode;
+      this.getTheLedgerData();
     },
     deleteParentLedger(ledgerId, index) {
       axios

@@ -1,7 +1,7 @@
 <template>
   <div>
     <div
-      class="modal fade"
+      class="modal fade bd-example-modal-lg"
       id="admission"
       tabindex="-1"
       role="dialog"
@@ -257,10 +257,12 @@
                   >{{ serverError.category }}</span
                 >
               </div>
-              <button type="button" class="btn btn-success" disabled>
-                Previous
-              </button>
-              <button type="submit" class="btn btn-success">Next</button>
+              <div class="d-flex justify-content-between">
+                <button type="button" class="btn btn-success" disabled>
+                  Previous
+                </button>
+                <button type="submit" class="btn btn-success">Next</button>
+              </div>
             </form>
 
             <form @submit.prevent="submitForm()" v-if="step === 2">
@@ -367,15 +369,16 @@
                   >{{ serverError.balance_taken }}</span
                 >
               </div>
-
-              <button
-                type="button"
-                class="btn btn-success"
-                @click="previousStep"
-              >
-                Previous
-              </button>
-              <button type="submit" class="btn btn-success">Submit</button>
+              <div class="d-flex justify-content-between">
+                <button
+                  type="button"
+                  class="btn btn-success"
+                  @click="previousStep"
+                >
+                  Previous
+                </button>
+                <button type="submit" class="btn btn-success">Submit</button>
+              </div>
             </form>
           </div>
         </div>

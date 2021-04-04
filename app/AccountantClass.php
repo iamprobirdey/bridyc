@@ -6,5 +6,5 @@ use Illuminate\Database\Eloquent\Model;
 
 class AccountantClass extends Model
 {
-    protected $fillable = ['class', 'code'];
+    protected $fillable = ['name', 'code'];
 }

@@ -359,6 +359,60 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -386,11 +440,20 @@ __webpack_require__.r(__webpack_exports__);
       showDot: null,
       showDotBool: false,
       ledgerUrl: "",
-      admissionUrl: ""
+      admissionUrl: "",
+      filter: {
+        payment_mode: "",
+        payment_type: ""
+      },
+      cashbookUrl: "/api/channel/get/cashbook/data?page=",
+      currentPage: 1,
+      lastPage: "",
+      mainCashbookUrl: ""
     };
   },
   created: function created() {
     this.channelId = this.channelid;
+    this.mainCashbookUrl = this.cashbookUrl;
     this.getCashbookData();
     this.getTheAdmissionLedgerUrl();
   },
@@ -402,6 +465,58 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   methods: {
+    lastPagePaginate: function lastPagePaginate() {
+      if (this.currentPage === 1) {
+        Vue.toasted.success("You are in first page", {
+          position: "top-center",
+          duration: 5000
+        });
+      }
+
+      if (this.currentPage > 1) {
+        this.currentPage = this.currentPage - 1;
+        this.getCashbookData();
+      }
+    },
+    nextPagePaginate: function nextPagePaginate() {
+      if (this.currentPage === this.lastPage) {
+        Vue.toasted.success("You are in Last page", {
+          position: "top-center",
+          duration: 5000
+        });
+      }
+
+      if (this.currentPage < this.lastPage) {
+        this.currentPage = this.currentPage + 1;
+        this.getCashbookData();
+      }
+    },
+    urlGenerator: function urlGenerator() {
+      this.mainCashbookUrl = this.cashbookUrl + this.currentPage + "&payment_mode=" + this.filter.payment_mode + "&payment_type=" + this.filter.payment_type;
+    },
+    onFilterPaymentModeChange: function onFilterPaymentModeChange() {
+      this.getCashbookData();
+    },
+    onFilterPaymentTypeChange: function onFilterPaymentTypeChange() {
+      this.getCashbookData();
+    },
+    getCashbookData: function getCashbookData() {
+      var _this = this;
+
+      this.urlGenerator();
+      axios.get(this.mainCashbookUrl).then(function (response) {
+        _this.cashbookData = response.data.cashbooks.data;
+        _this.currentPage = response.data.cashbooks.current_page;
+        _this.lastPage = response.data.cashbooks.last_page;
+        _this.ledgerData = response.data.ledgers;
+      })["catch"](function (errors) {
+        _this.cashbookDataFailed = true;
+        Vue.toasted.error("Something went wrong", {
+          position: "top-center",
+          duration: 5000
+        });
+      });
+    },
     getTheAdmissionLedgerUrl: function getTheAdmissionLedgerUrl() {
       var url = location.pathname.split("/");
       var url2 = location.pathname.split("/");
@@ -421,27 +536,13 @@ __webpack_require__.r(__webpack_exports__);
       $("#cashbookModal").modal("show");
     },
     deleteCashbook: function deleteCashbook(cashbookId, index) {
-      var _this = this;
+      var _this2 = this;
 
       axios.get("/api/channel/delete/cashbook/" + cashbookId).then(function (response) {
         if (response.data.msg) {
-          _this.cashbookData.splice(index, 1);
+          _this2.cashbookData.splice(index, 1);
         }
       })["catch"](function (errors) {
-        Vue.toasted.error("Something went wrong", {
-          position: "top-center",
-          duration: 5000
-        });
-      });
-    },
-    getCashbookData: function getCashbookData() {
-      var _this2 = this;
-
-      axios.get("/api/channel/get/cashbook/data").then(function (response) {
-        _this2.cashbookData = response.data.cashbooks;
-        _this2.ledgerData = response.data.ledgers;
-      })["catch"](function (errors) {
-        _this2.cashbookDataFailed = true;
         Vue.toasted.error("Something went wrong", {
           position: "top-center",
           duration: 5000
@@ -1223,6 +1324,104 @@ var render = function() {
       )
     ]),
     _vm._v(" "),
+    _c("div", { staticClass: "ml-12" }, [
+      _c("label", { attrs: { for: "lable" } }, [_vm._v("Filter Debit/Credit")]),
+      _vm._v(" "),
+      _c(
+        "select",
+        {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.filter.payment_type,
+              expression: "filter.payment_type"
+            }
+          ],
+          attrs: { name: "payment" },
+          on: {
+            change: [
+              function($event) {
+                var $$selectedVal = Array.prototype.filter
+                  .call($event.target.options, function(o) {
+                    return o.selected
+                  })
+                  .map(function(o) {
+                    var val = "_value" in o ? o._value : o.value
+                    return val
+                  })
+                _vm.$set(
+                  _vm.filter,
+                  "payment_type",
+                  $event.target.multiple ? $$selectedVal : $$selectedVal[0]
+                )
+              },
+              function($event) {
+                return _vm.onFilterPaymentTypeChange()
+              }
+            ]
+          }
+        },
+        [
+          _c("option", { attrs: { value: "" } }, [_vm._v("All")]),
+          _vm._v(" "),
+          _c("option", { attrs: { value: "debit" } }, [_vm._v("Debit")]),
+          _vm._v(" "),
+          _c("option", { attrs: { value: "credit" } }, [_vm._v("Credit")])
+        ]
+      )
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "ml-12" }, [
+      _c("label", { attrs: { for: "lable" } }, [
+        _vm._v("Filter Online/Offline")
+      ]),
+      _vm._v(" "),
+      _c(
+        "select",
+        {
+          directives: [
+            {
+              name: "model",
+              rawName: "v-model",
+              value: _vm.filter.payment_mode,
+              expression: "filter.payment_mode"
+            }
+          ],
+          attrs: { name: "payment" },
+          on: {
+            change: [
+              function($event) {
+                var $$selectedVal = Array.prototype.filter
+                  .call($event.target.options, function(o) {
+                    return o.selected
+                  })
+                  .map(function(o) {
+                    var val = "_value" in o ? o._value : o.value
+                    return val
+                  })
+                _vm.$set(
+                  _vm.filter,
+                  "payment_mode",
+                  $event.target.multiple ? $$selectedVal : $$selectedVal[0]
+                )
+              },
+              function($event) {
+                return _vm.onFilterPaymentModeChange()
+              }
+            ]
+          }
+        },
+        [
+          _c("option", { attrs: { value: "" } }, [_vm._v("All")]),
+          _vm._v(" "),
+          _c("option", { attrs: { value: "online" } }, [_vm._v("Online")]),
+          _vm._v(" "),
+          _c("option", { attrs: { value: "offline" } }, [_vm._v("Offline")])
+        ]
+      )
+    ]),
+    _vm._v(" "),
     _c("div", { staticClass: "table-responsive" }, [
       _c("table", { staticClass: "table" }, [
         _vm._m(0),
@@ -1293,7 +1492,7 @@ var render = function() {
                             },
                             [
                               _vm._v(
-                                "\n                  Edited\n                  "
+                                "\n                  Edit\n                  "
                               ),
                               _c(
                                 "svg",
@@ -1381,6 +1580,56 @@ var render = function() {
         )
       ])
     ]),
+    _vm._v(" "),
+    _c(
+      "svg",
+      {
+        staticStyle: { cursor: "pointer" },
+        attrs: {
+          xmlns: "http://www.w3.org/2000/svg",
+          viewBox: "0 0 20 20",
+          fill: "currentColor",
+          height: "20",
+          width: "20"
+        },
+        on: { click: _vm.lastPagePaginate }
+      },
+      [
+        _c("path", {
+          attrs: {
+            "fill-rule": "evenodd",
+            d:
+              "M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z",
+            "clip-rule": "evenodd"
+          }
+        })
+      ]
+    ),
+    _vm._v(" "),
+    _c(
+      "svg",
+      {
+        staticStyle: { cursor: "pointer" },
+        attrs: {
+          xmlns: "http://www.w3.org/2000/svg",
+          viewBox: "0 0 20 20",
+          fill: "currentColor",
+          height: "20",
+          width: "20"
+        },
+        on: { click: _vm.nextPagePaginate }
+      },
+      [
+        _c("path", {
+          attrs: {
+            "fill-rule": "evenodd",
+            d:
+              "M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z",
+            "clip-rule": "evenodd"
+          }
+        })
+      ]
+    ),
     _vm._v(" "),
     _c(
       "div",

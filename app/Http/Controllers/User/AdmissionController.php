@@ -86,9 +86,27 @@ class AdmissionController extends Controller
         ]);
     }
 
-    public function getAdmissionData(Channel $channel)
+    public function getAdmissionData(Channel $channel, Request $request)
     {
-        $accountantAdmssion =  ChannelAccountantAdmission::where('channel_id', $channel->id)->with('standard.accountclass')->get();
+        $accountantAdmssion = new ChannelAccountantAdmission();
+
+        if ($request->has('search') && $request->input('search')) {
+            $accountantAdmssion = $accountantAdmssion->where('admission_number', $request->input('search'));
+        }
+
+        if ($request->has('category') && $request->input('category')) {
+            $accountantAdmssion = $accountantAdmssion->where('category', $request->input('category'));
+        }
+
+        $accountantAdmssion = $accountantAdmssion->where('channel_id', $channel->id);
+
+        $accountantAdmssion = $accountantAdmssion->with('standard.accountclass');
+
+        $accountantAdmssion = $accountantAdmssion->get();
+        // $accountantAdmssion =  ChannelAccountantAdmission::
+        //where('channel_id', $channel->id)
+        // ->with('standard.accountclass')
+        // ->get();
         return response()->json([
             'data' => $accountantAdmssion
         ]);
