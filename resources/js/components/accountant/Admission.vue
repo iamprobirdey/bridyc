@@ -1,3 +1,10 @@
+<style scoped>
+.s-md {
+  border: 2px dashed #2c3e50ab;
+  border-radius: 4px;
+  padding: 5px 7px 5px 7px !important;
+}
+</style>
 <template>
   <div>
     <div
@@ -20,7 +27,9 @@
           </button>
 
           <div class="modal-body">
-            <h1>Admission</h1>
+            <div class="d-flex justify-content-center">
+              <h3 class="s-md text-center">Admission</h3>
+            </div>
             <form
               @submit.prevent="firstStep('step1')"
               data-vv-scope="step1"
@@ -34,7 +43,7 @@
                     serverError.admission_number != '',
                 }"
               >
-                <label for="">Enter Admission Number</label>
+                <label for="">Admission Number</label>
                 <input
                   v-model="step1.admission_number"
                   v-validate="'required|numeric'"
@@ -66,7 +75,7 @@
                     errors.has('serverError.name') || serverError.name != '',
                 }"
               >
-                <label for="">Enter Student Name</label>
+                <label for="">Student Name</label>
                 <input
                   v-model="step1.name"
                   v-validate="'required'"
@@ -77,7 +86,7 @@
                     'form-control': true,
                     'is-invalid': errors.has('step1.name'),
                   }"
-                  placeholder="Enter Name"
+                  placeholder="Enter Student Name"
                 />
                 <span
                   v-show="errors.has('step1.name')"
@@ -91,72 +100,75 @@
                 >
               </div>
 
-              <div
-                class="form-group"
-                :class="{
-                  'has-error':
-                    errors.has('serverError.class') || serverError.class != '',
-                }"
-              >
-                <label for="">Select Class</label>
-                <select
-                  v-model="step1.class"
-                  class="form-control"
-                  name="class"
-                  v-validate="'required'"
-                >
-                  <option value="" disabled>Select any Class</option>
-                  <option
-                    v-for="(data, index) in classData"
-                    :key="index"
-                    :value="data.id"
-                  >
-                    {{ data.name }}
-                  </option>
-                </select>
-                <span
-                  v-show="errors.has('step1.class')"
-                  class="text-danger text-center"
-                  >{{ errors.first("step1.class") }}</span
-                >
-                <span
-                  v-show="serverError.class != ''"
-                  class="help text-danger"
-                  >{{ serverError.class }}</span
-                >
-              </div>
-
-              <div
-                class="form-group"
-                :class="{
-                  'has-error':
-                    errors.has('serverError.roll_number') ||
-                    serverError.roll_number != '',
-                }"
-              >
-                <label for="">Enter Roll Number</label>
-                <input
-                  v-model="step1.roll_number"
-                  v-validate="'required|numeric'"
-                  data-vv-delay="20"
-                  name="roll_number"
-                  type="text"
+              <div class="row">
+                <div
+                  class="form-group col-6"
                   :class="{
-                    'form-control': true,
-                    'is-invalid': errors.has('step1.roll_number'),
+                    'has-error':
+                      errors.has('serverError.class') ||
+                      serverError.class != '',
                   }"
-                  placeholder="Enter Roll Number"
-                />
-                <span
-                  v-show="errors.has('step1.roll_number')"
-                  class="text-danger text-center"
-                  >{{ errors.first("step1.roll_number") }}</span
                 >
-                <span
-                  v-show="serverError.roll_number != ''"
-                  class="help text-danger"
-                  >{{ serverError.roll_number }}</span
+                  <label for="">Select Class</label>
+                  <select
+                    v-model="step1.class"
+                    class="form-control"
+                    name="class"
+                    v-validate="'required'"
+                  >
+                    <option value="" disabled>Select any Class</option>
+                    <option
+                      v-for="(data, index) in classData"
+                      :key="index"
+                      :value="data.id"
+                    >
+                      {{ data.name }}
+                    </option>
+                  </select>
+                  <span
+                    v-show="errors.has('step1.class')"
+                    class="text-danger text-center"
+                    >{{ errors.first("step1.class") }}</span
+                  >
+                  <span
+                    v-show="serverError.class != ''"
+                    class="help text-danger"
+                    >{{ serverError.class }}</span
+                  >
+                </div>
+
+                <div
+                  class="form-group col-6"
+                  :class="{
+                    'has-error':
+                      errors.has('serverError.roll_number') ||
+                      serverError.roll_number != '',
+                  }"
                 >
+                  <label for="">Roll Number</label>
+                  <input
+                    v-model="step1.roll_number"
+                    v-validate="'required|numeric'"
+                    data-vv-delay="20"
+                    name="roll_number"
+                    type="text"
+                    :class="{
+                      'form-control': true,
+                      'is-invalid': errors.has('step1.roll_number'),
+                    }"
+                    placeholder="Enter Roll Number"
+                  />
+                  <span
+                    v-show="errors.has('step1.roll_number')"
+                    class="text-danger text-center"
+                    >{{ errors.first("step1.roll_number") }}</span
+                  >
+                  <span
+                    v-show="serverError.roll_number != ''"
+                    class="help text-danger"
+                    >{{ serverError.roll_number }}</span
+                  >
+                </div>
               </div>
 
               <div
@@ -166,7 +178,7 @@
                     errors.has('serverError.phone') || serverError.phone != '',
                 }"
               >
-                <label for="">Enter Phone Number</label>
+                <label for="">Phone Number</label>
                 <input
                   v-model="step1.phone"
                   v-validate="'required|numeric|min:10|max:10'"
@@ -199,7 +211,7 @@
                     serverError.father_name != '',
                 }"
               >
-                <label for="">Enter Father Name</label>
+                <label for="">Father Name</label>
                 <input
                   v-model="step1.father_name"
                   v-validate="'required'"
@@ -232,7 +244,7 @@
                     serverError.category != '',
                 }"
               >
-                <label for="">Enter Category</label>
+                <label for="">Category</label>
 
                 <select
                   v-model="step1.category"
@@ -310,7 +322,7 @@
                     serverError.payment_mode != '',
                 }"
               >
-                <label for="">Enter Payment Mode</label>
+                <label for="">Payment Mode</label>
                 <select
                   v-model="admissionFormData.payment_mode"
                   class="form-control"
@@ -341,7 +353,7 @@
                     serverError.balance_taken != '',
                 }"
               >
-                <label for="">Enter the Admission Amount</label>
+                <label for="">the Admission Amount</label>
                 <br />
                 <label for="" class="text-danger"
                   >Expected amount to be taken {{ balanceTaken }}</label

@@ -38,13 +38,7 @@
 </style>
 <template>
   <div class="row">
-    <div class="m-1">
-      <button @click="createNewLedger()" class="btn btn-primary">
-        Create Ledger
-      </button>
-      <a :href="admissionUrl" class="btn btn-secondary">Go to Admission</a>
-      <a :href="cashbookUrl" class="btn btn-primary">Go to Cashbook</a>
-    </div>
+    <div class="m-1"></div>
     <div class="ml-12">
       <label for="lable">Filter</label>
       <select
@@ -55,6 +49,21 @@
         <option value="debit">Debit</option>
         <option value="credit">Credit</option>
       </select>
+    </div>
+    <div class="col d-flex justify-content-between">
+      <div class="m-1">
+        <a @click="createNewLedger()" class="btn btn-primary">
+          Create Ledger
+        </a>
+      </div>
+      <div class="col d-flex justify-content-end">
+        <div class="m-1">
+          <a :href="admissionUrl" class="btn btn-secondary">Go to Admission</a>
+        </div>
+        <div class="m-1">
+          <a :href="cashbookUrl" class="btn btn-primary">Go to Cashbook</a>
+        </div>
+      </div>
     </div>
     <div class="table-responsive">
       <table class="table">
@@ -233,7 +242,7 @@
 
           <div class="modal-body">
             <form @submit.prevent="submitForm()">
-              <h1 v-if="urlDecider === 'ledger-add'">Create A New Ledger</h1>
+              <h3 v-if="urlDecider === 'ledger-add'">Create a new Ledger</h3>
               <h1 v-else-if="urlDecider === 'ledger-edit'">Edit a Ledger</h1>
               <h1 v-else>Create a Sub Ledger</h1>
               <div
@@ -344,7 +353,7 @@
                   data-vv-delay="20"
                   name="admission_check"
                   :class="{
-                    'form-control': true,
+                    'ml-1': true,
                     'is-invalid': errors.has('admission_check'),
                   }"
                   placeholder="Balance"

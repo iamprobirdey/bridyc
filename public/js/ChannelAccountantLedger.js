@@ -581,6 +581,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -1537,32 +1546,7 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "row" }, [
-    _c("div", { staticClass: "m-1" }, [
-      _c(
-        "button",
-        {
-          staticClass: "btn btn-primary",
-          on: {
-            click: function($event) {
-              return _vm.createNewLedger()
-            }
-          }
-        },
-        [_vm._v("\n      Create Ledger\n    ")]
-      ),
-      _vm._v(" "),
-      _c(
-        "a",
-        { staticClass: "btn btn-secondary", attrs: { href: _vm.admissionUrl } },
-        [_vm._v("Go to Admission")]
-      ),
-      _vm._v(" "),
-      _c(
-        "a",
-        { staticClass: "btn btn-primary", attrs: { href: _vm.cashbookUrl } },
-        [_vm._v("Go to Cashbook")]
-      )
-    ]),
+    _c("div", { staticClass: "m-1" }),
     _vm._v(" "),
     _c("div", { staticClass: "ml-12" }, [
       _c("label", { attrs: { for: "lable" } }, [_vm._v("Filter")]),
@@ -1608,6 +1592,47 @@ var render = function() {
           _c("option", { attrs: { value: "credit" } }, [_vm._v("Credit")])
         ]
       )
+    ]),
+    _vm._v(" "),
+    _c("div", { staticClass: "col d-flex justify-content-between" }, [
+      _c("div", { staticClass: "m-1" }, [
+        _c(
+          "a",
+          {
+            staticClass: "btn btn-primary",
+            on: {
+              click: function($event) {
+                return _vm.createNewLedger()
+              }
+            }
+          },
+          [_vm._v("\n        Create Ledger\n      ")]
+        )
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "col d-flex justify-content-end" }, [
+        _c("div", { staticClass: "m-1" }, [
+          _c(
+            "a",
+            {
+              staticClass: "btn btn-secondary",
+              attrs: { href: _vm.admissionUrl }
+            },
+            [_vm._v("Go to Admission")]
+          )
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "m-1" }, [
+          _c(
+            "a",
+            {
+              staticClass: "btn btn-primary",
+              attrs: { href: _vm.cashbookUrl }
+            },
+            [_vm._v("Go to Cashbook")]
+          )
+        ])
+      ])
     ]),
     _vm._v(" "),
     _c("div", { staticClass: "table-responsive" }, [
@@ -1922,7 +1947,7 @@ var render = function() {
                   },
                   [
                     _vm.urlDecider === "ledger-add"
-                      ? _c("h1", [_vm._v("Create A New Ledger")])
+                      ? _c("h3", [_vm._v("Create a new Ledger")])
                       : _vm.urlDecider === "ledger-edit"
                       ? _c("h1", [_vm._v("Edit a Ledger")])
                       : _c("h1", [_vm._v("Create a Sub Ledger")]),
@@ -2216,7 +2241,7 @@ var render = function() {
                                 }
                               ],
                               class: {
-                                "form-control": true,
+                                "ml-1": true,
                                 "is-invalid": _vm.errors.has("admission_check")
                               },
                               attrs: {

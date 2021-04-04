@@ -32,63 +32,61 @@ video')
             <br>
             <div class="container">
                 <h2>Admission Details</h2>
-
-                <table class="table">
-                    <thead>
-                        <tr>
-                            <th scope="col">Admission Number</th>
-                            <th scope="col">Student Name</th>
-                            <th scope="col">Class</th>
-                            <th scope="col">Phone</th>
-                            <th scope="col">Category</th>
-                            <th scope="col">Total Balance</th>
-                            <th scope="col">Total Pending Balance</th>
-                            <th scope="col">Paid Balance</th>
-                            <th scope="col">Print Receipt</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @php
-                        //dd($admission);
-                        @endphp
-                        <tr>
-                            <td>
-                                {{$admission->admission_number}}
-                            </td>
-                            <td>
-                                {{$admission->name}}
-                            </td>
-                            <td>
-                                {{$admission->standard[0]->accountclass->name}}
-                            </td>
-                            <td>
-                                {{$admission->phone}}
-                            </td>
-                            <td>
-                                {{$admission->category}}
-                            </td>
-                            <td>
-                                {{$admission->total_balance}}
-                            </td>
-                            <td>
-                                {{$admission->old_balance}}
-                            </td>
-                            <td>
-                                {{$admission->balance_taken}}
-                            </td>
-                            <td>
-                                <a href="{{url()->full() . '/get'}}">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-                                        width="30" height="30" style="cursor: pointer; color: #6626a3">
-                                        <path fill-rule="evenodd"
-                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z"
-                                            clip-rule="evenodd" />
-                                    </svg>
-                                </a>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Admission Number</th>
+                                <th scope="col">Student Name</th>
+                                <th scope="col">Class</th>
+                                <th scope="col">Phone</th>
+                                <th scope="col">Category</th>
+                                <th scope="col">Total Balance</th>
+                                <th scope="col">Total Pending Balance</th>
+                                <th scope="col">Paid Balance</th>
+                                <th scope="col">Print Receipt</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @php
+                            //dd($admission);
+                            @endphp
+                            <tr>
+                                <td>
+                                    {{$admission->admission_number}}
+                                </td>
+                                <td>
+                                    {{$admission->name}}
+                                </td>
+                                <td>
+                                    {{$admission->standard[0]->accountclass->name}}
+                                </td>
+                                <td>
+                                    {{$admission->phone}}
+                                </td>
+                                <td>
+                                    {{$admission->category}}
+                                </td>
+                                <td>
+                                    {{$admission->total_balance}}
+                                </td>
+                                <td>
+                                    {{$admission->old_balance}}
+                                </td>
+                                <td>
+                                    {{$admission->balance_taken}}
+                                </td>
+                                <td>
+                                    <a href="{{url()->full() . '/get'}}">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="30" height="30" style="cursor: pointer; color: #6626a3">
+                                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z" clip-rule="evenodd" />
+                                        </svg>
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
                 <h2>Monthly Details</h2>
                 <table class="table">
                     <thead>
@@ -103,7 +101,7 @@ video')
                         @foreach ($admission->monthlybill as $item)
                         <tr>
                             <td>
-                                {{  $item->month->name  }}
+                                {{ $item->month->name  }}
                             </td>
                             <td>
                                 @php
@@ -118,11 +116,8 @@ video')
                             </td>
                             <td>
                                 <a href="{{url()->full() . '/get/'.$item->id}}">
-                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-                                        width="30" height="30" style="cursor: pointer; color: #6626a3">
-                                        <path fill-rule="evenodd"
-                                            d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z"
-                                            clip-rule="evenodd" />
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" width="30" height="30" style="cursor: pointer; color: #6626a3">
+                                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-8.707l-3-3a1 1 0 00-1.414 1.414L10.586 9H7a1 1 0 100 2h3.586l-1.293 1.293a1 1 0 101.414 1.414l3-3a1 1 0 000-1.414z" clip-rule="evenodd" />
                                     </svg>
                                 </a>
                             </td>
