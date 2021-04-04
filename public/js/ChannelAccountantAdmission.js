@@ -849,86 +849,91 @@ __webpack_require__.r(__webpack_exports__);
             if (element.id === _this4.admissionFormData.admission_ledger_id) {
               _this4.admissionFormData.total_balance = element.balance;
             }
-          });
+          }); //   if (
+          //     this.admissionFormData.balance_taken <=
+          //     this.admissionFormData.total_balance
+          //   ) {
 
-          if (_this4.admissionFormData.balance_taken <= _this4.admissionFormData.total_balance) {
-            axios.post("/api/channel/accountant/admission/data/" + _this4.channelId, _this4.admissionFormData).then(function (response) {
-              if (response.data.error) {
-                Vue.toasted.error("Something went wrong", {
-                  position: "top-center",
-                  duration: 5000
-                });
-              }
 
-              if (response.data.message === true) {
-                $("#admission").modal("hide");
-                Vue.toasted.success("New Admission has been entered", {
-                  position: "top-center",
-                  duration: 5000
-                });
-                _this4.step = 1;
-                _this4.admissionFormData.admission_number = "";
-                _this4.admissionFormData.name = "";
-                _this4.admissionFormData.roll_number = "";
-                _this4.admissionFormData.phone = "";
-                _this4.admissionFormData.father_name = "";
-                _this4.admissionFormData.category = "";
-                _this4.admissionFormData.admission_ledger_id = "";
-                _this4.admissionFormData.payment_mode = "";
-                _this4.admissionFormData.balance_taken = "";
-                _this4.admissionFormData.total_balance = "";
-
-                _this4.$emit("pass-admission-data-to-parent", response.data.data);
-              }
-            })["catch"](function (errors) {
+          axios.post("/api/channel/accountant/admission/data/" + _this4.channelId, _this4.admissionFormData).then(function (response) {
+            if (response.data.error) {
               Vue.toasted.error("Something went wrong", {
                 position: "top-center",
                 duration: 5000
               });
+            }
 
-              if (errors.response.data.errors.admission_number) {
-                _this4.step = 1;
-                _this4.serverError.admission_number = errors.response.data.errors.admission_number[0];
-              }
+            if (response.data.message === true) {
+              $("#admission").modal("hide");
+              Vue.toasted.success("New Admission has been entered", {
+                position: "top-center",
+                duration: 5000
+              });
+              _this4.step = 1;
+              _this4.admissionFormData.admission_number = "";
+              _this4.admissionFormData.name = "";
+              _this4.admissionFormData.roll_number = "";
+              _this4.admissionFormData.phone = "";
+              _this4.admissionFormData.father_name = "";
+              _this4.admissionFormData.category = "";
+              _this4.admissionFormData.admission_ledger_id = "";
+              _this4.admissionFormData.payment_mode = "";
+              _this4.admissionFormData.balance_taken = "";
+              _this4.admissionFormData.total_balance = "";
 
-              if (errors.response.data.errors.name) {
-                _this4.serverError.name = errors.response.data.errors.name[0];
-              }
-
-              if (errors.response.data.errors.roll_number) {
-                _this4.serverError.roll_number = errors.response.data.errors.roll_number[0];
-              }
-
-              if (errors.response.data.errors.phone) {
-                _this4.serverError.phone = errors.response.data.errors.phone[0];
-              }
-
-              if (errors.response.data.errors.father_name) {
-                _this4.serverError.father_name = errors.response.data.errors.father_name[0];
-              }
-
-              if (errors.response.data.errors.category) {
-                _this4.serverError.category = errors.response.data.errors.category[0];
-              }
-
-              if (errors.response.data.errors.admission_ledger_id) {
-                _this4.serverError.admission_ledger_id = errors.response.data.errors.admission_ledger_id[0];
-              }
-
-              if (errors.response.data.errors.payment_mode) {
-                _this4.serverError.payment_mode = errors.response.data.errors.payment_mode[0];
-              }
-
-              if (errors.response.data.errors.balance_taken) {
-                _this4.serverError.balance_taken = errors.response.data.errors.balance_taken[0];
-              }
-            });
-          } else {
-            Vue.toasted.error("Taken Balance cannot be more than Admission Fee", {
+              _this4.$emit("pass-admission-data-to-parent", response.data.data);
+            }
+          })["catch"](function (errors) {
+            Vue.toasted.error("Something went wrong", {
               position: "top-center",
-              duration: 6000
+              duration: 5000
             });
-          }
+
+            if (errors.response.data.errors.admission_number) {
+              _this4.step = 1;
+              _this4.serverError.admission_number = errors.response.data.errors.admission_number[0];
+            }
+
+            if (errors.response.data.errors.name) {
+              _this4.serverError.name = errors.response.data.errors.name[0];
+            }
+
+            if (errors.response.data.errors.roll_number) {
+              _this4.serverError.roll_number = errors.response.data.errors.roll_number[0];
+            }
+
+            if (errors.response.data.errors.phone) {
+              _this4.serverError.phone = errors.response.data.errors.phone[0];
+            }
+
+            if (errors.response.data.errors.father_name) {
+              _this4.serverError.father_name = errors.response.data.errors.father_name[0];
+            }
+
+            if (errors.response.data.errors.category) {
+              _this4.serverError.category = errors.response.data.errors.category[0];
+            }
+
+            if (errors.response.data.errors.admission_ledger_id) {
+              _this4.serverError.admission_ledger_id = errors.response.data.errors.admission_ledger_id[0];
+            }
+
+            if (errors.response.data.errors.payment_mode) {
+              _this4.serverError.payment_mode = errors.response.data.errors.payment_mode[0];
+            }
+
+            if (errors.response.data.errors.balance_taken) {
+              _this4.serverError.balance_taken = errors.response.data.errors.balance_taken[0];
+            }
+          }); //   } else {
+          //     Vue.toasted.error(
+          //       "Taken Balance cannot be more than Admission Fee",
+          //       {
+          //         position: "top-center",
+          //         duration: 6000,
+          //       }
+          //     );
+          //   }
         }
       });
     }
