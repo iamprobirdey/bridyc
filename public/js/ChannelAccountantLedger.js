@@ -1479,27 +1479,30 @@ var render = function() {
           },
           [_vm._v("\n        Create Ledger\n      ")]
         )
-      ])
-    ]),
-    _vm._v(" "),
-    _c("div", { staticClass: "col d-flex justify-content-end" }, [
-      _c("div", { staticClass: "m-1" }, [
-        _c(
-          "a",
-          {
-            staticClass: "btn btn-secondary",
-            attrs: { href: _vm.admissionUrl }
-          },
-          [_vm._v("Go to Admission")]
-        )
       ]),
       _vm._v(" "),
-      _c("div", { staticClass: "m-1" }, [
-        _c(
-          "a",
-          { staticClass: "btn btn-primary", attrs: { href: _vm.cashbookUrl } },
-          [_vm._v("Go to Cashbook")]
-        )
+      _c("div", { staticClass: "col d-flex justify-content-end" }, [
+        _c("div", { staticClass: "m-1" }, [
+          _c(
+            "a",
+            {
+              staticClass: "btn btn-secondary",
+              attrs: { href: _vm.admissionUrl }
+            },
+            [_vm._v("Go to Admission")]
+          )
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "m-1" }, [
+          _c(
+            "a",
+            {
+              staticClass: "btn btn-primary",
+              attrs: { href: _vm.cashbookUrl }
+            },
+            [_vm._v("Go to Cashbook")]
+          )
+        ])
       ])
     ]),
     _vm._v(" "),

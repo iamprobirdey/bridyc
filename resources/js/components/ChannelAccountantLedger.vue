@@ -44,13 +44,13 @@
           Create Ledger
         </a>
       </div>
-    </div>
-    <div class="col d-flex justify-content-end">
-      <div class="m-1">
-        <a :href="admissionUrl" class="btn btn-secondary">Go to Admission</a>
-      </div>
-      <div class="m-1">
-        <a :href="cashbookUrl" class="btn btn-primary">Go to Cashbook</a>
+      <div class="col d-flex justify-content-end">
+        <div class="m-1">
+          <a :href="admissionUrl" class="btn btn-secondary">Go to Admission</a>
+        </div>
+        <div class="m-1">
+          <a :href="cashbookUrl" class="btn btn-primary">Go to Cashbook</a>
+        </div>
       </div>
     </div>
     <div class="table-responsive">
