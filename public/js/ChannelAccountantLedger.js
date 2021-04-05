@@ -897,7 +897,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.customAction {\n  display: block;\n  position: absolute;\n  z-index: 1;\n  right: 120px;\n}\n@media (max-width: 576px) {\n.customAction {\n    right: 50px !important;\n}\n}\n@media (min-width: 1768px) {\n.customAction {\n    right: 260px !important;\n}\n}\n/* 2nd card */\n.customAction1 {\n  display: block;\n  position: absolute;\n  z-index: 1;\n  right: 80px;\n}\n@media (max-width: 576px) {\n.customAction1 {\n    right: 70px !important;\n}\n}\n@media (min-width: 1768px) {\n.customAction1 {\n    right: 80px !important;\n}\n}\n.btn:focus {\n  box-shadow: 0 0 0 0.1rem rgba(0, 123, 255, 0.25) !important ;\n}\n", ""]);
+exports.push([module.i, "\n.customAction {\r\n  display: block;\r\n  position: absolute;\r\n  z-index: 1;\r\n  right: 120px;\n}\n@media (max-width: 576px) {\n.customAction {\r\n    right: 50px !important;\n}\n}\n@media (min-width: 1768px) {\n.customAction {\r\n    right: 260px !important;\n}\n}\r\n/* 2nd card */\n.customAction1 {\r\n  display: block;\r\n  position: absolute;\r\n  z-index: 1;\r\n  right: 80px;\n}\n@media (max-width: 576px) {\n.customAction1 {\r\n    right: 70px !important;\n}\n}\n@media (min-width: 1768px) {\n.customAction1 {\r\n    right: 80px !important;\n}\n}\n.btn:focus {\r\n  box-shadow: 0 0 0 0.1rem rgba(0, 123, 255, 0.25) !important ;\n}\r\n", ""]);
 
 // exports
 
@@ -1546,93 +1546,106 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "row" }, [
-    _c("div", { staticClass: "m-1" }),
-    _vm._v(" "),
-    _c("div", { staticClass: "ml-12" }, [
-      _c("label", { attrs: { for: "lable" } }, [_vm._v("Filter")]),
-      _vm._v(" "),
+    _c("div", { staticClass: "table-responsive" }, [
       _c(
-        "select",
+        "div",
         {
-          directives: [
-            {
-              name: "model",
-              rawName: "v-model",
-              value: _vm.filter.payment_mode,
-              expression: "filter.payment_mode"
-            }
-          ],
-          attrs: { name: "payment" },
-          on: {
-            change: [
-              function($event) {
-                var $$selectedVal = Array.prototype.filter
-                  .call($event.target.options, function(o) {
-                    return o.selected
-                  })
-                  .map(function(o) {
-                    var val = "_value" in o ? o._value : o.value
-                    return val
-                  })
-                _vm.$set(
-                  _vm.filter,
-                  "payment_mode",
-                  $event.target.multiple ? $$selectedVal : $$selectedVal[0]
-                )
-              },
-              function($event) {
-                return _vm.onFilterChange()
-              }
-            ]
-          }
+          staticClass: "col d-flex align-items-center justify-content-between"
         },
         [
-          _c("option", { attrs: { value: "debit" } }, [_vm._v("Debit")]),
+          _c("div", { staticClass: "row m-1 d-flex align-items-center" }, [
+            _c("div", { staticClass: "mr-1 mt-2 d-flex flex-row" }, [
+              _c(
+                "label",
+                { staticClass: "btn btn-primary", attrs: { for: "lable " } },
+                [_vm._v("Filter")]
+              ),
+              _vm._v(" "),
+              _c(
+                "select",
+                {
+                  directives: [
+                    {
+                      name: "model",
+                      rawName: "v-model",
+                      value: _vm.filter.payment_mode,
+                      expression: "filter.payment_mode"
+                    }
+                  ],
+                  staticClass: "custom-select",
+                  attrs: { name: "payment" },
+                  on: {
+                    change: [
+                      function($event) {
+                        var $$selectedVal = Array.prototype.filter
+                          .call($event.target.options, function(o) {
+                            return o.selected
+                          })
+                          .map(function(o) {
+                            var val = "_value" in o ? o._value : o.value
+                            return val
+                          })
+                        _vm.$set(
+                          _vm.filter,
+                          "payment_mode",
+                          $event.target.multiple
+                            ? $$selectedVal
+                            : $$selectedVal[0]
+                        )
+                      },
+                      function($event) {
+                        return _vm.onFilterChange()
+                      }
+                    ]
+                  }
+                },
+                [
+                  _c("option", { attrs: { value: "debit" } }, [
+                    _vm._v("Debit")
+                  ]),
+                  _vm._v(" "),
+                  _c("option", { attrs: { value: "credit" } }, [
+                    _vm._v("Credit")
+                  ])
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c(
+              "a",
+              {
+                staticClass: "btn btn-primary",
+                on: {
+                  click: function($event) {
+                    return _vm.createNewLedger()
+                  }
+                }
+              },
+              [_vm._v("\n          Create Ledger\n        ")]
+            )
+          ]),
           _vm._v(" "),
-          _c("option", { attrs: { value: "credit" } }, [_vm._v("Credit")])
+          _c("div", {}, [
+            _c(
+              "a",
+              {
+                staticClass: "btn btn-secondary mb-1",
+                attrs: { href: _vm.admissionUrl }
+              },
+              [_vm._v("Go to Admission")]
+            ),
+            _vm._v(" "),
+            _c(
+              "a",
+              {
+                staticClass: "btn btn-primary mb-1",
+                attrs: { href: _vm.cashbookUrl }
+              },
+              [_vm._v("Go to Cashbook")]
+            )
+          ])
         ]
       )
-    ]),
-    _vm._v(" "),
-    _c("div", { staticClass: "col d-flex justify-content-between" }, [
-      _c("div", { staticClass: "m-1" }, [
-        _c(
-          "a",
-          {
-            staticClass: "btn btn-primary",
-            on: {
-              click: function($event) {
-                return _vm.createNewLedger()
-              }
-            }
-          },
-          [_vm._v("\n        Create Ledger\n      ")]
-        )
-      ]),
-      _vm._v(" "),
-      _c("div", { staticClass: "col d-flex justify-content-end" }, [
-        _c("div", { staticClass: "m-1" }, [
-          _c(
-            "a",
-            {
-              staticClass: "btn btn-secondary",
-              attrs: { href: _vm.admissionUrl }
-            },
-            [_vm._v("Go to Admission")]
-          )
-        ]),
-        _vm._v(" "),
-        _c("div", { staticClass: "m-1" }, [
-          _c(
-            "a",
-            {
-              staticClass: "btn btn-primary",
-              attrs: { href: _vm.cashbookUrl }
-            },
-            [_vm._v("Go to Cashbook")]
-          )
-        ])
-      ])
     ]),
     _vm._v(" "),
     _c("div", { staticClass: "table-responsive" }, [
@@ -2874,7 +2887,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/js/ChannelAccountantLedger.js */"./resources/js/ChannelAccountantLedger.js");
+module.exports = __webpack_require__(/*! C:\laragon\www\bridyc\resources\js\ChannelAccountantLedger.js */"./resources/js/ChannelAccountantLedger.js");
 
 
 /***/ })

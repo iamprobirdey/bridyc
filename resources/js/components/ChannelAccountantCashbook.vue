@@ -10,38 +10,52 @@
     right: 80px !important;
   }
 }
+.ts {
+  white-space: nowrap !important;
+}
 </style>
 <template>
   <div>
-    <div class="m-1">
-      <button class="btn btn-secondary" @click="createCashbook()">
-        Create Cashbook
-      </button>
+    <div class="d-flex justify-content-between table-responsive">
+      <div class="mr-1 mt-2">
+        <button class="btn btn-secondary ts" @click="createCashbook()">
+          Create Cashbooks
+        </button>
+      </div>
+      <div class="d-flex justify-content-end">
+        <div class="mr-1 mt-2 d-flex flex-row">
+          <label for="lable" class="btn btn-primary ts"
+            >Filter Debit/Credit</label
+          >
+          <select
+            name="payment"
+            v-model="filter.payment_type"
+            @change="onFilterPaymentTypeChange()"
+            class="custom-select"
+          >
+            <option value="">All</option>
+            <option value="debit">Debit</option>
+            <option value="credit">Credit</option>
+          </select>
+        </div>
+        <div class="mr-1 mt-2 d-flex flex-row">
+          <label for="lable" class="btn btn-primary ts"
+            >Filter Online/Offline</label
+          >
+          <select
+            name="payment"
+            v-model="filter.payment_mode"
+            @change="onFilterPaymentModeChange()"
+            class="custom-select"
+          >
+            <option value="">All</option>
+            <option value="online">Online</option>
+            <option value="offline">Offline</option>
+          </select>
+        </div>
+      </div>
     </div>
-    <div class="ml-12">
-      <label for="lable">Filter Debit/Credit</label>
-      <select
-        name="payment"
-        v-model="filter.payment_type"
-        @change="onFilterPaymentTypeChange()"
-      >
-        <option value="">All</option>
-        <option value="debit">Debit</option>
-        <option value="credit">Credit</option>
-      </select>
-    </div>
-    <div class="ml-12">
-      <label for="lable">Filter Online/Offline</label>
-      <select
-        name="payment"
-        v-model="filter.payment_mode"
-        @change="onFilterPaymentModeChange()"
-      >
-        <option value="">All</option>
-        <option value="online">Online</option>
-        <option value="offline">Offline</option>
-      </select>
-    </div>
+
     <div class="table-responsive">
       <table class="table">
         <thead>

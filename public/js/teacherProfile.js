@@ -1480,7 +1480,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../../node_modules/c
 
 
 // module
-exports.push([module.i, "\n.label-btn[data-v-379f5457] {\n  background-color: #003585;\n  color: white;\n  font-family: sans-serif;\n  border-radius: 0.3rem;\n  cursor: pointer;\n}\n.cropper-modal[data-v-379f5457] {\n  max-height: calc(100vh - 40px);\n  overflow-y: auto;\n}\n", ""]);
+exports.push([module.i, "\n.label-btn[data-v-379f5457] {\r\n  background-color: #003585;\r\n  color: white;\r\n  font-family: sans-serif;\r\n  border-radius: 0.3rem;\r\n  cursor: pointer;\n}\n.cropper-modal[data-v-379f5457] {\r\n  max-height: calc(100vh - 40px);\r\n  overflow-y: auto;\n}\r\n", ""]);
 
 // exports
 
@@ -17145,7 +17145,7 @@ if (typeof element != "undefined" && element != null) {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/js/teacherProfile.js */"./resources/js/teacherProfile.js");
+module.exports = __webpack_require__(/*! C:\laragon\www\bridyc\resources\js\teacherProfile.js */"./resources/js/teacherProfile.js");
 
 
 /***/ })

@@ -38,30 +38,30 @@
 </style>
 <template>
   <div class="row">
-    <div class="m-1"></div>
-    <div class="ml-12">
-      <label for="lable">Filter</label>
-      <select
-        name="payment"
-        v-model="filter.payment_mode"
-        @change="onFilterChange()"
-      >
-        <option value="debit">Debit</option>
-        <option value="credit">Credit</option>
-      </select>
-    </div>
-    <div class="col d-flex justify-content-between">
-      <div class="m-1">
-        <a @click="createNewLedger()" class="btn btn-primary">
-          Create Ledger
-        </a>
-      </div>
-      <div class="col d-flex justify-content-end">
-        <div class="m-1">
-          <a :href="admissionUrl" class="btn btn-secondary">Go to Admission</a>
+    <div class="table-responsive">
+      <div class="col d-flex align-items-center justify-content-between">
+        <div class="row m-1 d-flex align-items-center">
+          <div class="mr-1 mt-2 d-flex flex-row">
+            <label for="lable " class="btn btn-primary">Filter</label>
+            <select
+              name="payment"
+              v-model="filter.payment_mode"
+              @change="onFilterChange()"
+              class="custom-select"
+            >
+              <option value="debit">Debit</option>
+              <option value="credit">Credit</option>
+            </select>
+          </div>
+          <a @click="createNewLedger()" class="btn btn-primary">
+            Create Ledger
+          </a>
         </div>
-        <div class="m-1">
-          <a :href="cashbookUrl" class="btn btn-primary">Go to Cashbook</a>
+        <div class="">
+          <a :href="admissionUrl" class="btn btn-secondary mb-1"
+            >Go to Admission</a
+          >
+          <a :href="cashbookUrl" class="btn btn-primary mb-1">Go to Cashbook</a>
         </div>
       </div>
     </div>

@@ -1,8 +1,11 @@
+<style scoped>
+.ts {
+  white-space: nowrap !important;
+}
+</style>
 <template>
   <div>
-    <br />
-    <br />
-    <form class="form-inline my-2 my-lg-0">
+    <form class="d-flex justify-content-end form-inline my-2 my-lg-0">
       <input
         class="form-control mr-sm-2"
         type="search"
@@ -12,12 +15,10 @@
         @input="onSearchChange"
       />
     </form>
-    <div>
-      <div class="m-1">
-        <button class="btn btn-primary m-1" @click="takeAdmission()">
-          Take Admission
-        </button>
-      </div>
+    <div class="d-flex justify-content-between">
+      <button class="btn btn-primary m-1" @click="takeAdmission()">
+        Take Admission
+      </button>
       <div class="d-flex justify-content-end">
         <div class="m-1">
           <a :href="ledgerUrl" class="btn btn-secondary">Go to Ledger</a>
@@ -28,7 +29,7 @@
       </div>
     </div>
     <div class="table-responsive">
-      <table class="table">
+      <table class="table ts">
         <thead>
           <tr>
             <th>#</th>
