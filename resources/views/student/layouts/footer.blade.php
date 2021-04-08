@@ -62,7 +62,7 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.2/lazysizes.min.js"></script>
 
-<script src="https://pixeldesign.club/design/layouts/designlight/dist/js/pages/Print/printArea.js"></script>
+<script src="https://naughty-brahmagupta-67f9d3.netlify.app/design/layouts/designlight/dist/js/pages/Print/printArea.js"></script>
 
 
 
