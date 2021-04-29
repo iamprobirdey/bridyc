@@ -81,7 +81,7 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 20);
+/******/ 	return __webpack_require__(__webpack_require__.s = 26);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -97,7 +97,7 @@ throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index
 
 /***/ }),
 
-/***/ 20:
+/***/ 26:
 /*!*************************************************!*\
   !*** multi ./resources/js/ChannelSupervisor.js ***!
   \*************************************************/

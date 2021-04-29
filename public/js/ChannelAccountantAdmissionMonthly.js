@@ -81,30 +81,30 @@
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 19);
+/******/ 	return __webpack_require__(__webpack_require__.s = 23);
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./resources/js/ChannelAccountant.js":
-/*!*******************************************!*\
-  !*** ./resources/js/ChannelAccountant.js ***!
-  \*******************************************/
+/***/ "./resources/js/ChannelAccountantAdmissionMonthly.js":
+/*!***********************************************************!*\
+  !*** ./resources/js/ChannelAccountantAdmissionMonthly.js ***!
+  \***********************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nError: ENOENT: no such file or directory, open '/home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/js/ChannelAccountant.js'");
+throw new Error("Module build failed (from ./node_modules/babel-loader/lib/index.js):\nError: ENOENT: no such file or directory, open '/home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/js/ChannelAccountantAdmissionMonthly.js'");
 
 /***/ }),
 
-/***/ 19:
-/*!*************************************************!*\
-  !*** multi ./resources/js/ChannelAccountant.js ***!
-  \*************************************************/
+/***/ 23:
+/*!*****************************************************************!*\
+  !*** multi ./resources/js/ChannelAccountantAdmissionMonthly.js ***!
+  \*****************************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/js/ChannelAccountant.js */"./resources/js/ChannelAccountant.js");
+module.exports = __webpack_require__(/*! /home/probir/Documents/Probir/Project_bckup/Project/Bridyc stuff/bridyc/resources/js/ChannelAccountantAdmissionMonthly.js */"./resources/js/ChannelAccountantAdmissionMonthly.js");
 
 
 /***/ })
