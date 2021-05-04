@@ -282,7 +282,7 @@ export default {
     },
   },
   created() {
-    console.log("probir dey");
+    console.log("probir dey is me again");
     this.userId = this.userid;
     this.achievementData = this.achievement[0].achievement;
     this.channelId = this.achievement[0].id;
