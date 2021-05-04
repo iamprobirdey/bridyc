@@ -381,6 +381,7 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   created: function created() {
+    console.log("probir dey");
     this.userId = this.userid;
     this.achievementData = this.achievement[0].achievement;
     this.channelId = this.achievement[0].id;

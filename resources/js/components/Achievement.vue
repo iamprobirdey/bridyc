@@ -282,6 +282,7 @@ export default {
     },
   },
   created() {
+    console.log("probir dey");
     this.userId = this.userid;
     this.achievementData = this.achievement[0].achievement;
     this.channelId = this.achievement[0].id;
